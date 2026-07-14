@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南昌县领导班子 · 工作关系网络</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0D0E10;
+  --card: #16171B;
+  --card-hover: #1E1F24;
+  --border: #262830;
+  --ink: #E3DFD8;
+  --ink-dim: #8A8680;
+  --ink-faint: #5A5652;
+  --cinnabar: #D4342E;
+  --gold: #B8953E;
+  --blue: #6B8FA3;
+  --seal-red: #B82028;
+  --radius: 2px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--surface); color: var(--ink); }
+body {
+  font-family: "Noto Sans SC", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.65; min-height: 100vh; font-weight: 400;
+}
+
+.serif { font-family: "Noto Serif SC", serif; }
+h1 { font: 900 2.2rem/1.15 "Noto Serif SC", serif; letter-spacing: 0.04em; }
+h2 { font: 700 1.25rem/1.3 "Noto Serif SC", serif; letter-spacing: 0.03em; }
+h3 { font: 600 1rem/1.4 "Noto Serif SC", serif; }
+.section-label {
+  font: 500 0.65rem/1 "Noto Sans SC", sans-serif; text-transform: uppercase;
+  letter-spacing: 0.2em; color: var(--cinnabar); margin-bottom: 0.6rem;
+}
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── Header + Seal ── */
+.header {
+  padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.header::before {
+  content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%;
+  background: var(--cinnabar);
+}
+.header-row { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+.header-title { flex: 1; }
+.header-subtitle { color: var(--ink-dim); font-size: 0.9rem; margin-top: 0.4rem; }
+.header-stats { display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.header-stat { text-align: center; min-width: 60px; }
+.header-stat b { display: block; font: 900 1.8rem/1 "Noto Serif SC", serif; color: var(--gold); }
+.header-stat span { font: 0.65rem/1 "Noto Sans SC", sans-serif; color: var(--ink-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Seal Stamp */
+.seal {
+  flex-shrink: 0; width: 100px; height: 100px; border: 3px solid var(--seal-red);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  position: relative; color: var(--seal-red); opacity: 0.85;
+  transform: rotate(-8deg);
+}
+.seal-inner {
+  text-align: center; line-height: 1.3;
+  font: 900 0.85rem/1.3 "Noto Serif SC", serif; letter-spacing: 0.06em;
+}
+.seal-inner span { display: block; font-size: 0.55rem; letter-spacing: 0.1em; margin-top: 2px; }
+
+/* ── Nav ── */
+.nav {
+  position: sticky; top: 0; z-index: 100; background: rgba(13,14,16,0.92);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); padding: 0.65rem 0;
+}
+.nav-inner { display: flex; gap: 1.2rem; overflow-x: auto; }
+.nav a {
+  color: var(--ink-dim); text-decoration: none; font-size: 0.78rem;
+  white-space: nowrap; transition: color 0.2s; letter-spacing: 0.04em;
+}
+.nav a:hover, .nav a.active { color: var(--cinnabar); }
+
+/* ── Section ── */
+.section { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+
+/* ── Cards Grid ── */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.card {
+  background: var(--card); padding: 1.25rem 1.25rem 1rem; cursor: default;
+  transition: background 0.2s;
+}
+.card:hover { background: var(--card-hover); }
+.card.primary { border-left: 3px solid var(--cinnabar); padding-left: calc(1.25rem - 3px); }
+.card .rank { font: 500 0.6rem/1 "Noto Sans SC", sans-serif; color: var(--cinnabar); letter-spacing: 0.12em; margin-bottom: 0.35rem; }
+.card .name { font: 700 1.05rem/1.2 "Noto Serif SC", serif; }
+.card .post { font-size: 0.78rem; color: var(--ink-dim); margin-top: 0.2rem; }
+.card .meta { font-size: 0.68rem; color: var(--ink-faint); margin-top: 0.4rem; }
+.card .meta span { margin-right: 0.6rem; }
+.badge {
+  display: inline-block; font-size: 0.58rem; padding: 2px 7px; border-radius: 2px;
+  margin: 0.4rem 0.25rem 0 0; letter-spacing: 0.04em; line-height: 1.5;
+}
+.badge-gold { background: rgba(184,149,62,0.12); color: var(--gold); border: 1px solid rgba(184,149,62,0.25); }
+.badge-blue { background: rgba(107,143,163,0.12); color: var(--blue); border: 1px solid rgba(107,143,163,0.25); }
+.badge-red { background: rgba(212,52,46,0.10); color: var(--cinnabar); border: 1px solid rgba(212,52,46,0.2); }
+
+/* ── Timeline ── */
+.timeline { position: relative; padding-left: 1.5rem; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--border); }
+.tl-item { position: relative; padding: 0 0 1.5rem 1.2rem; }
+.tl-item::before {
+  content: ''; position: absolute; left: -1.5rem; top: 0.3rem;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--cinnabar);
+}
+.tl-item.promotion::before { background: var(--gold); width: 9px; height: 9px; left: -1.55rem; }
+.tl-year { font: 600 0.65rem "Noto Sans SC", sans-serif; color: var(--cinnabar); letter-spacing: 0.06em; }
+.tl-title { font-weight: 500; font-size: 0.88rem; margin-top: 0.1rem; }
+.tl-org { font-size: 0.75rem; color: var(--ink-dim); }
+.tl-note { font-size: 0.68rem; color: var(--ink-faint); margin-top: 0.1rem; }
+
+/* ── Table ── */
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.data-table th { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 2px solid var(--border); font: 500 0.63rem "Noto Sans SC", sans-serif; letter-spacing: 0.08em; color: var(--ink-dim); }
+.data-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.data-table tr:hover td { background: var(--card-hover); }
+.name-cell { font-weight: 600; white-space: nowrap; }
+.tag { display: inline-block; font-size: 0.6rem; padding: 2px 7px; border-radius: 2px; letter-spacing: 0.04em; }
+.tag-gold { background: rgba(184,149,62,0.12); color: var(--gold); }
+.tag-red { background: rgba(212,52,46,0.10); color: var(--cinnabar); }
+.tag-blue { background: rgba(107,143,163,0.12); color: var(--blue); }
+
+/* ── Flow ── */
+.flow { display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: flex-start; }
+.flow-col { flex: 1; min-width: 200px; }
+.flow-box { background: var(--card); border: 1px solid var(--border); padding: 0.9rem 1rem; border-radius: var(--radius); margin-bottom: 0.5rem; }
+.flow-box.head { border-left: 2px solid var(--cinnabar); }
+.flow-box-title { font: 600 0.85rem "Noto Serif SC", serif; }
+.flow-box-sub { font-size: 0.72rem; color: var(--ink-dim); margin-top: 0.15rem; }
+.flow-arrow { text-align: center; color: var(--gold); font-size: 1rem; padding: 0.15rem 0; }
+
+/* ── Insight Cards ── */
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.insight-card { background: var(--card); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); }
+.insight-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.insight-item { font-size: 0.82rem; border-left: 2px solid var(--cinnabar); padding-left: 0.7rem; }
+.insight-item.gold { border-left-color: var(--gold); }
+.insight-item strong { display: block; margin-bottom: 0.15rem; }
+.insight-item span { color: var(--ink-dim); font-size: 0.75rem; }
+
+/* ── Power Assessment ── */
+.power-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; text-align: center; }
+.power-metric { padding: 1rem; }
+.power-value { font: 900 1.6rem/1 "Noto Serif SC", serif; }
+.power-label { font-size: 0.7rem; color: var(--ink-dim); margin-top: 0.2rem; }
+.power-sub { font-size: 0.62rem; color: var(--ink-faint); }
+.c-red { color: var(--cinnabar); } .c-gold { color: var(--gold); } .c-blue { color: var(--blue); }
+
+/* ── Alert ── */
+.alert { background: rgba(212,52,46,0.06); border: 1px solid rgba(212,52,46,0.2); padding: 0.9rem 1.2rem; border-radius: var(--radius); font-size: 0.8rem; }
+.alert strong { color: var(--cinnabar); }
+
+/* ── Footer ── */
+.footer { padding: 2rem 0; color: var(--ink-faint); font-size: 0.7rem; }
+.footer a { color: var(--blue); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  .header-row { flex-direction: column-reverse; align-items: flex-start; }
+  .seal { width: 70px; height: 70px; }
+  .seal-inner { font-size: 0.65rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .insight-grid { grid-template-columns: 1fr; }
+  .power-grid { grid-template-columns: repeat(2, 1fr); }
+  .flow { flex-direction: column; }
+  .section { padding: 2rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="header">
+  <div class="container">
+    <div class="header-row">
+      <div class="header-title">
+        <div class="section-label">PERSONNEL INTELLIGENCE BRIEFING · 2026-07-14</div>
+        <h1>南昌县领导班子<br>工作关系网络</h1>
+        <p class="header-subtitle">江西省 · 南昌市 · 江西经济第一县（GDP 1401亿） · 深度人事调研</p>
+        <div class="header-stats">
+          <div class="header-stat"><b>30</b><span>人物</span></div>
+          <div class="header-stat"><b>28</b><span>机构</span></div>
+          <div class="header-stat"><b>55</b><span>任职记录</span></div>
+          <div class="header-stat"><b>18</b><span>组关系</span></div>
+        </div>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <div class="seal-inner">南昌县<span>干部档案</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#figures">核心人物</a>
+    <a href="#timelines">职业生涯</a>
+    <a href="#relations">关系矩阵</a>
+    <a href="#exchange">跨县交流</a>
+    <a href="#insights">突破线索</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ SECTION 1: CORE FIGURES ═══════════════ -->
+<section class="section" id="figures">
+  <div class="container">
+    <div class="section-label">Section A</div>
+    <h2>核心人物图谱</h2>
+    <p style="color:var(--ink-dim);margin:0.3rem 0 1.5rem;font-size:0.85rem;">
+      南昌县现任领导班子及关联干部。红标 = 县委书记/县长，金色徽章 = 确证强关系，蓝色徽章 = 弱关系/地缘连接。
+    </p>
+    <div class="card-grid">
+
+      <div class="card primary">
+        <div class="rank">县委书记 · 副厅级</div>
+        <div class="name">贾彧超</div>
+        <div class="post">主持县委全面工作 · 兼小蓝经开区党工委书记</div>
+        <div class="meta"><span>1976.09</span><span>湖北襄阳</span><span>中国科学技术大学</span></div>
+        <span class="badge badge-blue">共青团江西省委13年</span>
+        <span class="badge badge-blue">与邓之武直接上下级</span>
+      </div>
+
+      <div class="card primary">
+        <div class="rank">县长 · 副厅级</div>
+        <div class="name">帅志</div>
+        <div class="post">主持县政府全面工作 · 兼小蓝经开区管委会主任</div>
+        <div class="meta"><span>1975.10</span><span>江西南昌</span><span>省委党校研究生</span></div>
+        <span class="badge badge-blue">纪委系统空降</span>
+        <span class="badge badge-gold">与黄淦明市纪委共事</span>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委副书记（已调离）</div>
+        <div class="name">邓之武</div>
+        <div class="post">现东湖区委副书记、代区长</div>
+        <div class="meta"><span>1976.02</span><span>江西万年</span><span>浙江大学</span></div>
+        <span class="badge badge-gold">18个月三级跳！</span>
+        <span class="badge badge-gold">与贾彧超直接上下级</span>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 常务副县长</div>
+        <div class="name">徐志勇</div>
+        <div class="post">分管发改、财政、教育、应急等</div>
+        <div class="meta"><span>1981.07</span><span>江西丰城</span></div>
+        <span class="badge badge-gold">与熊振强安义重叠5年！</span>
+        <span class="badge badge-blue">安义→西湖→青云谱→南昌县</span>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 组织部长</div>
+        <div class="name">邬春华</div>
+        <div class="post">分管组织人事 · 兼县委党校校长</div>
+        <div class="meta"><span>1971.02</span><span>江西丰城</span><span>在职大学</span></div>
+        <span class="badge badge-blue">红谷滩18年</span>
+        <span class="badge badge-blue">与徐永钢（进贤组织部长）丰城同乡</span>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 纪委书记</div>
+        <div class="name">黄淦明</div>
+        <div class="post">监委主任 · 原市纪委第九室主任</div>
+        <div class="meta"><span>1979.10</span></div>
+        <span class="badge badge-gold">与帅志市纪委共事</span>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 政法委书记</div>
+        <div class="name">程家华</div>
+        <div class="post">原东湖区政法委书记</div>
+        <div class="meta"><span>1973.03</span><span>江西南昌</span></div>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 宣传部长</div>
+        <div class="name">胡朝辉</div>
+        <div class="post">南昌县本地籍</div>
+        <div class="meta"><span>1973.02</span><span>江西南昌县</span><span>大专</span></div>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 统战部长（女）</div>
+        <div class="name">皮钧</div>
+        <div class="post">江西师范大学文学学士</div>
+        <div class="meta"><span>1980.11</span></div>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 副县长</div>
+        <div class="name">万向阳</div>
+        <div class="post">分管科技/工信/商务/招商/国资</div>
+        <div class="meta"><span>1976.01</span><span>江西南昌县</span></div>
+      </div>
+
+      <div class="card">
+        <div class="rank">县委常委 · 副县长（维吾尔族）</div>
+        <div class="name">马合木江·艾合买提</div>
+        <div class="post">博士（水资源）· 新疆伊宁</div>
+        <div class="meta"><span>1986.06</span><span>新疆伊宁</span><span>博士</span></div>
+        <span class="badge badge-blue">特殊培养干部</span>
+      </div>
+
+      <div class="card">
+        <div class="rank">副县长 · 公安局长</div>
+        <div class="name">易才宏</div>
+        <div class="post">分管公安/司法/信访/退役军人</div>
+        <div class="meta"><span>1976.04</span><span>江西安义</span><span>研究生</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 2: TIMELINES ═══════════════ -->
+<section class="section" id="timelines">
+  <div class="container">
+    <div class="section-label">Section B</div>
+    <h2>核心人物职业生涯</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem;">
+      <div>
+        <h3 style="margin-bottom:1.2rem;">贾彧超 <span style="font-weight:400;font-size:0.75rem;color:var(--ink-dim);">县委书记 · 团口→发改委→县长→书记</span></h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-year">1994–2000</div><div class="tl-title">中国科学技术大学管理学系</div><div class="tl-org">管理学学士</div></div>
+          <div class="tl-item"><div class="tl-year">2000–2004</div><div class="tl-title">TCL南昌 / 江西国投 借调九江市政府</div><div class="tl-org">企业→政府过渡</div></div>
+          <div class="tl-item promotion"><div class="tl-year">2004–2017</div><div class="tl-title">共青团江西省委 13年</div><div class="tl-org">科员→宣传部部长（正县级）</div></div>
+          <div class="tl-item"><div class="tl-year">2017–2020</div><div class="tl-title">东湖区委副书记（正县级）</div><div class="tl-org">区级历练3年</div></div>
+          <div class="tl-item"><div class="tl-year">2020.12–2021.07</div><div class="tl-title">南昌市发改委主任</div><div class="tl-org">市级经济主管部门 7个月</div></div>
+          <div class="tl-item promotion"><div class="tl-year">2021.08–2025.02</div><div class="tl-title">南昌县委副书记、县长</div><div class="tl-org">副厅级 · 3.5年</div></div>
+          <div class="tl-item promotion"><div class="tl-year">2025.02–</div><div class="tl-title">南昌县委书记 · 小蓝经开区党工委书记</div><div class="tl-org">副厅级 · 就地提拔</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:1.2rem;">帅志 <span style="font-weight:400;font-size:0.75rem;color:var(--ink-dim);">县长 · 纪委系统空降</span></h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-year">~2008–2016</div><div class="tl-title">青云谱区三家店街道党工委书记</div><div class="tl-org">基层8年</div></div>
+          <div class="tl-item promotion"><div class="tl-year">2016–2017</div><div class="tl-title">南昌市纪委办公厅主任</div><div class="tl-org">副县级</div></div>
+          <div class="tl-item"><div class="tl-year">2017.11–~2021</div><div class="tl-title">湾里区委常委/纪委书记/监委主任</div><div class="tl-org">区级纪委一把手</div></div>
+          <div class="tl-item"><div class="tl-year">~2021–2021.09</div><div class="tl-title">红谷滩区委常委/纪委书记</div><div class="tl-org">区划调整过渡</div></div>
+          <div class="tl-item promotion"><div class="tl-year">2021.09–2025.12</div><div class="tl-title">南昌市纪委副书记 · 监委副主任</div><div class="tl-org">副厅级 · 市纪委4年</div></div>
+          <div class="tl-item promotion"><div class="tl-year">2026.01–</div><div class="tl-title">南昌县委副书记、县长</div><div class="tl-org">副厅级 · 2026.01.09县人大当选</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 邓之武 三级跳 -->
+    <div style="margin-top:2rem; background:var(--card); border:1px solid var(--border); border-left:3px solid var(--gold); padding:1.25rem 1.5rem; border-radius:var(--radius);">
+      <h3 style="color:var(--gold);margin-bottom:0.8rem;">邓之武 — 18个月三级跳</h3>
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;font-size:0.88rem;">
+        <span style="color:var(--ink-dim);">进贤常委/常务副县长</span>
+        <span style="color:var(--gold);font-size:1.2rem;">→</span>
+        <span style="font-weight:600;">南昌县委副书记</span>
+        <span style="color:var(--ink-dim);">（2025.01，在贾彧超领导下）</span>
+        <span style="color:var(--gold);font-size:1.2rem;">→</span>
+        <span style="font-weight:600;color:var(--gold);">东湖区委副书记/代区长</span>
+        <span style="color:var(--ink-dim);">（2026.07.07任命）</span>
+      </div>
+      <p style="font-size:0.75rem;color:var(--ink-faint);margin-top:0.6rem;">进贤→南昌县→东湖区，三连跳仅18个月。南昌县阶段是关键跳板——在贾彧超（县委书记）直接领导下工作约6个月后即升迁。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 3: RELATIONSHIPS ═══════════════ -->
+<section class="section" id="relations">
+  <div class="container">
+    <div class="section-label">Section C</div>
+    <h2>关系矩阵</h2>
+    <p style="color:var(--ink-dim);margin:0.3rem 0 1.2rem;font-size:0.85rem;">
+      已确认的关键人物间关系。金色标签 = 强关系（直接共事），红色标签 = 职务接替，蓝色标签 = 地缘/间接连接。
+    </p>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>人物A</th><th>人物B</th><th>关系类型</th><th>交集单位</th><th>交集时间</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="name-cell">徐志勇</td><td class="name-cell">熊振强</td>
+            <td><span class="tag tag-gold">⭐ 安义5年重叠</span></td>
+            <td>安义县</td><td>2016–2021</td>
+            <td style="font-size:0.78rem;">徐在安义县长埠镇/县委办/审计局期间，熊振强为县委常委。2017年二人曾共同陪同县委书记赴深圳考察。熊现为进贤县委书记。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊军</td><td class="name-cell">徐永钢</td>
+            <td><span class="tag tag-gold">⭐ 黄马乡搭班子</span></td>
+            <td>南昌县黄马乡</td><td>2016–2019</td>
+            <td style="font-size:0.78rem;">熊军（书记）+徐永钢（乡长）搭班子3年。后二人先后调入进贤县，间隔不足1年。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">贾彧超</td><td class="name-cell">邓之武</td>
+            <td><span class="tag tag-gold">直接上下级</span></td>
+            <td>南昌县</td><td>2025.01–07</td>
+            <td style="font-size:0.78rem;">邓之武任南昌县委副书记期间，贾彧超为县委书记。6个月后邓升东湖代区长。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">贾彧超</td><td class="name-cell">陈翔</td>
+            <td><span class="tag tag-red">职务接替</span></td>
+            <td>南昌县</td><td>2025.02交接</td>
+            <td style="font-size:0.78rem;">贾彧超2025.02接替陈翔任县委书记。陈翔调南昌市政府二级巡视员。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">帅志</td><td class="name-cell">黄淦明</td>
+            <td><span class="tag tag-gold">市纪委共事</span></td>
+            <td>南昌市纪委</td><td>2021–2025</td>
+            <td style="font-size:0.78rem;">帅志（市纪委副书记）+黄淦明（第九室主任）同在第十二届市纪委。现分任南昌县长和县纪委书记。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">邬春华</td><td class="name-cell">徐永钢</td>
+            <td><span class="tag tag-blue">丰城同乡</span></td>
+            <td>—（无直接共事）</td><td>—</td>
+            <td style="font-size:0.78rem;">邬春华（1971）和徐永钢（1981）同为江西丰城人，分别任南昌县和进贤县组织部长。10岁年龄差。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">聂红兵</td><td class="name-cell">徐永钢/熊军</td>
+            <td><span class="tag tag-blue">同在进贤班子</span></td>
+            <td>进贤县</td><td>2024.02–</td>
+            <td style="font-size:0.78rem;">聂红兵（小蓝→进贤）与徐永钢、熊军（黄马→进贤）同为南昌县输送干部，现同在进贤领导班子。</td>
+          </tr>
+          <tr>
+            <td class="name-cell">贾彧超</td><td class="name-cell">雷桥亮</td>
+            <td><span class="tag tag-blue">市发改委前后任（非直接）</span></td>
+            <td>南昌市发改委</td><td>不重叠</td>
+            <td style="font-size:0.78rem;">贾2021年离任后，中间隔张平、雷强两任，雷桥亮2022.12才到任。无直接mentor关系。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 4: EXCHANGE NETWORK ═══════════════ -->
+<section class="section" id="exchange">
+  <div class="container">
+    <div class="section-label">Section D</div>
+    <h2>跨县区人事交流网络</h2>
+    <p style="color:var(--ink-dim);margin:0.3rem 0 1.5rem;font-size:0.85rem;">
+      南昌县→进贤县是最强单向输出通道（4人）。东湖区是唯一双向流动的县区对。
+    </p>
+    <div class="flow">
+
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">南昌县 → 进贤县（最强）</div>
+          <div class="flow-box-sub">4人输送 · 单向 · 黄马线+小蓝线</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">黄马线：熊军 + 徐永钢</div>
+          <div class="flow-box-sub">黄马乡书记+乡长搭班子3年→先后调入进贤</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">小蓝线：聂红兵</div>
+          <div class="flow-box-sub">小蓝经开区招商局长→进贤常委/副县长</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">逆向：邓之武（路过）</div>
+          <div class="flow-box-sub">进贤常务副县长→南昌县委副书记(6个月)→东湖代区长</div>
+        </div>
+      </div>
+
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">南昌县 → 安义县</div>
+          <div class="flow-box-sub">乡镇主官输送</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">刘志伟（最新）</div>
+          <div class="flow-box-sub">南昌县幽兰镇书记→安义副县长→<strong style="color:var(--gold);">安义代县长</strong>（2026.07）</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">陈伟峰</div>
+          <div class="flow-box-sub">南昌县委常委/宣传部长→安义政协主席（2021）</div>
+        </div>
+      </div>
+
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">东湖区 ⇄ 南昌县</div>
+          <div class="flow-box-sub">唯一双向通道</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">东湖→南昌县</div>
+          <div class="flow-box-sub">贾彧超（东湖副书记→南昌县长→县委书记）</div>
+          <div class="flow-box-sub">乔怡（东湖检察院→南昌县检察院代检察长，2026.07）</div>
+        </div>
+        <div class="flow-arrow">↑</div>
+        <div class="flow-box">
+          <div class="flow-box-title">南昌县→东湖</div>
+          <div class="flow-box-sub">刘光荣（南昌县21年→东湖区委书记）</div>
+          <div class="flow-box-sub">邓之武（南昌县委副书记→东湖代区长，2026.07）</div>
+        </div>
+      </div>
+
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">南昌县 → 西湖区</div>
+          <div class="flow-box-sub">县级主官输出</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">陶亿国</div>
+          <div class="flow-box-sub">南昌县25年→西湖区长→书记→赣江新区管委会副主任</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">闵员根</div>
+          <div class="flow-box-sub">南昌县30年→西湖区人大常委会主任（2024.11）</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">熊运浪</div>
+          <div class="flow-box-sub">南昌县委书记（2019-2021，全国优秀县委书记）→现省委政法委副书记（正厅长级）</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 5: INSIGHTS ═══════════════ -->
+<section class="section" id="insights">
+  <div class="container">
+    <div class="section-label">Section E</div>
+    <h2>关键洞察与突破线索</h2>
+
+    <div class="insight-grid" style="margin-top:1.5rem;">
+      <div class="insight-card">
+        <h3 style="color:var(--cinnabar);margin-bottom:0.8rem;">⭐ 优先突破线索</h3>
+        <div class="insight-list">
+          <div class="insight-item">
+            <strong>徐志勇-熊振强 安义重叠5年</strong>
+            <span>南昌县常务副县长与进贤县委书记在安义县共事5年（2016-2021）。2017年二人曾共同陪同县委书记赴深圳考察。这是南昌县↔进贤县之间最强的个人纽带。</span>
+          </div>
+          <div class="insight-item">
+            <strong>熊军-徐永钢 黄马乡搭班子3年</strong>
+            <span>南昌县黄马乡书记+乡长（2016-2019），后先后调入进贤任副县长。二人目前在进贤仍有工作重叠——最经典的双人通道。</span>
+          </div>
+          <div class="insight-item">
+            <strong>邓之武 18个月三级跳</strong>
+            <span>进贤常务副县长（至2025.01）→南昌县委副书记（6个月）→东湖代区长（2026.07）。南昌县阶段是关键跳板，在贾彧超直接领导下工作。</span>
+          </div>
+          <div class="insight-item">
+            <strong>帅志-黄淦明 市纪委双人组</strong>
+            <span>县长和纪委书记均来自第十二届南昌市纪委。纪委系统的"组团下沉"值得关注。</span>
+          </div>
+          <div class="insight-item gold">
+            <strong>邬春华-徐永钢 丰城同乡组织部长</strong>
+            <span>南昌县和进贤县的组织部长都是丰城人——纯属地缘巧合，还是丰城籍干部在南昌市县组织系统的结构性优势？</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <h3 style="margin-bottom:0.8rem;">权力网络评估</h3>
+        <div class="power-grid">
+          <div class="power-metric">
+            <div class="power-value c-red">集中</div>
+            <div class="power-label">权力集中度</div>
+            <div class="power-sub">贾彧超由县长就地提拔，根基较深</div>
+          </div>
+          <div class="power-metric">
+            <div class="power-value c-gold">中等</div>
+            <div class="power-label">本地化程度</div>
+            <div class="power-sub">贾为湖北人，但多名常委为南昌县籍</div>
+          </div>
+          <div class="power-metric">
+            <div class="power-value c-blue">四股</div>
+            <div class="power-label">派系痕迹</div>
+            <div class="power-sub">团系+纪委系+本地系+丰城地缘</div>
+          </div>
+          <div class="power-metric">
+            <div class="power-value" style="color:var(--cinnabar);">⚠ 关注</div>
+            <div class="power-label">廉政风险</div>
+            <div class="power-sub">两任前县长被查</div>
+          </div>
+        </div>
+
+        <div class="alert" style="margin-top:1rem;">
+          <strong>⚠ 腐败风险提示：</strong>南昌县历史上有两位前县长因严重违纪违法被调查——<strong>肖玉文</strong>（2004-2010任县长/书记，2025.11被查，时任南昌市政协主席）和<strong>陈匡辉</strong>（2010-2013任县长，2022.11被查）。现任领导班子的廉政监督值得重点关注。
+        </div>
+
+        <div style="margin-top:1rem;font-size:0.78rem;color:var(--ink-dim);">
+          <strong>前任链规律：</strong>南昌县委书记约3年一换。熊运浪（2019-2021，全国优秀县委书记）→陈翔（2021-2025）→贾彧超（2025-）。历任书记均获提拔。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <p style="margin-bottom:0.4rem;"><span style="color:var(--cinnabar);">■</span> 南昌县领导班子工作关系网络 · 2026年7月14日生成</p>
+    <p>数据文件：<a href="../data/database/nanchang_county_network.db">SQLite 数据库</a> · <a href="../data/graph/nanchang_county_network.gexf">GEXF 图文件</a> · <a href="20260714-江西省-南昌市-南昌县.md">完整中文报告 (Markdown)</a></p>
+    <p style="margin-top:0.4rem;font-size:0.65rem;">数据来源：南昌县政府官网、百度百科、澎湃新闻、南昌市委组织部任前公示等公开信息。跨会话协作由进贤县调研提供背景数据。</p>
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const link = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

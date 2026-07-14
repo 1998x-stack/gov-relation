@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南昌市县领导班子 · 关系图谱</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.css" rel="stylesheet">
+<style>
+:root {
+  --surface: #0D0E10;
+  --ink: #E3DFD8;
+  --ink-dim: #8A8680;
+  --cinnabar: #D4342E;
+  --gold: #B8953E;
+  --blue: #6B8FA3;
+  --border: #262830;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--surface); color: var(--ink);
+  font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  height: 100vh; display: flex; flex-direction: column;
+}
+header {
+  padding: 0.75rem 1.5rem; border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-shrink: 0;
+}
+header h1 { font-size: 1.1rem; font-weight: 700; }
+header a { color: var(--blue); text-decoration: none; font-size: 0.8rem; }
+header a:hover { text-decoration: underline; }
+#graph { flex: 1; }
+.legend {
+  position: absolute; bottom: 1rem; right: 1rem; background: rgba(22,23,27,0.95);
+  border: 1px solid var(--border); padding: 0.75rem 1rem; border-radius: 2px;
+  font-size: 0.7rem; z-index: 10;
+}
+.legend-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.tooltip {
+  position: absolute; top: 4.5rem; left: 1rem; background: rgba(22,23,27,0.95);
+  border: 1px solid var(--border); padding: 1rem 1.2rem; border-radius: 2px;
+  font-size: 0.78rem; z-index: 10; max-width: 320px; display: none;
+}
+.tooltip .name { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
+.tooltip .role { color: var(--ink-dim); font-size: 0.75rem; }
+.tooltip .detail { color: var(--ink-dim); font-size: 0.7rem; margin-top: 0.3rem; }
+.tooltip .badge { display: inline-block; font-size: 0.6rem; padding: 1px 6px; border-radius: 2px; margin: 0.2rem 0.15rem 0 0; }
+.badge-gold { background: rgba(184,149,62,0.15); color: var(--gold); border: 1px solid rgba(184,149,62,0.3); }
+.badge-red { background: rgba(212,52,46,0.12); color: var(--cinnabar); border: 1px solid rgba(212,52,46,0.2); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>南昌市县领导班子 · 工作关系图谱</h1>
+  <div>
+    <a href="index.html">← 返回目录</a>
+  </div>
+</header>
+
+<div id="graph"></div>
+
+<div class="legend">
+  <div style="font-weight:600;margin-bottom:0.4rem;">节点图例</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#E05555;"></div> 县委书记/区委书记</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#5588DD;"></div> 县长/副县长</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#DD9944;"></div> 纪委书记/监委</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#888888;"></div> 其他干部</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#99AAAA;width:8px;height:8px;"></div> 机构/单位</div>
+  <div style="font-weight:600;margin:0.5rem 0 0.3rem;">连线图例</div>
+  <div class="legend-row"><span style="color:#AAA;width:14px;text-align:center;">—</span> 任职关系</div>
+  <div class="legend-row"><span style="color:#B8953E;width:14px;text-align:center;">—</span> 强关系（共事）</div>
+  <div class="legend-row"><span style="color:#5B8BC0;width:14px;text-align:center;">—</span> 弱关系（地缘/间接）</div>
+  <div style="font-size:0.62rem;color:var(--ink-dim);margin-top:0.4rem;">点击节点查看详情 · 滚轮缩放 · 拖拽移动</div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+// ── DATA ──
+const persons = [
+  // 进贤县
+  {id:"p1",label:"熊振强",group:"party",title:"进贤县委书记",born:"1972.03",place:"江西奉新",detail:"安义30年→西湖区委→市交通局→进贤书记(2026.07-)"},
+  {id:"p2",label:"雷桥亮",group:"gov",title:"进贤代县长",born:"1980.11",place:"江西井冈山",detail:"南昌高新区→市发改委主任→进贤代县长(2026.07-)"},
+  {id:"p3",label:"钱太高",group:"gov",title:"进贤常务副县长",born:"1977.04",place:"江西新建",detail:"市食药监局/市管局17年→进贤政法委→常务副县长(2025.01-)"},
+  {id:"p4",label:"聂红兵",group:"gov",title:"进贤副县长",born:"1980.11",place:"江西南昌县",detail:"青云谱区→小蓝经开区招商局长→进贤副县长(2024.02-)"},
+  {id:"p5",label:"叶飞",group:"other",title:"进贤县委副书记",born:"1976.03",place:"江西进贤",detail:"青山湖区25年→安义3年→进贤副书记(2024.11-)"},
+  {id:"p6",label:"徐永钢",group:"other",title:"进贤组织部长",born:"1981.04",place:"江西丰城",detail:"南昌县黄马乡长→进贤副县长→组织部长(2023.05-)"},
+  {id:"p7",label:"熊军",group:"gov",title:"进贤副县长",born:"1976.05",place:"江西南昌县",detail:"南昌县黄马乡书记→进贤副县长(2021.10-)"},
+  {id:"p8",label:"徐强",group:"party",title:"新建区委书记(前进贤书记)",born:"1974.11",place:"江西南昌县",detail:"红谷滩18年→市城建局→进贤书记(2021-2026)→新建书记"},
+  {id:"p9",label:"涂莉花",group:"other",title:"新建区人大主任(前进贤统战部长)",born:"",place:"",detail:"进贤统战部长→新建区人大主任(2024.12-)"},
+  {id:"p10",label:"邓之武",group:"other",title:"东湖代区长(前进贤常务副县长)",born:"1976.02",place:"江西万年",detail:"进贤常委→南昌县委副书记→东湖代区长(2026.07)"},
+  {id:"p11",label:"熊辉",group:"party",title:"安义县委书记(前进贤县长)",born:"",place:"",detail:"进贤县长→安义县委书记(2026-)"},
+  {id:"p12",label:"谭伯乐",group:"other",title:"南昌市政协副主席(进贤籍)",born:"1970.02",place:"江西进贤",detail:"进贤罗溪乡→安义县长/书记→市政协副主席"},
+  {id:"p13",label:"杨武",group:"gov",title:"安义副县长(进贤籍)",born:"1984",place:"江西进贤",detail:"进贤白圩乡书记→安义副县长(2024.05-)"},
+  {id:"p14",label:"张乐洋",group:"discipline",title:"进贤纪委书记",born:"",place:"",detail:"兼南昌市纪委常委、市监委委员"},
+  {id:"p15",label:"曾晋",group:"other",title:"进贤统战部长",born:"1984.01",place:"",detail:"共青团南昌市委→进贤统战部长"},
+  {id:"p16",label:"舒丹",group:"gov",title:"进贤副县长(无党派)",born:"1982.01",place:"江西南昌",detail:"共青团南昌市委→进贤副县长(2021.01-)"},
+  {id:"p17",label:"陶仲新",group:"gov",title:"进贤副县长",born:"1978.02",place:"",detail:"李渡镇书记→进贤副县长(2025.06-)"},
+  {id:"p18",label:"何勇",group:"gov",title:"进贤副县长/公安局长",born:"1973.06",place:"",detail:"市公安局水上分局→进贤公安局长(2025.09-)"},
+  {id:"p19",label:"熊伊晖",group:"gov",title:"进贤副县长",born:"1981.11",place:"",detail:"市政协→进贤副县长(2021-)"},
+
+  // 南昌县
+  {id:"p20",label:"贾彧超",group:"party",title:"南昌县委书记",born:"1976.09",place:"湖北襄阳",detail:"中科大→共青团13年→东湖区委→市发改委→南昌县长→书记(2025.02-)"},
+  {id:"p21",label:"帅志",group:"gov",title:"南昌县长",born:"1975.10",place:"江西南昌",detail:"青云谱→市纪委→湾里/红谷滩纪委→市纪委副书记→县长(2026.01-)"},
+  {id:"p22",label:"徐志勇",group:"gov",title:"南昌县常务副县长",born:"1981.07",place:"江西丰城",detail:"安义8年→西湖副区长→青云谱纪委/常务副区长→南昌县(2024.10-)"},
+  {id:"p23",label:"邬春华",group:"other",title:"南昌县组织部长",born:"1971.02",place:"江西丰城",detail:"红谷滩18年(教师→党群部长)→南昌县组织部长(2021.09-)"},
+  {id:"p24",label:"黄淦明",group:"discipline",title:"南昌县纪委书记",born:"1979.10",place:"",detail:"市纪委第九室主任→南昌县纪委书记(2025-)"},
+  {id:"p25",label:"陈翔",group:"party",title:"南昌市政府(前县委书记)",born:"1969.11",place:"江西樟树",detail:"南昌县长→县委书记(2021-2025)→市政府二级巡视员"},
+  {id:"p26",label:"熊运浪",group:"party",title:"省委政法委副书记(前县委书记)",born:"1968.11",place:"江西南昌县",detail:"南昌县委书记(2019-2021,全国优秀)→萍乡市长→省委政法委(正厅)"},
+  {id:"p27",label:"付向宇",group:"gov",title:"市商务局长(前进贤籍常务副县长)",born:"1979.09",place:"江西进贤",detail:"进贤18年→南昌县常务副县长→市公路中心→市商务局长"},
+  {id:"p28",label:"刘志伟",group:"gov",title:"安义代县长(南昌县籍)",born:"",place:"",detail:"南昌县幽兰镇书记→安义副县长→代县长(2026.07-)"},
+  {id:"p29",label:"陶亿国",group:"party",title:"赣江新区管委会副主任",born:"1973.08",place:"江西南昌县",detail:"南昌县25年→西湖区长/书记→赣江新区(2025.09-)"},
+  {id:"p30",label:"闵员根",group:"other",title:"西湖区人大主任(南昌县籍)",born:"1969.02",place:"江西南昌县",detail:"南昌县30年→西湖人大主任(2024.11-)"},
+  {id:"p31",label:"刘光荣",group:"party",title:"东湖区委书记(南昌县籍)",born:"",place:"江西南昌县",detail:"南昌县21年→东湖区委书记(2025.02-)"},
+  {id:"p32",label:"肖玉文",group:"other",title:"南昌市政协原主席(被查)",born:"1967.03",place:"江西南昌",detail:"南昌县长/书记(2004-2011)→副市长→赣江新区→市政协主席→2025.11被查"},
+  {id:"p33",label:"马合木江",group:"gov",title:"南昌县副县长(维吾尔族)",born:"1986.06",place:"新疆伊宁",detail:"博士(水资源)·特殊培养干部"},
+];
+
+// Organizations (key ones only, to avoid clutter)
+const orgs = [
+  {id:"o1",label:"中共进贤县委员会",group:"org_party"},
+  {id:"o2",label:"进贤县人民政府",group:"org_gov"},
+  {id:"o3",label:"中共南昌县委员会",group:"org_party"},
+  {id:"o4",label:"南昌县人民政府",group:"org_gov"},
+  {id:"o5",label:"中共安义县委员会",group:"org_party"},
+  {id:"o6",label:"小蓝经开区",group:"org_dev"},
+  {id:"o7",label:"南昌市发改委",group:"org_gov"},
+  {id:"o8",label:"南昌市纪委",group:"org_discipline"},
+  {id:"o9",label:"共青团江西省委",group:"org_other"},
+  {id:"o10",label:"中共西湖区委员会",group:"org_party"},
+  {id:"o11",label:"中共东湖区委员会",group:"org_party"},
+  {id:"o12",label:"南昌市交通运输局",group:"org_gov"},
+  {id:"o13",label:"南昌高新区",group:"org_dev"},
+  {id:"o14",label:"南昌县黄马乡",group:"org_town"},
+  {id:"o15",label:"南昌市新建区",group:"org_gov"},
+];
+
+// ── NODES ──
+const nodes = [];
+const groupColors = {
+  party:    {bg:"#D4342E",border:"#E05555",size:22},
+  gov:      {bg:"#3366CC",border:"#5588DD",size:18},
+  discipline:{bg:"#CC7722",border:"#DD9944",size:18},
+  other:    {bg:"#666666",border:"#888888",size:15},
+  org_party:{bg:"#553333",border:"#774444",size:12},
+  org_gov:  {bg:"#334455",border:"#446677",size:12},
+  org_dev:  {bg:"#335533",border:"#446644",size:12},
+  org_discipline:{bg:"#553322",border:"#664433",size:12},
+  org_town: {bg:"#444433",border:"#555544",size:10},
+  org_other:{bg:"#444444",border:"#555555",size:10},
+};
+
+for (const p of persons) {
+  const c = groupColors[p.group];
+  nodes.push({
+    id: p.id, label: p.label, group: p.group,
+    color: {background: c.bg, border: c.border},
+    font: {color: "#E3DFD8", size: 13, face: "system-ui"},
+    size: c.size,
+    title: `<b>${p.label}</b>\n${p.title}\n${p.born} · ${p.place}\n${p.detail}`,
+    personData: p,
+  });
+}
+for (const o of orgs) {
+  const c = groupColors[o.group];
+  nodes.push({
+    id: o.id, label: o.label, group: o.group,
+    color: {background: c.bg, border: c.border},
+    font: {color: "#999", size: 11, face: "system-ui"},
+    shape: "box",
+    size: c.size,
+    title: o.label,
+  });
+}
+
+// ── EDGES ──
+const edges = [];
+
+// Person → Org (worked_at)
+const workedAt = [
+  // 进贤县
+  ["p1","o1"],["p1","o12"],["p1","o10"],["p1","o5"],
+  ["p2","o2"],["p2","o7"],["p2","o13"],
+  ["p3","o2"],["p4","o2"],["p4","o6"],
+  ["p5","o1"],["p5","o5"],
+  ["p6","o1"],["p6","o2"],["p6","o14"],
+  ["p7","o2"],["p7","o14"],
+  ["p8","o1"],["p8","o15"],
+  ["p9","o1"],["p9","o15"],
+  ["p10","o1"],["p10","o3"],["p10","o11"],
+  ["p11","o2"],["p11","o5"],
+  ["p13","o2"],
+  // 南昌县
+  ["p20","o3"],["p20","o9"],["p20","o7"],["p20","o11"],
+  ["p21","o3"],["p21","o8"],
+  ["p22","o4"],["p22","o5"],
+  ["p23","o3"],
+  ["p24","o3"],["p24","o8"],
+  ["p25","o3"],["p25","o4"],
+  ["p26","o3"],
+  ["p27","o4"],["p27","o2"],
+  ["p28","o5"],
+  ["p29","o4"],["p29","o10"],
+  ["p30","o3"],["p30","o10"],
+  ["p31","o11"],
+];
+
+for (const [a,b] of workedAt) {
+  edges.push({from:a, to:b, color:{color:"#555555",opacity:0.5}, width:0.8, arrows:"to", arrowStrikethrough:false});
+}
+
+// Person ↔ Person (relationships)
+const rels = [
+  {a:"p22",b:"p1",label:"安义重叠5年",strong:true},
+  {a:"p7",b:"p6",label:"黄马乡搭班子3年",strong:true},
+  {a:"p20",b:"p10",label:"直接上下级",strong:true},
+  {a:"p21",b:"p24",label:"市纪委共事",strong:true},
+  {a:"p20",b:"p25",label:"职务接替",strong:true},
+  {a:"p4",b:"p6",label:"同在进贤班子",strong:true},
+  {a:"p4",b:"p7",label:"同在进贤班子",strong:true},
+  {a:"p5",b:"p1",label:"安义重叠",strong:true},
+  {a:"p23",b:"p6",label:"丰城同乡",strong:false},
+  {a:"p20",b:"p2",label:"市发改委前后任",strong:false},
+  {a:"p1",b:"p2",label:"进贤党政搭档",strong:true},
+  {a:"p20",b:"p21",label:"南昌县党政搭档",strong:true},
+  {a:"p8",b:"p9",label:"进贤→新建",strong:true},
+  {a:"p10",b:"p8",label:"同在进贤任职",strong:true},
+  {a:"p7",b:"p6",label:"同在进贤县",strong:true},
+  {a:"p26",b:"p20",label:"县委书记链",strong:false},
+  {a:"p1",b:"p11",label:"安义→进贤对调",strong:true},
+  {a:"p13",b:"p12",label:"同在安义(进贤籍)",strong:true},
+  {a:"p22",b:"p5",label:"同在安义任职",strong:true},
+];
+
+for (const r of rels) {
+  edges.push({
+    from: r.a, to: r.b, label: r.label,
+    color: {color: r.strong ? "#B8953E" : "#5B8BC0", opacity: 0.8},
+    width: r.strong ? 2.5 : 1.5,
+    font: {color: r.strong ? "#B8953E" : "#5B8BC0", size: 9, strokeWidth: 0},
+    smooth: {type:"curvedCW", roundness:0.2},
+  });
+}
+
+// ── BUILD NETWORK ──
+const container = document.getElementById('graph');
+const data = {nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges)};
+const options = {
+  physics: {
+    solver: "forceAtlas2Based",
+    forceAtlas2Based: {gravitationalConstant: -40, centralGravity: 0.01, springLength: 160, springConstant: 0.04},
+    stabilization: {iterations: 200},
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 150,
+    zoomView: true,
+    dragView: true,
+  },
+  layout: {improvedLayout: true},
+  edges: {smooth: {type:"continuous"}},
+};
+
+const network = new vis.Network(container, data, options);
+
+// ── CLICK TOOLTIP ──
+const tooltip = document.getElementById('tooltip');
+network.on('click', function(params) {
+  if (params.nodes.length === 1) {
+    const nodeId = params.nodes[0];
+    const node = nodes.find(n => n.id === nodeId);
+    if (node && node.personData) {
+      const p = node.personData;
+      tooltip.innerHTML = `
+        <div class="name">${p.label}</div>
+        <div class="role">${p.title}</div>
+        <div class="detail">
+          ${p.born ? '出生: '+p.born : ''}${p.place ? ' · '+p.place : ''}<br>
+          ${p.detail}
+        </div>
+      `;
+      tooltip.style.display = 'block';
+    } else if (node && !node.personData) {
+      tooltip.innerHTML = `<div class="name">${node.label}</div><div class="role">机构/单位</div>`;
+      tooltip.style.display = 'block';
+    }
+  } else {
+    tooltip.style.display = 'none';
+  }
+});
+
+// Auto-fit after stabilization
+network.once('stabilizationIterationsDone', function() {
+  network.fit({animation: true});
+});
+</script>
+</body>
+</html>

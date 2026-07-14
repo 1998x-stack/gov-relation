@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>进贤县领导班子 · 工作关系网络</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0F0F12;
+  --card: #1A1A1F;
+  --card-hover: #222228;
+  --ink: #E8E4DD;
+  --ink-dim: #8B8780;
+  --cinnabar: #E03C31;
+  --gold: #C9A94E;
+  --border: #2A2A30;
+  --blue: #5B8BC0;
+  --radius: 4px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; background: var(--surface); color: var(--ink); }
+
+body {
+  font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Typography ── */
+.display { font-family: "Noto Serif SC", serif; }
+.serif { font-family: "Noto Serif SC", serif; }
+
+h1 { font: 900 2.4rem/1.2 "Noto Serif SC", serif; letter-spacing: 0.02em; }
+h2 { font: 700 1.4rem/1.3 "Noto Serif SC", serif; letter-spacing: 0.03em; color: var(--ink); }
+h3 { font: 600 1.05rem/1.4 "Noto Serif SC", serif; color: var(--ink); }
+.section-label {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--cinnabar); margin-bottom: 0.5rem; font-weight: 600;
+}
+
+/* ── Layout ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── Header ── */
+.header {
+  padding: 3rem 0 2rem; border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.header::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  background: var(--cinnabar);
+}
+.header-stats { display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.header-stat { text-align: center; }
+.header-stat b { display: block; font: 900 2rem/1 "Noto Serif SC", serif; color: var(--cinnabar); }
+.header-stat span { font-size: 0.75rem; color: var(--ink-dim); letter-spacing: 0.05em; }
+.header-subtitle { color: var(--ink-dim); font-size: 0.95rem; margin-top: 0.5rem; }
+
+/* ── Nav ── */
+.nav {
+  position: sticky; top: 0; z-index: 100; background: var(--surface);
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.nav-inner { display: flex; gap: 1.5rem; overflow-x: auto; }
+.nav a {
+  color: var(--ink-dim); text-decoration: none; font-size: 0.82rem;
+  white-space: nowrap; transition: color 0.2s; letter-spacing: 0.03em;
+}
+.nav a:hover, .nav a.active { color: var(--cinnabar); }
+
+/* ── Section ── */
+.section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+
+/* ── Network Ring ── */
+.network-ring {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.person-card {
+  background: var(--card); padding: 1.5rem; cursor: pointer;
+  transition: background 0.25s, box-shadow 0.25s; position: relative;
+}
+.person-card:hover { background: var(--card-hover); box-shadow: inset 0 0 0 1px var(--gold); z-index: 2; }
+.person-card.primary { border-left: 3px solid var(--cinnabar); }
+.person-card .rank { font-size: 0.65rem; color: var(--cinnabar); letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+.person-card .name { font: 700 1.15rem/1.2 "Noto Serif SC", serif; color: var(--ink); }
+.person-card .post { font-size: 0.82rem; color: var(--ink-dim); margin-top: 0.25rem; }
+.person-card .meta { font-size: 0.7rem; color: var(--ink-dim); margin-top: 0.5rem; }
+.person-card .meta span { margin-right: 0.75rem; }
+.conn-badge {
+  display: inline-block; font-size: 0.6rem; padding: 2px 6px; border-radius: 2px;
+  margin-top: 0.5rem; letter-spacing: 0.05em;
+}
+.conn-strong { background: rgba(201,169,78,0.15); color: var(--gold); border: 1px solid rgba(201,169,78,0.3); }
+.conn-weak { background: rgba(91,139,192,0.15); color: var(--blue); border: 1px solid rgba(91,139,192,0.3); }
+
+/* ── Timeline ── */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+}
+.timeline-item { position: relative; padding: 0 0 2rem 1.5rem; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -2rem; top: 0.35rem;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--cinnabar);
+}
+.timeline-item.promotion::before { background: var(--gold); width: 10px; height: 10px; left: -2.1rem; }
+.timeline-year { font-size: 0.7rem; color: var(--cinnabar); font-weight: 600; letter-spacing: 0.05em; }
+.timeline-title { font-weight: 600; color: var(--ink); font-size: 0.95rem; }
+.timeline-org { font-size: 0.8rem; color: var(--ink-dim); }
+.timeline-note { font-size: 0.72rem; color: var(--ink-dim); margin-top: 0.15rem; font-style: italic; }
+
+/* ── Table ── */
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.data-table th {
+  text-align: left; padding: 0.75rem 1rem; border-bottom: 2px solid var(--border);
+  font-size: 0.7rem; letter-spacing: 0.08em; color: var(--ink-dim);
+}
+.data-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+.data-table tr:hover td { background: var(--card-hover); }
+.data-table .name-cell { font-weight: 600; white-space: nowrap; }
+.tag {
+  display: inline-block; font-size: 0.65rem; padding: 2px 8px; border-radius: 2px;
+  letter-spacing: 0.05em; margin: 0 2px;
+}
+.tag-red { background: rgba(224,60,49,0.15); color: var(--cinnabar); }
+.tag-gold { background: rgba(201,169,78,0.15); color: var(--gold); }
+.tag-blue { background: rgba(91,139,192,0.15); color: var(--blue); }
+
+/* ── Flow diagram ── */
+.flow { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
+.flow-col { flex: 1; min-width: 200px; }
+.flow-box {
+  background: var(--card); border: 1px solid var(--border); padding: 1rem;
+  border-radius: var(--radius); margin-bottom: 0.75rem;
+}
+.flow-box.head { border-left: 3px solid var(--cinnabar); }
+.flow-box-title { font: 600 0.9rem "Noto Serif SC", serif; }
+.flow-box-sub { font-size: 0.75rem; color: var(--ink-dim); margin-top: 0.2rem; }
+.flow-arrow {
+  text-align: center; color: var(--gold); font-size: 1.2rem; padding: 0.25rem 0;
+}
+
+/* ── Footer ── */
+.footer { padding: 2rem 0; color: var(--ink-dim); font-size: 0.75rem; }
+.footer a { color: var(--blue); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  .header-stats { gap: 1rem; }
+  .header-stat b { font-size: 1.4rem; }
+  .network-ring { grid-template-columns: 1fr; }
+  .section { padding: 2rem 0; }
+  .flow { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="header">
+  <div class="container">
+    <div class="section-label">INTELLIGENCE BRIEFING · 2026-07-14</div>
+    <h1>进贤县领导班子<br>工作关系网络</h1>
+    <p class="header-subtitle">江西省 · 南昌市 · 深度人事调研报告</p>
+    <div class="header-stats">
+      <div class="header-stat"><b>19</b><span>人物</span></div>
+      <div class="header-stat"><b>50</b><span>机构</span></div>
+      <div class="header-stat"><b>75</b><span>任职记录</span></div>
+      <div class="header-stat"><b>18</b><span>组关系</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#overview">▸ 核心人物</a>
+    <a href="#timelines">▸ 履历时间线</a>
+    <a href="#relationships">▸ 关系矩阵</a>
+    <a href="#exchange">▸ 人事交流</a>
+    <a href="#insights">▸ 关键洞察</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ SECTION 1: OVERVIEW ═══════════════ -->
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-label">Section 01</div>
+    <h2>核心人物图谱</h2>
+    <p style="color:var(--ink-dim); margin:0.5rem 0 2rem; font-size:0.9rem;">
+      当前进贤县党政领导班子及关联人物。红色标记为县委书记/县长，金色标记为有确证工作交集。
+    </p>
+
+    <div class="network-ring">
+      <!-- 熊振强 -->
+      <div class="person-card primary">
+        <div class="rank">县委书记 · 正处级</div>
+        <div class="name">熊振强</div>
+        <div class="post">主持县委全面工作</div>
+        <div class="meta"><span>1972.03</span><span>江西奉新</span></div>
+        <span class="conn-badge conn-strong">与叶飞有安义重叠</span>
+        <span class="conn-badge conn-weak">与雷桥亮新搭班</span>
+      </div>
+
+      <!-- 雷桥亮 -->
+      <div class="person-card primary">
+        <div class="rank">县长提名人选/代县长 · 正处级</div>
+        <div class="name">雷桥亮</div>
+        <div class="post">主持县政府全面工作</div>
+        <div class="meta"><span>1980.11</span><span>经济学硕士</span></div>
+        <span class="conn-badge conn-weak">与聂红兵开发区体系</span>
+        <span class="conn-badge conn-weak">2026.07.07 任命代县长</span>
+      </div>
+
+      <!-- 叶飞 -->
+      <div class="person-card">
+        <div class="rank">县委副书记 · 副处级</div>
+        <div class="name">叶飞</div>
+        <div class="post">协助书记分管党建、农业农村</div>
+        <div class="meta"><span>1976.03</span><span>江西进贤</span></div>
+        <span class="conn-badge conn-strong">安义→进贤 跨县调动</span>
+        <span class="conn-badge conn-strong">与熊振强安义重叠</span>
+      </div>
+
+      <!-- 钱太高 -->
+      <div class="person-card">
+        <div class="rank">县委常委/常务副县长 · 副处级</div>
+        <div class="name">钱太高</div>
+        <div class="post">分管发改、财政、税务、统计</div>
+        <div class="meta"><span>1977.04</span><span>江西新建</span></div>
+        <span class="conn-badge conn-weak">市直空降干部</span>
+      </div>
+
+      <!-- 聂红兵 -->
+      <div class="person-card">
+        <div class="rank">县委常委/副县长 · 副处级</div>
+        <div class="name">聂红兵</div>
+        <div class="post">分管开放型经济、科工信、招商</div>
+        <div class="meta"><span>1980.11</span><span>江西南昌县</span></div>
+        <span class="conn-badge conn-weak">小蓝经开区→进贤</span>
+        <span class="conn-badge conn-strong">与雷桥亮开发区体系</span>
+      </div>
+
+      <!-- 徐永钢 -->
+      <div class="person-card">
+        <div class="rank">县委常委/组织部部长 · 副处级</div>
+        <div class="name">徐永钢</div>
+        <div class="post">分管组织人事工作</div>
+        <div class="meta"><span>1981.04</span><span>江西丰城</span></div>
+        <span class="conn-badge conn-strong">与熊军黄马乡搭班子</span>
+      </div>
+
+      <!-- 熊军 -->
+      <div class="person-card">
+        <div class="rank">副县长 · 副处级</div>
+        <div class="name">熊军</div>
+        <div class="post">分管自然资源、住建、交通</div>
+        <div class="meta"><span>1976.05</span><span>江西南昌县</span></div>
+        <span class="conn-badge conn-strong">与徐永钢黄马乡搭班子</span>
+      </div>
+
+      <!-- 徐强 -->
+      <div class="person-card">
+        <div class="rank">前任县委书记（2021-2026）</div>
+        <div class="name">徐强</div>
+        <div class="post">现任中共新建区委书记</div>
+        <div class="meta"><span>1974.11</span><span>江西南昌县</span></div>
+        <span class="conn-badge conn-weak">进贤→新建 平调</span>
+      </div>
+
+      <!-- 曾晋 -->
+      <div class="person-card">
+        <div class="rank">县委常委/统战部部长</div>
+        <div class="name">曾晋</div>
+        <div class="post">统战、非公经济、台务</div>
+        <div class="meta"><span>1984.01</span></div>
+      </div>
+
+      <!-- 张乐洋 -->
+      <div class="person-card">
+        <div class="rank">县委常委/纪委书记/监委代主任</div>
+        <div class="name">张乐洋</div>
+        <div class="post">兼南昌市纪委常委、市监委委员</div>
+        <div class="meta">市纪委兼职</div>
+      </div>
+
+      <!-- 舒丹 -->
+      <div class="person-card">
+        <div class="rank">副县长 · 无党派</div>
+        <div class="name">舒丹</div>
+        <div class="post">分管卫健、医保、文旅、教体</div>
+        <div class="meta"><span>1982.01</span><span>女</span></div>
+      </div>
+
+      <!-- 陶仲新 -->
+      <div class="person-card">
+        <div class="rank">副县长</div>
+        <div class="name">陶仲新</div>
+        <div class="post">2025.06 由李渡镇书记提拔</div>
+        <div class="meta"><span>1978.02</span></div>
+      </div>
+
+      <!-- 何勇 -->
+      <div class="person-card">
+        <div class="rank">副县长/公安局局长</div>
+        <div class="name">何勇</div>
+        <div class="post">分管公安、司法、信访维稳</div>
+        <div class="meta"><span>1973.06</span></div>
+      </div>
+
+      <!-- 熊伊晖 -->
+      <div class="person-card">
+        <div class="rank">副县长</div>
+        <div class="name">熊伊晖</div>
+        <div class="post">分管环保、城管、市监</div>
+        <div class="meta"><span>1981.11</span></div>
+      </div>
+
+      <!-- 外围关键人物 -->
+      <div class="person-card">
+        <div class="rank">前县长→安义县委书记</div>
+        <div class="name">熊辉</div>
+        <div class="post">现任安义县委书记</div>
+        <div class="meta">进贤县长→安义书记</div>
+        <span class="conn-badge conn-strong">与熊振强"对调"</span>
+      </div>
+
+      <div class="person-card">
+        <div class="rank">前统战部长→新建区人大主任</div>
+        <div class="name">涂莉花</div>
+        <div class="post">2024.12 公示调离进贤</div>
+        <div class="meta">女</div>
+        <span class="conn-badge conn-weak">与徐强新建交汇</span>
+      </div>
+
+      <div class="person-card">
+        <div class="rank">前常务副县长→东湖区委副书记</div>
+        <div class="name">邓之武</div>
+        <div class="post">2024.12 公示调离进贤</div>
+        <div class="meta"></div>
+      </div>
+
+      <div class="person-card">
+        <div class="rank">安义副县长（进贤籍）</div>
+        <div class="name">杨武</div>
+        <div class="post">进贤白圩乡书记→安义副县长</div>
+        <div class="meta"><span>1984</span><span>博士</span></div>
+        <span class="conn-badge conn-strong">进贤→安义 跨县提拔</span>
+      </div>
+
+      <div class="person-card">
+        <div class="rank">前安义县委书记→南昌市政协</div>
+        <div class="name">谭伯乐</div>
+        <div class="post">进贤籍，安义县长→书记→政协副主席</div>
+        <div class="meta"><span>1970.02</span><span>江西进贤</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 2: TIMELINES ═══════════════ -->
+<section class="section" id="timelines">
+  <div class="container">
+    <div class="section-label">Section 02</div>
+    <h2>核心人物职业生涯时间线</h2>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+      <!-- 熊振强 Timeline -->
+      <div>
+        <h3 style="margin-bottom:1.5rem;">▎熊振强 <span style="font-weight:400;font-size:0.8rem;color:var(--ink-dim);">县委书记 · 奉新人 · 30年安义深耕</span></h3>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-year">1988–1991</div><div class="timeline-title">南昌师范学校</div><div class="timeline-org">中专学历</div></div>
+          <div class="timeline-item"><div class="timeline-year">1991–1998</div><div class="timeline-title">安义县委办公室秘书</div><div class="timeline-org">安义县</div><div class="timeline-note">其间借调南昌市委办公厅</div></div>
+          <div class="timeline-item"><div class="timeline-year">1998–2002</div><div class="timeline-title">万埠镇纪委书记、党委副书记</div><div class="timeline-org">安义县万埠镇</div></div>
+          <div class="timeline-item"><div class="timeline-year">2002–2004</div><div class="timeline-title">共青团安义县委书记</div><div class="timeline-org">正科级</div></div>
+          <div class="timeline-item"><div class="timeline-year">2004–2005</div><div class="timeline-title">安义县招商局局长、党组书记</div><div class="timeline-org">正科级</div></div>
+          <div class="timeline-item"><div class="timeline-year">2005–2010</div><div class="timeline-title">长均乡党委副书记、乡长</div><div class="timeline-org">安义县长均乡</div></div>
+          <div class="timeline-item"><div class="timeline-year">2010–2013</div><div class="timeline-title">长均乡党委书记</div><div class="timeline-org">安义县长均乡</div></div>
+          <div class="timeline-item"><div class="timeline-year">2013–2016</div><div class="timeline-title">鼎湖镇党委书记</div><div class="timeline-org">安义县鼎湖镇</div><div class="timeline-note">2015年获评"龚全珍式好干部"</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2016–2019</div><div class="timeline-title">安义县委常委、工业园区党工委书记</div><div class="timeline-org">副处级</div></div>
+          <div class="timeline-item"><div class="timeline-year">2019–2021</div><div class="timeline-title">安义县委常委、政法委书记</div><div class="timeline-org">副处级</div></div>
+          <div class="timeline-item"><div class="timeline-year">2021–2024.12</div><div class="timeline-title">南昌市西湖区委副书记</div><div class="timeline-org">副处级 · 区级领导</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2024.12–2025.12</div><div class="timeline-title">南昌市公路事业发展中心主任</div><div class="timeline-org">正处级</div></div>
+          <div class="timeline-item"><div class="timeline-year">2025.12–2026.06</div><div class="timeline-title">南昌市交通运输局局长</div><div class="timeline-org">正处级 · 兼公路中心主任</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2026.07–</div><div class="timeline-title">中共进贤县委书记</div><div class="timeline-org">正处级 · 主持县委全面工作</div></div>
+        </div>
+      </div>
+
+      <!-- 雷桥亮 Timeline -->
+      <div>
+        <h3 style="margin-bottom:1.5rem;">▎雷桥亮 <span style="font-weight:400;font-size:0.8rem;color:var(--ink-dim);">代县长 · 经济学硕士 · 市直机关调入</span></h3>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-year">2022年前</div><div class="timeline-title">职业生涯待查</div><div class="timeline-org">⚠ 公开信息缺失</div><div class="timeline-note">1980年生，此段约20年职业经历未知</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2022.05–2022.12</div><div class="timeline-title">南昌高新区党工委委员、管委会副主任</div><div class="timeline-org">副处级 · 国家级高新区</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2022.12–2026.06</div><div class="timeline-title">南昌市发改委党组书记、主任</div><div class="timeline-org">正处级 · 市级经济主管部门</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2026.06–</div><div class="timeline-title">进贤县委副书记</div><div class="timeline-org">正处级</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2026.07.07–</div><div class="timeline-title">进贤县副县长、代理县长</div><div class="timeline-org">正处级 · 县人大常委会任命</div></div>
+        </div>
+      </div>
+
+      <!-- 叶飞 -->
+      <div>
+        <h3 style="margin:2rem 0 1.5rem;">▎叶飞 <span style="font-weight:400;font-size:0.8rem;color:var(--ink-dim);">县委副书记 · 进贤本地人</span></h3>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-year">1996–2021</div><div class="timeline-title">青山湖区 25年职业生涯</div><div class="timeline-org">教师→教育局→区人大办→扬子洲镇长→南钢街道书记→区政府办主任→副区长→常委/宣传部长</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2021.08–2023.01</div><div class="timeline-title">安义县委常委、常务副县长</div><div class="timeline-org">副处级 · 第一次跨县调动</div></div>
+          <div class="timeline-item"><div class="timeline-year">2023.01–2024.11</div><div class="timeline-title">安义县委副书记</div><div class="timeline-org">副处级</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2024.11–</div><div class="timeline-title">进贤县委副书记</div><div class="timeline-org">副处级 · 回到原籍县</div></div>
+        </div>
+      </div>
+
+      <!-- 徐强 -->
+      <div>
+        <h3 style="margin:2rem 0 1.5rem;">▎徐强 <span style="font-weight:400;font-size:0.8rem;color:var(--ink-dim);">前任书记 · 南昌县人 · 现任新建区委书记</span></h3>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-year">1996–1999</div><div class="timeline-title">南昌建筑科学研究所</div></div>
+          <div class="timeline-item"><div class="timeline-year">1999–2001</div><div class="timeline-title">挂职安义县黄洲镇科技副镇长</div><div class="timeline-org">下派挂职</div></div>
+          <div class="timeline-item"><div class="timeline-year">2002–2020</div><div class="timeline-title">红谷滩新区 18年</div><div class="timeline-org">街办→城管环保局→工委委员→管委会副主任</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2020.10–2021.09</div><div class="timeline-title">南昌市城乡建设局局长</div><div class="timeline-org">正处级</div></div>
+          <div class="timeline-item promotion"><div class="timeline-year">2021.08–2026.06</div><div class="timeline-title">进贤县委书记</div><div class="timeline-org">正处级 · 5年任期</div></div>
+          <div class="timeline-item"><div class="timeline-year">2026.06–</div><div class="timeline-title">南昌市新建区委书记</div><div class="timeline-org">正处级 · 平级调动</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 3: RELATIONSHIPS ═══════════════ -->
+<section class="section" id="relationships">
+  <div class="container">
+    <div class="section-label">Section 03</div>
+    <h2>人物关系矩阵</h2>
+    <p style="color:var(--ink-dim); margin:0.5rem 0 1.5rem; font-size:0.9rem;">
+      已确证的18组人物间关系。金色 = 强关系（直接共事过）。蓝色 = 弱关系（当前同县/同体系）。
+    </p>
+
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead>
+          <tr><th>人物A</th><th>人物B</th><th>关系类型</th><th>交集单位</th><th>交集时间</th><th>详情</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name-cell">熊军</td><td class="name-cell">徐永钢</td>
+            <td><span class="tag tag-gold">⭐ 直接上下级</span></td>
+            <td>南昌县黄马乡</td><td>2016–2019</td>
+            <td style="font-size:0.78rem;">熊军（书记）+ 徐永钢（乡长）搭班子约3年。后二人先后调进贤县</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊振强</td><td class="name-cell">叶飞</td>
+            <td><span class="tag tag-gold">安义序列重叠</span></td>
+            <td>安义县</td><td>2021（可能短暂）</td>
+            <td style="font-size:0.78rem;">熊在安义30年（至2021.09），叶在安义3年（2021.08起）</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊振强</td><td class="name-cell">熊辉</td>
+            <td><span class="tag tag-gold">实事"对调"</span></td>
+            <td>进贤 ⇄ 安义</td><td>2026</td>
+            <td style="font-size:0.78rem;">熊振强（安义→进贤书记）与熊辉（进贤县长→安义书记）县级主官交叉</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊振强</td><td class="name-cell">雷桥亮</td>
+            <td><span class="tag tag-blue">新搭班子</span></td>
+            <td>进贤县</td><td>2026.07–</td>
+            <td style="font-size:0.78rem;">2026年7月首次组成县委/县政府搭档，此前无交集</td>
+          </tr>
+          <tr>
+            <td class="name-cell">徐强</td><td class="name-cell">涂莉花</td>
+            <td><span class="tag tag-blue">进贤→新建</span></td>
+            <td>进贤 → 新建</td><td>2025–2026</td>
+            <td style="font-size:0.78rem;">涂莉花先去新建区人大（2024.12公示），徐强后去新建区委（2026.06）</td>
+          </tr>
+          <tr>
+            <td class="name-cell">聂红兵</td><td class="name-cell">雷桥亮</td>
+            <td><span class="tag tag-blue">开发区体系</span></td>
+            <td>小蓝经开区 / 高新区</td><td>无直接重叠</td>
+            <td style="font-size:0.78rem;">聂在小蓝经开区招商局，雷在南昌高新区——同为开发区/经济部门</td>
+          </tr>
+          <tr>
+            <td class="name-cell">钱太高</td><td class="name-cell">邓之武</td>
+            <td><span class="tag tag-blue">职务接替</span></td>
+            <td>进贤县政府</td><td>2025.01前后</td>
+            <td style="font-size:0.78rem;">钱太高接替邓之武担任进贤县常务副县长</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊军</td><td class="name-cell">徐永钢</td>
+            <td><span class="tag tag-blue">进贤县同事</span></td>
+            <td>进贤县政府</td><td>2021.10–2023.05</td>
+            <td style="font-size:0.78rem;">二人在进贤县政府班子有约2年重叠</td>
+          </tr>
+          <tr>
+            <td class="name-cell">谭伯乐</td><td class="name-cell">杨武</td>
+            <td><span class="tag tag-gold">同籍贯·同任职地</span></td>
+            <td>安义县</td><td>2024.05–2025.01</td>
+            <td style="font-size:0.78rem;">谭伯乐（进贤籍，安义书记）与杨武（进贤籍，安义副县长）</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊振强</td><td class="name-cell">徐强</td>
+            <td><span class="tag tag-blue">职务接替</span></td>
+            <td>进贤县委</td><td>2026.06</td>
+            <td style="font-size:0.78rem;">熊接替徐任进贤县委书记，前后任关系</td>
+          </tr>
+          <tr>
+            <td class="name-cell">徐永钢</td><td class="name-cell">徐强</td>
+            <td><span class="tag tag-blue">南昌县籍贯</span></td>
+            <td>进贤县</td><td>2021–2026</td>
+            <td style="font-size:0.78rem;">徐强（南昌县人）任进贤书记期间，徐永钢（丰城人）任副县长→组织部长</td>
+          </tr>
+          <tr>
+            <td class="name-cell">熊振强</td><td class="name-cell">谭伯乐</td>
+            <td><span class="tag tag-blue">安义官场</span></td>
+            <td>安义县</td><td>无直接重叠</td>
+            <td style="font-size:0.78rem;">熊在安义30年，谭2020-2025主政安义——安义官场人脉重叠</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 4: EXCHANGE NETWORK ═══════════════ -->
+<section class="section" id="exchange">
+  <div class="container">
+    <div class="section-label">Section 04</div>
+    <h2>跨县区人事交流网络</h2>
+    <p style="color:var(--ink-dim); margin:0.5rem 0 2rem; font-size:0.9rem;">
+      南昌市县级干部调动的四种典型模式。线条越粗代表流动越频繁。
+    </p>
+
+    <div class="flow">
+      <!-- 安义 ←→ 进贤 -->
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">安义 ⇄ 进贤 双向通道</div>
+          <div class="flow-box-sub">南昌市最活跃的县级主官交流轴</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">安义 → 进贤</div>
+          <div class="flow-box-sub">熊振强（30年安义→进贤书记）</div>
+          <div class="flow-box-sub">叶飞（3年安义→进贤副书记）</div>
+        </div>
+        <div class="flow-arrow">↑</div>
+        <div class="flow-box">
+          <div class="flow-box-title">进贤 → 安义</div>
+          <div class="flow-box-sub">熊辉（进贤县长→安义书记）</div>
+          <div class="flow-box-sub">谭伯乐（进贤人→安义书记）</div>
+          <div class="flow-box-sub">杨武（进贤白圩乡书记→安义副县长）</div>
+        </div>
+      </div>
+
+      <!-- 进贤 → 新建 -->
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">进贤 → 新建 单向流动</div>
+          <div class="flow-box-sub">2026年集中发生</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">徐强</div>
+          <div class="flow-box-sub">进贤书记（2021-2026）→ 新建区委书记（2026-）</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">涂莉花</div>
+          <div class="flow-box-sub">进贤统战部长 → 新建区人大主任</div>
+        </div>
+      </div>
+
+      <!-- 市直 → 进贤 -->
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">市直 → 进贤 干部下沉</div>
+          <div class="flow-box-sub">市级机关干部到县任职</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">雷桥亮</div>
+          <div class="flow-box-sub">市发改委主任 → 进贤代县长</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">钱太高</div>
+          <div class="flow-box-sub">市市管局党组成员 → 进贤政法委→常务副县长</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">何勇</div>
+          <div class="flow-box-sub">市公安局水上分局 → 进贤公安局长</div>
+        </div>
+      </div>
+
+      <!-- 南昌县 → 进贤 -->
+      <div class="flow-col">
+        <div class="flow-box head">
+          <div class="flow-box-title">南昌县 → 进贤 黄马线</div>
+          <div class="flow-box-sub">最紧密的双人通道</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+          <div class="flow-box-title">熊军</div>
+          <div class="flow-box-sub">南昌县黄马乡书记 → 进贤副县长</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">徐永钢</div>
+          <div class="flow-box-sub">南昌县黄马乡乡长 → 进贤副县长→组织部长</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">聂红兵</div>
+          <div class="flow-box-sub">南昌县籍·小蓝经开区招商局长 → 进贤副县长</div>
+        </div>
+        <div class="flow-box">
+          <div class="flow-box-title">徐强（前任书记）</div>
+          <div class="flow-box-sub">南昌县籍</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 5: INSIGHTS ═══════════════ -->
+<section class="section" id="insights">
+  <div class="container">
+    <div class="section-label">Section 05</div>
+    <h2>关键洞察与突破线索</h2>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+      <!-- 班子结构 -->
+      <div style="background:var(--card); border:1px solid var(--border); padding:1.5rem; border-radius:var(--radius);">
+        <h3 style="color:var(--cinnabar); margin-bottom:1rem;">当前班子四大结构特征</h3>
+        <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.88rem;">
+          <div><span style="color:var(--gold);">①</span> <strong>"双新"主官</strong> — 书记熊振强和县长雷桥亮均为2026年6-7月到任，都无进贤工作基础</div>
+          <div><span style="color:var(--gold);">②</span> <strong>安义背景深厚</strong> — 熊振强30年+叶飞3年在安义，进贤县委已有两位"安义系"领导</div>
+          <div><span style="color:var(--gold);">③</span> <strong>南昌县连接</strong> — 熊军、徐永钢（黄马乡共事）+ 聂红兵（南昌县籍）+ 徐强（前书记南昌县籍）</div>
+          <div><span style="color:var(--gold);">④</span> <strong>老班子成员面临调整</strong> — 舒丹（2021起）、熊伊晖（2021起）、熊军（2021起）任职超4年</div>
+        </div>
+      </div>
+
+      <!-- 突破线索 -->
+      <div style="background:var(--card); border:1px solid var(--border); padding:1.5rem; border-radius:var(--radius);">
+        <h3 style="color:var(--cinnabar); margin-bottom:1rem;">⭐ 优先突破线索</h3>
+        <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.85rem;">
+          <div style="border-left:2px solid var(--cinnabar); padding-left:0.75rem;">
+            <strong>熊振强借调市委办公厅（1990s）</strong><br>
+            <span style="color:var(--ink-dim);">1991-1998借调南昌市委办公厅时建立的人脉——这些人现在可能是南昌市高层</span>
+          </div>
+          <div style="border-left:2px solid var(--cinnabar); padding-left:0.75rem;">
+            <strong>熊军-徐永钢"黄马线"</strong><br>
+            <span style="color:var(--ink-dim);">二人黄马乡搭班子3年后先后调进贤——双人捆绑式调动的背后逻辑</span>
+          </div>
+          <div style="border-left:2px solid var(--cinnabar); padding-left:0.75rem;">
+            <strong>雷桥亮2022年前履历黑洞</strong><br>
+            <span style="color:var(--ink-dim);">1980年生，42岁才公开首份职务（高新区副主任），此前20年未知</span>
+          </div>
+          <div style="border-left:2px solid var(--gold); padding-left:0.75rem;">
+            <strong>徐强-涂莉花的"新建布局"</strong><br>
+            <span style="color:var(--ink-dim);">涂莉花先去新建区人大，徐强再去当区委书记——巧合还是预先安排？</span>
+          </div>
+          <div style="border-left:2px solid var(--gold); padding-left:0.75rem;">
+            <strong>叶飞的"回老家"角色</strong><br>
+            <span style="color:var(--ink-dim);">进贤人从安义副书记调回进贤——是为熊振强（安义系）准备的本地助手？</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Power assessment -->
+    <div style="background:var(--card); border:1px solid var(--border); padding:1.5rem; border-radius:var(--radius); margin-top:2rem;">
+      <h3 style="margin-bottom:1rem;">权力网络总体评估</h3>
+      <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:1.5rem; text-align:center;">
+        <div>
+          <div style="font:900 2rem/1 'Noto Serif SC',serif; color:var(--cinnabar);">分散</div>
+          <div style="font-size:0.75rem; color:var(--ink-dim); margin-top:0.25rem;">权力集中度</div>
+          <div style="font-size:0.65rem; color:var(--ink-dim);">书记县长均为新任</div>
+        </div>
+        <div>
+          <div style="font:900 2rem/1 'Noto Serif SC',serif; color:var(--gold);">低</div>
+          <div style="font-size:0.75rem; color:var(--ink-dim); margin-top:0.25rem;">本地化程度</div>
+          <div style="font-size:0.65rem; color:var(--ink-dim);">书记奉新人·多数常委外来</div>
+        </div>
+        <div>
+          <div style="font:900 2rem/1 'Noto Serif SC',serif; color:var(--blue);">三股</div>
+          <div style="font-size:0.75rem; color:var(--ink-dim); margin-top:0.25rem;">派系痕迹</div>
+          <div style="font-size:0.65rem; color:var(--ink-dim);">安义系 · 南昌县系 · 市直系</div>
+        </div>
+        <div>
+          <div style="font:900 2rem/1 'Noto Serif SC',serif; color:var(--gold);">过渡</div>
+          <div style="font-size:0.75rem; color:var(--ink-dim); margin-top:0.25rem;">稳定程度</div>
+          <div style="font-size:0.65rem; color:var(--ink-dim);">2026大换班需磨合</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <p style="margin-bottom:0.5rem;">
+      <span style="color:var(--cinnabar);">■</span> 进贤县领导班子工作关系网络 · 2026年7月14日生成
+    </p>
+    <p>
+      数据文件：
+      <a href="../data/database/jinxian_network.db">SQLite 数据库</a> ·
+      <a href="../data/graph/jinxian_network.gexf">GEXF 图文件</a> ·
+      <a href="20260714-江西省-南昌市-进贤县.md">完整中文报告 (Markdown)</a>
+    </p>
+    <p style="margin-top:0.5rem; font-size:0.7rem;">
+      数据来源：进贤县政府官网、南昌市交通运输局官网、百度百科、澎湃新闻、南昌市人大常委会公告等公开信息。
+    </p>
+  </div>
+</footer>
+
+<script>
+// Nav active state on scroll
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav a[href="#${id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
