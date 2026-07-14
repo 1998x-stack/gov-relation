@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>南昌市县领导班子 · 关系图谱</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.css" rel="stylesheet">
 <style>
 :root {
   --surface: #0D0E10;
@@ -30,7 +29,7 @@ header {
 header h1 { font-size: 1.1rem; font-weight: 700; }
 header a { color: var(--blue); text-decoration: none; font-size: 0.8rem; }
 header a:hover { text-decoration: underline; }
-#graph { flex: 1; }
+#graph { flex: 1; min-height: 500px; position: relative; }
 .legend {
   position: absolute; bottom: 1rem; right: 1rem; background: rgba(22,23,27,0.95);
   border: 1px solid var(--border); padding: 0.75rem 1rem; border-radius: 2px;
@@ -49,6 +48,8 @@ header a:hover { text-decoration: underline; }
 .tooltip .badge { display: inline-block; font-size: 0.6rem; padding: 1px 6px; border-radius: 2px; margin: 0.2rem 0.15rem 0 0; }
 .badge-gold { background: rgba(184,149,62,0.15); color: var(--gold); border: 1px solid rgba(184,149,62,0.3); }
 .badge-red { background: rgba(212,52,46,0.12); color: var(--cinnabar); border: 1px solid rgba(212,52,46,0.2); }
+.fallback-msg { color: var(--ink-dim); font-size: 0.9rem; text-align: center; padding-top: 10rem; }
+.fallback-msg.hidden { display: none; }
 </style>
 </head>
 <body>
@@ -60,7 +61,7 @@ header a:hover { text-decoration: underline; }
   </div>
 </header>
 
-<div id="graph"></div>
+<div id="graph"><div class="fallback-msg">正在加载关系图谱...如长时间无显示，请检查网络连接。</div></div>
 
 <div class="legend">
   <div style="font-weight:600;margin-bottom:0.4rem;">节点图例</div>
@@ -241,61 +242,65 @@ for (const r of rels) {
     color: {color: r.strong ? "#B8953E" : "#5B8BC0", opacity: 0.8},
     width: r.strong ? 2.5 : 1.5,
     font: {color: r.strong ? "#B8953E" : "#5B8BC0", size: 9, strokeWidth: 0},
-    smooth: {type:"curvedCW", roundness:0.2},
   });
 }
 
 // ── BUILD NETWORK ──
-const container = document.getElementById('graph');
-const data = {nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges)};
-const options = {
-  physics: {
-    solver: "forceAtlas2Based",
-    forceAtlas2Based: {gravitationalConstant: -40, centralGravity: 0.01, springLength: 160, springConstant: 0.04},
-    stabilization: {iterations: 200},
-  },
-  interaction: {
-    hover: true,
-    tooltipDelay: 150,
-    zoomView: true,
-    dragView: true,
-  },
-  layout: {improvedLayout: true},
-  edges: {smooth: {type:"continuous"}},
-};
-
-const network = new vis.Network(container, data, options);
-
-// ── CLICK TOOLTIP ──
-const tooltip = document.getElementById('tooltip');
-network.on('click', function(params) {
-  if (params.nodes.length === 1) {
-    const nodeId = params.nodes[0];
-    const node = nodes.find(n => n.id === nodeId);
-    if (node && node.personData) {
-      const p = node.personData;
-      tooltip.innerHTML = `
-        <div class="name">${p.label}</div>
-        <div class="role">${p.title}</div>
-        <div class="detail">
-          ${p.born ? '出生: '+p.born : ''}${p.place ? ' · '+p.place : ''}<br>
-          ${p.detail}
-        </div>
-      `;
-      tooltip.style.display = 'block';
-    } else if (node && !node.personData) {
-      tooltip.innerHTML = `<div class="name">${node.label}</div><div class="role">机构/单位</div>`;
-      tooltip.style.display = 'block';
-    }
-  } else {
-    tooltip.style.display = 'none';
+(function() {
+  if (typeof vis === 'undefined') {
+    var fb = document.querySelector('#graph .fallback-msg');
+    if (fb) fb.textContent = 'vis.js CDN 加载失败，请检查网络或刷新重试。';
+    return;
   }
-});
 
-// Auto-fit after stabilization
-network.once('stabilizationIterationsDone', function() {
-  network.fit({animation: true});
-});
+  var container = document.getElementById('graph');
+  var fb = container.querySelector('.fallback-msg');
+  if (fb) fb.classList.add('hidden');
+
+  var dsNodes = new vis.DataSet(nodes);
+  var dsEdges = new vis.DataSet(edges);
+  var data = {nodes: dsNodes, edges: dsEdges};
+  var options = {
+    physics: {
+      solver: "forceAtlas2Based",
+      forceAtlas2Based: {gravitationalConstant: -40, centralGravity: 0.01, springLength: 160, springConstant: 0.04},
+      stabilization: {iterations: 200},
+    },
+    interaction: {hover: true, tooltipDelay: 150, zoomView: true, dragView: true},
+    layout: {improvedLayout: true},
+  };
+
+  var network = new vis.Network(container, data, options);
+
+  // Click tooltip
+  var tooltip = document.getElementById('tooltip');
+  network.on('click', function(params) {
+    if (params.nodes.length === 1) {
+      var nodeId = params.nodes[0];
+      var node = nodes.find(function(n) { return n.id === nodeId; });
+      if (node && node.personData) {
+        var p = node.personData;
+        tooltip.innerHTML =
+          '<div class="name">' + p.label + '</div>' +
+          '<div class="role">' + p.title + '</div>' +
+          '<div class="detail">' +
+          (p.born ? '出生: ' + p.born : '') + (p.place ? ' · ' + p.place : '') + '<br>' +
+          p.detail +
+          '</div>';
+        tooltip.style.display = 'block';
+      } else if (node && !node.personData) {
+        tooltip.innerHTML = '<div class="name">' + node.label + '</div><div class="role">机构/单位</div>';
+        tooltip.style.display = 'block';
+      }
+    } else {
+      tooltip.style.display = 'none';
+    }
+  });
+
+  network.once('stabilizationIterationsDone', function() {
+    network.fit({animation: true});
+  });
+})();
 </script>
 </body>
 </html>
