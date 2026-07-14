@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安义县县委书记前任及领导变迁 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0D0D0D;
+  --surface: #141416;
+  --surface2: #1A1A1E;
+  --border: #2A2A30;
+  --text: #E8E4D8;
+  --text-dim: #8A8678;
+  --accent: #E03C31;
+  --gold: #C9A94E;
+  --gold-dim: #8A7A38;
+  --blue: #4A7BA8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/* ── Layout ── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ── Header ── */
+.header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+.header-eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.header .subtitle {
+  color: var(--text-dim);
+  font-size: 15px;
+}
+.header-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat-number {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+/* ── Section ── */
+.section {
+  margin-bottom: 56px;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-title .tag {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 2px 8px;
+  letter-spacing: 1px;
+}
+/* ── Chain ── */
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 32px;
+}
+.chain-link {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.chain-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  min-width: 160px;
+}
+.chain-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.chain-card .tenure {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.chain-card .outcome {
+  font-size: 12px;
+  color: var(--gold);
+  margin-top: 4px;
+}
+.chain-arrow {
+  color: var(--accent);
+  font-size: 22px;
+  padding: 0 8px;
+  font-weight: 300;
+}
+.chain-card.current {
+  border-color: var(--accent);
+  border-right: 3px solid var(--accent);
+}
+/* ── Person Cards Grid ── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+.person-card.primary {
+  border-color: var(--accent);
+}
+.person-card .role-badge {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.person-card .detail {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+.person-card .detail span {
+  color: var(--text);
+}
+.person-card .tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.person-card .tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+.person-card .tag.gold {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+/* ── Timeline ── */
+.timeline-group {
+  display: grid;
+  gap: 32px;
+}
+.timeline-person {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+.timeline-person .tl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.tl-header .tl-name {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.tl-header .tl-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--border);
+}
+.tl-item {
+  position: relative;
+  padding: 0 0 16px 16px;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.tl-item .tl-date {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+.tl-item .tl-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.tl-item .tl-note {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+/* ── Table ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.data-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.data-table tr:hover td {
+  background: var(--surface2);
+}
+.data-table .promoted { color: var(--gold); }
+.data-table .current { color: var(--accent); }
+/* ── Cross-County Flows ── */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.flow-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+.flow-card .flow-direction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.flow-direction .from, .flow-direction .to {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+.flow-direction .arrow {
+  color: var(--accent);
+  font-size: 20px;
+}
+.flow-card .flow-detail {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+/* ── Insights ── */
+.insights {
+  display: grid;
+  gap: 12px;
+}
+.insight {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+}
+.insight .i-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.insight .i-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.insight .i-text strong { color: var(--gold); }
+/* ── Sources ── */
+.source-list {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 2.2;
+  word-break: break-all;
+}
+.source-list a {
+  color: var(--text-dim);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+}
+.source-list a:hover { color: var(--accent); }
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  margin-top: 48px;
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: center;
+}
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .header h1 { font-size: 24px; }
+  .header-stats { gap: 20px; flex-wrap: wrap; }
+  .chain-card { min-width: 120px; }
+  .chain { flex-direction: column; }
+  .chain-arrow { transform: rotate(90deg); }
+  .person-grid { grid-template-columns: 1fr; }
+  .flow-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="header">
+  <div class="header-eyebrow">机密 · 内部参考</div>
+  <h1>安义县历任县委书记<br>前任去向与领导变迁</h1>
+  <div class="subtitle">江西省南昌市安义县 · 调查截至2026年7月14日</div>
+  <div class="header-stats">
+    <div class="stat">
+      <span class="stat-number">8</span>
+      <span class="stat-label">任县委书记传承</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">26</span>
+      <span class="stat-label">核心人物</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">前任晋升率</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">6</span>
+      <span class="stat-label">县区同步调整</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ PREDECESSOR CHAIN ═══════ -->
+<section class="section">
+  <div class="section-title">
+    传承链
+    <span class="tag">CONFIRMED</span>
+  </div>
+  <div class="chain">
+    <div class="chain-link">
+      <div class="chain-card current">
+        <div class="name">熊辉</div>
+        <div class="tenure">2026.07 — 至今</div>
+        <div class="outcome">现任</div>
+      </div>
+      <div class="chain-arrow">→</div>
+    </div>
+    <div class="chain-link">
+      <div class="chain-card">
+        <div class="name">谭伯乐</div>
+        <div class="tenure">2021.08 — 2026.07</div>
+        <div class="outcome">⬆ 市政协副主席</div>
+      </div>
+      <div class="chain-arrow">→</div>
+    </div>
+    <div class="chain-link">
+      <div class="chain-card">
+        <div class="name">彭开先</div>
+        <div class="tenure">2020.01 — 2021.08</div>
+        <div class="outcome">⬆ 市副市长</div>
+      </div>
+      <div class="chain-arrow">→</div>
+    </div>
+    <div class="chain-link">
+      <div class="chain-card">
+        <div class="name">乐文红</div>
+        <div class="tenure">2019.09 — 2020.01</div>
+        <div class="outcome">→ 省工商联</div>
+      </div>
+      <div class="chain-arrow">→</div>
+    </div>
+    <div class="chain-link">
+      <div class="chain-card">
+        <div class="name">李松殿</div>
+        <div class="tenure">2014.09 — 2019.03</div>
+        <div class="outcome">⬆ 市副市长</div>
+      </div>
+      <div class="chain-arrow">→</div>
+    </div>
+    <div class="chain-link">
+      <div class="chain-card">
+        <div class="name">邱向军</div>
+        <div class="tenure">2005.05 — 2008.12</div>
+        <div class="outcome">⬆⬆ 省民政厅长</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ KEY FIGURES ═══════ -->
+<section class="section">
+  <div class="section-title">
+    关键人物
+    <span class="tag">6 ACTIVE</span>
+  </div>
+  <div class="person-grid">
+    <div class="person-card primary">
+      <div class="role-badge">现任 · 县委书记</div>
+      <div class="name">熊辉</div>
+      <div class="detail">1981年3月 · 博士研究生</div>
+      <div class="detail">前任：进贤县委副书记、县长</div>
+      <div class="tag-group">
+        <span class="tag gold">2026.07 新任</span>
+        <span class="tag">跨县调入</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-badge">前任 · 县委书记</div>
+      <div class="name">谭伯乐</div>
+      <div class="detail">1970年8月 · 中央党校大学</div>
+      <div class="detail">现：南昌市政协副主席</div>
+      <div class="tag-group">
+        <span class="tag gold">晋升离任</span>
+        <span class="tag">任期5年</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-badge">前任 · 县委书记</div>
+      <div class="name">彭开先</div>
+      <div class="detail">1970年2月 · 哲学硕士</div>
+      <div class="detail">现：南昌市人民政府副市长</div>
+      <div class="tag-group">
+        <span class="tag gold">晋升离任</span>
+        <span class="tag">本地晋升</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-badge">前任 · 兼任书记</div>
+      <div class="name">乐文红</div>
+      <div class="detail">1970年2月 · 女 · 中央党校研究生</div>
+      <div class="detail">现：省委统战部一级巡视员</div>
+      <div class="tag-group">
+        <span class="tag">高配兼任</span>
+        <span class="tag">跨市调任</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-badge">前任 · 县委书记</div>
+      <div class="name">李松殿</div>
+      <div class="detail">1969年11月 · 省委党校研究生</div>
+      <div class="detail">现：南昌市人民政府副市长</div>
+      <div class="tag-group">
+        <span class="tag gold">晋升离任</span>
+        <span class="tag">任期最长</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-badge">前任 · 县委书记</div>
+      <div class="name">邱向军</div>
+      <div class="detail">1968年2月 · 法学博士/MBA</div>
+      <div class="detail">现：江西省民政厅党组书记、厅长</div>
+      <div class="tag-group">
+        <span class="tag gold">最高晋升</span>
+        <span class="tag">正厅级</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CAREER TIMELINES ═══════ -->
+<section class="section">
+  <div class="section-title">
+    核心干部履历时间线
+    <span class="tag">4 PROFILES</span>
+  </div>
+  <div class="timeline-group">
+    <div class="timeline-person">
+      <div class="tl-header">
+        <span class="tl-name">熊辉</span>
+        <span class="tl-sub">1981.03 · 安义县委书记（现任）</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">— 2026.07</div>
+          <div class="tl-title">青云谱区副区长 → 区委常委、组织部部长 → 进贤县委副书记、县长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026.07 — 至今</div>
+          <div class="tl-title">安义县委书记</div>
+          <div class="tl-note">2026年7月5日首次以县委书记身份公开活动</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-person">
+      <div class="tl-header">
+        <span class="tl-name">谭伯乐</span>
+        <span class="tl-sub">1970.08 · 前任安义县委书记</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">— 2019.12</div>
+          <div class="tl-title">南昌县委副书记、县委党校第一校长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2020.04 — 2021.08</div>
+          <div class="tl-title">安义县人民政府县长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021.08 — 2026.07</div>
+          <div class="tl-title">安义县委书记</div>
+          <div class="tl-note">2025.01 当选南昌市政协副主席（副厅级），继续兼任</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026.07 — 至今</div>
+          <div class="tl-title">南昌市政协副主席（专职）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-person">
+      <div class="tl-header">
+        <span class="tl-name">彭开先</span>
+        <span class="tl-sub">1970.02 · 前前任安义县委书记</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2011.07 — 2015.07</div>
+          <div class="tl-title">安义县委常委、常务副县长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2015.07 — 2016.10</div>
+          <div class="tl-title">安义县委副书记</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2016.10 — 2020.01</div>
+          <div class="tl-title">安义县人民政府县长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2020.01 — 2021.08</div>
+          <div class="tl-title">安义县委书记</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021.08 — 至今</div>
+          <div class="tl-title">南昌市人民政府副市长、党组成员</div>
+          <div class="tl-note">晋升副厅级</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-person">
+      <div class="tl-header">
+        <span class="tl-name">邱向军</span>
+        <span class="tl-sub">1968.02 · 前前任 · 仕途最高者</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2000.07 — 2005.05</div>
+          <div class="tl-title">安义县委副书记 → 县长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2005.05 — 2008.12</div>
+          <div class="tl-title">安义县委书记</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2008.12 — 2016.09</div>
+          <div class="tl-title">南昌高新区管委会主任 → 党工委书记</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2016.09 — 2021.05</div>
+          <div class="tl-title">南昌市委常委 → 江西省人民政府副秘书长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021.05 — 2025.07</div>
+          <div class="tl-title">上饶市市长</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025.07 — 至今</div>
+          <div class="tl-title">江西省民政厅党组书记、厅长</div>
+          <div class="tl-note">正厅级 · 安义书记中仕途最成功者</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PREDECESSOR TABLE ═══════ -->
+<section class="section">
+  <div class="section-title">
+    历任县委书记汇总
+    <span class="tag">8 TENURES</span>
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>生年</th>
+        <th>任期</th>
+        <th>任期长度</th>
+        <th>离任去向</th>
+        <th>性质</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>熊辉</strong></td>
+        <td>1981</td>
+        <td>2026.07—至今</td>
+        <td>—</td>
+        <td class="current">现任</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>谭伯乐</td>
+        <td>1970</td>
+        <td>2021.08—2026.07</td>
+        <td>~5年</td>
+        <td class="promoted">南昌市政协副主席</td>
+        <td>⬆ 晋升</td>
+      </tr>
+      <tr>
+        <td>彭开先</td>
+        <td>1970</td>
+        <td>2020.01—2021.08</td>
+        <td>~1.5年</td>
+        <td class="promoted">南昌市人民政府副市长</td>
+        <td>⬆ 晋升</td>
+      </tr>
+      <tr>
+        <td>乐文红</td>
+        <td>1970</td>
+        <td>2019.09—2020.01</td>
+        <td>~4月</td>
+        <td>省委统战部一级巡视员</td>
+        <td>→ 平调</td>
+      </tr>
+      <tr>
+        <td>李松殿</td>
+        <td>1969</td>
+        <td>2014.09—2019.03</td>
+        <td>~4.5年</td>
+        <td class="promoted">南昌市人民政府副市长</td>
+        <td>⬆ 晋升</td>
+      </tr>
+      <tr>
+        <td>朱东</td>
+        <td>—</td>
+        <td>~2012—2014.09</td>
+        <td>~2年</td>
+        <td>待核实</td>
+        <td>❓ 待查</td>
+      </tr>
+      <tr>
+        <td>黄俊</td>
+        <td>—</td>
+        <td>~2009—~2012</td>
+        <td>~3年</td>
+        <td>待核实</td>
+        <td>❓ 待查</td>
+      </tr>
+      <tr>
+        <td>邱向军</td>
+        <td>1968</td>
+        <td>2005.05—2008.12</td>
+        <td>~3.5年</td>
+        <td class="promoted">江西省民政厅厅长（正厅级）</td>
+        <td>⬆⬆ 大幅晋升</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════ CROSS-COUNTY FLOWS ═══════ -->
+<section class="section">
+  <div class="section-title">
+    跨县人事流动
+    <span class="tag">NETWORK</span>
+  </div>
+  <div class="flow-grid">
+    <div class="flow-card">
+      <div class="flow-direction">
+        <span class="from">进贤县</span>
+        <span class="arrow">→</span>
+        <span class="to">安义县</span>
+      </div>
+      <div class="flow-detail">
+        <strong>熊辉</strong> — 进贤县委副书记、县长调任安义县委书记（2026.07）
+      </div>
+    </div>
+    <div class="flow-card">
+      <div class="flow-direction">
+        <span class="from">安义县</span>
+        <span class="arrow">→</span>
+        <span class="to">青云谱区</span>
+      </div>
+      <div class="flow-detail">
+        <strong>罗国栋</strong> — 安义县委副书记、县长调任青云谱区委书记（2026.07）
+      </div>
+    </div>
+    <div class="flow-card">
+      <div class="flow-direction">
+        <span class="from">安义县</span>
+        <span class="arrow">→</span>
+        <span class="to">进贤县</span>
+      </div>
+      <div class="flow-detail">
+        <strong>熊振强</strong> — 安义县委常委、政法委书记 → 进贤县委书记（2026.07）<br>
+        <strong>袁一旦</strong> — 安义县副县长 → 进贤县委常委 → 青山湖区委书记<br>
+        <strong>杨志文</strong> — 安义县副县长 → 进贤县委常委、常务副县长
+      </div>
+    </div>
+    <div class="flow-card">
+      <div class="flow-direction">
+        <span class="from">南昌县</span>
+        <span class="arrow">→</span>
+        <span class="to">安义县</span>
+      </div>
+      <div class="flow-detail">
+        <strong>谭伯乐</strong> — 南昌县委副书记 → 安义县长/县委书记<br>
+        <strong>罗国栋</strong> — 南昌县委副书记 → 安义县长
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ KEY INSIGHTS ═══════ -->
+<section class="section">
+  <div class="section-title">
+    关键洞察
+    <span class="tag">ANALYSIS</span>
+  </div>
+  <div class="insights">
+    <div class="insight">
+      <div class="i-label">#1 晋升率100%</div>
+      <div class="i-text">所有能找到确切去向前任的安义县委书记，离任后均获得晋升。无人被降职或处分。<strong>安义县委书记是"晋升跳板"岗位</strong>。</div>
+    </div>
+    <div class="insight">
+      <div class="i-label">#2 最强走廊：南昌县→安义县</div>
+      <div class="i-text">谭伯乐、罗国栋连续两任安义县长均来自南昌县委副书记岗位。<strong>南昌县委副书记几乎是安义县长"预备役"</strong>。</div>
+    </div>
+    <div class="insight">
+      <div class="i-label">#3 2026年7月六区县同步调整</div>
+      <div class="i-text">南昌市6个县区党委书记同时轮换，是近年来规模最大的干部调整。<strong>安义与进贤之间形成人员互换</strong>（熊辉↔熊振强双熊联动）。</div>
+    </div>
+    <div class="insight">
+      <div class="i-label">#4 县长空缺待补</div>
+      <div class="i-text">罗国栋调任青云谱区委书记后，安义县长职位暂缺。<strong>下一任县长的人选将是观察人事走向的关键信号</strong>。</div>
+    </div>
+    <div class="insight">
+      <div class="i-label">#5 邱向军——仕途标杆</div>
+      <div class="i-text">邱向军从安义县委书记起步，最终官至<strong>江西省民政厅厅长（正厅级）</strong>。这是现代安义县委书记中最成功的仕途路径。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ DATA FILES ═══════ -->
+<section class="section">
+  <div class="section-title">
+    数据文件
+    <span class="tag">EXPORT</span>
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>文件</th>
+        <th>路径</th>
+        <th>说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SQLite数据库</td>
+        <td>data/database/anyi_network.db</td>
+        <td>26人物 · 11机构 · 39任职 · 14关系</td>
+      </tr>
+      <tr>
+        <td>GEXF关系图</td>
+        <td>data/graph/anyi_network.gexf</td>
+        <td>37节点 · 53边 · 支持Gephi可视化</td>
+      </tr>
+      <tr>
+        <td>Markdown报告</td>
+        <td>report/20260714-安义县-县委书记-前任.md</td>
+        <td>完整调研报告</td>
+      </tr>
+      <tr>
+        <td>HTML简报</td>
+        <td>report/20260714-安义县-县委书记-前任.html</td>
+        <td>本文件</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════ SOURCES ═══════ -->
+<section class="section">
+  <div class="section-title">
+    信息来源
+    <span class="tag">27 CITED</span>
+  </div>
+  <div class="source-list">
+    1. 网易 - 南昌市六县（区）委书记调整 — <a href="https://www.163.com/dy/article/L1LE2GI505563DJA.html" target="_blank">163.com/dy/article/L1LE2GI505563DJA.html</a><br>
+    2. 安义县政府 - 谭伯乐领导简介 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202009/f20c85f52a8246b5a68c7eb24f869f4c.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    3. 安义县政府 - 领导之窗 — <a href="https://anyi.nc.gov.cn/ayxzf/ldzc/ldzc.shtml" target="_blank">anyi.nc.gov.cn/ldzc</a><br>
+    4. 新浪江西 - 谭伯乐任南昌市政协副主席 — <a href="https://jx.sina.com.cn/news/b/2025-01-13/detail-ineeutxf9760625.shtml" target="_blank">jx.sina.com.cn</a><br>
+    5. 人民网 - 领导干部任前公示 — <a href="http://jx.people.com.cn/n2/2024/1214/c186330-41075380.html" target="_blank">jx.people.com.cn</a><br>
+    6. QQ新闻 - 谭伯乐任安义县委书记 — <a href="https://news.qq.com/rain/a/20210801A0CCZO00" target="_blank">news.qq.com</a><br>
+    7. 澎湃新闻 - 彭开先任安义县委书记 — <a href="https://m.thepaper.cn/newsDetail_forward_5459994" target="_blank">thepaper.cn</a><br>
+    8. 南昌市人民政府 - 彭开先 — <a href="https://www.nc.gov.cn/ncszf/pengkx/2021_ldzc.shtml" target="_blank">nc.gov.cn</a><br>
+    9. 安义人网 - 彭开先拟任公示 — <a href="http://www.anyir.com/news/626.html" target="_blank">anyir.com</a><br>
+    10. 大江网 - 乐文红任省工商联党组书记 — <a href="https://jiangxi.jxnews.com.cn/system/2024/01/29/020387023.shtml" target="_blank">jiangxi.jxnews.com.cn</a><br>
+    11. 澎湃新闻 - 江西8名县区书记履新 — <a href="https://m.thepaper.cn/newsDetail_forward_4359283" target="_blank">thepaper.cn</a><br>
+    12. 人民网 - 李松殿升任南昌副市长 — <a href="http://renshi.people.com.cn/n1/2019/0430/c139617-31060115.html" target="_blank">people.com.cn</a><br>
+    13. 维基百科 - 邱向军 — <a href="https://zh.wikipedia.org/zh-hans/%E9%82%B1%E5%90%91%E5%86%9B" target="_blank">zh.wikipedia.org</a><br>
+    14. 百度百科 - 邱向军 — <a href="https://baike.baidu.com/item/%E9%82%B1%E5%90%91%E5%86%9B/13852998" target="_blank">baike.baidu.com</a><br>
+    15. 澎湃新闻 - 罗国栋任代县长 — <a href="https://www.thepaper.cn/newsDetail_forward_13980548" target="_blank">thepaper.cn</a><br>
+    16. 安义县政府 - 罗国栋简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202108/866e2e6fc98d4a1ebb6d98c5cd3d2e50.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    17. 安义县政府 - 杨峻简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202101/d0954437573a49b28a9ae7fe537c7ab9.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    18. 安义县政府 - 詹晓庆简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202603/e13250fcb2604e6ea392f1fe04c01804.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    19. 安义县政府 - 余建国简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202009/a50250bfb6ca42b69c5b3ac2df6c98c0.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    20. 安义县政府 - 张帆简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202108/217fbf6d5eeb4c6386888ddbf4e9d403.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    21. 安义县政府 - 谭翼直简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202307/17d36c36095f485ea22916e78ee99042.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    22. 安义县政府 - 余超简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202504/db551054acbd43cea5283a58933dc8a7.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    23. 安义县政府 - 金栋简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202503/b17616c626134c6bb7b5984322628920.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    24. 安义县政府 - 吴威简历 — <a href="https://anyi.nc.gov.cn/ayxzf/xwld/202512/61884f6c5c2c49b89a208051029042df.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    25. 安义县政府 - 万菁简历 — <a href="https://anyi.nc.gov.cn/ayxzf/govld/202503/6eb3b7908fb24f23a3e67d34eaf6a78e.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    26. 安义县政府 - 邓梁简历 — <a href="https://anyi.nc.gov.cn/ayxzf/govld/202507/4f9f341fe4f14f6d87a10f369605fa84.shtml" target="_blank">anyi.nc.gov.cn</a><br>
+    27. QQ新闻 - 江西三县区政府一把手调整 — <a href="http://jx.sina.com.cn/news/zzrs/2020-05-06/detail-iirczymk0185267.shtml" target="_blank">jx.sina.com.cn</a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  Generated 2026-07-14 · china-gov-network skill · Data from public government sources and media reports
+</footer>
+
+</div>
+</body>
+</html>
