@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青山湖区领导班子 · 工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0D0E10;
+  --surface-raised: #15171B;
+  --surface-card: #1A1C21;
+  --border: #262830;
+  --border-light: #32343C;
+  --ink: #E3DFD8;
+  --ink-dim: #8A8680;
+  --ink-muted: #5C5955;
+  --cinnabar: #E03C31;
+  --cinnabar-dim: rgba(224,60,49,0.12);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201,169,78,0.12);
+  --blue: #6B8FA3;
+  --blue-dim: rgba(107,143,163,0.10);
+  --orange: #CC7722;
+  --green: #5B8C5A;
+  --green-dim: rgba(91,140,90,0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.header h1 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.header h1 span {
+  color: var(--cinnabar);
+}
+.header-meta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+}
+.header-meta span { white-space: nowrap; }
+.classified-stamp {
+  display: inline-block;
+  border: 1px solid var(--cinnabar);
+  color: var(--cinnabar);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  padding: 2px 10px;
+  margin-left: 1rem;
+}
+
+/* ── Stats bar ── */
+.stats {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.stat {
+  background: var(--surface-raised);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+.stat-num {
+  font-family: "Noto Serif SC", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+/* ── Content ── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-title .num {
+  color: var(--cinnabar);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* ── Person card grid ── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.person-card {
+  background: var(--surface-card);
+  padding: 1.25rem;
+  position: relative;
+}
+.person-card .role-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid;
+}
+.role-tag.party { border-color: #E03C31; color: #E03C31; }
+.role-tag.gov  { border-color: #5588DD; color: #5588DD; }
+.role-tag.other { border-color: var(--ink-dim); color: var(--ink-dim); }
+.role-tag.pending { border-color: var(--orange); color: var(--orange); }
+.person-card .name {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.person-card .title {
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  margin: 0.2rem 0 0.5rem;
+}
+.person-card .meta {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+.person-card .badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.badge {
+  font-size: 0.55rem;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.badge-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(201,169,78,0.25); }
+.badge-blue { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(107,143,163,0.25); }
+.badge-cinnabar { background: var(--cinnabar-dim); color: var(--cinnabar); border: 1px solid rgba(224,60,49,0.2); }
+.badge-green { background: var(--green-dim); color: var(--green); border: 1px solid rgba(91,140,90,0.25); }
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.625rem;
+  top: 0.45rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-light);
+  border: 1px solid var(--ink-dim);
+}
+.timeline-item.current::before {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+  box-shadow: 0 0 6px rgba(224,60,49,0.4);
+}
+.timeline-item .period {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.timeline-item .event {
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin-top: 0.15rem;
+}
+.timeline-item .event strong { font-weight: 600; }
+.timeline-item .gap {
+  color: var(--cinnabar);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* ── Person timeline layout ── */
+.person-timelines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.person-timeline-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+}
+.person-timeline-card h4 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.person-timeline-card .timeline {
+  padding-left: 1.5rem;
+}
+.person-timeline-card .timeline::before {
+  left: 0;
+}
+
+/* ── Relationship matrix ── */
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.matrix th, .matrix td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+.matrix th {
+  background: var(--surface-raised);
+  font-weight: 500;
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+}
+.matrix td { background: var(--surface-card); }
+.matrix .strong { color: var(--gold); }
+.matrix .weak { color: var(--blue); }
+
+/* ── Flow diagram ── */
+.flow-box {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.flow-box h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--ink-dim);
+}
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+}
+.flow-arrow {
+  color: var(--ink-muted);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.flow-org {
+  font-weight: 500;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.flow-person {
+  color: var(--ink);
+}
+.flow-note {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+}
+
+/* ── Insights ── */
+.insight {
+  background: var(--surface-card);
+  border-left: 2px solid var(--cinnabar);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.insight h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.insight p {
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+.insight .stars {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+/* ── Sources ── */
+.source-list {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  line-height: 1.8;
+}
+.source-list a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.source-list a:hover { text-decoration: underline; }
+.source-list .status {
+  font-size: 0.65rem;
+  padding: 1px 5px;
+  margin-left: 0.3rem;
+}
+.status.ok { color: #4CAF50; }
+.status.blocked { color: var(--cinnabar); }
+.status.partial { color: var(--orange); }
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── responsive ── */
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .header h1 { font-size: 1.4rem; }
+  .person-grid { grid-template-columns: 1fr; }
+  .person-timelines { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-eyebrow">CONFIDENTIAL · 南昌市青山湖区 · 人事情报简报</div>
+  <h1>青山湖区领导班子<br><span>工作关系网络</span></h1>
+  <div class="header-meta">
+    <span>📅 2026年7月14日</span>
+    <span>🕐 调查周期：连续调查</span>
+    <span>🏛️ 南昌市青山湖区 <span class="classified-stamp">机密 // INTERNAL</span></span>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">18</div>
+    <div class="stat-label">人物</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">18</div>
+    <div class="stat-label">机构</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">39</div>
+    <div class="stat-label">任职关系</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">8</div>
+    <div class="stat-label">人物关系</div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- Section 1: Current Core Leadership -->
+<div class="section">
+  <div class="section-title"><span class="num">01</span> 当前核心领导</div>
+  <div class="person-grid">
+
+    <div class="person-card">
+      <div class="role-tag party">区委书记</div>
+      <div class="name">杨育星</div>
+      <div class="title">主持区委全面工作</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>2026年7月由区长内部晋升</div>
+      <div class="badges">
+        <span class="badge badge-gold">青云谱7年+</span>
+        <span class="badge badge-blue">青山湖5年(区长)</span>
+        <span class="badge badge-cinnabar">2026.07任书记</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">区委副书记/代区长</div>
+      <div class="name">龚飞霞</div>
+      <div class="title">兼区委统战部部长；主持区政府工作</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>首位女性代区长</div>
+      <div class="badges">
+        <span class="badge badge-gold">18个月三级跳</span>
+        <span class="badge badge-cinnabar">2026.07任代区长</span>
+        <span class="badge badge-green">县纪委→区委副书记→代区长</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag gov">推定常务副区长</div>
+      <div class="name">杨峰</div>
+      <div class="title">区委常委、副区长（排名第一）</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>常委排名第4位，副区长排名第1位</div>
+      <div class="badges">
+        <span class="badge badge-blue">推定常务</span>
+        <span class="badge badge-pending">履历完全空白</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">区纪委书记(推定)</div>
+      <div class="name">吴庆和</div>
+      <div class="title">区委常委 · 角色基于排除法推定</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>常委中唯一无明确政务分工者</div>
+      <div class="badges">
+        <span class="badge badge-pending">推定 中置信度</span>
+        <span class="badge badge-pending">履历完全空白</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">推定组织部部长</div>
+      <div class="name">付磊</div>
+      <div class="title">区委常委 · 陪区委书记调研组织部</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>常委排名第6位</div>
+      <div class="badges">
+        <span class="badge badge-blue">推定 高置信度</span>
+        <span class="badge badge-pending">履历完全空白</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">政法委书记</div>
+      <div class="name">蔡志刚</div>
+      <div class="title">区委常委、区委政法委书记</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>2026年7月7日调研政法委确认</div>
+      <div class="badges">
+        <span class="badge badge-gold">已确认身份</span>
+        <span class="badge badge-pending">履历完全空白</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag other">高新园区/罗家镇</div>
+      <div class="name">牛浩</div>
+      <div class="title">区委常委、高新园区党工委书记、罗家镇党委书记</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>唯一兼任乡镇党委书记的区委常委</div>
+      <div class="badges">
+        <span class="badge badge-gold">已确认身份</span>
+        <span class="badge badge-blue">兼两职</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag other">人武部政委</div>
+      <div class="name">刘伟</div>
+      <div class="title">区委常委、区人武部政委</div>
+      <div class="meta">籍贯不明 · 出生年份不明<br>军转干部</div>
+      <div class="badges">
+        <span class="badge badge-gold">已确认身份</span>
+        <span class="badge badge-pending">军转背景</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Section 2: Career Timelines -->
+<div class="section">
+  <div class="section-title"><span class="num">02</span> 核心人物晋升路径</div>
+  <div class="person-timelines">
+
+    <div class="person-timeline-card">
+      <h4>龚飞霞 · 18个月三级跳</h4>
+      <div class="timeline">
+        <div class="timeline-item current">
+          <div class="period">2026.07 — 至今</div>
+          <div class="event"><strong>青山湖区委副书记、代区长</strong> · 正县级 · 兼统战部长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">2025.12 — 2026.06</div>
+          <div class="event"><strong>青山湖区委副书记</strong> · 兼区委统战部部长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2025 — 2025.12</div>
+          <div class="event"><strong>青山湖区纪委书记</strong> · 副县级</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2024.07 — ~2025</div>
+          <div class="event gap">⚠ 区县纪委书记调任青山湖 · 约1年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">更早</div>
+          <div class="event gap">⚠ 完整履历未获取 · 县纪委系统出身</div>
+        </div>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.7rem;color:var(--ink-muted);border-top:1px solid var(--border);padding-top:0.5rem;">
+        <span style="color:var(--gold);">关键观察：</span>从县纪委书记→区委副书记→代区长，约18个月完成从副县到正县的跨越，晋升速度极为罕见。
+      </div>
+    </div>
+
+    <div class="person-timeline-card">
+      <h4>杨育星 · 青云谱→青山湖</h4>
+      <div class="timeline">
+        <div class="timeline-item current">
+          <div class="period">2026.07 — 至今</div>
+          <div class="event"><strong>青山湖区委书记</strong> · 正县级 · 内部晋升</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">2021.10 — 2026.07</div>
+          <div class="event"><strong>青山湖区区长</strong> · 正县级 · 约5年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">2021.04 — 2021.10</div>
+          <div class="event"><strong>青山湖区委副书记、代区长</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2018 — 2021.04</div>
+          <div class="event"><strong>青云谱区委副书记</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2015 — ~2018</div>
+          <div class="event"><strong>青云谱区委常委、副区长</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2013 — ~2015</div>
+          <div class="event"><strong>青云谱区委常委、组织部部长</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2011 — ~2013</div>
+          <div class="event"><strong>南昌市防震减灾局党组成员、副局长</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">更早</div>
+          <div class="event gap">⚠ 完整早期履历未获取</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="person-timeline-card">
+      <h4>袁一旦 · 跨四区县晋升路</h4>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="period">2021.04 — 2026.07</div>
+          <div class="event"><strong>青山湖区委书记</strong> · 正县级 · 约5年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2019 — 2021.04</div>
+          <div class="event"><strong>西湖区委副书记</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2016 — ~2019</div>
+          <div class="event"><strong>进贤县委常委</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">2011 — ~2016</div>
+          <div class="event"><strong>安义县副县长</strong> · 约5年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2006 — 2011</div>
+          <div class="event"><strong>南昌市委农工部处长</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">2026.07</div>
+          <div class="event gap">⚠ 去向不明</div>
+        </div>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.7rem;color:var(--ink-muted);border-top:1px solid var(--border);padding-top:0.5rem;">
+        <span style="color:var(--cinnabar);">信息缺口：</span>袁一旦2026年7月卸任青山湖区委书记后去向不明。
+      </div>
+    </div>
+
+    <div class="person-timeline-card">
+      <h4>叶飞 · 青山湖25年→跨县交流</h4>
+      <div class="timeline">
+        <div class="timeline-item current">
+          <div class="period">2024.11 — 至今</div>
+          <div class="event"><strong>进贤县委副书记</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">2021 — 2024.11</div>
+          <div class="event"><strong>安义县委副书记</strong> · 约3年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2019 — 2021</div>
+          <div class="event"><strong>青山湖区委常委、宣传部部长</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2014 — ~2019</div>
+          <div class="event"><strong>青山湖区副区长</strong> · 约5年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">~2008 — ~2014</div>
+          <div class="event">青山湖区南钢街道书记、区政府办主任等 · 约6年</div>
+        </div>
+        <div class="timeline-item">
+          <div class="period">1996 — ~2008</div>
+          <div class="event"><strong>青山湖区教育系统起步</strong> · 教师→教育局→人大办→扬子洲镇长 · 约12年</div>
+        </div>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.7rem;color:var(--gold);border-top:1px solid var(--border);padding-top:0.5rem;">
+        青山湖区"土生土长"25年（1996-2021），是青山湖跨区交流的典型代表。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Section 3: Relationship Matrix -->
+<div class="section">
+  <div class="section-title"><span class="num">03</span> 人物关系矩阵</div>
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>人物A</th>
+        <th>人物B</th>
+        <th>关系类型</th>
+        <th>共事背景</th>
+        <th>置信度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>杨育星</td><td>龚飞霞</td>
+        <td class="strong">强 · 现任搭档</td>
+        <td>青山湖区党政班子（2025至今）</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>杨育星</td><td>袁一旦</td>
+        <td class="strong">强 · 前任搭档</td>
+        <td>青山湖区长→书记（2021-2026）</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>袁一旦</td><td>叶飞</td>
+        <td class="strong">强 · 上下级</td>
+        <td>青山湖区班子（约2019-2021）</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>叶飞</td><td>杨育星</td>
+        <td class="weak">弱 · 青山湖同班子</td>
+        <td>青山湖区（约2019-2021重叠）</td>
+        <td>🟡 推定</td>
+      </tr>
+      <tr>
+        <td>李松殿</td><td>袁一旦</td>
+        <td class="weak">弱 · 青山湖前后任</td>
+        <td>青山湖区（区长→书记不同期）</td>
+        <td>🟡 推定</td>
+      </tr>
+      <tr>
+        <td>龚飞霞</td><td>杨峰</td>
+        <td class="weak">弱 · 现任班子</td>
+        <td>青山湖区党政班子（2026.07起）</td>
+        <td>🟡 推定</td>
+      </tr>
+      <tr>
+        <td>熊运浪</td><td>杨育星</td>
+        <td class="weak">弱 · 青山湖前后任</td>
+        <td>青山湖区（跨越不同任期）</td>
+        <td>🟡 推定</td>
+      </tr>
+      <tr>
+        <td>许强</td><td>叶飞</td>
+        <td class="weak">弱 · 青山湖出身系</td>
+        <td>青山湖区教育系统/乡镇（2000s）</td>
+        <td>🟡 推定</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 4: Cross-District Exchange Network -->
+<div class="section">
+  <div class="section-title"><span class="num">04</span> 跨区县人事交流网络</div>
+
+  <div class="flow-box">
+    <h4>→ 叶飞：青山湖(25年) → 安义 → 进贤</h4>
+    <div class="flow-row">
+      <span class="flow-org">青山湖区</span>
+      <span class="flow-arrow">1996─2021</span>
+      <span class="flow-person">叶飞：教师→教育局→人大办→扬子洲镇长→南钢街道书记→区政府办主任→副区长→常委/宣传部长（25年）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">青山湖区</span>
+      <span class="flow-arrow">2021→</span>
+      <span class="flow-person">叶飞 → 安义县委副书记 · 约3年</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">安义县</span>
+      <span class="flow-arrow">2024→</span>
+      <span class="flow-person">叶飞 → 进贤县委副书记 · 至今</span>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <h4>→ 李松殿：青山湖(区长) → 安义(书记)</h4>
+    <div class="flow-row">
+      <span class="flow-org">青山湖区</span>
+      <span class="flow-arrow">2011─2014→</span>
+      <span class="flow-person">李松殿：青山湖区区长 → <strong>安义县委书记</strong> → 南昌市副市长 → 市委常委/宣传部长/新建区委书记</span>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <h4>→ 袁一旦：安义→进贤→西湖→青山湖(书记)</h4>
+    <div class="flow-row">
+      <span class="flow-org">南昌市直</span>
+      <span class="flow-arrow">~2006→</span>
+      <span class="flow-person">袁一旦：市委农工部处长 → <strong>安义县副县长</strong>（2011-2016）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">安义县</span>
+      <span class="flow-arrow">2016→</span>
+      <span class="flow-person">袁一旦 → <strong>进贤县委常委</strong>（约3年）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">进贤县</span>
+      <span class="flow-arrow">~2019→</span>
+      <span class="flow-person">袁一旦 → <strong>西湖区委副书记</strong>（约2年）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">西湖区</span>
+      <span class="flow-arrow">2021→</span>
+      <span class="flow-person">袁一旦 → <strong>青山湖区委书记</strong> · 正县级 · 约5年（2021.04-2026.07）</span>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <h4>→ 许强：青山湖(14-18年) → 东湖(副区长)</h4>
+    <div class="flow-row">
+      <span class="flow-org">青山湖区</span>
+      <span class="flow-arrow">~2000─2014</span>
+      <span class="flow-person">许强：青山湖区教体局→政协办→塘山镇→扬子洲镇（青山湖区约14-18年）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">青山湖区</span>
+      <span class="flow-arrow">~2014→</span>
+      <span class="flow-person">许强 → 东湖区扬农管理处书记→豫章街道书记→2021年任东湖区副区长至今</span>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;font-size:0.78rem;color:var(--ink-dim);padding:1rem;background:var(--surface-card);border:1px solid var(--border);">
+    <strong style="color:var(--gold);">青山湖区跨区交流模式：</strong>青山湖区是南昌市重要的<strong style="color:var(--ink);">干部输出源</strong>——叶飞（青山湖→安义→进贤）、李松殿（青山湖→安义→南昌市）、许强（青山湖→东湖）均从青山湖起步外调。同时，袁一旦是典型的<strong style="color:var(--ink);">跨区积累型</strong>干部（安义→进贤→西湖→青山湖），四区县轮转后主政一方。
+  </div>
+</div>
+
+<!-- Section 5: Key Insights -->
+<div class="section">
+  <div class="section-title"><span class="num">05</span> 关键洞察</div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>线索1：龚飞霞18个月三级跳——谁在推手？</h4>
+    <p>从县纪委书记→区委副书记→代区长（兼统战部长），约18个月完成从副县级到正县级的跨越。这种"三级跳"在南昌市近年的干部调整中极为罕见。龚飞霞是否为女性干部培养计划的一部分？哪位上级领导在推动其快速晋升？其完整履历（尤其是县纪委阶段的业绩）是理解这一晋升的关键。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>线索2：杨育星-袁一旦——5年搭档</h4>
+    <p>杨育星在袁一旦手下担任青山湖区区长长达约5年（2021.04-2026.07）。这是一段罕见的长期稳定的党政一把手搭档关系。在南昌市各县区，党政一把手同时任职5年以上的情况并不多见。两人的配合模式、分工方式、以及杨育星最终从袁一旦手中直接接班，都暗示了某种制度化的继承安排。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索3：袁一旦去向不明——可能的意义</h4>
+    <p>2026年7月卸任青山湖区委书记后，袁一旦的去向在公开渠道完全不可查。作为正县级干部，如果调往副厅级岗位应有任前公示。结合杨育星内部晋升接班的安排，袁一旦的去向——提拔、平调还是退休——将揭示这次人事调整的性质。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索4：10名常委个人履历全部空白——最大信息黑洞</h4>
+    <p>青山湖区政府官网仅提供领导名册，不提供个人简历页面。百度百科/Baidu Baike 被CAPTCHA封锁（403错误）。所有10名区委常委——杨育星、龚飞霞、毛涛、杨峰、吴庆和、付磊、牛浩、蔡志刚、刘伟、彭凌迁——的出生年份、籍贯、教育背景、完整职业履历均无法从公开渠道获取。这是本项目最大的单一信息黑洞。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索5：青山湖区——南昌重要的干部输出源</h4>
+    <p>叶飞在青山湖区成长25年后外调安义→进贤；李松殿从青山湖区长直接升任安义县委书记（后升至副市长/市委常委）；许强待14-18年后调任东湖区副区长。青山湖区的干部培养能力和输出频率值得持续关注——它与南昌县并列，是南昌的两个主要干部输出县区。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐</div>
+    <h4>线索6：区长空缺与党政一肩挑风险</h4>
+    <p>杨育星升任区委书记后，区长职位一度空缺。龚飞霞以"代区长"身份出现（2026年7月），但区人大尚未完成正式任命。在此期间，若区委书记杨育星外出或另有安排，存在党政运转的风险。预计区人大常委会将在近期召开，完成龚飞霞的正式任命程序。</p>
+  </div>
+
+</div>
+
+<!-- Section 6: Information Gaps -->
+<div class="section">
+  <div class="section-title"><span class="num">06</span> 信息缺口</div>
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>优先级</th>
+        <th>人物</th>
+        <th>当前角色</th>
+        <th>缺口描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="strong">⭐⭐⭐⭐⭐</td>
+        <td>全部10名常委</td>
+        <td>区委常委会</td>
+        <td>出生年份、籍贯、教育背景、完整职业履历完全空白</td>
+      </tr>
+      <tr>
+        <td class="strong">⭐⭐⭐⭐⭐</td>
+        <td>龚飞霞</td>
+        <td>代区长</td>
+        <td>完整履历未获取；县纪委→区委副书记→代区长的精准时间线待确认</td>
+      </tr>
+      <tr>
+        <td class="strong">⭐⭐⭐⭐</td>
+        <td>袁一旦</td>
+        <td>前区委书记</td>
+        <td>2026年7月卸任后去向不明</td>
+      </tr>
+      <tr>
+        <td class="strong">⭐⭐⭐⭐</td>
+        <td>吴庆和/彭凌迁</td>
+        <td>常委</td>
+        <td>纪委书记和宣传部部长身份待确认</td>
+      </tr>
+      <tr>
+        <td class="strong">⭐⭐⭐⭐</td>
+        <td>毛涛</td>
+        <td>常委/副区长</td>
+        <td>常委兼副区长，具体分工不明</td>
+      </tr>
+      <tr>
+        <td class="strong">⭐⭐⭐⭐</td>
+        <td>杨峰</td>
+        <td>推定常务副区长</td>
+        <td>"常务副区长"头衔未获官方明确确认</td>
+      </tr>
+      <tr>
+        <td class="strong">⭐⭐⭐</td>
+        <td>许强</td>
+        <td>青山湖→东湖</td>
+        <td>青山湖区精确起止时间、毕业院校待补充</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 7: Sources -->
+<div class="section">
+  <div class="section-title"><span class="num">07</span> 信息来源</div>
+  <div class="source-list">
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/ldxx/leader.shtml" target="_blank">青山湖区政府官网 - 领导信息页</a> <span class="status ok">✅ 领导班子名册</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202607/0519e3f4ccdd41c5b5d23279ea7aba46.shtml" target="_blank">经济运行分析会新闻（龚飞霞=代区长/杨峰列首位）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202606/1e189645e6b6497c98aea5dc9e19be48.shtml" target="_blank">七一宣誓活动新闻（龚飞霞=统战部长）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202607/0ef9ef4163e64e1098108191f9b87840.shtml" target="_blank">政法委调研新闻（蔡志刚=政法委书记）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202607/54147f304e7f4837998fe5839281589d.shtml" target="_blank">组织部调研新闻（付磊陪同调研→推定组织部部长）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202607/e54549d5db174d33b1ab5ed45c340180.shtml" target="_blank">人武部任职大会新闻（牛浩=园区书记/刘伟=人武部政委）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202607/dad6aa3f8dc9439fb6d661f94d7c79e8.shtml" target="_blank">经济运行分析会（龚飞霞=区长提名人选）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://ncqsh.nc.gov.cn/ncqsh/qshyw/202607/d11194527f2d484d82deb0744b6d65cc.shtml" target="_blank">理论学习中心组研讨会（龚飞霞=代区长）</a> <span class="status ok">✅</span></div>
+    <div>• 网易号"汲古知新" 2026-07-12 — 南昌市六县区书记联动调整 <span class="status ok">✅ 杨育星任青山湖书记</span></div>
+    <div>• 杨育星完整职业路径 — 网易新闻2026-07-12 <span class="status ok">✅</span></div>
+    <div>• 项目已有报告 — docs/20260714-安义县-跨县干部交流网络.md <span class="status ok">✅</span></div>
+    <div>• 项目已有报告 — report/20260714-东湖区-许强-姚乐-青山湖连接.md <span class="status ok">✅</span></div>
+    <div>• 全体领导个人履历（百度百科/Baidu Baike） <span class="status blocked">❌ CAPTCHA封锁403</span></div>
+    <div>• 杨育星/龚飞霞/杨峰/毛涛等10名常委出生年份/籍贯 <span class="status blocked">❌ 任何公开来源均未获取</span></div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer">
+  本简报为内部参考资料，所有数据均可追溯至指定来源URL。<br>
+  青山湖区人民政府 · 人事关系网络 · 2026年7月
+</footer>
+
+</body>
+</html>

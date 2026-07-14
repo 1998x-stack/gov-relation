@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东湖区领导班子 · 工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0D0E10;
+  --surface-raised: #15171B;
+  --surface-card: #1A1C21;
+  --border: #262830;
+  --border-light: #32343C;
+  --ink: #E3DFD8;
+  --ink-dim: #8A8680;
+  --ink-muted: #5C5955;
+  --cinnabar: #E03C31;
+  --cinnabar-dim: rgba(224,60,49,0.12);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201,169,78,0.12);
+  --blue: #6B8FA3;
+  --blue-dim: rgba(107,143,163,0.10);
+  --orange: #CC7722;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.header h1 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.header h1 span {
+  color: var(--cinnabar);
+}
+.header-meta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+}
+.header-meta span { white-space: nowrap; }
+.classified-stamp {
+  display: inline-block;
+  border: 1px solid var(--cinnabar);
+  color: var(--cinnabar);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  padding: 2px 10px;
+  margin-left: 1rem;
+}
+
+/* ── Stats bar ── */
+.stats {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.stat {
+  background: var(--surface-raised);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+.stat-num {
+  font-family: "Noto Serif SC", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+/* ── Content ── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-title .num {
+  color: var(--cinnabar);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* ── Person card grid ── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.person-card {
+  background: var(--surface-card);
+  padding: 1.25rem;
+  position: relative;
+}
+.person-card .role-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid;
+}
+.role-tag.party { border-color: #E03C31; color: #E03C31; }
+.role-tag.gov  { border-color: #5588DD; color: #5588DD; }
+.role-tag.other { border-color: var(--ink-dim); color: var(--ink-dim); }
+.person-card .name {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.person-card .title {
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  margin: 0.2rem 0 0.5rem;
+}
+.person-card .meta {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+.person-card .badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.badge {
+  font-size: 0.55rem;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.badge-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(201,169,78,0.25); }
+.badge-blue { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(107,143,163,0.25); }
+.badge-cinnabar { background: var(--cinnabar-dim); color: var(--cinnabar); border: 1px solid rgba(224,60,49,0.2); }
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.625rem;
+  top: 0.45rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-light);
+  border: 1px solid var(--ink-dim);
+}
+.timeline-item.current::before {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+  box-shadow: 0 0 6px rgba(224,60,49,0.4);
+}
+.timeline-item .period {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.timeline-item .event {
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin-top: 0.15rem;
+}
+.timeline-item .event strong { font-weight: 600; }
+.timeline-item .gap {
+  color: var(--cinnabar);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* ── Relationship matrix ── */
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.matrix th, .matrix td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+.matrix th {
+  background: var(--surface-raised);
+  font-weight: 500;
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+}
+.matrix td { background: var(--surface-card); }
+.matrix .strong { color: var(--gold); }
+.matrix .weak { color: var(--blue); }
+
+/* ── Flow diagram (text-based, like a network diagram) ── */
+.flow-box {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  font-size: 0.82rem;
+}
+.flow-arrow {
+  color: var(--ink-muted);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.flow-org {
+  font-weight: 500;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.flow-person {
+  color: var(--ink);
+}
+.flow-note {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+}
+
+/* ── Insights ── */
+.insight {
+  background: var(--surface-card);
+  border-left: 2px solid var(--cinnabar);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.insight h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.insight p {
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+.insight .stars {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+/* ── Gaps table ── */
+.gaps-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.gaps-table th, .gaps-table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+.gaps-table th {
+  background: var(--surface-raised);
+  font-weight: 500;
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+}
+.gaps-table td { background: var(--surface-card); }
+.gaps-table .priority {
+  color: var(--cinnabar);
+  font-weight: 600;
+}
+
+/* ── Sources ── */
+.source-list {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  line-height: 1.8;
+}
+.source-list a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.source-list a:hover { text-decoration: underline; }
+.source-list .status {
+  font-size: 0.65rem;
+  padding: 1px 5px;
+  margin-left: 0.3rem;
+}
+.status.ok { color: #4CAF50; }
+.status.blocked { color: var(--cinnabar); }
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── responsive ── */
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .header h1 { font-size: 1.4rem; }
+  .person-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-eyebrow">CONFIDENTIAL · 南昌市东湖区 · 人事情报简报</div>
+  <h1>东湖区领导班子<br><span>工作关系网络</span></h1>
+  <div class="header-meta">
+    <span>📅 2026年7月14日</span>
+    <span>🕐 调查周期：7小时</span>
+    <span>🏛️ 南昌市东湖区 <span class="classified-stamp">机密 // INTERNAL</span></span>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">18</div>
+    <div class="stat-label">人员</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">18</div>
+    <div class="stat-label">机构</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">32</div>
+    <div class="stat-label">任职记录</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">13</div>
+    <div class="stat-label">关系连线</div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- Section 1: Current Core -->
+<div class="section">
+  <div class="section-title"><span class="num">01</span> 当前核心领导</div>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="role-tag party">区委书记</div>
+      <div class="name">刘光荣</div>
+      <div class="title">主持区委全面工作</div>
+      <div class="meta">1972年11月 · 江西南昌县<br>大学/哲学学士 · 1995年入党</div>
+      <div class="badges">
+        <span class="badge badge-gold">南昌县21年</span>
+        <span class="badge badge-blue">红谷滩3-4年</span>
+        <span class="badge badge-cinnabar">2025.02到任</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag gov">代区长</div>
+      <div class="name">邓之武</div>
+      <div class="title">负责区政府全面工作</div>
+      <div class="meta">1976年2月 · 江西万年<br>管理学硕士 · 1995年入党</div>
+      <div class="badges">
+        <span class="badge badge-gold">18个月三级跳</span>
+        <span class="badge badge-blue">进贤5.5年</span>
+        <span class="badge badge-cinnabar">2026.07.07到任</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag gov">常务副区长</div>
+      <div class="name">熊广义</div>
+      <div class="title">发改、财税、应急、教育等</div>
+      <div class="meta">1982年1月 · 江西南昌<br>大学/文学学士</div>
+      <div class="badges">
+        <span class="badge badge-blue">东湖终身干部</span>
+        <span class="badge">宣传→常务</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Deng Zhiwu Career Timeline -->
+<div class="section">
+  <div class="section-title"><span class="num">02</span> 邓之武 · 晋升路径</div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="period">2026.07.07 — 至今</div>
+      <div class="event"><strong>东湖区委副书记、代区长</strong> · 正县级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2025.01 — 2026.07</div>
+      <div class="event"><strong>南昌县委副书记</strong> · 正县级 · 18个月过渡</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2023.02 — 2025.01</div>
+      <div class="event"><strong>进贤县委常委、常务副县长</strong> · 副县级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2019.06 — 2023.02</div>
+      <div class="event"><strong>进贤县委常委、组织部部长</strong> · 副县级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2015.09 — 2019.06</div>
+      <div class="event"><strong>南昌市投资促进局副局长</strong> · 副县级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2002.05 — 2015.09</div>
+      <div class="event">南昌市外经贸委 · 副处长→<strong>投资促进处处长</strong> · 13年</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">1998.08 — 2002.05</div>
+      <div class="event gap">⚠ 省蚕桑茶叶研究所 · 约4年 · 细节缺失</div>
+    </div>
+    <div class="timeline-item current">
+      <div class="period">1994.09 — 1998.07</div>
+      <div class="event"><strong>浙江农业大学茶学系</strong> · 本科</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Relationship Matrix -->
+<div class="section">
+  <div class="section-title"><span class="num">03</span> 人物关系矩阵</div>
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>人物A</th>
+        <th>人物B</th>
+        <th>关系类型</th>
+        <th>共事背景</th>
+        <th>置信度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>邓之武</td><td>刘光荣</td>
+        <td class="strong">强 · 现任搭档</td>
+        <td>东湖区党政班子</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>邓之武</td><td>贾彧超</td>
+        <td class="strong">强 · 上下级</td>
+        <td>南昌县6个月</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>邓之武</td><td>徐强</td>
+        <td class="strong">强 · 同班子</td>
+        <td>进贤县约3年</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>胡俊峰</td><td>刘光荣</td>
+        <td class="strong">强 · 前任搭档</td>
+        <td>东湖区1.5年</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>熊广义</td><td>涂宏伟</td>
+        <td class="strong">强 · 前后任</td>
+        <td>宣传部</td>
+        <td>🔵 确认</td>
+      </tr>
+      <tr>
+        <td>刘光荣</td><td>贾彧超</td>
+        <td class="weak">弱 · 南昌县系</td>
+        <td>南昌县系统前后辈</td>
+        <td>🟡 推定</td>
+      </tr>
+      <tr>
+        <td>邓之武</td><td>熊广义</td>
+        <td class="weak">弱 · 现任班子</td>
+        <td>东湖区2026.07起</td>
+        <td>🟡 推定</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 4: Cross-District Flow -->
+<div class="section">
+  <div class="section-title"><span class="num">04</span> 跨区县人事交流</div>
+
+  <div class="flow-box">
+    <h4 style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;color:var(--ink-dim);">→ 流入东湖区</h4>
+    <div class="flow-row">
+      <span class="flow-org">南昌县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">刘光荣（21年）→ 红谷滩 → 东湖区委书记</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">南昌县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">邓之武（18个月副书记）→ 东湖代区长</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">进贤县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">邓之武（组织+常务约6年）→ 东湖代区长</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">红谷滩</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">刘光荣（区长）→ 东湖区委书记</span>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <h4 style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;color:var(--ink-dim);">← 流出东湖区</h4>
+    <div class="flow-row">
+      <span class="flow-org">东湖区</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">贾彧超（副书记）→ 南昌县委书记</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">东湖区</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">程家华（政法委）→ 南昌县政法委书记</span>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;font-size:0.78rem;color:var(--ink-dim);padding:1rem;background:var(--surface-card);border:1px solid var(--border);">
+    <strong style="color:var(--gold);">核心模式：</strong>东湖区与南昌县形成南昌市唯一的<strong style="color:var(--ink);">双向跨区交流通道</strong>。党政一把手均来自南昌县系统，呈现出显著的制度化用人倾向。
+  </div>
+</div>
+
+<!-- Section 5: Key Insights -->
+<div class="section">
+  <div class="section-title"><span class="num">05</span> 关键洞察</div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>线索1：刘光荣南昌县21年——最大信息黑洞</h4>
+    <p>区委书记刘光荣在南昌县的21年（1995—约2021）完整职务序列完全空白。这21年是其权力根基和关系网络的核心。若能填补，将揭示他与南昌县各届领导的从属关系，以及与邓之武可能的间接联系。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>线索2：胡俊峰去向不明</h4>
+    <p>前任区长2026年7月离任后去向完全不明。无任前公示、无调任报道、无表彰公告。这种"沉默的离任"值得持续关注——可能处于"另有任用"过渡期，也可能涉及其他情况。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索3：邓之武18个月三级跳的推手</h4>
+    <p>从进贤常务→南昌县委副书记→东湖代区长。谁在2024年底至2026年中推动了他的快速晋升？贾彧超（南昌县委书记，前东湖副书记）是否为关键推荐人？</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索4：专职副书记长期空缺</h4>
+    <p>2023年起东湖区无专职副书记（邓云生最后出现在2023年新闻）。这意味着区委常委会中8个席位之一的专职副书记长期空悬——在东湖区这样一个主城区，这个空缺极为罕见。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索5：班子7人履历完全空白</h4>
+    <p>组织部长魏维新、纪委书记邵应兰、政法委书记熊国海、宣传部长涂宏伟、副区长许强/姚乐/江珊的完整履历均不可查。其中邵应兰（抚州人）和江珊（黎川人）为非南昌籍干部，可能涉及跨市交流。</p>
+  </div>
+</div>
+
+<!-- Section 6: Open Gaps -->
+<div class="section">
+  <div class="section-title"><span class="num">06</span> 信息缺口</div>
+  <table class="gaps-table">
+    <thead>
+      <tr>
+        <th>优先级</th>
+        <th>人物</th>
+        <th>当前角色</th>
+        <th>缺口描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="priority">⭐⭐⭐⭐⭐</td>
+        <td>刘光荣</td>
+        <td>区委书记</td>
+        <td>1995-2021年南昌县21年完整职务序列完全空白</td>
+      </tr>
+      <tr>
+        <td class="priority">⭐⭐⭐⭐⭐</td>
+        <td>胡俊峰</td>
+        <td>前区长</td>
+        <td>2000-2019年18.5年完全空白 + 当前去向不明</td>
+      </tr>
+      <tr>
+        <td class="priority">⭐⭐⭐⭐⭐</td>
+        <td>魏维新等7人</td>
+        <td>各常委/副区长</td>
+        <td>完整履历完全不可查</td>
+      </tr>
+      <tr>
+        <td class="priority">⭐⭐⭐⭐</td>
+        <td>邓之武</td>
+        <td>代区长</td>
+        <td>1998-2002年约4年早期履历缺失</td>
+      </tr>
+      <tr>
+        <td class="priority">⭐⭐⭐⭐</td>
+        <td>邓云生</td>
+        <td>前专职副书记</td>
+        <td>2023年后去向不明</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 7: Sources -->
+<div class="section">
+  <div class="section-title"><span class="num">07</span> 信息来源</div>
+  <div class="source-list">
+    <div>• <a href="http://dhq.nc.gov.cn/dhqrmzf/qwld/202607/b307139581234300b7ddaf0c9fad8a99.shtml" target="_blank">邓之武官方简历（区委）</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://dhq.nc.gov.cn/dhqrmzf/qwld/202502/05326f5c302b432192d95b75837b694b.shtml" target="_blank">刘光荣官方简历</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://dhq.nc.gov.cn/dhqrmzf/rsrm/202607/debeb85666a34617bab6e21af9d66e95.shtml" target="_blank">邓之武任命通知</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://dhq.nc.gov.cn/dhqrmzf/qwld/202108/48c23d2d01c141ccb5c3cd4a3e1b0edf.shtml" target="_blank">熊广义官方简历</a> <span class="status ok">✅</span></div>
+    <div>• <a href="http://dhq.nc.gov.cn/dhqrmzf/qldxx/leader.shtml" target="_blank">东湖区领导信息页面</a> <span class="status ok">✅</span></div>
+    <div>• 2024年12月19日南昌市委组织部任前公示 <span class="status ok">✅</span></div>
+    <div>• <a href="https://baike.baidu.com/item/%E9%82%93%E4%B9%8B%E6%AD%A6" target="_blank">邓之武百度百科</a> <span class="status ok">✅ 部分</span></div>
+    <div>• docs/20260714-江西省-南昌市-南昌县.md（项目已有数据） <span class="status ok">✅</span></div>
+    <div>• 胡俊峰百度百科 <span class="status blocked">❌ 403 不可达</span></div>
+    <div>• 魏维新等7人完整履历 <span class="status blocked">❌ 任何公开来源均未找到</span></div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer">
+  本简报为内部参考资料，所有数据均可追溯至指定来源URL。<br>
+  东湖区人民政府 · 人事关系网络 · 2026年7月
+</footer>
+
+</body>
+</html>
