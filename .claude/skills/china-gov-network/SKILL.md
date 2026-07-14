@@ -1,25 +1,27 @@
 ---
 name: china-gov-network
 description: >
-  Research Chinese government official career histories, leadership teams (领导班子),
-  and build personnel relationship networks (工作关系网络). Use this skill whenever the
-  user asks about Chinese officials' resumes, career paths, county/district leadership
-  rosters, political personnel networks, government cadre relationships, or wants to
-  map out who-knows-who in Chinese local government. Triggers on phrases like "调查XX县
-  书记的履历", "XX领导班子", "工作关系大网", "人事关系图谱", "干部交流网络", or any
-  request to investigate Chinese county/city government officials' backgrounds and
-  connections. Also triggers when the user wants to build a SQLite database, GEXF graph,
-  or HTML briefing about Chinese political personnel.
+  Research government official career histories, leadership teams, and build personnel
+  relationship networks — for ANY jurisdiction (Chinese counties, US federal/state agencies,
+  city governments, etc.). Use this skill whenever the user asks about officials' resumes,
+  career paths, leadership rosters, political personnel networks, government cadre
+  relationships, or wants to map out who-knows-who in any government organization.
+  Triggers on phrases like "调查XX的履历", "XX领导班子", "工作关系大网", "人事关系图谱",
+  "干部交流网络", "investigate XX official", "government personnel network", "map
+  connections between", or any request to investigate government officials' backgrounds
+  and connections. Also triggers when the user wants to build a SQLite database, GEXF
+  graph, or HTML briefing about government personnel. Jurisdiction-agnostic — works for
+  中国官场, US Congress, state agencies, city councils, or any political entity.
 ---
 
-# Chinese Government Personnel Network Investigator
+# Government Personnel Network Investigator
 
-Investigate Chinese local government officials — their career histories, leadership
-teams, and inter-personnel relationship networks. The output is a structured dataset
-(SQLite + GEXF) plus a comprehensive Markdown report and an interactive HTML briefing
-page.
+Investigate government officials in ANY jurisdiction — their career histories, leadership
+teams, and inter-personnel relationship networks. Works for Chinese counties, US federal/state
+agencies, city governments, or any political entity. The output is a structured dataset
+(SQLite + GEXF) plus a comprehensive Markdown report and an interactive HTML briefing page.
 
-> **Model for ALL subagents**: `deepseek-v4-flash` (cost-efficient, good search quality).
+> **Model for ALL subagents**: `haiku` (cost-efficient, fast search).
 > Phase 1 (5 agents) and Phase 2 (3 agents) all use this model. Phase 3 (code generation,
 > report writing, HTML design) uses the session's default model.
 
@@ -30,14 +32,14 @@ Phase 1: Broad Research      Phase 2: Deep Dive         Phase 3: Build & Deliver
 ┌──────────────────┐       ┌──────────────────┐       ┌─────────────────────────┐
 │ 5 subagents       │  ──→  │ 3 subagents       │  ──→  │ SQLite DB + GEXF        │
 │ different angles  │       │ targeted gaps     │       │ Markdown report         │
-│ deepseek-v4-flash │       │ deepseek-v4-flash │       │ + frontend-design skill │
+│ haiku │       │ haiku │       │ + frontend-design skill │
 └──────────────────┘       └──────────────────┘       └─────────────────────────┘
 ```
 
 ## Phase 1: Broad Research (5 Subagents)
 
 Deploy 5 subagents simultaneously, each from a different research angle. Use the
-general-purpose agent type with `model: "deepseek-v4-flash"` for cost efficiency.
+general-purpose agent type with `model: "haiku"` for cost efficiency.
 All 5 run in parallel (`run_in_background: true`).
 
 The 5 angles are:
@@ -64,6 +66,29 @@ Each agent returns structured findings. From these, identify:
 1. **Information gaps** — key people with missing career histories
 2. **Connection leads** — potential work overlaps between people
 3. **Anomalies** — unusual career moves, rapid promotions, scandal traces
+
+### ⚠ Phase 1 Quality Gate (MANDATORY)
+
+Before proceeding to Phase 2, run this checklist against each of the 5 agent outputs.
+Subagents (especially haiku) can drift — producing historical lists when you asked for
+current people, or returning general trivia instead of targeted career data.
+
+**For each agent, ask:**
+
+| Check | If NO, action |
+|-------|---------------|
+| Did it answer the SPECIFIC question assigned? | Respawn that agent with a tighter prompt |
+| Did it return CURRENT information (not just historical)? | Add "current" / "现任" keywords to the respawn prompt |
+| Did it provide DATES and SOURCE URLs for each claim? | Ask the agent to supplement with sources |
+| For Agent 3 (key deputies): did it cover the NAMED individuals, not a generic history of the position? | Most common failure — respawn with explicit "查 XXX（姓名）的履历，不是这个职位的历史" |
+
+**If 2+ agents failed the check**: fix and respawn before moving to Phase 2. This quality
+gate prevents the most common failure mode — where a bad Phase 1 output silently propagates
+into Phase 2, and critical connections are missed.
+
+After the gate passes, compile a **Phase 1 Gap Summary** — a bullet list of names with
+missing career segments, ranked by their importance to the investigation. This directly
+informs Phase 2 agent assignments.
 
 ---
 
@@ -183,12 +208,45 @@ The real research data is below: [paste Phase 1+2 findings here]
 building the HTML inline using the design system documented in this skill. But
 always try the skill first — it produces more distinctive results.
 
+### 3d. Interactive Graph Page
+
+Build a `graph.html` that visualizes ALL persons and relationships using **vis.js**
+(CDN-loaded, no build step). This is the master graph for the entire project — accumulate
+data from each investigation into it.
+
+**Person ID Convention — CRITICAL for dedup across investigations**:
+
+Use the format `{county}_{surname_givenname}` for person IDs, e.g.:
+- `jinxian_xiong_zhenqiang` for 熊振强（进贤县委书记）
+- `nanchang_jia_yuchao` for 贾彧超（南昌县委书记）
+
+This prevents duplicates when the same person appears in multiple investigations
+(e.g., 熊振强 appears in both 进贤县 research as secretary AND 南昌县 research via
+徐志勇's Anyi connection). Before adding a new person, check by name + birth year
+against existing nodes. If a match is found, ADD new positions/relationships to the
+existing node rather than creating a duplicate.
+
+**Requirements**:
+- Load `vis-network` from CDN (https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js)
+- Persons as colored circles (red=party secretary, blue=government, orange=discipline, grey=other)
+- Organizations as small colored boxes
+- Two edge types: `worked_at` (thin grey, person→org) and `relationship` (thick gold for strong, thin blue for weak, person↔person)
+- forceAtlas2Based physics for natural layout
+- Click a person node → show tooltip with name, title, birthplace, career summary
+- Legend for node colors and edge types
+- Auto-fit after stabilization
+- Link back to `index.html`
+
+**After each investigation**, check for duplicates (by name+birth), then append new
+persons, organizations, and edges to graph.html so it grows into a comprehensive
+network map over time.
+
 ---
 
 ## Critical Rules
 
 ### Model Selection
-- Phase 1 & 2 subagents: ALWAYS `model: "deepseek-v4-flash"` for cost efficiency
+- Phase 1 & 2 subagents: ALWAYS `model: "haiku"` for cost efficiency
 - Phase 3 code generation: use the session's default model (the one you're running on)
 
 ### Data Integrity
@@ -203,14 +261,29 @@ data/database/[network].db     — SQLite
 data/graph/[network].gexf      — GEXF graph
 report/YYYYMMDD-[地区]-[主题].md   — Markdown report
 report/YYYYMMDD-[地区]-[主题].html — HTML briefing
+report/index.html              — Master index linking all reports + data files
+report/graph.html              — Interactive vis.js network graph (accumulate over time)
 ```
+For GitHub Pages deployment, rename `report/` → `docs/` (Pages only supports `/` or `/docs`).
 
-### Search Strategy
+### Search Strategy (adapt to jurisdiction)
+
+**For Chinese government entities**:
 - Use WebSearch for each query (not WebFetch for initial searches)
-- After finding relevant URLs, use WebFetch to extract details from key pages
 - Government leadership pages (`ldzc.shtml`) are the most reliable source for current rosters
 - 任前公示 (pre-appointment notices) from 市委组织部 are gold for career histories
-- 澎湃新闻 (thepaper.cn) often has detailed official appointment/dispatch articles
+- 澎湃新闻 (thepaper.cn) often has detailed official appointment articles
+- 百度百科 is secondary quality; government websites are primary
+
+**For US government entities**:
+- Wikipedia is a strong starting point for federal/state officials
+- Official .gov bio pages (congress.gov, agency sites)
+- Ballotpedia for election history and prior offices
+- OpenSecrets / FollowTheMoney for campaign finance connections
+- LinkedIn for staff-level career paths
+- News archives (NYT, WaPo, Politico) for appointment coverage
+
+**Universal**: Always cite source URLs. Distinguish "confirmed from official source" vs "reported by media" vs "inferred from timeline overlap".
 
 ### Edge Cases
 - If the target position is vacant or recently changed, note this prominently
@@ -227,3 +300,41 @@ Present to the user:
 2. The file paths of all deliverables
 3. The top 3 unanswered questions that could drive further investigation
 4. An offer to deep-dive into any specific person or connection
+
+### Open Gaps Registry
+
+After EVERY investigation, write an **Open Gaps Registry** to `report/open_gaps.md`.
+This file persists across investigations and tracks unresolved information holes with
+priority levels. When starting a NEW investigation in the same region, read this file
+first and prioritize filling the highest-ranked gaps.
+
+**Format**:
+
+```markdown
+# Open Gaps Registry
+> Last updated: YYYY-MM-DD
+
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 雷桥亮 | 进贤代县长 | 2022年前20年职业生涯 | 2026-07-14 | 1980年生，42岁前履历完全未知 |
+
+## ⭐⭐⭐⭐ High (important deputies or key connections)
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 帅志 | 1996-2008 12年早期履历 | 2026-07-14 | 南昌县长 |
+
+## ⭐⭐⭐ Medium (would enrich the network picture)
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+
+## ⭐⭐ Low (nice to have)
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+```
+
+**Rules**:
+- Update this file after every investigation — add new gaps, remove filled ones, adjust priorities
+- Never delete entries older than 6 months — they may still be useful context
+- When a gap is filled, move it to a "Resolved" section at the bottom with the date resolved
+- Read this file at the START of each new investigation to guide Phase 2 deep-dive topics
