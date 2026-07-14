@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鹰潭市月湖区领导班子工作关系网络 — 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0D0D0D;
+  --bg-surface: #121212;
+  --bg-card: #181818;
+  --bg-card-hover: #1d1d1d;
+  --bg-header: #090909;
+  --text-primary: #E8E0D0;
+  --text-secondary: #a09888;
+  --text-muted: #6a6258;
+  --accent: #E03C31;
+  --accent-dim: rgba(224,60,49,0.15);
+  --accent-border: #5a1a15;
+  --gold: #C9A94E;
+  --gold-dim: rgba(201,169,78,0.12);
+  --gold-text: #d4b85a;
+  --border: #333;
+  --border-light: #2a2a2a;
+  --border-accent: #3d3528;
+  --info: #4a7a9c;
+  --tag-secretary: #E03C31;
+  --tag-gov: #4a7fc7;
+  --tag-discipline: #d4880f;
+  --tag-other: #6a6a6a;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 15px; scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: 'Noto Serif SC', 'Noto Sans SC', serif; font-weight: 700; }
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(180deg, #080808 0%, var(--bg-surface) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 3.5rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent) 25%, transparent 100%);
+}
+.header::after {
+  content: '● 内部研究 · 机密';
+  position: absolute;
+  top: 1rem; right: 2rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  opacity: 0.45;
+}
+.header-inner { max-width: 1200px; margin: 0 auto; }
+.header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+.header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+.header h1 .accent { color: var(--accent); }
+.header-sub {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+.header-sub .date { color: var(--text-muted); margin-right: 1.5rem; }
+.header-sub .ref { color: var(--gold-text); }
+.header-right {
+  text-align: right;
+}
+.header-right .classified-stamp {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.2rem 0.7rem;
+  opacity: 0.6;
+}
+
+/* Stats row */
+.stats { display: flex; gap: 0; margin-top: 2rem; border: 1px solid var(--border); }
+.stat-item {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: var(--bg-card-hover); }
+.stat-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.stat-num.gold { color: var(--gold); }
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ===== NAV ===== */
+.nav-bar {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.nav-link {
+  display: block;
+  padding: 0.75rem 1.1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-link:hover { color: var(--text-primary); background: var(--bg-card); }
+.nav-link.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ===== MAIN ===== */
+.main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.section { margin-bottom: 3.5rem; }
+.section:last-child { margin-bottom: 0; }
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-title .accent-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.section-title .sub {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ===== PERSON CARDS ===== */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.person-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  transition: all 0.25s;
+  position: relative;
+  border-radius: 0;
+}
+.person-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
+}
+.person-card .rank-badge {
+  position: absolute;
+  top: 0.75rem; right: 0.75rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border-accent);
+  color: var(--text-muted);
+}
+.person-card .rank-badge.secretary { border-color: var(--accent-border); color: var(--accent); }
+.person-card .rank-badge.gov { border-color: #2a3a50; color: var(--tag-gov); }
+.person-card .rank-badge.discipline { border-color: #4a3a10; color: var(--tag-discipline); }
+.person-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  padding-right: 3.5rem;
+}
+.person-name .gender {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+.person-name .highlight-note {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--gold-text);
+  margin-left: 0.4rem;
+}
+.person-title {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.person-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+.person-meta span { display: inline-block; margin-right: 0.8rem; }
+.person-meta .birth { color: var(--text-secondary); }
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.badge {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.45rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.badge.confirmed { border-color: var(--gold-dim); color: var(--gold-text); }
+.badge.warning { border-color: var(--accent-border); color: var(--accent); }
+.badge.info { border-color: #2a3a48; color: var(--info); }
+.badge.gap { border-color: #4a3a10; color: var(--tag-discipline); font-style: italic; }
+
+/* ===== TIMELINE ===== */
+.timeline-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 900px) { .timeline-group { grid-template-columns: 1fr; } }
+.timeline {
+  position: relative;
+  padding: 0;
+}
+.timeline h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.timeline h4 .tl-badge {
+  font-size: 0.55rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.35rem;
+}
+.tl-item {
+  position: relative;
+  padding: 0 0 1rem 1.5rem;
+  border-left: 1px solid var(--border);
+  margin-left: 0.5rem;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 4px;
+  width: 7px; height: 7px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+}
+.tl-item.highlight::before { border-color: var(--gold); background: var(--gold); }
+.tl-item.current::before { border-color: var(--accent); background: var(--accent); }
+.tl-item.gap-item::before { border-color: var(--tag-discipline); background: transparent; }
+.tl-date {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.05rem;
+}
+.tl-role {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.tl-org {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+.tl-gap {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+.tl-note {
+  font-size: 0.62rem;
+  color: var(--gold-text);
+  margin-top: 0.1rem;
+}
+
+/* ===== RELATIONSHIP TABLE ===== */
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+tr:hover td { background: var(--bg-card-hover); }
+td.name { font-family: 'Noto Serif SC', serif; color: var(--text-primary); font-weight: 600; }
+td.strength { color: var(--gold-text); font-size: 0.7rem; }
+td.tag { font-size: 0.68rem; }
+.tag-confirmed { color: var(--gold-text); }
+.tag-pending { color: var(--tag-discipline); }
+
+/* ===== FLOW SECTION ===== */
+.flow-list { display: flex; flex-direction: column; gap: 1rem; }
+.flow-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--border-accent);
+}
+.flow-card.gold { border-left-color: var(--gold); }
+.flow-card.person-flow {
+  border-left-color: var(--accent);
+  background: linear-gradient(135deg, var(--accent-dim) 0%, var(--bg-card) 80%);
+}
+.flow-card h4 {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+.flow-card h4 .flow-arrow { color: var(--gold); margin: 0 0.3rem; }
+.flow-card p {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.flow-card .flow-detail {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+.flow-card .flow-tag {
+  display: inline-block;
+  font-size: 0.58rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold-text);
+  margin-top: 0.4rem;
+}
+
+/* ===== INSIGHT PANEL ===== */
+.insight-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.insight-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+}
+.insight-item.critical { border-left-color: var(--accent); background: linear-gradient(135deg, var(--accent-dim) 0%, var(--bg-card) 80%); }
+.insight-item.high { border-left-color: var(--gold); }
+.insight-item.medium { border-left-color: var(--border-accent); }
+.insight-item.low { border-left-color: #2a2a2a; }
+.insight-priority {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+.insight-item.critical .insight-priority { color: var(--accent); }
+.insight-item.high .insight-priority { color: var(--gold); }
+.insight-item.medium .insight-priority { color: var(--text-muted); }
+.insight-item.low .insight-priority { color: var(--text-muted); opacity: 0.6; }
+.insight-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+.insight-text {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.insight-text strong { color: var(--text-primary); font-weight: 600; }
+
+/* ===== SOURCES ===== */
+.source-list { margin: 1rem 0; }
+.source-list li {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border-light);
+  list-style: none;
+}
+.source-list li::before { content: '— '; color: var(--text-dim); }
+.source-list a { color: var(--text-secondary); text-decoration: none; }
+.source-list a:hover { color: var(--text-primary); text-decoration: underline; }
+
+/* ===== PATTERN BOX ===== */
+.pattern-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.85rem;
+}
+.pattern-box:last-child { margin-bottom: 0; }
+.pattern-box h4 {
+  font-size: 0.85rem;
+  color: var(--gold-text);
+  margin-bottom: 0.4rem;
+}
+.pattern-box p, .pattern-box li {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.pattern-box ul { padding-left: 1.2rem; }
+
+/* ===== FOOTER ===== */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+.footer a { color: var(--text-secondary); text-decoration: none; }
+.footer a:hover { color: var(--text-primary); }
+.footer .data-files { margin-top: 0.3rem; font-size: 0.62rem; }
+.footer .data-files span { display: inline-block; margin: 0 0.4rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 720px) {
+  .header { padding: 2.5rem 1rem 1.5rem; }
+  .header h1 { font-size: 1.4rem; }
+  .header::after { display: none; }
+  .header-right .classified-stamp { font-size: 0.55rem; }
+  .stats { flex-wrap: wrap; }
+  .stat-item { min-width: 45%; }
+  .main { padding: 1rem; }
+  .person-grid { grid-template-columns: 1fr; }
+  .timeline-group { grid-template-columns: 1fr; }
+  .flow-card { padding: 0.8rem 1rem; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .nav-bar { display: none; }
+  body { background: #fff; color: #000; }
+  .header { background: #f5f5f5; border-bottom: 1px solid #ccc; }
+  .person-card { background: #fafafa; border: 1px solid #ddd; break-inside: avoid; }
+  .stat-item { border-color: #ddd; }
+  :root { --bg-primary: #fff; --bg-surface: #f5f5f5; --bg-card: #fafafa; --text-primary: #222; --text-secondary: #555; --border: #ddd; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div>
+        <h1>鹰潭市月湖区领导班子<span class="accent">工作关系网络</span></h1>
+        <div class="header-sub">
+          <span class="date">Intelligence Briefing · 2026年7月14日</span>
+          <span class="ref">REF: YT-YH-20260714</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="classified-stamp">◆ 内部研究 ◆</span>
+        <div style="font-size:0.6rem;color:var(--text-muted);margin-top:0.3rem;letter-spacing:0.05em;">江西省 · 鹰潭市</div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat-item"><div class="stat-num gold">25</div><div class="stat-label">人物</div></div>
+      <div class="stat-item"><div class="stat-num">16</div><div class="stat-label">机构</div></div>
+      <div class="stat-item"><div class="stat-num">44</div><div class="stat-label">任职记录</div></div>
+      <div class="stat-item"><div class="stat-num gold">12</div><div class="stat-label">关系</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#current" class="nav-link active">现任班子</a>
+    <a href="#timelines" class="nav-link">履历时间线</a>
+    <a href="#matrix" class="nav-link">关系矩阵</a>
+    <a href="#exchange" class="nav-link">跨区交流</a>
+    <a href="#insights" class="nav-link">关键洞察</a>
+    <a href="#sources" class="nav-link">信息来源</a>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ===== CURRENT LEADERSHIP ===== -->
+<section class="section" id="current">
+  <h2 class="section-title"><span class="accent-dot"></span>现任领导班子 <span class="sub">区委 · 区政府 · 2026年7月</span></h2>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin-bottom:0.75rem;font-weight:500;">区委领导</h3>
+  <div class="person-grid">
+
+    <!-- 黄海有 -->
+    <div class="person-card">
+      <span class="rank-badge secretary">区委书记</span>
+      <div class="person-name">黄海有</div>
+      <div class="person-title">中共鹰潭市月湖区委书记、区人武部党委第一书记</div>
+      <div class="person-meta">
+        <span class="birth">1976.09 · 江西余江</span>
+        <span>在职大专</span>
+        <span>1996.08 参加工作</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">余江基层20年</span>
+        <span class="badge confirmed">回流模式</span>
+        <span class="badge warning">在职大专</span>
+      </div>
+    </div>
+
+    <!-- 曹玉臣 -->
+    <div class="person-card">
+      <span class="rank-badge gov">区 长</span>
+      <div class="person-name">曹玉臣 <span class="gender">女</span></div>
+      <div class="person-title">月湖区委副书记、区政府党组书记、区长</div>
+      <div class="person-meta">
+        <span class="birth">1980.11 · 江西万年</span>
+        <span>在职大学</span>
+        <span>2000.07 参加工作</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">工信系统出身</span>
+        <span class="badge confirmed">80后女区长</span>
+        <span class="badge">铜产业发展局</span>
+      </div>
+    </div>
+
+    <!-- 胡永生 -->
+    <div class="person-card">
+      <span class="rank-badge">副书记</span>
+      <div class="person-name">胡永生</div>
+      <div class="person-title">月湖区委副书记</div>
+      <div class="person-meta">
+        <span class="birth">1975.06 · 湖北郧西</span>
+        <span>中央党校大学</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">贵溪系</span>
+        <span class="badge">2024.04 任现职</span>
+      </div>
+    </div>
+
+    <!-- 江俊 -->
+    <div class="person-card">
+      <span class="rank-badge discipline">纪委书记</span>
+      <div class="person-name">江俊</div>
+      <div class="person-title">区委常委、纪委书记、监委主任</div>
+      <div class="person-meta">
+        <span>2025.10 到任</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">接替张强</span>
+      </div>
+    </div>
+
+    <!-- 梁锋 -->
+    <div class="person-card">
+      <span class="rank-badge">组织部</span>
+      <div class="person-name">梁锋</div>
+      <div class="person-title">区委常委、组织部部长</div>
+      <div class="badge-row">
+        <span class="badge">2023年起任现职</span>
+        <span class="badge gap">可能贵溪副市长</span>
+      </div>
+    </div>
+
+    <!-- 周先才 -->
+    <div class="person-card">
+      <span class="rank-badge">宣传部</span>
+      <div class="person-name">周先才</div>
+      <div class="person-title">区委常委、宣传部部长</div>
+      <div class="person-meta">
+        <span class="birth">1970.10</span>
+        <span>江西农大 · 林学</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">2022.05 任现职</span>
+      </div>
+    </div>
+
+    <!-- 冯发茂 -->
+    <div class="person-card">
+      <span class="rank-badge">政法委</span>
+      <div class="person-name">冯发茂</div>
+      <div class="person-title">区委常委、政法委书记</div>
+      <div class="badge-row">
+        <span class="badge">2023.07 任现职</span>
+        <span class="badge gap">履历待查</span>
+      </div>
+    </div>
+
+    <!-- 彭科 -->
+    <div class="person-card">
+      <span class="rank-badge">人武部</span>
+      <div class="person-name">彭科</div>
+      <div class="person-title">区委常委、人武部政委</div>
+      <div class="badge-row">
+        <span class="badge">军队系统</span>
+        <span class="badge gap">履历待查</span>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.75rem 0 0.75rem;font-weight:500;">区政府班子</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>职务</th>
+          <th>分工 / 备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="name">曹玉臣</td><td>区长</td><td>主持区政府全面工作，分管财政局、审计局</td></tr>
+        <tr><td class="name">陶君喜</td><td>常务副区长</td><td>接替曹玉臣升任后的常务副区长 · <span style="color:var(--tag-discipline);">履历待查</span></td></tr>
+        <tr><td class="name">张利虹</td><td>政府党组成员</td><td>政务服务、城市管理、应急管理、生态环境</td></tr>
+        <tr><td class="name">吴后启</td><td>副区长</td><td>教育、社保、卫健、医保、文旅、市监</td></tr>
+        <tr><td class="name">钱小飞</td><td>副区长</td><td>发改、税务、统计、商务、工信、科技、金融</td></tr>
+        <tr><td class="name">官正强</td><td>副区长</td><td>住建、自然资源、重点工程、城中村改造</td></tr>
+        <tr><td class="name">黄斌</td><td>副区长</td><td>民政、农业农村、乡村振兴、林业、水利、交通</td></tr>
+        <tr><td class="name">吴嘉玮</td><td>副区长</td><td>公安、司法、信访、退役军人事务</td></tr>
+        <tr><td class="name">王晓柯</td><td>副区长</td><td>协助社会保障工作</td></tr>
+        <tr><td class="name">张朝洋</td><td>副区长</td><td>协助政务服务和金融工作</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.75rem 0 0.75rem;font-weight:500;">前任主要领导</h3>
+  <div class="person-grid">
+    <!-- 方璐 -->
+    <div class="person-card">
+      <span class="rank-badge gov">前区长</span>
+      <div class="person-name">方璐 <span class="gender">女</span> <span class="highlight-note">⚠ 去向待查</span></div>
+      <div class="person-title">前月湖区委副书记、区长（2021.01 — 2025.08）</div>
+      <div class="person-meta">
+        <span class="birth">1979.06</span>
+        <span>大学</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">贵溪系</span>
+        <span class="badge warning">去向完全未知</span>
+      </div>
+    </div>
+
+    <!-- 敖捷 -->
+    <div class="person-card">
+      <span class="rank-badge secretary">前区委书记</span>
+      <div class="person-name">敖捷</div>
+      <div class="person-title">前月湖区委书记 → 现九江市柴桑区委书记</div>
+      <div class="person-meta">
+        <span class="birth">1985.06</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">跨市调任</span>
+        <span class="badge confirmed">月湖→九江柴桑</span>
+        <span class="badge info">1985年 快速升迁</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">近年重要人事变动</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>时间</th><th>变动</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2021.09</td><td>敖捷任月湖区委书记（接替李志兵）</td></tr>
+        <tr><td>2021.10</td><td>方璐正式当选区长</td></tr>
+        <tr><td>2024.04</td><td>胡永生任月湖区委副书记（接替聂琦）</td></tr>
+        <tr><td>2025.05</td><td>陶君喜任常务副区长</td></tr>
+        <tr><td>2025.08</td><td>方璐离任月湖区区长</td></tr>
+        <tr><td>2025.09</td><td>曹玉臣任代区长（接替方璐）</td></tr>
+        <tr><td>2025.10</td><td>曹玉臣正式当选区长；江俊补选监委主任</td></tr>
+        <tr><td>2026.07</td><td>黄海有任区委书记（接替敖捷）；敖捷调任九江柴桑</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== CAREER TIMELINES ===== -->
+<section class="section" id="timelines">
+  <h2 class="section-title"><span class="accent-dot"></span>核心人物履历时间线 <span class="sub">Vertical Timeline</span></h2>
+
+  <div class="timeline-group">
+
+    <!-- 曹玉臣 -->
+    <div class="timeline">
+      <h4>曹玉臣 <span class="tl-badge">现任区长</span></h4>
+      <div class="tl-item">
+        <div class="tl-date">~2000 — 2019</div>
+        <div class="tl-role">鹰潭市经贸委/工信委/工信局</div>
+        <div class="tl-org">投资与技术科副科长→经济运行科科长→科技与投资科科长</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2019 — 2021</div>
+        <div class="tl-role">党委委员、市铜产业发展局专职副局长</div>
+        <div class="tl-org">鹰潭市工业和信息化局</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021 — 2022.03</div>
+        <div class="tl-role">市铜产业发展中心主任（局长）</div>
+        <div class="tl-org">鹰潭市工业和信息化局 · 正处级</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2022.03 — 2024</div>
+        <div class="tl-role">区委常委、副区长</div>
+        <div class="tl-org">月湖区</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2024 — 2025.09</div>
+        <div class="tl-role">常务副区长、党组副书记、三级调研员</div>
+        <div class="tl-org">月湖区政府</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2025.09 — 2025.10</div>
+        <div class="tl-role">区委副书记、代区长</div>
+        <div class="tl-org">月湖区政府</div>
+      </div>
+      <div class="tl-item current">
+        <div class="tl-date">2025.10 — 至今</div>
+        <div class="tl-role">区委副书记、区长、党组书记</div>
+        <div class="tl-org">月湖区政府 · 工信系统出身80后女区长</div>
+      </div>
+    </div>
+
+    <!-- 黄海有 -->
+    <div class="timeline">
+      <h4>黄海有 <span class="tl-badge">现任区委书记（2026.07）</span></h4>
+      <div class="tl-item">
+        <div class="tl-date">1996 — ~2016</div>
+        <div class="tl-role">余江县乡镇系统</div>
+        <div class="tl-org">黄庄乡（乡长助理→副乡长→常务副乡长→纪委书记）→ 潢溪镇（副书记、纪委书记）→ 春涛乡（乡长→党委书记→镇党委书记）<span style="color:var(--tag-discipline);"> · 余江基层20年</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~2016 — ~2020</div>
+        <div class="tl-role">月湖区副区长</div>
+        <div class="tl-org">月湖区政府 · 副处级（首次外调）</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~2020 — 2024.04</div>
+        <div class="tl-role">鹰潭市政府副秘书长 → 市生态环境局党组书记、局长</div>
+        <div class="tl-org">鹰潭市直部门 · 正处级</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2024.04 — 2026.06</div>
+        <div class="tl-role">鹰潭市发改委党组书记、主任（兼市数据局局长）</div>
+        <div class="tl-org">鹰潭市直部门 · 正处级</div>
+      </div>
+      <div class="tl-item current">
+        <div class="tl-date">2026.07 — 至今</div>
+        <div class="tl-role">月湖区委书记、区人武部党委第一书记</div>
+        <div class="tl-org">余江籍干部回流 · 副厅级</div>
+      </div>
+    </div>
+
+    <!-- 方璐 -->
+    <div class="timeline">
+      <h4>方璐 <span class="tl-badge">前区长 · ⚠ 去向待查</span></h4>
+      <div class="tl-item">
+        <div class="tl-date">2000.07 — 2004.03</div>
+        <div class="tl-role">共青团鹰潭市委干部</div>
+        <div class="tl-org">期间在白露镇、高公寨乡挂职</div>
+      </div>
+      <div class="tl-item gap-item">
+        <div class="tl-date">2004.03 — ~2020</div>
+        <div class="tl-role">贵溪市（历任副市长等职）</div>
+        <div class="tl-org"><span class="tl-gap">⚠ 16年间具体职务阶梯待查 — 最大信息缺口</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~2020 — 2021.01</div>
+        <div class="tl-role">贵溪市委副书记（正县级）</div>
+        <div class="tl-org">贵溪市</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021.01 — 2021.10</div>
+        <div class="tl-role">月湖区委副书记、代区长</div>
+        <div class="tl-org">月湖区政府</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021.10 — 2025.08</div>
+        <div class="tl-role">月湖区区长</div>
+        <div class="tl-org">月湖区政府</div>
+      </div>
+      <div class="tl-item gap-item">
+        <div class="tl-date">2025.08 → ?</div>
+        <div class="tl-role"><span class="tl-gap">⚠ 去向待查 — 离职后公开报道中未出现</span></div>
+        <div class="tl-org">可能去向：鹰潭市直部门 / 其他县区 / 提任市级</div>
+      </div>
+    </div>
+
+    <!-- 敖捷 -->
+    <div class="timeline">
+      <h4>敖捷 <span class="tl-badge">前区委书记 → 九江柴桑</span></h4>
+      <div class="tl-item">
+        <div class="tl-date">正科起步</div>
+        <div class="tl-role">月湖区正科级 → 区委常委</div>
+        <div class="tl-org">月湖区 · 具体职务待查</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">—</div>
+        <div class="tl-role">信江新区党工委副书记、管委会主任</div>
+        <div class="tl-org">信江新区</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2021.09 — 2026.06</div>
+        <div class="tl-role">月湖区委书记</div>
+        <div class="tl-org">接替李志兵</div>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-date">2026.07 — 至今</div>
+        <div class="tl-role"><strong>九江市柴桑区委书记</strong></div>
+        <div class="tl-note">跨市调任 · 月湖→九江 · 1985年快速升迁</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== RELATIONSHIP MATRIX ===== -->
+<section class="section" id="matrix">
+  <h2 class="section-title"><span class="accent-dot"></span>工作关系矩阵 <span class="sub">确认的关系连接 · 强度分类</span></h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>人物 A</th>
+          <th>人物 B</th>
+          <th>关系类型</th>
+          <th>连接方式</th>
+          <th>强度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="name">黄海有</td>
+          <td class="name">曹玉臣</td>
+          <td>党政搭档</td>
+          <td>2026.07起区委书记-区长搭档</td>
+          <td class="strength">⭐⭐ 强</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="name">敖捷</td>
+          <td class="name">方璐</td>
+          <td>前后任党政搭档</td>
+          <td>2021-2025区委书记-区长搭档</td>
+          <td class="strength">⭐⭐ 强</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="name">方璐</td>
+          <td class="name">曹玉臣</td>
+          <td>前后任区长</td>
+          <td>2025.09交接区长</td>
+          <td class="strength">⭐ 弱</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="name">敖捷</td>
+          <td class="name">黄海有</td>
+          <td>前后任书记</td>
+          <td>2026.07交接区委书记</td>
+          <td class="strength">⭐ 弱</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="name">方璐</td>
+          <td class="name">胡永生</td>
+          <td>贵溪系</td>
+          <td>两人均长期在贵溪市任职</td>
+          <td class="strength">⭐ 弱</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="name">张强</td>
+          <td class="name">江俊</td>
+          <td>前后任纪委</td>
+          <td>2025.10交接纪委书记</td>
+          <td class="strength">⭐ 弱</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td class="name">方璐</td>
+          <td class="name">梁锋</td>
+          <td>贵溪系（待核实）</td>
+          <td>梁锋可能曾任贵溪副市长</td>
+          <td class="strength" style="color:var(--tag-discipline);">? 待核实</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">三大核心关系集群</h3>
+
+  <div class="pattern-box" style="border-left: 3px solid var(--accent);">
+    <h4 style="color:var(--accent);">① 党政搭档链</h4>
+    <p>敖捷↔方璐（2021-2025）→ 黄海有↔曹玉臣（2026.07起）<br>月湖区连续两组党政搭档，区委书记从敖捷到黄海有，区长从方璐到曹玉臣，形成完整更替链条。</p>
+  </div>
+  <div class="pattern-box" style="border-left: 3px solid var(--gold);">
+    <h4>② 贵溪系集群</h4>
+    <p>方璐（贵溪市委副书记）+ 胡永生（贵溪市委常委、宣传部长）+ 梁锋（可能曾任贵溪副市长），构成一个"贵溪系"干部集群在月湖区任职。需核实梁锋是否确实来自贵溪。</p>
+  </div>
+  <div class="pattern-box" style="border-left: 3px solid var(--tag-gov);">
+    <h4 style="color:var(--tag-gov);">③ 女区长传承</h4>
+    <p>方璐（1979年，前区长）→ 曹玉臣（1980年，现任区长），月湖区连续两任女区长，在江西省县区层面较为罕见。</p>
+  </div>
+</section>
+
+<!-- ===== CROSS-COUNTY EXCHANGE ===== -->
+<section class="section" id="exchange">
+  <h2 class="section-title"><span class="accent-dot"></span>跨县区人事交流网络 <span class="sub">Personnel Flow Analysis</span></h2>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin-bottom:0.75rem;font-weight:500;">鹰潭市区划格局</h3>
+  <div class="pattern-box" style="margin-bottom:1.25rem;">
+    <p>鹰潭市下辖：<strong style="color:var(--text-primary);">月湖区</strong>（市府驻地） · <strong style="color:var(--text-primary);">余江区</strong>（原余江县，2018撤县设区） · <strong style="color:var(--text-primary);">贵溪市</strong>（县级市，鹰潭最大经济体）</p>
+  </div>
+
+  <div class="flow-list">
+
+    <div class="flow-card person-flow">
+      <h4>黄海有 <span class="flow-arrow">→</span> 余江↔月湖↔市级循环</h4>
+      <p>余江（基层20年）→ 月湖（副区长）→ 鹰潭市政府（副秘书长→生态环境局长→发改委主任）→ <strong style="color:var(--accent);">月湖（区委书记·副厅）</strong></p>
+      <div class="flow-detail">"外放回流"模式：从余江基层到月湖副区长，上调市直部门后以发改委主任身份回月湖任书记</div>
+      <span class="flow-tag">余江籍回流</span>
+    </div>
+
+    <div class="flow-card person-flow">
+      <h4>方璐 <span class="flow-arrow">→</span> 贵溪→月湖</h4>
+      <p>鹰潭团市委 → 贵溪市（16年）→ 贵溪市委副书记（正县级）→ <strong style="color:var(--accent);">月湖区区长</strong></p>
+      <div class="flow-detail">贵溪系核心人物，在贵溪市任职超过15年</div>
+      <span class="flow-tag">贵溪→月湖</span>
+    </div>
+
+    <div class="flow-card person-flow">
+      <h4>胡永生 <span class="flow-arrow">→</span> 贵溪→月湖</h4>
+      <p>贵溪市委常委、宣传部长 → <strong style="color:var(--accent);">月湖区委副书记</strong>（2024.04任）</p>
+      <div class="flow-detail">与方璐同属"贵溪系"集群</div>
+      <span class="flow-tag">贵溪→月湖</span>
+    </div>
+
+    <div class="flow-card person-flow">
+      <h4>敖捷 <span class="flow-arrow">→</span> 月湖→九江柴桑（<strong style="color:var(--gold);">跨市</strong>）</h4>
+      <p>月湖（正科→常委）→ 信江新区（副书记、主任）→ <strong style="color:var(--accent);">月湖区委书记</strong> → <strong style="color:var(--gold);">九江市柴桑区委书记</strong></p>
+      <div class="flow-detail">从月湖到九江柴桑，跨鹰潭-九江两市，1985年出生，升迁速度值得关注</div>
+      <span class="flow-tag">月湖→九江 · 跨市</span>
+    </div>
+
+    <div class="flow-card gold">
+      <h4>鹰潭—景德镇走廊 <span style="font-size:0.65rem;color:var(--text-muted);font-weight:400;">（与前期调研交叉验证）</span></h4>
+      <p><strong>钟志生</strong>：鹰潭市长 → 景德镇市委书记<br>
+      <strong>鄢华</strong>：鹰潭市纪委书记 → 景德镇市人大常委会主任<br>
+      <strong>刘祖三</strong>：景德镇市委副书记 → 鹰潭市委书记</p>
+      <div class="flow-detail">鹰潭-景德镇双向干部交流通道，值得持续关注</div>
+    </div>
+
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">交流模式分析</h3>
+  <div class="pattern-box">
+    <h4>"外放回流"模式 — 黄海有型</h4>
+    <p>在县区基层长期任职→上调市直部门→回流原县区任主要领导。路径：余江(20年) → 月湖(副区长) → 鹰潭市政府/生态环境局/发改委 → 月湖(书记)</p>
+  </div>
+  <div class="pattern-box">
+    <h4>"贵溪输出"模式 — 方璐/胡永生型</h4>
+    <p>贵溪市（鹰潭最大经济体）干部向月湖区（市府驻地）输出，形成"贵溪系"干部集群。需进一步核实是否有更多贵溪籍干部在月湖任职。</p>
+  </div>
+  <div class="pattern-box">
+    <h4>"跨市输出"模式 — 敖捷型</h4>
+    <p>从鹰潭月湖区委书记直接调任九江柴桑区委书记，属于跨市平调重用，表明敖捷在省级组织部门有较好的评价。</p>
+  </div>
+</section>
+
+<!-- ===== KEY INSIGHTS ===== -->
+<section class="section" id="insights">
+  <h2 class="section-title"><span class="accent-dot"></span>关键洞察与突破线索 <span class="sub">Findings &amp; Breakthrough Leads</span></h2>
+  <div class="insight-list">
+
+    <div class="insight-item critical">
+      <div class="insight-priority">⭐ 01 · 最高优先 — 方璐去向</div>
+      <div class="insight-title">最大信息缺口：前区长去向完全未知</div>
+      <div class="insight-text">方璐于2025年8月离任月湖区区长后，在公开报道中完全消失。继任者曹玉臣2025年9月公示为代区长，但方璐的去向未在任何渠道披露。可能去向包括：鹰潭市直部门正职、其他县市区任职、提任市级机关副职。此为本研究最大缺口。</div>
+    </div>
+
+    <div class="insight-item high">
+      <div class="insight-priority">⭐ 02 · 高优先 — 贵溪系网络</div>
+      <div class="insight-title">方璐+胡永生+潜在梁锋构成"贵溪系"集群</div>
+      <div class="insight-text">方璐在贵溪市工作超过15年（贵溪市委副书记），胡永生曾在贵溪任职（市委常委、宣传部长后调月湖），梁锋可能曾任贵溪副市长。此集群在月湖区构成一个来自同一来源县的干部网络，需核实梁锋是否确实来自贵溪以及核实方璐在贵溪的完整职务序列。</div>
+    </div>
+
+    <div class="insight-item high">
+      <div class="insight-priority">⭐ 03 · 高优先</div>
+      <div class="insight-title">陶君喜/冯发茂背景待查</div>
+      <div class="insight-text">常务副区长陶君喜和政法委书记冯发茂的此前履历完全未知。两人均为月湖区班子中的关键岗位，其履历信息对于完整理解月湖区人事格局至关重要。</div>
+    </div>
+
+    <div class="insight-item medium">
+      <div class="insight-priority">⭐ 04 · 中优先</div>
+      <div class="insight-title">连续两任女区长 — 方璐 → 曹玉臣</div>
+      <div class="insight-text">方璐（女，1979年）+ 曹玉臣（女，1980年），月湖区连续两任女区长。在江西省县区层面，连续两任均为女性区长的情况并不常见，一定程度反映鹰潭市在培养选拔女干部方面的力度。</div>
+    </div>
+
+    <div class="insight-item medium">
+      <div class="insight-priority">⭐ 05 · 中优先</div>
+      <div class="insight-title">黄海有"在职大专"学历在副厅级少见</div>
+      <div class="insight-text">黄海有（1976年生，2026年任月湖区委书记，副厅级）仅有在职大专学历，在现职厅级干部中极为罕见。如有后续深造经历（在职本科/研究生），可进一步确认其完整教育背景。</div>
+    </div>
+
+    <div class="insight-item low">
+      <div class="insight-priority">⭐ 06 · 低优先</div>
+      <div class="insight-title">敖捷快速升迁 — 1985年到副厅</div>
+      <div class="insight-text">敖捷1985年出生，从月湖正科级岗位起步，到2026年调任九江柴桑区委书记（副厅级），升迁速度在同期干部中较快。其具体晋升时间节点和每次提拔的背景值得进一步关注。</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SOURCES ===== -->
+<section class="section" id="sources">
+  <h2 class="section-title"><span class="accent-dot"></span>信息来源 <span class="sub">Sources · 数据文件</span></h2>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin-bottom:0.5rem;font-weight:500;">数据文件</h3>
+  <div class="pattern-box" style="margin-bottom:1.25rem;">
+    <p>
+      <strong style="color:var(--gold-text);">SQLite数据库</strong>：<code style="color:var(--text-muted);">data/database/yuehu_network.db</code> — 4张表：persons/organizations/positions/relationships<br>
+      <strong style="color:var(--gold-text);">GEXF图文件</strong>：<code style="color:var(--text-muted);">data/graph/yuehu_network.gexf</code> — 25人 + 16机构 + 44任职 + 12关系<br>
+      <strong style="color:var(--gold-text);">Markdown报告</strong>：<code style="color:var(--text-muted);">report/20260714-鹰潭市月湖区-区长.md</code>
+    </p>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin-bottom:0.5rem;font-weight:500;">引用来源</h3>
+  <ol class="source-list">
+    <li>曹玉臣百度百科 — <a href="https://wapbaike.baidu.com/item/%E6%9B%B9%E7%8E%89%E8%87%A3" target="_blank">wapbaike.baidu.com</a> <span style="color:var(--tag-discipline);">（二级来源）</span></li>
+    <li>黄海有百度百科 — <a href="https://wapbaike.baidu.com/item/%E9%BB%84%E6%B5%B7%E6%9C%89" target="_blank">wapbaike.baidu.com</a> <span style="color:var(--tag-discipline);">（二级来源）</span></li>
+    <li>周先才百度百科 — <a href="https://baike.baidu.com/item/%E5%91%A8%E5%85%88%E6%89%8D" target="_blank">baike.baidu.com</a> <span style="color:var(--tag-discipline);">（二级来源）</span></li>
+    <li>月湖区人民政府网站 — <a href="http://www.yuehu.gov.cn" target="_blank">yuehu.gov.cn</a> <strong style="color:var(--gold-text);">（一级来源·政府官网）</strong></li>
+    <li>月湖区政府网站-领导分工通知 — <a href="https://www.yuehu.gov.cn/art/2025/7/4/art_1904_1379551.html" target="_blank">yuehu.gov.cn</a> <strong style="color:var(--gold-text);">（一级来源）</strong></li>
+    <li>月湖区政府网站-新闻报道 — <a href="http://www.yuehu.gov.cn/col/col3792/index.html" target="_blank">yuehu.gov.cn</a> <strong style="color:var(--gold-text);">（一级来源）</strong></li>
+    <li>鹰潭日报2024年4月30日任前公示 <strong style="color:var(--gold-text);">（一级来源）</strong></li>
+    <li>鹰潭市委组织部2025年9月任前公示 <strong style="color:var(--gold-text);">（一级来源）</strong></li>
+    <li>江西政读/网易新闻报道 — <a href="https://www.163.com" target="_blank">163.com</a> <span style="color:var(--tag-discipline);">（二级来源）</span></li>
+    <li>鲁中晨报 — <a href="https://www.msn.cn/zh-cn/news/other/80后曹玉臣任代区长/ar-AA1rKCqM" target="_blank">MSN报道</a> <span style="color:var(--tag-discipline);">（二级来源）</span></li>
+    <li>月湖发布（2026年7月）<strong style="color:var(--gold-text);">（一级来源）</strong></li>
+    <li>百度搜索AI摘要 <span style="color:var(--tag-discipline);">（二级来源）</span></li>
+    <li>鹰潭市人大/政协会议报道 <strong style="color:var(--gold-text);">（一级来源）</strong></li>
+  </ol>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>鹰潭市月湖区领导班子工作关系网络 · 情报简报 · 2026年7月14日</p>
+  <p class="data-files">
+    <span>📁 SQLite: <a href="../data/database/yuehu_network.db" target="_blank">yuehu_network.db</a></span>
+    <span>📁 GEXF: <a href="../data/graph/yuehu_network.gexf" target="_blank">yuehu_network.gexf</a></span>
+    <span>📄 Markdown: <a href="./20260714-鹰潭市月湖区-区长.md" target="_blank">完整报告</a></span>
+  </p>
+  <p style="margin-top:0.3rem;opacity:0.6;">数据截至 2026-07-14 · 内部研究使用 · 部分信息为未核实线索</p>
+</footer>
+
+<script>
+(function() {
+  // Sticky nav highlight
+  var navLinks = document.querySelectorAll('.nav-link');
+  var sections = document.querySelectorAll('.section');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        var id = entry.target.id;
+        var link = document.querySelector('.nav-link[href="#' + id + '"]');
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(function(s) { observer.observe(s); });
+})();
+</script>
+
+</body>
+</html>

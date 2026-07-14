@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青云谱区领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface2: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e8e0d0;
+  --text-muted: #8a8478;
+  --text-dim: #5a5548;
+  --accent: #E03C31;
+  --accent-glow: rgba(224,60,49,0.08);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201,169,78,0.12);
+  --red-dim: rgba(224,60,49,0.10);
+  --tag-secretary: #E03C31;
+  --tag-gov: #4a7fc7;
+  --tag-discipline: #d4880f;
+  --tag-other: #6a6a6a;
+  font-size: 14px;
+}
+html { background: var(--bg); color: var(--text); }
+body {
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+h1 { font-size: 2rem; font-weight: 900; }
+h2 {
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+h2::before { content: ''; position: absolute; bottom: -1px; left: 0; width: 3rem; height: 1px; background: var(--accent); }
+h3 { font-size: 1rem; color: var(--accent); margin-bottom: 0.75rem; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.header {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.header-top {
+  display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;
+}
+.header-sub {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;
+}
+.stats-row {
+  display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.75rem; font-weight: 700; color: var(--gold); line-height: 1.1;
+}
+.stat-label { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 0.15rem; }
+.classified-bar {
+  font-size: 0.6rem; letter-spacing: 0.2em; color: var(--accent);
+  border: 1px solid var(--accent); padding: 0.2rem 0.6rem;
+  display: inline-block; opacity: 0.7;
+}
+
+/* Person Cards */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem 1rem 0.9rem;
+  transition: border-color 0.2s;
+}
+.person-card:hover { border-color: var(--accent); }
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700; font-size: 1rem;
+}
+.person-card .title {
+  font-size: 0.75rem; color: var(--text-muted); margin-top: 0.15rem; line-height: 1.3;
+}
+.person-card .meta {
+  font-size: 0.7rem; color: var(--text-dim); margin-top: 0.4rem;
+}
+.person-card .tags {
+  display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;
+}
+.tag {
+  font-size: 0.6rem; padding: 0.1rem 0.4rem; letter-spacing: 0.05em;
+  border: 1px solid; border-radius: 0;
+}
+.tag-secretary { border-color: var(--tag-secretary); color: var(--tag-secretary); }
+.tag-gov { border-color: var(--tag-gov); color: var(--tag-gov); }
+.tag-discipline { border-color: var(--tag-discipline); color: var(--tag-discipline); }
+.tag-other { border-color: var(--tag-other); color: var(--tag-other); }
+.tag-gold { border-color: var(--gold); color: var(--gold); }
+.tag-muted { border-color: var(--text-dim); color: var(--text-dim); }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 2rem; margin: 1.5rem 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+}
+.timeline-group { margin-bottom: 2rem; }
+.timeline-group h4 {
+  font-size: 0.9rem; margin-bottom: 0.75rem;
+  padding-left: 0.5rem; border-left: 2px solid var(--accent);
+}
+.tl-item { position: relative; padding: 0 0 1rem 1.5rem; }
+.tl-item::before {
+  content: ''; position: absolute; left: -2rem; top: 0.4rem;
+  width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: var(--accent);
+}
+.tl-item .tl-date {
+  font-size: 0.65rem; color: var(--accent); font-weight: 500; letter-spacing: 0.05em;
+}
+.tl-item .tl-title { font-size: 0.8rem; margin-top: 0.1rem; }
+.tl-item .tl-note { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.1rem; }
+.tl-item.gap .tl-title { color: var(--text-dim); font-style: italic; }
+.tl-item.gap::before { background: var(--text-dim); }
+
+/* Table */
+.data-table {
+  width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.75rem;
+}
+.data-table th {
+  text-align: left; padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600; color: var(--text-muted); font-size: 0.65rem;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.data-table td {
+  padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--surface2);
+  vertical-align: top;
+}
+.data-table tr:hover td { background: var(--surface); }
+
+/* Network Flow */
+.network-flow {
+  display: flex; flex-direction: column; gap: 1.5rem; margin: 1.5rem 0;
+}
+.flow-row {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.flow-node {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 0.6rem 1rem; text-align: center; min-width: 100px;
+}
+.flow-node .fn-name { font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 0.85rem; }
+.flow-node .fn-role { font-size: 0.65rem; color: var(--text-dim); margin-top: 0.15rem; }
+.flow-arrow { color: var(--text-dim); font-size: 1.2rem; }
+.flow-label { font-size: 0.6rem; color: var(--gold); letter-spacing: 0.05em; }
+
+/* Insights */
+.insight-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin: 1.5rem 0;
+}
+.insight-card {
+  background: var(--surface); border: 1px solid var(--border); padding: 1rem;
+  position: relative;
+}
+.insight-card.critical {
+  border-left: 2px solid var(--accent);
+  background: linear-gradient(135deg, var(--red-dim) 0%, var(--surface) 80%);
+}
+.insight-card.high {
+  border-left: 2px solid var(--gold);
+  background: linear-gradient(135deg, var(--gold-dim) 0%, var(--surface) 80%);
+}
+.insight-card.medium {
+  border-left: 2px solid var(--text-dim);
+}
+.insight-card .ic-priority {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.insight-card.critical .ic-priority { color: var(--accent); }
+.insight-card.high .ic-priority { color: var(--gold); }
+.insight-card.medium .ic-priority { color: var(--text-dim); }
+.insight-card .ic-title {
+  font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem;
+}
+.insight-card .ic-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Sources */
+.source-list { margin: 1rem 0; }
+.source-list li {
+  font-size: 0.7rem; color: var(--text-muted);
+  padding: 0.3rem 0; border-bottom: 1px solid var(--surface2);
+  list-style: none;
+}
+.source-list li::before { content: '— '; color: var(--text-dim); }
+
+/* Footer */
+.footer {
+  margin-top: 3rem; padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.65rem; color: var(--text-dim); text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  body { padding: 1rem; }
+  h1 { font-size: 1.5rem; }
+  .person-grid { grid-template-columns: 1fr; }
+  .insight-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-sub"><span class="classified-bar">◆ 密级 · 内部研究 ◆</span></div>
+      <h1>青云谱区领导班子<br>工作关系网络</h1>
+      <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.4rem;">情报简报 · 2026-07-14</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:0.6rem;color:var(--text-dim);letter-spacing:0.05em;">南昌市 · 江西省</div>
+      <div style="font-size:0.6rem;color:var(--text-dim);margin-top:0.2rem;">调查编号 QYP-20260714</div>
+    </div>
+  </div>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num">21</div><div class="stat-label">人物</div></div>
+    <div class="stat"><div class="stat-num">20</div><div class="stat-label">机构</div></div>
+    <div class="stat"><div class="stat-num">36</div><div class="stat-label">任职记录</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">关系连接</div></div>
+  </div>
+</div>
+
+<h2>现任区领导</h2>
+<div class="person-grid">
+  <div class="person-card">
+    <div class="name">罗国栋</div>
+    <div class="title">青云谱区委书记</div>
+    <div class="meta">1981.10 江西吉水 · 中央党校研究生</div>
+    <div class="tags"><span class="tag tag-secretary">区委书记</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">洪略</div>
+    <div class="title">区委副书记、代区长</div>
+    <div class="meta">1991.01 江西余干 · 法学博士 · 2018年参加工作</div>
+    <div class="tags"><span class="tag tag-gov">代区长</span><span class="tag tag-gold" style="border-color:#E03C31;color:#E03C31;">⚠ 履历待查</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">林峰</div>
+    <div class="title">区委副书记</div>
+    <div class="meta">1978.10 江西玉山 · 在职研究生/MBA</div>
+    <div class="tags"><span class="tag tag-other">副书记</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">黄华辉</div>
+    <div class="title">常委、政法委书记</div>
+    <div class="meta">1978.01 江西临川 · 法律硕士</div>
+    <div class="tags"><span class="tag tag-other">政法委</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">滕作鹏</div>
+    <div class="title">常委、宣传部部长</div>
+    <div class="meta">1975.11 江西新建</div>
+    <div class="tags"><span class="tag tag-other">宣传部</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">杨柳</div>
+    <div class="title">常委、组织部部长</div>
+    <div class="meta">1984.11 江西南昌 · 女</div>
+    <div class="tags"><span class="tag tag-other">组织部</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">李军</div>
+    <div class="title">常委、纪委书记</div>
+    <div class="meta">1981.09 江西南昌</div>
+    <div class="tags"><span class="tag tag-discipline">纪委</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">聂洪明</div>
+    <div class="title">副区长</div>
+    <div class="meta">1975.10 江西南昌</div>
+    <div class="tags"><span class="tag tag-gov">副区长</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">夏玉龙</div>
+    <div class="title">副区长、公安分局局长</div>
+    <div class="meta">1971.02 江西南昌</div>
+    <div class="tags"><span class="tag tag-gov">公安</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">胡启明</div>
+    <div class="title">副区长</div>
+    <div class="meta">1977.05 江西吉安 · 民革党员</div>
+    <div class="tags"><span class="tag tag-gov">副区长</span><span class="tag tag-muted">民革</span></div>
+  </div>
+  <div class="person-card">
+    <div class="name">徐冀</div>
+    <div class="title">副区长</div>
+    <div class="meta">1983.07 籍贯待查</div>
+    <div class="tags"><span class="tag tag-gov">副区长</span></div>
+  </div>
+</div>
+
+<h2>关键人物履历</h2>
+
+<h3>罗国栋 · 现任区委书记</h3>
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-date">~2017—2020.06</div>
+    <div class="tl-title">省工信委对外交流合作处处长</div>
+    <div class="tl-note">江西省工业和信息化委员会</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">2020.06—2021.08</div>
+    <div class="tl-title">南昌县委副书记（正县级）</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">2021.08—2026.07</div>
+    <div class="tl-title">安义县委副书记、代县长→县长</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">2026.07.07—至今</div>
+    <div class="tl-title"><strong>青云谱区委书记</strong></div>
+    <div class="tl-note">2026年7月南昌六县区联动调整上任</div>
+  </div>
+</div>
+
+<h3>洪略 · 现任代区长 <span style="font-size:0.65rem;color:var(--accent);font-weight:400;">— 履历存在重大信息缺口</span></h3>
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-date">?—2018.08</div>
+    <div class="tl-title">法学博士毕业</div>
+    <div class="tl-note">毕业院校和博士论文方向未知</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">2018.08</div>
+    <div class="tl-title">参加工作</div>
+    <div class="tl-note">具体入职单位和岗位未知</div>
+  </div>
+  <div class="tl-item gap">
+    <div class="tl-date">2018—2026</div>
+    <div class="tl-title">【8年履历完全空白——待调查】</div>
+    <div class="tl-note">从科员到副厅级代区长仅用8年，中间无任何公开记录</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">~2026.06—至今</div>
+    <div class="tl-title"><strong>青云谱区委副书记、代区长</strong></div>
+    <div class="tl-note">2026年7月8日已主持区政府工作会议</div>
+  </div>
+</div>
+
+<h3>叶修堂 · 前任区委书记→南昌市人大常委会办公室主任</h3>
+<div class="timeline">
+  <div class="tl-item"><div class="tl-date">~2008—2016</div><div class="tl-title">南昌日报社党委书记、社长、总编辑</div><div class="tl-note">高级编辑职称</div></div>
+  <div class="tl-item"><div class="tl-date">~2016—~2019</div><div class="tl-title">进贤县委副书记、代县长→县长</div></div>
+  <div class="tl-item"><div class="tl-date">~2019—2026.07</div><div class="tl-title">青云谱区委书记</div><div class="tl-note">任职约7年</div></div>
+  <div class="tl-item"><div class="tl-date">2026.07.10</div><div class="tl-title">南昌市人大常委会办公室主任</div><div class="tl-note">市第十六届人大常委会第四十三次会议任命</div></div>
+</div>
+
+<h3>汪众华 · 前任区长→南昌市文联党组书记</h3>
+<div class="timeline">
+  <div class="tl-item"><div class="tl-date">2003—2011</div><div class="tl-title">南昌市委办公厅（信息处、综合一处）</div></div>
+  <div class="tl-item"><div class="tl-date">2011.12—2015.07</div><div class="tl-title">南昌市信访局副局长</div></div>
+  <div class="tl-item"><div class="tl-date">2015.07—2021.08</div><div class="tl-title">南昌县委常委、宣传部部长</div></div>
+  <div class="tl-item"><div class="tl-date">2021.08—2021.10</div><div class="tl-title">青云谱区委副书记、代区长</div></div>
+  <div class="tl-item"><div class="tl-date">2021.10—~2026.06</div><div class="tl-title">青云谱区委副书记、区长</div></div>
+  <div class="tl-item"><div class="tl-date">~2026.07</div><div class="tl-title">南昌市文联党组书记</div><div class="tl-note">从区长平调文联，实权明显下降</div></div>
+</div>
+
+<h2>工作关系矩阵</h2>
+<table class="data-table">
+  <thead>
+    <tr><th>人员A</th><th>关系类型</th><th>人员B</th><th>重叠单位</th><th>重叠时期</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>罗国栋</strong>（书记）</td>
+      <td>党政搭档</td>
+      <td><strong>洪略</strong>（代区长）</td>
+      <td>青云谱区</td>
+      <td>2026.07—至今</td>
+    </tr>
+    <tr>
+      <td><strong>洪略</strong>（代区长）</td>
+      <td>职务接替</td>
+      <td><strong>汪众华</strong>（原区长→文联）</td>
+      <td>青云谱区政府</td>
+      <td>前后任</td>
+    </tr>
+    <tr>
+      <td><strong>罗国栋</strong>（书记）</td>
+      <td>职务接替</td>
+      <td><strong>叶修堂</strong>（原书记→人大办）</td>
+      <td>青云谱区委</td>
+      <td>前后任</td>
+    </tr>
+    <tr>
+      <td><strong>徐志勇</strong>（南昌县常务副县长）</td>
+      <td>青云谱→南昌县</td>
+      <td><strong>帅志</strong>（南昌县长）</td>
+      <td>青云谱区→南昌县</td>
+      <td>2024.10—至今</td>
+    </tr>
+    <tr>
+      <td><strong>罗国栋</strong>（书记）</td>
+      <td>安义↔青云谱双向</td>
+      <td><strong>熊辉</strong>（安义书记）</td>
+      <td>青云谱/安义</td>
+      <td>2026.07—至今</td>
+    </tr>
+    <tr>
+      <td><strong>帅志</strong>（南昌县长）</td>
+      <td>南昌县委同事</td>
+      <td><strong>汪众华</strong>（原区长）</td>
+      <td>南昌县委</td>
+      <td>2016—2020</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>跨区人事交流网络</h2>
+<div class="network-flow">
+  <div class="flow-row">
+    <div class="flow-node"><div class="fn-name">汪众华</div><div class="fn-role">原青云谱区长</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="fn-name">南昌市文联</div><div class="fn-role">党组书记</div></div>
+    <div class="flow-label">[2026.07 平调]</div>
+  </div>
+  <div class="flow-row">
+    <div class="flow-node"><div class="fn-name">罗国栋</div><div class="fn-role">安义县长</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="fn-name">青云谱区</div><div class="fn-role">区委书记</div></div>
+    <div class="flow-label">[2026.07 联动调整]</div>
+  </div>
+  <div class="flow-row">
+    <div class="flow-node"><div class="fn-name">帅志</div><div class="fn-role">三家店街道书记</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="fn-name">南昌县</div><div class="fn-role">县长</div></div>
+    <div class="flow-label">[青云谱→南昌县]</div>
+  </div>
+  <div class="flow-row">
+    <div class="flow-node"><div class="fn-name">徐志勇</div><div class="fn-role">青云谱常务副区长</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="fn-name">南昌县</div><div class="fn-role">常务副县长</div></div>
+    <div class="flow-label">[2024.10]</div>
+  </div>
+  <div class="flow-row">
+    <div class="flow-node"><div class="fn-name">熊辉</div><div class="fn-role">青云谱组织部长</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="fn-name">进贤县长</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="fn-name">安义县委书记</div></div>
+    <div class="flow-label">[2016→2021→2026]</div>
+  </div>
+</div>
+
+<h2>线索与洞察</h2>
+<div class="insight-grid">
+  <div class="insight-card critical">
+    <div class="ic-priority">★★★★★ · 最高优先</div>
+    <div class="ic-title">洪略的完整履历</div>
+    <div class="ic-desc">1991年出生，2018年参加工作，2026年已任副厅级代区长——8年火箭晋升，中间履历完全空白。无百度百科、无任前公示、无任何公开简历。可能是整个南昌市最年轻、最神秘的区县主要领导。</div>
+  </div>
+  <div class="insight-card critical">
+    <div class="ic-priority">★★★★★ · 最高优先</div>
+    <div class="ic-title">洪略与罗国栋的关系</div>
+    <div class="ic-desc">罗国栋2026年7月7日到任区委书记，同期洪略任代区长。二人是否此前有过交集？是谁提携了洪略？</div>
+  </div>
+  <div class="insight-card high">
+    <div class="ic-priority">★★★★ · 高优先</div>
+    <div class="ic-title">汪众华去文联的背景</div>
+    <div class="ic-desc">从区长平调市文联党组书记，实权明显下降。是否涉及考核不合格、人事调整或其它因素？</div>
+  </div>
+  <div class="insight-card high">
+    <div class="ic-priority">★★★★ · 高优先</div>
+    <div class="ic-title">吴江辉、孙毅去向</div>
+    <div class="ic-desc">两位前青云谱区委书记的最终去向均未查明。</div>
+  </div>
+  <div class="insight-card high">
+    <div class="ic-priority">★★★★ · 高优先</div>
+    <div class="ic-title">洪略的导师/推荐人</div>
+    <div class="ic-desc">法学博士背景——谁是他的导师？导师在江西政法系统的影响力？</div>
+  </div>
+  <div class="insight-card medium">
+    <div class="ic-priority">★★★ · 中优先</div>
+    <div class="ic-title">7位现职领导履历缺失</div>
+    <div class="ic-desc">林峰、黄华辉、滕作鹏、杨柳、李军、聂洪明、夏玉龙——均无详细公开履历。</div>
+  </div>
+</div>
+
+<h2>信息来源</h2>
+<ol class="source-list">
+  <li>青云谱区政府官网 — qyp.nc.gov.cn（领导信息页）<a href="https://qyp.nc.gov.cn/qypqrmzf/ldxx/">访问</a></li>
+  <li>叶修堂百度百科 — baike.baidu.com</li>
+  <li>汪众华百度百科（hk镜像） — baike.baidu.hk</li>
+  <li>南昌市2021年领导干部任前公示 — news.sina.com.cn</li>
+  <li>项目内交叉引用：东湖区、进贤县、安义县、南昌县调查报告</li>
+  <li>青云谱区政府网站新闻（洪略工作报道） — qyp.nc.gov.cn</li>
+</ol>
+
+<div class="footer">
+  <p>生成时间：2026-07-14 · 数据截至：2026-07-14 · 青云谱区调查 · 内部研究使用</p>
+  <p style="margin-top:0.3rem;">部分信息来源于项目内的跨区交叉引用，青云谱区此前未有专项调查</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>景德镇市领导班子工作关系网络 — 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface-2: #1a1a1a;
+  --surface-3: #222;
+  --border: #2a2a2a;
+  --text: #e8e0d0;
+  --text-dim: #8a8275;
+  --text-muted: #5a554a;
+  --accent: #E03C31;
+  --accent-dim: #8a1e18;
+  --gold: #C9A94E;
+  --gold-dim: #6b5928;
+  --red-bg: #1c0a08;
+  --blue: #4a7ea8;
+  --blue-dim: #1e3040;
+  --green: #4a8a5a;
+  --amber: #c9853a;
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', serif;
+  --font-body: 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+  --max-w: 1200px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ── */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ── Header ── */
+.header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 120px;
+  height: 1px;
+  background: var(--accent);
+}
+.header-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+.header-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.header-sub {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text-dim);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.header-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+.stat-label { font-size: 12px; }
+
+/* ── Vacancy Alert ── */
+.vacancy-alert {
+  margin: 32px 0;
+  background: var(--red-bg);
+  border: 1px solid var(--accent);
+  padding: 20px 28px;
+  position: relative;
+}
+.vacancy-alert::before {
+  content: '⚠';
+  position: absolute;
+  top: -12px; left: 16px;
+  background: var(--accent);
+  color: #fff;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.vacancy-alert-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.vacancy-alert-text {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ── Section ── */
+.section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-of-type { border-bottom: none; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.section-number {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Person Card Grid ── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+.person-card:hover {
+  border-color: var(--accent-dim);
+  background: var(--surface-2);
+}
+.person-card-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.person-card-role {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+.person-card-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.person-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+.tag-red { border-color: var(--accent-dim); color: #e86a60; }
+.tag-gold { border-color: var(--gold-dim); color: var(--gold); }
+.tag-blue { border-color: var(--blue-dim); color: var(--blue); }
+.tag-green { border-color: #2a4a30; color: var(--green); }
+
+.connection-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+}
+.connection-strong { border-color: var(--gold-dim); color: var(--gold); }
+.connection-weak { border-color: var(--blue-dim); color: var(--blue); }
+
+.vacancy-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 10px;
+  letter-spacing: 1px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* ── Timeline ── */
+.timelines {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .timelines { grid-template-columns: 1fr; }
+}
+.timeline-group { margin-bottom: 32px; }
+.timeline-group-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.timeline-group-title .sub {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 18px;
+  font-size: 13px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  left: -18px;
+  top: 4px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--text-dim);
+  background: var(--surface);
+}
+.timeline-dot-red { border-color: var(--accent); background: var(--accent); }
+.timeline-dot-gold { border-color: var(--gold); background: var(--gold); }
+.timeline-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 1px;
+}
+.timeline-desc { color: var(--text); line-height: 1.5; }
+.timeline-desc .highlight { color: var(--accent); }
+.timeline-desc .gap-text { color: var(--amber); font-style: italic; }
+
+/* ── Table ── */
+.table-wrap { overflow-x: auto; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--surface-3);
+  vertical-align: top;
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--surface-2); }
+
+.relation-type {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+.relation-strong { background: var(--gold-dim); color: var(--gold); }
+.relation-weak { background: var(--blue-dim); color: var(--blue); }
+
+/* ── Exchange Flow ── */
+.flow-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+.flow-pattern {
+  flex: 1;
+  min-width: 200px;
+}
+.flow-pattern h4 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-dim);
+}
+.flow-arrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+.flow-from, .flow-to {
+  font-size: 13px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  white-space: nowrap;
+}
+.flow-from.special { border-color: var(--accent-dim); color: var(--accent); }
+.flow-arrow-symbol {
+  color: var(--text-muted);
+  font-size: 18px;
+}
+.flow-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+/* ── Insights ── */
+.insights-list { list-style: none; }
+.insight-item {
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.insight-item:hover { background: var(--surface); }
+.insight-priority {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+.priority-red { background: var(--accent-dim); color: var(--accent); }
+.priority-yellow { background: #3a3010; color: var(--gold); }
+.insight-text { font-size: 13px; line-height: 1.5; color: var(--text-dim); }
+.insight-text strong { color: var(--text); }
+
+/* ── Gaps ── */
+.gap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+.gap-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px;
+}
+.gap-item.critical { border-left: 2px solid var(--accent); }
+.gap-item.high { border-left: 2px solid var(--gold); }
+.gap-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.gap-issue {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Footer ── */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.id-scroll { scroll-margin-top: 20px; }
+
+/* ── Timeline Section User Links (visual anchors) ── */
+.timeline-anchor { scroll-margin-top: 24px; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .header { padding: 32px 0 24px; }
+  .header-title { font-size: 26px; }
+  .person-grid { grid-template-columns: 1fr; }
+  .header-stats { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="header">
+  <div class="header-eyebrow">Confidential · 内部参考</div>
+  <h1 class="header-title">景德镇市领导班子工作关系网络</h1>
+  <div class="header-sub">市长空缺 · 情报简报 · Intelligence Briefing</div>
+  <div class="header-stats">
+    <div class="stat-item">
+      <span class="stat-num">16</span>
+      <span class="stat-label">人物</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">16</span>
+      <span class="stat-label">机构</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">51</span>
+      <span class="stat-label">任职</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8</span>
+      <span class="stat-label">关系</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" style="color:var(--accent)">⚡</span>
+      <span class="stat-label" style="color:var(--accent);font-weight:600">市长空缺</span>
+    </div>
+  </div>
+  <div style="margin-top:16px;font-size:12px;color:var(--text-muted);">
+    调查日期: 2026-07-14 · 地区: 江西省景德镇市（地级市）
+  </div>
+</header>
+
+<!-- ═══════════════ VACANCY ALERT ═══════════════ -->
+<div class="vacancy-alert">
+  <div class="vacancy-alert-title">市长职位空缺</div>
+  <div class="vacancy-alert-text">
+    截至2026年7月14日，景德镇市市长职位已空缺逾2个月。前任市长<strong>陈克龙</strong>于2026年4月25日晋升市委书记，5月9日辞去市长职务。常务副市长<strong>薛强</strong>以常务副市长身份主持市政府全面工作。目前尚未公布新任市长人选或任命公示。
+  </div>
+</div>
+
+<!-- ═══════════════ SECTION 1: PERSON CARDS ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <h2 class="section-title">关键人物档案</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="person-grid" id="person-grid">
+
+    <!-- 陈克龙 -->
+    <div class="person-card" onclick="document.getElementById('timeline-chen').scrollIntoView({behavior:'smooth'})">
+      <div class="person-card-name">
+        陈克龙
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">市委书记（原市长）</span>
+      </div>
+      <div class="person-card-meta">
+        1976年12月(49岁) · 籍贯未公开 · 研究生/工学硕士
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-red">央地交流</span>
+        <span class="tag tag-red">工信部系</span>
+        <span class="tag tag-red">空降干部</span>
+      </div>
+      <div class="connection-badge connection-strong">↔ 薛强 · 同日任命(强关系)</div>
+      <div class="connection-badge connection-strong">↔ 胡雪梅 · 搭档18个月(强关系)</div>
+    </div>
+
+    <!-- 薛强 -->
+    <div class="person-card" onclick="document.getElementById('timeline-xue').scrollIntoView({behavior:'smooth'})">
+      <div class="person-card-name">
+        薛强
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">常务副市长（主持工作）</span>
+      </div>
+      <div class="person-card-meta">
+        1976年3月(50岁) · 江西安远 · 省委党校研究生/MBA
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-gold">赣州体系24年</span>
+        <span class="tag tag-gold">全南龙南书记</span>
+        <span class="tag tag-red">市长空缺下主持工作</span>
+      </div>
+      <div class="connection-badge connection-strong">↔ 陈克龙 · 同日任命(强关系)</div>
+      <div class="connection-badge connection-weak">↔ 邹永胜 · 共事1年(弱关系)</div>
+    </div>
+
+    <!-- 胡雪梅 -->
+    <div class="person-card" onclick="document.getElementById('timeline-hu').scrollIntoView({behavior:'smooth'})">
+      <div class="person-card-name">
+        胡雪梅 <span style="font-weight:400;font-size:12px;color:var(--text-dim);">(女)</span>
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">前景德镇市长→书记</span>
+      </div>
+      <div class="person-card-meta">
+        1967年8月(58岁) · 籍贯待查(推测江西) · 学历待查
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-gold">赣州副市长</span>
+        <span class="tag tag-blue">景德镇5年</span>
+      </div>
+      <div class="connection-badge connection-strong">↔ 刘锋 · 搭档3年(强关系)</div>
+      <div class="connection-badge connection-strong">↔ 陈克龙 · 搭档18个月(强关系)</div>
+    </div>
+
+    <!-- 刘锋 -->
+    <div class="person-card" onclick="document.getElementById('timeline-liu').scrollIntoView({behavior:'smooth'})">
+      <div class="person-card-name">
+        刘锋
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">前市长→书记→被免职</span>
+      </div>
+      <div class="person-card-meta">
+        1964年8月(61岁) · 湖南衡阳 · 上饶师范专科学校中文系
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-gold">上饶体系34年</span>
+        <span class="tag tag-red">跨市调任</span>
+        <span class="tag tag-red">免职待查</span>
+      </div>
+      <div class="connection-badge connection-strong">↔ 胡雪梅 · 搭档3年(强关系)</div>
+    </div>
+
+    <!-- 颜赣辉 -->
+    <div class="person-card">
+      <div class="person-card-name">
+        颜赣辉
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">前市长</span>
+      </div>
+      <div class="person-card-meta">
+        1962年2月 · 江西崇仁 · 🔴 2020年被查 · 判刑11年
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-red">落马</span>
+        <span class="tag">受贿2610万</span>
+      </div>
+    </div>
+
+    <!-- 邹永胜 -->
+    <div class="person-card">
+      <div class="person-card-name">
+        邹永胜
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">原副市长兼公安局长</span>
+      </div>
+      <div class="person-card-meta">
+        1971年12月 · 江西吉安 · 2026年初升任省公安厅副厅长
+      </div>
+      <div class="connection-badge connection-weak">↔ 薛强 · 共事1年(弱关系)</div>
+    </div>
+
+    <!-- 魏冀(挂职) -->
+    <div class="person-card">
+      <div class="person-card-name">
+        魏冀 <span style="font-weight:400;font-size:12px;color:var(--text-dim);">(挂职)</span>
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">副市长</span>
+      </div>
+      <div class="person-card-meta">
+        1978年11月 · 文学博士 · 原文旅部财务司副司长挂职
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-blue">央地挂职</span>
+        <span class="tag">文旅部</span>
+        <span class="tag tag-gold">2025.11到任</span>
+      </div>
+    </div>
+
+    <!-- 鄢华 -->
+    <div class="person-card">
+      <div class="person-card-name">
+        鄢华
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">市人大常委会主任</span>
+      </div>
+      <div class="person-card-meta">
+        从鹰潭市纪委书记调任(2026.01)
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-gold">鹰潭→景德镇</span>
+        <span class="tag tag-blue">新任</span>
+      </div>
+      <div class="connection-badge connection-strong">↔ 同一人跨市调任(鹰潭→景德镇)</div>
+    </div>
+
+    <!-- 其他副市长 -->
+    <div class="person-card">
+      <div class="person-card-name">
+        其他副市长
+      </div>
+      <div class="person-card-meta" style="font-size:12px;line-height:1.8;">
+        <strong>江民强</strong> 1971.9 无党派/工商联<br>
+        <strong>罗文军</strong> 1967.4 兼高新区书记<br>
+        <strong>徐辉</strong> 1967.3 住建教育<br>
+        <strong>高晓云</strong> 1975.5 工业交通<br>
+        <strong>黄练</strong> 1972.12 新任公安局长(2026.06)
+      </div>
+    </div>
+
+    <!-- 钟志生 -->
+    <div class="person-card">
+      <div class="person-card-name">
+        钟志生
+        <span style="font-weight:400;font-size:12px;color:var(--text-dim);margin-left:6px;">前景德镇书记(2015-2021)</span>
+      </div>
+      <div class="person-card-meta">
+        鹰潭市长→景德镇书记
+      </div>
+      <div class="person-card-tags">
+        <span class="tag tag-gold">鹰潭→景德镇通道</span>
+      </div>
+      <div class="connection-badge connection-weak">↔ 鄢华 · 鹰潭→景德镇交流通道</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 2: CAREER TIMELINES ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <h2 class="section-title">职业生涯时间线</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="timelines">
+
+    <!-- 陈克龙 -->
+    <div class="timeline-group timeline-anchor" id="timeline-chen">
+      <div class="timeline-group-title">
+        陈克龙 <span class="sub">1976·12  —  工信部系/空降干部</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-gold"></div>
+          <div class="timeline-date">~1990s — ~2010</div>
+          <div class="timeline-desc">
+            <span class="gap-text">【信息缺口】早期生涯约15年完全空白 —— 籍贯/毕业院校/1990s-2010经历均不详</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">~2010 — 2017.12</div>
+          <div class="timeline-desc">工信部规划司投资计划处处长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2017.12 — 2019.12</div>
+          <div class="timeline-desc">工信部规划司副司长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 — 2021</div>
+          <div class="timeline-desc">装备工业一司副司长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 — 2023.05</div>
+          <div class="timeline-desc">原材料工业司司长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023.05 — 2024.10</div>
+          <div class="timeline-desc">规划司司长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-red"></div>
+          <div class="timeline-date">2024.10 — 2025.01</div>
+          <div class="timeline-desc">景德镇代市长（空降江西）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025.01 — 2026.04.25</div>
+          <div class="timeline-desc">景德镇市长（正式当选）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-red"></div>
+          <div class="timeline-date">2026.04.25 至今</div>
+          <div class="timeline-desc"><span class="highlight">景德镇市委书记</span>（晋升）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 薛强 -->
+    <div class="timeline-group timeline-anchor" id="timeline-xue">
+      <div class="timeline-group-title">
+        薛强 <span class="sub">1976·3 江西安远 · 赣州体系24年 → 常务副市长</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1997</div>
+          <div class="timeline-desc">赣州国际经济技术合作公司业务员（起步）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">~1998 — ~2003</div>
+          <div class="timeline-desc">大余县计委 → 赣州市项目办 → 赣州市发改委</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2009</div>
+          <div class="timeline-desc">赣州开发区发展规划局局长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2004 — 2008</div>
+          <div class="timeline-desc">
+            <span class="gap-text">【信息缺口】4年职务空缺 —— 此期间履历不详</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2011 — 2013</div>
+          <div class="timeline-desc">全南县委书记</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2013 — 2016</div>
+          <div class="timeline-desc">龙南县委书记（副厅级）↳ 挂职环保部(2015)</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2016 — 2021</div>
+          <div class="timeline-desc">赣南苏区振兴办主任</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 — 2024.11</div>
+          <div class="timeline-desc">抚州市副市长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-red"></div>
+          <div class="timeline-date">2024.11 至今</div>
+          <div class="timeline-desc"><span class="highlight">景德镇市委常委、常务副市长</span>（与陈克龙同日任命）<br>⚡ 市长空缺期间主持市政府全面工作</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 胡雪梅 -->
+    <div class="timeline-group timeline-anchor" id="timeline-hu">
+      <div class="timeline-group-title">
+        胡雪梅 <span class="sub">1967·8  · 赣州副市长 → 景德镇市长 → 书记</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">~2018 — 2021.05</div>
+          <div class="timeline-desc">赣州市委常委、副市长</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-gold"></div>
+          <div class="timeline-date">2021.05 — 2024.09</div>
+          <div class="timeline-desc">景德镇市长（与刘锋搭档3年）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-red"></div>
+          <div class="timeline-date">2024.09 — 2026.04</div>
+          <div class="timeline-desc">景德镇市委书记（与陈克龙搭档18个月）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026.04 至今</div>
+          <div class="timeline-desc">已离任 · 去向: 传闻省广电局长（<span class="gap-text">待确认</span>）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 刘锋 -->
+    <div class="timeline-group timeline-anchor" id="timeline-liu">
+      <div class="timeline-group-title">
+        刘锋 <span class="sub">1964·8 湖南衡阳 · 上饶体系34年</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1982 — 2016</div>
+          <div class="timeline-desc">上饶体系34年（上饶师范专科学校中文系毕业）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2016</div>
+          <div class="timeline-desc">景德镇市委常委、副市长（跨市调任）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-gold"></div>
+          <div class="timeline-date">2018 — 2021</div>
+          <div class="timeline-desc">景德镇市长（与胡雪梅搭档3年）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-red"></div>
+          <div class="timeline-date">2021 — 2024.09</div>
+          <div class="timeline-desc">景德镇市委书记</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024.09</div>
+          <div class="timeline-desc">省人大财经委副主任（转岗）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="border-color:var(--accent);"></div>
+          <div class="timeline-date">2025.01</div>
+          <div class="timeline-desc">
+            <span class="highlight">被免职</span> · 原因未公开，未被调查<br>
+            <span class="gap-text">【重大待查】去向不明，是否涉及政治原因尚不确定</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 3: RELATIONSHIP MATRIX ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <h2 class="section-title">工作关系矩阵</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>关系对</th>
+          <th>类型</th>
+          <th>时段</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>陈克龙 ↔ 薛强</td>
+          <td><span class="relation-type relation-strong">强关系</span></td>
+          <td>2024.11 – 至今</td>
+          <td>同日任命，同一批班子成员</td>
+        </tr>
+        <tr>
+          <td>胡雪梅 ↔ 刘锋</td>
+          <td><span class="relation-type relation-strong">强关系</span></td>
+          <td>2021 – 2024</td>
+          <td>书记-市长搭档3年</td>
+        </tr>
+        <tr>
+          <td>陈克龙 ↔ 胡雪梅</td>
+          <td><span class="relation-type relation-strong">强关系</span></td>
+          <td>2024 – 2026</td>
+          <td>书记-市长搭档18个月</td>
+        </tr>
+        <tr>
+          <td>鄢华(景德镇) ↔ 鄢华(鹰潭)</td>
+          <td><span class="relation-type relation-strong">强关系</span></td>
+          <td>2026</td>
+          <td>同一人跨市调任（鹰潭→景德镇）</td>
+        </tr>
+        <tr>
+          <td>薛强 ↔ 邹永胜</td>
+          <td><span class="relation-type relation-weak">弱关系</span></td>
+          <td>2024 – 2026</td>
+          <td>共事约1年</td>
+        </tr>
+        <tr>
+          <td>钟志生 ↔ 鄢华</td>
+          <td><span class="relation-type relation-weak">弱关系</span></td>
+          <td>跨时段</td>
+          <td>鹰潭→景德镇交流通道</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 4: CROSS-CITY EXCHANGE ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <h2 class="section-title">跨市交流通道</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="flow-container">
+
+    <div class="flow-pattern">
+      <h4>通道一：鹰潭 → 景德镇 <span style="color:var(--gold);font-weight:600;">（已确认2例）</span></h4>
+      <div class="flow-arrow">
+        <span class="flow-from">鹰潭市长</span>
+        <span class="flow-arrow-symbol">→</span>
+        <span class="flow-to">景德镇书记</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding-left:14px;margin-bottom:8px;">
+        钟志生（2015-2021任景德镇书记）
+      </div>
+      <div class="flow-arrow">
+        <span class="flow-from">鹰潭纪委书记</span>
+        <span class="flow-arrow-symbol">→</span>
+        <span class="flow-to">景德镇人大主任</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding-left:14px;">
+        鄢华（2026.01调任）
+      </div>
+    </div>
+
+    <div class="flow-pattern">
+      <h4>通道二：省直/中央 ↔ 景德镇</h4>
+      <div class="flow-arrow">
+        <span class="flow-from">景德镇市长</span>
+        <span class="flow-arrow-symbol">→</span>
+        <span class="flow-to">省医保局局长</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding-left:14px;margin-bottom:8px;">
+        梅亦（市长→省医保局局长）
+      </div>
+      <div class="flow-arrow">
+        <span class="flow-from special">工信部</span>
+        <span class="flow-arrow-symbol">→</span>
+        <span class="flow-to">景德镇市长/书记</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding-left:14px;margin-bottom:8px;">
+        陈克龙（空降干部，2024.10-）
+      </div>
+      <div class="flow-arrow">
+        <span class="flow-from special">文旅部</span>
+        <span class="flow-arrow-symbol">→</span>
+        <span class="flow-to">景德镇副市长(挂职)</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding-left:14px;">
+        魏冀（2025.11挂职）
+      </div>
+    </div>
+
+    <div class="flow-pattern">
+      <h4>通道三：上饶 → 景德镇</h4>
+      <div class="flow-arrow">
+        <span class="flow-from">上饶（34年）</span>
+        <span class="flow-arrow-symbol">→</span>
+        <span class="flow-to">景德镇市长/书记</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-dim);padding-left:14px;">
+        刘锋（1982-2016上饶体系，后调任景德镇市长→书记）
+      </div>
+      <div style="font-size:12px;color:var(--text-muted);padding-left:14px;margin-top:8px;">
+        <em>是否还有其他上饶→景德镇交流案例？需进一步调查</em>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 5: TIMELINE ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">05</span>
+    <h2 class="section-title">人事变动时间线 · 2024-2026</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div style="position:relative;padding-left:32px;">
+    <div style="position:absolute;left:14px;top:0;bottom:0;width:1px;background:var(--border);"></div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2024.09</div>
+      <div style="font-size:14px;">胡雪梅接任市委书记，刘锋转任省人大财经委副主任</div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2024.10</div>
+      <div style="font-size:14px;">陈克龙空降景德镇代市长；薛强调任常务副市长</div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:1px solid var(--gold);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2024.11.13</div>
+      <div style="font-size:14px;font-weight:600;">陈克龙与薛强同日正式任命 —— 关键同日任命</div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2025.01</div>
+      <div style="font-size:14px;">陈克龙正式当选市长；<span style="color:var(--accent);">刘锋被免职（原因未公开）</span></div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2025.11</div>
+      <div style="font-size:14px;">魏冀（文旅部）到景德镇挂职副市长</div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2026.01</div>
+      <div style="font-size:14px;">鄢华从鹰潭调任景德镇人大主任；邹永胜调任省公安厅副厅长</div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:1px solid var(--accent);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2026.04.25</div>
+      <div style="font-size:14px;font-weight:600;color:var(--accent);">陈克龙升任市委书记 → 市长职位空缺</div>
+    </div>
+
+    <div style="position:relative;padding-bottom:24px;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2026.05.09</div>
+      <div style="font-size:14px;">陈克龙辞去市长职务 → <span style="color:var(--accent);">空缺至今（+66天）</span></div>
+    </div>
+
+    <div style="position:relative;">
+      <div style="position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;border:1px solid var(--text-dim);background:var(--surface);"></div>
+      <div style="font-size:13px;color:var(--text-muted);">2026.06</div>
+      <div style="font-size:14px;">黄练新任公安局长</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 6: KEY INSIGHTS ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">06</span>
+    <h2 class="section-title">关键洞察与突破线索</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <h3 style="font-family:var(--font-display);font-size:15px;margin-bottom:12px;color:var(--accent);">🔴 最高优先级</h3>
+  <ul class="insights-list">
+    <li class="insight-item">
+      <span class="insight-priority priority-red">P1</span>
+      <span class="insight-text"><strong>市长已空缺 &gt;2月</strong> — 等待上级调配还是有意保留？通常地级市市长任命不会出现如此长的空窗期，需关注是否有特殊政治考量或人选难以确定。</span>
+    </li>
+    <li class="insight-item">
+      <span class="insight-priority priority-red">P2</span>
+      <span class="insight-text"><strong>刘锋2025.01被免职原因</strong> — 未被调查、未被留置，但被免去省人大职务。是正常职务调整还是隐性处理？需追踪是否有纪律审查信息。</span>
+    </li>
+    <li class="insight-item">
+      <span class="insight-priority priority-red">P3</span>
+      <span class="insight-text"><strong>陈克龙籍贯/毕业院校/15年早期生涯完全空白</strong> — 作为地级市一把手，履历公开程度极不寻常。需通过工信部内部公开信息、任前公示等渠道补全。</span>
+    </li>
+    <li class="insight-item">
+      <span class="insight-priority priority-red">P4</span>
+      <span class="insight-text"><strong>薛强2004-2008年4年职务空缺</strong> — 从赣州市发改委到赣州开发区发展规划局局长之间有4年空窗，是信息遗漏还是另有隐情？</span>
+    </li>
+  </ul>
+
+  <h3 style="font-family:var(--font-display);font-size:15px;margin:24px 0 12px;color:var(--gold);">🟡 高优先级</h3>
+  <ul class="insights-list">
+    <li class="insight-item">
+      <span class="insight-priority priority-yellow">P5</span>
+      <span class="insight-text"><strong>胡雪梅去向</strong> — 传闻省广电局长，尚未确认。若属实，则景德镇书记→市长→市委书记链条中出现"去省直"模式。</span>
+    </li>
+    <li class="insight-item">
+      <span class="insight-priority priority-yellow">P6</span>
+      <span class="insight-text"><strong>景德镇→上饶交流通道</strong> — 刘锋之外是否还有其他上饶→景德镇交流案例？上饶体系在景德镇的政治影响需评估。</span>
+    </li>
+    <li class="insight-item">
+      <span class="insight-priority priority-yellow">P7</span>
+      <span class="insight-text"><strong>刘锋去向后是否涉及政治原因</strong> — 2025.01免职发生在陈克龙正式当选市长同期，时间点敏感。需关注是否有连带影响。</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ═══════════════ SECTION 7: INFORMATION GAPS ═══════════════ -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-number">07</span>
+    <h2 class="section-title">数据完整性 — 信息缺口</h2>
+    <span class="section-line"></span>
+  </div>
+
+  <div class="gap-grid">
+    <div class="gap-item critical">
+      <div class="gap-name">陈克龙</div>
+      <div class="gap-issue">🔴 籍贯、毕业院校、1990s-2010约15年早期生涯完全空白</div>
+    </div>
+    <div class="gap-item critical">
+      <div class="gap-name">薛强</div>
+      <div class="gap-issue">🔴 2004-2008年4年职务空缺</div>
+    </div>
+    <div class="gap-item high">
+      <div class="gap-name">胡雪梅</div>
+      <div class="gap-issue">🟡 籍贯、学历不详；2026.04离任后去向未确认（传闻省广电局长）</div>
+    </div>
+    <div class="gap-item high">
+      <div class="gap-name">刘锋</div>
+      <div class="gap-issue">🟡 2025.01免职原因未公开 · 是否涉及政治原因待查</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-name">陈克龙 ↔ 薛强</div>
+      <div class="gap-issue">同日任命是否为"同一批班子"还是更深的关联？二人此前是否有交集？</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-name">上饶→景德镇通道</div>
+      <div class="gap-issue">刘锋之外是否还有其他上饶→景德镇交流案例？</div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;padding:14px 18px;border:1px solid var(--border);font-size:12px;color:var(--text-muted);">
+    <strong style="color:var(--text-dim);">数据整合说明:</strong>
+    已录入 16位人物、16个机构、51条任职、8条关系。其中<strong style="color:var(--accent);">4项重大缺口</strong>（红色标记）需优先补充。
+    <br>
+    每条关系均已标注强弱程度（金=强关系 / 蓝=弱关系），以客观标准（共事时长、同日任命、跨市调任）为判定依据。
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div>景德镇市领导班子工作关系网络 · 内部情报简报</div>
+  <div style="margin-top:4px;">调查日期: 2026-07-14 · 数据完整性等级: ⚠️ 信息缺口标注如上</div>
+  <div style="margin-top:8px;color:var(--text-muted);font-size:10px;letter-spacing:2px;">CONFIDENTIAL</div>
+</footer>
+
+</div><!-- /container -->
+
+</body>
+</html>

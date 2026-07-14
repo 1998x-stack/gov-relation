@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南昌市领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:#0d0d0d; color:#e8e0d0;
+  font-family:'Inter','Noto Sans SC',sans-serif;
+  font-size:14px; line-height:1.6;
+}
+.page { max-width:960px; margin:0 auto; padding:2.5rem 2rem; }
+
+/* ── Header ── */
+.header { margin-bottom:2.5rem; padding-bottom:1.5rem; border-bottom:1px solid #2a2a2a; }
+.header .title { font-family:'Noto Serif SC',serif; font-size:1.6rem; font-weight:700; letter-spacing:0.05em; }
+.header .sub { color:#8a8478; font-size:0.8rem; margin-top:0.3rem; }
+.header .stats { display:flex; gap:2rem; margin-top:1rem; }
+.header .stat { font-size:0.75rem; color:#8a8478; }
+.header .stat span { color:#C9A94E; font-weight:600; font-size:0.9rem; }
+
+/* ── Alert Banner ── */
+.alert {
+  border:1px solid #E03C31; border-left:4px solid #E03C31;
+  background:rgba(224,60,49,0.06); padding:1.2rem 1.5rem; margin-bottom:2rem;
+}
+.alert .tag { color:#E03C31; font-size:0.7rem; font-weight:600; letter-spacing:0.1em; }
+.alert h2 { font-family:'Noto Serif SC',serif; font-size:1.2rem; margin:0.3rem 0 0.5rem; color:#e8e0d0; }
+.alert p { color:#a8a090; font-size:0.85rem; }
+
+/* ── Sections ── */
+.section { margin-bottom:2.5rem; }
+.section h2 { font-family:'Noto Serif SC',serif; font-size:1.2rem; font-weight:700; margin-bottom:1rem; padding-bottom:0.4rem; border-bottom:1px solid #2a2a2a; }
+.section h3 { font-family:'Noto Serif SC',serif; font-size:1rem; font-weight:700; margin:1rem 0 0.5rem; color:#C9A94E; }
+
+/* ── Person Card Grid ── */
+.person-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
+.person-card {
+  border:1px solid #2a2a2a; padding:1rem 1.2rem;
+  transition:border-color 0.2s;
+}
+.person-card:hover { border-color:#4a4a4a; }
+.person-card .name { font-family:'Noto Serif SC',serif; font-size:1rem; font-weight:700; }
+.person-card .role { color:#C9A94E; font-size:0.8rem; margin:0.2rem 0; }
+.person-card .meta { color:#8a8478; font-size:0.75rem; }
+.person-card .meta span { display:inline-block; margin-right:0.8rem; }
+.person-card .bio { color:#a8a090; font-size:0.8rem; margin-top:0.4rem; border-top:1px solid #1a1a1a; padding-top:0.4rem; }
+.person-card .badge {
+  display:inline-block; font-size:0.65rem; padding:0.1rem 0.4rem;
+  border:1px solid #3a3a3a; margin-top:0.4rem; color:#8a8478;
+}
+.person-card .badge.key { border-color:#C9A94E; color:#C9A94E; }
+
+/* ── Timeline ── */
+.timeline { position:relative; padding-left:2rem; }
+.timeline::before { content:''; position:absolute; left:0.5rem; top:0; bottom:0; width:1px; background:#2a2a2a; }
+.tl-item { position:relative; margin-bottom:0.8rem; }
+.tl-item::before {
+  content:''; position:absolute; left:-1.65rem; top:0.5rem;
+  width:8px; height:8px; border-radius:50%; background:#3a3a3a; border:1px solid #5a5a5a;
+}
+.tl-item.highlight::before { background:#E03C31; border-color:#E03C31; }
+.tl-item .date { color:#8a8478; font-size:0.7rem; }
+.tl-item .desc { color:#c8c0b0; font-size:0.85rem; }
+.tl-item .desc strong { color:#e8e0d0; }
+
+/* ── Succession chain ── */
+.chain { display:flex; gap:0; align-items:center; flex-wrap:wrap; margin:1rem 0; }
+.chain-item {
+  border:1px solid #2a2a2a; padding:0.6rem 1rem; text-align:center; min-width:120px;
+  font-family:'Noto Serif SC',serif; font-size:0.8rem;
+}
+.chain-item .name { font-weight:700; color:#e8e0d0; }
+.chain-item .tenure { font-size:0.65rem; color:#8a8478; margin-top:0.2rem; }
+.chain-item .note { font-size:0.65rem; color:#C9A94E; margin-top:0.2rem; }
+.chain-item.highlight { border-color:#C9A94E; }
+.chain-item.vacant { border-color:#E03C31; border-style:dashed; }
+.chain-arrow { color:#3a3a3a; font-size:0.8rem; padding:0 0.3rem; }
+
+/* ── Table ── */
+table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.8rem; }
+th { text-align:left; color:#8a8478; font-weight:400; padding:0.4rem 0.6rem; border-bottom:1px solid #2a2a2a; font-size:0.7rem; letter-spacing:0.05em; }
+td { padding:0.5rem 0.6rem; border-bottom:1px solid #1a1a1a; color:#c8c0b0; }
+tr:hover td { background:rgba(255,255,255,0.02); }
+
+/* ── Insights ── */
+.insights { display:grid; gap:0.8rem; }
+.insight {
+  border:1px solid #2a2a2a; padding:1rem 1.2rem;
+  border-left:3px solid #C9A94E;
+}
+.insight .num { font-family:'Noto Serif SC',serif; color:#E03C31; font-size:0.8rem; font-weight:700; }
+.insight p { color:#a8a090; font-size:0.85rem; margin-top:0.3rem; }
+
+/* ── Footer ── */
+.footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #2a2a2a; font-size:0.7rem; color:#6a6a6a; }
+.footer a { color:#8a8478; text-decoration:none; }
+.footer a:hover { color:#C9A94E; }
+
+/* ── Responsive ── */
+@media (max-width:640px) {
+  .page { padding:1.5rem 1rem; }
+  .header .stats { flex-wrap:wrap; gap:0.8rem; }
+  .person-grid { grid-template-columns:1fr; }
+  .chain { flex-direction:column; align-items:stretch; }
+  .chain-arrow { transform:rotate(90deg); text-align:center; padding:0.2rem 0; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ═══ Header ═══ -->
+<div class="header">
+  <div class="title">南昌市领导班子工作关系网络</div>
+  <div class="sub">情报简报 · 2026年7月14日 · <span style="color:#E03C31;">机密 • 仅供研究人员参考</span></div>
+  <div class="stats">
+    <div class="stat">人物 <span>28</span></div>
+    <div class="stat">机构 <span>23</span></div>
+    <div class="stat">任职记录 <span>40</span></div>
+    <div class="stat">关联关系 <span>18</span></div>
+  </div>
+</div>
+
+<!-- ═══ Key Alert ═══ -->
+<div class="alert">
+  <div class="tag">⚠ 关键发现</div>
+  <h2>南昌市市长已超过5个月未公开露面</h2>
+  <p>市长高世文（1974年生，山东青州人）自<strong>2026年2月2日</strong>最后一次公开政务活动后，已超过5个月无任何公开报道。南昌市人民政府官网市长栏为空。市政府日常工作由常务副市长赵捷（1983年生）主持。市委书记盛秋平（原商务部副部长）于2026年6月空降南昌后，尚未与市长同台出现。</p>
+</div>
+
+<!-- ═══ Section 1: Person Cards ═══ -->
+<div class="section">
+  <h2>核心人物档案</h2>
+  <div class="person-grid">
+
+    <div class="person-card">
+      <div class="name">盛秋平</div>
+      <div class="role">江西省委常委、南昌市委书记、赣江新区党工委书记</div>
+      <div class="meta"><span>1968.09</span><span>浙江新昌</span></div>
+      <div class="bio">原商务部副部长（2022-2026）。浙江32年从政经历：义乌市委书记（2015-2018）期间推动外贸逆势增长43%，省商务厅长（2018-2021）。2026年6月空降江西，进入省委常委。</div>
+      <div class="badge key">核心人物 · 一级权力</div>
+    </div>
+
+    <div class="person-card" style="border-color:#E03C31;">
+      <div class="name">高世文</div>
+      <div class="role">南昌市委副书记、市长</div>
+      <div class="meta"><span>1974.06</span><span>山东青州</span></div>
+      <div class="bio">航天科技集团出身，挂职赣州副市长后转任江西省工信厅长。约2024年8月任南昌市长。2026年2月2日最后一次公开露面后持续缺席至今（已超5个月），原因未明。</div>
+      <div class="badge" style="border-color:#E03C31;color:#E03C31;">⚠ 状态不明 · 长期缺席</div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">赵捷</div>
+      <div class="role">南昌市委常委、常务副市长（党组副书记）</div>
+      <div class="meta"><span>1983.06</span></div>
+      <div class="bio">1983年生，最年轻的南昌市常务副市长之一。在高世文长期缺席期间，以常务副市长身份主持大量政府工作会议（发改、财政、教育、应急等），实质履行市长职责。</div>
+      <div class="badge key">最可能的代市长/市长候选人</div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">万广明</div>
+      <div class="role">江西省副省长（原南昌市长）</div>
+      <div class="meta"><span>1967.01</span><span>江西余干</span></div>
+      <div class="bio">原江西省财政厅长（~2019-2021），2021年3月任南昌市长，约2025年初升任江西省副省长。典型的"省直厅长→省会市长→副省级"完美晋升路径。</div>
+      <div class="badge">已晋升 · 前任</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ Section 2: Mayor Succession Chain ═══ -->
+<div class="section">
+  <h2>市长继任链</h2>
+  <div class="chain">
+    <div class="chain-item">
+      <div class="name">郭安</div>
+      <div class="tenure">2015.03 – 2018.03</div>
+      <div class="note">→ 鹰潭市委书记</div>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-item">
+      <div class="name">黄喜忠</div>
+      <div class="tenure">2019.12 – 2020.12</div>
+      <div class="note">→ 省委常委、统战部长</div>
+      <div style="font-size:0.6rem;color:#6a6a6a;">跨省交流（广东→江西）</div>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-item highlight">
+      <div class="name">万广明</div>
+      <div class="tenure">2021.03 – ~2025.02</div>
+      <div class="note">→ 江西省副省长</div>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-item vacant">
+      <div class="name">高世文</div>
+      <div class="tenure">~2024.08 – 至今</div>
+      <div class="note">⚠ 已缺席5+个月</div>
+    </div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-item" style="border-style:dashed;border-color:#4a4a4a;">
+      <div class="name" style="color:#6a6a6a;">（待定）</div>
+      <div class="tenure">继任待查</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Section 3: City Leadership Table ═══ -->
+<div class="section">
+  <h2>南昌市政府领导班子</h2>
+  <table>
+    <thead>
+      <tr><th>姓名</th><th>职务</th><th>出生</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>高世文</td><td>市长</td><td>1974.06</td><td style="color:#E03C31;">2026.02起缺席</td></tr>
+      <tr><td style="color:#C9A94E;">赵捷</td><td>常务副市长</td><td>1983.06</td><td>主持工作</td></tr>
+      <tr><td>安宝军</td><td>市委常委、副市长</td><td>1971.07</td><td>商务、外事</td></tr>
+      <tr><td>马煜洲</td><td>市委常委、副市长</td><td>1975.10</td><td>科技、工信</td></tr>
+      <tr><td>陈鹏辉</td><td>副市长、公安局长</td><td>1973.03</td><td>—</td></tr>
+      <tr><td>徐鹤飞</td><td>副市长</td><td>1980.09</td><td>金融、数据</td></tr>
+      <tr><td>彭开先</td><td>副市长</td><td>—</td><td>原安义县委书记</td></tr>
+      <tr><td>高辉红</td><td>副市长</td><td>—</td><td>原东湖区委书记</td></tr>
+      <tr><td>江新洪</td><td>副市长</td><td>—</td><td>—</td></tr>
+      <tr><td>余红艳</td><td>副市长</td><td>—</td><td>—</td></tr>
+      <tr><td>王成久</td><td>秘书长</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══ Section 4: Sheng Qiuping Timeline ═══ -->
+<div class="section">
+  <h2>盛秋平履历时间线（核心人物）</h2>
+  <div style="color:#8a8478;font-size:0.75rem;margin-bottom:0.8rem;">浙江32年 → 中央商务部4.5年 → 空降南昌</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="date">1989 – 2006</div>
+      <div class="desc"><strong>浙江绍兴基层</strong> — 新昌制药厂、人事局→绍兴旅游局→招商局长→绍兴县常务副县长（副处）</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2001 – 2002</div>
+      <div class="desc"><strong>赴美留学</strong> — 浙江省首批选派，美国肯恩大学公共管理硕士（MPA）</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2006 – 2011</div>
+      <div class="desc"><strong>嵊州主政</strong> — 嵊州市长→书记（正处），首任地方主官</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2011 – 2014</div>
+      <div class="desc"><strong>永嘉县委书记</strong> — 温州市辖县（正处），跨县交流</div>
+    </div>
+    <div class="tl-item highlight">
+      <div class="date">2014 – 2018</div>
+      <div class="desc"><strong>义乌主政</strong> — 金华市副市长、义乌市长→金华市委常委、义乌市委书记（副厅→正厅）。推动市场采购贸易+跨境电商，义乌外贸逆势增长43%</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2018 – 2021</div>
+      <div class="desc"><strong>浙江省商务厅长</strong> — 省管正厅级岗位</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2021 – 2026.06</div>
+      <div class="desc"><strong>中央商务部</strong> — 部长助理（2021.12）→ 副部长（2022.05）。分管服贸、贸易救济、亚洲司、电子商务等</div>
+    </div>
+    <div class="tl-item highlight">
+      <div class="date">2026.06 – 至今</div>
+      <div class="desc"><strong>空降南昌</strong> — 江西省委常委、南昌市委书记、赣江新区党工委书记（副省级）。国务院7月1日免商务部副部长</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Section 5: Relationship Matrix ═══ -->
+<div class="section">
+  <h2>核心关系矩阵</h2>
+  <table>
+    <thead>
+      <tr><th>人物A</th><th>人物B</th><th>关系类型</th><th>说明</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>盛秋平</td><td>高世文</td><td>党政搭档（名义）</td><td>书记与市长，但从未公开同台——高世文在盛秋平到任前已缺席</td></tr>
+      <tr><td style="color:#C9A94E;">赵捷</td><td>盛秋平</td><td>实际上下级</td><td>赵捷在市长缺席期间主持政府工作，是盛秋平实际对接的政府负责人</td></tr>
+      <tr><td>万广明</td><td>高世文</td><td>前后任市长</td><td>万广明升副省长后由高世文接任</td></tr>
+      <tr><td>黄喜忠</td><td>万广明</td><td>前后任市长</td><td>黄喜忠→鹰潭市委书记→省委常委；万广明→副省长</td></tr>
+      <tr><td>盛秋平</td><td>商务部</td><td>中央-地方纽带</td><td>4.5年商务部副部长积累的中央部委人脉</td></tr>
+      <tr><td>盛秋平</td><td>浙江省</td><td>地方根基</td><td>32年浙江政治资本，义乌模式开创者</td></tr>
+      <tr><td>彭开先</td><td>安义县</td><td>区县→市级</td><td>安义县委书记→南昌市副市长</td></tr>
+      <tr><td>高辉红</td><td>东湖区</td><td>区县→市级</td><td>东湖区委书记→南昌市副市长</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══ Section 6: Cross-County Connections ═══ -->
+<div class="section">
+  <h2>市区县交流通道</h2>
+  <table>
+    <thead>
+      <tr><th>方向</th><th>人员</th><th>路径</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>县区→市级</td><td>彭开先</td><td>安义县委书记 → 南昌市副市长</td></tr>
+      <tr><td>县区→市级</td><td>高辉红</td><td>东湖区委书记 → 南昌市副市长</td></tr>
+      <tr><td>市直→县区</td><td>熊振强</td><td>南昌市交通局长 → 进贤县委书记（2026.06）</td></tr>
+      <tr><td>县→递进</td><td>徐强→陈奕蒙</td><td>进贤→新建→红谷滩（2026年6月梯次递进链）</td></tr>
+      <tr><td>县→区</td><td>罗国栋</td><td>安义县长 → 青云谱区委书记（2026.07）</td></tr>
+      <tr><td>县→县</td><td>熊辉</td><td>进贤县长 → 安义县委书记（2026.06）</td></tr>
+      <tr><td>县区系</td><td>刘光荣+邓之武</td><td>南昌县系统控制东湖区（书记+代区长均来自南昌县）</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══ Section 7: Key Insights ═══ -->
+<div class="section">
+  <h2>关键洞察</h2>
+  <div class="insights">
+    <div class="insight">
+      <div class="num">#1 市长缺席之谜</div>
+      <p>高世文自2026年2月2日后再无任何公开政务活动，已超过5个月。南昌市政府官网市长栏为空。这是南昌政治格局中最大的不确定因素。可能原因：健康问题、组织调查、已调离未公告。建议持续追踪南昌市人大常委会任免公告和省委组织部任前公示。</p>
+    </div>
+    <div class="insight">
+      <div class="num">#2 盛秋平的异常权力基础</div>
+      <p>盛秋平以"省委常委+市委书记+赣江新区书记"三职在身空降南昌，其履历（浙江32年→商务部副部长→南昌）显示这是重点培养干部。他在浙江的"义乌模式"经验和中央商务部的人脉网络，使他在江西省内的权力地位远超一般省会书记。</p>
+    </div>
+    <div class="insight">
+      <div class="num">#3 赵捷：最可能的继任者</div>
+      <p>如果高世文正式离任，常务副市长赵捷（1983年生）是最可能的代市长/市长人选。他已在高世文缺席期间实质主持政府工作。80后常务副市长在全国副省级城市中较为罕见，其晋升值得密切关注。</p>
+    </div>
+    <div class="insight">
+      <div class="num">#4 市长→副省长的晋升通道</div>
+      <p>近三任南昌市长中，万广明升任副省长、黄喜忠升任省委常委。南昌市长已成为江西省副省级领导的重要"跳板"。如果该规律持续，下一任市长也将大概率晋升副省级。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Footer ═══ -->
+<div class="footer">
+  <p>数据来源：南昌市人民政府官网、南昌新闻网、Wikipedia、Wikidata、中国经济网、新京报、搜狗微信搜索<br>
+  数据库：<a href="../data/database/nanchang_city_network.db">nanchang_city_network.db</a> · 
+  图文件：<a href="../data/graph/nanchang_city_network.gexf">nanchang_city_network.gexf</a> · 
+  完整报告：<a href="20260714-南昌市-市长.md">20260714-南昌市-市长.md</a><br>
+  总图：<a href="graph.html">graph.html</a> · 生成日期：2026-07-14 · 仅供研究参考</p>
+</div>
+
+</div>
+</body>
+</html>

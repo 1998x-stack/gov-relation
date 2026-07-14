@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红谷滩区领导班子工作关系网络 — 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0d0d0d;
+  --bg-surface: #141414;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #1f1f1f;
+  --bg-header: #0a0a0a;
+  --text-primary: #e8e0d8;
+  --text-secondary: #a09888;
+  --text-muted: #706858;
+  --accent: #E03C31;
+  --accent-dim: #8a1e18;
+  --gold: #C9A94E;
+  --gold-dim: #635520;
+  --gold-text: #d4b85a;
+  --border: #2a2824;
+  --border-accent: #3a3228;
+  --danger: #E03C31;
+  --warning: #C9A94E;
+  --info: #4a7a9c;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 15px; scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: 'Noto Serif SC', 'Noto Sans SC', serif; font-weight: 700; }
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(180deg, #080808 0%, var(--bg-surface) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent) 30%, transparent 100%);
+}
+.header::after {
+  content: '● 机密';
+  position: absolute;
+  top: 1rem; right: 2rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  opacity: 0.5;
+}
+.header-inner { max-width: 1200px; margin: 0 auto; }
+.header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; }
+.header h1 {
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.header h1 span.accent { color: var(--accent); }
+.header-sub {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+.header-sub .date { color: var(--text-muted); margin-right: 1.5rem; }
+.header-sub .ref { color: var(--gold-text); }
+
+/* Stats row */
+.stats { display: flex; gap: 0; margin-top: 2rem; border: 1px solid var(--border); }
+.stat-item {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: var(--bg-card-hover); }
+.stat-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ===== NAV ===== */
+.nav-bar {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.nav-link {
+  display: block;
+  padding: 0.75rem 1.2rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--text-primary); background: var(--bg-card); }
+.nav-link.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ===== MAIN ===== */
+.main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.section { margin-bottom: 3.5rem; }
+.section:last-child { margin-bottom: 0; }
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-title .accent-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.section-title .sub {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ===== PERSON CARDS ===== */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.person-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  transition: all 0.25s;
+  position: relative;
+}
+.person-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
+}
+.person-card .rank-badge {
+  position: absolute;
+  top: 0.75rem; right: 0.75rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border-accent);
+  color: var(--text-muted);
+}
+.person-card .rank-badge.leader { border-color: var(--accent-dim); color: var(--accent); }
+.person-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.person-name .gender {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 0.3rem;
+}
+.person-title {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+.person-meta {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+.person-meta span { display: inline-block; margin-right: 0.8rem; }
+.person-meta .birth { color: var(--text-secondary); }
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.badge {
+  font-size: 0.62rem;
+  padding: 0.15rem 0.45rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.badge.confirmed { border-color: var(--gold-dim); color: var(--gold-text); }
+.badge.warning { border-color: var(--accent-dim); color: var(--accent); }
+.badge.info { border-color: #2a3a48; color: var(--info); }
+
+/* Mini card list for secondary figures */
+.secondary-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.secondary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.secondary-item .s-name { font-family: 'Noto Serif SC', serif; font-weight: 600; color: var(--text-primary); }
+.secondary-item .s-title { color: var(--text-secondary); font-size: 0.75rem; }
+.secondary-item .s-detail { color: var(--text-muted); font-size: 0.7rem; }
+
+/* ===== TIMELINE ===== */
+.timeline-group { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 900px) { .timeline-group { grid-template-columns: 1fr; } }
+.timeline {
+  position: relative;
+  padding: 0;
+}
+.timeline h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 1rem 1.5rem;
+  border-left: 1px solid var(--border);
+  margin-left: 0.5rem;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 4px;
+  width: 7px; height: 7px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+}
+.timeline-item.highlight::before { border-color: var(--gold); background: var(--gold); }
+.timeline-item.current::before { border-color: var(--accent); background: var(--accent); }
+.timeline-date {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.1rem;
+}
+.timeline-role {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.timeline-org {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+.timeline-gap {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* ===== FLOW DIAGRAM ===== */
+.flow-diagram {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  overflow-x: auto;
+}
+.flow-svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== INSIGHT PANEL ===== */
+.insight-list { display: flex; flex-direction: column; gap: 1rem; }
+.insight-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+}
+.insight-item.gold { border-left-color: var(--gold); }
+.insight-item.grey { border-left-color: var(--border-accent); }
+.insight-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.insight-item.gold .insight-num { color: var(--gold); }
+.insight-item.grey .insight-num { color: var(--text-muted); }
+.insight-text { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+.insight-text strong { color: var(--text-primary); font-weight: 600; }
+
+/* ===== RELATIONSHIP TABLE ===== */
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+tr:hover td { background: var(--bg-card-hover); }
+td.name { font-family: 'Noto Serif SC', serif; color: var(--text-primary); font-weight: 600; }
+td.tag { color: var(--gold-text); font-size: 0.7rem; }
+td.tag.confirmed { color: var(--gold-text); }
+td.tag.pending { color: var(--warning); }
+
+/* ===== INFO TABLE (for persons) ===== */
+.info-table {
+  width: 100%;
+  font-size: 0.78rem;
+  border-collapse: collapse;
+}
+.info-table td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+.info-table td:first-child {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  width: 30%;
+  letter-spacing: 0.03em;
+}
+
+/* ===== PATTERN BOX ===== */
+.pattern-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.pattern-box:last-child { margin-bottom: 0; }
+.pattern-box h4 {
+  font-size: 0.9rem;
+  color: var(--gold-text);
+  margin-bottom: 0.5rem;
+}
+.pattern-box p, .pattern-box li {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.pattern-box ul { padding-left: 1.2rem; }
+
+/* ===== GAP CARD ===== */
+.gap-card {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-dim);
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.gap-card:last-child { margin-bottom: 0; }
+.gap-card h4 {
+  font-size: 0.82rem;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+.gap-card p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+.footer a { color: var(--text-secondary); text-decoration: none; }
+.footer a:hover { color: var(--text-primary); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .header { padding: 2rem 1rem 1.5rem; }
+  .header h1 { font-size: 1.3rem; }
+  .header::after { display: none; }
+  .stats { flex-wrap: wrap; }
+  .stat-item { min-width: 45%; }
+  .main { padding: 1rem; }
+  .person-grid { grid-template-columns: 1fr; }
+  .timeline-group { grid-template-columns: 1fr; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .nav-bar { display: none; }
+  body { background: #fff; color: #000; }
+  .header { background: #f5f5f5; border-bottom: 1px solid #ccc; }
+  .person-card { background: #fafafa; border: 1px solid #ddd; break-inside: avoid; }
+  .stat-item { border-color: #ddd; }
+  :root { --bg-primary: #fff; --bg-surface: #f5f5f5; --bg-card: #fafafa; --text-primary: #222; --text-secondary: #555; --border: #ddd; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div>
+        <h1>红谷滩区领导班子<span class="accent">工作关系网络</span></h1>
+        <div class="header-sub">
+          <span class="date">2026-07-14 · 调查日期</span>
+          <span class="ref">REF: HGT-2026-0714</span>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat-item"><div class="stat-num">24</div><div class="stat-label">人物</div></div>
+      <div class="stat-item"><div class="stat-num">19</div><div class="stat-label">机构</div></div>
+      <div class="stat-item"><div class="stat-num">29</div><div class="stat-label">任职记录</div></div>
+      <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">关系</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#current" class="nav-link active">现任班子</a>
+    <a href="#timelines" class="nav-link">履历时间线</a>
+    <a href="#succession" class="nav-link">区委书记序列</a>
+    <a href="#network" class="nav-link">跨区流动</a>
+    <a href="#relationships" class="nav-link">关系矩阵</a>
+    <a href="#insights" class="nav-link">关键洞察</a>
+    <a href="#gaps" class="nav-link">信息缺口</a>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ===== CURRENT LEADERSHIP ===== -->
+<section class="section" id="current">
+  <h2 class="section-title"><span class="accent-dot"></span>现任领导班子 <span class="sub">区委 · 区政府</span></h2>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin-bottom:0.75rem;font-weight:500;">区委领导</h3>
+  <div class="person-grid">
+
+    <!-- 陈奕蒙 -->
+    <div class="person-card">
+      <span class="rank-badge leader">区委书记</span>
+      <div class="person-name">陈奕蒙</div>
+      <div class="person-title">中共南昌市红谷滩区委书记</div>
+      <div class="person-meta">
+        <span class="birth">2026.07 到任</span>
+        <span>前新建区委书记</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">新建→红谷滩</span>
+        <span class="badge info">2026.07 到任</span>
+      </div>
+    </div>
+
+    <!-- 李婷 -->
+    <div class="person-card">
+      <span class="rank-badge leader">区长</span>
+      <div class="person-name">李婷 <span class="gender">女</span></div>
+      <div class="person-title">中共红谷滩区委副书记、区政府党组书记、区长</div>
+      <div class="person-meta">
+        <span class="birth">1976.11 · 江西南昌</span>
+        <span>在职研究生</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">东湖→驻深办→红谷滩</span>
+        <span class="badge warning">早期履历待查</span>
+      </div>
+    </div>
+
+    <!-- 万晓娟 -->
+    <div class="person-card">
+      <span class="rank-badge">副书记</span>
+      <div class="person-name">万晓娟 <span class="gender">女</span></div>
+      <div class="person-title">中共红谷滩区委副书记（兼区委党校校长）</div>
+      <div class="person-meta">
+        <span class="birth">1982.10 · 江西南昌</span>
+        <span>省委党校法学在职研究生</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">市委组织部→红谷滩</span>
+        <span class="badge">在任超5年</span>
+      </div>
+    </div>
+
+    <!-- 江龙 -->
+    <div class="person-card">
+      <span class="rank-badge">常务副区长</span>
+      <div class="person-name">江龙</div>
+      <div class="person-title">区委常委、常务副区长、党组副书记</div>
+      <div class="person-meta">
+        <span class="birth">1981.09 · 江西都昌</span>
+        <span>博士研究生</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">2023.02 任副区长</span>
+        <span class="badge info">博士学历</span>
+      </div>
+    </div>
+
+    <!-- 胡军 -->
+    <div class="person-card">
+      <span class="rank-badge">组织部</span>
+      <div class="person-name">胡军</div>
+      <div class="person-title">区委常委、组织部部长</div>
+      <div class="person-meta">
+        <span class="birth">1974.10 · 江西南昌</span>
+        <span>在职研究生/MPA</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">组织系统</span>
+      </div>
+    </div>
+
+    <!-- 陈敏 -->
+    <div class="person-card">
+      <span class="rank-badge">统战部</span>
+      <div class="person-name">陈敏</div>
+      <div class="person-title">区委常委、统战部部长</div>
+      <div class="person-meta">
+        <span class="birth">1977.03 · 江西上高</span>
+        <span>在职研究生</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">统战系统</span>
+      </div>
+    </div>
+
+    <!-- 唐武 -->
+    <div class="person-card">
+      <span class="rank-badge">政法委</span>
+      <div class="person-name">唐武</div>
+      <div class="person-title">区委常委、政法委书记</div>
+      <div class="person-meta">
+        <span class="birth">1970.03 · 江西南昌</span>
+        <span>本科</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">政法系统</span>
+      </div>
+    </div>
+
+    <!-- 徐军 -->
+    <div class="person-card">
+      <span class="rank-badge">纪委</span>
+      <div class="person-name">徐军</div>
+      <div class="person-title">区委常委、纪委书记、监委主任</div>
+      <div class="person-meta">
+        <span>2024.06 到任</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge">2025.01 补选监委主任</span>
+      </div>
+    </div>
+
+    <!-- 周晓东 -->
+    <div class="person-card">
+      <span class="rank-badge">宣传部</span>
+      <div class="person-name">周晓东</div>
+      <div class="person-title">区委常委、宣传部部长</div>
+      <div class="person-meta">
+        <span class="birth">1985.11</span>
+        <span>2024.12 履新</span>
+      </div>
+      <div class="badge-row">
+        <span class="badge confirmed">市教育局→红谷滩</span>
+      </div>
+    </div>
+
+    <!-- 黄小明 -->
+    <div class="person-card">
+      <span class="rank-badge">人武部</span>
+      <div class="person-name">黄小明</div>
+      <div class="person-title">区委常委、人武部上校部长</div>
+      <div class="badge-row">
+        <span class="badge">军队系统</span>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.75rem 0 0.75rem;font-weight:500;">区政府班子</h3>
+  <div class="secondary-list">
+
+    <div class="secondary-item">
+      <span><span class="s-name">李婷</span> <span class="s-title">区长</span></span>
+      <span class="s-detail">女 · 1976 · 南昌 · 在职研究生</span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">江龙</span> <span class="s-title">常务副区长</span></span>
+      <span class="s-detail">1981 · 都昌 · 博士</span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">周结华</span> <span class="s-title">常委、副区长</span></span>
+      <span class="s-detail">1983 · 万年 · 工学博士 · 2025.01 补选</span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">朱志翔</span> <span class="s-title">副区长（公安）</span></span>
+      <span class="s-detail">公安系统</span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">张莲波</span> <span class="s-title">副区长（民政/市场监管）</span></span>
+      <span class="s-detail"></span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">熊飞</span> <span class="s-title">副区长（商务/招商/文旅）</span></span>
+      <span class="s-detail">1975 · 新建 · 南昌大学MBA</span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">陈羽</span> <span class="s-title">副区长（农业农村）</span></span>
+      <span class="s-detail">女 · 1982 · 民建</span>
+    </div>
+    <div class="secondary-item">
+      <span><span class="s-name">徐辉</span> <span class="s-title">副区长</span></span>
+      <span class="s-detail">1983 · 研究生</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAREER TIMELINES ===== -->
+<section class="section" id="timelines">
+  <h2 class="section-title"><span class="accent-dot"></span>核心人物履历时间线 <span class="sub">Vertical Timeline</span></h2>
+  <div class="timeline-group">
+
+    <!-- 李婷 -->
+    <div class="timeline">
+      <h4>李婷 · 现任区长</h4>
+      <div class="timeline-item">
+        <div class="timeline-date">~2021前的信息空白</div>
+        <div class="timeline-role">早期生涯待查</div>
+        <div class="timeline-org">⚠ 线索：可能基层教师→南昌县委组织部</div>
+        <div class="timeline-gap">最大信息缺口</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">~2021 — ~2024</div>
+        <div class="timeline-role">东湖区委常委、副区长</div>
+        <div class="timeline-org">南昌市东湖区 · 副处级</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">~2024 — 2025.05</div>
+        <div class="timeline-role">南昌市政府驻深圳办事处主任</div>
+        <div class="timeline-org">驻广东办事处党组书记、主任 · 正处级</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2025.05 — 2025.08</div>
+        <div class="timeline-role">红谷滩区委副书记、代区长</div>
+        <div class="timeline-org">红谷滩区政府</div>
+      </div>
+      <div class="timeline-item current">
+        <div class="timeline-date">2025.08 — 至今</div>
+        <div class="timeline-role">红谷滩区委副书记、区长</div>
+        <div class="timeline-org">正处级 · 负责区政府全面工作</div>
+      </div>
+    </div>
+
+    <!-- 刘光荣 -->
+    <div class="timeline">
+      <h4>刘光荣 · 前任区长（现任东湖区委书记）</h4>
+      <div class="timeline-item">
+        <div class="timeline-date">1995 — ~2016</div>
+        <div class="timeline-role">南昌县工作（约21年）</div>
+        <div class="timeline-org">南昌县 · 具体职务待查</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">~2016 — 2020</div>
+        <div class="timeline-role">东湖区委常委、区纪委书记</div>
+        <div class="timeline-org">东湖区</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2020.06 — 2025.05</div>
+        <div class="timeline-role">红谷滩区委副书记、区长</div>
+        <div class="timeline-org">红谷滩区 · 首任区长</div>
+      </div>
+      <div class="timeline-item highlight">
+        <div class="timeline-date">2025.02 — 至今</div>
+        <div class="timeline-role">东湖区委书记</div>
+        <div class="timeline-org">环形回流：南昌县→东湖→红谷滩→东湖</div>
+      </div>
+    </div>
+
+    <!-- 涂晓晖 -->
+    <div class="timeline">
+      <h4>涂晓晖 · 前任区委书记</h4>
+      <div class="timeline-item">
+        <div class="timeline-date">~2020 — 2023.06</div>
+        <div class="timeline-role">南昌市财政局局长</div>
+        <div class="timeline-org">市直部门</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023.06 — ~2026.06</div>
+        <div class="timeline-role">红谷滩区委书记</div>
+        <div class="timeline-org">接替吴江辉 · 市直空降</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">~2026.06 — 至今</div>
+        <div class="timeline-role">去向待查</div>
+        <div class="timeline-org">❓ 可能调南昌市国资委（未确认）</div>
+        <div class="timeline-gap">去向未公开</div>
+      </div>
+    </div>
+
+    <!-- 吴江辉 -->
+    <div class="timeline">
+      <h4>吴江辉 · 前任区委书记</h4>
+      <div class="timeline-item">
+        <div class="timeline-date">前任</div>
+        <div class="timeline-role">西湖区副区长 → 青云谱区长/书记</div>
+        <div class="timeline-org">多区流动 · "旋转门"模式</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2021.08 — 2023.06</div>
+        <div class="timeline-role">红谷滩区委书记</div>
+        <div class="timeline-org">接替周亮</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023.06 — 至今</div>
+        <div class="timeline-role">去向待查</div>
+        <div class="timeline-org">❓ "另有任用"</div>
+        <div class="timeline-gap">去向未公开</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PARTY SECRETARY SUCCESSION ===== -->
+<section class="section" id="succession">
+  <h2 class="section-title"><span class="accent-dot"></span>区委书记更替序列 <span class="sub">2019—2026</span></h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>任职时间</th>
+          <th>前任职务</th>
+          <th>去向</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">周亮</td>
+          <td>2019 — 2021</td>
+          <td>—</td>
+          <td class="tag" style="color:var(--accent)">2024.08 被查</td>
+          <td>落马</td>
+        </tr>
+        <tr>
+          <td class="name">吴江辉</td>
+          <td>2021.08 — 2023.06</td>
+          <td>青云谱区委书记</td>
+          <td class="tag pending">去向待查（另有任用）</td>
+          <td>旋转门模式</td>
+        </tr>
+        <tr>
+          <td class="name">涂晓晖</td>
+          <td>2023.06 — 2026.06</td>
+          <td>南昌市财政局长</td>
+          <td class="tag pending">❓ 可能市国资委</td>
+          <td>市直空降</td>
+        </tr>
+        <tr>
+          <td class="name">陈奕蒙</td>
+          <td>2026.07 — 至今</td>
+          <td>新建区委书记</td>
+          <td class="tag confirmed">现任</td>
+          <td>刚调任</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== CROSS-DISTRICT FLOW ===== -->
+<section class="section" id="network">
+  <h2 class="section-title"><span class="accent-dot"></span>跨区人事交流网络 <span class="sub">红谷滩区人才流动图谱</span></h2>
+
+  <div class="flow-diagram">
+    <svg class="flow-svg" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#C9A94E"/>
+        </marker>
+        <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#706858"/>
+        </marker>
+        <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#E03C31"/>
+        </marker>
+      </defs>
+
+      <!-- Center: 红谷滩区 -->
+      <rect x="310" y="185" width="180" height="55" rx="3" ry="3" fill="#1a1a1a" stroke="#C9A94E" stroke-width="1.5"/>
+      <text x="400" y="214" text-anchor="middle" fill="#C9A94E" font-size="13" font-weight="700" font-family="'Noto Serif SC',serif">红谷滩区</text>
+      <text x="400" y="230" text-anchor="middle" fill="#a09888" font-size="9" font-family="'Noto Sans SC',sans-serif">干部交流核心枢纽</text>
+
+      <!-- 东湖区 (上左) -->
+      <rect x="60" y="100" width="140" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="130" y="127" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">东湖区</text>
+
+      <!-- 新建区 (下左) -->
+      <rect x="60" y="320" width="140" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="130" y="347" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">新建区</text>
+
+      <!-- 市直/财政局 (上右) -->
+      <rect x="570" y="60" width="150" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="645" y="87" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">南昌市财政局</text>
+
+      <!-- 驻深圳办 (右上中) -->
+      <rect x="570" y="140" width="150" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="645" y="167" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">驻深圳/广东办</text>
+
+      <!-- 青云谱区 (下) -->
+      <rect x="570" y="320" width="150" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="645" y="347" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">青云谱区</text>
+
+      <!-- 西湖区 (下右) -->
+      <rect x="570" y="390" width="150" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="645" y="417" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">西湖区</text>
+
+      <!-- 南昌县 (左) -->
+      <rect x="60" y="220" width="140" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="130" y="247" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">南昌县</text>
+
+      <!-- 市委组织部 (下) -->
+      <rect x="60" y="390" width="140" height="45" rx="3" ry="3" fill="#1a1a1a" stroke="#706858" stroke-width="1"/>
+      <text x="130" y="417" text-anchor="middle" fill="#e8e0d8" font-size="11" font-weight="600" font-family="'Noto Serif SC',serif">南昌市委组织部</text>
+
+      <!-- Edges -->
+      <!-- 刘光荣：南昌县→东湖区 (左到上左) -->
+      <path d="M 130 220 L 130 145" stroke="#706858" stroke-width="1" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow-grey)"/>
+      <text x="115" y="177" fill="#706858" font-size="7" font-family="'Noto Sans SC',sans-serif">刘光荣（21年）</text>
+
+      <!-- 刘光荣：东湖区→红谷滩区 -->
+      <path d="M 200 122 L 310 207" stroke="#C9A94E" stroke-width="1.5" fill="none" marker-end="url(#arrow-gold)"/>
+      <text x="245" y="115" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">刘光荣→区长</text>
+
+      <!-- 刘光荣：红谷滩区→东湖区（回流） -->
+      <path d="M 310 195 L 200 130" stroke="#C9A94E" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow-gold)"/>
+      <text x="235" y="175" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">刘光荣回流→书记</text>
+
+      <!-- 李婷：东湖区→驻深办 -->
+      <path d="M 200 115 Q 350 60 570 162" stroke="#C9A94E" stroke-width="1.5" fill="none" marker-end="url(#arrow-gold)"/>
+      <text x="380" y="58" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">李婷→主任</text>
+
+      <!-- 李婷：驻深办→红谷滩区 -->
+      <path d="M 645 185 L 490 212" stroke="#C9A94E" stroke-width="1.5" fill="none" marker-end="url(#arrow-gold)"/>
+      <text x="560" y="205" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">李婷→区长</text>
+
+      <!-- 涂晓晖：财政局→红谷滩区 -->
+      <path d="M 645 105 L 490 205" stroke="#C9A94E" stroke-width="1.5" fill="none" marker-end="url(#arrow-gold)"/>
+      <text x="560" y="145" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">涂晓晖空降→书记</text>
+
+      <!-- 陈奕蒙：新建区→红谷滩区 -->
+      <path d="M 200 342 L 310 220" stroke="#C9A94E" stroke-width="1.5" fill="none" marker-end="url(#arrow-gold)"/>
+      <text x="230" y="340" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">陈奕蒙→书记</text>
+
+      <!-- 吴江辉：西湖区→青云谱区→红谷滩区 -->
+      <path d="M 645 435 Q 680 380 645 365" stroke="#706858" stroke-width="1" fill="none" marker-end="url(#arrow-grey)"/>
+      <text x="650" y="420" fill="#706858" font-size="7" font-family="'Noto Sans SC',sans-serif">吴江辉</text>
+      <path d="M 645 320 L 490 210" stroke="#C9A94E" stroke-width="1.5" fill="none" marker-end="url(#arrow-gold)"/>
+      <text x="580" y="260" fill="#C9A94E" font-size="7" font-family="'Noto Sans SC',sans-serif">吴江辉→书记</text>
+
+      <!-- 万晓娟：市委组织部→红谷滩区 -->
+      <path d="M 200 412 L 310 225" stroke="#706858" stroke-width="1" fill="none" marker-end="url(#arrow-grey)"/>
+      <text x="200" y="380" fill="#706858" font-size="7" font-family="'Noto Sans SC',sans-serif">万晓娟→副书记</text>
+
+      <!-- 周晓东：→红谷滩区 -->
+      <path d="M 645 82 Q 690 50 600 50 L 490 50 L 490 185" stroke="#706858" stroke-width="1" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow-grey)"/>
+      <text x="510" y="44" fill="#706858" font-size="7" font-family="'Noto Sans SC',sans-serif">周晓东（市教育局）</text>
+
+    </svg>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">三种主要交流模式</h3>
+
+  <div class="pattern-box">
+    <h4>"旋转门"模式 — 吴江辉型</h4>
+    <p>从一个区到另一个区逐级升迁，积累多区经验。<br>路径：西湖区副区长 → 青云谱区长/书记 → 红谷滩区委书记</p>
+  </div>
+  <div class="pattern-box">
+    <h4>"环流升迁"模式 — 刘光荣型</h4>
+    <p>跳出原籍→在外历练→回流升任，"跳出培养再回流"模式。<br>路径：南昌县(21年) → 东湖区(纪委书记) → 红谷滩区(区长) → 东湖区(书记)</p>
+  </div>
+  <div class="pattern-box">
+    <h4>"市直空降"模式 — 涂晓晖型</h4>
+    <p>市直部门直接空降到区县任一把手。<br>路径：南昌市财政局局长 → 红谷滩区委书记</p>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">2026年7月南昌六县区联动调整</h3>
+  <div class="pattern-box" style="border-left-color:var(--accent);">
+    <p style="line-height:1.8;">
+      <strong style="color:var(--accent);">陈奕蒙</strong>：新建区委书记 → <strong style="color:var(--gold-text);">红谷滩区委书记</strong><br>
+      <strong style="color:var(--accent);">涂晓晖</strong>：红谷滩区委书记 → （去向待查）<br>
+      <strong style="color:var(--text-primary);">徐强</strong>：进贤县委书记 → 新建区委书记<br>
+      <strong style="color:var(--text-primary);">熊辉</strong>：进贤县长 → 安义县委书记<br>
+      <strong style="color:var(--text-primary);">罗国栋</strong>：安义县长 → 青云谱区委书记
+    </p>
+  </div>
+</section>
+
+<!-- ===== RELATIONSHIP MATRIX ===== -->
+<section class="section" id="relationships">
+  <h2 class="section-title"><span class="accent-dot"></span>确认的跨区人员交集 <span class="sub">关系矩阵</span></h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>人员</th>
+          <th>跨区路径</th>
+          <th>关系类型</th>
+          <th>证据</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="name">刘光荣</td>
+          <td>南昌县(21年) → 东湖区(纪委书记) → 红谷滩区(区长) → 东湖区(书记)</td>
+          <td>环形回流</td>
+          <td class="tag confirmed">已确认</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="name">李婷</td>
+          <td>东湖区(常委/副区长) → 驻深圳/广东办主任 → 红谷滩区(区长)</td>
+          <td>东湖→红谷滩</td>
+          <td class="tag confirmed">已确认</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="name">吴江辉</td>
+          <td>西湖区(副区长) → 青云谱区(区长/书记) → 红谷滩区(书记)</td>
+          <td>西湖→青云谱→红谷滩</td>
+          <td class="tag confirmed">已确认</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="name">涂晓晖</td>
+          <td>市财政局(局长) → 红谷滩区(书记)</td>
+          <td>市直空降</td>
+          <td class="tag confirmed">已确认</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="name">陈奕蒙</td>
+          <td>新建区(书记) → 红谷滩区(书记)</td>
+          <td>新建→红谷滩</td>
+          <td class="tag confirmed">已确认</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="name">邓之武</td>
+          <td>→ 东湖区(代区长)</td>
+          <td>接替刘光荣调离</td>
+          <td class="tag confirmed">已确认</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">强关系链</h3>
+  <div class="pattern-box" style="border-left-color:var(--gold);">
+    <p style="line-height:1.8;">
+      <strong style="color:var(--gold-text);">刘光荣 ↔ 李婷</strong>：前后任红谷滩区长（直接接替）<br>
+      <strong style="color:var(--gold-text);">刘光荣 ↔ 邓之武</strong>：东湖区现任党政搭档<br>
+      <strong style="color:var(--gold-text);">吴江辉 ↔ 刘光荣</strong>：2021-2023年红谷滩党政搭档<br>
+      <strong style="color:var(--gold-text);">涂晓晖 ↔ 刘光荣</strong>：2023-2025年红谷滩党政搭档<br>
+      <strong style="color:var(--gold-text);">李婷 ↔ 邓之武</strong>：均曾在东湖区政府任职（同事）
+    </p>
+  </div>
+
+  <h3 style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em;margin:1.5rem 0 0.75rem;font-weight:500;">红谷滩区—东湖区双向培养通道</h3>
+  <div class="pattern-box" style="border-left-color:var(--accent);">
+    <p style="line-height:1.8;">
+      <span style="color:var(--accent);">刘光荣</span>：红谷滩区长 → 东湖区委书记（区长升书记，重用）<br>
+      <span style="color:var(--accent);">李婷</span>：东湖区委常委/副区长 → 红谷滩区长（副职升正职）<br>
+      <span style="color:var(--accent);">邓之武</span>：→ 东湖代区长（填补李婷调离后的空缺）<br>
+      <br>
+      <span style="color:var(--text-muted);font-size:0.75rem;">"几乎在同一时期，两区主要领导进行了对调式轮换，表明南昌市委有意在这两个相邻区之间建立干部双向培养通道。"</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===== KEY INSIGHTS ===== -->
+<section class="section" id="insights">
+  <h2 class="section-title"><span class="accent-dot"></span>关键洞察 <span class="sub">Findings &amp; Breakthrough Leads</span></h2>
+  <div class="insight-list">
+
+    <div class="insight-item">
+      <div class="insight-num">● 01</div>
+      <div class="insight-text"><strong>红谷滩区是南昌干部交流的"旋转门"</strong> — 几乎所有主要领导都有其他区县任职经历，是全市干部培养链上的关键节点。晋升跳板、多区汇聚、女性干部成长平台、经济中心定位四重特征叠加。</div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-num">● 02</div>
+      <div class="insight-text"><strong>东湖区—红谷滩区构成干部双向培养通道</strong> — 刘光荣（红谷滩区长→东湖区委书记）和李婷（东湖副区长→红谷滩区长）的双向流动，证明南昌市委将这两个相邻区视为干部轮换的配对单位。这是南昌迄今为止最密集的区际干部双向交流通道。</div>
+    </div>
+
+    <div class="insight-item gold">
+      <div class="insight-num">● 03</div>
+      <div class="insight-text"><strong>涂晓晖的去向是重要线索</strong> — 如果涂晓晖确实调往南昌市国资委，则意味着红谷滩区委书记这一职位的"出路"正在向经济管理条线延伸。其去向至今未公开披露，值得追踪。</div>
+    </div>
+
+    <div class="insight-item gold">
+      <div class="insight-num">● 04</div>
+      <div class="insight-text"><strong>李婷的早期履历是最大信息空白</strong> — 她的职业生涯从~2021年前（约45岁前）几乎完全缺失。碎片线索（可能基层教师→组织部→副区长）指向"教育系统→党群系统→政府系统"的跨领域晋升模式，但无官方来源证实。</div>
+    </div>
+
+    <div class="insight-item grey">
+      <div class="insight-num">● 05</div>
+      <div class="insight-text"><strong>万晓娟是红谷滩区任职最久的核心领导</strong> — 自2021年建区以来一直担任区委副书记，在区委区政府主官更替频繁的背景下，是维系红谷滩政权延续性的关键人物。</div>
+    </div>
+
+    <div class="insight-item grey">
+      <div class="insight-num">● 06</div>
+      <div class="insight-text"><strong>经济管理能力被优先考虑</strong> — 市财政局长涂晓晖的空降、驻深办主任李婷的调任、博士学历的江龙和周结华进入班子，均表明经济管理能力在红谷滩区干部选拔中权重较高，与其作为南昌经济中心的定位一致。</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== GAPS ===== -->
+<section class="section" id="gaps">
+  <h2 class="section-title"><span class="accent-dot"></span>信息缺口 <span class="sub">Open Gaps</span></h2>
+
+  <div class="gap-card">
+    <h4>🔴 李婷早期履历（~2021年前）</h4>
+    <p>从到东湖区前的职业生涯完全空白。有线索表明她可能从基层教师起步、曾任南昌县委组织部副部长，但无任何官方来源证实。入党时间、参加工作时间、教育背景细节均缺失。</p>
+  </div>
+
+  <div class="gap-card">
+    <h4>🔴 涂晓晖去向</h4>
+    <p>2026年6月离任红谷滩区委书记，具体去向尚未确认。可能调南昌市国资委，但无公开来源证实。</p>
+  </div>
+
+  <div class="gap-card">
+    <h4>🟡 吴江辉去向</h4>
+    <p>2023年6月离任时称"另有任用"，但具体去向未公开披露。</p>
+  </div>
+
+  <div class="gap-card">
+    <h4>🟡 刘光荣南昌县21年具体职务</h4>
+    <p>1995年至~2016年在南昌县工作，具体职务序列有待查证。</p>
+  </div>
+
+  <div class="gap-card">
+    <h4>🟡 李婷就任东湖区副区长具体日期</h4>
+    <p>未能确认其具体到任东湖区的时间。</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>南昌市红谷滩区领导班子工作关系网络调查 · 2026年7月14日</p>
+  <p style="margin-top:0.3rem">数据来源：红谷滩区政府官网 · 东湖区政府官网 · 江西政读 · 澎湃新闻 · 新浪新闻 · 网易新闻</p>
+  <p style="margin-top:0.3rem"><a href="https://hgt.nc.gov.cn">hgt.nc.gov.cn</a> · <a href="https://dhq.nc.gov.cn">dhq.nc.gov.cn</a></p>
+</footer>
+
+<script>
+// Sticky nav highlight
+(function() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        var id = entry.target.id;
+        var link = document.querySelector('.nav-link[href="#' + id + '"]');
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(function(s) { observer.observe(s); });
+})();
+</script>
+
+</body>
+</html>

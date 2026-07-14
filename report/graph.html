@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江西地区领导班子工作关系网络 · 总图</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d0d0d; color: #e8e0d0; font-family: 'Inter', sans-serif; }
+  #mynetwork { width: 100%; height: calc(100vh - 120px); border-top: 1px solid #2a2a2a; }
+  .header {
+    padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .header h1 { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 700; }
+  .header .sub { font-size: 0.7rem; color: #8a8478; margin-top: 0.2rem; }
+  .header .links { display: flex; gap: 1rem; }
+  .header .links a { color: #C9A94E; font-size: 0.75rem; text-decoration: none; }
+  .header .links a:hover { text-decoration: underline; }
+  .legend {
+    display: flex; gap: 1.5rem; padding: 0.5rem 1.5rem;
+    font-size: 0.7rem; color: #8a8478;
+    border-bottom: 1px solid #2a2a2a;
+    flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+  .legend-color { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #2a2a2a; }
+  .legend-line { width: 20px; height: 2px; border-radius: 0; }
+  .legend-line.thick { height: 3px; }
+  .legend-box { width: 12px; height: 12px; border: 1px solid #2a2a2a; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>江西地区领导班子工作关系网络</h1>
+    <div class="sub">总图 · 动态关系图 · 点击查看详情</div>
+  </div>
+  <div class="links">
+    <a href="20260714-南昌市-市长.md">南昌市市长报告</a>
+    <a href="20260714-青山湖区-常委履历深挖.md">青山湖区履历深挖</a>
+    <a href="20260714-景德镇市-领导班子.md">景德镇市报告</a>
+    <a href="20260714-萍乡市-市长.md">萍乡市报告</a>
+    <a href="20260714-萍乡市-市长.html">萍乡市简报</a>
+    <a href="20260714-景德镇市-领导班子.html">景德镇市简报</a>
+    <a href="20260714-景德镇市-市长.md">景德镇市长空缺报告</a>
+    <a href="20260714-景德镇市-市长.html">景德镇市长空缺简报</a>
+    <a href="../report/20260714-青云谱区-区长.html">青云谱区报告</a>
+    <a href="../report/20260714-红谷滩区-区长.md">红谷滩区报告</a>
+    <a href="20260714-新余市-市长.html">新余市报告</a>
+    <a href="20260714-鹰潭市-市长.html">鹰潭市简报</a>
+    <a href="20260714-鹰潭市-市长.md">鹰潭市报告</a>
+  </div>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-color" style="background:#E03C31;"></div>市委书记/区委书记</div>
+  <div class="legend-item"><div class="legend-color" style="background:#4a7fc7;"></div>市长/区长/副县长</div>
+  <div class="legend-item"><div class="legend-color" style="background:#d4880f;"></div>纪委</div>
+  <div class="legend-item"><div class="legend-color" style="background:#5a7a9a;"></div>人大</div>
+  <div class="legend-item"><div class="legend-color" style="background:#7a5a9a;"></div>政协</div>
+  <div class="legend-item"><div class="legend-color" style="background:#888;"></div>其他职务</div>
+  <div class="legend-item"><div class="legend-box" style="background:rgba(200,200,255,0.3);"></div>机构</div>
+  <div class="legend-item"><div class="legend-line" style="background:#555;"></div>任职关系</div>
+  <div class="legend-item"><div class="legend-line thick" style="background:#C9A94E;"></div>人员关系</div>
+</div>
+<div id="mynetwork"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<script>
+(async function() {
+  // Load all GEXF files — start with Qingyunpu
+  const datasets = [];
+
+  // Qingyunpu — hardcoded from build_qingyunpu_data.py
+  const qyp = {
+    orgPrefix: "oqyp",
+    persons: [
+      {id:1,name:"罗国栋",post:"青云谱区委书记",birth:"1981.10",birthplace:"江西吉水"},
+      {id:2,name:"洪略",post:"青云谱区委副书记、代区长",birth:"1991.01",birthplace:"江西余干"},
+      {id:3,name:"林峰",post:"区委副书记",birth:"1978.10",birthplace:"江西玉山"},
+      {id:4,name:"黄华辉",post:"区委常委、政法委书记",birth:"1978.01",birthplace:"江西临川"},
+      {id:5,name:"滕作鹏",post:"区委常委、宣传部部长",birth:"1975.11",birthplace:"江西新建"},
+      {id:6,name:"杨柳",post:"区委常委、组织部部长",birth:"1984.11",birthplace:"江西南昌",gender:"女"},
+      {id:7,name:"李军",post:"区委常委、纪委书记",birth:"1981.09",birthplace:"江西南昌"},
+      {id:8,name:"廖子君",post:"区委常委、统战部部长",birth:"—",birthplace:"—",gender:"女"},
+      {id:9,name:"聂剑波",post:"区委常委、人武部政委",birth:"1979.10",birthplace:"江西丰城"},
+      {id:10,name:"聂洪明",post:"副区长",birth:"1975.10",birthplace:"江西南昌"},
+      {id:11,name:"夏玉龙",post:"副区长、公安分局局长",birth:"1971.02",birthplace:"江西南昌"},
+      {id:12,name:"胡启明",post:"副区长",birth:"1977.05",birthplace:"江西吉安",note:"民革党员"},
+      {id:13,name:"徐冀",post:"副区长",birth:"1983.07",birthplace:"—"},
+      {id:14,name:"叶修堂",post:"原区委书记→南昌市人大常委会办公室主任",birth:"1974.01",birthplace:"江西永修"},
+      {id:15,name:"汪众华",post:"原区长→南昌市文联党组书记",birth:"1979.11",birthplace:"江西都昌"},
+      {id:16,name:"帅志",post:"南昌县委副书记、县长",birth:"1975.10",birthplace:"江西南昌"},
+      {id:17,name:"徐志勇",post:"南昌县委常委、常务副县长",birth:"1981.07",birthplace:"江西丰城"},
+      {id:18,name:"熊辉",post:"安义县委书记",birth:"1981.03",birthplace:"江西奉新"},
+      {id:19,name:"陈翔",post:"南昌市政府二级巡视员",birth:"1969.11",birthplace:"江西樟树"},
+      {id:20,name:"聂红兵",post:"进贤县委常委、副县长",birth:"1980.11",birthplace:"江西南昌县"},
+    ],
+    orgs: [
+      "中共南昌市青云谱区委员会",
+      "南昌市青云谱区人民政府",
+      "南昌市青云谱区纪律检查委员会",
+      "南昌市公安局青云谱分局",
+      "南昌市青云谱区人民武装部",
+      "南昌市人大常委会",
+      "南昌市文学艺术界联合会",
+      "南昌县人民政府",
+      "南昌市纪委监委",
+    ],
+    edges: [
+      [1,2,"党政搭档","2026.07—至今"],
+      [2,15,"职务接替","前后任"],
+      [1,14,"职务接替","前后任"],
+      [17,16,"青云谱→南昌县","2024.10—至今"],
+      [1,18,"安义↔青云谱","2026.07—至今"],
+      [16,15,"南昌县委同事","2016—2020"],
+    ]
+  };
+
+  datasets.push(qyp);
+
+  // ── 南昌市 (City level) ──
+  const nanchangCity = {
+    orgPrefix: "onc",
+    persons: [
+      // Predecessor mayors
+      {id:1,name:"万广明",post:"江西省副省长（原南昌市长）",birth:"1967-01",birthplace:"江西余干"},
+      {id:2,name:"黄喜忠",post:"江西省委常委、统战部长（原南昌市长）",birth:"1969-11",birthplace:"广东揭阳"},
+      {id:3,name:"郭安",post:"原南昌市长→鹰潭市委书记",birth:"",birthplace:""},
+      // Current city leadership
+      {id:4,name:"盛秋平",post:"江西省委常委、南昌市委书记",birth:"1968-09",birthplace:"浙江新昌"},
+      {id:5,name:"高世文",post:"南昌市委副书记、市长（2026.02起缺席）",birth:"1974-06",birthplace:"山东青州",note:"2026年2月2日后未再公开露面，已超5个月"},
+      {id:6,name:"赵捷",post:"南昌市委常委、常务副市长",birth:"1983-06",birthplace:""},
+      {id:7,name:"安宝军",post:"南昌市委常委、副市长",birth:"1971-07",birthplace:""},
+      {id:8,name:"马煜洲",post:"南昌市委常委、副市长",birth:"1975-10",birthplace:""},
+      {id:9,name:"陈鹏辉",post:"南昌市副市长、公安局长",birth:"1973-03",birthplace:""},
+      {id:10,name:"徐鹤飞",post:"南昌市副市长",birth:"1980-09",birthplace:""},
+      {id:11,name:"彭开先",post:"南昌市副市长（原安义县委书记）",birth:"",birthplace:""},
+      {id:12,name:"高辉红",post:"南昌市副市长（原东湖区委书记）",birth:"",birthplace:""},
+      {id:13,name:"李镇发",post:"市人大常委会主任",birth:"",birthplace:""},
+      {id:14,name:"王爱东",post:"市政协主席",birth:"",birthplace:""},
+      // Cross-district connections
+      {id:15,name:"李红军",post:"原南昌市委书记",birth:"",birthplace:""},
+    ],
+    orgs: [
+      "中共南昌市委员会",
+      "南昌市人民政府",
+      "南昌市人大常委会",
+      "政协南昌市委员会",
+      "赣江新区管委会",
+      "江西省人民政府",
+      "中华人民共和国商务部",
+      "浙江省商务厅",
+    ],
+    edges: [
+      [4,5,"党政搭档","2026.06—至今（名义）"],
+      [4,6,"实际上下级","2026.06—至今"],
+      [6,5,"代行职务","赵捷在市长缺席期间主持工作"],
+      [1,5,"前后任市长","万广明→高世文"],
+      [2,1,"前后任市长","黄喜忠→万广明"],
+      [3,2,"前后任市长","郭安→黄喜忠"],
+      [15,4,"前后任市委书记","李红军→盛秋平"],
+    ]
+  };
+
+  datasets.push(nanchangCity);
+
+  // ── 青山湖区 (Qingshanhu District) ──
+  var qingshanhu = {
+    orgPrefix: "oqsh",
+    persons: [
+      {id:1,name:"杨育星",post:"青山湖区委书记",birth:"1975-05",birthplace:"江西南昌",note:"南昌大学环境工程硕士"},
+      {id:2,name:"龚飞霞",post:"青山湖区委副书记、代区长",birth:"1980-10",birthplace:"江西南昌县",gender:"女"},
+      {id:3,name:"毛涛",post:"区委常委、副区长",birth:"1988-02",birthplace:"江西永丰"},
+      {id:4,name:"杨峰",post:"区委常委、常务副区长",birth:"1980-10",birthplace:"江西南昌"},
+      {id:5,name:"吴庆和",post:"区委常委、宣传部部长",birth:"1976-01",birthplace:"江西宜黄"},
+      {id:6,name:"付磊",post:"区委常委、组织部部长",birth:"1981-10",birthplace:"江西都昌"},
+      {id:7,name:"牛浩",post:"区委常委、高新园区书记",birth:"1983-09",birthplace:"山东邹城",note:"外省籍干部,市发改委出身"},
+      {id:8,name:"蔡志刚",post:"区委常委、政法委书记",birth:"1974-12",birthplace:"江西南昌"},
+      {id:9,name:"刘伟",post:"区委常委、人武部政委",birth:"1984-05",birthplace:"江西吉水"},
+      {id:10,name:"彭凌迁",post:"区委常委、纪委书记",birth:"1988-11",birthplace:"江西南昌",note:"回族,最年轻常委"},
+      {id:11,name:"袁一旦",post:"市人大常委会副主任（原青山湖区委书记）",birth:"1970-04",birthplace:"江西分宜"},
+      {id:12,name:"叶飞",post:"进贤县委副书记（青山湖成长干部）",birth:"",birthplace:""},
+      {id:13,name:"余炜",post:"副区长、公安分局局长",birth:"1968-11",birthplace:"江西南昌",note:"公安系统33年"},
+      {id:14,name:"毛演斌",post:"副区长",birth:"1974-07",birthplace:"江西南昌",note:"城管/农业/环保分管"},
+    ],
+    orgs: [],
+    edges: [
+      [1,2,"党政搭档","2026.07—至今"],
+      [1,11,"前搭档5年","2021—2026"],
+      [12,2,"安义县同事","2021—2024"],
+    ]
+  };
+  datasets.push(qingshanhu);
+
+  // Build nodes and edges
+  var nodes = new vis.DataSet([]);
+  var edges = new vis.DataSet([]);
+  var nodeIdMap = {};
+  var nameBirthMap = {};
+  var nextId = 1000;
+  var addedEdges = [];
+
+  function addPersonNode(p, prefix) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      return nameBirthMap[key];
+    }
+    var c = getColor(p.post);
+    var id = prefix + p.id;
+    nodeIdMap[id] = true;
+    var nd = {
+      id: id,
+      label: p.name + "\n" + p.post + (p.birthplace && p.birthplace !== "—" ? "\n" + p.birthplace : ""),
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") +
+             (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("市委书记") || p.post.includes("区委书记") || p.post.includes("县委书记")) ? 25 : (p.post.includes("市长") && !p.post.includes("副市长") ? 22 : 18),
+      shape: "dot",
+      font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"},
+      borderWidth: 1,
+    };
+    nodes.add(nd);
+    nameBirthMap[key] = id;
+    return id;
+  }
+
+  function addOrgNode(id, label) {
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id,
+      label: label,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10,
+      shape: "box",
+      font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  }
+
+  function addEdge(from, to, label, title, colorOpts) {
+    var color = colorOpts || {color: "#C9A94E", opacity: 0.6};
+    var width = colorOpts && colorOpts.width ? colorOpts.width : 2;
+    edges.add({
+      from: from,
+      to: to,
+      label: label,
+      title: title || "",
+      color: color,
+      width: width,
+      font: {color: "#C9A94E", size:8, strokeWidth:0, face:"Inter", align:"middle"},
+      dashes: false,
+    });
+  }
+
+  function getColor(post) {
+    if (post.includes("市委书记") || post.includes("区委书记") || post.includes("县委书记")) return {bg:"#E03C31",border:"#8a1a1a"};
+    if (post.includes("市长") || post.includes("区长") || post.includes("县长") || post.includes("副区长") || post.includes("副县长") || post.includes("副市长")) return {bg:"#4a7fc7",border:"#2a4f7a"};
+    if (post.includes("纪委") || post.includes("监委")) return {bg:"#d4880f",border:"#8a5a00"};
+    if (post.includes("人大")) return {bg:"#5a7a9a",border:"#3a5a7a"};
+    if (post.includes("政协")) return {bg:"#7a5a9a",border:"#4a3a6a"};
+    return {bg:"#6a6a6a",border:"#3a3a3a"};
+  }
+
+  function getLabel(p) {
+    let l = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—") l += "\n" + p.birthplace;
+    return l;
+  }
+
+  datasets.forEach(ds => {
+    ds.persons.forEach(p => {
+      let id = "p" + p.id;
+      let key = p.name + "|" + (p.birth || "");
+      if (nameBirthMap[key]) {
+        // Merge: update existing node title with additional info
+        var existingId = nameBirthMap[key];
+        var existing = nodes.get(existingId);
+        if (existing) {
+          existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+          if (p.birthplace && p.birthplace !== "—" && existing.label.indexOf(p.birthplace) < 0) {
+            existing.label = existing.label + "\n" + p.birthplace;
+          }
+          nodes.update(existing);
+        }
+        return;
+      }
+      let c = getColor(p.post);
+      nodeIdMap[id] = true;
+      nameBirthMap[key] = id;
+      nodes.add({
+        id: id,
+        label: getLabel(p),
+        title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + p.birth + " · " + p.birthplace +
+               (p.note ? "<br><em>" + p.note + "</em>" : ""),
+        color: {background:c.bg, border:c.border},
+        size: (p.post.includes("书记") && (p.post.includes("区委") || p.post.includes("县委"))) ? 25 : 18,
+        shape: "dot",
+        font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"},
+        borderWidth: 1,
+      });
+    });
+
+    ds.orgs.forEach((org, idx) => {
+      let id = ds.orgPrefix + idx;
+      nodeIdMap[id] = true;
+      nodes.add({
+        id: id,
+        label: org,
+        color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+        size: 10,
+        shape: "box",
+        font: {color:"#8a8478", size:8, face:"Inter"},
+      });
+    });
+
+    ds.edges.forEach(e => {
+      edges.add({
+        from: "p" + e[0],
+        to: "p" + e[1],
+        label: e[2],
+        title: e[3] || "",
+        color: {color: "#C9A94E", opacity: 0.6},
+        width: 2,
+        font: {color:"#C9A94E", size:8, strokeWidth:0, face:"Inter", align:"middle"},
+        dashes: false,
+      });
+    });
+  });
+
+  // ── 红谷滩区 (Honggutan District) ──
+  var hgt = {
+    persons: [
+      {id:101,name:"陈奕蒙",post:"红谷滩区委书记",birth:"",birthplace:""},
+      {id:102,name:"李婷",post:"红谷滩区委副书记、区长",birth:"1976-11",birthplace:"江西南昌",gender:"女"},
+      {id:103,name:"万晓娟",post:"红谷滩区委副书记",birth:"1982-10",birthplace:"江西南昌",gender:"女"},
+      {id:104,name:"江龙",post:"红谷滩区委常委、常务副区长",birth:"1981-09",birthplace:"江西都昌"},
+      {id:105,name:"胡军",post:"红谷滩区委常委、组织部部长",birth:"1974-10",birthplace:"江西南昌"},
+      {id:106,name:"陈敏",post:"红谷滩区委常委、统战部部长",birth:"1977-03",birthplace:"江西上高"},
+      {id:107,name:"唐武",post:"红谷滩区委常委、政法委书记",birth:"1970-03",birthplace:"江西南昌"},
+      {id:108,name:"徐军",post:"红谷滩区委常委、纪委书记",birth:"",birthplace:""},
+      {id:109,name:"周晓东",post:"红谷滩区委常委、宣传部部长",birth:"1985-11",birthplace:""},
+      {id:110,name:"周结华",post:"红谷滩区委常委、副区长",birth:"1983-01",birthplace:"江西万年"},
+      {id:111,name:"朱志翔",post:"红谷滩区副区长",birth:"",birthplace:""},
+      {id:112,name:"张莲波",post:"红谷滩区副区长",birth:"",birthplace:""},
+      {id:113,name:"熊飞",post:"红谷滩区副区长",birth:"1975-09",birthplace:"江西新建"},
+      {id:114,name:"陈羽",post:"红谷滩区副区长",birth:"1982-12",birthplace:"",gender:"女",note:"民建会员"},
+      {id:115,name:"徐辉",post:"红谷滩区副区长",birth:"1983-11",birthplace:""},
+      // Predecessors
+      {id:116,name:"刘光荣",post:"东湖区委书记（原红谷滩区长）",birth:"1972-11",birthplace:"江西南昌县"},
+      {id:117,name:"涂晓晖",post:"原红谷滩区委书记",birth:"1976-05",birthplace:""},
+      {id:118,name:"吴江辉",post:"原红谷滩区委书记",birth:"",birthplace:""},
+      // Cross-district
+      {id:122,name:"邓之武",post:"东湖区委副书记、代区长",birth:"",birthplace:"江西万年"},
+    ],
+    orgs: [
+      "中共南昌市红谷滩区委员会",
+      "南昌市红谷滩区人民政府",
+      "中共南昌市红谷滩区纪律检查委员会",
+      "南昌市红谷滩区人民武装部",
+      "红谷滩新区管委会",
+    ],
+    orgPrefix: "ohgt",
+    edges: [
+      [101,102,"党政搭档","2026.07—至今"],
+      [116,102,"前后任接替","红谷滩区长"],
+      [118,117,"前后任书记接替","吴江辉→涂晓晖"],
+      [117,101,"前后任书记接替","涂晓晖→陈奕蒙"],
+      [116,122,"党政搭档","东湖区现任 — 刘光荣↔邓之武"],
+      [102,122,"东湖区同事","李婷原东湖副区长↔邓之武"],
+      [117,116,"红谷滩党政搭档","2023-2025"],
+    ]
+  };
+
+  // Add honggutan persons with dedup
+  hgt.persons.forEach(p => {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      // Person exists — merge post info into title
+      var existingId = nameBirthMap[key];
+      var existing = nodes.get(existingId);
+      if (existing) {
+        existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing);
+      }
+      // Map this person to the existing node ID for edge resolution
+      p._nodeId = existingId;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "honggutan_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id,
+      label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") +
+             (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("区委书记")) ? 25 : 18,
+      shape: "dot",
+      font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"},
+      borderWidth: 1,
+    });
+  });
+
+  // Add honggutan orgs
+  hgt.orgs.forEach((org, idx) => {
+    var id = hgt.orgPrefix + idx;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id,
+      label: org,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10,
+      shape: "box",
+      font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  });
+
+  // Add honggutan edges
+  hgt.edges.forEach(e => {
+    var p1 = hgt.persons.find(p => p.id === e[0]);
+    var p2 = hgt.persons.find(p => p.id === e[1]);
+    if (p1 && p2) {
+      var fromId = p1._nodeId;
+      var toId = p2._nodeId;
+      var gold = {color: "#C9A94E", opacity: 0.6};
+      var isSuccession = e[2].includes("前后任");
+      addEdge(fromId, toId, e[2], e[3] || "", isSuccession ? {color: "#C9A94E", opacity: 0.6, width: 2} : {color: "#C9A94E", opacity: 0.6, width: 3});
+    }
+  });
+
+  // ── 新余市 (Xinyu) data ─────────────────────────────────────────────────
+  (function() {
+    var xyP = [
+      {id:"fangxj",name:"方向军",post:"新余市委书记",birth:"1970.10",birthplace:"浙江淳安",note:"原市长2024.08-2026.04，升任书记后市长空缺"},
+      {id:"liaols",name:"廖良生",post:"常务副市长",birth:"1975.09",birthplace:"江西石城",note:"1993.07工作，在职大学/MBA，实际主持政府工作"},
+      {id:"xuhong",name:"徐鸿",post:"前市长（被撤职）",birth:"1968.08",birthplace:"江西上饶",note:"因1·24特大火灾被撤职"},
+      {id:"zhenggq",name:"郑光泉",post:"前市委书记",birth:"1967.08",birthplace:"江西上饶",note:"2023.07-2026.04任书记，火灾受党内严重警告"},
+      {id:"zhangzp",name:"张智萍",post:"人大主任",birth:"1967.11",birthplace:"湖南邵阳",note:"全国优秀县委书记，三城循环"},
+      {id:"youying",name:"犹㼆",post:"省商务厅厅长",birth:"1973.11",birthplace:"贵州余庆",note:"土家族，前新余市长2018-2021"},
+      {id:"chenwh",name:"陈文华",post:"副市长",birth:"1968.03",birthplace:"—",note:"女，民盟盟员，法学博士"},
+      {id:"shuyz",name:"舒永忠",post:"副市长",birth:"1969.02",birthplace:"—",note:"兼高新区党工委书记，经济学学士"},
+      {id:"helh",name:"贺利华",post:"副市长",birth:"1967.06",birthplace:"—",note:"工商管理硕士"},
+      {id:"xiaoqg",name:"肖秋根",post:"副市长",birth:"1968.10",birthplace:"—",note:"分管范围最广"},
+      {id:"lizhd",name:"李之旦",post:"副市长/公安局长",birth:"1975.08",birthplace:"—",note:"2025.09到任，法学学士"},
+      {id:"fuqiang",name:"傅强",post:"市政府秘书长",birth:"—",birthplace:"—",note:""},
+      {id:"wufk",name:"伍复康",post:"新余学院党委书记",birth:"—",birthplace:"—",note:"与南昌县委书记贾彧超团省委同期"},
+      {id:"dongxj",name:"董晓健",post:"前市长",birth:"1962.10",birthplace:"江西浮梁",note:"2015-2018任市长"},
+      {id:"liujie",name:"刘捷",post:"浙江省委副书记",birth:"1970.01",birthplace:"江苏丹阳",note:"前新余市委书记2013-2016，跨省升迁"},
+    ];
+    var xyOrgs = ["新余市","中共新余市委","新余市人民政府","江西省统计局","江西省生态环境厅","新余学院","江西省商务厅","江西省科技厅"];
+    var xyOrgPrefix = "oxy";
+
+    xyP.forEach(p => {
+      var key = p.name + "|" + (p.birth || "");
+      if (nameBirthMap[key]) {
+        var eid = nameBirthMap[key];
+        var ex = nodes.get(eid);
+        if (ex) {
+          ex.title = ex.title + "<br><em>also: " + p.post + "（新余）</em>";
+          nodes.update(ex);
+        }
+        return;
+      }
+      var id = "pxy" + p.id;
+      var c = getColor(p.post);
+      nodeIdMap[id] = true;
+      nameBirthMap[key] = id;
+      nodes.add({
+        id: id, label: getLabel(p),
+        title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + p.birth + " · " + p.birthplace + (p.note ? "<br><em>" + p.note + "</em>" : ""),
+        color: {background:c.bg, border:c.border},
+        size: (p.post.includes("书记") && (p.post.includes("市委") || p.post.includes("县委"))) ? 25 : 18,
+        shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+      });
+    });
+
+    xyOrgs.forEach((o, i) => { addOrgNode(xyOrgPrefix + i, o); });
+
+    // Edges: person → org
+    var xyPE = [
+      ["fangxj","oxy4","局长","江西省统计局局长(~2023-2024.08)"],
+      ["zhenggq","oxy5","党组书记","省生态环境厅党组书记(~2021-2023.07)"],
+      ["youying","oxy7","厅长","江西省科技厅厅长(2021-~2023)"],
+      ["youying","oxy6","厅长","江西省商务厅厅长(~2023-今)"],
+      ["wufk","oxy6","党委书记","新余学院党委书记(~2023-今)"],
+      ["liujie","oxy2","书记","新余市委书记(2013-2016)"],
+    ];
+    xyPE.forEach(e => {
+      var fromNode = nameBirthMap[e[0] + "|"];
+      var person = xyP.find(p => "pxy" + p.id === fromNode || "p" + p.id === fromNode);
+      var resolvedFrom = person ? ("pxy" + person.id) : fromNode;
+      if (resolvedFrom) {
+        addEdge(resolvedFrom, xyOrgPrefix + (parseInt(e[1].replace("oxy",""))), e[2], e[3] || "", {color:"#555", opacity:0.4});
+      }
+    });
+
+    // Person↔person edges
+    var xyRE = [
+      ["fangxj","liaols","工作关系","方向军任市长/书记期间，廖良生任常务副市长"],
+      ["fangxj","xuhong","接替","2024年接替被撤职的徐鸿任市长"],
+      ["fangxj","zhenggq","接替","2026年接替郑光泉任市委书记"],
+      ["xuhong","zhenggq","同案问责","均因1·24特大火灾受处分"],
+      ["youying","xuhong","接替","犹㼆调省厅后由徐鸿接任市长"],
+      ["zhangzp","fangxj","分工","四套班子关系"],
+    ];
+    xyRE.forEach(e => {
+      var p1 = xyP.find(p => p.id === e[0]);
+      var p2 = xyP.find(p => p.id === e[1]);
+      if (p1 && p2) {
+        var k1 = p1.name + "|" + (p1.birth || "");
+        var k2 = p2.name + "|" + (p2.birth || "");
+        var id1 = nameBirthMap[k1] || ("pxy" + p1.id);
+        var id2 = nameBirthMap[k2] || ("pxy" + p2.id);
+        if (id1 && id2) {
+          addEdge(id1, id2, e[2], e[3], e[2] === "工作关系" || e[2] === "接替" ? {color:"#C9A94E",opacity:0.6,width:3} : {color:"#C9A94E",opacity:0.4,width:2});
+        }
+      }
+    });
+  })();
+
+  var container = document.getElementById('mynetwork');
+  var data = { nodes, edges };
+  var options = {
+    nodes: { borderWidth: 1, borderWidthSelected: 2 },
+    edges: { smooth: { type: 'discrete', forceDirection: 'none' } },
+    physics: {
+      solver: 'forceAtlas2Based',
+      forceAtlas2Based: {
+        gravitationalConstant: -60,
+        centralGravity: 0.008,
+        springLength: 160,
+        springConstant: 0.04,
+        damping: 0.5,
+      },
+      stabilization: { iterations: 200 }
+    },
+    interaction: {
+      hover: true,
+      tooltipDelay: 100,
+      navigationButtons: true,
+      keyboard: true,
+    },
+    layout: { improvedLayout: true },
+  };
+
+  var network = new vis.Network(container, data, options);
+
+  network.on("click", function(params) {
+    if (params.nodes.length > 0) {
+      var nodeId = params.nodes[0];
+      var node = nodes.get(nodeId);
+      var body = node.title || node.label;
+      // Show in console — browser tooltip already shows on hover
+    }
+  });
+
+  // ── 景德镇市 (Jingdezhen City) ──
+  var jingdezhen = {
+    persons: [
+      // Current leadership
+      {id:1,name:"陈克龙",post:"景德镇市委书记",birth:"1976.12",birthplace:"未公开",note:"央地交流，工信部→吉安→景德镇"},
+      {id:2,name:"吴隽",post:"市委专职副书记",birth:"1969.02",birthplace:"江西都昌",note:"教授/博士，陶瓷大学→中科院上海硅酸盐所"},
+      {id:3,name:"薛强",post:"市委常委、常务副市长",birth:"1976.03",birthplace:"江西安远",note:"赣州24年→抚州→景德镇"},
+      {id:4,name:"董梅生",post:"市委常委、市纪委书记",birth:"1976.07",birthplace:"—",note:"省纪委出身"},
+      {id:5,name:"林蓉",post:"市委常委、组织部部长",birth:"—",birthplace:"—"},
+      {id:6,name:"张龙",post:"市委常委（宣传部长推测）",birth:"—",birthplace:"—"},
+      {id:7,name:"魏冀",post:"市委常委、副市长（挂职）",birth:"1978.11",birthplace:"—",note:"文学博士"},
+      {id:8,name:"江民强",post:"副市长",birth:"1971.09",birthplace:"—",note:"无党派"},
+      {id:9,name:"罗文军",post:"副市长",birth:"1967.04",birthplace:"—"},
+      {id:10,name:"徐辉",post:"副市长",birth:"1967.03",birthplace:"—"},
+      {id:11,name:"高晓云",post:"副市长",birth:"1975.05",birthplace:"—"},
+      {id:12,name:"黄练",post:"副市长、公安局长",birth:"1972.12",birthplace:"—"},
+      {id:13,name:"鄢华",post:"市人大主任",birth:"—",birthplace:"—"},
+      {id:14,name:"俞小平",post:"市政协主席",birth:"—",birthplace:"—"},
+      // Predecessors
+      {id:15,name:"胡雪梅",post:"原市委书记→省委宣传部副部长",birth:"1967.08",birthplace:"江西玉山"},
+      {id:16,name:"刘锋",post:"原市委书记（去向不明）",birth:"1964.08",birthplace:"—"},
+      {id:17,name:"钟志生",post:"原市委书记（被查/双开）",birth:"1963.06",birthplace:"江西分宜",note:"2024.09被查，2025.02双开"},
+      // Cross-city connections
+      {id:18,name:"姚亚平",post:"原景德镇书记→上饶书记",birth:"—",birthplace:"—"},
+      {id:19,name:"颜赣辉",post:"原景德镇市长→上饶市长→宜春书记",birth:"—",birthplace:"—",note:"2020落马"},
+      {id:20,name:"郭安",post:"原景德镇常委→南昌市长→鹰潭书记",birth:"1962",birthplace:"—"},
+      {id:21,name:"刘祖三",post:"原景德镇副书记→鹰潭书记",birth:"—",birthplace:"—"},
+    ],
+    orgs: [
+      "中共景德镇市委员会",
+      "景德镇市人民政府",
+      "中共景德镇市纪律检查委员会",
+      "景德镇市人大常委会",
+      "政协景德镇市委员会",
+      "工业和信息化部",
+      "景德镇陶瓷大学",
+      "中共江西省委宣传部",
+    ],
+    orgPrefix: "ojdz",
+    edges: [
+      [1,3,"同期空降班子","2024.11.13同日任命"],
+      [1,2,"党政搭档","书记+副书记"],
+      [1,15,"职务接替","市长→书记两任"],
+      [15,16,"职务接替","胡雪梅→刘锋"],
+      [16,17,"职务接替","刘锋→钟志生"],
+      [17,18,"职务接替","钟志生→姚亚平（历史更替）"],
+      [19,20,"跨市-旋转门","景德镇市长→上饶市长"],
+      [18,19,"跨市-旋转门","景德镇书记→上饶书记"],
+      [21,22,"跨市-鹰潭","景德镇→鹰潭通道"],
+      [1,7,"挂职副市长关系","陈克龙/市委书记+挂职副"],
+      [1,4,"党政纪","书记+纪委书记"],
+      [3,15,"职务搭档","薛强(常务副)+胡雪梅(原书记)"],
+    ]
+  };
+
+  // Add jingdezhen persons with dedup
+  jingdezhen.persons.forEach(function(p) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      var existingId = nameBirthMap[key];
+      var existing = nodes.get(existingId);
+      if (existing) {
+        existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing);
+      }
+      p._nodeId = existingId;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "jingdezhen_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id,
+      label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") +
+             (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("市委书记") && !p.post.includes("副")) ? 25 : 18,
+      shape: "dot",
+      font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"},
+      borderWidth: 1,
+    });
+  });
+
+  // Add jingdezhen orgs
+  jingdezhen.orgs.forEach(function(org, idx) {
+    var id = jingdezhen.orgPrefix + idx;
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id,
+      label: org,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10,
+      shape: "box",
+      font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  });
+
+  // Add jingdezhen edges
+  jingdezhen.edges.forEach(function(e) {
+    var p1 = jingdezhen.persons.find(function(p) { return p.id === e[0]; });
+    var p2 = jingdezhen.persons.find(function(p) { return p.id === e[1]; });
+    if (p1 && p2) {
+      addEdge(p1._nodeId, p2._nodeId, e[2], e[3] || "", {color:"#C9A94E", opacity:0.6, width:2});
+    }
+  });
+
+  // ── 萍乡市 (Pingxiang City) ──
+  var pingxiang = {
+    persons: [
+      {id:1,name:"傅正华",post:"萍乡市长",birth:"1969.08",birthplace:"江西吉安县",note:"吉安体系，2026.05到任"},
+      {id:2,name:"余正琨",post:"萍乡市委书记",birth:"1971.01",birthplace:"江西共青城",note:"2026.05到任"},
+      {id:3,name:"鲍峰庭",post:"市委副书记",birth:"1968.03",birthplace:"江西万载",note:"全国脱贫攻坚先进个人"},
+      {id:4,name:"彭海宝",post:"市纪委书记",birth:"—",birthplace:"—",note:"省监委→萍乡"},
+      {id:5,name:"颜小龙",post:"市人大主任",birth:"1968.01",birthplace:"江西芦溪"},
+      {id:6,name:"聂晓葵",post:"市政协主席",birth:"1966.01",birthplace:"江西芦溪",note:"女"},
+      // Predecessors
+      {id:7,name:"熊运浪",post:"原市长→省委政法委副书记",birth:"1968.11",birthplace:"江西南昌",note:"全国优秀县委书记"},
+      {id:8,name:"刘烁",post:"原市长/书记→上饶市委书记",birth:"1970.02",birthplace:"山东诸城",note:"公安部空降→南昌→萍乡→上饶"},
+      {id:9,name:"李江河",post:"原市长→省人大",birth:"1963.10",birthplace:"河南内乡"},
+      {id:10,name:"李小豹",post:"原市长/书记→落马",birth:"1968.08",birthplace:"湖南永兴",note:"2022主动投案"},
+      // Cross-city
+      {id:11,name:"颜赣辉",post:"萍乡副书记→景德镇市长→落马",birth:"—",birthplace:"—",note:"赣西环线，判11年"},
+    ],
+    orgs: [
+      "中共萍乡市委员会",
+      "萍乡市人民政府",
+      "中共萍乡市纪律检查委员会",
+      "萍乡市人大常委会",
+      "政协萍乡市委员会",
+      "中共江西省委政法委员会",
+      "中共上饶市委员会",
+    ],
+    orgPrefix: "opx",
+    edges: [
+      [1,2,"党政搭档","2026.05同期到任"],
+      [1,7,"职务接替","傅正华→熊运浪"],
+      [7,8,"职务接替","熊运浪→刘烁（市长）"],
+      [8,9,"职务接替","刘烁→李江河"],
+      [9,10,"职务接替","李江河→李小豹"],
+      [1,3,"党政搭档","市长×副书记"],
+      [8,7,"党政搭档","刘烁升书记后熊运浪接市长"],
+      [11,8,"跨市-赣西环线","颜赣辉（宜春→萍乡→景德镇→上饶→宜春闭环）+ 刘烁（上饶书记）"],
+    ]
+  };
+
+  pingxiang.persons.forEach(function(p) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      var existingId = nameBirthMap[key];
+      var existing = nodes.get(existingId);
+      if (existing) {
+        existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing);
+      }
+      p._nodeId = existingId;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "pingxiang_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id, label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") + (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("市委书记") && !p.post.includes("副")) ? 25 : 18,
+      shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+    });
+  });
+
+  pingxiang.orgs.forEach(function(org, idx) {
+    var id = pingxiang.orgPrefix + idx;
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id, label: org,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10, shape: "box", font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  });
+
+  pingxiang.edges.forEach(function(e) {
+    var p1 = pingxiang.persons.find(function(p) { return p.id === e[0]; });
+    var p2 = pingxiang.persons.find(function(p) { return p.id === e[1]; });
+    if (p1 && p2) {
+      addEdge(p1._nodeId, p2._nodeId, e[2], e[3] || "", {color:"#C9A94E", opacity:0.6, width:2});
+    }
+  });
+
+  // ── 鹰潭市 (Yingtan City) ──
+  const yingtan = {
+    orgPrefix: "oyt",
+    persons: [
+      {id:1,name:"王亚联",post:"鹰潭市委书记",birth:"1972.09",birthplace:"江西九江"},
+      {id:2,name:"王亚青",post:"鹰潭市委副书记、市长",birth:"1981.08",birthplace:"安徽庐江",note:"中科大博士，前CETC"},
+      {id:3,name:"黄金龙",post:"鹰潭市人大常委会主任",birth:"1970.03",birthplace:"江西赣县"},
+      {id:4,name:"黄云",post:"鹰潭市政协主席",birth:"1965.11",birthplace:"江西宁都"},
+      {id:5,name:"江训开",post:"鹰潭市委常委、常务副市长",birth:"1972.09",birthplace:"江西都昌"},
+      {id:6,name:"肖国军",post:"鹰潭市委常委、组织部部长",birth:"1976.12",birthplace:""},
+      {id:7,name:"毛晖圆",post:"鹰潭市委常委、市纪委书记",birth:"1983.03",birthplace:"",gender:"女",note:"最年轻常委"},
+      {id:8,name:"黄忠",post:"鹰潭市委常委、宣传部部长",birth:"1968.07",birthplace:"江西新建"},
+      {id:9,name:"蔡江",post:"鹰潭市委常委、统战部部长",birth:"1968.03",birthplace:"江西贵溪",gender:"女"},
+      {id:10,name:"褚小涛",post:"鹰潭市委常委、政法委书记",birth:"约1972",birthplace:""},
+      {id:11,name:"万玲",post:"鹰潭市副市长",birth:"1972.02",birthplace:"",gender:"女",note:"民建"},
+      {id:12,name:"胡春平",post:"鹰潭市副市长",birth:"1975.09",birthplace:""},
+      {id:13,name:"刘江",post:"鹰潭市副市长、公安局长",birth:"1971.10",birthplace:""},
+      {id:14,name:"陈敏(副市长)",post:"鹰潭市副市长",birth:"1979.08",birthplace:""},
+      {id:15,name:"张子建",post:"楚雄州委书记（原鹰潭市长）",birth:"1973.10",birthplace:"江西贵溪",note:"2024跨省调云南"},
+      {id:16,name:"陈敏(前市长)",post:"江西省委常委、省委秘书长",birth:"1972.10",birthplace:"江西赣州"},
+      {id:17,name:"于秀明",post:"江西省政协副主席",birth:"",birthplace:""},
+      {id:18,name:"曹淑敏",post:"国家广电总局局长（原鹰潭书记）",birth:"",birthplace:"",gender:"女"},
+      {id:19,name:"许南吉",post:"江西省财政厅厅长（原鹰潭书记）",birth:"",birthplace:""},
+      {id:20,name:"黄喜忠",post:"赣州市委书记（原鹰潭书记）",birth:"1969.11",birthplace:"广东揭阳"},
+    ],
+    orgs: [
+      "中共鹰潭市委员会",
+      "鹰潭市人民政府",
+      "鹰潭市人大常委会",
+      "政协鹰潭市委员会",
+      "中共鹰潭市纪律检查委员会",
+      "中共鹰潭市委组织部",
+      "中共鹰潭市委宣传部",
+      "中共鹰潭市委统战部",
+      "中共鹰潭市委政法委员会",
+      "中共楚雄州委员会",
+      "江西省财政厅",
+      "江西省政协",
+      "中共赣州市委员会",
+      "国家广播电视总局",
+    ],
+    edges: [
+      [1,2,"党政搭档","2026.01—至今"],
+      [2,5,"正副手","市长×常务副市长"],
+      [3,2,"原副书记→人大×市长","原班子同事"],
+      [15,2,"前后任市长","2024.12交接"],
+      [16,15,"前后任市长","2021年交接"],
+      [17,16,"前后任市长","2020年交接"],
+      [19,1,"前后任书记","2026年交接"],
+      [15,10,"跨省","鹰潭→云南楚雄"],
+      [20,1,"同系统交接","黄喜忠调赣州"],
+    ]
+  };
+
+  yingtan.persons.forEach(function(p) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      var existingId = nameBirthMap[key];
+      var existing = nodes.get(existingId);
+      if (existing) {
+        existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing);
+      }
+      p._nodeId = existingId;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "yingtan_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id, label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") + (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("市委书记") && !p.post.includes("副")) ? 25 : 18,
+      shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+    });
+  });
+
+  yingtan.orgs.forEach(function(org, idx) {
+    var id = yingtan.orgPrefix + idx;
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id, label: org,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10, shape: "box", font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  });
+
+  yingtan.edges.forEach(function(e) {
+    var p1 = yingtan.persons.find(function(p) { return p.id === e[0]; });
+    var p2 = yingtan.persons.find(function(p) { return p.id === e[1]; });
+    if (p1 && p2) {
+      addEdge(p1._nodeId, p2._nodeId, e[2], e[3] || "", {color:"#C9A94E", opacity:0.6, width:2});
+    }
+  });
+
+  network.on("stabilizationIterationsDone", function() {
+    network.fit({animation: true});
+  });
+
+})();
+</script>
+</body>
+</html>
