@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Claude Code Research Agent</creator>
+    <description>景德镇市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="label" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="陈克龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="吴隽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委专职副书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="薛强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委、常务副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="林蓉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委、组织部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="张龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委、宣传部部长（推测）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="林卫春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="肖斐杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="魏冀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委、副市长（挂职）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="董梅生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市委常委、市纪委书记、市监委主任"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="江民强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="罗文军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="徐辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="高晓云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="黄练">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市副市长、市公安局局长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="黄建平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市政府秘书长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="俞小平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市政协主席"/>
+        </attvalues>
+        <viz:color r="150" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="鄢华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="景德镇市人大常委会主任"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="胡雪梅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="江西省委宣传部副部长（原景德镇市委书记）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p19" label="刘锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原景德镇市委书记，2024年9月卸任，去向不明）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p20" label="钟志生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原景德镇市委书记，2024年9月被查，2025年2月双开）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p21" label="姚亚平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原景德镇市委书记→上饶市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p22" label="颜赣辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原景德镇市长→上饶市长→宜春市委书记（2020年落马）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p23" label="郭安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原景德镇市委常委/常务副市长→南昌市长→鹰潭市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p24" label="刘祖三">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原景德镇市委副书记→鹰潭市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p25" label="许爱民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原景德镇市委书记→省政协（落马）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p26" label="梅亦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原景德镇市长（2016-2018）→省医保局/文旅厅"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共景德镇市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="景德镇市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共景德镇市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="景德镇市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="景德镇市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="政协景德镇市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共江西省委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="工业和信息化部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="景德镇陶瓷大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共上饶市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共宜春市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o8" label="工业和信息化部规划司投资计划处处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="工业和信息化部规划司投资计划处处长"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o8" label="工业和信息化部规划司副司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="工业和信息化部规划司副司长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o8" label="工业和信息化部装备工业一司副司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="工业和信息化部装备工业一司副司长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o8" label="工业和信息化部原材料工业司司长（稀土办公室主任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="工业和信息化部原材料工业司司长（稀土办公室主任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o8" label="工业和信息化部规划司司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="工业和信息化部规划司司长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o1" label="景德镇市委副书记、市政府党组书记、代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委副书记、市政府党组书记、代市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="o2" label="景德镇市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市人民政府市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="o1" label="景德镇市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="o9" label="景德镇陶瓷学院（现景德镇陶瓷大学）古陶瓷研究所所长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇陶瓷学院（现景德镇陶瓷大学）古陶瓷研究所所长"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="o9" label="景德镇陶瓷学院副院长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇陶瓷学院副院长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p2" target="o11" label="挂职新余市委常委、副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职新余市委常委、副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o9" label="景德镇陶瓷大学副校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇陶瓷大学副校长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="o1" label="景德镇市委常委、秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委常委、秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="o1" label="景德镇市委专职副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p3" target="o2" label="赣州市国际经济技术合作公司业务员、办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赣州市国际经济技术合作公司业务员、办公室副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p3" target="o2" label="大余县计委科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="大余县计委科员"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="o2" label="大余县计委副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="大余县计委副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p3" target="o2" label="赣州市项目办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赣州市项目办公室副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p3" target="o2" label="赣州市发改委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赣州市发改委办公室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p3" target="o2" label="赣州开发区发展规划局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赣州开发区发展规划局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p3" target="o2" label="全南县委书记、县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="全南县委书记、县人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p3" target="o2" label="龙南县委书记、龙南经济技术开发区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙南县委书记、龙南经济技术开发区党工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p3" target="o2" label="赣南苏区振兴发展工作办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赣南苏区振兴发展工作办公室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p3" target="o2" label="抚州市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="抚州市人民政府副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p3" target="o1" label="景德镇市委常委、市政府党组副书记、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委常委、市政府党组副书记、常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p9" target="o3" label="江西省纪委案件监督管理室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江西省纪委案件监督管理室副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p9" target="o3" label="江西省纪委监委纪检监察干部监督室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江西省纪委监委纪检监察干部监督室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p9" target="o3" label="江西省纪委省监委案件监督管理室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江西省纪委省监委案件监督管理室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p9" target="o3" label="江西省纪委常委、省监委委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江西省纪委常委、省监委委员"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p9" target="o3" label="景德镇市委常委、市纪委书记、市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委常委、市纪委书记、市监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p18" target="o2" label="景德镇市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市人民政府市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p18" target="o1" label="景德镇市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p18" target="o7" label="江西省委宣传部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江西省委宣传部副部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p19" target="o2" label="景德镇市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市人民政府市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p19" target="o1" label="景德镇市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p20" target="o1" label="景德镇市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p3" target="o2" label="景德镇市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委常委、常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p8" target="o2" label="景德镇市委常委、副市长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市委常委、副市长（挂职）"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p10" target="o2" label="景德镇市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p11" target="o2" label="景德镇市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p12" target="o2" label="景德镇市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p13" target="o2" label="景德镇市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p14" target="o4" label="景德镇市副市长、市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市副市长、市公安局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p15" target="o2" label="景德镇市政府秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市政府秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p16" target="o6" label="景德镇市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p17" target="o5" label="景德镇市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="景德镇市人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p1" target="p3" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈克龙（市委书记）与薛强（常务副市长）2024年11月同时到任景德镇，是同一批组织调配的新班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈克龙（市委书记）与吴隽（专职副书记）是市委核心搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="p1" target="p18" label="职务接替" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈克龙接替胡雪梅先后任景德镇市长（2025.01）和市委书记（2026.04），两人相继担任同一职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="p18" target="p19" label="职务接替" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡雪梅接替刘锋任景德镇市委书记（2024.09）"/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="p19" target="p20" label="职务接替" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘锋接替钟志生任景德镇市委书记（2021.03）"/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="p20" target="p25" label="职务接替" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="钟志生接替许爱民任景德镇市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e53" source="p21" target="p25" label="职务接替" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="姚亚平→许爱民（景德镇市委书记先后任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e54" source="p22" target="p26" label="职务接替" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="颜赣辉→梅亦（景德镇市长先后任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e55" source="p22" target="p23" label="工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="颜赣辉（景德镇市长）与郭安（景德镇市委常委/常务副市长）在景德镇政府同年共事"/>
+        </attvalues>
+      </edge>
+      <edge id="e56" source="p2" target="p16" label="工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴隽与俞小平同为景德镇市四套班子领导成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e57" source="p21" target="p10" label="跨市交流" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="姚亚平从景德镇市委书记调任上饶市委书记，形成景德镇-上饶旋转门模式"/>
+        </attvalues>
+      </edge>
+      <edge id="e58" source="p22" target="p10" label="跨市交流" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="颜赣辉从景德镇市长调任上饶市长，延续景德镇-上饶旋转门模式"/>
+        </attvalues>
+      </edge>
+      <edge id="e59" source="p24" target="p10" label="跨市交流" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘祖三从景德镇市委副书记调往鹰潭市委书记，形成景德镇-鹰潭通道"/>
+        </attvalues>
+      </edge>
+      <edge id="e60" source="p23" target="p10" label="跨市交流" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="郭安在离开景德镇后历任南昌市长→鹰潭市委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

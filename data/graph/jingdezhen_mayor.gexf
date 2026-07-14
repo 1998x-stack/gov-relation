@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="birth" title="Birth" type="string"/>
+      <attribute id="birthplace" title="Birthplace" type="string"/>
+      <attribute id="education" title="Education" type="string"/>
+      <attribute id="source" title="Source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="start" title="Start" type="string"/>
+      <attribute id="end" title="End" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="jdz_chen_kelong" label="陈克龙">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="party_secretary"/>
+          <attvalue for="birth" value="1976-12"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="研究生/工学硕士"/>
+          <attvalue for="source" value="中国经济网(2026-04-27); district.ce.cn"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="47" a="1"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jdz_xue_qiang" label="薛强">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="party_secretary"/>
+          <attvalue for="birth" value="1976-03"/>
+          <attvalue for="birthplace" value="江西安远"/>
+          <attvalue for="education" value="省委党校研究生/工商管理硕士"/>
+          <attvalue for="source" value="澎湃新闻; jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jdz_hu_xuemei" label="胡雪梅">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="person"/>
+          <attvalue for="birth" value="1967-08"/>
+          <attvalue for="birthplace" value="未公开（推测江西籍）"/>
+          <attvalue for="education" value="未公开"/>
+          <attvalue for="source" value="中国经济网(2024-09-03); 人民网"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jdz_liu_feng" label="刘锋">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="person"/>
+          <attvalue for="birth" value="1964-08"/>
+          <attvalue for="birthplace" value="湖南衡阳"/>
+          <attvalue for="education" value="上饶师范专科学校中文系"/>
+          <attvalue for="source" value="人民网江西频道(2021-03-22); Wikipedia 刘锋(1964年)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jdz_yan_ganhui" label="颜赣辉">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="person"/>
+          <attvalue for="birth" value="1962-02"/>
+          <attvalue for="birthplace" value="江西崇仁"/>
+          <attvalue for="education" value="江西财经学院计划统计系工业统计专业"/>
+          <attvalue for="source" value="Wikipedia 颜赣辉"/>
+        </attvalues>
+        <viz:color r="240" g="150" b="50" a="1"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jdz_zou_yongsheng" label="邹永胜">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="deputy"/>
+          <attvalue for="birth" value="1971-12"/>
+          <attvalue for="birthplace" value="江西吉安"/>
+          <attvalue for="education" value="省委党校研究生"/>
+          <attvalue for="source" value="jdz.gov.cn; 江西省公安厅官网"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_wei_ji" label="魏冀">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="deputy"/>
+          <attvalue for="birth" value="1978-11"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="文学博士"/>
+          <attvalue for="source" value="jdz.gov.cn; 文旅部任职信息"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_jiang_minqiang" label="江民强">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="deputy"/>
+          <attvalue for="birth" value="1971-09"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="未公开"/>
+          <attvalue for="source" value="jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_luo_wenjun" label="罗文军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="party_secretary"/>
+          <attvalue for="birth" value="1967-04"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="大学学历"/>
+          <attvalue for="source" value="jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_xu_hui" label="徐辉">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="deputy"/>
+          <attvalue for="birth" value="1967-03"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="硕士研究生"/>
+          <attvalue for="source" value="jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_gao_xiaoyun" label="高晓云">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="deputy"/>
+          <attvalue for="birth" value="1975-05"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="硕士研究生"/>
+          <attvalue for="source" value="jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_huang_lian" label="黄练">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="deputy"/>
+          <attvalue for="birth" value="1972-12"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="未公开"/>
+          <attvalue for="source" value="jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="51" g="122" b="183" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_huang_jianping" label="黄建平">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="gov_leader"/>
+          <attvalue for="birth" value="1971-05"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="在职大学"/>
+          <attvalue for="source" value="jdz.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_yan_hua" label="鄢华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="gov_leader"/>
+          <attvalue for="birth" value="未公开"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="未公开"/>
+          <attvalue for="source" value="中国经济网(2026-01-24); 鹰潭市纪委原书记调任"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingtan_yan_hua" label="鄢华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="gov_leader"/>
+          <attvalue for="birth" value="未公开"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="education" value="未公开"/>
+          <attvalue for="source" value="district.ce.cn"/>
+        </attvalues>
+        <viz:color r="240" g="150" b="50" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_zhong_zhiSheng" label="钟志生">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="party_secretary"/>
+          <attvalue for="birth" value="1963-06"/>
+          <attvalue for="birthplace" value="江西分宜"/>
+          <attvalue for="education" value="未公开"/>
+          <attvalue for="source" value="Wikipedia 景德镇市; 公开资料"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jdz_municipal_gov" label="景德镇市人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="地方政府"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省景德镇市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="jdz_cpc_committee" label="中共景德镇市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省景德镇市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="jdz_npc_standing" label="景德镇市人大常委会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="人大"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省景德镇市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="miit_planning" label="工业和信息化部规划司">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="中央部委司局"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="北京市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="60" g="130" b="60" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="miit_equipment" label="工业和信息化部装备工业一司">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="中央部委司局"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="北京市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="60" g="130" b="60" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="miit_raw_materials" label="工业和信息化部原材料工业司">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="中央部委司局"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="北京市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="60" g="130" b="60" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="ganzhou_municipal" label="赣州市人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="地方政府"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省赣州市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="quannan_cpc" label="中共全南县委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省赣州市全南县"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="longnan_cpc" label="中共龙南县委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省赣州市龙南市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="fuzhou_municipal" label="抚州市人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="地方政府"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省抚州市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="shangrao_cpc" label="中共上饶市委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省上饶市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="yingtan_cpc_discipline" label="中共鹰潭市纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="纪委"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省鹰潭市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="jdz_public_security" label="景德镇市公安局">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="政府部门"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省景德镇市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="jdz_high_tech_zone" label="景德镇高新技术产业开发区管委会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="开发区管委会"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省景德镇市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="jiangxi_gov" label="江西省人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="地方政府"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省南昌市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="90" g="90" b="150" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="jiangxi_cpc" label="中共江西省委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="江西省南昌市"/>
+          <attvalue for="education" value=""/>
+          <attvalue for="source" value=""/>
+        </attvalues>
+        <viz:color r="90" g="90" b="150" a="1"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="jdz_chen_kelong" target="miit_planning" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="工业和信息化部规划司投资计划处处长"/>
+          <attvalue for="start" value="~2010"/>
+          <attvalue for="end" value="2017-12"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="jdz_chen_kelong" target="miit_planning" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="工业和信息化部规划司副司长"/>
+          <attvalue for="start" value="2017-12"/>
+          <attvalue for="end" value="2019-12"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="jdz_chen_kelong" target="miit_equipment" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="工业和信息化部装备工业一司副司长"/>
+          <attvalue for="start" value="2020"/>
+          <attvalue for="end" value="2021"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="jdz_chen_kelong" target="miit_raw_materials" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="工业和信息化部原材料工业司司长（稀土办公室主任）"/>
+          <attvalue for="start" value="2021"/>
+          <attvalue for="end" value="2023-05"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="jdz_chen_kelong" target="miit_planning" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="工业和信息化部规划司司长"/>
+          <attvalue for="start" value="2023-05"/>
+          <attvalue for="end" value="2024-10"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="jdz_chen_kelong" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委副书记、市政府党组书记、代市长"/>
+          <attvalue for="start" value="2024-10"/>
+          <attvalue for="end" value="2025-01"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="jdz_chen_kelong" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市人民政府市长"/>
+          <attvalue for="start" value="2025-01"/>
+          <attvalue for="end" value="2026-05"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="jdz_chen_kelong" target="jdz_cpc_committee" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委书记"/>
+          <attvalue for="start" value="2026-04"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="赣州市国际经济技术合作公司业务员、办公室副主任"/>
+          <attvalue for="start" value="1997-07"/>
+          <attvalue for="end" value="1999-04"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="大余县计划委员会科员"/>
+          <attvalue for="start" value="1999-04"/>
+          <attvalue for="end" value="2001-08"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="大余县计委副主任"/>
+          <attvalue for="start" value="2001-08"/>
+          <attvalue for="end" value="2003-06"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="赣州市项目办公室副主任"/>
+          <attvalue for="start" value="2003-06"/>
+          <attvalue for="end" value="2004"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="赣州市发改委办公室主任"/>
+          <attvalue for="start" value="2008-04"/>
+          <attvalue for="end" value="2009-07"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="赣州开发区发展规划局局长"/>
+          <attvalue for="start" value="2009-07"/>
+          <attvalue for="end" value="2011-05"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="jdz_xue_qiang" target="quannan_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="全南县委书记、县人大常委会主任"/>
+          <attvalue for="start" value="2011-05"/>
+          <attvalue for="end" value="2013-09"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="jdz_xue_qiang" target="longnan_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="龙南县委书记、龙南经济技术开发区党工委书记"/>
+          <attvalue for="start" value="2013-09"/>
+          <attvalue for="end" value="2016-08"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e17" source="jdz_xue_qiang" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="赣南苏区振兴发展工作办公室主任"/>
+          <attvalue for="start" value="2016-08"/>
+          <attvalue for="end" value="2021-09"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e18" source="jdz_xue_qiang" target="fuzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="抚州市人民政府副市长"/>
+          <attvalue for="start" value="2021-09"/>
+          <attvalue for="end" value="2024-10"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e19" source="jdz_xue_qiang" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委常委、市政府党组副书记、常务副市长"/>
+          <attvalue for="start" value="2024-11"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e20" source="jdz_hu_xuemei" target="ganzhou_municipal" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="赣州市委常委、市政府副市长、党组副书记"/>
+          <attvalue for="start" value="~2018"/>
+          <attvalue for="end" value="2021-05"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e21" source="jdz_hu_xuemei" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委副书记、市长"/>
+          <attvalue for="start" value="2021-05"/>
+          <attvalue for="end" value="2024-09"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e22" source="jdz_hu_xuemei" target="jdz_cpc_committee" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委书记"/>
+          <attvalue for="start" value="2024-09"/>
+          <attvalue for="end" value="2026-04"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e23" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="上饶师范专科学校中文系学习"/>
+          <attvalue for="start" value="1979-09"/>
+          <attvalue for="end" value="1982-07"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e24" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="上饶地区商业局干部"/>
+          <attvalue for="start" value="1982-08"/>
+          <attvalue for="end" value="1983-11"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e25" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="上饶地委办公室干部→政研室经济科副科长→科长"/>
+          <attvalue for="start" value="1983-11"/>
+          <attvalue for="end" value="1997-03"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e26" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="余干县委常委、组织部部长"/>
+          <attvalue for="start" value="1997-11"/>
+          <attvalue for="end" value="2001-05"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e27" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="上饶市委副秘书长、政研室主任"/>
+          <attvalue for="start" value="2001-05"/>
+          <attvalue for="end" value="2005-07"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e28" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="鄱阳县委副书记、县长→县委书记"/>
+          <attvalue for="start" value="2005-07"/>
+          <attvalue for="end" value="2011-05"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e29" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="玉山县委书记"/>
+          <attvalue for="start" value="2011-05"/>
+          <attvalue for="end" value="2013-07"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e30" source="jdz_liu_feng" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="上饶市副市长（兼玉山县委书记）→市委常委、上饶经开区党工委书记"/>
+          <attvalue for="start" value="2013-07"/>
+          <attvalue for="end" value="2016-09"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e31" source="jdz_liu_feng" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委常委、副市长"/>
+          <attvalue for="start" value="2016-09"/>
+          <attvalue for="end" value="2017-08"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e32" source="jdz_liu_feng" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委副书记（兼副市长）"/>
+          <attvalue for="start" value="2017-09"/>
+          <attvalue for="end" value="2018-11"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e33" source="jdz_liu_feng" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委副书记、代市长→市长"/>
+          <attvalue for="start" value="2018-11"/>
+          <attvalue for="end" value="2021-03"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e34" source="jdz_liu_feng" target="jdz_cpc_committee" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委书记"/>
+          <attvalue for="start" value="2021-03"/>
+          <attvalue for="end" value="2024-09"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e35" source="jdz_liu_feng" target="jiangxi_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="江西省人大财经委副主任委员"/>
+          <attvalue for="start" value="2024-09"/>
+          <attvalue for="end" value="2025-01"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e36" source="jdz_yan_ganhui" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市市长"/>
+          <attvalue for="start" value="2013-09"/>
+          <attvalue for="end" value="2016-04"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e37" source="jdz_yan_ganhui" target="shangrao_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="上饶市市长"/>
+          <attvalue for="start" value="2016-04"/>
+          <attvalue for="end" value="2017-06"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e38" source="jdz_yan_ganhui" target="jiangxi_cpc" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="宜春市委书记"/>
+          <attvalue for="start" value="2017-06"/>
+          <attvalue for="end" value="2020-06"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e39" source="jdz_zou_yongsheng" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长、党组成员、市公安局局长"/>
+          <attvalue for="start" value="2019-12"/>
+          <attvalue for="end" value="2026-01"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e40" source="jdz_zou_yongsheng" target="jiangxi_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="江西省公安厅党委委员、副厅长"/>
+          <attvalue for="start" value="2026-01"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e41" source="jdz_wei_ji" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长（挂职）、党组成员"/>
+          <attvalue for="start" value="2025-11"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e42" source="jdz_jiang_minqiang" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长、市工商联主席"/>
+          <attvalue for="start" value="~2021"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e43" source="jdz_luo_wenjun" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长、党组成员、高新区党工委书记"/>
+          <attvalue for="start" value="~2021"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e44" source="jdz_xu_hui" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长、党组成员"/>
+          <attvalue for="start" value="~2022"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e45" source="jdz_gao_xiaoyun" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长、党组成员"/>
+          <attvalue for="start" value="~2022"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e46" source="jdz_huang_lian" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市副市长、党组成员、市公安局局长"/>
+          <attvalue for="start" value="2026-06"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e47" source="jdz_huang_lian" target="jdz_public_security" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市公安局局长"/>
+          <attvalue for="start" value="2026-06"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e48" source="jdz_huang_jianping" target="jdz_municipal_gov" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市政府秘书长、党组成员"/>
+          <attvalue for="start" value="~2022"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e49" source="jdz_yan_hua" target="jdz_npc_standing" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市人大常委会主任"/>
+          <attvalue for="start" value="2026-01"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e50" source="yingtan_yan_hua" target="yingtan_cpc_discipline" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="鹰潭市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="start" value="~2021"/>
+          <attvalue for="end" value="2025-12"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e51" source="jdz_zhong_zhiSheng" target="jdz_cpc_committee" weight="1.5">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="景德镇市委书记"/>
+          <attvalue for="start" value="2015"/>
+          <attvalue for="end" value="2021-03"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="0.6"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e52" source="jdz_chen_kelong" target="jdz_xue_qiang" weight="4.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="同日（2024.11.13）被景德镇市人大常委会任命为副市长（陈为代市长，薛为常务副市长），属同一批次调配的新班子"/>
+          <attvalue for="start" value="2024.11至今"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="0.8"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e53" source="jdz_liu_feng" target="jdz_hu_xuemei" weight="4.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="刘锋2021.3接任市委书记时，胡雪梅已任市长（2021.5起），二人搭档领导景德镇约3年"/>
+          <attvalue for="start" value="2021.05-2024.09"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="0.8"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e54" source="jdz_hu_xuemei" target="jdz_chen_kelong" weight="4.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="胡雪梅为书记时陈克龙任市长（2024.10-2026.04），先后搭档约18个月后陈接任书记"/>
+          <attvalue for="start" value="2024.10-2026.04"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="0.8"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e55" source="jdz_yan_ganhui" target="jdz_liu_feng" weight="2.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="先后任景德镇市长（颜2013-2016，刘2018-2021），刘锋到景德镇时颜已调离上饶"/>
+          <attvalue for="start" value="无直接共事"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="200" a="0.8"/>
+        <viz:thickness value="0.8"/>
+      </edge>
+      <edge id="e56" source="jdz_xue_qiang" target="jdz_zou_yongsheng" weight="2.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="薛强2024年底到任时邹永胜已在景德镇任副市长兼公安局长，共同工作约1年"/>
+          <attvalue for="start" value="2024.11-2026.01"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="200" a="0.8"/>
+        <viz:thickness value="0.8"/>
+      </edge>
+      <edge id="e57" source="jdz_yan_hua" target="yingtan_yan_hua" weight="4.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="同一人（鄢华），从鹰潭市委常委、市纪委书记调任景德镇市人大常委会主任"/>
+          <attvalue for="start" value="2026.01调任"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="0.8"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e58" source="jdz_liu_feng" target="jdz_chen_kelong" weight="2.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="刘锋从市委书记退居二线（省人大财经委）为陈克龙接任腾出空间"/>
+          <attvalue for="start" value="2024.09交接"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="200" a="0.8"/>
+        <viz:thickness value="0.8"/>
+      </edge>
+      <edge id="e59" source="jdz_zhong_zhiSheng" target="jdz_yan_hua" weight="2.0">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="钟志生（鹰潭市长→景德镇书记）与鄢华（鹰潭纪委书记→景德镇人大主任），同属鹰潭→景德镇交流通道"/>
+          <attvalue for="start" value="2015-2026（跨时段）"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="200" a="0.8"/>
+        <viz:thickness value="0.8"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>南昌市青山湖区领导班子工作关系网络 — 2026年7月</description>
+    <date>2026-07-14</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="rank" title="Rank" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="overlap_org" title="Overlap Org" type="string"/>
+      <attribute id="overlap_period" title="Overlap Period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="qsh_yang_yuxing" label="杨育星">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_gong_feixia" label="龚飞霞">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委副书记、代区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_mao_tao" label="毛涛">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_yang_feng" label="杨峰">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、常务副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_wu_qinghe" label="吴庆和">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、宣传部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_fu_lei" label="付磊">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、组织部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_niu_hao" label="牛浩">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、高新园区党工委书记、罗家镇党委书记"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_cai_zhigang" label="蔡志刚">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、政法委书记"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_liu_wei" label="刘伟">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、人武部政委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_peng_lingqian" label="彭凌迁">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、区纪委书记、区监委主任"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="14.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_wang_guang" label="王光">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="副区长（民进）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_yu_wei" label="余炜">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="副区长、青山湖公安分局局长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_mao_yanbin" label="毛演斌">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_peng_xiaojian" label="彭小建">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_yu_jing" label="余婧">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_yuan_yidan" label="袁一旦">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="南昌市人大常委会副主任（原区委书记）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_ye_fei" label="叶飞">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="进贤县委副书记（青山湖成长干部）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_li_songdian" label="李松殿">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="南昌市委常委/宣传部部长/新建区委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_party_committee" label="中共南昌市青山湖区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_gov" label="南昌市青山湖区人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_org_department" label="中共南昌市青山湖区委组织部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_discipline" label="中共南昌市青山湖区纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_propaganda" label="中共南昌市青山湖区委宣传部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_political_legal" label="中共南昌市青山湖区委政法委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_armed_forces" label="南昌市青山湖区人民武装部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="军队"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_high_tech_park" label="南昌青山湖高新技术产业园区">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qsh_luojia_town" label="青山湖区罗家镇">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="乡镇"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="nanchang_npc" label="南昌市人大常委会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="jinxian_county_committee" label="中共进贤县委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="anyi_county_committee" label="中共安义县委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="xihu_district_committee" label="中共西湖区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="nanchang_discipline" label="中共南昌市纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qingyunpu_daishan_st" label="青云谱区岱山街道">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="qingyunpu_sanjiadian_st" label="青云谱区三家店街道">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="anyi_discipline" label="安义县纪委监委">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="nanchang_transport" label="南昌市交通运输局">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府机构"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="nanchang_fgw" label="南昌市发展和改革委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府机构"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yongfeng_town" label="永丰县瑶田镇">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="乡镇"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="donghu_street" label="东湖区墩子塘街道">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="qsh_yang_yuxing" target="qsh_party_committee" type="directed" label="区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2026-07"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="qsh_yang_yuxing" target="qsh_gov" type="directed" label="区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-10"/>
+          <attvalue for="end" value="2026-07"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="qsh_yang_yuxing" target="qsh_party_committee" type="directed" label="区委副书记、代区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-04"/>
+          <attvalue for="end" value="2021-10"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="qsh_yang_yuxing" target="xihu_district_committee" type="directed" label="青云谱区委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2019"/>
+          <attvalue for="end" value="2021-04"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="qsh_yang_yuxing" target="qsh_gov" type="directed" label="青云谱区委常委、副区长（常务）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2016"/>
+          <attvalue for="end" value="~2019"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="qsh_yang_yuxing" target="qsh_gov" type="directed" label="青云谱区委常委、组织部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2014"/>
+          <attvalue for="end" value="~2016"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="qsh_gong_feixia" target="qsh_party_committee" type="directed" label="区委副书记、代区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2026-07"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="qsh_gong_feixia" target="qsh_party_committee" type="directed" label="区委副书记、统战部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-02"/>
+          <attvalue for="end" value="2026-06"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="qsh_gong_feixia" target="anyi_discipline" type="directed" label="安义县委常委、县纪委书记、县监委主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-09"/>
+          <attvalue for="end" value="2025-01"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="qsh_gong_feixia" target="qingyunpu_sanjiadian_st" type="directed" label="三家店街道党工委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2020"/>
+          <attvalue for="end" value="2020-12"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="qsh_gong_feixia" target="qingyunpu_daishan_st" type="directed" label="岱山街道党工委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2015"/>
+          <attvalue for="end" value="~2020"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="qsh_gong_feixia" target="qingyunpu_daishan_st" type="directed" label="岱山街道党工委副书记、办事处主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2012"/>
+          <attvalue for="end" value="~2015"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="qsh_gong_feixia" target="nanchang_discipline" type="directed" label="副科级纪检员（→正科级）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2003-07"/>
+          <attvalue for="end" value="~2008"/>
+          <attvalue for="rank" value="副科→正科"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="qsh_yuan_yidan" target="nanchang_npc" type="directed" label="市人大常委会副主任（专职）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2026-07"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="qsh_yuan_yidan" target="qsh_party_committee" type="directed" label="区委书记（兼市人大副主任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-01"/>
+          <attvalue for="end" value="2026-07"/>
+          <attvalue for="rank" value="正县级→副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="qsh_yuan_yidan" target="qsh_party_committee" type="directed" label="区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-04"/>
+          <attvalue for="end" value="2025-01"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e17" source="qsh_yuan_yidan" target="qsh_party_committee" type="directed" label="区委副书记、区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2020-04"/>
+          <attvalue for="end" value="2021-04"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e18" source="qsh_yuan_yidan" target="nanchang_transport" type="directed" label="南昌市交通运输局局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2019-02"/>
+          <attvalue for="end" value="2020-04"/>
+          <attvalue for="rank" value="正县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e19" source="qsh_yuan_yidan" target="xihu_district_committee" type="directed" label="西湖区委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2016"/>
+          <attvalue for="end" value="2019-02"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e20" source="qsh_yuan_yidan" target="jinxian_county_committee" type="directed" label="进贤县委常委、常务副县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2012"/>
+          <attvalue for="end" value="~2016"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e21" source="qsh_yuan_yidan" target="anyi_county_committee" type="directed" label="安义县副县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2006"/>
+          <attvalue for="end" value="~2012"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e22" source="qsh_ye_fei" target="jinxian_county_committee" type="directed" label="进贤县委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024-11"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e23" source="qsh_ye_fei" target="anyi_county_committee" type="directed" label="安义县委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2023"/>
+          <attvalue for="end" value="2024-11"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e24" source="qsh_ye_fei" target="anyi_county_committee" type="directed" label="安义县委常委、常务副县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-08"/>
+          <attvalue for="end" value="~2023"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e25" source="qsh_ye_fei" target="qsh_propaganda" type="directed" label="区委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2020-07"/>
+          <attvalue for="end" value="2021-08"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e26" source="qsh_ye_fei" target="qsh_gov" type="directed" label="副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2016-10"/>
+          <attvalue for="end" value="2017-12"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e27" source="qsh_ye_fei" target="qsh_gov" type="directed" label="区政府办公室主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2015-02"/>
+          <attvalue for="end" value="2016-07"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e28" source="qsh_ye_fei" target="qsh_luojia_town" type="directed" label="南钢街道党工委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2013-08"/>
+          <attvalue for="end" value="2015-02"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e29" source="qsh_ye_fei" target="qsh_luojia_town" type="directed" label="扬子洲镇镇长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2011-05"/>
+          <attvalue for="end" value="2013-08"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e30" source="qsh_li_songdian" target="qsh_gov" type="directed" label="南昌市委常委/宣传部部长/新建区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="当前"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e31" source="qsh_niu_hao" target="qsh_high_tech_park" type="directed" label="区委常委、高新园区党工委书记、罗家镇党委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-06"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e32" source="qsh_niu_hao" target="qsh_propaganda" type="directed" label="区委常委、统战部部长、高新园区党工委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024-02"/>
+          <attvalue for="end" value="2025-06"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e33" source="qsh_niu_hao" target="qsh_propaganda" type="directed" label="区委常委、统战部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023-07"/>
+          <attvalue for="end" value="2024-02"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e34" source="qsh_niu_hao" target="xihu_district_committee" type="directed" label="南昌市西湖区政府党组成员、副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-08"/>
+          <attvalue for="end" value="2023-07"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e35" source="qsh_niu_hao" target="anyi_county_committee" type="directed" label="安义工业园区挂职党工委副书记、管委会副主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2020-06"/>
+          <attvalue for="end" value="2021-08"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e36" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="南昌市发改委规划科科长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2020-10"/>
+          <attvalue for="end" value="2021-08"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e37" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="南昌市发改委规划处处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2019-06"/>
+          <attvalue for="end" value="2020-10"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e38" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="南昌市发改委产业处处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2017-12"/>
+          <attvalue for="end" value="2019-06"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e39" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="南昌市发改委产业处副处长(主持工作)">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2015-12"/>
+          <attvalue for="end" value="2017-12"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e40" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="南昌市发改委环资处副处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2012-04"/>
+          <attvalue for="end" value="2015-12"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e41" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="南昌市发改委工交处科员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2008-06"/>
+          <attvalue for="end" value="2012-04"/>
+          <attvalue for="rank" value="科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e42" source="qsh_niu_hao" target="nanchang_transport" type="directed" label="毕业待分配">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2007-07"/>
+          <attvalue for="end" value="2008-06"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e43" source="qsh_peng_lingqian" target="qsh_discipline" type="directed" label="区委常委、区纪委书记、区监委主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="现任"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e44" source="qsh_peng_lingqian" target="nanchang_discipline" type="directed" label="南昌市纪委市监委（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2019"/>
+          <attvalue for="end" value="~2025"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e45" source="qsh_peng_lingqian" target="qsh_gov" type="directed" label="江西省政府办公厅（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2017"/>
+          <attvalue for="end" value="~2019"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e46" source="qsh_peng_lingqian" target="qsh_high_tech_park" type="directed" label="江西省林业厅（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2015"/>
+          <attvalue for="end" value="~2017"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e47" source="qsh_peng_lingqian" target="qsh_org_department" type="directed" label="南昌县委组织部（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2013"/>
+          <attvalue for="end" value="~2015"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e48" source="qsh_peng_lingqian" target="qsh_luojia_town" type="directed" label="南昌县东新乡（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2011-09"/>
+          <attvalue for="end" value="~2013"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e49" source="qsh_peng_lingqian" target="qsh_luojia_town" type="directed" label="南昌大学 本科/研究生">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2007"/>
+          <attvalue for="end" value="2011"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e50" source="qsh_mao_tao" target="qsh_gov" type="directed" label="区委常委、副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023-07"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e51" source="qsh_mao_tao" target="qsh_propaganda" type="directed" label="区委常委、统战部长,区政协党组副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-08"/>
+          <attvalue for="end" value="2023-07"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e52" source="qsh_mao_tao" target="qsh_party_committee" type="directed" label="江西省政协办公厅会议处副处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2019-03"/>
+          <attvalue for="end" value="2021-08"/>
+          <attvalue for="rank" value="副处级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e53" source="qsh_mao_tao" target="qsh_party_committee" type="directed" label="江西省政协办公厅秘书处主任科员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2015-12"/>
+          <attvalue for="end" value="2019-03"/>
+          <attvalue for="rank" value="主任科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e54" source="qsh_mao_tao" target="qsh_party_committee" type="directed" label="江西省政协办公厅秘书处副主任科员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2013-02"/>
+          <attvalue for="end" value="2015-12"/>
+          <attvalue for="rank" value="副主任科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e55" source="qsh_mao_tao" target="yongfeng_town" type="directed" label="江西省永丰县瑶田镇综治办专职副主任(借调县委办)">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2012-12"/>
+          <attvalue for="end" value="2013-02"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e56" source="qsh_mao_tao" target="yongfeng_town" type="directed" label="江西省永丰县瑶田镇政府宣传干事">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2010-06"/>
+          <attvalue for="end" value="2012-12"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e57" source="qsh_mao_tao" target="yongfeng_town" type="directed" label="江西省永丰县潭城乡辋川村委会大学生村官">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2009-09"/>
+          <attvalue for="end" value="2010-06"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e58" source="qsh_mao_tao" target="qsh_party_committee" type="directed" label="待业">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2009-06"/>
+          <attvalue for="end" value="2009-09"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e59" source="qsh_yang_feng" target="qsh_gov" type="directed" label="区委常委、区政府党组副书记、常务副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="现任"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e60" source="qsh_yang_feng" target="xihu_district_committee" type="directed" label="青云谱区政府（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2017"/>
+          <attvalue for="end" value="~2025"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e61" source="qsh_yang_feng" target="qsh_org_department" type="directed" label="东湖区八一桥街办（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2015"/>
+          <attvalue for="end" value="~2017"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e62" source="qsh_yang_feng" target="qsh_org_department" type="directed" label="东湖区政府办（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2013"/>
+          <attvalue for="end" value="~2015"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e63" source="qsh_yang_feng" target="qsh_propaganda" type="directed" label="东湖区文明办（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2010"/>
+          <attvalue for="end" value="~2013"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e64" source="qsh_yang_feng" target="qsh_propaganda" type="directed" label="东湖区委宣传部（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2006"/>
+          <attvalue for="end" value="~2010"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e65" source="qsh_yang_feng" target="qsh_luojia_town" type="directed" label="东湖区墩子塘街办（工作）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2003-11"/>
+          <attvalue for="end" value="~2006"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e66" source="qsh_wu_qinghe" target="qsh_propaganda" type="directed" label="区委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="现任"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e67" source="qsh_wu_qinghe" target="jinxian_county_committee" type="directed" label="进贤县委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2021"/>
+          <attvalue for="end" value="~2025"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e68" source="qsh_wu_qinghe" target="nanchang_discipline" type="directed" label="南昌市委宣传部副调研员（四级调研员）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2017"/>
+          <attvalue for="end" value="~2021"/>
+          <attvalue for="rank" value="副处级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e69" source="qsh_wu_qinghe" target="nanchang_discipline" type="directed" label="南昌市委宣传部舆情信息处处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2014"/>
+          <attvalue for="end" value="~2017"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e70" source="qsh_wu_qinghe" target="nanchang_discipline" type="directed" label="南昌市委宣传部外宣处副处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2009"/>
+          <attvalue for="end" value="~2014"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e71" source="qsh_wu_qinghe" target="nanchang_discipline" type="directed" label="南昌市委宣传部科员、副主任科员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2003"/>
+          <attvalue for="end" value="~2009"/>
+          <attvalue for="rank" value="科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e72" source="qsh_wu_qinghe" target="qsh_luojia_town" type="directed" label="江西宜黄二中教师">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="1999-07"/>
+          <attvalue for="end" value="~2003"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e73" source="qsh_fu_lei" target="qsh_org_department" type="directed" label="区委常委、组织部部长、区委党校校长（兼）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="现任"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e74" source="qsh_fu_lei" target="qsh_org_department" type="directed" label="南昌市委办公室副主任、市档案局局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2020"/>
+          <attvalue for="end" value="~2025"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e75" source="qsh_fu_lei" target="qsh_propaganda" type="directed" label="南昌市委常委会秘书">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2017"/>
+          <attvalue for="end" value="~2020"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e76" source="qsh_fu_lei" target="qsh_propaganda" type="directed" label="南昌市委办公厅综合一处副处长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2012"/>
+          <attvalue for="end" value="~2017"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e77" source="qsh_fu_lei" target="qsh_org_department" type="directed" label="（南昌市委办公厅起步）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2004-07"/>
+          <attvalue for="end" value="~2012"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e78" source="qsh_cai_zhigang" target="qsh_political_legal" type="directed" label="区委常委、政法委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-04"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e79" source="qsh_cai_zhigang" target="qsh_political_legal" type="directed" label="区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-03"/>
+          <attvalue for="end" value="2025-04"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e80" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="区政府党组成员、副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-10"/>
+          <attvalue for="end" value="2025-03"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e81" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="区政府副区长提名人选">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-08"/>
+          <attvalue for="end" value="2021-10"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e82" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="区财政局党组书记、局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2020-10"/>
+          <attvalue for="end" value="2021-08"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e83" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="区市监局党委书记、局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2019-02"/>
+          <attvalue for="end" value="2020-10"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e84" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="区城管委党委书记、主任、武装部第一部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2017-07"/>
+          <attvalue for="end" value="2019-02"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e85" source="qsh_cai_zhigang" target="qsh_party_committee" type="directed" label="待安排">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2017-05"/>
+          <attvalue for="end" value="2017-07"/>
+          <attvalue for="rank" value="—"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e86" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="区总工会党组副书记、常务副主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2016-04"/>
+          <attvalue for="end" value="2017-05"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e87" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="罗家镇党委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2013-12"/>
+          <attvalue for="end" value="2016-04"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e88" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="罗家镇党委副书记、镇长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2012-08"/>
+          <attvalue for="end" value="2013-12"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e89" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="京东镇党委副书记、镇长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2011-05"/>
+          <attvalue for="end" value="2012-08"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e90" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="扬子洲镇党委委员、副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2010-07"/>
+          <attvalue for="end" value="2011-05"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e91" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="扬子洲乡党委委员、副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2007-06"/>
+          <attvalue for="end" value="2010-07"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e92" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="罗家镇党委委员、副镇长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2006-03"/>
+          <attvalue for="end" value="2007-06"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e93" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="扬子洲乡党委委员、副乡长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2003-09"/>
+          <attvalue for="end" value="2006-03"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e94" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="扬子洲乡副乡长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2002-06"/>
+          <attvalue for="end" value="2003-09"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e95" source="qsh_cai_zhigang" target="qsh_luojia_town" type="directed" label="南昌市郊区扬子洲乡副乡长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2001-12"/>
+          <attvalue for="end" value="2002-06"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e96" source="qsh_cai_zhigang" target="qsh_gov" type="directed" label="南昌市郊区交通局干部">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="1995-12"/>
+          <attvalue for="end" value="2001-12"/>
+          <attvalue for="rank" value="科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e97" source="qsh_liu_wei" target="qsh_armed_forces" type="directed" label="区委常委、人武部政委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="现任"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e98" source="qsh_liu_wei" target="qsh_armed_forces" type="directed" label="南昌市青山湖区政府党组成员、人武部政委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2025"/>
+          <attvalue for="end" value="现任"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e99" source="qsh_liu_wei" target="qsh_armed_forces" type="directed" label="南昌市东湖区人武部政委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2022"/>
+          <attvalue for="end" value="~2025"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e100" source="qsh_yu_wei" target="qsh_gov" type="directed" label="青山湖区副区长、公安分局局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-10"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e101" source="qsh_yu_wei" target="nanchang_transport" type="directed" label="南昌市公安局东湖分局局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2018"/>
+          <attvalue for="end" value="2021-10"/>
+          <attvalue for="rank" value="正处级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e102" source="qsh_yu_wei" target="anyi_county_committee" type="directed" label="安义县公安局局长、政委、副县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2013"/>
+          <attvalue for="end" value="~2018"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e103" source="qsh_yu_wei" target="nanchang_transport" type="directed" label="南昌市公安局缉毒支队支队长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2010"/>
+          <attvalue for="end" value="~2013"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e104" source="qsh_yu_wei" target="nanchang_transport" type="directed" label="南昌市公安局东湖分局副局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2007"/>
+          <attvalue for="end" value="~2010"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e105" source="qsh_yu_wei" target="nanchang_transport" type="directed" label="南昌市公安局刑侦支队二大队大队长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2003"/>
+          <attvalue for="end" value="~2007"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e106" source="qsh_yu_wei" target="nanchang_transport" type="directed" label="南昌市公安局刑侦支队案件审理科科长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2000"/>
+          <attvalue for="end" value="~2003"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e107" source="qsh_yu_wei" target="nanchang_transport" type="directed" label="南昌市公安局西湖分局刑侦队科员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="1988"/>
+          <attvalue for="end" value="~2000"/>
+          <attvalue for="rank" value="科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e108" source="qsh_mao_yanbin" target="qsh_gov" type="directed" label="青山湖区副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021-10"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value="副县级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e109" source="qsh_mao_yanbin" target="qsh_gov" type="directed" label="新建区住房和城乡建设局党组书记、局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2019"/>
+          <attvalue for="end" value="2021-08"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e110" source="qsh_mao_yanbin" target="qsh_gov" type="directed" label="新建区石埠乡党委副书记、乡长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2016"/>
+          <attvalue for="end" value="~2019"/>
+          <attvalue for="rank" value="正科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e111" source="qsh_mao_yanbin" target="qsh_gov" type="directed" label="新建县乐化镇党委副书记、纪委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2010"/>
+          <attvalue for="end" value="~2016"/>
+          <attvalue for="rank" value="副科级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e112" source="qsh_mao_yanbin" target="qsh_gov" type="directed" label="新建县乐化镇团委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="~2003"/>
+          <attvalue for="end" value="~2010"/>
+          <attvalue for="rank" value="科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e113" source="qsh_mao_yanbin" target="qsh_gov" type="directed" label="新建县（现新建区）乡镇基层工作">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="1996-08"/>
+          <attvalue for="end" value="~2003"/>
+          <attvalue for="rank" value="科员"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e114" source="qsh_yang_yuxing" target="qsh_yuan_yidan" type="undirected" label="区长×书记搭档约5年">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="强关系（共事）"/>
+          <attvalue for="context" value="区长×书记搭档约5年"/>
+          <attvalue for="overlap_org" value="青山湖区委/区政府"/>
+          <attvalue for="overlap_period" value="2021.04-2026.07"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e115" source="qsh_gong_feixia" target="qsh_yang_yuxing" type="undirected" label="现任班子搭档">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="强关系（共事）"/>
+          <attvalue for="context" value="现任班子搭档"/>
+          <attvalue for="overlap_org" value="青山湖区委/区政府"/>
+          <attvalue for="overlap_period" value="2026.07-至今"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e116" source="qsh_gong_feixia" target="qsh_yuan_yidan" type="undirected" label="副书记×书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="副书记×书记"/>
+          <attvalue for="overlap_org" value="青山湖区委"/>
+          <attvalue for="overlap_period" value="2025.02-2026.06"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e117" source="qsh_ye_fei" target="qsh_yang_yuxing" type="undirected" label="宣传部长×区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="宣传部长×区长"/>
+          <attvalue for="overlap_org" value="青山湖区"/>
+          <attvalue for="overlap_period" value="2021-2021.08"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e118" source="qsh_ye_fei" target="qsh_gong_feixia" type="undirected" label="安义县共事">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="安义县共事"/>
+          <attvalue for="overlap_org" value="安义县"/>
+          <attvalue for="overlap_period" value="2021.08-2025.01"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e119" source="qsh_li_songdian" target="qsh_yang_yuxing" type="undirected" label="前任区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（间接）"/>
+          <attvalue for="context" value="前任区长"/>
+          <attvalue for="overlap_org" value="青山湖区政府"/>
+          <attvalue for="overlap_period" value="不同时期"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e120" source="qsh_yuan_yidan" target="qsh_ye_fei" type="undirected" label="书记×宣传部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="书记×宣传部长"/>
+          <attvalue for="overlap_org" value="青山湖区委"/>
+          <attvalue for="overlap_period" value="2020-2021.08"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e121" source="qsh_yuan_yidan" target="qsh_li_songdian" type="undirected" label="安义县交集">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（间接）"/>
+          <attvalue for="context" value="安义县交集"/>
+          <attvalue for="overlap_org" value="安义县"/>
+          <attvalue for="overlap_period" value="~2014-2019"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e122" source="qsh_niu_hao" target="qsh_yang_yuxing" type="undirected" label="现任班子成员">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="现任班子成员"/>
+          <attvalue for="overlap_org" value="青山湖区委"/>
+          <attvalue for="overlap_period" value="2023.07-至今"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e123" source="qsh_niu_hao" target="qsh_gong_feixia" type="undirected" label="安义县共事（挂职期间）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="安义县共事（挂职期间）"/>
+          <attvalue for="overlap_org" value="安义县"/>
+          <attvalue for="overlap_period" value="2020.06-2021.08"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e124" source="qsh_niu_hao" target="qsh_ye_fei" type="undirected" label="安义县共事">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="安义县共事"/>
+          <attvalue for="overlap_org" value="安义县"/>
+          <attvalue for="overlap_period" value="2020.06-2021.08"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e125" source="qsh_peng_lingqian" target="qsh_gong_feixia" type="undirected" label="纪委系统前后任（龚曾任安义县纪委书记）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（间接）"/>
+          <attvalue for="context" value="纪委系统前后任（龚曾任安义县纪委书记）"/>
+          <attvalue for="overlap_org" value="南昌市纪委系统"/>
+          <attvalue for="overlap_period" value="不同时期"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e126" source="qsh_mao_tao" target="qsh_yang_yuxing" type="undirected" label="现任班子成员">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="现任班子成员"/>
+          <attvalue for="overlap_org" value="青山湖区委"/>
+          <attvalue for="overlap_period" value="2021.08-至今"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e127" source="qsh_wu_qinghe" target="qsh_yuan_yidan" type="undirected" label="袁曾在进贤任职，吴后任进贤宣传部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（间接）"/>
+          <attvalue for="context" value="袁曾在进贤任职，吴后任进贤宣传部长"/>
+          <attvalue for="overlap_org" value="进贤县"/>
+          <attvalue for="overlap_period" value="不同时期"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e128" source="qsh_cai_zhigang" target="qsh_yuan_yidan" type="undirected" label="副区长×书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="弱关系（共事）"/>
+          <attvalue for="context" value="副区长×书记"/>
+          <attvalue for="overlap_org" value="青山湖区"/>
+          <attvalue for="overlap_period" value="2021.10-2025.01"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

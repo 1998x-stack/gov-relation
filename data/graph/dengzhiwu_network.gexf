@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+<meta lastmodifieddate="2026-07-14">
+<creator>OpenCode gov-relation network builder</creator>
+<description>邓之武（东湖代区长）职业生涯关系网络</description>
+</meta>
+<graph mode="static" defaultedgetype="undirected">
+<attributes class="node">
+<attribute id="type" title="Type" type="string"/>
+<attribute id="role" title="Role" type="string"/>
+<attribute id="birth" title="Birth" type="string"/>
+<attribute id="birthplace" title="Birthplace" type="string"/>
+<attribute id="education" title="Education" type="string"/>
+</attributes>
+<attributes class="edge">
+<attribute id="type" title="Edge Type" type="string"/>
+<attribute id="period" title="Period" type="string"/>
+<attribute id="context" title="Context" type="string"/>
+</attributes>
+<nodes>
+<node id="dengzhiwu_邓之武" label="邓之武
+东湖区委副书记、代区长">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="东湖区委副书记、代区长"/>
+<attvalue for="birth" value="1976-02"/>
+<attvalue for="birthplace" value="江西万年"/>
+<attvalue for="education" value="浙江大学茶学学士+江西财大MBA"/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="20.0"/>
+</node>
+<node id="dengzhiwu_贾彧超" label="贾彧超
+南昌县委书记、小蓝经开区党工委书记">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="南昌县委书记、小蓝经开区党工委书记"/>
+<attvalue for="birth" value="1976-09"/>
+<attvalue for="birthplace" value="湖北襄阳"/>
+<attvalue for="education" value="中国科学技术大学管理学学士"/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="dengzhiwu_徐强" label="徐强
+新建区委书记（原进贤县委书记）">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="新建区委书记（原进贤县委书记）"/>
+<attvalue for="birth" value="1974-11"/>
+<attvalue for="birthplace" value="江西南昌县"/>
+<attvalue for="education" value="南昌航空工业学院+江西财大MPA"/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="dengzhiwu_刘光荣" label="刘光荣
+东湖区委书记">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="东湖区委书记"/>
+<attvalue for="birth" value=""/>
+<attvalue for="birthplace" value="江西南昌县"/>
+<attvalue for="education" value=""/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="dengzhiwu_帅志" label="帅志
+南昌县委副书记、县长">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="南昌县委副书记、县长"/>
+<attvalue for="birth" value="1975-10"/>
+<attvalue for="birthplace" value="江西南昌"/>
+<attvalue for="education" value="省委党校研究生，法学学士"/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="dengzhiwu_熊振强" label="熊振强
+进贤县委书记">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="进贤县委书记"/>
+<attvalue for="birth" value="1972-03"/>
+<attvalue for="birthplace" value="江西奉新"/>
+<attvalue for="education" value="大学"/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="dengzhiwu_雷桥亮" label="雷桥亮
+进贤县委副书记、代县长">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="进贤县委副书记、代县长"/>
+<attvalue for="birth" value="1980-11"/>
+<attvalue for="birthplace" value="江西井冈山"/>
+<attvalue for="education" value="研究生，经济学硕士"/>
+</attvalues>
+<viz:color r="180" g="30" b="30" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="org_1" label="江西省蚕桑茶叶研究所">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="事业单位 省级"/>
+</attvalues>
+<viz:color r="220" g="220" b="220" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_2" label="南昌市外经贸委">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 市级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_3" label="南昌市投资促进局">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 市级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_4" label="南昌高新技术产业开发区">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="开发区 国家级"/>
+</attvalues>
+<viz:color r="200" g="255" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_5" label="中共进贤县委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 县级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_6" label="进贤县人民政府">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 县级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_7" label="中共南昌县委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 县级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_8" label="南昌县人民政府">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 县级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_9" label="中共南昌市东湖区委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 区级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_10" label="东湖区人民政府">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 区级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_11" label="中共南昌市新建区委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 区级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_12" label="小蓝经济技术开发区">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="开发区 国家级"/>
+</attvalues>
+<viz:color r="200" g="255" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_13" label="中共安义县委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 县级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_14" label="中共南昌市委组织部">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 市级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+</nodes>
+<edges>
+<edge id="e1" source="dengzhiwu_邓之武" target="org_1" label="（推测）科员→副科长 (1998-08-2002-04)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="1998-08—2002-04"/>
+<attvalue for="context" value="⚠️ 推断：茶学专业毕业后在蚕桑茶叶研究所工作，此后调入外经贸委。此段无确切公开信息来源。"/>
+</attvalues>
+</edge>
+<edge id="e2" source="dengzhiwu_邓之武" target="org_2" label="区域合作处副处长→投资促进处处长 (2002-05-2015-09)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2002-05—2015-09"/>
+<attvalue for="context" value="约13年"/>
+</attvalues>
+</edge>
+<edge id="e3" source="dengzhiwu_邓之武" target="org_3" label="副局长（副处级） (2015-09-2019-06)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2015-09—2019-06"/>
+<attvalue for="context" value="2017-2018借调南昌高新区"/>
+</attvalues>
+</edge>
+<edge id="e4" source="dengzhiwu_邓之武" target="org_5" label="县委常委、组织部部长 (2019-06-2023-02)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2019-06—2023-02"/>
+<attvalue for="context" value="约3.5年"/>
+</attvalues>
+</edge>
+<edge id="e5" source="dengzhiwu_邓之武" target="org_5" label="县委常委、县政府党组副书记、常务副县长、三级调研员 (2023-02-2025-01)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2023-02—2025-01"/>
+<attvalue for="context" value="2024.12.19任前公示：拟任县区委副书记"/>
+</attvalues>
+</edge>
+<edge id="e6" source="dengzhiwu_邓之武" target="org_7" label="县委副书记 (2025-01-2026-07)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2025-01—2026-07"/>
+<attvalue for="context" value="在县委书记贾彧超领导下工作约6个月"/>
+</attvalues>
+</edge>
+<edge id="e7" source="dengzhiwu_邓之武" target="org_9" label="区委副书记、代区长 (2026-07-至今)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2026-07—至今"/>
+<attvalue for="context" value="2026.07.07任命"/>
+</attvalues>
+</edge>
+<edge id="e8" source="dengzhiwu_贾彧超" target="org_7" label="县委书记 (2025-02-至今)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2025-02—至今"/>
+<attvalue for="context" value="邓之武在南昌县期间的直接上级"/>
+</attvalues>
+</edge>
+<edge id="e9" source="dengzhiwu_贾彧超" target="org_8" label="县长 (2021-08-2025-02)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2021-08—2025-02"/>
+<attvalue for="context" value=""/>
+</attvalues>
+</edge>
+<edge id="e10" source="dengzhiwu_徐强" target="org_5" label="县委书记 (2021-08-2026-06)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2021-08—2026-06"/>
+<attvalue for="context" value="邓之武在进贤期间的县委书记"/>
+</attvalues>
+</edge>
+<edge id="e11" source="dengzhiwu_徐强" target="org_11" label="区委书记 (2026-06-至今)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2026-06—至今"/>
+<attvalue for="context" value=""/>
+</attvalues>
+</edge>
+<edge id="e12" source="dengzhiwu_刘光荣" target="org_9" label="区委书记 (2025-02-至今)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2025-02—至今"/>
+<attvalue for="context" value="南昌县21年工作经历；与邓之武均来自南昌县"/>
+</attvalues>
+</edge>
+<edge id="e13" source="dengzhiwu_刘光荣" target="org_8" label="副县长/常务副县长等各岗位 (1995-2025-02)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="1995—2025-02"/>
+<attvalue for="context" value="在南昌县工作21年"/>
+</attvalues>
+</edge>
+<edge id="e14" source="dengzhiwu_邓之武" target="dengzhiwu_贾彧超" label="直接上下级" weight="3">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2025-01至2025-07"/>
+<attvalue for="context" value="邓之武（南昌县委副书记）直属贾彧超（南昌县委书记）领导约6个月（2025.01-2025.07）"/>
+</attvalues>
+</edge>
+<edge id="e15" source="dengzhiwu_邓之武" target="dengzhiwu_徐强" label="班子共事" weight="2">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2021-08至2024-12"/>
+<attvalue for="context" value="邓之武在进贤县任组织部长/常务副县长期间，徐强任进贤县委书记（2021.08-2024.12），共事约3年"/>
+</attvalues>
+</edge>
+<edge id="e16" source="dengzhiwu_邓之武" target="dengzhiwu_刘光荣" label="现任搭档" weight="3">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2026-07至今"/>
+<attvalue for="context" value="刘光荣（东湖区委书记）与邓之武（东湖代区长）为现任党政搭档；二人均有南昌县工作经历"/>
+</attvalues>
+</edge>
+<edge id="e17" source="dengzhiwu_邓之武" target="dengzhiwu_刘光荣" label="南昌县系" weight="1">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="间接重叠"/>
+<attvalue for="context" value="刘光荣南昌县21年+邓之武南昌县委副书记18个月——东湖区党政主官均来自南昌县"/>
+</attvalues>
+</edge>
+<edge id="e18" source="dengzhiwu_邓之武" target="dengzhiwu_帅志" label="南昌县同事" weight="2">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2025-12至2026-07"/>
+<attvalue for="context" value="邓之武（县委副书记）与帅志（先任县委副书记→后任县长）在南昌县有过短暂共事"/>
+</attvalues>
+</edge>
+<edge id="e19" source="dengzhiwu_邓之武" target="dengzhiwu_熊振强" label="前后任同僚" weight="1">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="间接"/>
+<attvalue for="context" value="邓之武在进贤县后熊振强接任进贤县委书记（2026.06），两人在进贤系统有间接联系"/>
+</attvalues>
+</edge>
+<edge id="e20" source="dengzhiwu_邓之武" target="dengzhiwu_雷桥亮" label="进贤前后任" weight="1">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="间接"/>
+<attvalue for="context" value="邓之武（前进贤常务副县长）与雷桥亮（进贤代县长）同属进贤县经济口主管"/>
+</attvalues>
+</edge>
+</edges>
+</graph>
+</gexf>
