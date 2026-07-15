@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "上犹县",
+    "job": "县长",
+    "task_id": "jiangxi_上犹县",
+    "time_focus": "2000-2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_shangyou_zhongxiaobin_1974",
+    "name": "钟晓斌",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1974-12",
+    "birthplace": "江西赣州",
+    "native_place": "江西赣州",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "大学",
+        "major": "",
+        "degree": "大学学历",
+        "study_type": "unknown",
+        "source_ids": ["S001", "S002"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "钟晓斌_1974",
+      "name_birthplace": "钟晓斌_赣州",
+      "official_profile_url": "https://www.shangyou.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "上犹县委副书记、县长",
+    "current_org": "上犹县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "赣州市南康区",
+      "title": "基层/机关工作",
+      "level": "",
+      "location": "江西赣州南康",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "早期在南康区工作，具体职务和起始时间待查。",
+      "confidence": "unverified",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "unknown",
+      "end": "2021",
+      "org": "中共南康区委、南康区人民政府",
+      "title": "南康区委常委、常务副区长",
+      "level": "县处级副职",
+      "location": "江西赣州南康",
+      "system": "government",
+      "rank": "县处级副职",
+      "is_key_promotion": true,
+      "notes": "曾任南康区委常委、常务副区长，具体任职时间待查。",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "上犹县人民政府",
+      "title": "上犹县委副书记、县长",
+      "level": "县处级正职",
+      "location": "江西赣州上犹",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "2021年由南康区委常委、常务副区长调任上犹县委副书记、县长。前任县长为余业伟。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_shangyou_gov",
+      "name": "上犹县人民政府",
+      "type": "政府",
+      "level": "县处级"
+    },
+    {
+      "org_id": "org_nankang_gov",
+      "name": "中共南康区委/南康区人民政府",
+      "type": "政府",
+      "level": "县处级"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "刘洪梅",
+      "person_id": "jiangxi_shangyou_liuhongmei_1974",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "钟晓斌（县长）与刘洪梅（县委书记）为上犹县党政正职搭档",
+      "overlap_org": "上犹县",
+      "overlap_period": "2023至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "陈安旖",
+      "person_id": "jiangxi_shangyou_chenanyi_unknown",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "钟晓斌（县长）与陈安旖（常务副县长）为上犹县政府正副职搭档",
+      "overlap_org": "上犹县人民政府",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "何善锦",
+      "person_id": "jiangxi_ganzhou_heshanjin_1968",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "钟晓斌任南康区委常委、常务副区长时，何善锦为南康区委书记（赣州市委常委兼2021年起）",
+      "overlap_org": "南康区",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "余业伟",
+      "person_id": "jiangxi_shangyou_yuyewei_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "余业伟为上犹县长前任，钟晓斌为现任",
+      "overlap_org": "上犹县人民政府",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "李赣兴",
+      "person_id": "jiangxi_ganzhou_liganxing_1974",
+      "relationship_type": "same_system",
+      "strength": "medium",
+      "evidence": "钟晓斌在南康区工作时，李赣兴曾任南康区长（2021-2025）",
+      "overlap_org": "南康区",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-2026",
+      "domain": "economic_development",
+      "achievement_or_event": "领导上犹县政府全面工作",
+      "role_in_event": "主要领导",
+      "measurable_outcome": "待查",
+      "location": "江西赣州上犹",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方政府管理", "经济建设"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["南康区→上犹县"],
+    "promotion_velocity": {
+      "summary": "从南康区跨县调到上犹县任县长（县处级正职），属于跨县晋升。南康区相对更发达，调任上犹属正常县级领导岗位轮换。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足，难以判断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality": "high",
+    "role_in_network": "核心领导节点（县长）",
+    "connections_count": 6,
+    "note": "作为县长，是上犹县政府权力网络的核心节点"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现钟晓斌涉及纪律处分、审计问责或负面舆情。搜索范围：公开报道。",
+      "date": "2026-07-15",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "上犹县人民政府官网",
+      "url": "https://www.shangyou.gov.cn",
+      "publisher": "上犹县人民政府",
+      "published_at": "持续更新",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方网站，但网络访问受限"
+    },
+    {
+      "id": "S002",
+      "title": "build_ganzhou_remaining_data.py（现有项目数据）",
+      "url": "",
+      "publisher": "项目现有数据",
+      "published_at": "2026-07-14",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "项目内现有数据，间接交叉验证"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "南康区工作前的早期履历缺失。仅知曾任南康区委常委、常务副区长，2021年调任上犹县长。之前在南康区的工作起始时间和具体职务路径不完整。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "钟晓斌在南康区工作前的完整履历是什么？包括毕业学校、参加工作时间、早期在南康区的具体职务路线。",
+      "why_it_matters": "核心领导的完整职业路径是网络分析的基础",
+      "suggested_queries": ["钟晓斌 简历 南康", "钟晓斌 南康区 常务副区长", "钟晓斌 任前公示"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "钟晓斌在南康区委常委、常务副区长的具体任职起止时间？",
+      "why_it_matters": "影响与他人的工作重叠时段判断",
+      "suggested_queries": ["钟晓斌 南康区委常委", "南康区 常务副区长 钟晓斌"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "钟晓斌与何善锦在南康区是否有直接工作交集？",
+      "why_it_matters": "跨县区人才网络线索",
+      "suggested_queries": ["何善锦 钟晓斌 南康"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
