@@ -78,6 +78,56 @@ def active_claim_ids(state: dict[str, Any]) -> set[str]:
     return {task_id for task_id, claim in state.get("claims", {}).items() if claim.get("status") == "active"}
 
 
+def parse_iso(value: str) -> datetime:
+    try:
+        return datetime.fromisoformat(value)
+    except ValueError:
+        return datetime.min.replace(tzinfo=timezone.utc)
+
+
+def claim_sort_key(claim: dict[str, Any]) -> datetime:
+    return parse_iso(claim.get("claimed_at") or claim.get("updated_at") or "")
+
+
+def _canonical_artifacts_ready_unlocked(task: dict[str, Any]) -> tuple[bool, list[str]]:
+    paths = artifact_paths(task["region"])
+    required = [
+        REPO_ROOT / paths["build_script"],
+        REPO_ROOT / paths["db_output"],
+        REPO_ROOT / paths["gexf_output"],
+    ]
+    missing = [str(path.relative_to(REPO_ROOT)) for path in required if not path.exists()]
+    return not missing, missing
+
+
+def _mark_claim_done_unlocked(todo: dict, claim: dict[str, Any], reason: str = "") -> None:
+    task_id = claim["task"]["task_id"]
+    claim["status"] = "done"
+    claim["updated_at"] = now_iso()
+    if reason:
+        claim["reason"] = reason
+    if not mark_done(todo, task_id):
+        raise KeyError(f"task not found in TODO.json: {task_id}")
+
+
+def cleanup_worker_active_claims_unlocked(todo: dict, state: dict[str, Any], worker_id: str) -> list[dict[str, str]]:
+    """Clear impossible leftover active claims before a worker takes new work."""
+    actions: list[dict[str, str]] = []
+    for task_id, claim in state.get("claims", {}).items():
+        if claim.get("status") != "active" or claim.get("worker_id") != worker_id:
+            continue
+        ready, missing = _canonical_artifacts_ready_unlocked(claim["task"])
+        if ready:
+            _mark_claim_done_unlocked(todo, claim, "auto-reconciled before worker reclaimed")
+            actions.append({"task_id": task_id, "action": "done"})
+        else:
+            claim["status"] = "released"
+            claim["updated_at"] = now_iso()
+            claim["reason"] = f"released before worker reclaimed; missing: {', '.join(missing)}"
+            actions.append({"task_id": task_id, "action": "released"})
+    return actions
+
+
 def find_next_claimable(todo: dict, state: dict[str, Any]) -> TodoItem | None:
     active = active_claim_ids(state)
     for item in iter_items(todo):
@@ -98,17 +148,20 @@ def write_prompt(plan, worker_id: str, prompt_dir: Path) -> Path:
 
 def claim_next(
     worker_id: str,
-    model_intent: str = "standard",
+    model_intent: str = "iagent",
     prompt_dir: Path | None = None,
-    opencode_agent: str = "build",
-    opencode_model: str = "",
+    opencode_agent: str = "",
+    opencode_model: str = "iagent/standard",
 ) -> dict[str, Any] | None:
     prompt_dir = prompt_dir or (REPO_ROOT / "logs" / "dispatch")
     with queue_lock():
         todo = load_todo()
         state = load_state()
+        cleanup_worker_active_claims_unlocked(todo, state, worker_id)
         item = find_next_claimable(todo, state)
         if item is None:
+            save_todo(todo)
+            save_state(state)
             return None
         plan = build_dispatch_plan(item, model_intent=model_intent)
         prompt_path = write_prompt(plan, worker_id, prompt_dir)
@@ -127,6 +180,7 @@ def claim_next(
             "task": plan.task,
         }
         state["claims"][task_id] = claim
+        save_todo(todo)
         save_state(state)
         return claim
 
@@ -158,23 +212,16 @@ def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = ""
 
 
 def canonical_artifacts_ready(task: dict[str, Any]) -> tuple[bool, list[str]]:
-    paths = artifact_paths(task["region"])
-    required = [
-        REPO_ROOT / paths["build_script"],
-        REPO_ROOT / paths["db_output"],
-        REPO_ROOT / paths["gexf_output"],
-    ]
-    missing = [str(path.relative_to(REPO_ROOT)) for path in required if not path.exists()]
-    return not missing, missing
+    return _canonical_artifacts_ready_unlocked(task)
 
 
 def claim_specific(
     task_id: str,
     worker_id: str,
-    model_intent: str = "standard",
+    model_intent: str = "iagent",
     prompt_dir: Path | None = None,
-    opencode_agent: str = "build",
-    opencode_model: str = "",
+    opencode_agent: str = "",
+    opencode_model: str = "iagent/standard",
 ) -> dict[str, Any]:
     prompt_dir = prompt_dir or (REPO_ROOT / "logs" / "dispatch")
     with queue_lock():
@@ -232,6 +279,57 @@ def queue_status() -> dict[str, Any]:
         "failed": failed,
         "state_path": str(DISPATCH_STATE_PATH.relative_to(REPO_ROOT)),
     }
+
+
+def reconcile_claims(
+    *,
+    done_ready: bool = True,
+    release_superseded_workers: bool = True,
+    release_active: bool = False,
+    reason: str = "manual reconcile",
+) -> list[dict[str, str]]:
+    actions: list[dict[str, str]] = []
+    with queue_lock():
+        todo = load_todo()
+        state = load_state()
+        claims = state.setdefault("claims", {})
+
+        if done_ready:
+            for task_id, claim in claims.items():
+                if claim.get("status") not in {"active", "failed", "released"}:
+                    continue
+                ready, _missing = _canonical_artifacts_ready_unlocked(claim["task"])
+                if ready:
+                    _mark_claim_done_unlocked(todo, claim, "auto-reconciled canonical artifacts")
+                    actions.append({"task_id": task_id, "action": "done"})
+
+        if release_superseded_workers:
+            by_worker: dict[str, list[tuple[str, dict[str, Any]]]] = {}
+            for task_id, claim in claims.items():
+                if claim.get("status") == "active":
+                    by_worker.setdefault(claim.get("worker_id", ""), []).append((task_id, claim))
+            for worker_id, worker_claims in by_worker.items():
+                if len(worker_claims) <= 1:
+                    continue
+                worker_claims.sort(key=lambda item: claim_sort_key(item[1]), reverse=True)
+                for task_id, claim in worker_claims[1:]:
+                    claim["status"] = "released"
+                    claim["updated_at"] = now_iso()
+                    claim["reason"] = f"released superseded active claim for {worker_id}"
+                    actions.append({"task_id": task_id, "action": "released"})
+
+        if release_active:
+            for task_id, claim in claims.items():
+                if claim.get("status") != "active":
+                    continue
+                claim["status"] = "released"
+                claim["updated_at"] = now_iso()
+                claim["reason"] = reason
+                actions.append({"task_id": task_id, "action": "released"})
+
+        save_todo(todo)
+        save_state(state)
+    return actions
 
 
 def force_unlock() -> bool:

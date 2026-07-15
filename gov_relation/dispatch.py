@@ -76,5 +76,5 @@ Required workflow:
 def build_dispatch_plan(item: TodoItem, model_intent: str = "standard") -> DispatchPlan:
     task = item_summary(item)
     prompt = build_dispatch_prompt(item, model_intent=model_intent)
-    suggested_command = "opencode run --agent build --model <MODEL> '<PROMPT_FROM_STDOUT>'"
+    suggested_command = "opencode run --model iagent/standard '<PROMPT_FROM_STDOUT>'"
     return DispatchPlan(task=task, model_intent=model_intent, prompt=prompt, suggested_command=suggested_command)

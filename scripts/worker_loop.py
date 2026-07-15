@@ -21,7 +21,7 @@ def log(message: str) -> None:
     print(f"[{ts}] {message}", flush=True)
 
 
-def task_commit_paths(task: dict) -> list[str]:
+def task_commit_paths(task: dict, claimed_at: str = "") -> list[str]:
     paths = artifact_paths(task["region"])
     result = [
         paths["build_script"],
@@ -33,21 +33,32 @@ def task_commit_paths(task: dict) -> list[str]:
     region = task["region"]
     parent_city = task.get("parent_city") or ""
     province = task.get("province") or ""
+    since = None
+    if claimed_at:
+        try:
+            since = datetime.fromisoformat(claimed_at).timestamp()
+        except ValueError:
+            since = None
     for directory, patterns in {
         Path("report"): [f"*{region}*", f"*{parent_city}*"] if parent_city else [f"*{region}*"],
-        Path("data/persons"): [f"*{region}*", f"*{parent_city}*", f"*{province}*"],
+        Path("data/persons"): [f"*{region}*", f"*{parent_city}*"] if parent_city else [f"*{region}*", f"*{province}*"],
         Path("docs/assets/data"): ["*.json"],
     }.items():
         if not directory.exists():
             continue
         for pattern in patterns:
-            result.extend(str(path) for path in directory.glob(pattern) if path.is_file())
+            for path in directory.glob(pattern):
+                if not path.is_file():
+                    continue
+                if since is not None and path.stat().st_mtime + 1 < since:
+                    continue
+                result.append(str(path))
     return sorted(set(path for path in result if Path(path).exists()))
 
 
-def git_commit_task(task: dict) -> bool:
+def git_commit_task(task: dict, claimed_at: str = "") -> bool:
     task_id = task["task_id"]
-    paths = task_commit_paths(task)
+    paths = task_commit_paths(task, claimed_at=claimed_at)
     if not paths:
         log(f"GIT no task paths exist to commit for {task_id}")
         return True
@@ -129,7 +140,7 @@ def main() -> int:
                 continue
             set_claim_status(task_id, args.worker_id, "done")
             log(f"DONE {task_id}")
-            if args.git_commit and not git_commit_task(claim["task"]):
+            if args.git_commit and not git_commit_task(claim["task"], claimed_at=claim.get("claimed_at", "")):
                 return 1
             completed += 1
             if args.sleep_seconds > 0:

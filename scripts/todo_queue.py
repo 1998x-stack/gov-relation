@@ -10,7 +10,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from gov_relation.queue import canonical_artifacts_ready, claim_next, claim_specific, force_unlock, queue_status, set_claim_status
+from gov_relation.queue import canonical_artifacts_ready, claim_next, claim_specific, force_unlock, queue_status, reconcile_claims, set_claim_status
 
 
 def print_claim(claim: dict) -> None:
@@ -35,9 +35,9 @@ def main() -> int:
 
     claim = sub.add_parser("claim", help="claim the next available TODO item")
     claim.add_argument("--worker-id", required=True)
-    claim.add_argument("--model-intent", "--model", dest="model_intent", default="standard", choices=["standard", "iagent"])
-    claim.add_argument("--opencode-agent", default="build")
-    claim.add_argument("--opencode-model", default="agent-loop/standard")
+    claim.add_argument("--model-intent", "--model", dest="model_intent", default="iagent", choices=["standard", "iagent"])
+    claim.add_argument("--opencode-agent", default="")
+    claim.add_argument("--opencode-model", default="iagent/standard")
     claim.add_argument("--task-id", help="claim a specific task instead of next")
     claim.add_argument("--json", action="store_true")
 
@@ -61,6 +61,13 @@ def main() -> int:
 
     unlock = sub.add_parser("unlock", help="remove a stale dispatch lock")
     unlock.add_argument("--force", action="store_true", required=True)
+
+    reconcile = sub.add_parser("reconcile", help="repair queue state from artifacts and stale claims")
+    reconcile.add_argument("--done-ready", action="store_true", help="mark claims done when canonical artifacts exist")
+    reconcile.add_argument("--release-superseded-workers", action="store_true", help="release older active claims when one worker owns multiple")
+    reconcile.add_argument("--release-active", action="store_true", help="release all remaining active claims; use after stopping workers")
+    reconcile.add_argument("--reason", default="manual reconcile")
+    reconcile.add_argument("--json", action="store_true")
 
     args = parser.parse_args()
 
@@ -121,6 +128,22 @@ def main() -> int:
     if args.cmd == "unlock":
         removed = force_unlock()
         print("UNLOCKED" if removed else "NO_LOCK")
+        return 0
+
+    if args.cmd == "reconcile":
+        actions = reconcile_claims(
+            done_ready=args.done_ready,
+            release_superseded_workers=args.release_superseded_workers,
+            release_active=args.release_active,
+            reason=args.reason,
+        )
+        if args.json:
+            print(json.dumps(actions, ensure_ascii=False, indent=2))
+        else:
+            for action in actions:
+                print(f"{action['action'].upper()} {action['task_id']}")
+            if not actions:
+                print("NO_CHANGES")
         return 0
 
     return 1
