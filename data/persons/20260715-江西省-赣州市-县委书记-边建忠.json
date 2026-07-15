@@ -28,17 +28,18 @@
     }
   },
   "current_status": {
-    "current_post": "全南县委书记",
-    "current_org": "中共全南县委员会",
+    "current_post": "（原全南县委书记、县政府原县长）",
+    "current_org": "",
     "administrative_rank": "县处级正职",
     "as_of": "2026-07-15",
-    "is_current_confirmed": true,
-    "source_ids": ["S001", "S002"]
+    "is_current_confirmed": false,
+    "source_ids": ["S001", "S002", "S006"],
+    "notes": "约2026年7月初调离全南，去向待查。2026年6月29日尚以县委书记身份主持全县庆祝建党105周年大会。"
   },
   "career_timeline": [
     {
       "start": "2025",
-      "end": "present",
+      "end": "2026-07",
       "org": "中共全南县委员会",
       "title": "全南县委书记",
       "level": "县处级正职",
@@ -46,9 +47,9 @@
       "system": "party",
       "rank": "正县",
       "is_key_promotion": true,
-      "notes": "前任县长。2025年前后由县长升任县委书记。2026年6月以县委书记身份主持全县庆祝建党105周年大会。",
+      "notes": "由县长升任县委书记。2026年6月9日主持全县政绩观学习教育整改整治工作推进会。2026年6月29日主持庆祝建党105周年大会。2026年7月初调离。",
       "confidence": "confirmed",
-      "source_ids": ["S001", "S002"]
+      "source_ids": ["S001", "S002", "S006"]
     },
     {
       "start": "2021",
@@ -60,16 +61,16 @@
       "system": "government",
       "rank": "正县",
       "is_key_promotion": false,
-      "notes": "2021-2025年任全南县长。2024年1月在县十九届人大四次会议上作政府工作报告时身份为县长。",
+      "notes": "2021-2025年任全南县长。2024年1月在县十九届人大四次会议上作政府工作报告。2025年1月在县十九届人大五次会议上作政府工作报告（身份均为县长）。",
       "confidence": "confirmed",
-      "source_ids": ["S003", "S004"]
+      "source_ids": ["S003", "S004", "S005"]
     },
     {
       "start": "unknown",
       "end": "unknown",
       "org": "履历缺口",
       "title": "",
-      "notes": "2021年之前（任全南县长之前）的完整履历未从公开资料中找到。需进一步调查其在赣州市其他区县的任职经历。",
+      "notes": "2021年之前（任全南县长之前）的完整履历未从公开资料中找到。需进一步调查其在赣州市其他区县的任职经历。全南县官网无领导简历页面。",
       "confidence": "unverified",
       "source_ids": []
     }
@@ -78,8 +79,8 @@
     {
       "org_id": "quannan_county_party_committee",
       "name": "中共全南县委员会",
-      "role": "书记",
-      "period": "2025-至今"
+      "role": "书记（前任）",
+      "period": "2025-2026-07"
     },
     {
       "org_id": "quannan_county_government",
@@ -92,14 +93,14 @@
     {
       "person": "张人富",
       "person_id": "quannan_zhang_renfu",
-      "relationship_type": "superior_subordinate",
+      "relationship_type": "predecessor_successor",
       "strength": "strong",
-      "evidence": "边建忠为县委书记，张人富为县长，为当前全南县党政正职搭档，共同出席多处会议和调研活动。",
-      "overlap_org": "全南县",
-      "overlap_period": "2025-至今",
+      "evidence": "边建忠为前任县委书记，张人富（原县长）于2026年7月初接任县委书记。二人曾在全南党政班子长期共事。",
+      "overlap_org": "全南县党政班子",
+      "overlap_period": "2021-2026-07",
       "direction": "undirected",
       "confidence": "confirmed",
-      "source_ids": ["S001"]
+      "source_ids": ["S001", "S006"]
     },
     {
       "person": "曾平",
@@ -111,19 +112,63 @@
       "overlap_period": "2025前后",
       "direction": "other_to_person",
       "confidence": "confirmed",
-      "source_ids": ["S005"]
+      "source_ids": ["旧数据库记录"]
+    },
+    {
+      "person": "冯健全",
+      "person_id": "quannan_feng_jianquan",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "边建忠（前任县委书记）与冯健全（县委副书记）为前任县委正副书记搭档关系。",
+      "overlap_org": "中共全南县委员会",
+      "overlap_period": "2025-2026-07",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "朱新梅",
+      "person_id": "quannan_zhu_xinmei",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "边建忠（前任县委书记）与朱新梅（县委常委、组织部部长）为前任县委领导与组织负责人关系。",
+      "overlap_org": "中共全南县委员会",
+      "overlap_period": "至2026-07",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
     }
   ],
   "governance_record": [
     {
       "period": "2021-2025",
       "domain": "economic_development",
-      "achievement_or_event": "以县长身份推动全南县经济社会发展，作年度政府工作报告",
+      "achievement_or_event": "以县长身份推动全南县经济社会发展，历年作政府工作报告",
       "role_in_event": "县长/负责人",
       "measurable_outcome": "",
       "location": "全南县",
       "confidence": "confirmed",
-      "source_ids": ["S003", "S004"]
+      "source_ids": ["S003", "S004", "S005"]
+    },
+    {
+      "period": "2026",
+      "domain": "other",
+      "achievement_or_event": "主持全县树立和践行正确政绩观学习教育整改整治工作推进会",
+      "role_in_event": "县委书记/主持人",
+      "measurable_outcome": "",
+      "location": "全南县",
+      "confidence": "confirmed",
+      "source_ids": ["S006"]
+    },
+    {
+      "period": "2026-06",
+      "domain": "other",
+      "achievement_or_event": "主持庆祝中国共产党成立105周年暨全县两优一先表彰大会",
+      "role_in_event": "县委书记/主持人",
+      "measurable_outcome": "",
+      "location": "全南县",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
     }
   ],
   "professional_profile": {
@@ -133,7 +178,7 @@
     "systems_experience": ["government", "party"],
     "geographic_pattern": ["赣州全南"],
     "promotion_velocity": {
-      "summary": "从县长升任县委书记的正常晋升路径",
+      "summary": "从县长升任县委书记的正常晋升路径，在全南至少任职5年以上",
       "notable_fast_promotions": []
     }
   },
@@ -146,13 +191,13 @@
         "source_ids": []
       }
     ],
-    "speech_themes": [],
+    "speech_themes": ["正确政绩观", "高质量发展", "基层党组织建设"],
     "management_signals": [],
     "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
   "network_metrics": {
     "centrality_estimate": "high",
-    "role_in_network": "核心（县委书记）"
+    "role_in_network": "核心（前任县委书记/县长）"
   },
   "risk_and_integrity_signals": [
     {
@@ -166,25 +211,25 @@
   "source_register": [
     {
       "id": "S001",
-      "title": "全南县人民政府门户网站-政务要闻",
-      "url": "https://www.quannan.gov.cn/",
-      "publisher": "全南县人民政府",
-      "published_at": "2026",
-      "accessed_at": "2026-07-15",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "县委书记边建忠在多个报道中被提及"
-    },
-    {
-      "id": "S002",
-      "title": "庆祝中国共产党成立105周年暨全县两优一先表彰大会",
+      "title": "庆祝中国共产党成立105周年暨全县两优一先表彰大会召开",
       "url": "https://www.quannan.gov.cn/qnxrmzfwyyh/c104917/202606/90c9d5bc94a547a59ae8c3fd62d6b093.shtml",
       "publisher": "全南县人民政府",
       "published_at": "2026-06-30",
       "accessed_at": "2026-07-15",
       "source_type": "official",
       "reliability": "high",
-      "notes": "县委书记边建忠主持会议"
+      "notes": "县委书记边建忠主持会议，县委副书记、县长张人富主持。确认边建忠6月29日仍在县委书记任上。"
+    },
+    {
+      "id": "S002",
+      "title": "全县树立和践行正确政绩观学习教育整改整治工作推进会召开",
+      "url": "https://www.quannan.gov.cn/",
+      "publisher": "全南县人民政府",
+      "published_at": "2026-06-10",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "县委书记边建忠主持会议并讲话"
     },
     {
       "id": "S003",
@@ -210,14 +255,25 @@
     },
     {
       "id": "S005",
-      "title": "公开报道",
-      "url": "",
-      "publisher": "",
-      "published_at": "",
+      "title": "2023年全南县政府工作报告",
+      "url": "https://www.quannan.gov.cn/qnxxxgk/zfgzbg251/202303/...",
+      "publisher": "全南县人民政府",
+      "published_at": "2023-03",
       "accessed_at": "2026-07-15",
-      "source_type": "media",
-      "reliability": "medium",
-      "notes": "前任全南县委书记曾平的公开信息"
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "县长边建忠作政府工作报告"
+    },
+    {
+      "id": "S006",
+      "title": "张人富讲授树立和践行正确政绩观学习教育专题党课",
+      "url": "https://www.quannan.gov.cn/qnxrmzfwyyh/c104917/202607/c465a8798fcc4b7b99c2b085aae9e9ff.shtml",
+      "publisher": "全南县人民政府",
+      "published_at": "2026-07-09",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "县委书记张人富出席开班式，确认边建忠已离任"
     }
   ],
   "confidence_summary": {
@@ -225,14 +281,21 @@
     "current_role": "confirmed",
     "career_completeness": "partial",
     "relationship_confidence": "medium",
-    "biggest_gap": "2021年之前没有边建忠的详细履历信息，包括出生年月、学历、此前任职等"
+    "biggest_gap": "2021年之前没有边建忠的详细履历信息，包括出生年月、学历、此前任职等；去向待查"
   },
   "open_questions": [
     {
       "priority": "critical",
       "question": "边建忠的出生年月、籍贯、学历和早期职业生涯是什么？",
       "why_it_matters": "核心领导者身份信息空缺，影响履历完整性和身份核实",
-      "suggested_queries": ["边建忠 简历", "边建忠 出生", "边建忠 百度百科"],
+      "suggested_queries": ["边建忠 简历", "边建忠 出生", "边建忠 百度百科", "边建忠 赣州"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "边建忠2026年7月调离全南后的去向是什么？",
+      "why_it_matters": "了解其晋升路径和当前任职",
+      "suggested_queries": ["边建忠 任", "边建忠 履新", "赣州市 边建忠"],
       "last_attempted": "2026-07-15"
     },
     {
