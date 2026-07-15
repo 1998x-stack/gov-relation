@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>安庆市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="rank" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="孟景伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共安庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="张君毅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="安庆市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="廖强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记（兼），市委党校校长、市社会主义学院院长，宿松县委书记"/>
+          <attvalue for="2" value="中共安庆市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="周建春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委，市政府党组成员、副市长"/>
+          <attvalue for="2" value="中共安庆市委 / 安庆市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p5" label="徐雄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委，市政府党组副书记、常务副市长"/>
+          <attvalue for="2" value="中共安庆市委 / 安庆市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p6" label="王家权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委，安庆军分区大校司令员"/>
+          <attvalue for="2" value="中共安庆市委 / 安庆军分区"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p7" label="梁龙义">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、组织部部长"/>
+          <attvalue for="2" value="中共安庆市委组织部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p8" label="刘婉贞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委，桐城市委书记"/>
+          <attvalue for="2" value="中共安庆市委 / 中共桐城市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="吴宏波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、市纪委书记、市监委主任候选人"/>
+          <attvalue for="2" value="中共安庆市纪委 / 安庆市监委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p10" label="关家涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、政法委书记，市公安局党委书记、局长、督察长"/>
+          <attvalue for="2" value="中共安庆市委政法委 / 安庆市公安局"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p11" label="唐厚明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府党组成员、副市长、秘书长"/>
+          <attvalue for="2" value="安庆市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="章洪海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府党组成员、副市长"/>
+          <attvalue for="2" value="安庆市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="李岩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府副市长"/>
+          <attvalue for="2" value="安庆市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="杨旭东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府党组成员，安庆经济技术开发区党工委书记兼管委会主任"/>
+          <attvalue for="2" value="安庆经济技术开发区"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="周东明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会党组书记、主任"/>
+          <attvalue for="2" value="安庆市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p16" label="花家红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协党组书记、主席"/>
+          <attvalue for="2" value="安庆市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p17" label="张祥安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安徽省政协副主席"/>
+          <attvalue for="2" value="安徽省政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p18" label="陈冰冰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安徽省人大常委会社会建设工作委员会主任"/>
+          <attvalue for="2" value="安徽省人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p19" label="魏晓明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安徽省人大常委会副主任"/>
+          <attvalue for="2" value="安徽省人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p20" label="虞爱华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安徽省政协副主席"/>
+          <attvalue for="2" value="安徽省政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o1" label="中共安庆市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="安庆市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共安庆市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="安庆市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共安庆市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共安庆市委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="安庆市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="安庆军分区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共桐城市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共宿松县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共安庆市委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="安庆市社会主义学院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="安庆经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="安庆市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="安庆市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="中共安庆市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="中共安庆市委统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="安庆市发展和改革委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="安徽省人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="安徽省政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持市委全面工作。1974年5月生。"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="领导市政府全面工作。1970年2月生。"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任市委党校校长、市社会主义学院院长、宿松县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o10" label="县委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="宿松县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o11" label="市委党校校长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o12" label="市社会主义学院院长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p4" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p4" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p5" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p5" target="o2" label="常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府党组副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p6" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p6" target="o8" label="大校司令员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安庆军分区"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p7" target="o1" label="市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p7" target="o5" label="组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p8" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p8" target="o9" label="桐城市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月主持桐城市委常委会会议"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p9" target="o1" label="市委常委、市纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市监委主任候选人"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p9" target="o3" label="市纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p9" target="o4" label="市监委主任候选人" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p10" target="o1" label="市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p10" target="o6" label="政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p10" target="o7" label="党委书记、局长、督察长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市公安局"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p11" target="o2" label="副市长、秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p12" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p13" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p14" target="o2" label="市政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p14" target="o13" label="党工委书记兼管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安庆经济技术开发区"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p15" target="o14" label="党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市人大常委会"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p16" target="o15" label="党组书记、主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政协"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p17" target="o1" label="市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任安庆市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p17" target="o20" label="安徽省政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="晋升副省级"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p18" target="o2" label="市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任安庆市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p18" target="o19" label="社会建设工作委员会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p19" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p19" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p19" target="o19" label="安徽省人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p20" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p20" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p20" target="o20" label="安徽省政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p1" target="p2" label="市委书记和市长同届领导班子成员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市长同届领导班子成员"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p1" target="p3" label="市委书记和市委副书记（兼宿松县委书记）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委副书记（兼宿松县委书记）"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p1" target="p4" label="市委书记和市委常委、副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p1" target="p5" label="市委书记和市委常委、常务副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、常务副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p1" target="p7" label="市委书记和市委常委、组织部部长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、组织部部长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p1" target="p9" label="市委书记和市委常委、市纪委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、市纪委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p1" target="p10" label="市委书记和市委常委、政法委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、政法委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="p2" target="p5" label="市长和常务副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和常务副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="p2" target="p4" label="市长和副市长（市委常委）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长（市委常委）"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="p2" target="p11" label="市长和副市长、秘书长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长、秘书长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="p2" target="p12" label="市长和副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="p2" target="p13" label="市长和副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e53" source="p2" target="p14" label="市长和市政府党组成员、经开区党工委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和市政府党组成员、经开区党工委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e54" source="p3" target="p8" label="同为安庆市委班子成员，分别兼任宿松县委书记和桐城市委书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为安庆市委班子成员，分别兼任宿松县委书记和桐城市委书记"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e55" source="p2" target="p8" label="市长和市委常委、桐城市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和市委常委、桐城市委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e56" source="p9" target="p10" label="市纪委书记和政法委书记，同为市委班子成员" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市纪委书记和政法委书记，同为市委班子成员"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e57" source="p5" target="p11" label="常务副市长和副市长（秘书长）共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="常务副市长和副市长（秘书长）共事"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e58" source="p1" target="p15" label="市委书记和市人大常委会主任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市人大常委会主任"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e59" source="p1" target="p16" label="市委书记和市政协主席" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市政协主席"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e60" source="p1" target="p17" label="孟景伟接替张祥安任安庆市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孟景伟接替张祥安任安庆市委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e61" source="p17" target="p19" label="张祥安接替魏晓明任安庆市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张祥安接替魏晓明任安庆市委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e62" source="p19" target="p20" label="魏晓明接替虞爱华任安庆市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="魏晓明接替虞爱华任安庆市委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e63" source="p2" target="p18" label="张君毅接替陈冰冰任安庆市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张君毅接替陈冰冰任安庆市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e64" source="p18" target="p19" label="陈冰冰接替魏晓明任安庆市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈冰冰接替魏晓明任安庆市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e65" source="p19" target="p20" label="魏晓明接替虞爱华任安庆市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="魏晓明接替虞爱华任安庆市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2013"/>
+        </attvalues>
+      </edge>
+      <edge id="e66" source="p19" target="p20" label="虞爱华市长升任市委书记；魏晓明市长升任市委书记（均为内部晋升）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="虞爱华市长升任市委书记；魏晓明市长升任市委书记（均为内部晋升）"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2013-2016"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
