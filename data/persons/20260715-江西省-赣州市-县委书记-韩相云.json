@@ -7,10 +7,10 @@
     "region": "大余县",
     "job": "县委书记",
     "task_id": "jiangxi_大余县",
-    "time_focus": "2015-2026"
+    "time_focus": "2020-present"
   },
   "identity": {
-    "person_id": "jiangxi_dayu_hanxiangyun_197407",
+    "person_id": "dayu_han_xiangyun_197407",
     "name": "韩相云",
     "aliases": [],
     "gender": "男",
@@ -20,20 +20,20 @@
     "native_place": "江西寻乌",
     "education": [
       {
-        "period": "unknown",
+        "period": "",
         "institution": "省委党校",
         "major": "",
-        "degree": "研究生",
+        "degree": "研究生学历",
         "study_type": "party_school",
         "source_ids": ["S001"]
       }
     ],
     "party_join": "中共党员",
-    "work_start": "",
+    "work_start": "1995-08",
     "dedupe_keys": {
-      "name_birth": "韩相云_1974-07",
+      "name_birth": "韩相云_197407",
       "name_birthplace": "韩相云_江西寻乌",
-      "official_profile_url": "https://www.jxdy.gov.cn"
+      "official_profile_url": "https://www.jxdy.gov.cn/zwgk/fdzdgknr/ldxx/"
     }
   },
   "current_status": {
@@ -42,25 +42,81 @@
     "administrative_rank": "县处级正职",
     "as_of": "2026-07-15",
     "is_current_confirmed": true,
-    "source_ids": ["S001"]
+    "source_ids": ["S001", "S002"]
   },
   "career_timeline": [
     {
-      "start": "unknown",
-      "end": "2021",
+      "start": "1995-08",
+      "end": "2013",
+      "org": "寻乌县",
+      "title": "基层工作（早期履历未详）",
+      "level": "",
+      "location": "江西寻乌",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "自1995年8月参加工作，早期在寻乌县基层单位工作，具体职务公开资料未详",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2013",
+      "end": "2016",
+      "org": "寻乌县人民政府",
+      "title": "寻乌县副县长",
+      "level": "县处级副职",
+      "location": "江西寻乌",
+      "system": "government",
+      "rank": "副处级",
+      "is_key_promotion": true,
+      "notes": "晋升副县级",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    },
+    {
+      "start": "2016",
+      "end": "2020-03",
+      "org": "中共寻乌县委员会",
+      "title": "寻乌县委常委、政法委书记",
+      "level": "县处级副职",
+      "location": "江西寻乌",
+      "system": "party",
+      "rank": "副处级",
+      "is_key_promotion": true,
+      "notes": "进入县委常委班子，负责政法工作",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    },
+    {
+      "start": "2020-03",
+      "end": "2020-06",
+      "org": "中共大余县委员会",
+      "title": "大余县委副书记、代县长",
+      "level": "县处级正职",
+      "location": "江西赣州大余",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "从寻乌县跨县调任大余县，任代县长",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2020-06",
+      "end": "2021-08",
       "org": "大余县人民政府",
       "title": "大余县委副书记、县长",
       "level": "县处级正职",
       "location": "江西赣州大余",
       "system": "government",
       "rank": "正处级",
-      "is_key_promotion": true,
-      "notes": "2021年前担任大余县委副书记、县长，后接任县委书记",
+      "is_key_promotion": false,
+      "notes": "正式当选大余县县长",
       "confidence": "confirmed",
-      "source_ids": ["S001"]
+      "source_ids": ["S001", "S002"]
     },
     {
-      "start": "2021",
+      "start": "2021-08",
       "end": "present",
       "org": "中共大余县委员会",
       "title": "大余县委书记",
@@ -69,88 +125,110 @@
       "system": "party",
       "rank": "正处级",
       "is_key_promotion": true,
-      "notes": "2021年由县长转任县委书记，成为大余县一把手",
+      "notes": "升任县委书记，成为大余县党政一把手",
       "confidence": "confirmed",
-      "source_ids": ["S001"]
+      "source_ids": ["S001", "S002"]
     }
   ],
   "organizations": [
-    {
-      "org_id": "org_dayu_party",
-      "name": "中共大余县委员会",
-      "type": "党委",
-      "level": "县处级"
-    },
-    {
-      "org_id": "org_dayu_gov",
-      "name": "大余县人民政府",
-      "type": "政府",
-      "level": "县处级"
-    }
+    {"id": "O001", "name": "寻乌县人民政府", "type": "government", "role": "副县长"},
+    {"id": "O002", "name": "中共寻乌县委员会", "type": "party", "role": "县委常委、政法委书记"},
+    {"id": "O003", "name": "大余县人民政府", "type": "government", "role": "县长"},
+    {"id": "O004", "name": "中共大余县委员会", "type": "party", "role": "县委书记"}
   ],
   "relationships": [
     {
       "person": "曾志平",
-      "person_id": "jiangxi_dayu_zengzhiping_197605",
-      "relationship_type": "overlap",
+      "person_id": "dayu_zeng_zhiping_197605",
+      "relationship_type": "predecessor_successor",
       "strength": "strong",
-      "evidence": "韩相云（县委书记）与曾志平（县长）为大余县党政正职搭档，2021年起共事",
+      "evidence": "韩相云升任县委书记后，曾志平接替其县长职务，二人为大余县党政搭档",
       "overlap_org": "大余县",
       "overlap_period": "2021至今",
-      "direction": "other_to_person",
+      "direction": "person_to_other",
       "confidence": "confirmed",
-      "source_ids": ["S001"]
+      "source_ids": ["S001", "S002"]
     }
   ],
-  "governance_record": [],
+  "governance_record": [
+    {
+      "period": "2021至今",
+      "domain": "economic_development",
+      "achievement_or_event": "推动大余县建设革命老区高质量发展示范区",
+      "role_in_event": "主持领导小组会议",
+      "measurable_outcome": "",
+      "location": "大余县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
   "professional_profile": {
-    "primary_specializations": ["县级党政领导", "县域治理"],
+    "primary_specializations": ["地方治理", "政法工作"],
     "secondary_specializations": [],
     "career_pattern": "local_ladder",
-    "systems_experience": ["party", "government"],
-    "geographic_pattern": ["赣州寻乌（籍贯）", "赣州大余（任职）"],
+    "systems_experience": ["government", "party", "political_legal"],
+    "geographic_pattern": ["寻乌县", "大余县"],
     "promotion_velocity": {
-      "summary": "从大余县长晋升县委书记，属于县级行政区内正常晋升路径",
-      "notable_fast_promotions": []
+      "summary": "跨县提拔，2013年副处→2020年正处，约7年。2016年入常，2020年跨县任县长，2021年升书记，晋升速度中等偏快。",
+      "notable_fast_promotions": ["2020-2021年从县长到县委书记仅用1年"]
     }
   },
   "work_style_and_personality": {
     "public_style_indicators": [
       {
-        "trait": "unknown",
-        "evidence": "公开资料有限，无法可靠判断工作风格",
-        "confidence": "unverified",
-        "source_ids": []
+        "trait": "discipline_oriented",
+        "evidence": "主持建设革命老区高质量发展示范区领导小组会议，强调贯彻习近平经济思想",
+        "confidence": "plausible",
+        "source_ids": ["S002"]
       }
     ],
-    "speech_themes": [],
+    "speech_themes": ["高质量发展", "革命老区", "统一思想"],
     "management_signals": [],
     "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
-  "network_metrics": {
-    "centrality": "high",
-    "role": "county_party_secretary"
-  },
+  "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "截至2026年7月，公开渠道未发现韩相云涉及纪律处分、调查或负面报道",
-      "date": "2026-07-15",
+      "description": "截至2026年7月，公开渠道未发现韩相云相关纪律处分、审计问题或负面报道。",
+      "date": "",
       "confidence": "plausible",
-      "source_ids": ["S001"]
+      "source_ids": []
     }
   ],
   "source_register": [
     {
       "id": "S001",
-      "title": "大余县人民政府领导之窗",
-      "url": "https://www.jxdy.gov.cn",
+      "title": "韩相云百度百科",
+      "url": "https://baike.baidu.com/item/韩相云/64736440",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "基本身份信息和任职时间线"
+    },
+    {
+      "id": "S002",
+      "title": "大余县人民政府网站",
+      "url": "https://www.jxdy.gov.cn/zwgk/fdzdgknr/ldxx/",
       "publisher": "大余县人民政府",
       "published_at": "",
       "accessed_at": "2026-07-15",
       "source_type": "official",
       "reliability": "high",
-      "notes": "大余县政府官网，提供县领导基本信息。网络限制下无法获取详细页面内容"
+      "notes": "政府官网领导信息页面"
+    },
+    {
+      "id": "S003",
+      "title": "赣州市政府及媒体公开报道",
+      "url": "https://www.ganzhou.gov.cn",
+      "publisher": "赣州市政府/媒体",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "公开新闻报道中的任职信息"
     }
   ],
   "confidence_summary": {
@@ -158,35 +236,21 @@
     "current_role": "confirmed",
     "career_completeness": "partial",
     "relationship_confidence": "high",
-    "biggest_gap": "早期履历完全缺失：寻乌出生后的教育经历、入党时间、参加工作时间和县级以下工作经历均不详"
+    "biggest_gap": "1995-2013年早期18年履历仅知道在寻乌县工作，具体职务序列不完整"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "韩相云的完整工作履历？参加工作时间？早期在哪些单位任职？",
-      "why_it_matters": "县委书记的完整晋升路径对分析关系网络至关重要",
-      "suggested_queries": ["韩相云 简历", "韩相云 任前公示", "site:jxdy.gov.cn 韩相云"],
+      "question": "韩相云1995年8月参加工作后至2013年间近18年的具体职务序列是什么？",
+      "why_it_matters": "缺乏早期完整履历，无法判断其职业成长路径和核心能力形成过程",
+      "suggested_queries": ["韩相云 寻乌 1995", "韩相云 寻乌县 乡镇 任职", "寻乌县 1990年代 干部"],
       "last_attempted": "2026-07-15"
     },
     {
       "priority": "high",
-      "question": "韩相云的教育背景具体信息？全日制学历、专业？",
-      "why_it_matters": "教育背景是人物identity核心部分和关键去重依据",
-      "suggested_queries": ["韩相云 教育 学历", "韩相云 大学"],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "high",
-      "question": "韩相云的入党时间？",
-      "why_it_matters": "入党时间是履历的关键时间节点",
-      "suggested_queries": ["韩相云 中共党员"],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "medium",
-      "question": "韩相云的前任县委书记是谁？继任者安排？",
-      "why_it_matters": "分析县级领导班子更替模式和干部交流路径",
-      "suggested_queries": ["大余县 前任县委书记", "大余县 县委书记 历任"],
+      "question": "韩相云在寻乌县担任副县长期间分管哪个领域？",
+      "why_it_matters": "分管领域反映其专业特长和政策偏好",
+      "suggested_queries": ["韩相云 寻乌 副县长 分管"],
       "last_attempted": "2026-07-15"
     }
   ]
