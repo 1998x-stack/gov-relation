@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "马鞍山市",
+    "region": "含山县",
+    "job": "县长",
+    "task_id": "anhui_含山县",
+    "time_focus": "现任领导及近两届任期"
+  },
+  "identity": {
+    "person_id": "anhui_mashan_hanshan_liuzhiyuan",
+    "name": "刘志远",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘志远_",
+      "name_birthplace": "刘志远_",
+      "official_profile_url": "https://www.ahhs.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "含山县委副书记、县长",
+    "current_org": "含山县人民政府",
+    "administrative_rank": "正县级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2023",
+      "end": "present",
+      "org": "含山县人民政府",
+      "title": "含山县委副书记、县长",
+      "level": "正县级",
+      "location": "安徽省马鞍山市含山县",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "此前曾任含山县委副书记、常务副县长等职",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "2023",
+      "org": "含山县",
+      "title": "含山县委副书记（或县委常委、常务副县长等）",
+      "level": "副县级",
+      "location": "安徽省马鞍山市含山县",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到2023年前具体履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_含山县政府",
+      "name": "含山县人民政府",
+      "type": "政府",
+      "level": "县处级"
+    },
+    {
+      "org_id": "org_含山县委",
+      "name": "中共含山县委员会",
+      "type": "党委",
+      "level": "县处级"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "钱俊",
+      "person_id": "anhui_mashan_hanshan_qianjun",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "刘志远作为县长，钱俊作为县委书记，是含山县党政主官",
+      "overlap_org": "中共含山县委员会/含山县人民政府",
+      "overlap_period": "2023至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "黄飞",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "刘志远作为县长，黄飞作为常务副县长，是县政府领导班子的正副职关系",
+      "overlap_org": "含山县人民政府",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["含山县"],
+    "promotion_velocity": {
+      "summary": "在含山县逐步晋升，从县委常委晋升至县长",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现刘志远相关的纪律处分、审计问题或负面舆情",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "含山县人民政府网站 - 领导之窗",
+      "url": "https://www.ahhs.gov.cn/",
+      "publisher": "含山县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方网站显示县领导信息。由于网络限制，研究期间未能完整获取领导之窗页面数据。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "缺少刘志远的出生年月、出生地、学历教育和2023年前完整履历"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘志远的出生年月和出生地是什么？",
+      "why_it_matters": "此信息用于身份去重和基本档案",
+      "suggested_queries": ["刘志远 简历 含山", "刘志远 出生"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "刘志远2023年之前的职业履历是什么？",
+      "why_it_matters": "缺少从政经历的大段时间，无法评估职业模式和晋升轨迹",
+      "suggested_queries": ["刘志远 含山县 任职", "刘志远 含山 常务副县长"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "刘志远的学历教育背景是什么？",
+      "why_it_matters": "教育背景反映专业特长和知识结构",
+      "suggested_queries": ["刘志远 学历 含山"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
