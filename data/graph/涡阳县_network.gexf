@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>涡阳县（亳州市）领导班子工作关系网络 — 2026年7月研究数据</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="context" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="guoyang_feng_hao" label="冯浩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="涡阳县委书记"/>
+          <attvalue for="2" value="中共涡阳县委员会"/>
+          <attvalue for="3" value="1967-12"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="guoyang_li_feng" label="李丰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="涡阳县委副书记、县长"/>
+          <attvalue for="2" value="涡阳县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="guoyang_npc_chair" label="待核实（人大常委会主任）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="涡阳县人大常委会主任"/>
+          <attvalue for="2" value="涡阳县人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="guoyang_cppcc_chair" label="待核实（政协主席）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="涡阳县政协主席"/>
+          <attvalue for="2" value="涡阳县政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="guoyang_deputy_mayor_1" label="待核实（常务副县长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="涡阳县委常委、常务副县长"/>
+          <attvalue for="2" value="涡阳县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="guoyang_discipline_secretary" label="待核实（纪委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="涡阳县委常委、县纪委书记"/>
+          <attvalue for="2" value="中共涡阳县纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="guoyang_hu_mingwen" label="胡明文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="阜阳市委副书记、市长"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value="1970-07"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="bozhou_du_yanan" label="杜延安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="亳州市委书记"/>
+          <attvalue for="2" value="中共亳州市委员会"/>
+          <attvalue for="3" value="1966-10"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="org_guoyang_party_committee" label="中共涡阳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共亳州市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_guoyang_government" label="涡阳县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="亳州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_guoyang_npc" label="涡阳县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="亳州市人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_guoyang_cppcc" label="涡阳县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="亳州市政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_guoyang_cdc" label="中共涡阳县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="中共亳州市纪委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_guoyang_organization_dept" label="中共涡阳县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共涡阳县委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_bozhou_drc" label="亳州市发展和改革委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="亳州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_bozhou_gov_office" label="亳州市人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="亳州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="guoyang_feng_hao" target="org_guoyang_party_committee" label="涡阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="涡阳县委书记"/>
+          <attvalue for="3" value="2021?-"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="guoyang_li_feng" target="org_guoyang_government" label="涡阳县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="涡阳县委副书记、县长"/>
+          <attvalue for="3" value="2021?-"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="guoyang_hu_mingwen" target="org_guoyang_party_committee" label="涡阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="涡阳县委书记"/>
+          <attvalue for="3" value="2014-09-2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="guoyang_feng_hao" target="org_bozhou_drc" label="亳州市发展和改革委员会党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="亳州市发展和改革委员会党组书记、主任"/>
+          <attvalue for="3" value="2019-08-"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="guoyang_feng_hao" target="org_bozhou_gov_office" label="亳州市人民政府副秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="亳州市人民政府副秘书长"/>
+          <attvalue for="3" value="2016-06-2017-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="guoyang_feng_hao" target="guoyang_li_feng" label="县委班子搭档：县委书记与县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委班子搭档：县委书记与县长"/>
+          <attvalue for="3" value="2021?-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="guoyang_hu_mingwen" target="guoyang_feng_hao" label="前后任涡阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="前后任涡阳县委书记"/>
+          <attvalue for="3" value="交接期2021年"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="guoyang_feng_hao" target="bozhou_du_yanan" label="市委书记与涡阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="市委书记与涡阳县委书记"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

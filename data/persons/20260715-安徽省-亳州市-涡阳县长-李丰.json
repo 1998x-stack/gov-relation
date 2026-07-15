@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "亳州市",
+    "region": "涡阳县",
+    "job": "县长",
+    "task_id": "anhui_涡阳县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "guoyang_li_feng",
+    "name": "李丰",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李丰_未知",
+      "name_birthplace": "李丰_未知",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "涡阳县委副书记、县长",
+    "current_org": "涡阳县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到李丰的完整履历。根据亳州市数据库，确认其当前职务为涡阳县委副书记、县长。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_id": "guoyang_government", "org_name": "涡阳县人民政府", "role": "current", "confidence": "confirmed"},
+    {"org_id": "guoyang_party_committee", "org_name": "中共涡阳县委员会", "role": "current", "confidence": "confirmed"}
+  ],
+  "relationships": [
+    {
+      "person": "冯浩",
+      "person_id": "guoyang_feng_hao",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县长与县委书记搭档",
+      "overlap_org": "中共涡阳县委",
+      "overlap_period": "2021-至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "缺乏履历数据，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开信息不足以推断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "公开资料未发现李丰相关违纪、审计问题或负面报道（截至2026年7月）",
+      "date": "2026-07-15",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "亳州市_network.db（现有仓库数据库）",
+      "url": "",
+      "publisher": "gov-relation 仓库",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "确认李丰为涡阳县委副书记、县长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "李丰的出生年月、籍贯、学历和完整履历完全缺失，是最大的研究缺口"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李丰的具体出生年月、籍贯和学历背景？",
+      "why_it_matters": "最基本的个人身份信息缺失",
+      "suggested_queries": ["李丰 涡阳 县长 简历", "李丰 涡阳 履历", "李丰 安徽 亳州"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "李丰何时开始担任涡阳县长？前任县长是谁？",
+      "why_it_matters": "理解县级政府领导交接",
+      "suggested_queries": ["涡阳县 县长 任命 2021", "涡阳县 县长 前任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "李丰的完整职业履历？",
+      "why_it_matters": "了解其专业背景和治理能力",
+      "suggested_queries": ["李丰 涡阳 简历 出生"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
