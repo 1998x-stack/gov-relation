@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "信丰县",
+    "job": "县长",
+    "task_id": "jiangxi_信丰县",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_xinfeng_zhanglin_197410",
+    "name": "张琳",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1974-10",
+    "birthplace": "江西兴国",
+    "native_place": "江西兴国",
+    "education": [
+      {
+        "period": "",
+        "institution": "不详（研究生学历）",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张琳_1974-10",
+      "name_birthplace": "张琳_江西兴国",
+      "official_profile_url": "https://www.jxxf.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "信丰县委副书记、县长",
+    "current_org": "信丰县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2021",
+      "org": "未知",
+      "title": "未知职务",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到张琳2021年之前的履历信息",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "信丰县人民政府",
+      "title": "信丰县委副书记、县长",
+      "level": "县处级正职",
+      "location": "江西赣州信丰",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替袁炎任县长（袁炎2021年升任县委书记）",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    "信丰县人民政府",
+    "中共信丰县委员会"
+  ],
+  "relationships": [
+    {
+      "person": "袁炎",
+      "person_id": "jiangxi_xinfeng_yuanyan_197910",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "袁炎（书记）与张琳（县长）党政搭档工作",
+      "overlap_org": "中共信丰县委员会/信丰县人民政府",
+      "overlap_period": "2021-2025",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "李绍武",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "常务副县长，在张琳领导下工作",
+      "overlap_org": "信丰县人民政府",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "person": "黄蕙",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "张琳接替黄蕙任信丰县长",
+      "overlap_org": "信丰县人民政府",
+      "overlap_period": "2021",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["地方行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足以评价晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality_in_local_network": "high",
+    "key_connections_count": 3,
+    "career_moves_count": 1
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，无公开的纪律处分、调查或负面媒体报道",
+      "date": "2026-07-15",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "信丰县人民政府官方页面（通过存证数据）",
+      "url": "https://www.jxxf.gov.cn",
+      "publisher": "信丰县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "政府网站页面当前因网络限制不可直接访问"
+    },
+    {
+      "id": "S002",
+      "title": "赣州市级领导班子数据（build_ganzhou_remaining_data.py）",
+      "url": "",
+      "publisher": "项目内部数据",
+      "published_at": "2026-07",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "与袁炎同期的信丰县数据"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "2021年之前的完整履历完全缺失，教育背景信息不足"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "张琳2021年之前的完整履历是什么？",
+      "why_it_matters": "无法评估其职业背景、专业能力和地区联系",
+      "suggested_queries": ["张琳 信丰 县长 简历", "张琳 1974 兴国 履历", "张琳 信丰 工作经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "张琳的研究生学历就读于哪所院校、什么专业？",
+      "why_it_matters": "教育背景是干部档案重要组成部分",
+      "suggested_queries": ["张琳 信丰 学历", "张琳 研究生"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "张琳的出生月份具体是哪一天？",
+      "why_it_matters": "精确身份标识和去重",
+      "suggested_queries": ["张琳 出生 信丰县长"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "张琳的具体入党时间是？",
+      "why_it_matters": "干部政治生命起点",
+      "suggested_queries": ["张琳 入党时间"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "袁炎调走后，谁接任了信丰县委书记？",
+      "why_it_matters": "当前领导班子信息不完整",
+      "suggested_queries": ["信丰县委书记 2025 2026 新任"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
