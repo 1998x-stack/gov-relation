@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gov Relation Explorer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --panel: #ffffff;
+      --ink: #22231f;
+      --muted: #686b62;
+      --line: #d7d8d1;
+      --accent: #b3312b;
+      --gold: #9a7b2f;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+    header { padding: 24px clamp(16px, 4vw, 48px) 16px; border-bottom: 1px solid var(--line); background: var(--panel); }
+    h1 { margin: 0 0 8px; font-size: clamp(24px, 4vw, 42px); letter-spacing: 0; }
+    .sub { color: var(--muted); margin: 0; }
+    main { padding: 20px clamp(16px, 4vw, 48px) 48px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 18px; }
+    .stat, .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+    .stat { padding: 14px; }
+    .stat strong { display: block; font-size: 28px; color: var(--accent); }
+    .stat span { color: var(--muted); font-size: 13px; }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+    input, select { border: 1px solid var(--line); border-radius: 4px; padding: 10px 12px; min-height: 40px; background: white; color: var(--ink); }
+    input { flex: 1 1 260px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .panel { padding: 14px; min-width: 0; }
+    .panel h2 { margin: 0 0 12px; font-size: 18px; }
+    .list { display: grid; gap: 8px; max-height: 520px; overflow: auto; }
+    .item { border-top: 1px solid var(--line); padding: 9px 0; }
+    .item:first-child { border-top: 0; }
+    .item a { color: var(--ink); text-decoration: none; font-weight: 650; overflow-wrap: anywhere; }
+    .meta { color: var(--muted); font-size: 12px; margin-top: 3px; overflow-wrap: anywhere; }
+    .badge { color: var(--gold); font-weight: 650; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gov Relation Explorer</h1>
+    <p class="sub">SQLite、GEXF、人物 JSON 与调查报告索引</p>
+  </header>
+  <main>
+    <section class="stats" id="stats"></section>
+    <div class="toolbar">
+      <input id="q" placeholder="搜索数据库、报告、人物、地区">
+      <select id="type">
+        <option value="all">全部</option>
+        <option value="databases">数据库</option>
+        <option value="graphs">GEXF</option>
+        <option value="reports">报告</option>
+        <option value="persons">人物 JSON</option>
+      </select>
+    </div>
+    <section class="grid">
+      <div class="panel"><h2>数据库</h2><div class="list" id="databases"></div></div>
+      <div class="panel"><h2>图谱</h2><div class="list" id="graphs"></div></div>
+      <div class="panel"><h2>人物档案</h2><div class="list" id="persons"></div></div>
+      <div class="panel"><h2>报告</h2><div class="list" id="reports"></div></div>
+    </section>
+  </main>
+  <script>
+    const data = {};
+    const fmt = new Intl.NumberFormat("zh-CN");
+    const files = ["inventory", "databases", "graphs", "reports", "person_profiles", "database_summaries"];
+    const load = name => fetch(`assets/data/${name}.json`).then(r => r.ok ? r.json() : []);
+    Promise.all(files.map(load)).then(values => {
+      files.forEach((name, index) => data[name] = values[index]);
+      render();
+    }).catch(err => {
+      document.querySelector("main").insertAdjacentHTML("afterbegin", `<p class="meta">无法加载静态数据：${err}</p>`);
+    });
+    document.getElementById("q").addEventListener("input", render);
+    document.getElementById("type").addEventListener("change", render);
+    function match(row, q) {
+      return !q || JSON.stringify(row).toLowerCase().includes(q.toLowerCase());
+    }
+    function item(row, href) {
+      const title = row.person || row.name || row.stem || row.path;
+      const meta = [row.current_post, row.province, row.city, row.path, row.type].filter(Boolean).join(" · ");
+      return `<div class="item"><a href="${href || row.path}">${title}</a><div class="meta">${meta}</div></div>`;
+    }
+    function renderList(id, rows, kind, hrefPrefix = "../") {
+      const q = document.getElementById("q").value.trim();
+      const type = document.getElementById("type").value;
+      const el = document.getElementById(id);
+      if (type !== "all" && type !== kind) { el.innerHTML = ""; return; }
+      el.innerHTML = rows.filter(row => match(row, q)).slice(0, 150).map(row => item(row, hrefPrefix + row.path)).join("") || "<div class='meta'>无结果</div>";
+    }
+    function render() {
+      const inv = data.inventory || {};
+      document.getElementById("stats").innerHTML = [
+        ["Build scripts", inv.build_scripts],
+        ["Databases", inv.databases],
+        ["GEXF graphs", inv.graphs],
+        ["Person JSON", inv.person_profiles],
+        ["Reports", inv.reports],
+        ["DB missing GEXF", (inv.orphan_databases || []).length]
+      ].map(([label, value]) => `<div class="stat"><strong>${fmt.format(value || 0)}</strong><span>${label}</span></div>`).join("");
+      renderList("databases", data.databases || [], "databases");
+      renderList("graphs", data.graphs || [], "graphs");
+      renderList("persons", data.person_profiles || [], "persons");
+      renderList("reports", data.reports || [], "reports");
+    }
+  </script>
+</body>
+</html>
+

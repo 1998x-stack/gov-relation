@@ -8,3 +8,12 @@ __pycache__/
 # Backup files
 *.bak
 *.bak.*
+
+# Staged investigation artifacts
+data/tmp/*
+!data/tmp/.gitkeep
+data/dispatch_state.json
+data/dispatch_state.json.tmp
+data/dispatch_state.lock/
+logs/dispatch/
+logs/workers/
