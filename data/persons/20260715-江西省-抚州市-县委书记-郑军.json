@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "抚州市",
+    "region": "乐安县",
+    "job": "县委书记",
+    "task_id": "jiangxi_乐安县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "jiangxi_fuzhou_lean_zhengjun_1975",
+    "name": "郑军",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1975-01",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "大学",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "郑军_1975-01",
+      "name_birthplace": "郑军_",
+      "official_profile_url": "https://www.jxlean.gov.cn/col/col10214/index.html"
+    }
+  },
+  "current_status": {
+    "current_post": "乐安县委书记",
+    "current_org": "中共乐安县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-13",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2026-06",
+      "org": "乐安县人民政府",
+      "title": "乐安县委副书记、县长",
+      "level": "县处级正职",
+      "location": "江西省抚州市乐安县",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": false,
+      "notes": "2026年6月30日仍以县长身份活动（开展七一走访慰问）",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2026-07",
+      "end": "present",
+      "org": "中共乐安县委员会",
+      "title": "乐安县委书记",
+      "level": "县处级正职",
+      "location": "江西省抚州市乐安县",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "2026年7月7日以县委书记身份主持召开县委政协工作会议；7月13日深入园区调研。接替艾志峰",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003", "S004"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到郑军任乐安县长之前的履历。缺少：出生地、籍贯、入党时间、参加工作时间、教育经历（毕业院校/专业）、此前任职",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_lean_party",
+      "name": "中共乐安县委员会",
+      "type": "党委",
+      "level": "县处级",
+      "location": "江西省抚州市乐安县"
+    },
+    {
+      "org_id": "org_lean_gov",
+      "name": "乐安县人民政府",
+      "type": "政府",
+      "level": "县处级",
+      "location": "江西省抚州市乐安县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "艾志峰",
+      "person_id": "jiangxi_fuzhou_lean_aizhifeng",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "郑军接替艾志峰任乐安县委书记。2026年6月30日艾志峰仍以县委书记身份活动；2026年7月7日郑军已以县委书记身份主持会议",
+      "overlap_org": "中共乐安县委员会",
+      "overlap_period": "2026-06至2026-07过渡期",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S002", "S003"]
+    },
+    {
+      "person": "吴伟军",
+      "person_id": "jiangxi_fuzhou_lean_wuweijun_1977",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "郑军作为县委书记与县长候选人吴伟军共同出席县委政协工作会议（2026年7月7日）",
+      "overlap_org": "乐安县人民政府",
+      "overlap_period": "2026-07至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-07",
+      "domain": "industry",
+      "achievement_or_event": "深入园区部分重点企业调研生产经营情况",
+      "role_in_event": "县委书记，主持调研",
+      "measurable_outcome": "",
+      "location": "乐安县工业园区",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "other",
+      "achievement_or_event": "主持召开县委政协工作会议",
+      "role_in_event": "县委书记，发表讲话",
+      "measurable_outcome": "",
+      "location": "乐安县",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "other",
+      "achievement_or_event": "主持召开十五届县委全面依法治县委员会第五次会议",
+      "role_in_event": "县委书记，主持会议",
+      "measurable_outcome": "",
+      "location": "乐安县",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["江西省抚州市乐安县"],
+    "promotion_velocity": {
+      "summary": "从乐安县长晋升为乐安县委书记，属本地晋升",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "7月13日深入园区调研企业生产经营，关注实体经济",
+        "confidence": "plausible",
+        "source_ids": ["S004"]
+      }
+    ],
+    "speech_themes": ["政治协商", "民主监督", "参政议政", "工业经济发展"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开资料未发现郑军的风险或纪律处分信号。搜索范围：乐安县人民政府网站新闻报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "郑军·领导专页 - 乐安县人民政府",
+      "url": "https://www.jxlean.gov.cn/col/col10214/index.html",
+      "publisher": "乐安县人民政府",
+      "published_at": "2026-07",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "包含简历：男，汉族，1975年1月出生，大学学历，中共党员，现任乐安县委书记"
+    },
+    {
+      "id": "S002",
+      "title": "艾志峰、郑军开展'七一'走访慰问活动",
+      "url": "https://www.jxlean.gov.cn/art/2026/6/30/art_447_4457948.html",
+      "publisher": "乐安县融媒体中心",
+      "published_at": "2026-06-30",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "艾志峰以县委书记身份、郑军以县长身份开展七一走访"
+    },
+    {
+      "id": "S003",
+      "title": "县委政协工作会议召开 郑军出席并讲话",
+      "url": "https://www.jxlean.gov.cn/art/2026/7/7/art_447_4460141.html",
+      "publisher": "乐安县融媒体中心",
+      "published_at": "2026-07-07",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "郑军以县委书记身份出席，吴伟军以县长候选人身份主持"
+    },
+    {
+      "id": "S004",
+      "title": "郑军深入园区部分重点企业调研生产经营情况",
+      "url": "https://www.jxlean.gov.cn/art/2026/7/14/art_447_4461825.html",
+      "publisher": "乐安县融媒体中心",
+      "published_at": "2026-07-14",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "7月13日，县委书记郑军深入园区调研"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "任乐安县长之前的全部履历缺失：出生地、籍贯、入党时间、参加工作时间、教育经历（毕业院校/专业）、此前任职"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "郑军任乐安县长之前的履历是什么？",
+      "why_it_matters": "完整履历是评估其晋升路径、系统背景和关系网络的基础",
+      "suggested_queries": ["郑军 简历 乐安", "郑军 抚州 任职", "郑军 出生地 籍贯"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "郑军的毕业院校和专业是什么？",
+      "why_it_matters": "教育背景影响对其专业能力和关系网络（校友）的判断",
+      "suggested_queries": ["郑军 毕业 院校"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "郑军的籍贯和出生地是哪里？",
+      "why_it_matters": "籍贯信息有助于识别同乡关系和跨地区交流模式",
+      "suggested_queries": ["郑军 乐安 籍贯"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
