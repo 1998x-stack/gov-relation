@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "安庆市",
+    "region": "桐城市",
+    "job": "市长",
+    "task_id": "anhui_桐城市",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "anqing_tongcheng_wangjing",
+    "name": "王静",
+    "aliases": [],
+    "gender": "女",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "王静_",
+      "name_birthplace": "王静_",
+      "official_profile_url": "https://www.tongcheng.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "桐城市人民政府市长",
+    "current_org": "桐城市人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到王静完整履历。confirmed as 桐城市市长 as of July 2026 via official website: '王静主持召开市政府常务会议/市政府党组会议' 多次出现（2026-07-09, 2026-06-18, 2026-05-20等）。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "刘婉贞",
+      "person_id": "anqing_tongcheng_liuwanzhen",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "王静（市长）与刘婉贞（市委书记）为桐城市党政主要负责人",
+      "overlap_org": "桐城市人民政府/中共桐城市委员会",
+      "overlap_period": "present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "桂稳成",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "桂稳成作为常务副市长，协助王静主持市政府日常工作",
+      "overlap_org": "桐城市人民政府",
+      "overlap_period": "present",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026",
+      "domain": "economic_development",
+      "achievement_or_event": "主持召开招商引资工作推进会，强调'全力以赴抓招商上项目，精诚安商强产业促发展'",
+      "role_in_event": "主持",
+      "measurable_outcome": "",
+      "location": "桐城市",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "待查 - 缺乏完整履历数据",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "2026年5月在全市招商引资工作推进会上强调'全力以赴抓招商上项目，精诚安商强产业促发展'，体现经济发展导向",
+        "confidence": "plausible",
+        "source_ids": ["S002"]
+      }
+    ],
+    "speech_themes": ["招商引资", "产业发展", "营商环境"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-15，未发现王静的纪律处分、审计问题或负面报道",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "桐城市人民政府官网 - 政府会议",
+      "url": "https://www.tongcheng.gov.cn",
+      "publisher": "桐城市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "多次会议新闻确认王静市长身份"
+    },
+    {
+      "id": "S002",
+      "title": "桐城市人民政府官网 - 王静在全市招商引资工作推进会上强调",
+      "url": "https://www.tongcheng.gov.cn",
+      "publisher": "桐城市人民政府",
+      "published_at": "2026-05-30",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "招商引资工作会议讲话"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "王静完整履历（出生年份、籍贯、教育背景、任职经历）完全缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王静的出生年份、籍贯、教育背景是什么？",
+      "why_it_matters": "无法确认基本信息，影响人物身份识别",
+      "suggested_queries": ["王静 桐城市 市长 简历", "王静 出生"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "王静的完整职业履历（此前担任过哪些职务）？",
+      "why_it_matters": "无法判断其晋升路径和专业背景",
+      "suggested_queries": ["王静 桐城 任前公示", "王静 此前担任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "王静何时调任桐城市市长？前任是谁？",
+      "why_it_matters": "无法建立市长职位的传承链条",
+      "suggested_queries": ["桐城市长 王静 任命", "桐城市人民政府 市长 任免"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
