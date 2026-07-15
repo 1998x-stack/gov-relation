@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>义安区（铜陵市）领导班子工作关系网络 — 2026年7月</description>
+    <date>2026-07-15</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="birth" title="Birth" type="string"/>
+      <attribute id="birthplace" title="Birthplace" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="rank" title="Rank" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+    </attributes>
+    <nodes>
+    <node id="ya_fang_xiaoxiong" label="方小雄">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="待查"/>
+        <attvalue for="birthplace" value="待查"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_mayor_unknown" label="（区长待确认）">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="待查"/>
+        <attvalue for="birthplace" value="待查"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_wang_guangming" label="汪光明">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="待查"/>
+        <attvalue for="birthplace" value="待查"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_xu_changning" label="徐常宁">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="待查"/>
+        <attvalue for="birthplace" value="待查"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_yao_guiping" label="姚贵平">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="待查"/>
+        <attvalue for="birthplace" value="待查"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_yang_hongxing" label="杨宏星">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="1968-10"/>
+        <attvalue for="birthplace" value="安徽长丰"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_kong_tao" label="孔涛">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="1974-03"/>
+        <attvalue for="birthplace" value="山东烟台"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_wu_zuolu" label="吴祚麓">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="待查"/>
+        <attvalue for="birth" value="1968-11"/>
+        <attvalue for="birthplace" value="安徽怀宁"/>
+      </attvalues>
+      <viz:color r="160" g="160" b="160" a="1.0"/>
+      <viz:size value="15.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_party" label="中共铜陵市义安区委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委"/>
+      </attvalues>
+      <viz:color r="200" g="60" b="60" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_gov" label="义安区人民政府">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政府"/>
+      </attvalues>
+      <viz:color r="60" g="100" b="200" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_npc" label="铜陵市义安区人民代表大会常务委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="人大"/>
+      </attvalues>
+      <viz:color r="200" g="150" b="40" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="ya_cppcc" label="中国人民政治协商会议铜陵市义安区委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政协"/>
+      </attvalues>
+      <viz:color r="200" g="150" b="40" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_party" label="中共铜陵市委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委"/>
+      </attvalues>
+      <viz:color r="200" g="60" b="60" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_gov" label="铜陵市人民政府">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政府"/>
+      </attvalues>
+      <viz:color r="60" g="100" b="200" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_npc" label="铜陵市人大常委会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="人大"/>
+      </attvalues>
+      <viz:color r="200" g="150" b="40" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="tl_cppcc" label="中国人民政治协商会议铜陵市委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政协"/>
+      </attvalues>
+      <viz:color r="200" g="150" b="40" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    </nodes>
+    <edges>
+    <edge id="e1" source="ya_fang_xiaoxiong" target="ya_party" type="directed" label="义安区委书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="约2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="县处级正职"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e2" source="ya_fang_xiaoxiong" target="ya_gov" type="directed" label="义安区区长（前任）">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="约2022"/>
+        <attvalue for="end" value="约2024"/>
+        <attvalue for="rank" value="县处级正职"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e3" source="ya_wang_guangming" target="ya_npc" type="directed" label="义安区人大常委会主任">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="待查"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="县处级正职"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e4" source="ya_xu_changning" target="ya_cppcc" type="directed" label="义安区政协主席">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="待查"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="县处级正职"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e5" source="ya_yao_guiping" target="ya_party" type="directed" label="义安区委书记（前任）">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="约2021"/>
+        <attvalue for="end" value="约2024"/>
+        <attvalue for="rank" value="县处级正职"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e6" source="tl_yang_hongxing" target="tl_party" type="directed" label="铜陵市委书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2024-12"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正厅级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e7" source="tl_kong_tao" target="tl_gov" type="directed" label="铜陵市委副书记、市长">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2021-04"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正厅级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e8" source="tl_kong_tao" target="tl_party" type="directed" label="铜陵市委副书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2021-04"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正厅级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e9" source="tl_wu_zuolu" target="tl_cppcc" type="directed" label="铜陵市政协主席">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2026-01"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正厅级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e10" source="ya_yao_guiping" target="ya_fang_xiaoxiong" type="undirected" label="姚贵平→方小雄（义安区委书记前后任）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="职务接替"/>
+        <attvalue for="context" value="姚贵平→方小雄（义安区委书记前后任）"/>
+      </attvalues>
+      <viz:color r="184" g="149" b="62" a="0.8"/>
+      <viz:thickness value="2.5"/>
+    </edge>
+    <edge id="e11" source="ya_fang_xiaoxiong" target="ya_wang_guangming" type="undirected" label="区委书记×人大主任（推定工作关系）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系（推定）"/>
+        <attvalue for="context" value="区委书记×人大主任（推定工作关系）"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e12" source="ya_fang_xiaoxiong" target="ya_xu_changning" type="undirected" label="区委书记×政协主席（推定工作关系）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系（推定）"/>
+        <attvalue for="context" value="区委书记×政协主席（推定工作关系）"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e13" source="ya_fang_xiaoxiong" target="tl_yang_hongxing" type="undirected" label="义安区委书记×铜陵市委书记（上下级）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系（推定）"/>
+        <attvalue for="context" value="义安区委书记×铜陵市委书记（上下级）"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e14" source="ya_fang_xiaoxiong" target="tl_kong_tao" type="undirected" label="义安区委书记×铜陵市长（上下级）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系（推定）"/>
+        <attvalue for="context" value="义安区委书记×铜陵市长（上下级）"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e15" source="ya_yao_guiping" target="tl_kong_tao" type="undirected" label="原义安区委书记×铜陵市长（上下级）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系（推定）"/>
+        <attvalue for="context" value="原义安区委书记×铜陵市长（上下级）"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e16" source="ya_yao_guiping" target="tl_yang_hongxing" type="undirected" label="原义安区委书记×铜陵市委书记（上下级）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系（推定）"/>
+        <attvalue for="context" value="原义安区委书记×铜陵市委书记（上下级）"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    </edges>
+  </graph>
+</gexf>
