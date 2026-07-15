@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "瑶海区",
+    "job": "区长",
+    "task_id": "anhui_瑶海区",
+    "time_focus": "2021-present"
+  },
+  "identity": {
+    "person_id": "anhui_hefei_yaohai_tongyouhao_1982",
+    "name": "童友好",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1982-10",
+    "birthplace": "安徽合肥",
+    "native_place": "安徽合肥",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "2004",
+    "dedupe_keys": {
+      "name_birth": "童友好_1982-10",
+      "name_birthplace": "童友好_安徽合肥",
+      "official_profile_url": "待确认"
+    }
+  },
+  "current_status": {
+    "current_post": "瑶海区长",
+    "current_org": "瑶海区人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2004",
+      "end": "unknown",
+      "org": "合肥市基层",
+      "title": "基层工作",
+      "level": "",
+      "location": "合肥市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "2004年参加工作的早期履历未获取详细信息",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "2021-07",
+      "org": "合肥市相关单位",
+      "title": "县处级领导职务",
+      "level": "正处/副处",
+      "location": "合肥市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "2021年任瑶海区长之前在合肥市任职，具体岗位待确认。1982年出生，较年轻的正处级干部",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021-07",
+      "end": "present",
+      "org": "瑶海区人民政府",
+      "title": "瑶海区长",
+      "level": "正处级",
+      "location": "瑶海区",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "接替陆勤山任区长，与区委书记陆勤山搭档",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    "瑶海区人民政府",
+    "中共瑶海区委"
+  ],
+  "relationships": [
+    {
+      "person": "陆勤山",
+      "person_id": "anhui_hefei_yaohai_luqinshan_1972",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "陆勤山任区委书记、童友好任区长，为党政正职搭档关系",
+      "overlap_org": "瑶海区",
+      "overlap_period": "2021-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "丁秀雅",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区长与常务副区长的工作搭档关系",
+      "overlap_org": "瑶海区人民政府",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-",
+      "domain": "urban_construction",
+      "achievement_or_event": "领导瑶海区政府推进城市更新、老工业区搬迁改造",
+      "role_in_event": "区长（政府主要领导）",
+      "measurable_outcome": "",
+      "location": "瑶海区",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党政管理", "区域发展"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["合肥市"],
+    "promotion_velocity": {
+      "summary": "1982年出生，39岁即任正处级的瑶海区长，属于相对年轻的区县主官",
+      "notable_fast_promotions": ["2021年任瑶海区长（时年39岁）"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "low_profile",
+        "evidence": "公开报道和个人资料有限",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现童友好有关纪律处分、审计问题或负面媒体报道",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py — Hefei leadership network data",
+      "url": "https://github.com/user/gov-relation/blob/main/build_合肥市_data.py",
+      "publisher": "gov-relation repository",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "已有仓库内的合肥市领导班子数据，来源标注为'公开报道'"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2021年之前的完整履历（学历教育、早期任职经历、晋升轨迹）"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "童友好2004年参加工作后的完整履历是什么？2021年任区长前在何单位任职？",
+      "why_it_matters": "年轻正处级干部的完整履历对理解其晋升路径和关系网络至关重要",
+      "suggested_queries": ["童友好 简历 瑶海区", "童友好 合肥 任职", "童友好 2004"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "童友好的研究生学历详情？本科院校？",
+      "why_it_matters": "教育背景用于身份确认和dedupe",
+      "suggested_queries": ["童友好 教育背景 学历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
