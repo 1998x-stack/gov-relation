@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "寻乌县",
+    "job": "县委书记",
+    "task_id": "jiangxi_寻乌县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "xunwu_huangbin",
+    "name": "黄斌",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1983",
+    "birthplace": "江西",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "黄斌_1983",
+      "name_birthplace": "黄斌_江西",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "寻乌县委书记",
+    "current_org": "中共寻乌县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "共青团赣州市委员会",
+      "title": "共青团赣州市委副书记、党组成员",
+      "level": "县处级副职",
+      "location": "江西赣州",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "早期团口任职",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "2021-08",
+      "org": "中共寻乌县委员会",
+      "title": "寻乌县委常委、宣传部部长",
+      "level": "县处级副职",
+      "location": "江西赣州寻乌",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "在原柯岩松/蓝贤林班子时期任宣传部长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-08",
+      "end": "2026-07",
+      "org": "中共崇义县委员会",
+      "title": "崇义县委副书记、代县长→县长",
+      "level": "县处级正职",
+      "location": "江西赣州崇义",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2021-08任代县长，次月当选县长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2026-07",
+      "end": "present",
+      "org": "中共寻乌县委员会",
+      "title": "寻乌县委书记",
+      "level": "县处级正职",
+      "location": "江西赣州寻乌",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2026-07-07已以书记身份调研安全稳定工作；接替蓝贤林",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {"org": "共青团赣州市委员会", "role": "团委副书记"},
+    {"org": "中共寻乌县委员会", "role": "县委常委、宣传部部长"},
+    {"org": "中共崇义县委员会", "role": "副书记、县长"},
+    {"org": "中共寻乌县委员会", "role": "县委书记"}
+  ],
+  "relationships": [
+    {
+      "person": "何善祥",
+      "person_id": "xunwu_heshanxiang",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "黄斌任寻乌县委书记后与何善祥（县长）成为党政搭档",
+      "overlap_org": "寻乌县",
+      "overlap_period": "2026-07至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "柯岩松",
+      "person_id": "xunwu_keyansong",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "黄斌曾在柯岩松任县委书记期间任寻乌县委常委、宣传部部长",
+      "overlap_org": "中共寻乌县委员会",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "蓝贤林",
+      "person_id": "xunwu_lanxianlin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "黄斌接替蓝贤林任寻乌县委书记",
+      "overlap_org": "中共寻乌县委员会",
+      "overlap_period": "2026-07",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["共青团工作", "县域治理"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["party", "government", "youth_league"],
+    "geographic_pattern": ["赣州崇义", "赣州寻乌"],
+    "promotion_velocity": {
+      "summary": "2021-2026从县委常委直升县长再到县委书记，晋升速度较快",
+      "notable_fast_promotions": ["2021年从县委常委跨县任崇义县长", "2026年从崇义县长升任寻乌县委书记"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "新上任不到10天，尚无充分公开报道可供分析",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-15未发现任何纪律处分、审查调查或负面报道",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "黄斌任寻乌县委书记——网易新闻",
+      "url": "https://www.163.com/",
+      "publisher": "网易新闻/汲古新知",
+      "published_at": "2026-07-10",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "报道称黄斌1983年生，曾任共青团赣州市委副书记、寻乌县委宣传部长、崇义县长，7月7日已以寻乌县委书记身份调研"
+    },
+    {
+      "id": "S002",
+      "title": "黄斌调研督导安全稳定工作——寻乌县人民政府",
+      "url": "https://www.xunwu.gov.cn/",
+      "publisher": "寻乌县人民政府",
+      "published_at": "2026-07-07",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方确认黄斌以县委书记身份活动"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "1983年出生后至共青团任职前早期履历完全未知；教育背景（毕业院校、专业、学历）待查"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "黄斌的完整教育背景和早期职业生涯（1983年出生后至任共青团赣州市委副书记前的履历）",
+      "why_it_matters": "影响对县委书记履历完整性的评估；教育背景是个人画像的重要组成部分",
+      "suggested_queries": ["黄斌 出生 籍贯 教育背景", "黄斌 1983 个人简历", "黄斌 崇义 县长 简历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "黄斌在寻乌任宣传部长时的具体起止时间",
+      "why_it_matters": "有助于精确评估其在寻乌的任职时限和与柯岩松/蓝贤林的共事关系",
+      "suggested_queries": ["黄斌 寻乌 宣传部长 任职 时间"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

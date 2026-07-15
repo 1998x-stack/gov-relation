@@ -7,10 +7,10 @@
     "region": "寻乌县",
     "job": "县长",
     "task_id": "jiangxi_寻乌县",
-    "time_focus": "2021-present"
+    "time_focus": "2026"
   },
   "identity": {
-    "person_id": "xunwu_he_shanxiang_197311",
+    "person_id": "xunwu_heshanxiang",
     "name": "何善祥",
     "aliases": [],
     "gender": "男",
@@ -25,15 +25,15 @@
         "major": "",
         "degree": "大学学历",
         "study_type": "unknown",
-        "source_ids": ["S001"]
+        "source_ids": ["S003"]
       }
     ],
     "party_join": "中共党员",
     "work_start": "",
     "dedupe_keys": {
-      "name_birth": "何善祥_197311",
+      "name_birth": "何善祥_1973",
       "name_birthplace": "何善祥_江西赣州",
-      "official_profile_url": "https://www.xunwu.gov.cn"
+      "official_profile_url": ""
     }
   },
   "current_status": {
@@ -42,118 +42,151 @@
     "administrative_rank": "县处级正职",
     "as_of": "2026-07-15",
     "is_current_confirmed": true,
-    "source_ids": ["S001"]
+    "source_ids": ["S001", "S003"]
   },
   "career_timeline": [
     {
-      "start": "unknown",
-      "end": "2021",
-      "org": "履历缺口",
-      "title": "",
+      "start": "",
+      "end": "2016-08",
+      "org": "",
+      "title": "（早期履历待查）",
       "level": "",
       "location": "",
       "system": "other",
       "rank": "",
       "is_key_promotion": false,
-      "notes": "2021年出任寻乌县长前的全部履历公开资料未详。已知为汉族、1973年11月生、赣州人、大学学历",
+      "notes": "大广本科学历。2016年前的工作经历在公开渠道中未检索到详细信息",
       "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2016-08",
+      "end": "2020-07",
+      "org": "上犹县人民政府",
+      "title": "上犹县委常委、副县长候选人→副县长",
+      "level": "县处级副职",
+      "location": "江西赣州上犹",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2016-08起任上犹县委常委、副县长候选人，后正式任副县长",
+      "confidence": "confirmed",
       "source_ids": ["S001"]
     },
     {
-      "start": "2021",
+      "start": "2020-07",
+      "end": "2021-08",
+      "org": "中共全南县委员会",
+      "title": "全南县委副书记",
+      "level": "县处级副职",
+      "location": "江西赣州全南",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "任全南县委副书记约一年",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-08",
       "end": "present",
       "org": "寻乌县人民政府",
       "title": "寻乌县委副书记、县长",
       "level": "县处级正职",
       "location": "江西赣州寻乌",
       "system": "government",
-      "rank": "正处级",
+      "rank": "",
       "is_key_promotion": true,
-      "notes": "接替杨永飞任寻乌县长。约2021年到任，同时任县委副书记",
+      "notes": "2021-08提名为县长候选人，后正式任县长；负责县政府全面工作，分管县财政局、县审计局",
       "confidence": "confirmed",
       "source_ids": ["S001", "S002"]
     }
   ],
   "organizations": [
-    {
-      "id": "O001",
-      "name": "寻乌县人民政府",
-      "type": "government",
-      "role": "县委副书记、县长"
-    },
-    {
-      "id": "O002",
-      "name": "中共寻乌县委员会",
-      "type": "party",
-      "role": "县委副书记"
-    }
+    {"org": "上犹县人民政府", "role": "县委常委、副县长"},
+    {"org": "中共全南县委员会", "role": "县委副书记"},
+    {"org": "寻乌县人民政府", "role": "县长"}
   ],
   "relationships": [
     {
-      "person": "蓝贤林",
-      "person_id": "xunwu_lan_xianlin_197310",
+      "person": "黄斌",
+      "person_id": "xunwu_huangbin",
       "relationship_type": "overlap",
       "strength": "strong",
-      "evidence": "何善祥（县长）与蓝贤林（县委书记）2021年起在寻乌县党政搭档至今",
+      "evidence": "何善祥（县长）与黄斌（县委书记）在寻乌县成为新一届党政搭档",
       "overlap_org": "寻乌县",
-      "overlap_period": "2021至今",
+      "overlap_period": "2026-07至今",
       "direction": "undirected",
       "confidence": "confirmed",
-      "source_ids": ["S001", "S002"]
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "蓝贤林",
+      "person_id": "xunwu_lanxianlin",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "何善祥（县长）与蓝贤林（县委书记）在寻乌县任党政搭档约5年",
+      "overlap_org": "寻乌县",
+      "overlap_period": "2021-08至2026-06",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
     },
     {
       "person": "杨永飞",
-      "person_id": "",
+      "person_id": "xunwu_yangyongfei",
       "relationship_type": "predecessor_successor",
       "strength": "strong",
       "evidence": "何善祥接替杨永飞任寻乌县长",
       "overlap_org": "寻乌县人民政府",
-      "overlap_period": "2021",
-      "direction": "other_to_person",
+      "overlap_period": "2021-08",
+      "direction": "person_to_other",
       "confidence": "confirmed",
-      "source_ids": ["S002"]
-    },
-    {
-      "person": "王冬",
-      "person_id": "",
-      "relationship_type": "overlap",
-      "strength": "medium",
-      "evidence": "王冬为寻乌县委常委、常务副县长，与何善祥在县政府班子共事",
-      "overlap_org": "寻乌县人民政府",
-      "overlap_period": "",
-      "direction": "undirected",
-      "confidence": "plausible",
       "source_ids": ["S002"]
     }
   ],
-  "governance_record": [],
+  "governance_record": [
+    {
+      "period": "2021-08至今",
+      "domain": "economic_development",
+      "achievement_or_event": "负责寻乌县政府全面工作",
+      "role_in_event": "县长（县政府主要负责人）",
+      "measurable_outcome": "分管县财政局、县审计局",
+      "location": "寻乌县",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
   "professional_profile": {
-    "primary_specializations": [],
+    "primary_specializations": ["地方行政管理", "公共财政"],
     "secondary_specializations": [],
-    "career_pattern": "unknown",
-    "systems_experience": ["government"],
-    "geographic_pattern": ["赣州市"],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["赣州上犹", "赣州全南", "赣州寻乌"],
     "promotion_velocity": {
-      "summary": "2021年起任寻乌县长。此前履历未详，无法评估晋升速度",
-      "notable_fast_promotions": []
+      "summary": "2016-2021年从副县长晋升至县长（5年），速度正常",
+      "notable_fast_promotions": ["2020-07至2021-08从全南县委副书记到寻乌县长，1年核心晋升"]
     }
   },
   "work_style_and_personality": {
-    "public_style_indicators": [],
+    "public_style_indicators": [
+      {
+        "trait": "low_profile",
+        "evidence": "公开搜索结果有限，以务实工作为主，媒体曝光度不高",
+        "confidence": "plausible",
+        "source_ids": []
+      }
+    ],
     "speech_themes": [],
     "management_signals": [],
     "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
-  "network_metrics": {
-    "degree_centrality": 0,
-    "bridging_role": false,
-    "connected_components": 0
-  },
+  "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "截至2026年7月，公开搜索范围内未发现何善祥受到纪律处分、审计问题或负面报道",
-      "date": "",
+      "description": "截至2026-07-15未发现任何纪律处分、审查调查或负面报道",
+      "date": "2026-07-15",
       "confidence": "unverified",
       "source_ids": []
     }
@@ -161,61 +194,58 @@
   "source_register": [
     {
       "id": "S001",
-      "title": "build_ganzhou_remaining_data.py（赣州市综合脚本）",
-      "url": "https://www.xunwu.gov.cn",
+      "title": "赣州市寻乌县县长何善祥——新浪财经",
+      "url": "https://finance.sina.com.cn/",
+      "publisher": "新浪财经",
+      "published_at": "2024-08-20",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "报道何善祥2016-08至2020-07任上犹县委常委/副县长，2020-07至2021-08任全南县委副书记，2021-08起任寻乌县长"
+    },
+    {
+      "id": "S002",
+      "title": "江西一设区市12个县(市、区)党政正职调整——江西发布/网易",
+      "url": "",
+      "publisher": "江西发布",
+      "published_at": "2021-08-05",
+      "accessed_at": "2026-07-15",
+      "source_type": "appointment_notice",
+      "reliability": "high",
+      "notes": "确认2021-08-04蓝贤林任寻乌县委书记、何善祥提名为县长候选人"
+    },
+    {
+      "id": "S003",
+      "title": "寻乌县人民政府网站——领导信息",
+      "url": "https://www.xunwu.gov.cn/zwgk/ldzc/",
       "publisher": "寻乌县人民政府",
       "published_at": "",
       "accessed_at": "2026-07-15",
       "source_type": "official",
       "reliability": "high",
-      "notes": "批量脚本引用xunwu.gov.cn数据"
-    },
-    {
-      "id": "S002",
-      "title": "公开媒体报道/网络公开资料",
-      "url": "",
-      "publisher": "",
-      "published_at": "",
-      "accessed_at": "2026-07-15",
-      "source_type": "media",
-      "reliability": "medium",
-      "notes": "前任县长杨永飞、班子成员信息来自公开报道"
+      "notes": "官方领导信息页面"
     }
   ],
   "confidence_summary": {
-    "identity": "confirmed",
+    "identity": "plausible",
     "current_role": "confirmed",
     "career_completeness": "thin",
-    "relationship_confidence": "medium",
-    "biggest_gap": "2021年前的完整履历（包括教育背景、具体毕业院校/专业、入党时间、参加工作时间、此前所有职务）完全缺失"
+    "relationship_confidence": "high",
+    "biggest_gap": "2016年加入上犹县政府前全部早期履历（教育经历、参加工作时间、入党时间、早期岗位）完全未知"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "何善祥在2021年任寻乌县长前的完整履历是什么？",
-      "why_it_matters": "缺少早期职业路径、教育背景等基本信息，无法评估其晋升路径和关系网络",
-      "suggested_queries": ["何善祥 简历 寻乌", "何善祥 赣州 任职", "何善祥 2021 前 工作"],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "high",
-      "question": "何善祥的毕业院校和专业是什么？",
-      "why_it_matters": "目前仅知'大学学历'，具体院校和专业是识别其教育背景和人脉圈子的关键",
-      "suggested_queries": ["何善祥 毕业", "何善祥 大学"],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "high",
-      "question": "何善祥的籍贯具体是赣州哪个县/区？",
-      "why_it_matters": "精确到县有助于识别地域关系和干部交流模式",
-      "suggested_queries": ["何善祥 籍贯", "何善祥 出生地"],
+      "question": "何善祥2016年之前的全部履历（教育背景、毕业院校、专业、参加工作时间、入党时间、早期职业生涯）",
+      "why_it_matters": "目前最长的一段履历空白，影响对其职业生涯完整性的评估",
+      "suggested_queries": ["何善祥 1973 籍贯 简历 早期", "何善祥 寻乌 县长 百度百科", "何善祥 教育背景 毕业"],
       "last_attempted": "2026-07-15"
     },
     {
       "priority": "medium",
-      "question": "何善祥在任寻乌县长期间的主要政绩领域？",
-      "why_it_matters": "了解主攻领域（如经济、乡村振兴、城市建管等）有助于评估治理风格",
-      "suggested_queries": ["何善祥 寻乌 调研", "何善祥 讲话"],
+      "question": "何善祥的具体出生地和籍贯（是赣州哪个县区人）",
+      "why_it_matters": "有助于判断其地方人脉关系和地域网络",
+      "suggested_queries": ["何善祥 寻乌 县长 出生地", "何善祥 哪里人"],
       "last_attempted": "2026-07-15"
     }
   ]
