@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-15 (Updated with 石城县 investigation)
+> Last updated: 2026-07-15 (Updated with 吉安县 investigation — partial evidence mode; external search tools unavailable)
 
 ## Resolved
 
@@ -24,6 +24,14 @@
 | **吉州区领导班子** | **区委常委/副区长/人大/政协** | 共9名班子副职的全部个人信息 | 2026-07-15 | 结构角色已建，姓名全部待核实。 |
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+### 吉安市吉安县（新 - 2026-07-15）
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| **（待核实）** | **吉安县委书记** | 姓名、性别、出生年月、籍贯、教育背景、全部履历 | 2026-07-15 | jian.gov.cn领导之窗子页面全部返回403，外部搜索工具全部不可用。结构数据（组织、职务框架）已建。 |
+| **（待核实）** | **吉安县县长** | 姓名、性别、出生年月、籍贯、教育背景、全部履历 | 2026-07-15 | 同上。 |
+| **吉安县领导班子** | **县委副书记/副县长/纪委书记等** | 共8名常委副职+4名副县长+人大主任+政协主席的全部个人信息 | 2026-07-15 | 结构角色已建，姓名全部待核实。 |
 
 ### 赣州市龙南市（新）
 

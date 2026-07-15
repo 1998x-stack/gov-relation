@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "吉安市",
+    "region": "吉安县",
+    "job": "县委书记",
+    "task_id": "jiangxi_吉安县",
+    "time_focus": "2026",
+    "evidence_status": "partial"
+  },
+  "identity": {
+    "person_id": "jianxian_party_secretary_pending",
+    "name": "（待核实）",
+    "aliases": [],
+    "gender": "",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": "https://www.jian.gov.cn/col/col2774/index.html（领导之窗子页面403不可访问）"
+    }
+  },
+  "current_status": {
+    "current_post": "吉安县委书记",
+    "current_org": "中共吉安县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": []
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共吉安县委员会",
+      "title": "吉安县委书记",
+      "level": "县处级",
+      "location": "江西吉安",
+      "system": "party",
+      "rank": "正职",
+      "is_key_promotion": false,
+      "notes": "当前县委书记姓名因官方站点子页面403不可访问、外部搜索工具全部不可用而无法确认。待jian.gov.cn恢复访问后补全。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_jianxian_cpc",
+      "name": "中共吉安县委员会",
+      "type": "党委",
+      "level": "县处级",
+      "parent": "中共吉安市委",
+      "location": "江西吉安"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "（待核实）",
+      "person_id": "jianxian_mayor_pending",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县委书记与县长为吉安县党政正职搭档",
+      "overlap_org": "吉安县",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": []
+    },
+    {
+      "person": "严允",
+      "person_id": "jianxian_yan_yun",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "县委书记受吉安市委书记领导",
+      "overlap_org": "吉安市-吉安县",
+      "overlap_period": "2026-04至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "无数据",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "degree": 0,
+    "betweenness": 0.0
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "无法进行搜索评估。jian.gov.cn领导之窗子页面403，外部搜索工具不可用。",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "吉安市人民政府官网-区县网站导航",
+      "url": "https://www.jian.gov.cn/",
+      "publisher": "吉安市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "首页可访问，领导之窗等子页面全部返回403。区县网站导航链接可用。"
+    },
+    {
+      "id": "S002",
+      "title": "吉安市领导班子数据库（现有）",
+      "url": "build_jian_data.py",
+      "publisher": "内部数据",
+      "published_at": "2026-07-14",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "来自之前调查的吉安市领导班子数据，含严允、吴艳玲、陈定宇、龚平秋等市领导信息。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "当前吉安县委书记姓名、教育背景、履历全部未知。jian.gov.cn领导之窗不可访问。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "当前吉安县委书记姓名是什么？",
+      "why_it_matters": "县委书记是地区核心领导人，其身份是整项调查的基础。",
+      "suggested_queries": [
+        "吉安县 县委书记 2025 2026",
+        "吉安县委书记 任命",
+        "site:jian.gov.cn 吉安县委书记",
+        "吉安市委组织部 吉安县 任前公示"
+      ],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "吉安县委书记的完整履历、学历背景、出生年月是什么？",
+      "why_it_matters": "完善人物画像和关系网络分析的基础信息。",
+      "suggested_queries": [
+        "吉安县委书记 简历",
+        "吉安县委书记 出生 籍贯"
+      ],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "吉安县委书记的前任是谁？从何处调任？",
+      "why_it_matters": "构建职务更替关系链。",
+      "suggested_queries": [
+        "吉安县 原县委书记",
+        "吉安县委书记 调任"
+      ],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
