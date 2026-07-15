@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>临泉县领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="rank" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="plinquan_jiang_liguo" label="江利国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泉县委书记"/>
+          <attvalue for="2" value="中共临泉县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="plinquan_wang_feilong" label="王飞虎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泉县委副书记、县长"/>
+          <attvalue for="2" value="临泉县人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="plinquan_liang_yongqin" label="梁永勤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原临泉县委书记，已调任）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="plinquan_duan_xianglin" label="段相霖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原阜阳师范大学党委副书记，已被双开）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="plinquan_zhao_qun" label="赵群">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍东区委书记"/>
+          <attvalue for="2" value="中共阜阳市颍东区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共临泉县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="临泉县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="临泉县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="临泉县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共阜阳市颍东区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共阜阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="阜阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="阜阳市财政局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="阜阳经开区党工委、管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="阜阳师范大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="plinquan_jiang_liguo" target="o1" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持县委全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="plinquan_jiang_liguo" target="o2" label="县长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任临泉县委副书记、县长。具体任职时间待核实"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="plinquan_wang_feilong" target="o1" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泉县委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="plinquan_wang_feilong" target="o2" label="县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="领导县政府全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="plinquan_liang_yongqin" target="o1" label="县委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任临泉县委书记。调任去向待查。"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="plinquan_duan_xianglin" target="o2" label="县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泉县委常委、常务副县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="plinquan_duan_xianglin" target="o8" label="局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市财政局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="plinquan_duan_xianglin" target="o9" label="党工委书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳经开区党工委书记、管委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="plinquan_duan_xianglin" target="o10" label="党委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳师范大学党委副书记，2025年4月被查"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="plinquan_zhao_qun" target="o5" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市颍东区委书记，临泉籍"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="plinquan_jiang_liguo" target="plinquan_wang_feilong" label="临泉县党政一把手，江利国任县委书记后王飞虎接任县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="临泉县党政一把手，江利国任县委书记后王飞虎接任县长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2024-"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="plinquan_jiang_liguo" target="plinquan_liang_yongqin" label="江利国接替梁永勤任临泉县委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="江利国接替梁永勤任临泉县委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2024"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="plinquan_jiang_liguo" target="plinquan_duan_xianglin" label="段相霖曾任临泉县委常委、常务副县长，与江利国在临泉县领导班子有任职时间重叠" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="段相霖曾任临泉县委常委、常务副县长，与江利国在临泉县领导班子有任职时间重叠"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="~2021-2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="plinquan_jiang_liguo" target="plinquan_zhao_qun" label="赵群为临泉人，与临泉县领导班子有地缘联系" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵群为临泉人，与临泉县领导班子有地缘联系"/>
+          <attvalue for="2" value="weak"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="plinquan_duan_xianglin" target="plinquan_zhao_qun" label="段相霖（阜阳经开区）、赵群（颍东区）均为阜阳市下辖县区领导干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="段相霖（阜阳经开区）、赵群（颍东区）均为阜阳市下辖县区领导干部"/>
+          <attvalue for="2" value="weak"/>
+          <attvalue for="3" value="2022-"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
