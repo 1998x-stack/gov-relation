@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>休宁县（安徽省黄山市）领导关系网络 — 县委书记、县长及县委常委领导班子</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="唐进">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委书记"/>
+          <attvalue for="2" value="中共休宁县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="汪盛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委副书记、县长（推定）"/>
+          <attvalue for="2" value="休宁县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p3" label="季必俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委副书记"/>
+          <attvalue for="2" value="中共休宁县委员会"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p4" label="郑美风">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委常委、常务副县长"/>
+          <attvalue for="2" value="休宁县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="程志强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共休宁县纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="金学年">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委常委、组织部部长"/>
+          <attvalue for="2" value="中共休宁县委员会组织部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="洪洁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共休宁县委员会宣传部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="赵世奇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委常委、政法委书记"/>
+          <attvalue for="2" value="中共休宁县委员会政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="潘武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="休宁县委常委、统战部部长"/>
+          <attvalue for="2" value="中共休宁县委员会统一战线工作部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="吴云忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山市委常委、秘书长、政法委书记"/>
+          <attvalue for="2" value="中共黄山市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p11" label="卢邦生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山市人大常委会副主任、市总工会主席"/>
+          <attvalue for="2" value="黄山市人大常委会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共休宁县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="休宁县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共休宁县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共休宁县委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共休宁县委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共休宁县委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共休宁县委员会统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="休宁县">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="行政区域"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="休宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月9日任命。主持县委全面工作。"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="休宁县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="约2023年任县长至2026年7月升任书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="休宁县委副书记、县长（推定）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年1月30日选举进入县级领导岗位。唐进升书记后推定接任县长。"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o1" label="休宁县委副书记（推定）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="推定县委副书记兼县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o1" label="休宁县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="专职副书记，协助书记处理日常党务工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o2" label="休宁县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="负责县政府常务工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p4" target="o1" label="休宁县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o3" label="休宁县委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管纪检监察工作，此前任黄山市纪委监委相关职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o1" label="休宁县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o4" label="休宁县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管组织人事工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p6" target="o1" label="休宁县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="o5" label="休宁县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管宣传思想文化工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p7" target="o1" label="休宁县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p8" target="o6" label="休宁县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管政法维稳工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p8" target="o1" label="休宁县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p9" target="o7" label="休宁县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管统一战线工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p9" target="o1" label="休宁县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p10" target="o1" label="休宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任县委书记，约2026年5月升任黄山市委常委。"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p10" target="o2" label="休宁县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任县长，后升任县委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p11" target="o1" label="休宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任县委书记，后任黄山市人大常委会副主任。"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进（县委书记）与汪盛（县长推定）为休宁县新的党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进（县委书记）与季必俊（县委副书记）同为县委领导班子成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进（书记/前县长）与郑美风（常务副县长）长期搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进与程志强（纪委书记）同为县委领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进与金学年（组织部长）同为县委领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进与洪洁（宣传部长）同为县委领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进与赵世奇（政法委书记）同为县委领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进与潘武（统战部长）同为县委领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="汪盛（推定县长）与郑美风（常务副县长）为县政府正副职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p10" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进接替吴云忠任休宁县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p11" target="p10" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴云忠接替卢邦生任休宁县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p10" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="唐进接替吴云忠（时任）任休宁县县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p10" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴云忠从县长升任县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="季必俊（副书记）与郑美风（常务副县长）同为县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p6" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="金学年（组织部长）与洪洁（宣传部长）同为县委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p8" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵世奇（政法委书记）与潘武（统战部长）同为县委常委会成员"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

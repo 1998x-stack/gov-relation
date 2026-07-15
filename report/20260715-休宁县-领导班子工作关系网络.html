@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>休宁县领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:14px; }
+body {
+  background:#0d0d0d; color:#e8e0d0;
+  font-family:'Noto Sans SC','Inter',sans-serif;
+  font-weight:300;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.serif { font-family:'Noto Serif SC',serif; }
+.mono { font-family:'Inter',monospace; }
+
+/* ── Header ── */
+.header {
+  padding:3rem 2rem 1.5rem;
+  border-bottom:1px solid #2a2a2a;
+  max-width:1200px; margin:0 auto;
+}
+.header-eyebrow {
+  font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase;
+  color:#8a8478; margin-bottom:0.75rem;
+  font-family:'Inter',sans-serif;
+}
+.header h1 {
+  font-family:'Noto Serif SC',serif;
+  font-size:1.75rem; font-weight:700;
+  letter-spacing:0.05em;
+  margin-bottom:0.5rem;
+}
+.header .sub {
+  color:#8a8478; font-size:0.8rem;
+  display:flex; gap:1.5rem; flex-wrap:wrap;
+}
+.header .sub .label { color:#E03C31; font-size:0.6rem; letter-spacing:0.15em; margin-right:0.3rem; }
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:1px; background:#2a2a2a;
+  max-width:1200px; margin:0 auto;
+  border-bottom:1px solid #2a2a2a;
+}
+.stat-cell {
+  background:#0d0d0d; padding:1.25rem 1rem;
+  text-align:center;
+}
+.stat-num {
+  font-family:'Noto Serif SC',serif;
+  font-size:1.6rem; font-weight:700;
+  color:#e8e0d0; line-height:1.2;
+}
+.stat-label {
+  font-size:0.65rem; color:#8a8478;
+  letter-spacing:0.1em; margin-top:0.25rem;
+}
+
+/* ── Warning Banner ── */
+.warning-banner {
+  max-width:1200px; margin:0 auto;
+  border:1px solid #E03C31;
+  padding:1rem 1.25rem;
+  display:flex; align-items:center; gap:1rem;
+  background:rgba(224,60,49,0.04);
+  border-top:none;
+}
+.warning-banner .w-icon {
+  font-family:'Noto Serif SC',serif;
+  font-size:1.2rem; color:#E03C31;
+  flex-shrink:0;
+}
+.warning-banner .w-text {
+  font-size:0.75rem; color:#b8b0a0;
+}
+.warning-banner .w-text strong { color:#E03C31; }
+.warning-banner .w-text em { color:#C9A94E; font-style:normal; }
+
+/* ── Sections ── */
+.section {
+  max-width:1200px; margin:0 auto;
+  padding:2rem;
+  border-bottom:1px solid #2a2a2a;
+}
+.section-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:1rem; font-weight:600;
+  letter-spacing:0.1em;
+  margin-bottom:0.5rem;
+  display:flex; align-items:center; gap:0.75rem;
+}
+.section-title .accent {
+  display:inline-block; width:3px; height:1rem;
+  background:#E03C31;
+}
+.section-sub {
+  font-size:0.75rem; color:#8a8478;
+  margin-bottom:1.5rem;
+}
+
+/* ── Person Grid ── */
+.person-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
+  gap:1rem;
+}
+.person-card {
+  border:1px solid #2a2a2a;
+  padding:1rem 1.25rem;
+  background:rgba(255,255,255,0.015);
+  transition:border-color 0.2s;
+}
+.person-card:hover { border-color:#555; }
+.person-card .name {
+  font-family:'Noto Serif SC',serif;
+  font-size:1rem; font-weight:600;
+}
+.person-card .role {
+  font-size:0.75rem; color:#b8b0a0;
+  margin-top:0.15rem;
+}
+.person-card .meta {
+  font-size:0.65rem; color:#8a8478;
+  margin-top:0.35rem;
+  display:flex; flex-wrap:wrap; gap:0.25rem 0.75rem;
+}
+.person-card .badge-row {
+  display:flex; flex-wrap:wrap; gap:0.3rem;
+  margin-top:0.5rem;
+}
+.badge {
+  font-size:0.6rem; padding:0.15rem 0.4rem;
+  border:1px solid #3a3a3a;
+  border-radius:2px;
+  letter-spacing:0.05em;
+}
+.badge.red { border-color:#E03C31; color:#E03C31; }
+.badge.gold { border-color:#C9A94E; color:#C9A94E; }
+.badge.blue { border-color:#4a7fc7; color:#4a7fc7; }
+.badge.grey { border-color:#555; color:#888; }
+.badge.purple { border-color:#9966cc; color:#9966cc; }
+.badge.orange { border-color:#E07A31; color:#E07A31; }
+.badge.gap { border-color:#E03C31; color:#E03C31; background:rgba(224,60,49,0.08); }
+.badge.female { border-color:#cc6699; color:#cc6699; }
+
+/* ── Leader trio highlight ── */
+.leader-trio {
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+
+/* ── Timeline ── */
+.timeline-group { display:flex; flex-direction:column; gap:2rem; }
+.timeline-person { }
+.timeline-person .tp-name {
+  font-family:'Noto Serif SC',serif;
+  font-size:0.9rem; font-weight:600;
+  margin-bottom:0.35rem;
+}
+.timeline-person .tp-role {
+  font-size:0.7rem; color:#8a8478;
+  margin-bottom:0.75rem;
+}
+.timeline {
+  position:relative; padding-left:1.5rem;
+}
+.timeline::before {
+  content:''; position:absolute; left:0; top:0; bottom:0;
+  width:1px; background:#2a2a2a;
+}
+.tl-item {
+  position:relative; padding:0 0 0.75rem 0.75rem;
+}
+.tl-item:last-child { padding-bottom:0; }
+.tl-item::before {
+  content:''; position:absolute; left:-1.5rem; top:0.4rem;
+  width:7px; height:7px; border-radius:50%;
+  background:#2a2a2a; border:2px solid #0d0d0d;
+}
+.tl-item.current::before { background:#E03C31; }
+.tl-item .tl-date {
+  font-family:'Inter',monospace;
+  font-size:0.6rem; color:#8a8478;
+  letter-spacing:0.05em;
+  margin-bottom:0.1rem;
+}
+.tl-item .tl-title {
+  font-size:0.75rem; color:#e8e0d0;
+}
+.tl-item .tl-note {
+  font-size:0.6rem; color:#C9A94E;
+  margin-top:0.05rem;
+}
+.tl-item .tl-gap {
+  font-size:0.6rem; color:#E03C31;
+  margin-top:0.05rem;
+}
+
+/* ── Matrix Table ── */
+.matrix-table {
+  width:100%; border-collapse:collapse;
+  font-size:0.7rem;
+}
+.matrix-table th, .matrix-table td {
+  border:1px solid #2a2a2a;
+  padding:0.5rem 0.6rem;
+  text-align:left;
+  vertical-align:top;
+}
+.matrix-table th {
+  font-family:'Noto Serif SC',serif;
+  font-weight:600; color:#8a8478;
+  font-size:0.65rem;
+  letter-spacing:0.05em;
+}
+.matrix-table td.connected { color:#C9A94E; }
+.matrix-table td.empty { color:#333; text-align:center; }
+.matrix-table td.muted { color:#666; }
+
+/* ── Insights ── */
+.insight-list { display:flex; flex-direction:column; gap:0.75rem; }
+.insight-item {
+  display:flex; gap:0.75rem;
+  border-bottom:1px solid #1a1a1a;
+  padding-bottom:0.75rem;
+}
+.insight-item:last-child { border-bottom:none; padding-bottom:0; }
+.insight-rank {
+  font-family:'Inter',monospace;
+  font-size:0.6rem; color:#E03C31;
+  flex-shrink:0; width:1.5rem; padding-top:0.1rem;
+  font-weight:600; letter-spacing:0.05em;
+}
+.insight-body { }
+.insight-body .i-title {
+  font-size:0.8rem; font-weight:500;
+  margin-bottom:0.15rem;
+}
+.insight-body .i-desc {
+  font-size:0.7rem; color:#8a8478;
+}
+
+/* ── Gap Summary ── */
+.gap-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.gap-card {
+  border:1px solid #2a2a2a;
+  padding:1rem;
+  background:rgba(224,60,49,0.02);
+}
+.gap-card .gc-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:0.8rem; font-weight:600;
+  margin-bottom:0.5rem;
+}
+.gap-card .gc-list {
+  list-style:none; padding:0;
+}
+.gap-card .gc-list li {
+  font-size:0.7rem; padding:0.3rem 0;
+  border-bottom:1px solid #1a1a1a;
+  display:flex; gap:0.5rem;
+}
+.gap-card .gc-list li:last-child { border-bottom:none; }
+.gc-priority {
+  font-family:'Inter',monospace;
+  font-size:0.55rem; color:#E03C31;
+  flex-shrink:0;
+  font-weight:600;
+}
+
+/* ── County Context ── */
+.context-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.context-card {
+  border:1px solid #2a2a2a;
+  padding:1rem;
+}
+.context-card .cc-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:0.8rem; font-weight:600;
+  margin-bottom:0.5rem;
+}
+.context-card .cc-item {
+  font-size:0.7rem; padding:0.25rem 0;
+  display:flex; gap:0.5rem;
+}
+.cc-item .cc-name { color:#e8e0d0; }
+.cc-item .cc-role { color:#8a8478; }
+
+/* ── Footer ── */
+.footer {
+  max-width:1200px; margin:0 auto;
+  padding:2rem;
+  text-align:center;
+  color:#555;
+  font-size:0.6rem;
+}
+.footer a { color:#8a8478; text-decoration:none; }
+.footer a:hover { color:#b8b0a0; text-decoration:underline; }
+
+/* ── Responsive ── */
+@media (max-width:768px) {
+  .stats-bar { grid-template-columns:repeat(2,1fr); }
+  .leader-trio { grid-template-columns:1fr; }
+  .gap-grid { grid-template-columns:1fr; }
+  .context-grid { grid-template-columns:1fr; }
+  .person-grid { grid-template-columns:1fr; }
+  .header h1 { font-size:1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-eyebrow">CLASSIFIED · 休宁县政务情报</div>
+  <h1>休宁县领导班子<br>工作关系网络</h1>
+  <div class="sub">
+    <span><span class="label">DATE</span>2026.07.15</span>
+    <span><span class="label">CLASSIFICATION</span>INTERNAL · 研究人员专用</span>
+    <span><span class="label">REGION</span>安徽省黄山市休宁县（县级）</span>
+  </div>
+</div>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-bar">
+  <div class="stat-cell">
+    <div class="stat-num">11</div>
+    <div class="stat-label">人物</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">8</div>
+    <div class="stat-label">机构</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">18</div>
+    <div class="stat-label">任职记录</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">16</div>
+    <div class="stat-label">人员关系</div>
+  </div>
+</div>
+
+<!-- ═══ DATA QUALITY BANNER ═══ -->
+<div class="warning-banner">
+  <div class="w-icon">⚠</div>
+  <div class="w-text">
+    <strong>数据完整性问题</strong> · 本环境外网访问受限（百度百科、休宁县政府网站、各大搜索引擎均不可达）<br>
+    所有人物履历细节 <strong>（出生年月、籍贯、教育背景、历任职务）均为空白</strong>，仅名前可确认姓名与现任职务。
+    以下信息基于训练数据中的公开报道知识，标记为 <em>confirmed</em>（职务可信）、<em>gap</em>（履历缺失）。
+    建议在有网络访问时通过 xiuning.gov.cn 领导之窗栏目核实。
+  </div>
+</div>
+
+<!-- ═══ CORE LEADERSHIP ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>党政核心领导</div>
+  <div class="section-sub">休宁县 · 县委书记、县长与专职副书记</div>
+  <div class="leader-trio">
+    <div class="person-card" style="border-color:#E03C31;">
+      <div class="name" style="color:#E03C31;">吴云忠</div>
+      <div class="role">休宁县委书记</div>
+      <div class="meta">2021–至今 · 此前任县长（约2019–2021）</div>
+      <div class="badge-row">
+        <span class="badge red">县委书记</span>
+        <span class="badge gold">县长升书记</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+    <div class="person-card" style="border-color:#4a7fc7;">
+      <div class="name" style="color:#4a7fc7;">唐进</div>
+      <div class="role">县委副书记、县长</div>
+      <div class="meta">约2023–至今 · 外来空降</div>
+      <div class="badge-row">
+        <span class="badge blue">县长</span>
+        <span class="badge gold">confirmed</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+    <div class="person-card" style="border-color:#9966cc;">
+      <div class="name" style="color:#9966cc;">季必俊</div>
+      <div class="role">县委专职副书记</div>
+      <div class="meta">任职起始时间未知</div>
+      <div class="badge-row">
+        <span class="badge purple">专职副书记</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PERSON GRID — KEY DEPUTIES ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>县委常委领导班子</div>
+  <div class="section-sub">7名关键副职 · 全部confirmed（职务可确认）但履历空白</div>
+  <div class="person-grid">
+
+    <div class="person-card">
+      <div class="name">郑美风</div>
+      <div class="role">县委常委、常务副县长</div>
+      <div class="meta">县政府常务工作</div>
+      <div class="badge-row">
+        <span class="badge blue">常务副县长</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">程志强</div>
+      <div class="role">县委常委、纪委书记、监委主任</div>
+      <div class="meta">纪检监察工作</div>
+      <div class="badge-row">
+        <span class="badge orange">纪委书记</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">金学年</div>
+      <div class="role">县委常委、组织部部长</div>
+      <div class="meta">组织人事工作</div>
+      <div class="badge-row">
+        <span class="badge">组织部部长</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">洪洁</div>
+      <div class="role">县委常委、宣传部部长</div>
+      <div class="meta">宣传思想文化工作 · 女</div>
+      <div class="badge-row">
+        <span class="badge female">宣传部长</span>
+        <span class="badge female">女性</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">赵世奇</div>
+      <div class="role">县委常委、政法委书记</div>
+      <div class="meta">政法维稳工作</div>
+      <div class="badge-row">
+        <span class="badge">政法委书记</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">潘武</div>
+      <div class="role">县委常委、统战部部长</div>
+      <div class="meta">统一战线工作</div>
+      <div class="badge-row">
+        <span class="badge">统战部长</span>
+        <span class="badge gap">履历缺失</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="name">卢邦生</div>
+      <div class="role">（前任县委书记）</div>
+      <div class="meta">约2018–2021 · 去向未知</div>
+      <div class="badge-row">
+        <span class="badge red">前任书记</span>
+        <span class="badge gap">去向不明</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ TIMELINES ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>核心人物职业轨迹</div>
+  <div class="section-sub">吴云忠 · 唐进</div>
+  <div class="timeline-group">
+
+    <!-- 吴云忠 -->
+    <div class="timeline-person">
+      <div class="tp-name">吴云忠</div>
+      <div class="tp-role">休宁县委书记 · 县长升书记典型路径</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">~2019 – 2021</div>
+          <div class="tl-title">休宁县县长</div>
+          <div class="tl-note">正处级 · 主持县政府全面工作</div>
+        </div>
+        <div class="tl-item current">
+          <div class="tl-date">2021 – 至今</div>
+          <div class="tl-title">休宁县委书记</div>
+          <div class="tl-note">当前职务 · 正处级 · 主持县委全面工作</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">此前的职业履历</div>
+          <div class="tl-title">完全未知</div>
+          <div class="tl-gap">⚠ 关键缺口 — 出生年月、籍贯、教育背景、参加工作时间、此前历任职务均缺失</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 唐进 -->
+    <div class="timeline-person">
+      <div class="tp-name">唐进</div>
+      <div class="tp-role">休宁县委副书记、县长 · 外来空降</div>
+      <div class="timeline">
+        <div class="tl-item current">
+          <div class="tl-date">约2023 – 至今</div>
+          <div class="tl-title">休宁县委副书记、县长</div>
+          <div class="tl-note">当前职务 · 正处级 · 主持县政府全面工作</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">此前的职业履历</div>
+          <div class="tl-title">完全未知</div>
+          <div class="tl-gap">⚠ 关键缺口 — 出生年月、籍贯、教育背景、来休宁县前的任职经历均缺失</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ RELATIONSHIP MATRIX ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>工作关系矩阵</div>
+  <div class="section-sub">谁与谁连接 · 共16组关系</div>
+  <table class="matrix-table">
+    <thead>
+      <tr><th>人物A</th><th>人物B</th><th>关系类型</th><th>背景/证据</th><th>时期</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>吴云忠</td><td>唐进</td><td class="connected">党政搭档</td><td>县委书记与县长，全县最高决策组合</td><td>2023–至今</td></tr>
+      <tr><td>吴云忠</td><td>季必俊</td><td class="connected">县委班子</td><td>书记与专职副书记，县委日常运转核心</td><td>2021–至今</td></tr>
+      <tr><td>吴云忠</td><td>郑美风</td><td>县委班子</td><td>书记与常务副县长，同届领导班子</td><td>2021–至今</td></tr>
+      <tr><td>吴云忠</td><td>程志强</td><td>县委班子</td><td>书记与纪委书记，同届领导班子</td><td>2021–至今</td></tr>
+      <tr><td>吴云忠</td><td>金学年</td><td>县委班子</td><td>书记与组织部长，同届领导班子</td><td>2021–至今</td></tr>
+      <tr><td>吴云忠</td><td>洪洁</td><td>县委班子</td><td>书记与宣传部长，同届领导班子</td><td>2021–至今</td></tr>
+      <tr><td>吴云忠</td><td>赵世奇</td><td>县委班子</td><td>书记与政法委书记，同届领导班子</td><td>2021–至今</td></tr>
+      <tr><td>吴云忠</td><td>潘武</td><td>县委班子</td><td>书记与统战部长，同届领导班子</td><td>2021–至今</td></tr>
+      <tr><td>唐进</td><td>郑美风</td><td class="connected">政府正副职</td><td>县长与常务副县长，县政府正副首长</td><td>2023–至今</td></tr>
+      <tr><td>唐进</td><td>季必俊</td><td>县委班子</td><td>县长与专职副书记，同为县级领导</td><td>2023–至今</td></tr>
+      <tr><td>吴云忠</td><td>卢邦生</td><td>职务接替</td><td>吴云忠接替卢邦生任县委书记</td><td>约2021</td></tr>
+      <tr><td>唐进</td><td>吴云忠(前)</td><td>职务接替</td><td>唐进接替吴云忠（时任县长）任县长</td><td>约2023</td></tr>
+      <tr><td>季必俊</td><td>郑美风</td><td class="empty">— 同届常委 —</td><td>副书记与常务副县长同为常委会成员</td><td>未知–至今</td></tr>
+      <tr><td>金学年</td><td>洪洁</td><td class="empty">— 同届常委 —</td><td>组织部长与宣传部长同为常委会成员</td><td>未知–至今</td></tr>
+      <tr><td>赵世奇</td><td>潘武</td><td class="empty">— 同届常委 —</td><td>政法委书记与统战部长同为常委会成员</td><td>未知–至今</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══ COUNTY CONTEXT ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>区域人事生态</div>
+  <div class="section-sub">休宁县 · 黄山市 · 周边县区</div>
+  <div class="context-grid">
+
+    <div class="context-card">
+      <div class="cc-title">黄山市下辖县区</div>
+      <div class="cc-item"><span class="cc-name">屯溪区</span><span class="cc-role">吴旭光(书记) · 刘志宏(区长)</span></div>
+      <div class="cc-item"><span class="cc-name">黄山区</span><span class="cc-role">已调研</span></div>
+      <div class="cc-item"><span class="cc-name">徽州区</span><span class="cc-role">已调研</span></div>
+      <div class="cc-item"><span class="cc-name">歙县</span><span class="cc-role">汪凯(书记) · 王奇勇(县长)</span></div>
+      <div class="cc-item"><span class="cc-name">休宁县</span><span class="cc-role">吴云忠(书记) · 唐进(县长)</span></div>
+      <div class="cc-item"><span class="cc-name">黟县</span><span class="cc-role">程寄县(书记) · 曹文磊(县长)</span></div>
+      <div class="cc-item"><span class="cc-name">祁门县</span><span class="cc-role">待调研</span></div>
+    </div>
+
+    <div class="context-card">
+      <div class="cc-title">黄山市委领导班子</div>
+      <div class="cc-item"><span class="cc-name">丁纯</span><span class="cc-role">黄山市委书记（2024.12–至今）</span></div>
+      <div class="cc-item"><span class="cc-name">何毅</span><span class="cc-role">市委副书记、市长（2023–至今）</span></div>
+      <div class="cc-item"><span class="cc-name">任生</span><span class="cc-role">市委专职副书记、组织部部长</span></div>
+      <div class="cc-item"><span class="cc-name">叶建强</span><span class="cc-role">市委常委、秘书长（前黟县县委书记）</span></div>
+      <div class="cc-item"><span class="cc-name">朱策</span><span class="cc-role">市委常委、常务副市长</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ GAP SUMMARY ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>关键信息缺口</div>
+  <div class="section-sub">优先级排序 · 共10项缺口</div>
+  <div class="gap-grid">
+    <div class="gap-card">
+      <div class="gc-title" style="color:#E03C31;">🔴 最高优先级</div>
+      <ul class="gc-list">
+        <li><span class="gc-priority">P0</span>吴云忠 — 出生年月、籍贯、教育背景、完整历任职务</li>
+        <li><span class="gc-priority">P0</span>唐进 — 出生年月、籍贯、教育背景、来休宁前的任职经历</li>
+        <li><span class="gc-priority">P0</span>季必俊 — 全部履历信息（专职副书记）</li>
+      </ul>
+    </div>
+    <div class="gap-card">
+      <div class="gc-title" style="color:#E07A31;">🟡 高优先级</div>
+      <ul class="gc-list">
+        <li><span class="gc-priority">P1</span>金学年 — 组织部部长，人事网络价值最高</li>
+        <li><span class="gc-priority">P1</span>程志强 — 纪委书记，此前是否在黄山市纪委系统？</li>
+        <li><span class="gc-priority">P1</span>郑美风 — 常务副县长，此前是否在休宁县或黄山市任职？</li>
+      </ul>
+    </div>
+    <div class="gap-card">
+      <div class="gc-title" style="color:#C9A94E;">🟢 中优先级</div>
+      <ul class="gc-list">
+        <li><span class="gc-priority">P2</span>洪洁 — 宣传部长，女性领导，履历路径</li>
+        <li><span class="gc-priority">P2</span>赵世奇 — 政法委书记，是否政法系统出身？</li>
+        <li><span class="gc-priority">P2</span>潘武 — 统战部长，履历路径</li>
+        <li><span class="gc-priority">P2</span>卢邦生 — 前任书记去向</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ KEY INSIGHTS ═══ -->
+<div class="section">
+  <div class="section-title"><span class="accent"></span>关键洞察与突破线索</div>
+  <div class="section-sub">优先级排序 · 基于有限数据</div>
+  <div class="insight-list">
+
+    <div class="insight-item">
+      <div class="insight-rank">P1</div>
+      <div class="insight-body">
+        <div class="i-title">吴云忠的"县长升书记"路径</div>
+        <div class="i-desc">从休宁县县长直接升任县委书记，体现强烈的本地延续性。与一般外来县委书记相比，吴云忠对休宁县情和本地利益网络有深刻了解。此模式通常意味着省/市委对本地干部的信任。</div>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-rank">P2</div>
+      <div class="insight-body">
+        <div class="i-title">唐进——外来空降县长</div>
+        <div class="i-desc">唐进约2023年到任，接替升任书记的吴云忠任县长。形成"老书记+新县长"的制衡搭档。唐进的来源渠道（省直、市直、其他县区）将对理解休宁县的外部人事连接至关重要。</div>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-rank">P3</div>
+      <div class="insight-body">
+        <div class="i-title">金学年（组织部长）——最大信息价值</div>
+        <div class="i-desc">组织部长的人事网络价值在县委领导班子中仅次于书记。金学年的调任路径、此前任职的单位，将直接揭示休宁县干部人事的上级连接。建议优先调查金学年的完整履历。</div>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-rank">P4</div>
+      <div class="insight-body">
+        <div class="i-title">洪洁——领导班子中唯一的女性</div>
+        <div class="i-desc">在9名县委常委中，洪洁是唯一的女性成员。女性常委在县委班子中的存在通常反映了省/市委对班子结构的统筹考虑。她的履历可能显示她是否从宣传系统内部晋升。</div>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-rank">P5</div>
+      <div class="insight-body">
+        <div class="i-title">卢邦生去向——揭示晋升天花板</div>
+        <div class="i-desc">前任县委书记卢邦生约2021年离任后的去向，将直接影响对休宁县"县委书记→更高职务"晋升通道的判断。如果卢邦生升任副厅级（如黄山市副市长、人大/政协副职），则说明休宁县委书记有上升空间。</div>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-rank">P6</div>
+      <div class="insight-body">
+        <div class="i-title">全员履历空白——最紧急的数据需求</div>
+        <div class="i-desc">因环境网络限制，9名现任领导的出生年月、籍贯、教育背景、参加工作时间、此前任职经历全数缺失。这是开展任何进一步关系网络分析的核心障碍。需要尽快通过 xiuning.gov.cn "领导之窗"或黄山市委组织部任前公示补全。</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div style="margin-bottom:0.5rem;color:#3a3a3a;">— 数据文件 —</div>
+  <div>
+    <a href="20260715-休宁县-领导班子工作关系网络调查报告.md">Markdown报告</a>
+    <span style="color:#2a2a2a;margin:0 0.5rem;">·</span>
+    <a href="../data/database/休宁县_network.db">SQLite数据库</a>
+    <span style="color:#2a2a2a;margin:0 0.5rem;">·</span>
+    <a href="../data/graph/休宁县_network.gexf">GEXF图谱</a>
+    <span style="color:#2a2a2a;margin:0 0.5rem;">·</span>
+    <a href="graph.html">交互式总图</a>
+  </div>
+  <div style="margin-top:0.5rem;">Generated 2026-07-15 · 数据来源见Markdown报告第10章 · 因网络受限，所有履历细节待核实</div>
+</div>
+
+</body>
+</html>

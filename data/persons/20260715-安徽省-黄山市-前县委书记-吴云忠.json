@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "黄山市",
+    "region": "休宁县",
+    "job": "县委书记（前任）",
+    "task_id": "anhui_休宁县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "anhui_休宁县_wuyunzhong",
+    "name": "吴云忠",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1969-08",
+    "birthplace": "安徽省黄山市歙县",
+    "native_place": "安徽省黄山市歙县",
+    "education": [
+      {
+        "period": "",
+        "institution": "安徽省委党校",
+        "major": "",
+        "degree": "大学",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "1998-06",
+    "work_start": "1991-08",
+    "dedupe_keys": {
+      "name_birth": "吴云忠_196908",
+      "name_birthplace": "吴云忠_安徽省黄山市歙县",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "黄山市委常委、秘书长、政法委书记",
+    "current_org": "中共黄山市委",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002", "S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "约2026-05",
+      "end": "present",
+      "org": "中共黄山市委",
+      "title": "黄山市委常委、秘书长、政法委书记",
+      "level": "地市级",
+      "location": "安徽省黄山市",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "从休宁县委书记升任黄山市委常委、秘书长、政法委书记。属于重要晋升。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "约2021",
+      "end": "约2026-05",
+      "org": "中共休宁县委员会",
+      "title": "休宁县委书记",
+      "level": "县级",
+      "location": "安徽省黄山市休宁县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替卢邦生任休宁县委书记，主持县委全面工作",
+      "confidence": "confirmed",
+      "source_ids": ["S002", "S003"]
+    },
+    {
+      "start": "约2019",
+      "end": "约2021",
+      "org": "休宁县人民政府",
+      "title": "休宁县县长",
+      "level": "县级",
+      "location": "安徽省黄山市休宁县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "任休宁县县长，后升任县委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "1991-08",
+      "end": "约2019",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "黄山市",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1991年8月参加工作至约2019年间约28年的履历缺少详细信息。已知在歙县和黄山市有过任职经历。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org_3",
+      "name": "中共黄山市委",
+      "type": "党委",
+      "level": "地市级",
+      "parent": "中共安徽省委",
+      "location": "安徽省黄山市"
+    },
+    {
+      "id": "org_1",
+      "name": "中共休宁县委员会",
+      "type": "党委",
+      "level": "县级",
+      "parent": "中共黄山市委",
+      "location": "安徽省黄山市休宁县"
+    },
+    {
+      "id": "org_2",
+      "name": "休宁县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "parent": "黄山市人民政府",
+      "location": "安徽省黄山市休宁县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "唐进",
+      "person_id": "anhui_休宁县_tangjin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "吴云忠升任黄山市委常委后，唐进接任休宁县委书记。两人此前还有县长-书记搭档关系（2023-2026）。",
+      "overlap_org": "休宁县",
+      "overlap_period": "2023-2026（搭档）+2026年7月（交接）",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "卢邦生",
+      "person_id": "anhui_休宁县_lubangsheng",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "吴云忠接替卢邦生任休宁县委书记",
+      "overlap_org": "中共休宁县委员会",
+      "overlap_period": "约2021",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-2026",
+      "domain": "other",
+      "achievement_or_event": "任休宁县委书记主持县委全面工作",
+      "role_in_event": "县委书记",
+      "measurable_outcome": "",
+      "location": "休宁县",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方治理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["歙县（籍贯）", "休宁县", "黄山市"],
+    "promotion_velocity": {
+      "summary": "约30年从科员晋升至副厅级，速度中等",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足以判断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "安徽休宁县委书记吴云忠升任黄山市委常委、政法委书记",
+      "url": "https://www.163.com/dy/article/JTIA0O7D0514R9P4.html",
+      "publisher": "澎湃新闻",
+      "published_at": "2025-05-27",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "报道吴云忠升任黄山市委常委"
+    },
+    {
+      "id": "S002",
+      "title": "黄山市委常委会扩大会议报道",
+      "url": "",
+      "publisher": "黄山日报",
+      "published_at": "2026",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "吴云忠以黄山市委常委、秘书长身份出席活动"
+    },
+    {
+      "id": "S003",
+      "title": "休宁县历任领导",
+      "url": "",
+      "publisher": "休宁县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "medium",
+      "notes": "综合新闻媒体报道"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "1991-2019年约28年的早期履历细节缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "吴云忠1991年至约2019年间的完整履历？",
+      "why_it_matters": "作为歙县人，在黄山市体系内成长路径对理解官员晋升模式很重要",
+      "suggested_queries": ["吴云忠 简历 歙县", "吴云忠 曾任", "吴云忠 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "吴云忠在歙县的具体任职经历？",
+      "why_it_matters": "歙县与休宁县同为黄山市辖县，分析跨县官员流动模式",
+      "suggested_queries": ["吴云忠 歙县 任职", "吴云忠 出生 歙县"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
