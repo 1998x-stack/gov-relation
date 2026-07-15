@@ -34,6 +34,8 @@ per-person graph JSON, and queue-driven investigation dispatch.
   - `references/gexf_pattern.md`: GEXF generation pattern.
   - `references/app_architecture.md`: local backend, static frontend, GitHub Pages.
   - `references/tmp_staging.md`: `data/tmp` staging and promotion workflow.
+  - `references/source_fallbacks.md`: search/source fallback playbook for Exa limits,
+    Baidu 403, and government-site timeouts.
 
 ## Phase 0: Repository Preflight
 
@@ -92,6 +94,11 @@ Chinese search priorities:
 3. government meeting/news pages
 4. mainstream media such as The Paper
 5. encyclopedia pages only as secondary leads
+
+When Exa is rate-limited, Baidu returns 403/captcha, or government sites time out, read
+`references/source_fallbacks.md`. Do not repeatedly hammer failing source families. After
+two failures per source family, switch to alternate official URL patterns, local artifacts,
+Jina Reader/cache-style fetches, general web queries, and partial-evidence artifact mode.
 
 US/non-Chinese priorities:
 

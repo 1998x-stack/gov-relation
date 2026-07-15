@@ -69,7 +69,7 @@ Use `data/TODO.json` as the source of truth.
 Recommended loop:
 
 1. `python3 run_todo_loop.py` to get next item.
-2. `python3 scripts/todo_queue.py claim --worker-id worker-1 --model-intent iagent --opencode-agent build --opencode-model iagent/standard`
+2. `python3 scripts/todo_queue.py claim --worker-id worker-1 --model-intent iagent --opencode-model iagent/standard`
 3. Run Opencode with the generated prompt file.
 4. Validate and promote staged artifacts with `scripts/process_tmp.py`.
 5. Mark done with `python3 scripts/todo_queue.py done --task-id <task_id> --worker-id <worker-id>` only after DB/GEXF/person JSON/report exist and validation passes.
@@ -81,10 +81,10 @@ Never mark done before validation. Failed or blocked work should use `todo_queue
 Start four independent OpenCode sessions. In each session, claim one task:
 
 ```bash
-python3 scripts/todo_queue.py claim --worker-id worker-1 --model-intent iagent --opencode-agent build --opencode-model iagent/standard
-python3 scripts/todo_queue.py claim --worker-id worker-2 --model-intent iagent --opencode-agent build --opencode-model iagent/standard
-python3 scripts/todo_queue.py claim --worker-id worker-3 --model-intent iagent --opencode-agent build --opencode-model iagent/standard
-python3 scripts/todo_queue.py claim --worker-id worker-4 --model-intent iagent --opencode-agent build --opencode-model iagent/standard
+python3 scripts/todo_queue.py claim --worker-id worker-1 --model-intent iagent --opencode-model iagent/standard
+python3 scripts/todo_queue.py claim --worker-id worker-2 --model-intent iagent --opencode-model iagent/standard
+python3 scripts/todo_queue.py claim --worker-id worker-3 --model-intent iagent --opencode-model iagent/standard
+python3 scripts/todo_queue.py claim --worker-id worker-4 --model-intent iagent --opencode-model iagent/standard
 ```
 
 Each worker reads its generated prompt under `logs/dispatch/`, completes the task, promotes
