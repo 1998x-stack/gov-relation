@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Anhui Investigator</creator>
+    <description>龙子湖区领导班子工作关系网络 — Longzihu District Leadership Network</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="start" type="string"/>
+      <attribute id="3" title="end" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="倪涛 (龙子湖区委书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委书记"/>
+          <attvalue for="2" value="中共龙子湖区委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="马怀洪 (龙子湖区区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区区长"/>
+          <attvalue for="2" value="龙子湖区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p3" label="任生 (（原龙子湖区委书记，已调任）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原龙子湖区委书记，已调任）"/>
+          <attvalue for="2" value="待确认"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="朱克华 (（原龙子湖区委书记，已调任）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原龙子湖区委书记，已调任）"/>
+          <attvalue for="2" value="待确认"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="（专职副书记待确认） (龙子湖区委副书记（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委副书记（待确认）"/>
+          <attvalue for="2" value="中共龙子湖区委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="（常务副区长待确认） (龙子湖区委常委、常务副区长（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委常委、常务副区长（待确认）"/>
+          <attvalue for="2" value="龙子湖区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="（纪委书记待确认） (龙子湖区委常委、纪委书记（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委常委、纪委书记（待确认）"/>
+          <attvalue for="2" value="中共龙子湖区纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="（组织部长待确认） (龙子湖区委常委、组织部长（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委常委、组织部长（待确认）"/>
+          <attvalue for="2" value="中共龙子湖区委组织部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="（宣传部长待确认） (龙子湖区委常委、宣传部长（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委常委、宣传部长（待确认）"/>
+          <attvalue for="2" value="中共龙子湖区委宣传部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="（政法委书记待确认） (龙子湖区委常委、政法委书记（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区委常委、政法委书记（待确认）"/>
+          <attvalue for="2" value="中共龙子湖区委政法委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p11" label="曹怀龙 (龙子湖区副区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区副区长"/>
+          <attvalue for="2" value="龙子湖区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="（人大主任待确认） (龙子湖区人大常委会主任（待确认）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区人大常委会主任（待确认）"/>
+          <attvalue for="2" value="龙子湖区人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="180" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="廖万红 (龙子湖区政协主席)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙子湖区政协主席"/>
+          <attvalue for="2" value="龙子湖区政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="150" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共龙子湖区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="龙子湖区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共龙子湖区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="龙子湖区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="龙子湖区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共龙子湖区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="240" g="200" b="240"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共龙子湖区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="240" g="200" b="240"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共龙子湖区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="240" g="200" b="240"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="倪涛 → 中共龙子湖区委 (龙子湖区委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="马怀洪 → 龙子湖区人民政府 (龙子湖区区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o1" label="任生 → 中共龙子湖区委 (龙子湖区委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o1" label="朱克华 → 中共龙子湖区委 (龙子湖区委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o1" label="（专职副书记待确认） → 中共龙子湖区委 (龙子湖区委副书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p6" target="o2" label="（常务副区长待确认） → 龙子湖区人民政府 (龙子湖区委常委、常务副区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委常委、常务副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p7" target="o3" label="（纪委书记待确认） → 中共龙子湖区纪律检查委员会 (龙子湖区委常委、纪委书记、区监委主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委常委、纪委书记、区监委主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p8" target="o6" label="（组织部长待确认） → 中共龙子湖区委组织部 (龙子湖区委常委、组织部部长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委常委、组织部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p9" target="o7" label="（宣传部长待确认） → 中共龙子湖区委宣传部 (龙子湖区委常委、宣传部部长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委常委、宣传部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p10" target="o8" label="（政法委书记待确认） → 中共龙子湖区委政法委员会 (龙子湖区委常委、政法委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区委常委、政法委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p11" target="o2" label="曹怀龙 → 龙子湖区人民政府 (龙子湖区副区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p12" target="o4" label="（人大主任待确认） → 龙子湖区人大常委会 (龙子湖区人大常委会主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区人大常委会主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p13" target="o5" label="廖万红 → 龙子湖区政协 (龙子湖区政协主席)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙子湖区政协主席"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p2" label="龙子湖区委书记与区长搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="龙子湖区委书记与区长搭档"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p3" label="倪涛接替任生（推测）任龙子湖区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="倪涛接替任生（推测）任龙子湖区委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p3" target="p4" label="任生接替朱克华（推测）任龙子湖区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任生接替朱克华（推测）任龙子湖区委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p5" label="区委书记与专职副书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p6" label="区委书记与常务副区长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p7" label="区委书记与纪委书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与纪委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p8" label="区委书记与组织部长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与组织部长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p9" label="区委书记与宣传部长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与宣传部长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p10" label="区委书记与政法委书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与政法委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p2" target="p6" label="区长与常务副区长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长与常务副区长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p2" target="p11" label="区长与副区长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长与副区长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p12" label="区委书记与人大主任同届工作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与人大主任同届工作"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p13" label="区委书记与政协主席同届工作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与政协主席同届工作"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
