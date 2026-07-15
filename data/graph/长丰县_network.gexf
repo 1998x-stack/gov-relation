@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>长丰县领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="start" type="string"/>
+      <attribute id="3" title="end" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="李孝鸿 (长丰县委书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委书记"/>
+          <attvalue for="2" value="中共长丰县委"/>
+          <attvalue for="3" value="1976-04"/>
+          <attvalue for="4" value="安徽合肥"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="李卫 (长丰县长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县长"/>
+          <attvalue for="2" value="长丰县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p3" label="待查 (前任长丰县委书记(2023前))">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任长丰县委书记(2023前)"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="待查(专职副书记) (长丰县委副书记(专职))">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委副书记(专职)"/>
+          <attvalue for="2" value="中共长丰县委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="224" g="122" b="49"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="待查(常务副县长) (长丰县委常委、常务副县长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委常委、常务副县长"/>
+          <attvalue for="2" value="长丰县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="106" g="143" b="231"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="待查(纪委书记) (长丰县委常委、县纪委书记、县监委主任)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委常委、县纪委书记、县监委主任"/>
+          <attvalue for="2" value="中共长丰县纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="212" g="136" b="15"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="待查(组织部长) (长丰县委常委、组织部部长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委常委、组织部部长"/>
+          <attvalue for="2" value="中共长丰县委组织部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="待查(宣传部长) (长丰县委常委、宣传部部长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共长丰县委宣传部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="待查(政法委书记) (长丰县委常委、政法委书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委常委、政法委书记"/>
+          <attvalue for="2" value="中共长丰县委政法委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="待查(统战部长) (长丰县委常委、统战部部长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长丰县委常委、统战部部长"/>
+          <attvalue for="2" value="中共长丰县委统战部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="姚飞 (肥东县委书记（长丰籍）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="肥东县委书记（长丰籍）"/>
+          <attvalue for="2" value="中共肥东县委"/>
+          <attvalue for="3" value="1974-12"/>
+          <attvalue for="4" value="安徽长丰"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共长丰县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="长丰县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共长丰县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="20"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共长丰县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共长丰县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共长丰县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共长丰县委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共合肥市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="副省级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="合肥市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="副省级"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="合肥经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共肥东县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o10" label="合肥经济技术开发区工作" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合肥经济技术开发区工作"/>
+          <attvalue for="2" value="2000s"/>
+          <attvalue for="3" value="2023"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o1" label="长丰县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="长丰县委书记"/>
+          <attvalue for="2" value="2023"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="长丰县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="长丰县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p11" target="o11" label="肥东县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="肥东县委书记"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="p2" label="长丰县委书记与县长搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="长丰县委书记与县长搭档"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="p11" label="姚飞（肥东书记，长丰人）与李孝鸿（长丰书记）— 长丰县地缘关联" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="姚飞（肥东书记，长丰人）与李孝鸿（长丰书记）— 长丰县地缘关联"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

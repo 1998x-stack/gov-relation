@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "长丰县",
+    "job": "县长",
+    "task_id": "anhui_长丰县",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "changfeng_li_wei",
+    "name": "李卫",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李卫_",
+      "name_birthplace": "李卫_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "长丰县长",
+    "current_org": "长丰县人民政府",
+    "administrative_rank": "正处",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "李卫的公开履历信息极为有限。姓名、现有职务（长丰县长）来自build_合肥市_data.py的条目，但出生日期、籍贯、教育背景、工作经历等核心字段均待确认。李卫是否为2023-2024年间新任命的长丰县长，或是此前已在任，需通过任前公示、政府网站领导简介等官方渠道进一步核实。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_changfeng_county_gov",
+      "name": "长丰县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "relationship": "current_leader"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "李孝鸿",
+      "person_id": "changfeng_li_xiaohong",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "党政同僚：长丰县长与县委书记搭档，共同负责长丰县行政和党务工作",
+      "overlap_org": "长丰县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "公开资料不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料极为有限，无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_reports": [],
+    "peer_count": 1,
+    "superior_connections": [],
+    "same_system_connections": []
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "因公开资料极为有限，未能找到李卫本人的纪律处分、审计问题或负面舆情报道。但此结论基于信息缺失而非主动核实。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py - 合肥市领导班子工作关系网络",
+      "url": "build_合肥市_data.py",
+      "publisher": "仓库已有数据",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "low",
+      "notes": "仅收录姓名和职务，未含其他身份信息，标注为'待确认'"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "几乎所有身份信息均缺失：出生日期、籍贯、教育背景、完整职业生涯、任职起止时间"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李卫的完整身份信息是什么？出生日期、籍贯、教育背景？",
+      "why_it_matters": "基本身份信息是进一步研究和网络建模的前提",
+      "suggested_queries": ["李卫 长丰县长 简历", "李卫 任前公示 合肥"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "李卫何时出任长丰县长？前任县长是谁？",
+      "why_it_matters": "任职时间线和前任关系是网络分析的重要维度",
+      "suggested_queries": ["长丰县 前任县长", "长丰县 县长 任命 2023 2024"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "李卫的早期职业生涯是什么样的？在哪些岗位工作过？",
+      "why_it_matters": "完整的职业轨迹有助于判断其专业领域和人脉网络",
+      "suggested_queries": ["李卫 合肥 任职经历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
