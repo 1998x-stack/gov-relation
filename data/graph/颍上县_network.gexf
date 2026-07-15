@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>颍上县领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="rank" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pyingshang_zhang_yinjun" label="张银军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委书记"/>
+          <attvalue for="2" value="中共颍上县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pyingshang_cheng_xiaoxing" label="程晓醒">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委副书记、县长"/>
+          <attvalue for="2" value="颍上县人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pyingshang_huang_qi" label="黄琦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原颍上县委书记，已调任）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pyingshang_dou_canhui" label="窦灿辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原颍上县长，已调任）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pyingshang_changwu_fuxianzhang" label="（待补充）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委常委、常务副县长"/>
+          <attvalue for="2" value="颍上县人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pyingshang_jiwei_shuji" label="（待补充）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共颍上县纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pyingshang_zuzhi_buzhang" label="（待补充）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委常委、组织部部长"/>
+          <attvalue for="2" value="中共颍上县委组织部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pyingshang_xuanchuan_buzhang" label="（待补充）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共颍上县委宣传部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pyingshang_zhengfa_shuji" label="（待补充）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍上县委常委、政法委书记"/>
+          <attvalue for="2" value="中共颍上县委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pyingshang_liu_yujie" label="刘玉杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="阜阳市委书记"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pyingshang_hu_mingwen" label="胡明文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="阜阳市委副书记、市长"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共颍上县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="颍上县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="颍上县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="颍上县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共颍上县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共颍上县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共颍上县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共颍上县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共阜阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="阜阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pyingshang_zhang_yinjun" target="o1" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持县委全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pyingshang_zhang_yinjun" target="o2" label="县长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任颍上县委副书记、县长。具体任职时间待核实。"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pyingshang_cheng_xiaoxing" target="o1" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="颍上县委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pyingshang_cheng_xiaoxing" target="o2" label="县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="领导县政府全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pyingshang_huang_qi" target="o1" label="县委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任颍上县委书记。调任去向待查。"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pyingshang_dou_canhui" target="o2" label="县长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任颍上县委副书记、县长（~2016-2021）。具体任职时间待核实。"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pyingshang_liu_yujie" target="o9" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市委书记，对颍上县领导班子有直接管理关系"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pyingshang_liu_yujie" target="o10" label="市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任阜阳市市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pyingshang_hu_mingwen" target="o10" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市市长，对颍上县政府有领导关系"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pyingshang_hu_mingwen" target="o10" label="市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市委常委、常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pyingshang_changwu_fuxianzhang" target="o2" label="县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="姓名待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pyingshang_jiwei_shuji" target="o5" label="县委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="姓名待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pyingshang_zuzhi_buzhang" target="o6" label="县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="姓名待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pyingshang_xuanchuan_buzhang" target="o7" label="县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="姓名待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pyingshang_zhengfa_shuji" target="o8" label="县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="姓名待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pyingshang_zhang_yinjun" target="pyingshang_cheng_xiaoxing" label="颍上县党政一把手，张银军任县委书记后程晓醒接任县长，共同搭班" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="颍上县党政一把手，张银军任县委书记后程晓醒接任县长，共同搭班"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2021-"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pyingshang_zhang_yinjun" target="pyingshang_huang_qi" label="张银军接替黄琦任颍上县委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张银军接替黄琦任颍上县委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pyingshang_cheng_xiaoxing" target="pyingshang_dou_canhui" label="程晓醒接替窦灿辉任颍上县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="程晓醒接替窦灿辉任颍上县长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pyingshang_zhang_yinjun" target="pyingshang_liu_yujie" label="刘玉杰为阜阳市委书记，张银军为颍上县委书记，为上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘玉杰为阜阳市委书记，张银军为颍上县委书记，为上下级关系"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2021-"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pyingshang_cheng_xiaoxing" target="pyingshang_hu_mingwen" label="胡明文为阜阳市市长，程晓醒为颍上县长，为上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡明文为阜阳市市长，程晓醒为颍上县长，为上下级关系"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2021-"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pyingshang_zhang_yinjun" target="pyingshang_hu_mingwen" label="胡明文为阜阳市领导，张银军为颍上县委书记，为上下级工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡明文为阜阳市领导，张银军为颍上县委书记，为上下级工作关系"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="~2021-"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pyingshang_cheng_xiaoxing" target="pyingshang_liu_yujie" label="刘玉杰为阜阳市委书记，程晓醒为颍上县长，为上下级关系" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘玉杰为阜阳市委书记，程晓醒为颍上县长，为上下级关系"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="~2021-"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pyingshang_huang_qi" target="pyingshang_dou_canhui" label="黄琦任县委书记期间，窦灿辉任县长，曾共同搭班" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄琦任县委书记期间，窦灿辉任县长，曾共同搭班"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="~2019-2021"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
