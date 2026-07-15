@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>颍东区（阜阳市）领导班子工作关系网络 — 2026年7月研究数据</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="context" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="yingdong_zhao_qun" label="赵群">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍东区委书记"/>
+          <attvalue for="2" value="中共阜阳市颍东区委员会"/>
+          <attvalue for="3" value="1977-08"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingdong_liu_jian" label="刘健">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍东区委副书记、区长"/>
+          <attvalue for="2" value="颍东区人民政府"/>
+          <attvalue for="3" value="1983-03"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingdong_yue_lei" label="岳蕾">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+          <attvalue for="2" value="阜阳市颍东区人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingdong_liu_leizhen" label="刘雷振">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+          <attvalue for="2" value="阜阳市颍东区政协"/>
+          <attvalue for="3" value="1965-08"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingdong_liu_xiaoping" label="刘小平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区纪委书记"/>
+          <attvalue for="2" value="中共阜阳市颍东区纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingdong_sha_xuezhen" label="沙学珍">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="颍东区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingdong_zhang_junji" label="张俊杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任颍东区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="org_yingdong_party_committee" label="中共阜阳市颍东区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingdong_government" label="颍东区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingdong_npc" label="阜阳市颍东区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="阜阳市人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingdong_政协" label="阜阳市颍东区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="阜阳市政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingdong_cdc" label="中共阜阳市颍东区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="中共阜阳市纪委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="yingdong_zhao_qun" target="org_yingdong_party_committee" label="颍东区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区委书记"/>
+          <attvalue for="3" value="2022-04-"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="yingdong_zhao_qun" target="org_yingdong_party_committee" label="阜阳市颍泉区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市颍泉区委常委、副区长"/>
+          <attvalue for="3" value="-2019-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="yingdong_zhao_qun" target="org_yingdong_party_committee" label="阜阳市招商投资促进中心党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市招商投资促进中心党组书记、主任"/>
+          <attvalue for="3" value="2019-03-2022-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="yingdong_liu_jian" target="org_yingdong_government" label="颍东区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区委副书记、区长"/>
+          <attvalue for="3" value="2021-07-"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="yingdong_liu_jian" target="org_yingdong_government" label="颍东区委副书记、代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区委副书记、代区长"/>
+          <attvalue for="3" value="2021-06-2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="yingdong_liu_jian" target="org_yingdong_party_committee" label="太和县委常委、县政府常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县委常委、县政府常务副县长"/>
+          <attvalue for="3" value="2020-01-2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="yingdong_liu_jian" target="org_yingdong_party_committee" label="太和县委常委、组织部部长、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县委常委、组织部部长、统战部部长"/>
+          <attvalue for="3" value="2016-07-2019-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="yingdong_liu_jian" target="org_yingdong_party_committee" label="太和县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县委常委、组织部部长"/>
+          <attvalue for="3" value="2016-01-2016-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="yingdong_liu_jian" target="org_yingdong_party_committee" label="共青团阜阳市委副书记、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="共青团阜阳市委副书记、党组成员"/>
+          <attvalue for="3" value="2009-07-2016-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="yingdong_liu_jian" target="org_yingdong_government" label="安庆市迎江区老峰镇党委委员、常务副镇长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="安庆市迎江区老峰镇党委委员、常务副镇长"/>
+          <attvalue for="3" value="2007-01-2009-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="yingdong_liu_jian" target="org_yingdong_government" label="安庆经济技术开发区管委会办公室副主任科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="安庆经济技术开发区管委会办公室副主任科员"/>
+          <attvalue for="3" value="2006-09-"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="yingdong_yue_lei" target="org_yingdong_npc" label="颍东区人大常委会主任、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区人大常委会主任、党组书记"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="yingdong_liu_leizhen" target="org_yingdong_政协" label="颍东区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区政协主席"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="yingdong_liu_xiaoping" target="org_yingdong_cdc" label="颍东区委常委、区纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区委常委、区纪委书记"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="yingdong_sha_xuezhen" target="org_yingdong_government" label="颍东区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区副区长"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="yingdong_zhao_qun" target="yingdong_liu_jian" label="区委书记与区长（党政正职搭档）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区委书记与区长（党政正职搭档）"/>
+          <attvalue for="3" value="2022-04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="yingdong_zhao_qun" target="yingdong_yue_lei" label="区委书记与区人大常委会主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区委书记与区人大常委会主任"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="yingdong_zhao_qun" target="yingdong_liu_leizhen" label="区委书记与区政协主席" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区委书记与区政协主席"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="yingdong_liu_jian" target="yingdong_yue_lei" label="区长与区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="区长与区人大常委会主任"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="yingdong_liu_jian" target="yingdong_liu_leizhen" label="区长与区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="区长与区政协主席"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="yingdong_zhao_qun" target="yingdong_sha_xuezhen" label="区委书记和副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="区委书记和副区长"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="yingdong_liu_jian" target="yingdong_sha_xuezhen" label="区长和副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区长和副区长"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="yingdong_liu_jian" target="yingdong_liu_xiaoping" label="区长与区纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="区长与区纪委书记"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="yingdong_zhao_qun" target="yingdong_liu_xiaoping" label="区委书记与区纪委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区委书记与区纪委书记"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
