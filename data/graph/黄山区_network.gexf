@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>黄山区（安徽省黄山市）领导关系网络 — 区委书记、区长及领导班子</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="张旭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委书记"/>
+          <attvalue for="2" value="中共黄山市黄山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="吴小胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委副书记、区长"/>
+          <attvalue for="2" value="黄山市黄山区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p3" label="汤克斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委副书记"/>
+          <attvalue for="2" value="中共黄山市黄山区委员会"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p4" label="龙晓琴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委常委、常务副区长"/>
+          <attvalue for="2" value="黄山市黄山区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p5" label="胡毅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委常委、组织部部长"/>
+          <attvalue for="2" value="中共黄山市黄山区委员会组织部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="程丰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共黄山市黄山区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="陈佑隆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山区委常委、政法委书记"/>
+          <attvalue for="2" value="中共黄山市黄山区委员会政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共黄山市黄山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="黄山市黄山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共黄山市黄山区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共黄山市黄山区委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共黄山市黄山区委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="黄山市黄山区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="行政区域"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="黄山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="黄山区委书记，主持区委全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="黄山区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记兼区长，主持区政府全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="黄山区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记兼区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="黄山区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="专职副书记，协助书记处理日常党务"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o2" label="黄山区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、常务副区长，分管常务工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o1" label="黄山区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o4" label="黄山区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管组织人事工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o1" label="黄山区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o3" label="黄山区委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管纪检监察工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o1" label="黄山区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o5" label="黄山区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管政法维稳工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="o1" label="黄山区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委会成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张旭（区委书记）与吴小胜（区长）为黄山区党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张旭（区委书记）与汤克斌（区委副书记）同为黄山区委领导班子成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张旭（区委书记）与龙晓琴（区委常委、常务副区长）同届领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张旭（区委书记）与胡毅（区委常委、组织部长）同届领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张旭（区委书记）与程丰（纪委书记）同届领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张旭（区委书记）与陈佑隆（政法委书记）同届领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴小胜（区长）与汤克斌（副书记）同为区委/区政府领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴小胜（区长）与龙晓琴（常务副区长）为区政府正副职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p4" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="龙晓琴（常务副区长）与胡毅（组织部长）同届领导班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p4" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="龙晓琴（常务副区长）与陈佑隆（政法委书记）同届领导班子"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
