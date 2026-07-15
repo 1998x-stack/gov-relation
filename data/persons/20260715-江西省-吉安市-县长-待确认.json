@@ -4,68 +4,88 @@
   "investigation_scope": {
     "province": "江西省",
     "city": "吉安市",
-    "region": "吉水县",
+    "region": "万安县",
     "job": "县长",
-    "task_id": "jiangxi_吉水县",
-    "time_focus": "2026年7月"
+    "task_id": "jiangxi_万安县",
+    "time_focus": "2026"
   },
   "identity": {
-    "person_id": "jishui_mayor_01",
+    "person_id": "wanan_mayor_01",
     "name": "（待确认）",
     "aliases": [],
     "gender": "男",
-    "ethnicity": "汉族（按惯例推定）",
+    "ethnicity": "汉族",
     "birth": "待查",
     "birthplace": "待查",
     "native_place": "待查",
-    "education": [],
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
     "party_join": "待查",
     "work_start": "待查",
     "dedupe_keys": {
       "name_birth": "待确认_待查",
       "name_birthplace": "待确认_待查",
-      "official_profile_url": "待查"
+      "official_profile_url": "https://www.wanan.gov.cn/xxgk-list-xzfld.html"
     }
   },
   "current_status": {
-    "current_post": "吉水县长",
-    "current_org": "吉水县人民政府",
-    "administrative_rank": "县处级正职",
+    "current_post": "县长",
+    "current_org": "万安县人民政府",
+    "administrative_rank": "正县级",
     "as_of": "2026-07-15",
     "is_current_confirmed": false,
-    "source_ids": []
+    "source_ids": ["S001"]
   },
   "career_timeline": [
     {
-      "start": "待查",
-      "end": "至今",
-      "org": "吉水县人民政府",
-      "title": "吉水县长",
-      "level": "县处级正职",
-      "location": "江西省吉安市吉水县",
+      "start": "unknown",
+      "end": "present",
+      "org": "万安县人民政府",
+      "title": "县长",
+      "level": "正县级",
+      "location": "江西省吉安市万安县",
       "system": "government",
-      "rank": "县处级正职",
+      "rank": "正县级",
       "is_key_promotion": false,
-      "notes": "姓名、出生年月、籍贯、全部履历均待确认。",
+      "notes": "⚠️ 现任万安县县长姓名待确认。前任巫太明（曾任万安县长）已调任泰和县委书记（2026年）。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "姓名和全部任职信息均待查。需从 wanan.gov.cn 领导之窗或吉安市委组织部任前公示确认。",
       "confidence": "unverified",
       "source_ids": []
     }
   ],
   "organizations": [
     {
-      "org_name": "吉水县人民政府",
+      "org_name": "万安县人民政府",
       "org_type": "政府",
-      "role": "县长"
+      "role": "县长",
+      "period": "unknown—present",
+      "source_ids": []
     }
   ],
   "relationships": [
     {
-      "person": "肖梓才",
-      "person_id": "jishui_xiao_zicai",
+      "person": "陈海民",
+      "person_id": "wanan_chen_haimin",
       "relationship_type": "overlap",
       "strength": "strong",
-      "evidence": "县长为县政府主要负责人，与县委书记肖梓才为党政正职搭档",
-      "overlap_org": "吉水县",
+      "evidence": "党政一把手搭档关系",
+      "overlap_org": "中共万安县委员会/万安县人民政府",
       "overlap_period": "至2026年",
       "direction": "undirected",
       "confidence": "plausible",
@@ -80,46 +100,66 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "",
+      "summary": "全部信息待查",
       "notable_fast_promotions": []
     }
   },
   "work_style_and_personality": {
-    "public_style_indicators": [],
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "无公开资料",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
     "speech_themes": [],
     "management_signals": [],
     "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
   "network_metrics": {},
-  "risk_and_integrity_signals": [],
-  "source_register": [],
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "姓名未知，无法搜索",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "万安县人民政府 - 县政府领导",
+      "url": "https://www.wanan.gov.cn/xxgk-list-xzfld.html",
+      "publisher": "万安县人民政府",
+      "published_at": "2026",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "需通过浏览器访问（JavaScript动态加载）；当前无法直接获取"
+    }
+  ],
   "confidence_summary": {
     "identity": "unverified",
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "姓名本身未知，全部身份信息缺失。"
+    "biggest_gap": "县长姓名完全未知"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "吉水县县长是谁？",
-      "why_it_matters": "核心岗位，缺失姓名即无法进一步调查",
-      "suggested_queries": ["吉水县县长 2026", "吉水县人民政府 领导 分工", "吉水县委副书记 县长"],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "critical",
-      "question": "县长何时到任？此前任何职？",
-      "why_it_matters": "判断其履历背景和从政路径",
-      "suggested_queries": ["吉水县县长 任命", "吉水县长 任职前公示"],
+      "question": "万安县现任县长是谁？",
+      "why_it_matters": "目标人物之一，姓名完全未知",
+      "suggested_queries": ["万安县县长 姓名", "万安县人民政府 领导之窗", "万安县 县长 任免"],
       "last_attempted": "2026-07-15"
     },
     {
       "priority": "high",
-      "question": "县长的出生年月、籍贯、教育背景？",
-      "why_it_matters": "基础身份信息",
-      "suggested_queries": ["吉水县长 简历", "吉水县长 出生"],
+      "question": "巫太明调任泰和县委书记后，谁接任了万安县长？",
+      "why_it_matters": "人事变动关键节点",
+      "suggested_queries": ["巫太明 调离 万安 县长", "万安县 县长 接任", "吉安 县市区 领导干部 任前公示"],
       "last_attempted": "2026-07-15"
     }
   ]
