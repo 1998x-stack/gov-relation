@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "芜湖市",
+    "region": "弋江区",
+    "job": "区长",
+    "task_id": "anhui_弋江区",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "anhui_wuhu_yijiang_linsong_198011",
+    "name": "林松",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1980-11",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "工学学士",
+        "study_type": "full_time",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "林松_1980-11",
+      "name_birthplace": "林松_未知",
+      "official_profile_url": "https://www.yjq.gov.cn/xxgk/ldzc/index.html"
+    }
+  },
+  "current_status": {
+    "current_post": "芜湖高新技术产业开发区党工委副书记、管委会副主任，弋江区委副书记、区政府党组书记、区长",
+    "current_org": "弋江区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "unknown",
+      "title": "早期履历",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到早期经历信息（大学毕业至任市辖区区委常委、组织部部长之前）",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "市辖区",
+      "title": "区委常委、组织部部长",
+      "level": "县处级副职",
+      "location": "安徽省芜湖市（推测）",
+      "system": "organization",
+      "rank": "副处",
+      "is_key_promotion": true,
+      "notes": "[GAP] 具体是哪个区、任职时间不详。政府官网简历只列出曾任此职，未标注具体年份",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "省级经济开发区",
+      "title": "党工委书记、管委会主任",
+      "level": "县处级正职",
+      "location": "安徽省芜湖市（推测）",
+      "system": "development_zone",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "[GAP] 具体是哪个开发区、任职时间不详。政府官网简历只列出曾任此职",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "~2026-05",
+      "end": "present",
+      "org": "弋江区人民政府",
+      "title": "弋江区委副书记、区政府党组书记、区长",
+      "level": "县处级正职",
+      "location": "安徽省芜湖市弋江区",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "2026年5月17日弋江区第十八届人民代表大会第六次会议当选; 同时担任芜湖高新区党工委副书记、管委会副主任",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "yj_1", "name": "弋江区人民政府", "type": "政府", "role": "区长（现任）"},
+    {"org_id": "yj_2", "name": "中共弋江区委", "type": "党委", "role": "副书记"},
+    {"org_id": "yj_3", "name": "芜湖高新技术产业开发区管委会", "type": "开发区", "role": "党工委副书记、管委会副主任"}
+  ],
+  "relationships": [
+    {
+      "person": "李新宇",
+      "person_id": "anhui_wuhu_yijiang_lixinyu_197502",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记与区长党政搭档; 共同主持区第五次党代会（林松主持大会）",
+      "overlap_org": "中共弋江区委/弋江区政府",
+      "overlap_period": "2026-05至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002", "S003"]
+    },
+    {
+      "person": "汪敏",
+      "person_id": "anhui_wuhu_yijiang_wangmin_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "汪敏在2026年1月市人代会期间作为弋江区代表发言; 林松2026年5月当选区长，推测汪敏为前任区长",
+      "overlap_org": "弋江区人民政府",
+      "overlap_period": "2026-05",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "person": "高翔",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "区长与常务副区长搭档",
+      "overlap_org": "弋江区人民政府",
+      "overlap_period": "2026-05至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "徐志",
+      "person_id": "anhui_wuhu_xuzhi_197203",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "芜湖市长与弋江区区长上下级关系",
+      "overlap_org": "芜湖市人民政府",
+      "overlap_period": "2026-05至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-05-17",
+      "domain": "other",
+      "achievement_or_event": "依法当选弋江区人民政府区长（区十八届人大六次会议），并就职发言承诺以'功成不必在我'的精神境界和'功成必定有我'的历史担当开展工作",
+      "role_in_event": "候选人/当选区长",
+      "measurable_outcome": "全票或高票当选（新闻报道为无记名投票选举）",
+      "location": "芜湖市弋江区",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2026-06",
+      "domain": "other",
+      "achievement_or_event": "主持中国共产党芜湖市弋江区第五次代表大会",
+      "role_in_event": "区委副书记/区长/主持人",
+      "measurable_outcome": "大会圆满闭幕",
+      "location": "芜湖市弋江区",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党建组织", "开发区管理", "政府治理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["organization", "development_zone", "government"],
+    "geographic_pattern": ["安徽省芜湖市（推测一直在芜湖市辖区内任职）"],
+    "promotion_velocity": {
+      "summary": "1980年11月出生，2026年5月任区长时约45岁6个月，属正常晋升节奏。从组织部部长→开发区书记→区长，符合组织系统干部成长路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "就职发言强调以'钉钉子'精神抓落实，以'赶考者'姿态创佳绩",
+        "confidence": "confirmed",
+        "source_ids": ["S002"]
+      },
+      {
+        "trait": "discipline_oriented",
+        "evidence": "承诺'严于律己守底线，做清正廉洁的规矩人'",
+        "confidence": "confirmed",
+        "source_ids": ["S002"]
+      },
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "承诺'践行宗旨惠民生，做服务群众的贴心人'",
+        "confidence": "confirmed",
+        "source_ids": ["S002"]
+      }
+    ],
+    "speech_themes": ["抓落实", "高质量发展", "转型升级", "民生福祉", "清正廉洁", "团结协作"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开资料未发现林松的纪律处分、审计问题或负面媒体报道。新任区长（2026年5月）在公开报道中展现正面形象。",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "弋江区政府领导之窗",
+      "url": "https://www.yjq.gov.cn/xxgk/ldzc/index.html",
+      "publisher": "弋江区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "政府领导班子页面，包含林松简历、分工和联系方式"
+    },
+    {
+      "id": "S002",
+      "title": "林松同志依法当选为弋江区人民政府区长",
+      "url": "https://www.yjq.gov.cn/zxxx/dzyw/18537595.html",
+      "publisher": "弋江区人民政府",
+      "published_at": "2026-05-18",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区人代会选举报道，包含林松就职发言全文"
+    },
+    {
+      "id": "S003",
+      "title": "中国共产党芜湖市弋江区第五次代表大会开幕",
+      "url": "https://www.yjq.gov.cn/zxxx/dzyw/18542586.html",
+      "publisher": "弋江区委宣传部",
+      "published_at": "2026-06-26",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "林松主持第五次党代会"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "完整履历（出生地、教育背景、2000年代中期-2020年代的具体任职地点和时间）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "林松在担任市辖区区委常委、组织部部长之前（约2000年代至2010年代）的完整履历是什么？",
+      "why_it_matters": "林松是45岁的年轻区长，其职业起点和快速上升路径对关系网络分析关键",
+      "suggested_queries": ["林松 芜湖 简历", "林松 弋江 组织部", "林松 安徽 任职"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "林松曾任组织部长和开发区书记的具体地点和时间？",
+      "why_it_matters": "确定其关系网络的精确地理和时间范围",
+      "suggested_queries": ["林松 芜湖 开发区 书记", "林松 区委组织部 部长"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "林松的出生地/籍贯在哪里？",
+      "why_it_matters": "同乡关系是关系网络中重要维度",
+      "suggested_queries": ["林松 弋江区 区长 籍贯", "林松 出生地"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
