@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Claude Code Research Agent</creator>
+    <description>铜陵市（Tongling City）领导关系网络 - 安徽省地级市</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="杨宏星">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="1968-10"/>
+          <attvalue for="3" value="安徽长丰"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="孔涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="1974-03"/>
+          <attvalue for="3" value="山东烟台"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="丁纯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="黄山市委书记（原铜陵市委书记2019.12-2024.12）"/>
+          <attvalue for="2" value="1970-10"/>
+          <attvalue for="3" value="江苏江阴"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="胡启生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原铜陵市长（2018-2021）"/>
+          <attvalue for="2" value="1971-05"/>
+          <attvalue for="3" value="安徽桐城"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="吴祚麓">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席（原市委常委、常务副市长）"/>
+          <attvalue for="2" value="1968-11"/>
+          <attvalue for="3" value="安徽怀宁"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="（空缺）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会主任（空缺）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="杨如松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="枞阳县委书记（？ 待确认）"/>
+          <attvalue for="2" value="1975-07"/>
+          <attvalue for="3" value="安徽颍上"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="王书春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="铜官区委书记（？ 待确认）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="姚贵平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="义安区委书记（？ 待确认）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="刘磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="郊区委书记（？ 待确认）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中国共产党铜陵市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="铜陵市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="铜陵市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协铜陵市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中国共产党黄山市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="常州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中国共产主义青年团安徽省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="群团"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共合肥市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共亳州市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共枞阳县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共铜官区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共义安区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共郊区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="铜陵市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年12月任铜陵市委书记"/>
+          <attvalue for="2" value="2024-12 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="铜陵市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年4月任代市长，5月当选"/>
+          <attvalue for="2" value="2021-04 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o9" label="亳州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2020-07 - 2021-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o7" label="共青团安徽省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2017-12 - 2020-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2" target="o8" label="合肥市委常委、副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职"/>
+          <attvalue for="2" value="2016 - 2017-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="o3" label="中国侨联海外联谊部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="此前任副部长（副局级）"/>
+          <attvalue for="2" value="unknown - 2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o1" label="铜陵市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2019-12 - 2024-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p3" target="o5" label="黄山市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2024-12 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p3" target="o6" label="常州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2017-02 - 2019-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p4" target="o2" label="铜陵市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2018 - 2021-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p5" target="o4" label="铜陵市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2026-01 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="o10" label="枞阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="信息待核实"/>
+          <attvalue for="2" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p8" target="o11" label="铜官区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="信息待核实"/>
+          <attvalue for="2" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p9" target="o12" label="义安区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="信息待核实"/>
+          <attvalue for="2" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p10" target="o13" label="郊区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="信息待核实"/>
+          <attvalue for="2" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="当前铜陵市委书记与市长搭档关系，共同领导铜陵市党政工作"/>
+          <attvalue for="2" value="2024-12至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="杨宏星接替丁纯任铜陵市委书记"/>
+          <attvalue for="2" value="2024-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p2" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="孔涛接替胡启生任铜陵市市长"/>
+          <attvalue for="2" value="2021-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="孔涛（市长）与丁纯（市委书记）在铜陵搭档约3年半"/>
+          <attvalue for="2" value="2021-04至2024-12"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
