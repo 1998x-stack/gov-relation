@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "六安市",
+    "region": "金寨县",
+    "job": "县长",
+    "task_id": "anhui_金寨县",
+    "time_focus": "current"
+  },
+  "identity": {
+    "person_id": "jinzhai_jiang_fei",
+    "name": "江飞",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "江飞_",
+      "name_birthplace": "江飞_",
+      "official_profile_url": "http://www.ahjinzhai.gov.cn/content/column/6791191?liId=181&tid=41"
+    }
+  },
+  "current_status": {
+    "current_post": "县委副书记、县长",
+    "current_org": "金寨县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "present",
+      "org": "金寨县人民政府",
+      "title": "县长",
+      "level": "正处级",
+      "location": "金寨县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "领导县政府全面工作。金寨县领导之窗同时列入县委领导和政府领导名单。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "present",
+      "org": "中共金寨县委员会",
+      "title": "县委副书记",
+      "level": "正处级",
+      "location": "金寨县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到江飞的出生年月、籍贯、学历及任金寨县长前的完整履历。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "jinzhai_county_party",
+      "org_name": "中共金寨县委员会",
+      "org_type": "党委"
+    },
+    {
+      "org_id": "jinzhai_county_gov",
+      "org_name": "金寨县人民政府",
+      "org_type": "政府"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "董益乐",
+      "person_id": "jinzhai_dong_yile",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县长和县委书记同届领导班子成员，同属县委常委会",
+      "overlap_org": "中共金寨县委员会",
+      "overlap_period": "present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "朱煜",
+      "person_id": "jinzhai_zhu_yu",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县长和常务副县长同届政府班子",
+      "overlap_org": "金寨县人民政府",
+      "overlap_period": "present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "因履历不完整，无法评估晋升速度。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_reports_count": 6,
+    "key_relationships_count": 6,
+    "committee_membership": "县委常委、县政府党组"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现江飞相关的纪律处分、调查、负面新闻报道或审计问题。",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "金寨县领导之窗",
+      "url": "http://www.ahjinzhai.gov.cn/content/column/6791191?liId=181&tid=41",
+      "publisher": "金寨县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "金寨县政府官网领导之窗页面，包含县委领导和政府领导完整名单。江飞同时列入县委和政府名单。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "high",
+    "biggest_gap": "江飞的出生年月、籍贯、学历及任县长前的完整履历"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "江飞的出生年月、籍贯、学历是什么？",
+      "why_it_matters": "基本身份信息缺失，影响图谱中节点的完整性和可追溯性",
+      "suggested_queries": ["江飞 金寨 县长 简历", "江飞 出生", "江飞 籍贯"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "critical",
+      "question": "江飞任金寨县长前的完整履历？",
+      "why_it_matters": "理解其工作背景和提拔路径，发现与其他官员的潜在交集",
+      "suggested_queries": ["江飞 金寨 曾任", "江飞 六安 任职", "江飞 任前公示"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "江飞何时开始担任金寨县长？接替谁？",
+      "why_it_matters": "明确班子更迭时间线和前任去向",
+      "suggested_queries": ["江飞 任金寨县长 时间", "金寨县 前任县长"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}
