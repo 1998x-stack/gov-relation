@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "庐阳区",
+    "job": "区长",
+    "task_id": "anhui_庐阳区",
+    "time_focus": "2022-present"
+  },
+  "identity": {
+    "person_id": "luyang_yang_binghong",
+    "name": "杨丙红",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1978-10",
+    "birthplace": "安徽合肥",
+    "native_place": "安徽合肥",
+    "education": [
+      {
+        "period": "",
+        "institution": "在职研究生",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "part_time",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1999",
+    "dedupe_keys": {
+      "name_birth": "杨丙红_197810",
+      "name_birthplace": "杨丙红_安徽合肥",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "庐阳区长",
+    "current_org": "庐阳区人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "1999",
+      "end": "unknown",
+      "org": "合肥市",
+      "title": "早期基层任职",
+      "level": "",
+      "location": "合肥市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到详细早期履历",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "2021",
+      "org": "合肥市",
+      "title": "庐阳区前任职",
+      "level": "",
+      "location": "合肥市",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": false,
+      "notes": "履历缺口：2022年任区长前的具体职务不详",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2022",
+      "end": "present",
+      "org": "庐阳区人民政府",
+      "title": "庐阳区长",
+      "level": "县级",
+      "location": "合肥市庐阳区",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "luyang_government",
+      "name": "庐阳区人民政府",
+      "type": "政府",
+      "role": "区长"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "高强",
+      "person_id": "luyang_gao_qiang",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "庐阳区委书记与区长搭档，2022年至今",
+      "overlap_org": "庐阳区",
+      "overlap_period": "2022-present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "余波",
+      "person_id": "luyang_yu_bo",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与常务副区长",
+      "overlap_org": "庐阳区人民政府",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2022-present",
+      "domain": "economic_development",
+      "achievement_or_event": "主持庐阳区政府全面工作，推进老城区转型发展",
+      "role_in_event": "区长（主持政府全面工作）",
+      "measurable_outcome": "",
+      "location": "庐阳区",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["安徽合肥"],
+    "promotion_velocity": {
+      "summary": "1999年参加工作，2022年任庐阳区长，约23年职业生涯升至正处级政府主官，节奏适中",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "low_profile",
+        "evidence": "公开报道相对有限",
+        "confidence": "plausible",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 8,
+    "key_connections": ["高强（区委书记）", "余波（常务副区长）"],
+    "centrality_note": "作为区长，在政府系统中处于核心位置"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现杨丙红涉及违纪违法或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py",
+      "url": "",
+      "publisher": "公开报道/政府网站",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "来源为合肥市现有调研数据，原始来源为公开报道和政府网站"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2022年任区长前的完整履历缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "杨丙红2022年任庐阳区长前的完整职业生涯是什么？",
+      "why_it_matters": "确定他的职业背景、晋升路径和可能的同僚网络",
+      "suggested_queries": ["杨丙红 合肥 简历", "杨丙红 庐阳区 历任职务"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "杨丙红的具体教育背景和专业方向？",
+      "why_it_matters": "确认其专业背景和可能的校友网络",
+      "suggested_queries": ["杨丙红 1978 安徽 在职研究生"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

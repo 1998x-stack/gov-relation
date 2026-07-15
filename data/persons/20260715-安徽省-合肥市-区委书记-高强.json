@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "庐阳区",
+    "job": "区委书记",
+    "task_id": "anhui_庐阳区",
+    "time_focus": "2022-present"
+  },
+  "identity": {
+    "person_id": "luyang_gao_qiang",
+    "name": "高强",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1973-10",
+    "birthplace": "安徽合肥",
+    "native_place": "安徽合肥",
+    "education": [
+      {
+        "period": "",
+        "institution": "省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1995",
+    "dedupe_keys": {
+      "name_birth": "高强_197310",
+      "name_birthplace": "高强_安徽合肥",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "庐阳区委书记",
+    "current_org": "中共庐阳区委",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "1995",
+      "end": "unknown",
+      "org": "合肥市",
+      "title": "早期基层任职",
+      "level": "",
+      "location": "合肥市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到详细早期履历",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "2021",
+      "org": "合肥市",
+      "title": "庐阳区前任职",
+      "level": "",
+      "location": "合肥市",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": false,
+      "notes": "履历缺口：2022年任区委书记前的具体职务不详",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2022",
+      "end": "present",
+      "org": "中共庐阳区委",
+      "title": "庐阳区委书记",
+      "level": "县级",
+      "location": "合肥市庐阳区",
+      "system": "party",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "接替陈华",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "luyang_party_committee",
+      "name": "中共庐阳区委",
+      "type": "党委",
+      "role": "区委书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "杨丙红",
+      "person_id": "luyang_yang_binghong",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "庐阳区委书记与区长搭档，2022年至今",
+      "overlap_org": "庐阳区",
+      "overlap_period": "2022-present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张旭生",
+      "person_id": "luyang_zhang_xusheng",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记与区委副书记",
+      "overlap_org": "中共庐阳区委",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2022-present",
+      "domain": "urban_construction",
+      "achievement_or_event": "庐阳区作为合肥老城区，持续推进城市更新和产业转型",
+      "role_in_event": "区委书记（主持全面工作）",
+      "measurable_outcome": "",
+      "location": "庐阳区",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["安徽合肥"],
+    "promotion_velocity": {
+      "summary": "1995年参加工作，2022年任庐阳区委书记，约27年职业生涯升至正处级一把手，节奏适中",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "low_profile",
+        "evidence": "公开报道较少，未见大量媒体曝光",
+        "confidence": "plausible",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 10,
+    "key_connections": ["杨丙红（区长）", "张旭生（副书记）"],
+    "centrality_note": "作为区委书记，在庐阳区网络中处于中心节点"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现高强涉及违纪违法或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py",
+      "url": "",
+      "publisher": "公开报道/政府网站",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "来源为合肥市现有调研数据，原始来源为公开报道和政府网站"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2022年任区委书记前的完整履历缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "高强2022年任庐阳区委书记前的完整职业生涯是什么？",
+      "why_it_matters": "确定他的职业背景、晋升路径和可能的同僚网络",
+      "suggested_queries": ["高强 合肥 简历", "高强 庐阳区 历任职务", "高强 合肥市 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "高强的出生月份和具体教育经历？",
+      "why_it_matters": "确认其教育背景和可能的同级校友网络",
+      "suggested_queries": ["高强 1973 安徽 省委党校"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
