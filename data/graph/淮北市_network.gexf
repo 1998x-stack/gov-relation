@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>淮北市领导班子工作关系网络 — Party Secretary, Mayor, and leadership team</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="汪华东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共淮北市委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="蒋曦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="淮北市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="覃卫国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市委书记（现安徽省委常委、政法委书记）"/>
+          <attvalue for="2" value="中共安徽省委政法委员会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="李朝晖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会主任"/>
+          <attvalue for="2" value="淮北市人大常委会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="钱界殊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="政协淮北市委员会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="戴启远">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前市长"/>
+          <attvalue for="2" value="淮北市人民政府"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="张永">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前市委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中国共产党淮北市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="淮北市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="淮北市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协淮北市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共安徽省委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="安徽省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="安徽省公安厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="广西交通投资集团有限公司">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="市委书记、淮北军分区党委第一书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o5" label="省委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p3" target="o6" label="副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p3" target="o7" label="省公安厅厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p3" target="o8" label="总经理" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p4" target="o3" label="市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p5" target="o4" label="市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p6" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p7" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p2" label="市委书记与市长，市委领导班子正副搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记与市长，市委领导班子正副搭档"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p3" label="市委书记职务：覃卫国(2022-2024)→汪华东(2024-)，同时覃卫国提携/推荐汪华东接任书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记职务：覃卫国(2022-2024)→汪华东(2024-)，同时覃卫国提携/推荐汪华东接任书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p3" label="市长职务：覃卫国(2020-2022)转任书记，汪华东(2022-2024)接任市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长职务：覃卫国(2020-2022)转任书记，汪华东(2022-2024)接任市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p3" target="p4" label="覃卫国任市委书记期间(2022.05-2024.06)李朝晖为市领导" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="覃卫国任市委书记期间(2022.05-2024.06)李朝晖为市领导"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p3" target="p5" label="覃卫国任市委书记期间钱界殊任市政协主席" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="覃卫国任市委书记期间钱界殊任市政协主席"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p4" label="汪华东任市委书记期间，李朝晖任市人大常委会主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="汪华东任市委书记期间，李朝晖任市人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p5" label="汪华东任市委书记期间，钱界殊任市政协主席" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="汪华东任市委书记期间，钱界殊任市政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p2" target="p5" label="蒋曦任市长期间，钱界殊任市政协主席" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="蒋曦任市长期间，钱界殊任市政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p3" target="p6" label="戴启远→覃卫国，前任市长与继任市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="戴启远→覃卫国，前任市长与继任市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p3" target="p7" label="张永→覃卫国，前任市委书记与继任市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张永→覃卫国，前任市委书记与继任市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
