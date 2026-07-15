@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>谯城区领导班子工作关系网络 — 含区委、区政府、区纪委、区人大、区政协领导班子及前任脉络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="type" type="string"/>
+      <attribute id="role" title="role" type="string"/>
+      <attribute id="source" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="type" type="string"/>
+      <attribute id="context" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="qiaocheng_zhou_xiao" label="周霄">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委书记"/>
+          <attvalue for="source" value="bzqc.gov.cn 新闻公告＋百度百科"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_zhang_jianying" label="张建影">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委副书记、区长"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/张建影/22548805"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_song_baozhong" label="宋保众">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区政府原区长（去向待查）"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/宋保众/16710058"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_jin_chunlong" label="金春龙">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="（已被开除党籍和公职）"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/金春龙"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_gao_chuan" label="高川">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="（已被开除党籍，移送检察机关）"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/高川/18878233"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_liang_chao" label="梁超">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委副书记、区委党校校长"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_li_ya" label="李亚">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委、常务副区长"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/708856.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_xu_zhiyuan" label="徐致远">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委、区纪委书记、区监委主任"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721596.html"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_wang_jundong" label="王俊东">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区人大常委会主任"/>
+          <attvalue for="source" value="bzqc.gov.cn 新闻公告"/>
+        </attvalues>
+        <viz:color r="80" g="160" b="80" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_lu_lei" label="鲁磊">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政协主席"/>
+          <attvalue for="source" value="bzqc.gov.cn 新闻公告"/>
+        </attvalues>
+        <viz:color r="160" g="80" b="160" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_jiang_yuntao" label="蒋运涛">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_zhang_miaoping" label="张苗平">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_cui_wenjia" label="崔文佳">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_liang_haitian" label="梁海天">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_wang_fei" label="王飞">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_chen_ying" label="陈影">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委常委"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721595.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_zhao_wei" label="赵伟">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府领导（副区长级）"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/722824.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_pan_chengyao" label="潘承尧">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府领导（副区长级）"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/722824.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_wang_hongbo" label="王洪波">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府领导（副区长级）"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/722824.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_guo_quande" label="郭全德">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府领导（副区长级）"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/722824.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_liu_hu" label="刘虎">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府党组成员、谯城经开区党工委书记、管委会主任"/>
+          <attvalue for="source" value="bzqc.gov.cn 新闻公告"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_xu_yanbin" label="胥艳彬">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区纪委副书记、监委副主任"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721596.html"/>
+        </attvalues>
+        <viz:color r="220" g="140" b="40" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="qiaocheng_liu_yongtian" label="刘永田">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区纪委副书记、监委副主任"/>
+          <attvalue for="source" value="https://www.bzqc.gov.cn/News/show/721596.html"/>
+        </attvalues>
+        <viz:color r="220" g="140" b="40" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="org_qc_party" label="中共亳州市谯城区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_qc_gov" label="谯城区人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_qc_discipline" label="中共亳州市谯城区纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="discipline"/>
+        </attvalues>
+        <viz:color r="200" g="120" b="30" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_qc_npc" label="亳州市谯城区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="npc"/>
+        </attvalues>
+        <viz:color r="60" g="140" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_qc_cppcc" label="中国人民政治协商会议亳州市谯城区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="cppcc"/>
+        </attvalues>
+        <viz:color r="140" g="60" b="140" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_qc_party_school" label="中共亳州市谯城区委党校">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="education"/>
+        </attvalues>
+        <viz:color r="100" g="160" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_qc_economic_zone" label="谯城经济开发区">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="development_zone"/>
+        </attvalues>
+        <viz:color r="100" g="200" b="100" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_bozhou_party" label="中共亳州市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_bozhou_gov" label="亳州市人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_bozhou_discipline" label="中共亳州市纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="discipline"/>
+        </attvalues>
+        <viz:color r="200" g="120" b="30" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_tongling_party" label="中共铜陵市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_anhui_science_assoc" label="安徽省科学技术协会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="mass_organization"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_bozhou_cppcc" label="中国人民政治协商会议亳州市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="cppcc"/>
+        </attvalues>
+        <viz:color r="140" g="60" b="140" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_bozhou_tcm_admin" label="亳州市中医药管理局">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_bozhou_pharma_dev" label="亳州市药业发展促进局">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="qiaocheng_zhou_xiao" target="org_qc_party" label="谯城区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委书记 (2021-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="qiaocheng_zhou_xiao" target="org_qc_gov" label="谯城区区长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区区长（此前曾任） (2020-11-2021)"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="qiaocheng_zhang_jianying" target="org_qc_gov" label="谯城区区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区区长 (2026-07-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="qiaocheng_zhang_jianying" target="org_qc_party" label="谯城区委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委副书记 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="qiaocheng_zhang_jianying" target="org_bozhou_tcm_admin" label="亳州市中医药管理局局长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="亳州市中医药管理局局长 (unknown-2026-06)"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="qiaocheng_zhang_jianying" target="org_bozhou_pharma_dev" label="亳州市药业发展促进局局长（兼）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="亳州市药业发展促进局局长（兼） (unknown-2026-06)"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="qiaocheng_zhang_jianying" target="org_qc_party" label="谯城区委常委、组织部部长、统战部部长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委、组织部部长、统战部部长（此前曾任） (unknown-unknown)"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="qiaocheng_song_baozhong" target="org_qc_gov" label="谯城区区长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区区长（此前曾任） (2021-12-2026-06)"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="qiaocheng_song_baozhong" target="org_bozhou_gov" label="亳州市审计局副局长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="亳州市审计局副局长（此前曾任） (unknown-2021-12)"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="qiaocheng_jin_chunlong" target="org_qc_party" label="谯城区委书记（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委书记（此前曾任） (2016-05-2021-07)"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="qiaocheng_jin_chunlong" target="org_tongling_party" label="铜陵市委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="铜陵市委副书记 (2021-07-2022-04)"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="qiaocheng_jin_chunlong" target="org_anhui_science_assoc" label="省科协党组书记、副主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="省科协党组书记、副主席 (2022-04-2025-09)"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="qiaocheng_gao_chuan" target="org_qc_gov" label="谯城区区长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区区长（此前曾任） (2015-12-2020-11)"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="qiaocheng_gao_chuan" target="org_bozhou_cppcc" label="亳州市政协二级巡视员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="亳州市政协二级巡视员 (2020-11-2025-03)"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="qiaocheng_liang_chao" target="org_qc_party" label="谯城区委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委副书记 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="qiaocheng_liang_chao" target="org_qc_party_school" label="区委党校校长（兼）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="区委党校校长（兼） (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="qiaocheng_li_ya" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="qiaocheng_li_ya" target="org_qc_gov" label="常务副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="常务副区长 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="qiaocheng_xu_zhiyuan" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="qiaocheng_xu_zhiyuan" target="org_qc_discipline" label="区纪委书记、区监委主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="区纪委书记、区监委主任 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="qiaocheng_wang_jundong" target="org_qc_npc" label="区人大常委会主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="区人大常委会主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="qiaocheng_lu_lei" target="org_qc_cppcc" label="区政协主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="区政协主席 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="qiaocheng_jiang_yuntao" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="qiaocheng_zhang_miaoping" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="qiaocheng_cui_wenjia" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="qiaocheng_liang_haitian" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="qiaocheng_wang_fei" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="qiaocheng_chen_ying" target="org_qc_party" label="谯城区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委常委 (2026-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="qiaocheng_zhao_wei" target="org_qc_gov" label="副区长（区领导）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="副区长（区领导） (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="qiaocheng_pan_chengyao" target="org_qc_gov" label="副区长（区领导）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="副区长（区领导） (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="qiaocheng_wang_hongbo" target="org_qc_gov" label="副区长（区领导）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="副区长（区领导） (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="qiaocheng_guo_quande" target="org_qc_gov" label="副区长（区领导）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="副区长（区领导） (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="qiaocheng_liu_hu" target="org_qc_economic_zone" label="谯城经开区党工委书记、管委会主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城经开区党工委书记、管委会主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="qiaocheng_xu_yanbin" target="org_qc_discipline" label="区纪委副书记、监委副主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="区纪委副书记、监委副主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="qiaocheng_liu_yongtian" target="org_qc_discipline" label="区纪委副书记、监委副主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="区纪委副书记、监委副主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="qiaocheng_zhou_xiao" target="qiaocheng_zhang_jianying" label="区委书记与区长党政正职搭档（2026年7月起）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委书记与区长党政正职搭档（2026年7月起）"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="qiaocheng_zhou_xiao" target="qiaocheng_song_baozhong" label="周霄升任区委书记后，宋保众接任区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="周霄升任区委书记后，宋保众接任区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="qiaocheng_zhou_xiao" target="qiaocheng_jin_chunlong" label="周霄接替金春龙任区委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="周霄接替金春龙任区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="qiaocheng_song_baozhong" target="qiaocheng_gao_chuan" label="宋保众接替高川任区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="宋保众接替高川任区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="qiaocheng_zhang_jianying" target="qiaocheng_song_baozhong" label="张建影接替宋保众任区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="张建影接替宋保众任区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="qiaocheng_zhou_xiao" target="qiaocheng_liang_chao" label="区委书记与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="qiaocheng_zhang_jianying" target="qiaocheng_liang_chao" label="区长与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区长与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="qiaocheng_zhou_xiao" target="qiaocheng_li_ya" label="区委书记与常务副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委书记与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="qiaocheng_zhang_jianying" target="qiaocheng_li_ya" label="区长与常务副区长（政府班子搭档）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区长与常务副区长（政府班子搭档）"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="qiaocheng_zhou_xiao" target="qiaocheng_xu_zhiyuan" label="区委书记与纪委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委书记与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="qiaocheng_xu_zhiyuan" target="qiaocheng_xu_yanbin" label="区纪委书记与副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区纪委书记与副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="qiaocheng_xu_zhiyuan" target="qiaocheng_liu_yongtian" label="区纪委书记与副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区纪委书记与副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="qiaocheng_jin_chunlong" target="qiaocheng_gao_chuan" label="前任书记与前任区长在谯城区同时期搭档（2016–2020年），两人均被查">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="前任书记与前任区长在谯城区同时期搭档（2016–2020年），两人均被查"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="qiaocheng_jin_chunlong" target="qiaocheng_gao_chuan" label="金春龙（区委书记）与高川（区长）党政正职搭档">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="金春龙（区委书记）与高川（区长）党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="qiaocheng_zhou_xiao" target="qiaocheng_jiang_yuntao" label="区委常委班子">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委常委班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="qiaocheng_zhou_xiao" target="qiaocheng_zhang_miaoping" label="区委常委班子">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委常委班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="qiaocheng_zhou_xiao" target="qiaocheng_cui_wenjia" label="区委常委班子">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委常委班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e53" source="qiaocheng_zhou_xiao" target="qiaocheng_liang_haitian" label="区委常委班子">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委常委班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e54" source="qiaocheng_zhou_xiao" target="qiaocheng_wang_fei" label="区委常委班子">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委常委班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e55" source="qiaocheng_zhou_xiao" target="qiaocheng_chen_ying" label="区委常委班子">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区委常委班子"/>
+        </attvalues>
+      </edge>
+      <edge id="e56" source="qiaocheng_zhang_jianying" target="qiaocheng_zhao_wei" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e57" source="qiaocheng_zhang_jianying" target="qiaocheng_pan_chengyao" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e58" source="qiaocheng_zhang_jianying" target="qiaocheng_wang_hongbo" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e59" source="qiaocheng_zhang_jianying" target="qiaocheng_guo_quande" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e60" source="qiaocheng_zhang_jianying" target="bozhou_qin_fengyu" label="秦凤玉（亳州市长）与张建影（曾任亳州市中医药管理局局长，属市政府部门领导）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="秦凤玉（亳州市长）与张建影（曾任亳州市中医药管理局局长，属市政府部门领导）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
