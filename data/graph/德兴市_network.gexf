@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+<meta lastmodifieddate="2026-07-15">
+<creator>OpenCode gov-relation network builder</creator>
+<description>德兴市领导班子工作关系网络</description>
+</meta>
+<graph mode="static" defaultedgetype="undirected">
+<attributes class="node">
+<attribute id="type" title="Type" type="string"/>
+<attribute id="role" title="Role" type="string"/>
+<attribute id="birth" title="Birth" type="string"/>
+<attribute id="birthplace" title="Birthplace" type="string"/>
+<attribute id="education" title="Education" type="string"/>
+</attributes>
+<attributes class="edge">
+<attribute id="type" title="Edge Type" type="string"/>
+<attribute id="period" title="Period" type="string"/>
+<attribute id="context" title="Context" type="string"/>
+</attributes>
+<nodes>
+<node id="dexing_杨秀福" label="杨秀福
+德兴市委书记（~2021-）">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="德兴市委书记（~2021-）"/>
+<attvalue for="birth" value=""/>
+<attvalue for="birthplace" value="江西"/>
+<attvalue for="education" value=""/>
+</attvalues>
+<viz:color r="255" g="50" b="50" a="1"/>
+<viz:size value="20.0"/>
+</node>
+<node id="dexing_陈武" label="陈武
+德兴市长（~2021-）">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="德兴市长（~2021-）"/>
+<attvalue for="birth" value=""/>
+<attvalue for="birthplace" value="江西"/>
+<attvalue for="education" value=""/>
+</attvalues>
+<viz:color r="50" g="100" b="255" a="1"/>
+<viz:size value="20.0"/>
+</node>
+<node id="dexing_刘瑞英" label="刘瑞英
+原九江市委常委、组织部部长（2022年被">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="原九江市委常委、组织部部长（2022年被查）"/>
+<attvalue for="birth" value="1970-02"/>
+<attvalue for="birthplace" value="江西瑞金?（待确认）"/>
+<attvalue for="education" value=""/>
+</attvalues>
+<viz:color r="100" g="100" b="100" a="1"/>
+<viz:size value="20.0"/>
+</node>
+<node id="dexing_郭峰" label="郭峰
+原德兴市委书记">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="原德兴市委书记"/>
+<attvalue for="birth" value=""/>
+<attvalue for="birthplace" value="江西"/>
+<attvalue for="education" value=""/>
+</attvalues>
+<viz:color r="255" g="50" b="50" a="1"/>
+<viz:size value="20.0"/>
+</node>
+<node id="dexing_何金铭" label="何金铭
+原德兴市委书记（2014年被查）">
+<attvalues>
+<attvalue for="type" value="person"/>
+<attvalue for="role" value="原德兴市委书记（2014年被查）"/>
+<attvalue for="birth" value=""/>
+<attvalue for="birthplace" value="江西"/>
+<attvalue for="education" value=""/>
+</attvalues>
+<viz:color r="255" g="50" b="50" a="1"/>
+<viz:size value="12.0"/>
+</node>
+<node id="org_1" label="中共德兴市委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 县级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_2" label="德兴市人民政府">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 县级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_3" label="德兴市人民代表大会常务委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="人大 县级"/>
+</attvalues>
+<viz:color r="200" g="255" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_4" label="政协德兴市委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政协 县级"/>
+</attvalues>
+<viz:color r="255" g="240" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_5" label="中共德兴市纪律检查委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 县级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_6" label="中共德兴市委组织部">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 县级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_7" label="德兴市监察委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 县级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_8" label="中共景德镇市委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 地级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_9" label="中共九江市委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 地级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_10" label="德兴经济开发区">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="开发区 省级"/>
+</attvalues>
+<viz:color r="200" g="255" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_11" label="中共上饶市委员会">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="党委 地级"/>
+</attvalues>
+<viz:color r="255" g="200" b="200" a="1"/>
+<viz:size value="8.0"/>
+</node>
+<node id="org_12" label="上饶市人民政府">
+<attvalues>
+<attvalue for="type" value="org"/>
+<attvalue for="role" value="政府 地级"/>
+</attvalues>
+<viz:color r="200" g="200" b="255" a="1"/>
+<viz:size value="8.0"/>
+</node>
+</nodes>
+<edges>
+<edge id="e1" source="dexing_杨秀福" target="org_1" label="德兴市委书记 (2021-08-至今)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2021-08—至今"/>
+<attvalue for="context" value="⚠️ 推定：杨秀福此前任德兴市长，2021年8月左右接任市委书记。需官方来源确认准确日期及是否仍在任。"/>
+</attvalues>
+</edge>
+<edge id="e2" source="dexing_杨秀福" target="org_2" label="德兴市委副书记、市长 (2019-08-2021-08)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2019-08—2021-08"/>
+<attvalue for="context" value="接替郭峰任市长"/>
+</attvalues>
+</edge>
+<edge id="e3" source="dexing_陈武" target="org_2" label="德兴市委副书记、市长 (2021-09-至今)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2021-09—至今"/>
+<attvalue for="context" value="⚠️ 推定：杨秀福升任书记后，陈武接任市长。具体任命时间及是否仍在任需官方确认。"/>
+</attvalues>
+</edge>
+<edge id="e4" source="dexing_刘瑞英" target="org_9" label="九江市委常委、组织部部长 (2021-08-2022-09)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2021-08—2022-09"/>
+<attvalue for="context" value="2022年8月被查；2023年1月被双开"/>
+</attvalues>
+</edge>
+<edge id="e5" source="dexing_刘瑞英" target="org_8" label="景德镇市委常委、组织部部长 (2019-08-2021-08)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2019-08—2021-08"/>
+<attvalue for="context" value=""/>
+</attvalues>
+</edge>
+<edge id="e6" source="dexing_刘瑞英" target="org_1" label="德兴市委书记 (2016-07-2019-08)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2016-07—2019-08"/>
+<attvalue for="context" value="来源: CCTV新闻报道"/>
+</attvalues>
+</edge>
+<edge id="e7" source="dexing_刘瑞英" target="org_2" label="德兴市委副书记、市长 (2015-02-2016-07)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2015-02—2016-07"/>
+<attvalue for="context" value="2015年2月任代市长，后任市长"/>
+</attvalues>
+</edge>
+<edge id="e8" source="dexing_刘瑞英" target="org_5" label="（此前）上饶市纪委副书记 (-2014-12)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="—2014-12"/>
+<attvalue for="context" value="来源: CCTV新闻"/>
+</attvalues>
+</edge>
+<edge id="e9" source="dexing_郭峰" target="org_1" label="德兴市委书记 (2019-08-2021-08)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2019-08—2021-08"/>
+<attvalue for="context" value=""/>
+</attvalues>
+</edge>
+<edge id="e10" source="dexing_郭峰" target="org_2" label="德兴市委副书记、市长 (2016-07-2019-08)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="2016-07—2019-08"/>
+<attvalue for="context" value="接替刘瑞英任市长"/>
+</attvalues>
+</edge>
+<edge id="e11" source="dexing_何金铭" target="org_1" label="德兴市委书记 (~2011-2014-06)" weight="1">
+<attvalues>
+<attvalue for="type" value="worked_at"/>
+<attvalue for="period" value="~2011—2014-06"/>
+<attvalue for="context" value="2014年6月4日被调查（来源: CCTV新闻）"/>
+</attvalues>
+</edge>
+<edge id="e12" source="dexing_杨秀福" target="dexing_陈武" label="前后任搭档" weight="3">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2021-09至今"/>
+<attvalue for="context" value="杨秀福（前任书记）与陈武（市长）在德兴市党政班子共事"/>
+</attvalues>
+</edge>
+<edge id="e13" source="dexing_刘瑞英" target="dexing_郭峰" label="前后任" weight="2">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2019-08"/>
+<attvalue for="context" value="刘瑞英升任景德镇后，郭峰接任德兴市委书记"/>
+</attvalues>
+</edge>
+<edge id="e14" source="dexing_郭峰" target="dexing_杨秀福" label="前后任" weight="2">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2021-08"/>
+<attvalue for="context" value="郭峰调离后，杨秀福接任德兴市委书记"/>
+</attvalues>
+</edge>
+<edge id="e15" source="dexing_刘瑞英" target="dexing_郭峰" label="党政搭档" weight="3">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2016-07至2019-08"/>
+<attvalue for="context" value="刘瑞英（书记）与郭峰（市长）在德兴市党政领导班子共事"/>
+</attvalues>
+</edge>
+<edge id="e16" source="dexing_郭峰" target="dexing_杨秀福" label="党政搭档" weight="3">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="2019-08至2021-08"/>
+<attvalue for="context" value="郭峰（书记）与杨秀福（市长）在德兴市党政领导班子共事"/>
+</attvalues>
+</edge>
+<edge id="e17" source="dexing_何金铭" target="dexing_刘瑞英" label="间接前后任" weight="2">
+<attvalues>
+<attvalue for="type" value="relationship"/>
+<attvalue for="period" value="间接"/>
+<attvalue for="context" value="何金铭（被查前书记）与刘瑞英（后任书记）之间隔了一位代理书记"/>
+</attvalues>
+</edge>
+</edges>
+</graph>
+</gexf>

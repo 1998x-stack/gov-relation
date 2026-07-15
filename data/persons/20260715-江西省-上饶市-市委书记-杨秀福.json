@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "上饶市",
+    "region": "德兴市",
+    "job": "市委书记",
+    "task_id": "jiangxi_德兴市",
+    "time_focus": "2014-2026"
+  },
+  "identity": {
+    "person_id": "shangrao_yang_xiufu",
+    "name": "杨秀福",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "江西",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "杨秀福_",
+      "name_birthplace": "杨秀福_江西",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "德兴市委书记",
+    "current_org": "中共德兴市委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2019-08",
+      "end": "2021-08",
+      "org": "德兴市人民政府",
+      "title": "德兴市委副书记、市长",
+      "level": "县级",
+      "location": "江西省上饶市德兴市",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替郭峰任德兴市长",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-08",
+      "end": null,
+      "org": "中共德兴市委员会",
+      "title": "德兴市委书记",
+      "level": "县级",
+      "location": "江西省上饶市德兴市",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替郭峰任德兴市委书记；当前在任情况需进一步确认",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "郭峰",
+      "person_id": "shangrao_guo_feng",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "郭峰任德兴市委书记期间，杨秀福任德兴市长；后杨秀福接替郭峰任书记",
+      "overlap_org": "德兴市",
+      "overlap_period": "2019-08至2021-08",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陈武",
+      "person_id": "shangrao_chen_wu",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "杨秀福升任书记后，陈武接任德兴市长，两人为党政搭档",
+      "overlap_org": "德兴市",
+      "overlap_period": "2021-09至今",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["上饶市"],
+    "promotion_velocity": {
+      "summary": "知识有限 — 缺少早期履历数据",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "综合新闻报道",
+      "url": "",
+      "publisher": "多方新闻报道",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "基于多篇关于上饶市德兴市人事变动的新闻报道综合推断。具体任命时间需查阅官方任前公示。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "缺少杨秀福的出生年份、出生地、教育背景、早期从政经历等完整履历信息。需通过百度百科或官方任前公示补充。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "杨秀福的完整履历是什么？出生年份、出生地、教育背景、早期工作经历。",
+      "why_it_matters": "核心人物缺少基本的身份信息和职业起点",
+      "suggested_queries": ["杨秀福 简历", "杨秀福 百度百科", "杨秀福 任前公示"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "杨秀福是否仍在德兴市委书记任上？还是有新的人事调整？",
+      "why_it_matters": "确认现任者的唯一方式",
+      "suggested_queries": ["德兴市委书记 2025 2026", "德兴市 党代会 2026"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "杨秀福此前在何处任职？如何从基层逐步晋升到德兴市长、书记？",
+      "why_it_matters": "理解其职业轨迹和权力网络",
+      "suggested_queries": ["杨秀福 此前 担任", "杨秀福 任职经历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

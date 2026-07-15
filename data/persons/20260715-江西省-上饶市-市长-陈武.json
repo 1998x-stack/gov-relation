@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "上饶市",
+    "region": "德兴市",
+    "job": "市长",
+    "task_id": "jiangxi_德兴市",
+    "time_focus": "2014-2026"
+  },
+  "identity": {
+    "person_id": "shangrao_chen_wu",
+    "name": "陈武",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "江西",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "陈武_",
+      "name_birthplace": "陈武_江西",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "德兴市委副书记、市长",
+    "current_org": "德兴市人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021-09",
+      "end": null,
+      "org": "德兴市人民政府",
+      "title": "德兴市委副书记、市长",
+      "level": "县级",
+      "location": "江西省上饶市德兴市",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替升任市委书记的杨秀福；具体任命时间及是否仍在任需官方确认",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "杨秀福",
+      "person_id": "shangrao_yang_xiufu",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "杨秀福升任书记后，陈武接任德兴市长",
+      "overlap_org": "德兴市",
+      "overlap_period": "2021-09至今",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["上饶市"],
+    "promotion_velocity": {
+      "summary": "信息不足",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "综合新闻报道",
+      "url": "",
+      "publisher": "多方新闻报道",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "基于德兴市人事更替的一般规律推断。具体任命时间和履历需查阅官方任前公示或百度百科。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "缺少陈武的完整履历、出生信息、教育背景、此前任职经历。基本信息极度匮乏。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "陈武的完整履历是什么？出生年份、出生地、教育背景、此前在何处任职？",
+      "why_it_matters": "德兴市长是核心目标人物，但基本信息全部缺失",
+      "suggested_queries": ["陈武 德兴市长 简历", "陈武 德兴 任前公示", "陈武 上饶"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "陈武是否仍在德兴市长任上？还是已有新任市长？",
+      "why_it_matters": "确认当前实际任职者",
+      "suggested_queries": ["德兴市 市长 2025 2026", "德兴市 人代会"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "2024-2025年德兴市是否有重要人事调整？",
+      "why_it_matters": "县市领导班子通常每5年换届，2026年可能已经调整",
+      "suggested_queries": ["德兴市 领导班子 调整 2024", "德兴市 党代会"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
