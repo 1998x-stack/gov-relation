@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>徽州区（安徽省黄山市）领导关系网络 — 区委书记、区长及领导班子（部分信息待确认）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="汪长剑">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="徽州区委书记"/>
+          <attvalue for="2" value="中共黄山市徽州区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="徽州区委副书记、区长（待确认）"/>
+          <attvalue for="2" value="黄山市徽州区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="章继平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="徽州区委副书记（待确认）"/>
+          <attvalue for="2" value="中共黄山市徽州区委员会"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p4" label="王恒来">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任徽州区委书记"/>
+          <attvalue for="2" value="中共黄山市徽州区委员会（前任）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="张伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任徽州区区长"/>
+          <attvalue for="2" value="黄山市徽州区人民政府（前任）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="o1" label="中共黄山市徽州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="黄山市徽州区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共黄山市徽州区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共黄山市徽州区委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共黄山市徽州区委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共黄山市徽州区委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="黄山市徽州区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="行政区域"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="黄山市徽州区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中国人民政治协商会议黄山市徽州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="徽州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="徽州区委书记，主持区委全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="徽州区委副书记、区长（待确认）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长身份待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o1" label="徽州区委副书记（待确认）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="专职副书记，协助书记处理日常党务"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o1" label="徽州区委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区委书记，2021年由汪长剑接任"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o2" label="徽州区区长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="汪长剑（区委书记）与现任区长（待确认）为徽州区党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="汪长剑（区委书记）与章继平（区委副书记）同为徽州区委领导班子成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="汪长剑接替王恒来任徽州区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="现任区长（待确认）接替张伟任徽州区区长"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
