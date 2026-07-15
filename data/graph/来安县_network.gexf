@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>来安县（安徽省滁州市）领导关系网络 - 2026年7月</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="gender" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="laian_zhang_chuanzong" label="张传宗">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委书记"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="laian_wang_haifeng" label="王海峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委副书记、县长"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="laian_deputy_secretary_1" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委副书记（专职）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_discipline_secretary" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、纪委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_organization_minister" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、组织部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_propaganda_minister" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、宣传部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_united_front_minister" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、统战部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_political_legal_secretary" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、政法委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_deputy_mayor_1" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、常务副县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="laian_military_committee" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="来安县委常委、人武部政委/部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="org_cpc_laian" label="中共来安县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_laian_gov" label="来安县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_discipline" label="中共来安县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_organization" label="中共来安县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_propaganda" label="中共来安县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_united_front" label="中共来安县委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_political_legal" label="中共来安县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_military" label="来安县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_npc" label="来安县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_cppcc" label="中国人民政治协商会议来安县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="laian_zhang_chuanzong" target="org_cpc_laian" label="来安县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="laian_wang_haifeng" target="org_laian_gov" label="来安县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委副书记、县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="laian_wang_haifeng" target="org_cpc_laian" label="来安县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="laian_deputy_secretary_1" target="org_cpc_laian" label="来安县委副书记（专职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委副书记（专职）"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="laian_discipline_secretary" target="org_discipline" label="来安县委常委、纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="laian_organization_minister" target="org_organization" label="来安县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="laian_propaganda_minister" target="org_propaganda" label="来安县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="laian_united_front_minister" target="org_united_front" label="来安县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="laian_political_legal_secretary" target="org_political_legal" label="来安县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="laian_deputy_mayor_1" target="org_laian_gov" label="来安县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、常务副县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="laian_military_committee" target="org_military" label="来安县委常委、人武部主官" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="来安县委常委、人武部主官"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="laian_zhang_chuanzong" target="laian_wang_haifeng" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与县长党政主官关系"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="laian_zhang_chuanzong" target="laian_deputy_secretary_1" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与县委副书记"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="laian_zhang_chuanzong" target="laian_discipline_secretary" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与纪委书记"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="laian_zhang_chuanzong" target="laian_organization_minister" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与组织部部长"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="laian_zhang_chuanzong" target="laian_propaganda_minister" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与宣传部部长"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="laian_zhang_chuanzong" target="laian_political_legal_secretary" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与政法委书记"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="laian_zhang_chuanzong" target="laian_united_front_minister" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与统战部部长"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="laian_wang_haifeng" target="laian_deputy_mayor_1" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县长与常务副县长"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="laian_zhang_chuanzong" target="laian_military_committee" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与人武部主官"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
