@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "宣城市",
+    "region": "郎溪县",
+    "job": "前任县委书记",
+    "task_id": "anhui_郎溪县",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "langxi_ji_wen",
+    "name": "嵇文",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "嵇文",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "宣城市副市长",
+    "current_org": "宣城市人民政府",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2021-05",
+      "org": "履历缺口",
+      "title": "任郎溪县委书记前履历",
+      "notes": "嵇文任郎溪县委书记之前的履历未在本次调研确认。需进一步查询。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021-05-10",
+      "end": "2026-05-31",
+      "org": "中共郎溪县委员会",
+      "title": "郎溪县委书记",
+      "level": "正县级",
+      "location": "安徽省宣城市郎溪县",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "2021年5月10日全县领导干部会议宣布任命，接替彭禧元。",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2025-06",
+      "end": "present",
+      "org": "宣城市人民政府",
+      "title": "宣城市副市长",
+      "level": "副厅级",
+      "location": "安徽省宣城市",
+      "system": "government",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "2025年6月起任宣城市副市长，同时继续兼任郎溪县委书记至2026年5月。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "org_cpc_langxi", "name": "中共郎溪县委员会", "role": "郎溪县委书记", "period": "2021-05至2026-05", "confidence": "confirmed"},
+    {"org_id": "org_xuancheng_gov", "name": "宣城市人民政府", "role": "宣城市副市长", "period": "2025-06至今", "confidence": "confirmed"}
+  ],
+  "relationships": [
+    {
+      "person": "许立勋",
+      "person_id": "langxi_xu_lixun",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "许立勋接替嵇文任郎溪县委书记。两人在2026年5月完成交接。",
+      "overlap_org": "中共郎溪县委员会",
+      "overlap_period": "2026-05",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "彭禧元",
+      "person_id": "langxi_peng_xiyuan",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "嵇文接替彭禧元任郎溪县委书记。2021年5月完成交接。",
+      "overlap_org": "中共郎溪县委员会",
+      "overlap_period": "2021-05",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": ["郎溪县", "宣城市"],
+    "promotion_velocity": {
+      "summary": "从县委书记升任副市长，属于典型的正县级升副厅级路径。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "key_connections": ["许立勋（接替者）", "彭禧元（前任）"],
+    "cross_county_moves": [],
+    "mentor_trail": "",
+    "regional_embedding": "deep"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现嵇文的纪律处分或负面报道。",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "许立勋任郎溪县委书记",
+      "url": "https://www.163.com/dy/article/KU9PI6UL05563DJA.html",
+      "publisher": "汲古知新（网易）",
+      "published_at": "2026-05-31",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "确认嵇文2025年6月任宣城市副市长"
+    },
+    {
+      "id": "S002",
+      "title": "嵇文任中共郎溪县委书记",
+      "url": "https://www.163.com/dy/article/G9NBSM7605346936.html",
+      "publisher": "金台资讯/人民网",
+      "published_at": "2021-05-11",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "confirmed appointment in 2021"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "high",
+    "biggest_gap": "嵇文任郎溪县委书记前的完整履历"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "嵇文任郎溪县委书记前的完整履历？",
+      "why_it_matters": "了解其晋升路径和可能的权力网络。",
+      "suggested_queries": ["嵇文 简历", "嵇文 百度百科", "嵇文 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "嵇文的出生年份和籍贯？",
+      "why_it_matters": "身份确认和关系分析。",
+      "suggested_queries": ["嵇文 出生", "嵇文 籍贯"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
