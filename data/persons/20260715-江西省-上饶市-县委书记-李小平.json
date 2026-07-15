@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "上饶市",
+    "region": "鄱阳县",
+    "job": "鄱阳县委书记",
+    "task_id": "jiangxi_鄱阳县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "poyang_li_xiaoping",
+    "name": "李小平",
+    "aliases": [],
+    "gender": "",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李小平_",
+      "name_birthplace": "李小平_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "鄱阳县委书记",
+    "current_org": "中共鄱阳县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "鄱阳县委书记（现任）",
+      "level": "县级",
+      "location": "江西省上饶市鄱阳县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "李小平为现任鄱阳县委书记。到任时间、此前任职及完整履历均待查。Baidu Baike鄱阳县词条确认其现任身份。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到李小平的出生年月、籍贯、学历、早期履历等信息。需访问百度百科人物词条或上饶市委组织部任前公示补充。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中共鄱阳县委员会",
+      "org_type": "党委",
+      "level": "县级",
+      "location": "江西省上饶市鄱阳县",
+      "role": "县委书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "徐光",
+      "person_id": "poyang_xu_guang",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "李小平（县委书记）与徐光（县长候选人）为鄱阳县党政一把手搭档，同时期在鄱阳县任职。",
+      "overlap_org": "鄱阳县",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "（待确认）前任鄱阳县委书记",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "李小平接替前任鄱阳县委书记。前任姓名及交接时间待核实。",
+      "overlap_org": "中共鄱阳县委员会",
+      "overlap_period": "不重叠（前后任）",
+      "direction": "other_to_person",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 1,
+    "second_degree_connections": 3,
+    "betweenness_centrality": "",
+    "role_in_network": "核心领导"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现李小平涉及纪律处分、巡视反馈负面问题或舆情争议的公开记录。由于信息有限，此结论的可靠性受限于公开资料可获取性。",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "鄱阳县 — 百度百科",
+      "url": "https://baike.baidu.com/item/鄱阳县",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "百科词条确认李小平为现任鄱阳县委书记。人物详页（baike.baidu.com/item/李小平）因网络限制不可达。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "李小平的完整履历（出生年月、籍贯、学历、历任职务）完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李小平的出生年月、籍贯是？",
+      "why_it_matters": "确定身份唯一性，用于跨调查的dedupe。",
+      "suggested_queries": ["李小平 出生 籍贯 江西", "李小平 简历 百度百科", "李小平 鄱阳 任职 公示"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "李小平何时到任鄱阳县委书记？上任前任何职？",
+      "why_it_matters": "建立完整职业时间线，判断晋升速度。",
+      "suggested_queries": ["李小平 任命 鄱阳县委书记 上饶", "李小平 此前 担任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "李小平的教育背景和专业领域？",
+      "why_it_matters": "判断其治理专长和职业路径类型（技术型/党务型/基层型）。",
+      "suggested_queries": ["李小平 学历 毕业 院校"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
