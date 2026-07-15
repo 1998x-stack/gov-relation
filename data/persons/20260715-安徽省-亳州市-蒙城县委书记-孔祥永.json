@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "亳州市",
+    "region": "蒙城县",
+    "job": "县委书记",
+    "task_id": "anhui_蒙城县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "anhui_mengcheng_kong_xiangyong",
+    "name": "孔祥永",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "待查",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "孔祥永_unknown",
+      "name_birthplace": "孔祥永_unknown",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "蒙城县委书记",
+    "current_org": "中共蒙城县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共蒙城县委员会",
+      "title": "蒙城县委书记",
+      "level": "县处级",
+      "location": "安徽省亳州市蒙城县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "孔祥永为蒙城县委书记。任职起始时间、此前履历均需进一步查证。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到孔祥永任县委书记前的完整履历。出生年月、籍贯、教育背景、此前任职均待查。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org_cpc_mengcheng",
+      "name": "中共蒙城县委员会",
+      "type": "party_committee",
+      "level": "county",
+      "parent": "中共亳州市委员会",
+      "location": "安徽省亳州市蒙城县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "于群",
+      "person_id": "mengcheng_yu_qun",
+      "relationship_type": "colleague",
+      "strength": "strong",
+      "evidence": "蒙城县委书记与县长，党政正职搭档关系。",
+      "overlap_org": "中共蒙城县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "杜延安",
+      "person_id": "mengcheng_du_yanan",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "亳州市委书记与蒙城县委书记的上下级工作关系。",
+      "overlap_org": "中共亳州市委员会",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "秦凤玉",
+      "person_id": "mengcheng_qin_fengyu",
+      "relationship_type": "same_native_place",
+      "strength": "weak",
+      "evidence": "秦凤玉为蒙城籍人士（出生地安徽蒙城），与蒙城县委书记有籍贯联系。",
+      "overlap_org": "",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "因公开资料不足，无法评估晋升速度。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足，无法推断工作风格。",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-15，在公开渠道未发现孔祥永的纪律处分、审计问题或负面报道。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "亳州市领导架构数据（现有项目数据库）",
+      "url": "",
+      "publisher": "Gov-Relation项目现有数据",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "源自亳州市现有 build_亳州市_data.py 数据"
+    },
+    {
+      "id": "S002",
+      "title": "秦凤玉Person JSON",
+      "url": "",
+      "publisher": "Gov-Relation项目",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "秦凤玉（亳州市长）个人图谱档案，记录籍贯为安徽蒙城"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "孔祥永的出生年月、籍贯、教育背景、入党时间、参加工作时间及任县委书记前的完整履历完全缺失。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "孔祥永的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "核心身份信息，用于人员去重和基础档案建立。",
+      "suggested_queries": ["孔祥永 出生", "孔祥永 简历", "孔祥永 百度百科", "孔祥永 籍贯"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "孔祥永何时开始担任蒙城县委书记？接替谁？",
+      "why_it_matters": "需要了解任命时间线和前任脉络。",
+      "suggested_queries": ["孔祥永 任蒙城县委书记 时间", "蒙城县委书记 任命", "孔祥永 接替"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "孔祥永任县委书记前的完整职业履历是什么？",
+      "why_it_matters": "了解其职业背景（是否本地成长、跨县交流或省厅下派）。",
+      "suggested_queries": ["孔祥永 曾任", "孔祥永 亳州 任职", "孔祥永 履历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
