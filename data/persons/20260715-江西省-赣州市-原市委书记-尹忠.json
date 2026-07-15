@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "瑞金市",
+    "job": "原市委书记",
+    "task_id": "jiangxi_瑞金市",
+    "time_focus": "2013-2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_ruijin_yinzhong_1969",
+    "name": "尹忠",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1969-01",
+    "birthplace": "江西赣县",
+    "native_place": "江西赣县",
+    "education": [
+      {
+        "period": "1985-09至1989-07",
+        "institution": "江西大学（现南昌大学）法律系",
+        "major": "法律",
+        "degree": "法学学士",
+        "study_type": "full_time",
+        "source_ids": ["S001", "S002"]
+      }
+    ],
+    "party_join": "1992-03",
+    "work_start": "1989-07",
+    "dedupe_keys": {
+      "name_birth": "尹忠_1969-01",
+      "name_birthplace": "尹忠_江西赣县",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "赣州市委常委",
+    "current_org": "中共赣州市委员会",
+    "administrative_rank": "地厅级副职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "2024",
+      "end": "present",
+      "org": "中共赣州市委员会",
+      "title": "赣州市委常委",
+      "level": "地厅级副职",
+      "location": "江西赣州",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2024年5月江西省委组织部任前公示拟任设区市委常委",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    },
+    {
+      "start": "2021-08",
+      "end": "2026-07",
+      "org": "中共瑞金市委员会",
+      "title": "瑞金市委书记",
+      "level": "县处级正职",
+      "location": "江西赣州瑞金",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2024年起同时担任赣州市委常委",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2016",
+      "end": "2021-08",
+      "org": "中共石城县委员会",
+      "title": "石城县委书记",
+      "level": "县处级正职",
+      "location": "江西赣州石城",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2013",
+      "end": "2016",
+      "org": "石城县人民政府",
+      "title": "石城县委副书记、县长",
+      "level": "县处级副职",
+      "location": "江西赣州石城",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    },
+    {
+      "start": "unknown",
+      "end": "2013",
+      "org": "赣州市粮食局/赣州市直机关",
+      "title": "历任科员、办公室副主任、行业管理科科长等职",
+      "level": "",
+      "location": "江西赣州",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1989年7月参加工作，赣州地区（市）粮食局办公室科员、副主任、行业管理科科长",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "organizations": [
+    {"id": "ganzhou_party", "name": "中共赣州市委员会", "role": "市委常委"},
+    {"id": "ruijin_party", "name": "中共瑞金市委员会", "role": "原市委书记"},
+    {"id": "shicheng_party", "name": "中共石城县委员会", "role": "原县委书记"},
+    {"id": "shicheng_gov", "name": "石城县人民政府", "role": "原县长"}
+  ],
+  "relationships": [
+    {
+      "person": "蓝贤林",
+      "person_id": "jiangxi_ruijin_lanxianlin_1979",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "尹忠任瑞金市委书记期间蓝贤林任市长（2019-2021），后蓝贤林接任市委书记（2026）",
+      "overlap_org": "中共瑞金市委员会/瑞金市人民政府",
+      "overlap_period": "2019-2021; 2026-07",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "刘春林",
+      "person_id": "jiangxi_ruijin_liuchunlin_1981",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "尹忠任瑞金市委书记期间刘春林任市长（2021-2024）",
+      "overlap_org": "瑞金市委/市政府",
+      "overlap_period": "2021-08至2024",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "吴建平",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "尹忠接替吴建平担任瑞金市委书记",
+      "overlap_org": "中共瑞金市委员会",
+      "overlap_period": "2021-08",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-2026",
+      "domain": "economic_development",
+      "achievement_or_event": "推动瑞金机场通航、瑞金内陆港暨盐田港瑞金内陆港揭牌，铁海联运开通",
+      "role_in_event": "瑞金市委书记",
+      "measurable_outcome": "2025年赣州瑞金机场正式通航",
+      "location": "瑞金市",
+      "confidence": "confirmed",
+      "source_ids": ["S005"]
+    },
+    {
+      "period": "2025",
+      "domain": "other",
+      "achievement_or_event": "提出打造'两地五区'发展目标",
+      "role_in_event": "瑞金市委书记",
+      "measurable_outcome": "",
+      "location": "瑞金市",
+      "confidence": "confirmed",
+      "source_ids": ["S005"]
+    },
+    {
+      "period": "2024",
+      "domain": "other",
+      "achievement_or_event": "推动政务服务从'能办''快办'向'易办''智办'转变",
+      "role_in_event": "全国人大代表、瑞金市委书记",
+      "measurable_outcome": "",
+      "location": "瑞金市",
+      "confidence": "confirmed",
+      "source_ids": ["S006"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党政管理", "法治", "经济管理"],
+    "secondary_specializations": ["粮食管理"],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["粮食系统", "县级政府", "县级党委"],
+    "geographic_pattern": ["赣州市-赣县区", "赣州市直", "石城县", "瑞金市"],
+    "promotion_velocity": {
+      "summary": "从粮食系统科员起步，经石城县长/书记到瑞金市委书记再到赣州市委常委，属稳健晋升",
+      "notable_fast_promotions": ["2024年晋升赣州市委常委（副厅级）"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "推动瑞金机场通航、内陆港建设等实际经济项目",
+        "confidence": "plausible",
+        "source_ids": ["S005"]
+      },
+      {
+        "trait": "reform_oriented",
+        "evidence": "接受人民网专访谈政务服务从'能办'向'智办'转变",
+        "confidence": "plausible",
+        "source_ids": ["S006"]
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月搜索范围（百度百科、人民网、中国经济网等权威媒体）未发现负面信号",
+      "date": "",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "尹忠 - 百度百科",
+      "url": "https://baike.baidu.com/item/%E5%B0%B9%E5%BF%A0",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": ""
+    },
+    {
+      "id": "S002",
+      "title": "尹忠：红色故都的'一线总指挥'",
+      "url": "",
+      "publisher": "百度文库",
+      "published_at": "2026-07-06",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": ""
+    },
+    {
+      "id": "S003",
+      "title": "江西对尹忠等12名同志任前公示",
+      "url": "",
+      "publisher": "中国经济网",
+      "published_at": "2024-05-11",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": ""
+    },
+    {
+      "id": "S004",
+      "title": "尹忠当选江西石城县县长",
+      "url": "",
+      "publisher": "巴西招商投资网",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": ""
+    },
+    {
+      "id": "S005",
+      "title": "瑞金：以对外开放书写老区振兴新答卷",
+      "url": "",
+      "publisher": "手机中国网",
+      "published_at": "2026-03-12",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": ""
+    },
+    {
+      "id": "S006",
+      "title": "全国人大代表尹忠接受人民网专访",
+      "url": "",
+      "publisher": "人民网",
+      "published_at": "2026-03-11",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": ""
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "粮食局时期（1989-2013）到石城县任职前的具体晋升时间线"
+  },
+  "open_questions": [
+    {
+      "priority": "medium",
+      "question": "尹忠在赣州市粮食局的具体任职时间线和晋升节点",
+      "why_it_matters": "明确从科员到县处级的完整晋升路径",
+      "suggested_queries": ["尹忠 赣州地区粮食局 任职", "尹忠 粮食局 行业管理科"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "low",
+      "question": "尹忠的家庭背景和教育经历详情",
+      "why_it_matters": "了解其早期成长环境",
+      "suggested_queries": [],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

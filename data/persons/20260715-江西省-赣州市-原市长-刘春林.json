@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "瑞金市",
+    "job": "原市长",
+    "task_id": "jiangxi_瑞金市",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_ruijin_liuchunlin_1981",
+    "name": "刘春林",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1981-01",
+    "birthplace": "江西会昌",
+    "native_place": "江西会昌",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "大学",
+        "major": "",
+        "degree": "大学学历",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘春林_1981-01",
+      "name_birthplace": "刘春林_江西会昌",
+      "official_profile_url": "https://www.ruijin.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "崇义县委书记",
+    "current_org": "中共崇义县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "2026-07",
+      "end": "present",
+      "org": "中共崇义县委员会",
+      "title": "崇义县委书记",
+      "level": "县处级正职",
+      "location": "江西赣州崇义",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2026年7月从瑞金市长调任崇义县委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2021-08",
+      "end": "2026-07",
+      "org": "瑞金市人民政府",
+      "title": "瑞金市委副书记、市长, 瑞金经开区党工委副书记、管委会主任",
+      "level": "县处级正职",
+      "location": "江西赣州瑞金",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2021年8月任代市长，后当选市长；2026年1月作政府工作报告",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    },
+    {
+      "start": "unknown",
+      "end": "2021-08",
+      "org": "安远县人民政府",
+      "title": "安远县委常委、县政府常务副县长",
+      "level": "县处级副职",
+      "location": "江西赣州安远",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "",
+      "org": "中共于都县委员会",
+      "title": "于都县委常委",
+      "level": "县处级副职",
+      "location": "江西赣州于都",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "",
+      "org": "共青团赣州市委",
+      "title": "共青团赣州市委副书记、党组成员",
+      "level": "",
+      "location": "江西赣州",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "",
+      "org": "共青团于都县委",
+      "title": "共青团于都县委书记",
+      "level": "",
+      "location": "江西赣州于都",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "早期在共青团系统工作",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"id": "chongyi_party", "name": "中共崇义县委员会", "role": "县委书记"},
+    {"id": "ruijin_gov", "name": "瑞金市人民政府", "role": "原市长"},
+    {"id": "anyuan_gov", "name": "安远县人民政府", "role": "原常务副县长"}
+  ],
+  "relationships": [
+    {
+      "person": "蓝贤林",
+      "person_id": "jiangxi_ruijin_lanxianlin_1979",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "蓝贤林2021年3月至8月任瑞金市长，刘春林8月接任",
+      "overlap_org": "瑞金市人民政府",
+      "overlap_period": "2021-08",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "尹忠",
+      "person_id": "jiangxi_ruijin_yinzhong_1969",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "刘春林任瑞金市长期间尹忠任瑞金市委书记",
+      "overlap_org": "瑞金市委/市政府",
+      "overlap_period": "2021-08至2024",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "彭民生",
+      "person_id": "jiangxi_ruijin_pengminsheng_1974",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "刘春林调崇义县委书记，彭民生接任瑞金市长候选人",
+      "overlap_org": "瑞金市人民政府",
+      "overlap_period": "2026-07",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-01",
+      "domain": "other",
+      "achievement_or_event": "在瑞金市第七届人民代表大会第六次会议上作政府工作报告",
+      "role_in_event": "瑞金市长",
+      "measurable_outcome": "",
+      "location": "瑞金市",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "period": "2026-04",
+      "domain": "economic_development",
+      "achievement_or_event": "调研重点项目建设工作",
+      "role_in_event": "瑞金市长",
+      "measurable_outcome": "",
+      "location": "瑞金市",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党政管理", "共青团工作"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["共青团系统", "县级党委", "县级政府"],
+    "geographic_pattern": ["赣州市-会昌县", "于都县", "安远县", "瑞金市", "崇义县"],
+    "promotion_velocity": {
+      "summary": "从共青团系统起步，经于都、安远到瑞金市长，2026年晋升崇义县委书记，属较快的跨县交流",
+      "notable_fast_promotions": ["2021年8月任瑞金市长（40岁），2026年7月任崇义县委书记（45岁）"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "technocratic",
+        "evidence": "常态化调研重点项目建设，注重经济发展",
+        "confidence": "plausible",
+        "source_ids": ["S004"]
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月搜索范围未发现负面信号",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "刘春林 - 瑞金市信息公开",
+      "url": "https://www.ruijin.gov.cn",
+      "publisher": "瑞金市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": ""
+    },
+    {
+      "id": "S002",
+      "title": "刘春林任崇义县委书记 - 汲古新知",
+      "url": "",
+      "publisher": "汲古新知",
+      "published_at": "2026-07-12",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": ""
+    },
+    {
+      "id": "S003",
+      "title": "瑞金市第七届人民代表大会第六次会议政府工作报告",
+      "url": "https://www.ruijin.gov.cn",
+      "publisher": "瑞金市人民政府",
+      "published_at": "2026-02-14",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": ""
+    },
+    {
+      "id": "S004",
+      "title": "刘春林调研重点项目建设工作",
+      "url": "https://www.ruijin.gov.cn",
+      "publisher": "瑞金市人民政府",
+      "published_at": "2026-04-10",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": ""
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "早期共青团系统任职的具体时间段和出生年份对应的起止日期"
+  },
+  "open_questions": [
+    {
+      "priority": "medium",
+      "question": "刘春林在共青团系统和于都县的具体任职时间线",
+      "why_it_matters": "完整理解其早期职业生涯",
+      "suggested_queries": ["刘春林 共青团于都县委书记", "刘春林 安远常务副县长"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
