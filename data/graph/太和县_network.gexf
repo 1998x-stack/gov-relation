@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>太和县（阜阳市）领导班子工作关系网络 — 2026年7月研究数据</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="context" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="taihe_shao_bing" label="邵兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="太和县委书记"/>
+          <attvalue for="2" value="中共太和县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="taihe_chen_jianhua" label="陈建华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="太和县委副书记、县长"/>
+          <attvalue for="2" value="太和县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="taihe_bao_li" label="鲍黎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="太和县人大常委会主任"/>
+          <attvalue for="2" value="太和县人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="taihe_hai_zhiguo" label="海治国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="太和县政协主席"/>
+          <attvalue for="2" value="太和县政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="taihe_deputy_mayor_1" label="待核实（常务副县长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="太和县委常委、常务副县长"/>
+          <attvalue for="2" value="太和县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="taihe_discipline_secretary" label="待核实（纪委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="太和县委常委、县纪委书记"/>
+          <attvalue for="2" value="中共太和县纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="taihe_yang_daijun" label="杨代军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任太和县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="taihe_liu_muyu" label="刘牧愚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任太和县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="org_taihe_party_committee" label="中共太和县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_taihe_government" label="太和县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_taihe_npc" label="太和县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="阜阳市人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_taihe_cppcc" label="太和县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="阜阳市政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_taihe_cdc" label="中共太和县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="中共阜阳市纪委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_taihe_organization_dept" label="中共太和县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共太和县委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="taihe_shao_bing" target="org_taihe_party_committee" label="太和县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县委书记"/>
+          <attvalue for="3" value="2021?-"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="taihe_chen_jianhua" target="org_taihe_government" label="太和县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县委副书记、县长"/>
+          <attvalue for="3" value="2021?-"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="taihe_bao_li" target="org_taihe_npc" label="太和县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县人大常委会主任"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="taihe_hai_zhiguo" target="org_taihe_cppcc" label="太和县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县政协主席"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="taihe_yang_daijun" target="org_taihe_party_committee" label="太和县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县委书记"/>
+          <attvalue for="3" value="2018?-2021?"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="taihe_liu_muyu" target="org_taihe_government" label="太和县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="太和县长"/>
+          <attvalue for="3" value="2016?-2021?"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="taihe_shao_bing" target="taihe_chen_jianhua" label="县委班子搭档：县委书记与县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委班子搭档：县委书记与县长"/>
+          <attvalue for="3" value="2021?-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="taihe_yang_daijun" target="taihe_liu_muyu" label="县委班子搭档：前任县委书记与前任县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委班子搭档：前任县委书记与前任县长"/>
+          <attvalue for="3" value="2018?-2021?"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="taihe_shao_bing" target="taihe_yang_daijun" label="前后任县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="前后任县委书记"/>
+          <attvalue for="3" value="交接期"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="taihe_chen_jianhua" target="taihe_liu_muyu" label="前后任县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="前后任县长"/>
+          <attvalue for="3" value="交接期"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
