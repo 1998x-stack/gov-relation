@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>广昌县领导班子工作关系网络 - 江西省抚州市广昌县</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="吴自胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广昌县委书记"/>
+          <attvalue for="2" value="中共广昌县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="[待核实·广昌县长]">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广昌县长"/>
+          <attvalue for="2" value="广昌县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="范小林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="抚州市委书记"/>
+          <attvalue for="2" value="中共抚州市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="胡剑飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="抚州市委副书记、市长"/>
+          <attvalue for="2" value="抚州市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="[待核实·广昌县人大常委会主任]">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广昌县人大常委会主任"/>
+          <attvalue for="2" value="广昌县人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="[待核实·广昌县政协主席]">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广昌县政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议广昌县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共广昌县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="广昌县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="广昌县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议广昌县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共抚州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="抚州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="广昌县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持县委全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="广昌县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持县政府全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o1" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o5" label="抚州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p4" target="o6" label="抚州市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p5" target="o3" label="广昌县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p6" target="o4" label="广昌县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p1" target="p3" label="范小林（抚州市委书记）领导广昌县委书记吴自胜" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共抚州市委员会 → 中共广昌县委员会"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p1" target="p4" label="胡剑飞（抚州市长）与广昌县为政府系统上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="抚州市人民政府 → 广昌县人民政府"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p1" target="p2" label="广昌县委书记与县长为党政一把手搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共广昌县委员会 / 广昌县人民政府"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "抚州市",
+    "region": "广昌县",
+    "job": "县委书记",
+    "task_id": "jiangxi_广昌县",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "fuzhou_guangchang_wuzisheng",
+    "name": "吴自胜",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "吴自胜_",
+      "name_birthplace": "吴自胜_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "广昌县委书记",
+    "current_org": "中共广昌县委员会",
+    "administrative_rank": "正县级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共广昌县委员会",
+      "title": "广昌县委书记",
+      "level": "县处级",
+      "location": "江西省抚州市广昌县",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": false,
+      "notes": "当前任职，确认来自于抚州市级调研数据",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到吴自胜调任广昌县委书记之前的具体履历。需查阅江西省委组织部任前公示或广昌县政府网站领导之窗页面补充。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共广昌县委员会",
+      "type": "党委",
+      "level": "县处级",
+      "parent": "中共抚州市委员会",
+      "location": "江西省抚州市广昌县",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "范小林",
+      "person_id": "fuzhou_fanxiaolin",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "范小林（抚州市委书记）作为上级领导广昌县委书记吴自胜",
+      "overlap_org": "抚州市-广昌县",
+      "overlap_period": "2024-10至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "[待核实·广昌县长]",
+      "person_id": "fuzhou_guangchang_county_mayor_unknown",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "广昌县委书记与县长为党政一把手搭档",
+      "overlap_org": "中共广昌县委员会/广昌县人民政府",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足，无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，无法推断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_reports_count": 0,
+    "same_org_overlaps": 1,
+    "cross_region_connections": 0,
+    "predecessor_successor_count": 0,
+    "total_identified_relationships": 2
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现吴自胜的纪律处分、审计问题或负面舆情报道。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "抚州市领导班子与县级领导干部数据",
+      "url": "https://www.jxfz.gov.cn",
+      "publisher": "抚州市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "从抚州市级build_fuzhou_data.py提取的广昌县委书记名单"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "吴自胜的完整履历（出生年月、籍贯、学历、历任职务）均未找到"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "吴自胜的完整履历是什么？包括出生年月、籍贯、学历、历任职务？",
+      "why_it_matters": "核心职务人物的背景知识对理解其政治路线和关系网络至关重要",
+      "suggested_queries": ["吴自胜 简历", "吴自胜 任前公示", "吴自胜 广昌 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "吴自胜何时调任广昌县委书记？之前任何职？",
+      "why_it_matters": "了解其晋升轨迹和前任接替关系",
+      "suggested_queries": ["吴自胜 广昌县委书记 任命"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "广昌县长姓名及履历是什么？",
+      "why_it_matters": "县长是县领导班子二把手，缺少此信息则无法完整描绘县级权力结构",
+      "suggested_queries": ["广昌县 县长", "广昌县人民政府"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
