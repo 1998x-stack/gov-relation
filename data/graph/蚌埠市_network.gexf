@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>蚌埠市领导班子工作关系网络 - 2026年7月</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="马军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共蚌埠市委"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="韦秀芳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="蚌埠市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="黄晓武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="王波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共蚌埠市委"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="杨森">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="政协蚌埠市委员会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="陈东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导"/>
+          <attvalue for="2" value="蚌埠市"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="李波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导"/>
+          <attvalue for="2" value="蚌埠市"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="熊言松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导"/>
+          <attvalue for="2" value="蚌埠市"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="汪安定">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导"/>
+          <attvalue for="2" value="蚌埠市"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="张云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、副市长"/>
+          <attvalue for="2" value="蚌埠市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="张铭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="蚌埠市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="乌兰其其格">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="蚌埠市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="金胜庆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="蚌埠市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="刘宗文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府秘书长、市委党校常务副校长"/>
+          <attvalue for="2" value="蚌埠市人民政府"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="汪若怀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会副主任"/>
+          <attvalue for="2" value="蚌埠市人大常委会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="乔树伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协副主席"/>
+          <attvalue for="2" value="政协蚌埠市委员会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="唐广廷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协秘书长"/>
+          <attvalue for="2" value="政协蚌埠市委员会"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共蚌埠市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="蚌埠市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="政协蚌埠市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="地级市"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="蚌埠市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="地级市"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="市长（前任职务）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长（前任职务）"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o1" label="前任市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o3" label="市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o1" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p7" target="o1" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p8" target="o1" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p9" target="o1" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p10" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p10" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p11" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p12" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p13" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p14" target="o2" label="市政府秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p14" target="o1" label="市委党校常务副校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委党校常务副校长"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p15" target="o4" label="市人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p16" target="o3" label="市政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p17" target="o3" label="市政协秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政协秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="党政正职搭档：马军任市委书记，韦秀芳任市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="马军接替黄晓武任蚌埠市委书记（前任为黄晓武）"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="马军任市长时，黄晓武为市委书记，党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p10" target="p1" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="张云为市委常委、副市长，接受市委书记马军领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p10" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="张云为市委常委、副市长，协助市长韦秀芳工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p11" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="张铭为副市长，受市长韦秀芳领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p12" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="乌兰其其格为副市长，受市长韦秀芳领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p13" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="金胜庆为副市长，受市长韦秀芳领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p14" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="刘宗文为市政府秘书长，协助市长韦秀芳工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p5" target="p1" label="overlap" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市政协主席与市委书记在市级领导班子里共事"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p11" target="p1" label="superior_subordinate" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="张铭为副市长，接受市委书记马军领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p12" target="p1" label="superior_subordinate" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="乌兰其其格为副市长，接受市委书记马军领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p13" target="p1" label="superior_subordinate" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="金胜庆为副市长，接受市委书记马军领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p15" target="p1" label="overlap" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市人大常委会副主任与市委书记在市级领导班子共事"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
