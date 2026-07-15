@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>阜阳市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="rank" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="刘玉杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="胡明文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="孙正东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安徽省政协农业和农村委员会主任"/>
+          <attvalue for="2" value="安徽省政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o1" label="中共阜阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="阜阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="阜阳军分区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="安徽省政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共淮北市烈山区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="安徽省江北产业集中区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共芜湖市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共安徽省纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共阜阳市委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共涡阳县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="安徽省人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持市委全面工作；兼阜阳军分区党委第一书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年6月任代市长，随后任市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o9" label="市委副书记、党校校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市委副书记，市委党校校长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o8" label="省纪委常委、秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安徽省纪委常委、秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o7" label="市委常委、市纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="芜湖市委常委、市纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o6" label="党工委书记、管委会主任（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="芜湖市委常委，安徽省江北产业集中区党工委书记、管委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="o6" label="管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安徽省江北产业集中区党工委委员、管委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="o5" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="淮北市烈山区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="o5" label="区长（主持区委工作）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="烈山区委副书记、区长，主持区委工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p1" target="o5" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="淮北市烈山区委副书记、区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="o5" label="代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="淮北市烈山区委副书记、代区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="领导市政府全面工作。负责审计、安全生产和应急管理方面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p2" target="o2" label="常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市委常委、市政府党组副书记、常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p2" target="o10" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="亳州市涡阳县委书记（2014-2020任县委书记，2020-2021兼亳州市人大常委会副主任，2021年1月任亳州市委常委）"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="o1" label="市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市委书记、阜阳合肥现代产业园区党工委第一书记，阜阳军分区党委第一书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p3" target="o2" label="市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="阜阳市委副书记、市长（2017年2月正式任市长）"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p3" target="o4" label="安徽省政协农业和农村委员会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p2" label="市委书记和市长为同届领导班子成员，2023年7月同时期任职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市长为同届领导班子成员，2023年7月同时期任职"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2023-"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p3" label="刘玉杰接替孙正东任阜阳市委书记（2023年7月）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘玉杰接替孙正东任阜阳市委书记（2023年7月）"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2023-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p3" label="刘玉杰接替孙正东任阜阳市长（2016-2017交接）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘玉杰接替孙正东任阜阳市长（2016-2017交接）"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2016-2017"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p3" label="孙正东与刘玉杰属于市长→市委书记的接力路径" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孙正东与刘玉杰属于市长→市委书记的接力路径"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2016-2023"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
