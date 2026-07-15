@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta>
+    <creator>Gov Relation Investigator</creator>
+    <description>蚌埠市禹会区领导工作关系网络 — built 2026-07-15</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="edge_type" title="Edge Type" type="string"/>
+      <attribute id="title" title="Title" type="string"/>
+      <attribute id="start" title="Start" type="string"/>
+      <attribute id="end" title="End" type="string"/>
+      <attribute id="relationship_type" title="Relationship Type" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="overlap_org" title="Overlap Org" type="string"/>
+      <attribute id="overlap_period" title="Overlap Period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="yuhui_zhang_bin" label="张斌">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委书记"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_quzhang_unknown" label="（待核实）">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区长（待核实）"/>
+        </attvalues>
+        <viz:color r="43" g="124" b="233"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_predecessor_unknown" label="（前任区委书记待核实）">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="前任区委书记"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_party" label="中共蚌埠市禹会区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="139" g="0" b="0"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_gov" label="禹会区人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="30" g="144" b="255"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_discipline" label="中共蚌埠市禹会区纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="140" b="0"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_party_office" label="中共蚌埠市禹会区委办公室">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="165" g="42" b="42"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_gov_office" label="禹会区人民政府办公室">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="政府部门"/>
+        </attvalues>
+        <viz:color r="65" g="105" b="225"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_org_dept" label="中共蚌埠市禹会区委组织部">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="165" g="42" b="42"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_propaganda" label="中共蚌埠市禹会区委宣传部">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="165" g="42" b="42"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_united_front" label="中共蚌埠市禹会区委统战部">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="165" g="42" b="42"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_politics_law" label="中共蚌埠市禹会区委政法委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="165" g="42" b="42"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_people_congress" label="蚌埠市禹会区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="人大"/>
+        </attvalues>
+        <viz:color r="46" g="139" b="87"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_cppcc" label="中国人民政治协商会议蚌埠市禹会区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="政协"/>
+        </attvalues>
+        <viz:color r="46" g="139" b="87"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_chao_yang" label="禹会区朝阳街道">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_wei_si" label="禹会区纬四街道">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_da_qing" label="禹会区大庆街道">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_zhang_gong_shan" label="禹会区张公山街道">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_diao_yu_tai" label="禹会区钓鱼台街道">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_qin_ji" label="禹会区秦集镇（蚌埠高新区托管）">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_ma_cheng" label="禹会区马城镇">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+      <node id="yuhui_chang_qing" label="禹会区长青乡">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="org_type" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="218" g="165" b="32"/>
+        <viz:size value="8.0"/>
+        <viz:position x="0" y="0" z="0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e_w_1" source="yuhui_zhang_bin" target="yuhui_party" type="directed" label="区委书记">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="title" value="区委书记"/>
+          <attvalue for="start" value="2026-06"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e_w_2" source="yuhui_zhang_bin" target="yuhui_people_congress" type="directed" label="区人大常委会主任（可能兼任）">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="title" value="区人大常委会主任（可能兼任）"/>
+          <attvalue for="start" value="未知"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e_w_3" source="yuhui_quzhang_unknown" target="yuhui_gov" type="directed" label="区长">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="title" value="区长"/>
+          <attvalue for="start" value="未知"/>
+          <attvalue for="end" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
