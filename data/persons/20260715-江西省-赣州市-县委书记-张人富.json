@@ -15,15 +15,24 @@
     "aliases": [],
     "gender": "男",
     "ethnicity": "汉族",
-    "birth": "",
-    "birthplace": "",
-    "native_place": "",
-    "education": [],
+    "birth": "1977-11",
+    "birthplace": "江西会昌",
+    "native_place": "江西会昌",
+    "education": [
+      {
+        "period": "",
+        "institution": "中央党校（函授）",
+        "major": "",
+        "degree": "大学",
+        "study_type": "party_school",
+        "source_ids": ["S005"]
+      }
+    ],
     "party_join": "中共党员",
-    "work_start": "",
+    "work_start": "1997-08",
     "dedupe_keys": {
-      "name_birth": "张人富_unknown",
-      "name_birthplace": "张人富_unknown",
+      "name_birth": "张人富_197711",
+      "name_birthplace": "张人富_会昌",
       "official_profile_url": ""
     }
   },
@@ -33,8 +42,8 @@
     "administrative_rank": "县处级正职",
     "as_of": "2026-07-15",
     "is_current_confirmed": true,
-    "source_ids": ["S001", "S002"],
-    "notes": "2026年7月8日起以县委书记身份公开活动（讲授专题党课、调研物业整治）。此前为全南县委副书记、县长，历年均以县长身份出现在政府工作报告中。"
+    "source_ids": ["S001", "S002", "S005"],
+    "notes": "2026年7月3日起以县委书记身份主持县委常委会第111次(扩大)会议。7月8日讲授专题党课。此前为全南县委副书记、县长。1977-11生，江西会昌人。"
   },
   "career_timeline": [
     {
@@ -47,7 +56,7 @@
       "system": "party",
       "rank": "正县",
       "is_key_promotion": true,
-      "notes": "2026年7月8日首次以县委书记身份公开活动：出席乡镇领导班子专题培训班并授课，之后调研物业服务突出问题整治工作。此前为全南县委副书记、县长。",
+      "notes": "2026年7月3日首次以县委书记身份主持县委常委会第111次(扩大)会议。7月8日出席乡镇领导班子专题培训班并授课，之后调研物业服务突出问题整治工作。",
       "confidence": "confirmed",
       "source_ids": ["S001", "S002"]
     },
@@ -61,16 +70,30 @@
       "system": "government",
       "rank": "正县",
       "is_key_promotion": false,
-      "notes": "2026年6月29日以县委副书记、县长身份出席庆祝建党105周年大会（边建忠主持，张人富以县长身份在座）。2026年7月8日已升任县委书记。",
+      "notes": "2026年6月29日以县委副书记、县长身份出席庆祝建党105周年大会。2026年2月28日在县十九届人大六次会议上作政府工作报告。",
       "confidence": "confirmed",
       "source_ids": ["S003", "S004"]
     },
     {
-      "start": "unknown",
-      "end": "unknown",
+      "start": "",
+      "end": "",
+      "org": "宁都县/兴国县/赣州市城管局",
+      "title": "曾任宁都县委常委、兴国县委副书记、赣州市城管局党组书记等职",
+      "level": "县处级",
+      "location": "江西赣州",
+      "system": "party",
+      "rank": "副县至正县",
+      "is_key_promotion": false,
+      "notes": "据百度百科，曾任宁都县委常委、兴国县委副书记、赣州市城市管理局党组书记等职务。具体起止年月待查。后调任全南县长。",
+      "confidence": "plausible",
+      "source_ids": ["S005"]
+    },
+    {
+      "start": "1997-08",
+      "end": "",
       "org": "履历缺口",
       "title": "",
-      "notes": "出任全南县长前的完整履历未从公开资料中找到。需进一步调查其在赣州市其他区县或市直机关的任职经历。全南县人民政府官网无领导简历页面（领导之窗）。",
+      "notes": "1997年8月参加工作至出任宁都县委常委之前近19年的履历信息缺失。公开资料未找到详细任职记录。",
       "confidence": "unverified",
       "source_ids": []
     }
@@ -95,12 +118,24 @@
       "person_id": "quannan_bian_jianzhong",
       "relationship_type": "predecessor_successor",
       "strength": "strong",
-      "evidence": "边建忠为前任县委书记，张人富（原县长）于2026年7月初接任县委书记。二人长期在全南党政班子共事（边建忠为县长/书记期间，张人富逐步晋升）。",
+      "evidence": "边建忠为前任县委书记，张人富（原县长）于2026年7月初接任县委书记。二人长期在全南党政班子共事。",
       "overlap_org": "全南县党政班子",
       "overlap_period": "2021-2026-07",
       "direction": "undirected",
       "confidence": "confirmed",
       "source_ids": ["S003"]
+    },
+    {
+      "person": "杨春景",
+      "person_id": "quannan_yang_chunjing",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "张人富（县委书记）与杨春景（县委副书记、县长候选人）为新的县委县政府正副职搭档。此前杨春景为县委常委、副县长时即与张人富（县长）共事。",
+      "overlap_org": "全南县党政班子",
+      "overlap_period": "现任",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
     },
     {
       "person": "冯健全",
@@ -134,18 +169,6 @@
       "evidence": "张人富（县委书记）与刘宏春（县委常委、政法委书记）为县委领导与政法负责人关系。",
       "overlap_org": "中共全南县委员会",
       "overlap_period": "现任",
-      "direction": "undirected",
-      "confidence": "confirmed",
-      "source_ids": ["S003"]
-    },
-    {
-      "person": "杨春景",
-      "person_id": "quannan_yang_chunjing",
-      "relationship_type": "superior_subordinate",
-      "strength": "medium",
-      "evidence": "张人富此前以县长身份与杨春景（副县长）为县政府正副职关系。",
-      "overlap_org": "全南县人民政府",
-      "overlap_period": "至2026-07",
       "direction": "undirected",
       "confidence": "confirmed",
       "source_ids": ["S003"]
@@ -185,6 +208,18 @@
       "direction": "undirected",
       "confidence": "confirmed",
       "source_ids": ["S002"]
+    },
+    {
+      "person": "朱恒",
+      "person_id": "quannan_zhu_heng",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "张人富（县委书记）与朱恒（县委常委）在集中整治工作推进会上分工配合。",
+      "overlap_org": "中共全南县委员会",
+      "overlap_period": "现任",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S006"]
     }
   ],
   "governance_record": [
@@ -201,22 +236,42 @@
     {
       "period": "2026-07",
       "domain": "other",
-      "achievement_or_event": "调研物业服务突出问题整治工作，深入绿邦山里江南、明珠新城、广宸新天地等小区查看环境卫生、公共设施、停车管理、消防安全",
+      "achievement_or_event": "调研物业服务突出问题整治工作，深入多个小区查看环境卫生、公共设施、停车管理、消防安全",
       "role_in_event": "县委书记/带队调研",
       "measurable_outcome": "现场明确整改时限与责任主体",
       "location": "全南县",
       "confidence": "confirmed",
       "source_ids": ["S002"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "other",
+      "achievement_or_event": "主持十四届县委常委会第111次(扩大)会议，学习贯彻习近平总书记重要讲话精神，研究部署防汛抗旱、安全生产、信访等工作",
+      "role_in_event": "县委书记/主持人",
+      "measurable_outcome": "",
+      "location": "全南县",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "discipline",
+      "achievement_or_event": "主持全县群众身边不正之风和腐败问题集中整治工作推进会",
+      "role_in_event": "县委书记/主持人",
+      "measurable_outcome": "",
+      "location": "全南县",
+      "confidence": "confirmed",
+      "source_ids": ["S006"]
     }
   ],
   "professional_profile": {
-    "primary_specializations": ["地方治理"],
+    "primary_specializations": ["地方治理", "城市管理"],
     "secondary_specializations": [],
-    "career_pattern": "unknown",
-    "systems_experience": ["government", "party"],
-    "geographic_pattern": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party", "城管"],
+    "geographic_pattern": ["赣州会昌(出生)", "赣州全南", "赣州宁都", "赣州兴国"],
     "promotion_velocity": {
-      "summary": "信息不足，无法评估晋升速度。从县长升任县委书记属正常晋升路径。",
+      "summary": "1977年11月生，1997年8月参加工作。从县长到县委书记属正常晋升路径。早期1997-2016年近19年履历信息不足。",
       "notable_fast_promotions": []
     }
   },
@@ -224,13 +279,13 @@
     "public_style_indicators": [
       {
         "trait": "grassroots_oriented",
-        "evidence": "调研物业服务时直接深入居民小区查看问题，强调以群众满意为标准、'用心用情解决好群众反映强烈、可感可及的突出问题'",
+        "evidence": "调研物业服务时直接深入居民小区查看问题，强调'用心用情解决好群众反映强烈、可感可及的突出问题'",
         "confidence": "plausible",
         "source_ids": ["S002"]
       },
       {
         "trait": "pragmatic",
-        "evidence": "调研中逐一剖析问题症结并与部门现场研究解决办法，明确整改时限与责任主体，实行销号管理、闭环处置",
+        "evidence": "调研中逐一剖析问题症结并与部门现场研究解决办法，明确整改时限与责任主体",
         "confidence": "plausible",
         "source_ids": ["S002"]
       }
@@ -259,14 +314,14 @@
   "source_register": [
     {
       "id": "S001",
-      "title": "张人富讲授树立和践行正确政绩观学习教育专题党课",
-      "url": "https://www.quannan.gov.cn/qnxrmzfwyyh/c104917/202607/c465a8798fcc4b7b99c2b085aae9e9ff.shtml",
+      "title": "十四届县委常委会第111次（扩大）会议召开",
+      "url": "https://www.quannan.gov.cn/qnxrmzfwyyh/c104917/202607/b1bb6b61eced44c79b72583c2159048b.shtml",
       "publisher": "全南县人民政府",
-      "published_at": "2026-07-09",
+      "published_at": "2026-07-04",
       "accessed_at": "2026-07-15",
       "source_type": "official",
       "reliability": "high",
-      "notes": "县委书记张人富出席开班式并作专题辅导。确认张人富已升任县委书记。朱新梅主持。"
+      "notes": "县委书记张人富主持会议。杨春景以县委副书记、县长候选人身份出席。"
     },
     {
       "id": "S002",
@@ -293,42 +348,64 @@
     {
       "id": "S004",
       "title": "2026年全南县政府工作报告",
-      "url": "https://www.quannan.gov.cn/qnxxxgk/zfgzbg251/202603/82dfa10571e44f6dadcfec9f2786f193.shtml",
+      "url": "https://www.quannan.gov.cn/qnxxxgk/zfgzbg251/202602/4c8838445e7c4072a3e925e7bdf972e3.shtml",
       "publisher": "全南县人民政府",
       "published_at": "2026-03-02",
       "accessed_at": "2026-07-15",
       "source_type": "official",
       "reliability": "high",
-      "notes": "2026年2月28日县人大会议上的政府工作报告（报告人待确认，可能是张人富以县长身份或边建忠以县长身份作报告，报告人姓名在截断内容中）"
+      "notes": "2026年2月28日县人大会议上的政府工作报告"
+    },
+    {
+      "id": "S005",
+      "title": "张人富百度百科",
+      "url": "https://baike.baidu.com/item/%E5%BC%A0%E4%BA%BA%E5%AF%8C",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "1977-11生，江西会昌人，中央党校大学。1997-08工作。曾任宁都县委常委、兴国县委副书记、赣州市城管局党组书记。"
+    },
+    {
+      "id": "S006",
+      "title": "全县群众身边不正之风和腐败问题集中整治工作推进会召开",
+      "url": "https://www.quannan.gov.cn/qnxrmzfwyyh/c104917/202607/178fa2b34ff740e7bba44529f698e444.shtml",
+      "publisher": "全南县人民政府",
+      "published_at": "2026-07-14",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "县委书记张人富主持，朱恒通报工作情况。"
     }
   ],
   "confidence_summary": {
-    "identity": "plausible",
+    "identity": "confirmed",
     "current_role": "confirmed",
-    "career_completeness": "thin",
+    "career_completeness": "partial",
     "relationship_confidence": "medium",
-    "biggest_gap": "出任全南县长前的全部履历信息缺失，包括出生年月、学历、此前任职等"
+    "biggest_gap": "1997年参加工作至出任宁都县委常委期间近19年履历信息缺失"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "张人富的出生年月、籍贯、学历和早期职业生涯是什么？",
-      "why_it_matters": "核心领导者身份信息空缺，影响履历完整性和身份核实",
-      "suggested_queries": ["张人富 简历", "张人富 任职", "张人富 百度百科"],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "critical",
-      "question": "张人富何时开始担任全南县长？之前担任什么职务？",
-      "why_it_matters": "了解其晋升路径和此前工作经历",
-      "suggested_queries": ["张人富 全南 县长 任职", "张人富 赣州"],
+      "question": "张人富1997年8月参加工作至出任宁都县委常委期间近19年的详细履历是什么？",
+      "why_it_matters": "核心领导者早期职业发展路径完全未知",
+      "suggested_queries": ["张人富 会昌 早期", "张人富 宁都 任职时间", "张人富 兴国县委副书记"],
       "last_attempted": "2026-07-15"
     },
     {
       "priority": "high",
-      "question": "张人富升任县委书记后，谁接任全南县长？",
-      "why_it_matters": "新任县长人选是当前领导班子关键信息",
-      "suggested_queries": ["全南县 代理县长", "全南县 县长 任免 2026"],
+      "question": "张人富在宁都县委常委、兴国县委副书记、赣州市城管局党组书记各职的具体起止年月？",
+      "why_it_matters": "缺乏精确时间线",
+      "suggested_queries": ["宁都县委 张人富", "兴国县委副书记 张人富", "赣州市城管局 张人富"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "杨春景正式通过人大任命为全南县长的具体时间？",
+      "why_it_matters": "确认代理县长转正时间节点",
+      "suggested_queries": ["全南县 人大常委会 杨春景 任命"],
       "last_attempted": "2026-07-15"
     }
   ]
