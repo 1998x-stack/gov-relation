@@ -78,7 +78,7 @@ def main() -> int:
     parser.add_argument("--max-tasks", type=int, default=0, help="0 means loop until no task remains")
     parser.add_argument("--execute", action="store_true", help="run opencode after each claim")
     parser.add_argument("--opencode-bin", default="opencode")
-    parser.add_argument("--opencode-agent", default="general", help="OpenCode --agent value")
+    parser.add_argument("--opencode-agent", default="", help="OpenCode --agent value; omit to use OpenCode's default primary agent")
     parser.add_argument("--opencode-model", default="agent-loop/standard", help="OpenCode provider/model value")
     parser.add_argument("--opencode-auto", action="store_true", help="pass --auto to OpenCode")
     parser.add_argument("--auto-done", action="store_true", help="mark done if opencode exits 0; use only if the prompt performs validation")
@@ -104,12 +104,15 @@ def main() -> int:
         log(f"CLAIMED {task_id} prompt={prompt_path}")
 
         if not args.execute:
-            log(f"Run: {args.opencode_bin} run --agent {args.opencode_agent} --model {args.opencode_model} '<prompt from {prompt_path}>'")
+            agent_arg = f" --agent {args.opencode_agent}" if args.opencode_agent else ""
+            log(f"Run: {args.opencode_bin} run{agent_arg} --model {args.opencode_model} '<prompt from {prompt_path}>'")
             return 0
 
         log(f"START opencode task={task_id}")
         prompt_text = Path(prompt_path).read_text(encoding="utf-8")
-        command = [args.opencode_bin, "run", "--agent", args.opencode_agent, "--model", args.opencode_model]
+        command = [args.opencode_bin, "run", "--model", args.opencode_model]
+        if args.opencode_agent:
+            command.extend(["--agent", args.opencode_agent])
         if args.opencode_auto:
             command.append("--auto")
         command.append(prompt_text)

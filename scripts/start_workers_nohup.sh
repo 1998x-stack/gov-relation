@@ -8,7 +8,7 @@ WORKER_COUNT="${WORKER_COUNT:-4}"
 MAX_TASKS="${MAX_TASKS:-0}"
 SLEEP_SECONDS="${SLEEP_SECONDS:-30}"
 OPENCODE_BIN="${OPENCODE_BIN:-opencode}"
-OPENCODE_AGENT="${OPENCODE_AGENT:-general}"
+OPENCODE_AGENT="${OPENCODE_AGENT:-}"
 LOG_DIR="${LOG_DIR:-logs/workers}"
 AUTO_DONE="${AUTO_DONE:-1}"
 GIT_COMMIT="${GIT_COMMIT:-1}"
@@ -35,11 +35,13 @@ start_worker() {
     --model-intent "$model_intent"
     --execute
     --opencode-bin "$OPENCODE_BIN"
-    --opencode-agent "$OPENCODE_AGENT"
     --opencode-model "$opencode_model"
     --max-tasks "$MAX_TASKS"
     --sleep-seconds "$SLEEP_SECONDS"
   )
+  if [[ -n "$OPENCODE_AGENT" ]]; then
+    args+=(--opencode-agent "$OPENCODE_AGENT")
+  fi
   if [[ "$AUTO_DONE" == "1" ]]; then
     args+=(--auto-done)
   fi
@@ -50,11 +52,12 @@ start_worker() {
     args+=(--opencode-auto)
   fi
 
-  echo "Starting ${worker_id} intent=${model_intent} agent=${OPENCODE_AGENT} model=${opencode_model} log=${log_file}"
+  local agent_label="${OPENCODE_AGENT:-default}"
+  echo "Starting ${worker_id} intent=${model_intent} agent=${agent_label} model=${opencode_model} log=${log_file}"
   {
-    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] START ${worker_id} intent=${model_intent} agent=${OPENCODE_AGENT} model=${opencode_model} max_tasks=${MAX_TASKS} auto_done=${AUTO_DONE} git_commit=${GIT_COMMIT} opencode_auto=${OPENCODE_AUTO} opencode=${OPENCODE_BIN}"
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] START ${worker_id} intent=${model_intent} agent=${agent_label} model=${opencode_model} max_tasks=${MAX_TASKS} auto_done=${AUTO_DONE} git_commit=${GIT_COMMIT} opencode_auto=${OPENCODE_AUTO} opencode=${OPENCODE_BIN}"
   } >>"$log_file"
-  nohup env PYTHONUNBUFFERED=1 "${args[@]}" >>"$log_file" 2>&1 &
+  nohup setsid env PYTHONUNBUFFERED=1 "${args[@]}" >>"$log_file" 2>&1 < /dev/null &
   echo "$!" >"$pid_file"
 }
 
