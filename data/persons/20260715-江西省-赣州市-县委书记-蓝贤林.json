@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "寻乌县",
+    "job": "县委书记",
+    "task_id": "jiangxi_寻乌县",
+    "time_focus": "2021-present"
+  },
+  "identity": {
+    "person_id": "xunwu_lan_xianlin_197310",
+    "name": "蓝贤林",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "畲族",
+    "birth": "1973-10",
+    "birthplace": "江西赣州",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "研究生学历",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "蓝贤林_197310",
+      "name_birthplace": "蓝贤林_江西赣州",
+      "official_profile_url": "https://www.xunwu.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "寻乌县委书记",
+    "current_org": "中共寻乌县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2021",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "2021年出任寻乌县委书记前的全部履历公开资料未详。已知为畲族（江西赣南较少见的民族身份）、1973年10月生、赣州人、研究生学历",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "中共寻乌县委员会",
+      "title": "寻乌县委书记",
+      "level": "县处级正职",
+      "location": "江西赣州寻乌",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替柯岩松任寻乌县委书记。约2021年到任",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "O001",
+      "name": "中共寻乌县委员会",
+      "type": "party",
+      "role": "县委书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "何善祥",
+      "person_id": "xunwu_he_shanxiang_197311",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "蓝贤林（县委书记）与何善祥（县长）2021年起在寻乌县党政搭档至今",
+      "overlap_org": "寻乌县",
+      "overlap_period": "2021至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "柯岩松",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "蓝贤林接替柯岩松任寻乌县委书记",
+      "overlap_org": "中共寻乌县委员会",
+      "overlap_period": "2021",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "王冬",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "王冬为寻乌县委常委、常务副县长，与蓝贤林在县委班子共事",
+      "overlap_org": "寻乌县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "钟琳",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "钟琳为寻乌县委常委、组织部部长，与蓝贤林在县委班子共事",
+      "overlap_org": "中共寻乌县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": ["赣州市"],
+    "promotion_velocity": {
+      "summary": "任职路径不详。2021年起任寻乌县委书记，此前履历未详",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "degree_centrality": 0,
+    "bridging_role": false,
+    "connected_components": 0
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开搜索范围内未发现蓝贤林受到纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_ganzhou_remaining_data.py（赣州市综合脚本）",
+      "url": "https://www.xunwu.gov.cn",
+      "publisher": "寻乌县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "批量脚本引用xunwu.gov.cn数据"
+    },
+    {
+      "id": "S002",
+      "title": "公开媒体报道/网络公开资料",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "前任书记柯岩松、常委班子成员等信息来自公开报道"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2021年前的完整履历（包括教育背景、入党时间、参加工作时间、此前所有职务）完全缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "蓝贤林在2021年任寻乌县委书记前的完整履历是什么？",
+      "why_it_matters": "缺少早期职业路径、教育背景等基本信息，无法评估其晋升路径和关系网络",
+      "suggested_queries": ["蓝贤林 简历 寻乌", "蓝贤林 畲族 赣州 任职", "蓝贤林 2021 前 工作"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "蓝贤林的教育背景（毕业院校、专业、学历类型）是什么？",
+      "why_it_matters": "教育背景是识别其专业背景和圈子的关键信息",
+      "suggested_queries": ["蓝贤林 毕业", "蓝贤林 学历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "蓝贤林的籍贯和具体出生地？",
+      "why_it_matters": "目前仅知'江西赣州'，精确到县/区有助于识别地域关系",
+      "suggested_queries": ["蓝贤林 籍贯", "蓝贤林 出生"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "蓝贤林的畲族身份对其职业生涯有何影响？",
+      "why_it_matters": "少数民族身份在江西赣南地区较为少见，可能反映特定的干部配置逻辑",
+      "suggested_queries": ["蓝贤林 畲族", "寻乌 畲族 干部"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
