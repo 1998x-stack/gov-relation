@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "安庆市",
+    "region": "太湖县",
+    "job": "原县委书记",
+    "task_id": "anhui_太湖县",
+    "time_focus": "2019-2023"
+  },
+  "identity": {
+    "person_id": "taihu_zhu_xiaobing",
+    "name": "朱小兵",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "朱小兵_",
+      "name_birthplace": "朱小兵_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "",
+    "current_org": "",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "太湖县人民政府",
+      "title": "太湖县县长",
+      "level": "正处级",
+      "location": "安徽省安庆市太湖县",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "朱小兵曾任太湖县县长，后升任县委书记",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "",
+      "end": "2023",
+      "org": "中共太湖县委员会",
+      "title": "太湖县委书记",
+      "level": "正处级",
+      "location": "安徽省安庆市太湖县",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "前任县委书记，约2023年离任",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共太湖县委员会",
+      "role": "原县委书记",
+      "period": "-2023"
+    },
+    {
+      "name": "太湖县人民政府",
+      "role": "原县长（曾任）",
+      "period": ""
+    }
+  ],
+  "relationships": [
+    {
+      "person": "吴曙",
+      "person_id": "taihu_wu_shu",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "朱小兵为前任县委书记，吴曙接任",
+      "overlap_org": "中共太湖县委员会",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["地方党政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["太湖县"],
+    "promotion_velocity": {
+      "summary": "从县长晋升至县委书记",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "connection_count": 1,
+    "strong_connections": 1,
+    "medium_connections": 0,
+    "weak_connections": 0
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "公开资料未发现违纪违规记录",
+      "date": "2026-07-15",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S003",
+      "title": "公开资料",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "inferred",
+      "reliability": "medium",
+      "notes": "前任县委书记信息，未找到确切来源URL"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "朱小兵的完整履历、现去向均未确认"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "朱小兵离任太湖县委书记后的去向？",
+      "why_it_matters": "人员流动轨迹是关系网络分析的重要组成部分",
+      "suggested_queries": ["朱小兵 卸任太湖县委书记 去向", "朱小兵 现任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "朱小兵的出生年月和籍贯？",
+      "why_it_matters": "核心身份信息",
+      "suggested_queries": ["朱小兵 太湖 出生", "朱小兵 简历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "朱小兵的完整任职履历？",
+      "why_it_matters": "完整履历是关系网络分析的基础",
+      "suggested_queries": ["朱小兵 任职经历", "朱小兵 太湖 履历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
