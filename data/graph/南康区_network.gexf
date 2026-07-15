@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Sisyphus Research Agent</creator>
+    <description>南康区领导班子工作关系网络 - 区委书记何善锦 &amp; 区长梅旭军</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="birthplace" type="string"/>
+      <attribute id="4" title="education" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="start" type="string"/>
+      <attribute id="3" title="end" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="何善锦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="赣州市委常委、南康区委书记"/>
+          <attvalue for="2" value="1968-09"/>
+          <attvalue for="3" value="江西信丰"/>
+          <attvalue for="4" value="省委党校研究生"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="梅旭军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南康区委副书记、区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="李赣兴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原南康区委副书记、区长→调离）"/>
+          <attvalue for="2" value="1974-11"/>
+          <attvalue for="3" value="江西赣县"/>
+          <attvalue for="4" value="省委党校研究生"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="李成胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南康区委常委、常务副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="陈培生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南康区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="王俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南康区委常委、政法委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="刘日辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南康区委常委、组织部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="刘婷婷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南康区委常委、宣传部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="徐兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原南康区委书记→赣州市政协主席）"/>
+          <attvalue for="2" value="1967-11"/>
+          <attvalue for="3" value="江西赣州"/>
+          <attvalue for="4" value="中央党校大学"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共南康区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="南康区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共南康区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共南康区委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共南康区委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共南康区委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="赣州市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="赣州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="南康区委书记（赣州市委常委兼任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o8" label="赣州市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任，兼任南康区委书记"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="南康区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任（接替李赣兴，具体到任时间待确认）"/>
+          <attvalue for="2" value="2025?"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o2" label="南康区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任，已调离"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="2025?"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p4" target="o2" label="南康区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p5" target="o3" label="南康区委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p6" target="o4" label="南康区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p7" target="o5" label="南康区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p8" target="o6" label="南康区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p9" target="o1" label="南康区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任→升赣州市政协主席"/>
+          <attvalue for="2" value="2016"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p9" target="o7" label="赣州市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="何善锦（区委书记）与梅旭军（区长）为南康区党政正职搭档"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="p3" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="何善锦与李赣兴在南康区党政搭档（2021-2025?）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p9" target="p1" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="徐兵（2016-2021南康区委书记）→ 何善锦（2021至今）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p3" target="p2" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="李赣兴（前任区长）→ 梅旭军（现任区长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p1" target="p4" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="何善锦（区委书记）与李成胜（常委、常务副区长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="p5" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="何善锦（区委书记）与陈培生（常委、纪委书记）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p1" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="何善锦（区委书记）与王俊（常委、政法委书记）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p1" target="p7" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="何善锦（区委书记）与刘日辉（常委、组织部部长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p1" target="p8" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="何善锦（区委书记）与刘婷婷（常委、宣传部部长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p2" target="p4" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="梅旭军（区长）与李成胜（常务副区长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

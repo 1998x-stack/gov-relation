@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "南康区",
+    "job": "区长（前任）",
+    "task_id": "jiangxi_南康区",
+    "time_focus": "2021-2025"
+  },
+  "identity": {
+    "person_id": "jiangxi_ganzhou_liganxing_1974",
+    "name": "李赣兴",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1974-11",
+    "birthplace": "江西赣县",
+    "native_place": "江西赣县",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "江西省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "part_time",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李赣兴_1974",
+      "name_birthplace": "李赣兴_赣县",
+      "official_profile_url": "https://www.nkjx.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "（原南康区委副书记、区长→已调离）",
+    "current_org": "未知",
+    "administrative_rank": "县处级正职（原）",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "赣州市（或下属县区）",
+      "title": "早期职务（待查）",
+      "level": "",
+      "location": "江西赣州",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "李赣兴的早期履历公开资料有限",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021",
+      "end": "2025?",
+      "org": "南康区人民政府",
+      "title": "南康区委副书记、区长",
+      "level": "县处级正职",
+      "location": "江西赣州南康",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "2021年任南康区区长，与何善锦搭档",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2025?",
+      "end": "unknown",
+      "org": "未知",
+      "title": "调离南康（去向待查）",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "李赣兴约2025年调离南康区，具体去向和现任职务有待核实",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_nankang_gov",
+      "name": "南康区人民政府",
+      "type": "政府",
+      "level": "县处级"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "何善锦",
+      "person_id": "jiangxi_ganzhou_heshanjin_1968",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "李赣兴与何善锦在南康区2021-2025年期间党政搭档",
+      "overlap_org": "南康区",
+      "overlap_period": "2021-2025?",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "梅旭军",
+      "person_id": "jiangxi_ganzhou_meixujun_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "李赣兴的区长职务由梅旭军接替",
+      "overlap_org": "南康区人民政府",
+      "overlap_period": "2025?交接",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["赣县→南康"],
+    "promotion_velocity": {
+      "summary": "信息不足",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality": "medium",
+    "role_in_network": "前任政府领导节点",
+    "connections_count": 2,
+    "note": "作为前任区长，与何善锦有党政搭档关系"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现李赣兴涉及纪律处分、审计问责或负面舆情",
+      "date": "2026-07-15",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "南康区人民政府官网",
+      "url": "https://www.nkjx.gov.cn",
+      "publisher": "南康区人民政府",
+      "published_at": "持续更新",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "此前南康政府官网的领导之窗栏目曾列李赣兴为区长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李赣兴调离后的去向和早期履历"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李赣兴调离南康区后去任何处？现任什么职务？",
+      "why_it_matters": "影响对其职业动向和南康交接背景的判断",
+      "suggested_queries": ["李赣兴 任职", "李赣兴 赣州"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "李赣兴的早期履历是什么？2021年从何职务升任南康区长？",
+      "why_it_matters": "影响完整职业生涯判断",
+      "suggested_queries": ["李赣兴 简历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
