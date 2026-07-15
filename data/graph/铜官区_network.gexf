@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>铜官区（安徽省铜陵市）领导关系网络 - 2026年7月</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="gender" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="查文彪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="铜官区委书记（原任，已调离）"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value="1968-08"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王保中">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="铜官区长（原任，已调离）"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value="1971-07"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="方晓军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="铜官区人大常委会党组书记、主任"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value="1964-06"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="查弟森">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="铜官区政协党组书记、主席"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="张弘">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="铜官区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="男"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o101" label="中共铜官区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o102" label="铜官区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o103" label="铜官区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o104" label="政协铜官区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o105" label="中共铜官区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o106" label="铜官区监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="4" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o107" label="铜陵经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="4" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o108" label="铜陵狮子山高新技术产业开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="4" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o101" label="铜官区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o101" label="铜官区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o102" label="铜官区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o103" label="铜官区人大常委会党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区人大常委会党组书记、主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o104" label="铜官区政协党组书记、主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区政协党组书记、主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o105" label="铜官区委常委、纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区委常委、纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o106" label="铜官区监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="铜官区监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政主官关系"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="p5" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="p5" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与纪委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
