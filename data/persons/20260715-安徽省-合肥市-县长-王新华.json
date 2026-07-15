@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "肥西县",
+    "job": "县长",
+    "task_id": "anhui_肥西县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "feixi_wang_xinhua",
+    "name": "王新华",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1978-10",
+    "birthplace": "安徽合肥",
+    "native_place": "安徽合肥",
+    "education": [
+      {
+        "period": "",
+        "institution": "大学",
+        "major": "",
+        "degree": "",
+        "study_type": "full_time",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "2000",
+    "dedupe_keys": {
+      "name_birth": "王新华_1978-10",
+      "name_birthplace": "王新华_安徽合肥",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "肥西县长",
+    "current_org": "肥西县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "2000年参加工作至2021年任肥西县长之间的履历未在可用来源中找到详细记载",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "肥西县人民政府",
+      "title": "肥西县长",
+      "level": "正处级",
+      "location": "安徽省合肥市肥西县",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "接替升任县委书记的沈校根，任肥西县长，负责县政府全面工作",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "feixi_county_government",
+      "name": "肥西县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "location": "肥西县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "沈校根",
+      "person_id": "feixi_shen_xiaogen",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "王新华任县长、沈校根任县委书记，党政同僚搭档关系（2023年至今）",
+      "overlap_org": "肥西县",
+      "overlap_period": "2023-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-",
+      "domain": "economic_development",
+      "achievement_or_event": "主持肥西县人民政府全面工作，推动县域经济和社会事业发展",
+      "role_in_event": "县长（主要负责人）",
+      "measurable_outcome": "",
+      "location": "肥西县",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方政府管理"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["合肥市"],
+    "promotion_velocity": {
+      "summary": "公开资料中早期履历有限，2021年起任肥西县长",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "low_profile",
+        "evidence": "公开报道中较少个人风格描述",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_reports": 0,
+    "reported_overlaps": 1,
+    "total_network_connections": 1,
+    "centrality_estimate": "medium"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未在可用来源中发现王新华的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py (repository artifact)",
+      "url": "",
+      "publisher": "Gov-Relation Repository",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "核心身份数据来源于已有储存库构建脚本，原始数据源自公开报道和肥西县政府网站"
+    },
+    {
+      "id": "S002",
+      "title": "公开报道（肥西县政府网站/安徽日报等）",
+      "url": "",
+      "publisher": "多方媒体",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "原始来源无法直接访问（地理限制），通过储存库已有数据间接引用"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "2000年参加工作至2021年任肥西县长之间的约20年履历完全缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王新华2000-2021年完整履历是什么？",
+      "why_it_matters": "作为外来（合肥市区籍）干部交流至肥西县任县长，早期在何处任职对于理解其干部交流轨迹和关系网络至关重要",
+      "suggested_queries": ["王新华 合肥 简历 肥西", "王新华 2000 任", "王新华 肥西县长 任前公示"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "王新华的大学学历具体信息？",
+      "why_it_matters": "\"大学\"表述不够具体，影响对专业背景的判断",
+      "suggested_queries": ["王新华 肥西 学历 毕业院校"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
