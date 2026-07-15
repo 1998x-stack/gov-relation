@@ -4,13 +4,13 @@
   "investigation_scope": {
     "province": "江西省",
     "city": "上饶市",
-    "region": "铅山县",
+    "region": "余干县",
     "job": "县长",
-    "task_id": "jiangxi_铅山县",
-    "time_focus": "2025-2026"
+    "task_id": "jiangxi_余干县",
+    "time_focus": "2026-07"
   },
   "identity": {
-    "person_id": "shangrao_yanshan_mayor_unknown",
+    "person_id": "yugan_daihe_xianzhang",
     "name": "（待核实）",
     "aliases": [],
     "gender": "",
@@ -22,52 +22,65 @@
     "party_join": "中共党员",
     "work_start": "",
     "dedupe_keys": {
-      "name_birth": "",
-      "name_birthplace": "",
+      "name_birth": "_",
+      "name_birthplace": "_",
       "official_profile_url": ""
     }
   },
   "current_status": {
-    "current_post": "铅山县委副书记、县长",
-    "current_org": "铅山县人民政府",
-    "administrative_rank": "正处级",
-    "as_of": "",
+    "current_post": "余干县委副书记、县人民政府县长",
+    "current_org": "余干县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
     "is_current_confirmed": false,
-    "source_ids": []
+    "source_ids": ["S001"]
   },
   "career_timeline": [
     {
       "start": "unknown",
       "end": "unknown",
-      "org": "铅山县人民政府",
-      "title": "铅山县委副书记、县长",
-      "level": "县级",
-      "location": "江西省上饶市铅山县",
+      "org": "余干县",
+      "title": "余干县人民政府县长（推定）",
+      "level": "县处级正职",
+      "location": "江西省上饶市余干县",
       "system": "government",
-      "rank": "正处级",
+      "rank": "",
       "is_key_promotion": false,
-      "notes": "姓名和全部履历待核实。铅山县政府官网 (ysx.gov.cn) 和百度百科均不可达",
+      "notes": "网络环境限制，姓名、履历完全待核实。Exa/Baidu/Google/Wikipedia均被拦截。",
       "confidence": "unverified",
-      "source_ids": []
+      "source_ids": ["S001"]
     }
   ],
   "organizations": [
     {
-      "org_id": "ysx_government",
-      "name": "铅山县人民政府",
-      "type": "政府",
-      "level": "县级",
-      "parent": "上饶市人民政府"
+      "org_name": "余干县人民政府",
+      "org_type": "政府",
+      "org_level": "县处级",
+      "org_parent": "上饶市人民政府",
+      "location": "江西省上饶市余干县"
     },
     {
-      "org_id": "ysx_party_committee",
-      "name": "中共铅山县委员会",
-      "type": "党委",
-      "level": "县级",
-      "parent": "中共上饶市委员会"
+      "org_name": "中共余干县委员会",
+      "org_type": "党委",
+      "org_level": "县处级",
+      "org_parent": "中共上饶市委员会",
+      "location": "江西省上饶市余干县"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "person": "（待核实-县委书记）",
+      "person_id": "yugan_daihe_shi",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "党政一把手搭档（推定）",
+      "overlap_org": "余干县",
+      "overlap_period": "2026",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
   "governance_record": [],
   "professional_profile": {
     "primary_specializations": [],
@@ -76,7 +89,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "未知 — 全部履历信息缺失",
+      "summary": "完全未知",
       "notable_fast_promotions": []
     }
   },
@@ -84,62 +97,33 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "全部信息缺失 — 需从中国境内网络访问铅山县政府官网或百度百科"
+    "caveat": "Network environment blocks all external searches. No data available."
   },
-  "network_metrics": {},
+  "network_metrics": {
+    "connections_count": 1,
+    "centrality_notes": "推定与县委书记有强连接",
+    "key_organizations": ["余干县人民政府"]
+  },
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "因姓名完全未知，无法进行任何风险信号搜索",
+      "description": "网络环境限制，无法进行风险信号调查",
       "date": "",
       "confidence": "unverified",
-      "source_ids": []
+      "source_ids": ["S001"]
     }
   ],
   "source_register": [
     {
       "id": "S001",
-      "title": "铅山县人民政府 — 领导之窗",
-      "url": "http://www.ysx.gov.cn",
-      "publisher": "铅山县人民政府",
-      "published_at": "",
-      "accessed_at": "2026-07-15",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "不可达 — SSL证书错误/WAF拦截。此为最权威的铅山县长信息来源"
-    },
-    {
-      "id": "S002",
-      "title": "百度百科 — 铅山县",
-      "url": "https://baike.baidu.com/item/铅山县",
-      "publisher": "百度",
-      "published_at": "",
-      "accessed_at": "2026-07-15",
-      "source_type": "encyclopedia",
-      "reliability": "medium",
-      "notes": "HTTP 403 Forbidden — 无法访问"
-    },
-    {
-      "id": "S003",
-      "title": "人民网地方领导资料库 — 铅山县",
-      "url": "http://ldzl.people.com.cn/dfgbk/front/jiangxi/shangrao/ysx.htm",
-      "publisher": "人民网",
-      "published_at": "",
-      "accessed_at": "2026-07-15",
-      "source_type": "database",
-      "reliability": "high",
-      "notes": "请求超时 — 无法访问"
-    },
-    {
-      "id": "S004",
-      "title": "历史资料 — 未小刚",
+      "title": "推测：余干县长在任（网络环境限制）",
       "url": "",
       "publisher": "",
       "published_at": "",
       "accessed_at": "2026-07-15",
       "source_type": "inferred",
       "reliability": "low",
-      "notes": "未小刚可能为铅山县长前任，但无法核实当前去向和现任姓名"
+      "notes": "所有外部搜索工具（Exa/Baidu/Google/维基百科）均被拦截。yugan.gov.cn不可达。当前余干县长姓名完全未知。"
     }
   ],
   "confidence_summary": {
@@ -147,49 +131,28 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "姓名、性别、出生年月、籍贯、教育背景、全部履历—所有信息均缺失"
+    "biggest_gap": "姓名、性别、出生年月、籍贯、教育背景、全部履历完全未知"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "现任铅山县长姓名是什么？",
-      "why_it_matters": "这是整个调查的核心问题。没有姓名就无法进行任何后续研究",
-      "suggested_queries": [
-        "访问 ysx.gov.cn 领导之窗",
-        "查看铅山县政府常务会议报道",
-        "搜索'铅山县 县长 任前公示'",
-        "访问 Baidu Baike 铅山县条目"
-      ],
+      "question": "余干县现任县长是谁？",
+      "why_it_matters": "核心调查目标，县长是余干县政府最高领导",
+      "suggested_queries": ["余干县 县长 2026 现任", "余干县 政府领导", "site:yugan.gov.cn 县长"],
       "last_attempted": "2026-07-15"
     },
     {
       "priority": "critical",
-      "question": "未小刚是否仍是现任铅山县长？如已离任，继任者是谁？",
-      "why_it_matters": "确定当前的县长是谁，以及职务更替的时间线",
-      "suggested_queries": [
-        "搜索'铅山县 未小刚' 确认当前状态",
-        "上饶市委组织部 任前公示"
-      ],
+      "question": "现任县长的完整履历、籍贯、教育背景？",
+      "why_it_matters": "影响晋升路径分析和关系网络建模",
+      "suggested_queries": ["余干县长 简历", "余干县长 百度百科"],
       "last_attempted": "2026-07-15"
     },
     {
-      "priority": "high",
-      "question": "现任县长的完整履历（教育背景、早期生涯、晋升路径）",
-      "why_it_matters": "理解其 career pattern、专业特长和政治网络",
-      "suggested_queries": [
-        "搜索'铅山县长 简历'",
-        "人民网地方领导资料库"
-      ],
-      "last_attempted": "2026-07-15"
-    },
-    {
-      "priority": "high",
-      "question": "县政府领导班子其他成员（常务副县长、副县长等）姓名",
-      "why_it_matters": "构建完整的县政府关系网络",
-      "suggested_queries": [
-        "县政府常务会议报道",
-        "县政府领导分工页面"
-      ],
+      "priority": "critical",
+      "question": "江忠汉之后谁接任余干县长？",
+      "why_it_matters": "前任去向揭示晋升路径",
+      "suggested_queries": ["江忠汉 余干 去向", "余干 新任县长"],
       "last_attempted": "2026-07-15"
     }
   ]
