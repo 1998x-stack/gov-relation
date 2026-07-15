@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "六安市",
+    "region": "霍邱县",
+    "job": "县委书记",
+    "task_id": "anhui_霍邱县",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "anhui_gao_zongbao",
+    "name": "高宗保",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1976-09",
+    "birthplace": "安徽六安",
+    "native_place": "安徽六安",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "中央党校",
+        "major": "",
+        "degree": "大学",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "高宗保_197609",
+      "name_birthplace": "高宗保_安徽六安",
+      "official_profile_url": "https://www.huoqiu.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "中共霍邱县委书记",
+    "current_org": "中共霍邱县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-01",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002", "S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2022-10",
+      "org": "六安市",
+      "title": "此前在六安市任职（具体职务待查）",
+      "level": "",
+      "location": "安徽省六安市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "2022年11月前具体职务未公开",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2022-11",
+      "end": "2026-04",
+      "org": "六安市农业农村局",
+      "title": "六安市委农办主任，市农业农村局党组书记、局长",
+      "level": "正处级",
+      "location": "安徽省六安市",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "任职约3年5个月",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2026-04-23",
+      "end": "2026-04-23",
+      "org": "中共六安市委组织部",
+      "title": "任前公示（拟任县（区）党委正职）",
+      "level": "",
+      "location": "安徽省六安市",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "六安市委组织部发布任前公示",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2026-05",
+      "end": "present",
+      "org": "中共霍邱县委员会",
+      "title": "霍邱县委书记",
+      "level": "县处级",
+      "location": "安徽省六安市霍邱县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2026年5月正式就任",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    },
+    {
+      "start": "2026-05-27",
+      "end": "present",
+      "org": "霍邱县人武部",
+      "title": "县人武部党委第一书记（兼任）",
+      "level": "",
+      "location": "安徽省六安市霍邱县",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "县委书记兼任人武部党委第一书记为惯例",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_luan_agriculture",
+      "name": "六安市农业农村局",
+      "role": "党组书记、局长",
+      "period": "2022-11 至 2026-04",
+      "source_ids": ["S001"]
+    },
+    {
+      "org_id": "org_huoqiu_party",
+      "name": "中共霍邱县委员会",
+      "role": "县委书记",
+      "period": "2026-05 至今",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "沈勇",
+      "person_id": "anhui_shen_yong",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "县委书记与县长搭档关系",
+      "overlap_org": "霍邱县",
+      "overlap_period": "2026-05至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "朱成亮",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "县委书记与县委副书记",
+      "overlap_org": "中共霍邱县委员会",
+      "overlap_period": "2026-05至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "霍绍斌",
+      "person_id": "anhui_huo_shaobin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "霍绍斌调任宿州后，高宗保接任县委书记",
+      "overlap_org": "中共霍邱县委员会",
+      "overlap_period": "2026-04/05交接",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S004"]
+    },
+    {
+      "person": "曹良喜",
+      "person_id": "anhui_cao_liangxi",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "县委书记与县政协主席同在县委常委会",
+      "overlap_org": "霍邱县",
+      "overlap_period": "2026-05至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-06",
+      "domain": "economic_development",
+      "achievement_or_event": "主持招商引资'双月'调度会",
+      "role_in_event": "主持",
+      "measurable_outcome": "",
+      "location": "霍邱县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2026-06-28",
+      "domain": "political_education",
+      "achievement_or_event": "主持县委树立和践行正确政绩观学习教育专题读书班",
+      "role_in_event": "主持并讲话",
+      "measurable_outcome": "",
+      "location": "霍邱县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2026-07-01",
+      "domain": "other",
+      "achievement_or_event": "庆祝建党105周年表彰大会上作专题党课报告",
+      "role_in_event": "作专题党课报告",
+      "measurable_outcome": "",
+      "location": "霍邱县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["农业农村工作", "党的领导"],
+    "secondary_specializations": [],
+    "career_pattern": "provincial_department",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["六安市"],
+    "promotion_velocity": {
+      "summary": "2022年11月任六安市农业农村局局长（正处级），2026年5月升任霍邱县委书记（正处级）。在六安市直部门工作后空降县区任一把手，属于典型的市直→县区一把手晋升路径。从公开资料看，晋升速度较稳健。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "discipline_oriented",
+        "evidence": "主持召开政绩观学习教育专题读书班和建党105周年党课报告会，强调正确政绩观",
+        "confidence": "plausible",
+        "source_ids": ["S002"]
+      },
+      {
+        "trait": "pragmatic",
+        "evidence": "2026年6月主持招商引资调度会，重视经济发展",
+        "confidence": "plausible",
+        "source_ids": ["S002"]
+      }
+    ],
+    "speech_themes": ["正确政绩观", "党建", "招商引资"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月15日，未在公开资料中发现高宗保的纪律处分、审计问题或负面媒体报道。其任六安市农业农村局局长期间和任霍邱县委书记初期均未有涉及纪律审查的公开信息。本调查范围涵盖百度百科、霍邱县政府官网等公开渠道。",
+      "date": "2026-07-15",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "高宗保 - 百度百科",
+      "url": "https://baike.baidu.com/item/%E9%AB%98%E5%AE%97%E4%BF%9D/19741409",
+      "publisher": "百度百科",
+      "published_at": "2026-06-30",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "百度百科页面，更新于2026年6月30日"
+    },
+    {
+      "id": "S002",
+      "title": "霍邱县人民政府 - 政务要闻",
+      "url": "https://www.huoqiu.gov.cn/zwzx/yw/",
+      "publisher": "霍邱县人民政府",
+      "published_at": "2026-06/07",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "多篇政务要闻中提到高宗保以县委书记身份出席活动"
+    },
+    {
+      "id": "S003",
+      "title": "霍邱县人武部党委第一书记任职大会",
+      "url": "https://www.huoqiu.gov.cn/zwzx/yw/38789149.html",
+      "publisher": "霍邱县人民政府",
+      "published_at": "2026-05-27",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "高宗保兼任县人武部党委第一书记"
+    },
+    {
+      "id": "S004",
+      "title": "霍绍斌 - 百度百科",
+      "url": "https://baike.baidu.com/item/%E9%9C%8D%E7%BB%8D%E6%96%8C/8453541",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "霍绍斌是前任县委书记，现已调任宿州"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "2022年11月前的完整履历缺失（具体在六安市任何职，教育经历、入党时间、参加工作时间均不详）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "高宗保2022年11月前在六安市任何职？其早期的教育经历、入党时间、参加工作时间？",
+      "why_it_matters": "无法判断其完整职业晋升路径和专业化背景",
+      "suggested_queries": ["高宗保 六安 曾任", "高宗保 简历 教育", "高宗保 早期 履历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "高宗保在六安市农业农村局局长任上是否有突出政绩？",
+      "why_it_matters": "判断其专业特长和施政风格",
+      "suggested_queries": ["高宗保 六安 农业农村局 工作", "六安 农业农村 2023 2024 高宗保"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
