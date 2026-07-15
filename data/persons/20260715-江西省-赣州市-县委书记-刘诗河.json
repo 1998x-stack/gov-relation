@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "石城县",
+    "job": "县委书记",
+    "task_id": "jiangxi_石城县",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "shicheng_liu_shihe",
+    "name": "刘诗河",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1975-09",
+    "birthplace": "江西赣州",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "大学学历",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘诗河_197509",
+      "name_birthplace": "刘诗河_江西赣州",
+      "official_profile_url": "https://www.shicheng.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "石城县委书记",
+    "current_org": "中共石城县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到刘诗河任石城县长前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2022",
+      "end": "2026-07",
+      "org": "石城县人民政府",
+      "title": "石城县委副书记、县长",
+      "level": "县处级正职",
+      "location": "江西赣州石城",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "任县长；2026年7月晋升县委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2026-07",
+      "end": "present",
+      "org": "中共石城县委员会",
+      "title": "石城县委书记",
+      "level": "县处级正职",
+      "location": "江西赣州石城",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "2026年7月7日前后由县长晋升县委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "shicheng_cpc_county", "name": "中共石城县委员会", "type": "党委", "role": "current_leader"},
+    {"org_id": "shicheng_gov", "name": "石城县人民政府", "type": "政府", "role": "former_leader"}
+  ],
+  "relationships": [
+    {
+      "person": "伍威",
+      "person_id": "shicheng_wu_wei",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "党政搭档：刘诗河（县委书记）与伍威（县长候选人）自2026年7月起共事",
+      "overlap_org": "石城县",
+      "overlap_period": "2026-07至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "张小川",
+      "person_id": "shicheng_zhang_xiaochuan",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "接替张小川任县委书记；此前张小川为县委书记时刘诗河为县长",
+      "overlap_org": "石城县",
+      "overlap_period": "2022-2026-07",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "尹忠",
+      "person_id": "shicheng_yin_zhong",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "尹忠、张小川、刘诗河三任书记同县传承链",
+      "overlap_org": "石城县",
+      "overlap_period": "~2021-2026",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S004"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["江西赣州"],
+    "promotion_velocity": {
+      "summary": "从县长晋升县委书记（约4年县长任期），属于赣州市正常的县级干部晋升节奏",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月15日，公开资料中未发现刘诗河相关的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "石城县人民政府 - 领导活动报道",
+      "url": "https://www.shicheng.gov.cn",
+      "publisher": "石城县人民政府",
+      "published_at": "2026-07",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认刘诗河为县委书记（2026年7月7日新闻）"
+    },
+    {
+      "id": "S002",
+      "title": "石城县人民政府 - 走访看望退休老干部",
+      "url": "http://www.shicheng.gov.cn/scxzf/c104798/202607/9785fdb19afb4bba8a1aaf16f3fcfa57.shtml",
+      "publisher": "石城县人民政府",
+      "published_at": "2026-07-07",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认刘诗河职务为县委书记，伍威为县长候选人"
+    },
+    {
+      "id": "S003",
+      "title": "石城县人民政府 - 庆祝中国共产党成立105周年大会",
+      "url": "http://www.shicheng.gov.cn/scxzf/c104798/202607/81a918c19e214b1ba8715223593b504e.shtml",
+      "publisher": "石城县人民政府",
+      "published_at": "2026-07-05",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认2026年7月5日刘诗河仍为县长"
+    },
+    {
+      "id": "S004",
+      "title": "Baidu Baike - 石城县",
+      "url": "https://baike.baidu.com/item/石城县",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "列出现任主要领导：刘诗河（县委书记）、伍威（县长候选人）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2022年之前全部履历缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘诗河任石城县长前的全部履历？从何单位调任？",
+      "why_it_matters": "无法判断其专业背景、系统经验和外部关系网络",
+      "suggested_queries": ["刘诗河 简历", "刘诗河 任职经历", "刘诗河 此前担任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "刘诗河的具体出生地点和籍贯？",
+      "why_it_matters": "现有数据仅标'江西赣州'，需精确到县/区以判断同乡关系",
+      "suggested_queries": ["刘诗河 籍贯", "刘诗河 出生"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "刘诗河的入党时间和参加工作时间？",
+      "why_it_matters": "影响对其晋升速度和工作年限的评估",
+      "suggested_queries": ["刘诗河 入党", "刘诗河 参加工作"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "刘诗河的教育背景详细情况（毕业院校、专业、学位类型）？",
+      "why_it_matters": "现有仅知'大学学历'，无法判断是否为全日制定向培养",
+      "suggested_queries": ["刘诗河 毕业", "刘诗河 学历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
