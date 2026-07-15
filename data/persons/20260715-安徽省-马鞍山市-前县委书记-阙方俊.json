@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "马鞍山市",
+    "region": "当涂县",
+    "job": "前县委书记/现市委常委",
+    "task_id": "anhui_当涂县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "dangtu_quefangjun",
+    "name": "阙方俊",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "阙方俊_",
+      "name_birthplace": "",
+      "official_profile_url": "https://www.mas.gov.cn/zwgk/ldzc/"
+    }
+  },
+  "current_status": {
+    "current_post": "马鞍山市委常委（原当涂县委书记）",
+    "current_org": "中共马鞍山市委",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "（此前）",
+      "org": "中共当涂县委员会",
+      "title": "当涂县委书记",
+      "level": "正处级",
+      "location": "安徽省马鞍山市当涂县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "此前担任当涂县委书记，后晋升为马鞍山市委常委（副厅级）",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "未知",
+      "end": "present",
+      "org": "中共马鞍山市委",
+      "title": "市委常委",
+      "level": "副厅级",
+      "location": "安徽省马鞍山市",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "升任马鞍山市委常委。具体分工待确认。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中共当涂县委员会",
+      "org_type": "党委",
+      "role": "县委书记（前任）",
+      "period": "此前"
+    },
+    {
+      "org_name": "中共马鞍山市委",
+      "org_type": "党委",
+      "role": "市委常委",
+      "period": "至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "魏邦军",
+      "person_id": "dangtu_weibangjun",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "阙方俊此前担任当涂县委书记，魏邦军接任。阙方俊升任马鞍山市委常委。",
+      "overlap_org": "中共当涂县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "袁方",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "阙方俊任马鞍山市委常委，受市委书记袁方领导",
+      "overlap_org": "中共马鞍山市委",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party"],
+    "geographic_pattern": ["马鞍山市"],
+    "promotion_velocity": {
+      "summary": "从当涂县委书记（正处级）晋升为马鞍山市委常委（副厅级），属于典型的县级主官晋升路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_reports": 0,
+    "peers": 7,
+    "superiors": 1
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现负面报道或纪律处分记录",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "马鞍山市人民政府—市委领导",
+      "url": "https://www.mas.gov.cn/zwgk/ldzc/",
+      "publisher": "马鞍山市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "显示阙方俊任马鞍山市委常委"
+    },
+    {
+      "id": "S002",
+      "title": "当涂县人民政府—领导之窗",
+      "url": "https://www.dangtu.gov.cn/ldzc/",
+      "publisher": "当涂县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "显示县委书记已变更为魏邦军，阙方俊不再担任"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "阙方俊的完整履历（出生年月、籍贯、此前任职经历）完全缺失。仅知其曾任当涂县委书记，现任马鞍山市委常委。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "阙方俊的出生年月、籍贯、教育背景？",
+      "why_it_matters": "这些身份信息是人员去重和背景分析的基础",
+      "suggested_queries": ["阙方俊 简历", "阙方俊 出生", "阙方俊 籍贯"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "阙方俊在担任当涂县委书记前担任过哪些职务？",
+      "why_it_matters": "完整履历对理解其关系网络和晋升路径至关重要",
+      "suggested_queries": ["阙方俊 曾任", "阙方俊 马鞍山 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "阙方俊何时开始担任当涂县委书记？何时调任市委常委？",
+      "why_it_matters": "精确的时间线对关系分析至关重要",
+      "suggested_queries": ["阙方俊 任当涂县委书记 时间", "阙方俊 任市委常委 时间"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "阙方俊在马鞍山市委的具体分工是什么？",
+      "why_it_matters": "市委常委的具体分工影响其在市决策中的地位",
+      "suggested_queries": ["阙方俊 分管", "马鞍山 市委常委 分工"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
