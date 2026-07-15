@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "庐江县",
+    "job": "县长",
+    "task_id": "anhui_庐江县",
+    "time_focus": "2021年至今"
+  },
+  "identity": {
+    "person_id": "anhui_lujiang_zhoutianbin_1972",
+    "name": "周天斌",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1972-01",
+    "birthplace": "安徽舒城",
+    "native_place": "安徽舒城",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "unknown",
+        "major": "",
+        "degree": "在职研究生",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1993",
+    "dedupe_keys": {
+      "name_birth": "周天斌_1972-01",
+      "name_birthplace": "周天斌_安徽舒城",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "庐江县长",
+    "current_org": "庐江县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2021",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "1993",
+      "end": "unknown",
+      "org": "unknown",
+      "title": "早期工作",
+      "level": "",
+      "location": "",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1993年参加工作，具体早期履历待确认",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "2021",
+      "org": "unknown",
+      "title": "此前历任职务",
+      "level": "县处级",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "舒城人，跨县到庐江任职，具体此前履历待确认",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "庐江县人民政府",
+      "title": "庐江县长",
+      "level": "县处级",
+      "location": "庐江县",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "现任庐江县长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "anhui_lujiang_county_gov",
+      "name": "庐江县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "parent": "合肥市人民政府",
+      "location": "庐江县"
+    },
+    {
+      "org_id": "anhui_lujiang_county_party",
+      "name": "中共庐江县委",
+      "type": "党委",
+      "level": "县级",
+      "parent": "中共合肥市委",
+      "location": "庐江县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "许华为",
+      "person_id": "anhui_lujiang_xuhuawei_1970",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "庐江县长与县委书记搭档，2021年起共同主政庐江县",
+      "overlap_org": "庐江县",
+      "overlap_period": "2021-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-",
+      "domain": "other",
+      "achievement_or_event": "任庐江县长主持县政府全面工作",
+      "role_in_event": "县长",
+      "measurable_outcome": "",
+      "location": "庐江县",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["县级行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["舒城", "庐江"],
+    "promotion_velocity": {
+      "summary": "跨县交流干部（舒城→庐江），具体成长路径待确认",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料受限，无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": ["S001"]
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "degree": 1,
+    "relationships_confirmed": 1
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现公开的纪律处分、审计问题或负面报道",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py — 合肥市领导班子工作关系网络",
+      "url": "",
+      "publisher": "gov-relation 仓储",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "数据源自公开报道汇编。政府网站和百科网站因访问限制无法直连验证"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2021年之前的全部履历缺失（包括教育背景、历任职务、系统归属等）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "周天斌2021年之前的完整履历是什么？在担任庐江县长之前任何职？",
+      "why_it_matters": "完全不了解其职业背景、治理经验和专业领域",
+      "suggested_queries": ["周天斌 履历", "周天斌 舒城", "周天斌 个人简历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "周天斌的教育背景和毕业院校？",
+      "why_it_matters": "仅知\"在职研究生\"学历，具体院校和专业不明",
+      "suggested_queries": ["周天斌 学历", "周天斌 毕业"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "周天斌在庐江县长任上的主要政绩和工作重点？",
+      "why_it_matters": "评估其治理能力和执政风格",
+      "suggested_queries": ["周天斌 庐江 讲话", "庐江县 政府工作报告"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
