@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "抚州市",
+    "region": "南丰县",
+    "job": "县委书记",
+    "task_id": "jiangxi_南丰县",
+    "time_focus": "现任（截至2026年7月）"
+  },
+  "identity": {
+    "person_id": "jiangxi_fuzhou_nanfeng_yefeng",
+    "name": "叶峰",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "叶峰_",
+      "name_birthplace": "叶峰_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "南丰县委书记",
+    "current_org": "中共南丰县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "中共南丰县委员会",
+      "title": "南丰县委书记",
+      "level": "县处级正职",
+      "location": "江西抚州南丰",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": false,
+      "notes": "现任南丰县委书记。具体到任时间和此前履历需进一步查证。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共南丰县委员会",
+      "type": "党委",
+      "level": "县处级",
+      "parent": "中共抚州市委员会",
+      "location": "江西抚州南丰",
+      "role": "县委书记",
+      "period": "—至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "张沥泉",
+      "person_id": "jiangxi_fuzhou_nanfeng_zhangjiquan",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "张沥泉任南丰县长，与叶峰（县委书记）为南丰县党政领导班子搭档",
+      "overlap_org": "南丰县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "范小林",
+      "person_id": "fuzhou_fanxiaolin",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "范小林为抚州市委书记，叶峰作为南丰县委书记受其直接领导",
+      "overlap_org": "抚州市",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "",
+      "domain": "rural_revitalization",
+      "achievement_or_event": "南丰县以蜜桔产业为特色，推动乡村振兴和农业现代化",
+      "role_in_event": "县委主要领导",
+      "measurable_outcome": "",
+      "location": "南丰县",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历信息不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足，无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现叶峰相关的纪律处分、审计问题或负面媒体报道",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "南丰县政府官网 — 领导之窗",
+      "url": "http://www.nanfeng.gov.cn",
+      "publisher": "南丰县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "网站不可达（网络限制），信息来自前期训练数据"
+    },
+    {
+      "id": "S002",
+      "title": "南丰县领导分工/会议报道",
+      "url": "",
+      "publisher": "南丰县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "具体URL需补充"
+    },
+    {
+      "id": "S003",
+      "title": "build_fuzhou_data.py — 抚州市领导网络",
+      "url": "",
+      "publisher": "gov-relation repo",
+      "published_at": "2026-07-14",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "抚州市领导信息来自此前调查"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "叶峰的完整履历（出生年月、籍贯、教育背景、此前任职经历）全部缺失，需外网恢复后补充"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "叶峰的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "身份信息是person ID和去重的基础",
+      "suggested_queries": ["叶峰 简历 南丰县委书记", "叶峰 出生 南丰"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "叶峰任南丰县委书记的具体到任时间是哪一年/月？",
+      "why_it_matters": "确定当前领导层任期起点",
+      "suggested_queries": ["叶峰 任南丰县委书记"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "叶峰此前担任过哪些职务？他是本地成长干部还是从市直/省直部门空降？",
+      "why_it_matters": "影响对本地/空降搭配格局和晋升路径的分析",
+      "suggested_queries": ["叶峰 任职经历", "叶峰 抚州"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "叶峰是否有跨县或跨市调动的经历？",
+      "why_it_matters": "跨地区调任反映干部交流网络",
+      "suggested_queries": ["叶峰 调任"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

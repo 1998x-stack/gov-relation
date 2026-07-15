@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>gov-relation research agent</creator>
+    <description>南丰县领导班子工作关系网络 - 2026-07-15</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="叶峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="南丰县委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="张沥泉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="南丰县委副书记、县长"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="范小林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1970-12"/>
+          <attvalue for="2" value="江西宜丰"/>
+          <attvalue for="3" value="抚州市委书记"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="王宏安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1969-08"/>
+          <attvalue for="2" value="江西彭泽"/>
+          <attvalue for="3" value="抚州市委副书记、市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共南丰县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西抚州南丰"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="南丰县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西抚州南丰"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共抚州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西抚州"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="抚州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西抚州"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="南丰县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任南丰县委书记，具体到任时间待查"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="南丰县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任南丰县长，具体到任时间待查"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p3" target="o3" label="抚州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024-10"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2024.10从省纪委常务副书记空降抚州"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p4" target="o4" label="抚州市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2025年1月确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="叶峰（县委书记）与张沥泉（县长）在南丰县党政班子搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="p3" label="上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="叶峰（南丰县委书记）受范小林（抚州市委书记）领导"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p2" target="p4" label="上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="张沥泉（南丰县长）受王宏安（抚州市长）领导"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
