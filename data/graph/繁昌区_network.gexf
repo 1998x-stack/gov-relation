@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Sisyphus Research Agent</creator>
+    <description>繁昌区领导班子工作关系网络 - 安徽省芜湖市繁昌区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="汪敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="繁昌区委书记"/>
+          <attvalue for="2" value="中共繁昌区委"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="周伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="繁昌区长"/>
+          <attvalue for="2" value="繁昌区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="瞿辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原繁昌区委书记（已离任）"/>
+          <attvalue for="2" value="中共繁昌区委"/>
+          <attvalue for="3" value="1975-09"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="陈邦龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="繁昌区人大常委会主任"/>
+          <attvalue for="2" value="繁昌区人大常委会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="张文宝">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="繁昌区政协主席"/>
+          <attvalue for="2" value="繁昌区政协"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="宁波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="芜湖市委书记"/>
+          <attvalue for="2" value="中共芜湖市委"/>
+          <attvalue for="3" value="1969-03"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="徐志">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="芜湖市委副书记、市长"/>
+          <attvalue for="2" value="芜湖市人民政府"/>
+          <attvalue for="3" value="1972-03"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共繁昌区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="繁昌区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="繁昌区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="繁昌区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共芜湖市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地厅级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="芜湖市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地厅级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="繁昌区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="繁昌区委书记"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="繁昌区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="繁昌区长"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o1" label="繁昌区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="繁昌区委书记"/>
+          <attvalue for="2" value="2022 - "/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o3" label="繁昌区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="繁昌区人大常委会主任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o4" label="繁昌区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="繁昌区政协主席"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p6" target="o5" label="芜湖市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="芜湖市委书记"/>
+          <attvalue for="2" value="2021-06 - "/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p7" target="o6" label="芜湖市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="芜湖市人民政府市长"/>
+          <attvalue for="2" value="2023-03 - "/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p7" target="o5" label="芜湖市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="芜湖市委副书记"/>
+          <attvalue for="2" value="2023-03 - "/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="繁昌区委书记与区长工作搭档"/>
+          <attvalue for="2" value="2025/2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="p1" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="芜湖市委书记与繁昌区委书记上下级"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p6" target="p2" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="芜湖市委书记与繁昌区长上下级"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="p2" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="芜湖市长与繁昌区长上下级"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p3" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="芜湖市委书记与繁昌区委书记上下级"/>
+          <attvalue for="2" value="2022-"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p3" target="p1" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="繁昌区委书记前后任交接"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p6" target="p7" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="芜湖市委书记与市长工作搭档"/>
+          <attvalue for="2" value="2023-"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
