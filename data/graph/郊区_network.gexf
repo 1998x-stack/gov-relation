@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Claude Code Research Agent</creator>
+    <description>铜陵市郊区（Jiaoqu District, Tongling）领导关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="birthplace" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="刘磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="郊区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="（区长待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="郊区长（待确认）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="纪红兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原郊区委书记（已离任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="张发林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原郊区委书记（已离任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="张琼">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原郊区长（已离任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共铜陵市郊区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="铜陵市郊区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="铜陵市郊区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协铜陵市郊区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共铜陵市郊区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="铜陵市郊区监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="铜陵市郊区经济开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="桥南街道办事处">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="安庆矿区街道办事处">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="大通镇人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="铜山镇人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="老洲镇人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="陈瑶湖镇人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="周潭镇人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="灰河乡人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="郊区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任郊区委书记，任职起始时间待确认"/>
+          <attvalue for="2" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p3" target="o1" label="郊区委书记（原任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任郊区委书记，约2018年前后任职"/>
+          <attvalue for="2" value="unknown - unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p4" target="o1" label="郊区委书记（原任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任郊区委书记，约2020年前后任职"/>
+          <attvalue for="2" value="unknown - unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p5" target="o2" label="郊区长（原任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任郊区长，2021年前后离任"/>
+          <attvalue for="2" value="unknown - unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="刘磊接替纪红兵（或经张发林）任郊区委书记"/>
+          <attvalue for="2" value="过渡期待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="刘磊接替张发林任郊区委书记"/>
+          <attvalue for="2" value="过渡期待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="纪红兵后由张发林接任郊区委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="张琼后由现任区长接任"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
