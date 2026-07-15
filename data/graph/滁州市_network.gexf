@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>滁州市领导班子工作关系网络 — 含市委、市政府、市政协、经开区领导及前任</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="type" type="string"/>
+      <attribute id="role" title="role" type="string"/>
+      <attribute id="source" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="type" type="string"/>
+      <attribute id="context" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="chuzhou_wu_jin" label="吴劲">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委书记"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756472.html"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_hu_chunhua" label="胡春华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委副书记、市长"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756472.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_yin_chunhua" label="尹春华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委副书记"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756457.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_sun_jun" label="孙军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市政协主席"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756472.html"/>
+        </attvalues>
+        <viz:color r="160" g="80" b="160" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_yao_kai" label="姚凯">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、常务副市长"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756472.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_wang_yanyong" label="王燕永">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、宣传部部长"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756703.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_liu_jianghua" label="刘江华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="副市长"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756703.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_xu_jun" label="徐军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="滁州经开区管委会主任"/>
+          <attvalue for="source" value="chuzhou.gov.cn/zxzx/jryw/1112756472.html"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="chuzhou_xu_jiwei" label="许继伟">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="前滁州市委书记"/>
+          <attvalue for="source" value="公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="org_cpc_chuzhou" label="中共滁州市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_chuzhou" label="滁州市人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cppcc_chuzhou" label="中国人民政治协商会议滁州市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="cppcc"/>
+        </attvalues>
+        <viz:color r="140" g="60" b="140" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_keda_chuzhou" label="滁州经济技术开发区">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="development_zone"/>
+        </attvalues>
+        <viz:color r="80" g="180" b="80" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_npc_chuzhou" label="滁州市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="npc"/>
+        </attvalues>
+        <viz:color r="60" g="140" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_langya" label="琅琊区人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_langya" label="中共滁州市琅琊区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_nanqiao" label="中共滁州市南谯区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_nanqiao" label="南谯区人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_tianchang" label="中共天长市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_mingguang" label="中共明光市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_quanjiao" label="中共全椒县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_lai_an" label="中共来安县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_fengyang" label="中共凤阳县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_dingyuan" label="中共定远县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="chuzhou_wu_jin" target="org_cpc_chuzhou" label="市委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委书记 (2023（推测）-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="chuzhou_wu_jin" target="org_gov_chuzhou" label="市长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市长（此前曾任） (2021-2023)"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="chuzhou_hu_chunhua" target="org_gov_chuzhou" label="市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市长 (2024（推测）-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="chuzhou_hu_chunhua" target="org_cpc_chuzhou" label="市委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委副书记 (2024（推测）-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="chuzhou_yin_chunhua" target="org_cpc_chuzhou" label="市委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委副书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="chuzhou_sun_jun" target="org_cppcc_chuzhou" label="市政协主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市政协主席 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="chuzhou_yao_kai" target="org_cpc_chuzhou" label="市委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="chuzhou_yao_kai" target="org_gov_chuzhou" label="常务副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="常务副市长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="chuzhou_wang_yanyong" target="org_cpc_chuzhou" label="市委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委、宣传部部长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="chuzhou_liu_jianghua" target="org_gov_chuzhou" label="副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="副市长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="chuzhou_xu_jun" target="org_keda_chuzhou" label="滁州经开区管委会主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="滁州经开区管委会主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="chuzhou_xu_jiwei" target="org_cpc_chuzhou" label="市委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委书记 (2021（推测）-2023（推测）)"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="chuzhou_xu_jiwei" target="org_gov_chuzhou" label="市长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市长（此前曾任） (2017-2021)"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="chuzhou_wu_jin" target="chuzhou_hu_chunhua" label="市委书记与市长搭档（党政正职关系）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与市长搭档（党政正职关系）"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="chuzhou_wu_jin" target="chuzhou_yin_chunhua" label="市委书记与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="chuzhou_wu_jin" target="chuzhou_sun_jun" label="市委书记与政协主席">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="chuzhou_wu_jin" target="chuzhou_yao_kai" label="市委书记与常务副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="chuzhou_hu_chunhua" target="chuzhou_yin_chunhua" label="市长与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市长与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="chuzhou_hu_chunhua" target="chuzhou_yao_kai" label="市长与常务副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市长与常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="chuzhou_xu_jiwei" target="chuzhou_wu_jin" label="许继伟→吴劲 滁州市委书记接替">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="许继伟→吴劲 滁州市委书记接替"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="chuzhou_wu_jin" target="chuzhou_xu_jiwei" label="吴劲接替许继伟任市委书记，此前吴劲任市长时与许继伟搭档">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="吴劲接替许继伟任市委书记，此前吴劲任市长时与许继伟搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="chuzhou_wu_jin" target="chuzhou_wang_yanyong" label="市委书记与宣传部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与宣传部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="chuzhou_hu_chunhua" target="chuzhou_liu_jianghua" label="市长与副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市长与副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="chuzhou_wu_jin" target="chuzhou_xu_jun" label="市委书记与经开区主任">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与经开区主任"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
