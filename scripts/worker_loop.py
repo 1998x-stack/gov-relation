@@ -123,7 +123,10 @@ def main() -> int:
             if not ready:
                 set_claim_status(task_id, args.worker_id, "failed", f"missing canonical artifacts: {', '.join(missing)}")
                 log(f"FAILED {task_id} missing canonical artifacts: {', '.join(missing)}")
-                return 1
+                completed += 1
+                if args.sleep_seconds > 0:
+                    time.sleep(args.sleep_seconds)
+                continue
             set_claim_status(task_id, args.worker_id, "done")
             log(f"DONE {task_id}")
             if args.git_commit and not git_commit_task(claim["task"]):
@@ -138,7 +141,10 @@ def main() -> int:
         if result.returncode != 0:
             set_claim_status(task_id, args.worker_id, "failed", f"opencode exit {result.returncode}")
             log(f"FAILED {task_id} opencode exit {result.returncode}")
-            return result.returncode
+            completed += 1
+            if args.sleep_seconds > 0:
+                time.sleep(args.sleep_seconds)
+            continue
         completed += 1
         if args.sleep_seconds > 0:
             time.sleep(args.sleep_seconds)

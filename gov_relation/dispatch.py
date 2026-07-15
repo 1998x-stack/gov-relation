@@ -23,6 +23,14 @@ def build_dispatch_prompt(item: TodoItem, model_intent: str = "standard") -> str
     parent_city = task["parent_city"] or ""
     return f"""Use the china-gov-network skill at .agents/skills/china-gov-network.
 
+Non-negotiable execution rules:
+- You are the end-to-end executor, not a planner. Do not stop after creating a plan or launching subagents.
+- If you use subagents, wait for their results, synthesize them, and continue through artifact creation yourself.
+- If subagents are unavailable, asynchronous, or return incomplete information, continue the investigation directly with the available tools.
+- Do not call scripts/todo_queue.py claim/done/fail/release. The external worker owns queue state.
+- Do not finish with only notes, todos, or a staging directory. A successful run must leave the canonical build script, SQLite DB, GEXF graph, and person JSON files after validation and promotion.
+- If evidence is incomplete, encode gaps with confidence/open_questions, but still create structurally valid artifacts from confirmed/plausible evidence.
+
 Task:
 - task_id: {task["task_id"]}
 - province: {task["province"]}
@@ -57,8 +65,11 @@ Required workflow:
 5. Validate with py_compile, script execution, json.tool for person JSON, and scripts/process_tmp.py data/tmp/{task["task_id"]}.
 6. Promote with scripts/process_tmp.py data/tmp/{task["task_id"]} --apply only after the dry run is clean.
 7. Run scripts/inventory.py after promotion.
-8. Do not mark the TODO item done unless validation passes. After validation and promotion pass, run:
-   python3 scripts/todo_queue.py done --task-id {task["task_id"]} --worker-id <YOUR_WORKER_ID>
+8. Before exiting, verify these canonical paths exist:
+   - {paths["build_script"]}
+   - {paths["db_output"]}
+   - {paths["gexf_output"]}
+   - at least two data/persons/YYYYMMDD-...json files for the core leaders when names are known
 """
 
 
