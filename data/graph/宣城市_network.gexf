@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>宣城市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="rank" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="何淳宽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共宣城市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="邓继敢">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="宣城市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="刘居胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记"/>
+          <attvalue for="2" value="中共宣城市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="夏迎锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共宣城市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p5" label="蔡毅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、常务副市长"/>
+          <attvalue for="2" value="宣城市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p6" label="董红明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、副市长"/>
+          <attvalue for="2" value="宣城市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p7" label="陶晓海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="宣城市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="刘涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长、市公安局局长"/>
+          <attvalue for="2" value="宣城市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="嵇文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="宣城市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="吴爱国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="宣城市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p11" label="李中">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原宣城市委书记）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p12" label="何淳宽（前任书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（前任宣城市长，已升书记）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共宣城市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="宣城市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="宣城市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="宣城市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共宣城市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="宣城市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共宣城市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共宣城市委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="宣城市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="宣城经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共天长市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共来安县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="滁州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共郎溪县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="广德市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="铜陵经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="安徽省公安厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持市委全面工作。2025年接替李中任宣城市委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="市长（前任职务）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024-2025年任宣城市市长，后升任市委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任宣城市委副书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="领导市政府全面工作，负责审计方面工作。"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2" target="o13" label="市委常委、常务副市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任滁州市委常委、市政府常务副市长。"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="o11" label="天长市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任天长市委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p2" target="o12" label="来安县委副书记、县长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任来安县委副书记、县长。"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p3" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p4" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="具体分工待查。"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p5" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p5" target="o2" label="常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="负责市政府常务工作。"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p6" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p6" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管人社局、自然资源规划局、住建局、交通局、公积金中心。"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p6" target="o16" label="铜陵经开区管委会副主任（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任铜陵经济技术开发区管委会副主任。"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p7" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管民政局、生态环境局、农业农村局、水利局、林业局。无党派。"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p7" target="o4" label="市政协副主席（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任宣城市政协副主席、市水利局局长。"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p8" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管公安局、司法局、退役军人事务局、国动办。"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p8" target="o9" label="市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委政法委副书记，市公安局局长、党委书记、督察长。"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p8" target="o17" label="省公安厅治安管理处处长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任安徽省公安厅治安管理处（治安警察总队）处长（总队长）。"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p9" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管科技局、工信局、投资促进局、开发区。"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p9" target="o14" label="郎溪县委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任郎溪县委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p9" target="o15" label="广德市委副书记、市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任广德市委副书记、市政府市长。"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p10" target="o4" label="市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p10" target="o1" label="市委副书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任宣城市委副书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p11" target="o1" label="市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任宣城市委书记。何淳宽接替。"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p2" label="市委书记和市长同届领导班子成员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市长同届领导班子成员"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p3" label="市委书记和市委副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委副书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p4" label="市委书记和市委常委" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p5" label="市委书记和市委常委、常务副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、常务副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p6" label="市委书记和市委常委、副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委、副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p2" target="p5" label="市长和常务副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和常务副市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p2" target="p6" label="市长和副市长董红明" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长董红明"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p2" target="p7" label="市长和副市长陶晓海" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长陶晓海"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p2" target="p8" label="市长和副市长刘涛" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长刘涛"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p2" target="p9" label="市长和副市长嵇文" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长和副市长嵇文"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p1" target="p11" label="何淳宽接替李中任宣城市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="何淳宽接替李中任宣城市委书记"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p1" target="p2" label="何淳宽升任市委书记后，邓继敢接任市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="何淳宽升任市委书记后，邓继敢接任市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p9" target="p1" label="嵇文由郎溪县委书记提任宣城市副市长，何淳宽为市委书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="嵇文由郎溪县委书记提任宣城市副市长，何淳宽为市委书记"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p10" target="p1" label="市政协主席和市委书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市政协主席和市委书记"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p2" target="p11" label="邓继敢由滁州跨市调任宣城，李中可能参与人事安排" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邓继敢由滁州跨市调任宣城，李中可能参与人事安排"/>
+          <attvalue for="2" value="weak"/>
+          <attvalue for="3" value="2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p9" target="p2" label="嵇文从县区岗位提任副市长，在邓继敢领导下工作" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="嵇文从县区岗位提任副市长，在邓继敢领导下工作"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p6" target="p2" label="董红明由铜陵跨市调任宣城副市长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="董红明由铜陵跨市调任宣城副市长"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p8" target="p17" label="刘涛由省公安厅下派宣城" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘涛由省公安厅下派宣城"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
