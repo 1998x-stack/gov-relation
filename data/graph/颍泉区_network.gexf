@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>颍泉区（阜阳市）领导班子工作关系网络 — 2026年7月研究数据（部分数据待确认）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="context" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="yingquan_liu_wanhe" label="刘万和">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍泉区委书记"/>
+          <attvalue for="2" value="中共阜阳市颍泉区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingquan_shi_xin" label="时新">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍泉区委副书记、区长"/>
+          <attvalue for="2" value="颍泉区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingquan_liu_hongjie" label="刘洪洁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原颍泉区委书记，已调离）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingquan_yu_jianbin" label="虞建斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原颍泉区区长，已调离）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="unverified"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingquan_zhao_qun" label="赵群">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍东区委书记（曾任颍泉区委常委、副区长）"/>
+          <attvalue for="2" value="中共阜阳市颍东区委员会"/>
+          <attvalue for="3" value="1977-08"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="org_yingquan_party_committee" label="中共阜阳市颍泉区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingquan_government" label="颍泉区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingquan_npc" label="阜阳市颍泉区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="阜阳市人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingquan_cppcc" label="阜阳市颍泉区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="阜阳市政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingquan_cdc" label="中共阜阳市颍泉区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="中共阜阳市纪委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_investment_promotion" label="阜阳市招商投资促进中心">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingdong_party_committee" label="中共阜阳市颍东区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_party" label="中共阜阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安徽省委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_government" label="阜阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="安徽省人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="yingquan_liu_wanhe" target="org_yingquan_party_committee" label="颍泉区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍泉区委书记"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="yingquan_liu_wanhe" target="org_yingquan_government" label="颍泉区人民政府区长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍泉区人民政府区长（前任）"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="yingquan_shi_xin" target="org_yingquan_government" label="颍泉区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍泉区委副书记、区长"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="yingquan_liu_hongjie" target="org_yingquan_party_committee" label="颍泉区委书记（原）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍泉区委书记（原）"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="yingquan_yu_jianbin" target="org_yingquan_government" label="颍泉区人民政府区长（原）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍泉区人民政府区长（原）"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="yingquan_zhao_qun" target="org_yingquan_government" label="颍泉区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍泉区委常委、副区长"/>
+          <attvalue for="3" value="-2019-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="yingquan_zhao_qun" target="org_fuyang_investment_promotion" label="阜阳市招商投资促进中心党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市招商投资促进中心党组书记、主任"/>
+          <attvalue for="3" value="2019-03-2022-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="yingquan_zhao_qun" target="org_yingdong_party_committee" label="颍东区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍东区委书记"/>
+          <attvalue for="3" value="2022-04-"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="yingquan_liu_wanhe" target="yingquan_shi_xin" label="区委书记与区长（党政正职搭档）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区委书记与区长（党政正职搭档）"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="yingquan_liu_hongjie" target="yingquan_liu_wanhe" label="前后任区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="前后任区委书记"/>
+          <attvalue for="3" value="交接期"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="yingquan_yu_jianbin" target="yingquan_shi_xin" label="前后任区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="前后任区长"/>
+          <attvalue for="3" value="交接期"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="yingquan_liu_wanhe" target="yingquan_yu_jianbin" label="刘万和任区长期间可能与虞建斌有工作交集；或刘万和接任区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="刘万和任区长期间可能与虞建斌有工作交集；或刘万和接任区长"/>
+          <attvalue for="3" value="未知"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="yingquan_zhao_qun" target="yingquan_shi_xin" label="赵群曾为颍泉区副区长，时新现任区长。时间线可能有交接" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="赵群曾为颍泉区副区长，时新现任区长。时间线可能有交接"/>
+          <attvalue for="3" value="未知"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="yingquan_zhao_qun" target="yingquan_liu_wanhe" label="赵群任颍泉区副区长时，刘万和可能在区任职" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="赵群任颍泉区副区长时，刘万和可能在区任职"/>
+          <attvalue for="3" value="2019年前"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
