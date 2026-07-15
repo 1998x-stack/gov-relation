@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "宁都县",
+    "job": "原县长",
+    "task_id": "jiangxi_宁都县",
+    "time_focus": "2021-2025"
+  },
+  "identity": {
+    "person_id": "jiangxi_ningdu_heguojie_1975",
+    "name": "何国杰",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1975-11",
+    "birthplace": "江西赣州",
+    "native_place": "江西赣州",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "大学学历",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "何国杰_1975-11",
+      "name_birthplace": "何国杰_江西赣州",
+      "official_profile_url": "https://www.ningdu.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "（原宁都县委副书记、县长）",
+    "current_org": "",
+    "administrative_rank": "县处级正职（原任）",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021",
+      "end": "2025",
+      "org": "宁都县人民政府",
+      "title": "宁都县委副书记、县长",
+      "level": "县处级正职",
+      "location": "江西赣州宁都",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "2021-2025年任宁都县县长，后由陈珉接替",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "ningdu_county_gov",
+      "name": "宁都县人民政府",
+      "type": "政府",
+      "role": "曾任县长",
+      "period": "2021-2025"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "傅小新",
+      "person_id": "jiangxi_ningdu_fuxiaoxin_1973",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "何国杰（原县长）与傅小新（县委书记）2023-2025年期间在宁都县党政班子共事",
+      "overlap_org": "宁都县",
+      "overlap_period": "2023-2025",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陈珉",
+      "person_id": "jiangxi_ningdu_chenmin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "何国杰为前任宁都县长，陈珉为现任，接替其职位",
+      "overlap_org": "宁都县人民政府",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["江西赣州"],
+    "promotion_velocity": {
+      "summary": "具体履历不详",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现何国杰有公开的纪律处分或负面报道",
+      "date": "2026-07-15",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "现有数据库/公开报道",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "来自现有数据库数据，何国杰曾列于build_ganzhou_remaining_data.py"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "何国杰的详细履历、离开宁都后的去向完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "何国杰离开宁都县长岗位后的去向？",
+      "why_it_matters": "影响对职务调整的理解",
+      "suggested_queries": ["何国杰 任免", "何国杰 赣州"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "何国杰在2021年任县长前的履历？",
+      "why_it_matters": "了解其职业发展路径",
+      "suggested_queries": ["何国杰 简历"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
