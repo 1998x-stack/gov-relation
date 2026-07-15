@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "亳州市",
+    "region": "利辛县",
+    "job": "县长",
+    "task_id": "anhui_利辛县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "lixin_wan_zhongqiang",
+    "name": "万中强",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "万中强_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "利辛县委副书记、县长",
+    "current_org": "利辛县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "利辛县人民政府",
+      "title": "利辛县委副书记、县长",
+      "level": "正处级",
+      "location": "安徽省亳州市利辛县",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "现任利辛县委副书记、县长。具体任职起始时间待核实。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到万中强任利辛县长前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_lixin_gov",
+      "org_name": "利辛县人民政府",
+      "org_type": "政府",
+      "role": "利辛县委副书记、县长",
+      "period": "至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "张吉业",
+      "person_id": "lixin_zhang_jiye",
+      "relationship_type": "colleague",
+      "strength": "strong",
+      "evidence": "县长与县委书记搭档（党政正职关系），共同在利辛县任职",
+      "overlap_org": "中共利辛县委员会",
+      "overlap_period": "2026年（推断当前在职）",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "待查",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality_estimate": "high（县长作为县级政府一把手）",
+    "key_connections": ["张吉业（县委书记）"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月15日，公开资料中未发现万中强相关的纪律处分、审计问题或负面报道",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "亳州市领导网络数据库",
+      "url": "data/database/亳州市_network.db",
+      "publisher": "Gov Relation Repository",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "亳州市级数据库包含利辛县领导信息，但个人履历细节缺失"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "万中强任利辛县长前的完整履历完全未知，包括出生日期、籍贯、教育背景、此前任职等"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "万中强的完整履历是什么？包括出生年月、籍贯、教育背景、此前任职经历",
+      "why_it_matters": "核心人物，县长的履历是网络分析的基础",
+      "suggested_queries": ["万中强 简历", "万中强 利辛 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "万中强任利辛县长的具体起始时间和前任县长是谁",
+      "why_it_matters": "确定任期起点和替换链条",
+      "suggested_queries": ["利辛县 前任县长", "利辛县长 卸任"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

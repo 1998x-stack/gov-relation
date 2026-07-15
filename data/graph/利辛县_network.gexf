@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>China Gov Network Research Agent</creator>
+    <description>利辛县 (Lixin County, Bozhou, Anhui) — Leadership Network Graph</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="lixin_zhang_jiye" label="张吉业">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="利辛县委书记"/>
+          <attvalue for="2" value="中共利辛县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="lixin_wan_zhongqiang" label="万中强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="利辛县委副书记、县长"/>
+          <attvalue for="2" value="利辛县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="lixin_npc_chair" label="待核实（人大常委会主任）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="利辛县人大常委会主任"/>
+          <attvalue for="2" value="利辛县人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="lixin_cppcc_chair" label="待核实（政协主席）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="利辛县政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议利辛县委员会"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="org_lixin_cpc" label="中共利辛县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_lixin_gov" label="利辛县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_lixin_npc" label="利辛县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_lixin_cppcc" label="中国人民政治协商会议利辛县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_lixin_discipline" label="中共利辛县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_lixin_gov_general" label="利辛县人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="lixin_zhang_jiye" target="org_lixin_cpc" label="利辛县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="利辛县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="lixin_wan_zhongqiang" target="org_lixin_gov" label="利辛县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="利辛县县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="lixin_npc_chair" target="org_lixin_npc" label="利辛县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待核实"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="lixin_cppcc_chair" target="org_lixin_cppcc" label="利辛县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待核实"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="lixin_zhang_jiye" target="lixin_wan_zhongqiang" label="colleague" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委书记与县长搭档（党政正职关系）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="lixin_zhang_jiye" target="lixin_npc_chair" label="colleague" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委书记与人大常委会主任（县四套班子关系）"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="lixin_wan_zhongqiang" target="lixin_cppcc_chair" label="colleague" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县长与政协主席（县四套班子关系）"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
