@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>潜山市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="rank" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王国林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共潜山市委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="张健">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、代市长"/>
+          <attvalue for="2" value="潜山市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="潘良能">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原市委副书记、市长（前任）"/>
+          <attvalue for="2" value="潜山市人民政府（原）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="张吉全">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委（市委常委会会议组成人员）"/>
+          <attvalue for="2" value="中共潜山市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p5" label="涂高生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委（市委常委会会议组成人员）"/>
+          <attvalue for="2" value="中共潜山市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p6" label="汪沛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共潜山市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p7" label="韩亮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委（市领导）"/>
+          <attvalue for="2" value="中共潜山市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p8" label="鲍瑜斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导"/>
+          <attvalue for="2" value="潜山市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="陈玮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导"/>
+          <attvalue for="2" value="潜山市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共潜山市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="潜山市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共潜山市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="潜山市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="潜山市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="潜山市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="潜山市委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="潜山市委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="潜山市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中国人民政治协商会议潜山市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县级市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持市委全面工作。此前曾任潜山市市长，后升任市委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府党组书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月任代市长，主持市政府全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="市委副书记（原）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="原潜山市长，2025年12月仍在任，2026年7月已由张健接替"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o2" label="市长（原）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="原潜山市市长，多次带队外出招商"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委会会议组成人员"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委会会议组成人员"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同市委书记调研"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p7" target="o1" label="市委常委/市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同调研，具体职务不详"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p8" target="o1" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同调研会见，具体职务不详"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p9" target="o2" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同原市长外出招商，具体职务不详"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p1" target="p2" label="市委书记和代市长，市委市政府双核心搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和代市长，市委市政府双核心搭档"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1" target="p3" label="王国林接替前任或与潘良能先后任市长；王国林升任书记后潘良能接任市长，后张健接替潘良能" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王国林接替前任或与潘良能先后任市长；王国林升任书记后潘良能接任市长，后张健接替潘良能"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="p3" label="张健接替潘良能任潜山市代市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张健接替潘良能任潜山市代市长"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p4" label="市委书记和市委常委张吉全，市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委张吉全，市委常委会共事"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p5" label="市委书记和市委常委涂高生，市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委涂高生，市委常委会共事"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p6" label="市委书记和市委常委汪沛，汪沛多次陪同调研" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市委常委汪沛，汪沛多次陪同调研"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p7" label="市委书记和市领导韩亮，韩亮多次陪同调研" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市领导韩亮，韩亮多次陪同调研"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p8" label="市委书记和市领导鲍瑜斌，鲍瑜斌多次陪同调研会见" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记和市领导鲍瑜斌，鲍瑜斌多次陪同调研会见"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p2" target="p4" label="代市长和市委常委张吉全，市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="代市长和市委常委张吉全，市委常委会共事"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p2" target="p5" label="代市长和市委常委涂高生，市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="代市长和市委常委涂高生，市委常委会共事"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p2" target="p6" label="代市长和市委常委汪沛，市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="代市长和市委常委汪沛，市委常委会共事"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p3" target="p6" label="原市长潘良能和市委常委汪沛，曾在市委/市政府共事" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="原市长潘良能和市委常委汪沛，曾在市委/市政府共事"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="-2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p3" target="p9" label="原市长潘良能和市领导陈玮，陈玮2025年12月陪同潘良能外出招商" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="原市长潘良能和市领导陈玮，陈玮2025年12月陪同潘良能外出招商"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p4" target="p5" label="市委常委张吉全和涂高生，同为市委常委会会议组成人员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委张吉全和涂高生，同为市委常委会会议组成人员"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p4" target="p6" label="市委常委张吉全和汪沛，同为市委常委会会议组成人员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委张吉全和汪沛，同为市委常委会会议组成人员"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p5" target="p6" label="市委常委涂高生和汪沛，同为市委常委会会议组成人员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委涂高生和汪沛，同为市委常委会会议组成人员"/>
+          <attvalue for="2" value="strong"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p7" target="p8" label="韩亮和鲍瑜斌，多次陪同市委书记调研" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="韩亮和鲍瑜斌，多次陪同市委书记调研"/>
+          <attvalue for="2" value="medium"/>
+          <attvalue for="3" value="2026-"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
