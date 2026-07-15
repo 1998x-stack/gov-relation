@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "淮北市",
+    "region": "相山区",
+    "job": "区长",
+    "task_id": "anhui_相山区",
+    "time_focus": "2025-2026"
+  },
+  "identity": {
+    "person_id": "anhui_huaibei_xiangshan_jiangpeng",
+    "name": "蒋鹏",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "蒋鹏_",
+      "name_birthplace": "蒋鹏_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "相山区委副书记、区长",
+    "current_org": "相山区人民政府",
+    "administrative_rank": "正县级",
+    "as_of": "2026-06-27",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "蒋鹏的完整履历未找到独立公开来源。仅从相山区政府领导之窗和百度百科确认其现任相山区委副书记、区长。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_xsqzhengfu",
+      "name": "相山区人民政府",
+      "role": "区长",
+      "period": "至今"
+    },
+    {
+      "org_id": "org_xsquwei",
+      "name": "中共相山区委员会",
+      "role": "区委副书记",
+      "period": "至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "池圣洲",
+      "person_id": "anhui_huaibei_xiangshan_chishengzhou_197508",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "池圣洲与蒋鹏分别为相山区委书记和区长，党政主官关系",
+      "overlap_org": "中共相山区委员会/相山区人民政府",
+      "overlap_period": "2025年至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张利",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "蒋鹏接替张利任相山区区长（推测，张利2022年1月当选）",
+      "overlap_org": "相山区人民政府",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "李清平",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "区长与人大常委会主任在同一区级领导班子",
+      "overlap_org": "相山区",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "赵德华",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "区长与政协主席在同一区级领导班子",
+      "overlap_org": "相山区",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历不完整，无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未见蒋鹏相关的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "相山区_百度百科",
+      "url": "https://baike.baidu.com/item/%E7%9B%B8%E5%B1%B1%E5%8C%BA",
+      "publisher": "百度百科",
+      "published_at": "2026-06-27",
+      "accessed_at": "2026-07-15",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "Baidu Baike page for 相山区; leadership table confirms 蒋鹏 as 区委副书记、区长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "蒋鹏的出生年月、籍贯、教育背景和完整工作经历均未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "蒋鹏（相山区区长）的出生年月、籍贯、教育背景",
+      "why_it_matters": "基本信息缺失，影响身份识别和人物JSON完整度",
+      "suggested_queries": ["蒋鹏 淮北 简历", "蒋鹏 相山区 区长 出生", "蒋鹏 淮北 组织部 任前公示"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "蒋鹏的完整工作履历",
+      "why_it_matters": "无法分析其职业路径和专业背景",
+      "suggested_queries": ["蒋鹏 淮北 工作经历", "蒋鹏 相山区 任职经历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "蒋鹏何时接替张利担任相山区区长",
+      "why_it_matters": "精确的前后任时间线对关系网络分析至关重要",
+      "suggested_queries": ["蒋鹏 任相山区区长 时间", "张利 不再担任 相山区区长"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "蒋鹏此前的任职经历",
+      "why_it_matters": "了解其之前是否在淮北其他区县或市直部门工作",
+      "suggested_queries": ["蒋鹏 淮北市 任职"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
