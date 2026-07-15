@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "上饶市",
+    "region": "玉山县",
+    "job": "原县委书记",
+    "task_id": "jiangxi_玉山县",
+    "time_focus": "2020-2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_shangrao_yushan_zheng_guoliang",
+    "name": "郑国良",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "郑国良_",
+      "name_birthplace": "郑国良_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "前任玉山县委书记（已离任）",
+    "current_org": "（已离任）",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "~2020",
+      "end": "~2026-03",
+      "org": "中共玉山县委员会",
+      "title": "玉山县委书记",
+      "level": "正处级",
+      "location": "江西省上饶市玉山县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "前任玉山县委书记。在玉山县政府网站旧版领导之窗中被标注为县委书记。约2026年初离任，由余洪雷接任。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到郑国良2020年之前的任职履历及其离任后的去向。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中共玉山县委员会",
+      "org_type": "党委",
+      "role": "原县委书记",
+      "period": "~2020~2026-03"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "余洪雷",
+      "person_id": "jiangxi_shangrao_yushan_yu_honglei",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "郑国良（原县委书记）→ 余洪雷（接任县委书记）。余洪雷在此前的县长任期内与郑国良为党政搭档。",
+      "overlap_org": "玉山县",
+      "overlap_period": "~2021-~2026-03",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足，无法评估。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月15日，公开检索未发现郑国良受到纪律处分、审计问题或负面媒体报道",
+      "date": "2026-07-15",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "玉山县政府门户网站 - 领导之窗（已注释历史片段）",
+      "url": "https://www.zgys.gov.cn",
+      "publisher": "玉山县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "网站源码中已注释的旧版领导之窗HTML片段显示县委书记为郑国良、县长为余洪雷"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "郑国良的出生信息、教育背景、完整履职经历以及离任后去向均未找到公开来源"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "郑国良的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "基本身份信息完全缺失",
+      "suggested_queries": ["郑国良 玉山 县委书记 简历"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "郑国良离任后去向如何？是否已调任其他职务？",
+      "why_it_matters": "了解前任领导的去向有助于评估上饶市政坛动态",
+      "suggested_queries": ["郑国良 调任", "郑国良 上饶"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
