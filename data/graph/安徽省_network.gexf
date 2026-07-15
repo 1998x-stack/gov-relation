@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>OpenCode Research Agent</creator>
+    <description>安徽省领导关系网络 — 省委书记梁言顺、省长王清宪</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="level" type="string"/>
+      <attribute id="2" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="label" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="梁言顺">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="省部级"/>
+          <attvalue for="2" value="安徽省委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王清宪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="省部级"/>
+          <attvalue for="2" value="安徽省省长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中国共产党安徽省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="安徽省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中国共产党宁夏回族自治区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共中央党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共甘肃省委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共甘肃省委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中央和国家机关工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共中央宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="山西省政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="晋城市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="地市"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="运城市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="地市"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共吕梁市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="地市"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共山西省委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共山东省委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="中共青岛市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="副省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="黑龙江日报社">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="省"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="人民日报社">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o4" label="中央党校校务委员会委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中央党校校务委员会委员"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o5" label="甘肃省委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o6" label="甘肃省委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o7" label="中央和国家机关工委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中央和国家机关工委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o8" label="中央宣传部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中央宣传部副部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o7" label="中央和国家机关工委分管日常工作的副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中央和国家机关工委分管日常工作的副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="o3" label="宁夏回族自治区党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="宁夏回族自治区党委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="o1" label="安徽省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安徽省委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="o16" label="黑龙江日报社助理记者" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="黑龙江日报社助理记者"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="o17" label="人民日报经济部编辑/主任记者" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="人民日报经济部编辑/主任记者"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p2" target="o9" label="山西省政府副秘书长/研究室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="山西省政府副秘书长/研究室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o10" label="晋城市代市长/市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="晋城市代市长/市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="o11" label="运城市代市长/市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="运城市代市长/市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="o12" label="吕梁市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="吕梁市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p2" target="o13" label="山西省委宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="山西省委宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p2" target="o14" label="山东省委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="山东省委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p2" target="o15" label="青岛市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="青岛市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p2" target="o1" label="安徽省委副书记、省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安徽省委副书记、省长"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p2" label="省委书记与省长党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="working_relationship"/>
+          <attvalue for="1" value="省委书记与省长党政搭档"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
