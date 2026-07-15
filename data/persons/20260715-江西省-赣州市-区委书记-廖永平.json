@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "赣县区",
+    "job": "区委书记",
+    "task_id": "jiangxi_赣县区",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_ganzhou_liaoyongping_1971",
+    "name": "廖永平",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1971-07",
+    "birthplace": "江西宁都",
+    "native_place": "江西宁都",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "大学学历/MPA",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "1993-12",
+    "work_start": "1992-08",
+    "dedupe_keys": {
+      "name_birth": "廖永平_1971",
+      "name_birthplace": "廖永平_宁都",
+      "official_profile_url": "https://www.ganxian.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "赣县区委书记",
+    "current_org": "中共赣县区委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "廖永平1971年7月生，1992年8月参加工作，1993年12月入党。2020年起任赣县区委书记。2016-2020年期间的具体职务暂缺。公开资料显示其从事地方党政工作多年，但完整履历需进一步查证。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2020",
+      "end": "present",
+      "org": "中共赣县区委员会",
+      "title": "赣县区委书记",
+      "level": "正处级",
+      "location": "江西赣州赣县",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "现任赣县区委书记。赣县区为原赣县，2016年撤县设区。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "O001", "name": "中共赣县区委员会", "role": "区委书记", "period": "2020至今"},
+    {"org_id": "O002", "name": "中共宁都县委", "role": "未知（籍贯宁都）", "period": ""}
+  ],
+  "relationships": [
+    {
+      "person": "刘文彦",
+      "person_id": "jiangxi_ganzhou_liuwenyan_1970",
+      "relationship_type": "党政搭档",
+      "strength": "strong",
+      "evidence": "廖永平（区委书记）与刘文彦（区长）为赣县区党政正职搭档，同为宁都人",
+      "overlap_org": "赣县区",
+      "overlap_period": "2021至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "胡晓平",
+      "person_id": "jiangxi_ganzhou_huxiaoping_1968",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "胡晓平为前任赣县区委书记（2016-2020），廖永平接任",
+      "overlap_org": "中共赣县区委员会",
+      "overlap_period": "2020交接",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "李赣兴",
+      "person_id": "jiangxi_ganzhou_liganxing_1974",
+      "relationship_type": "同乡关联",
+      "strength": "weak",
+      "evidence": "李赣兴出生于原赣县（今赣县区），现任南康区长",
+      "overlap_org": "赣县/南康",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["地方党政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party"],
+    "geographic_pattern": ["赣州地区"],
+    "promotion_velocity": {
+      "summary": "履历不完整，无法准确评估晋升速度。2020年任赣县区委书记，按正处级算已是较为资深的区县一把手。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "暂无足够公开资料判断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 5,
+    "cross_county_connections": 1,
+    "key_relationships": ["刘文彦（党政搭档）", "胡晓平（前任书记）"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分、监察调查、负面舆情等风险信号（搜索范围：公开报道，2026-07-15）",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_ganzhou_remaining_data.py - 赣县区数据",
+      "url": "https://www.ganxian.gov.cn (WAF-blocked)",
+      "publisher": "赣县区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "数据来自之前的研究汇总，原始来源为ganxian.gov.cn官网"
+    },
+    {
+      "id": "S002",
+      "title": "胡晓平相关公开报道",
+      "url": "",
+      "publisher": "公开媒体报道",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "胡晓平任赣州市人大常委会副主任"
+    },
+    {
+      "id": "S003",
+      "title": "build_南康区_data.py",
+      "url": "https://www.nkjx.gov.cn",
+      "publisher": "南康区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "李赣兴籍贯信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2020年之前的完整履历——包括2016-2020年职位、教育详细背景、早期仕途"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "廖永平2020年以前的完整履历（曾任职务及时间线）",
+      "why_it_matters": "目前仅知道他是宁都人，1971年生，但2016-2020年期间的具体职务完全缺失",
+      "suggested_queries": ["廖永平 简历", "廖永平 赣州 任职", "廖永平 曾任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "廖永平的教育背景（大学/专业）",
+      "why_it_matters": "仅有'大学学历/MPA'信息，无具体院校和专业",
+      "suggested_queries": ["廖永平 教育背景", "廖永平 毕业院校"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "廖永平是否仍为现任区委书记（截至2026年7月）",
+      "why_it_matters": "数据来源显示2020年任职，需核实至今是否有变动",
+      "suggested_queries": ["赣县区 区委书记 2026", "廖永平 2026"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}

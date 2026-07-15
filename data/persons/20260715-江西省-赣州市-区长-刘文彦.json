@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "江西省",
+    "city": "赣州市",
+    "region": "赣县区",
+    "job": "区长",
+    "task_id": "jiangxi_赣县区",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "jiangxi_ganzhou_liuwenyan_1970",
+    "name": "刘文彦",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1970-10",
+    "birthplace": "江西宁都",
+    "native_place": "江西宁都",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "研究生学历",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘文彦_1970",
+      "name_birthplace": "刘文彦_宁都",
+      "official_profile_url": "https://www.ganxian.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "赣县区委副书记、区长",
+    "current_org": "赣县区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "刘文彦1970年10月生，宁都人，研究生学历。2021年起任赣县区委副书记、区长。此前完整履历公开信息有限。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "赣县区人民政府",
+      "title": "赣县区委副书记、区长",
+      "level": "正处级",
+      "location": "江西赣州赣县",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "现任赣县区长，2021年到任",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "O001", "name": "赣县区人民政府", "role": "区长", "period": "2021至今"},
+    {"org_id": "O002", "name": "中共赣县区委员会", "role": "副书记", "period": "2021至今"}
+  ],
+  "relationships": [
+    {
+      "person": "廖永平",
+      "person_id": "jiangxi_ganzhou_liaoyongping_1971",
+      "relationship_type": "党政搭档",
+      "strength": "strong",
+      "evidence": "刘文彦（区长）与廖永平（区委书记）为赣县区党政正职搭档，同为宁都人",
+      "overlap_org": "赣县区",
+      "overlap_period": "2021至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张景霖",
+      "person_id": "jiangxi_ganzhou_zhangjinglin_1967",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "张景霖为前任赣县县长/区长（2011-2021），刘文彦接任",
+      "overlap_org": "赣县区人民政府",
+      "overlap_period": "2021交接",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "李赣兴",
+      "person_id": "jiangxi_ganzhou_liganxing_1974",
+      "relationship_type": "跨区关联",
+      "strength": "weak",
+      "evidence": "李赣兴出生于原赣县，现任南康区长，与刘文彦同属赣州市县区政府主官",
+      "overlap_org": "赣州市",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["地方行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["赣州地区"],
+    "promotion_velocity": {
+      "summary": "履历不完整，无法准确评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "暂无足够公开资料判断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 5,
+    "cross_county_connections": 1,
+    "key_relationships": ["廖永平（党政搭档）", "张景霖（前任区长）"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分、监察调查、负面舆情等风险信号（搜索范围：公开报道，2026-07-15）",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_ganzhou_remaining_data.py - 赣县区数据",
+      "url": "https://www.ganxian.gov.cn (WAF-blocked)",
+      "publisher": "赣县区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "数据来自之前的研究汇总，原始来源为ganxian.gov.cn官网"
+    },
+    {
+      "id": "S002",
+      "title": "张景霖相关公开报道",
+      "url": "",
+      "publisher": "公开媒体报道",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "张景霖2021年任赣州市政协副主席"
+    },
+    {
+      "id": "S003",
+      "title": "build_南康区_data.py",
+      "url": "https://www.nkjx.gov.cn",
+      "publisher": "南康区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "李赣兴籍贯信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2021年之前的完整履历——教育具体背景、此前任职经历完全缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘文彦2021年以前的完整履历",
+      "why_it_matters": "仅知道他的当前职位和出生信息，此前整个职业生涯几乎空白",
+      "suggested_queries": ["刘文彦 简历", "刘文彦 赣州 任职经历", "刘文彦 曾任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "刘文彦的教育背景（院校/专业）",
+      "why_it_matters": "仅有'研究生学历'，无具体信息",
+      "suggested_queries": ["刘文彦 毕业院校", "刘文彦 研究生"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "刘文彦是否仍为现任区长（截至2026年7月）",
+      "why_it_matters": "数据来源显示2021年任职，需核实",
+      "suggested_queries": ["赣县区 区长 2026", "刘文彦 2026"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
