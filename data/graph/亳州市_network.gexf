@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>亳州市领导班子工作关系网络 — 含市委、市政府、市纪委、市人大、市政协领导及四县区负责人</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="type" type="string"/>
+      <attribute id="role" title="role" type="string"/>
+      <attribute id="source" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="type" type="string"/>
+      <attribute id="context" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="bozhou_du_yanan" label="杜延安">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委书记"/>
+          <attvalue for="source" value="综合公开资料（百度百科等）"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_qin_fengyu" label="秦凤玉">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委副书记、市长"/>
+          <attvalue for="source" value="综合公开资料（百度百科等）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_wang_yiguang" label="汪一光">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市人大常委会主任（前市委书记）"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_tang_zhongjun" label="汤中军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市政协主席"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="160" g="80" b="160" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_zhang_zhihui" label="张志宏">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委副书记"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_li_guoqing" label="李国庆">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、常务副市长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_ji_meng" label="纪萌">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_huang_weiwu" label="黄为武">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、组织部部长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_ji_chunlei" label="吉春雷">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、宣传部部长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_liu_zhongbiao" label="刘中彪">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市委常委、政法委书记"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_zhou_zi" label="周霄">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委书记"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_song_baoyu" label="宋宝玉">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="谯城区委副书记、区长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_feng_hao" label="冯浩">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="涡阳县委书记"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_li_feng" label="李丰">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="涡阳县委副书记、县长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_kong_xiangyong" label="孔祥永">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="蒙城县委书记"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_yu_qun" label="于群">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="蒙城县委副书记、县长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_zhang_jiye" label="张吉业">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="利辛县委书记"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="bozhou_wan_zhongqiang" label="万中强">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="利辛县委副书记、县长"/>
+          <attvalue for="source" value="综合公开资料"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:position x="0" y="0" z="0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="org_cpc_bozhou" label="中共亳州市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_bozhou" label="亳州市人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_npc_bozhou" label="亳州市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="npc"/>
+        </attvalues>
+        <viz:color r="60" g="140" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cppcc_bozhou" label="中国人民政治协商会议亳州市委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="cppcc"/>
+        </attvalues>
+        <viz:color r="140" g="60" b="140" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_discipline_bozhou" label="中共亳州市纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="discipline"/>
+        </attvalues>
+        <viz:color r="200" g="120" b="30" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_qiaocheng" label="中共亳州市谯城区委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_qiaocheng" label="谯城区人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_guoyang" label="中共涡阳县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_guoyang" label="涡阳县人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_mengcheng" label="中共蒙城县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_mengcheng" label="蒙城县人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_cpc_lixin" label="中共利辛县委员会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="party_committee"/>
+        </attvalues>
+        <viz:color r="180" g="50" b="50" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_gov_lixin" label="利辛县人民政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="government"/>
+        </attvalues>
+        <viz:color r="50" g="80" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="bozhou_du_yanan" target="org_cpc_bozhou" label="市委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委书记 (2021-07-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="bozhou_du_yanan" target="org_gov_bozhou" label="市长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市长（此前曾任） (2017-01-2021-07)"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="bozhou_qin_fengyu" target="org_gov_bozhou" label="市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市长 (2023-08-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="bozhou_qin_fengyu" target="org_cpc_bozhou" label="市委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委副书记 (2023-06-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="bozhou_qin_fengyu" target="org_gov_bozhou" label="常务副市长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="常务副市长（此前曾任） (unknown-2023-06)"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="bozhou_qin_fengyu" target="org_cpc_bozhou" label="市委常委、组织部部长（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委、组织部部长（此前曾任） (unknown-unknown)"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="bozhou_wang_yiguang" target="org_npc_bozhou" label="市人大常委会主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市人大常委会主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="bozhou_wang_yiguang" target="org_cpc_bozhou" label="市委书记（此前曾任）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委书记（此前曾任） (2016-2021-07)"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="bozhou_tang_zhongjun" target="org_cppcc_bozhou" label="市政协主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市政协主席 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="bozhou_zhang_zhihui" target="org_cpc_bozhou" label="市委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委副书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="bozhou_li_guoqing" target="org_cpc_bozhou" label="市委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="bozhou_li_guoqing" target="org_gov_bozhou" label="常务副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="常务副市长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="bozhou_ji_meng" target="org_cpc_bozhou" label="市委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="bozhou_ji_meng" target="org_discipline_bozhou" label="市纪委书记、市监委主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市纪委书记、市监委主任 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="bozhou_huang_weiwu" target="org_cpc_bozhou" label="市委常委、组织部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委、组织部部长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="bozhou_ji_chunlei" target="org_cpc_bozhou" label="市委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委、宣传部部长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="bozhou_liu_zhongbiao" target="org_cpc_bozhou" label="市委常委、政法委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="市委常委、政法委书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="bozhou_zhou_zi" target="org_cpc_qiaocheng" label="谯城区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区委书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="bozhou_song_baoyu" target="org_gov_qiaocheng" label="谯城区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="谯城区长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="bozhou_feng_hao" target="org_cpc_guoyang" label="涡阳县委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="涡阳县委书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="bozhou_li_feng" target="org_gov_guoyang" label="涡阳县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="涡阳县长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="bozhou_kong_xiangyong" target="org_cpc_mengcheng" label="蒙城县委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="蒙城县委书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="bozhou_yu_qun" target="org_gov_mengcheng" label="蒙城县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="蒙城县长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="bozhou_zhang_jiye" target="org_cpc_lixin" label="利辛县委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="利辛县委书记 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="bozhou_wan_zhongqiang" target="org_gov_lixin" label="利辛县长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="利辛县长 (未知-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="bozhou_du_yanan" target="bozhou_qin_fengyu" label="市委书记与市长搭档（党政正职关系）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与市长搭档（党政正职关系）"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="bozhou_du_yanan" target="bozhou_zhang_zhihui" label="市委书记与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="bozhou_du_yanan" target="bozhou_wang_yiguang" label="杜延安接替汪一光任市委书记，汪一光转任人大主任">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="杜延安接替汪一光任市委书记，汪一光转任人大主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="bozhou_qin_fengyu" target="bozhou_li_guoqing" label="市长与常务副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市长与常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="bozhou_du_yanan" target="bozhou_li_guoqing" label="市委书记与常务副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="bozhou_du_yanan" target="bozhou_ji_meng" label="市委书记与纪委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="bozhou_du_yanan" target="bozhou_huang_weiwu" label="市委书记与组织部部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="bozhou_du_yanan" target="bozhou_ji_chunlei" label="市委书记与宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="bozhou_du_yanan" target="bozhou_liu_zhongbiao" label="市委书记与政法委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="bozhou_qin_fengyu" target="bozhou_zhang_zhihui" label="市长与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市长与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="bozhou_qin_fengyu" target="bozhou_tang_zhongjun" label="市长与政协主席">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市长与政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="bozhou_qin_fengyu" target="bozhou_huang_weiwu" label="秦凤玉此前曾任组织部长，黄为武接任">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="秦凤玉此前曾任组织部长，黄为武接任"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="bozhou_du_yanan" target="bozhou_zhou_zi" label="市委书记与谯城区委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与谯城区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="bozhou_du_yanan" target="bozhou_feng_hao" label="市委书记与涡阳县委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与涡阳县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="bozhou_du_yanan" target="bozhou_kong_xiangyong" label="市委书记与蒙城县委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与蒙城县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="bozhou_du_yanan" target="bozhou_zhang_jiye" label="市委书记与利辛县委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="市委书记与利辛县委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
