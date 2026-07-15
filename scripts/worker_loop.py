@@ -78,8 +78,9 @@ def main() -> int:
     parser.add_argument("--max-tasks", type=int, default=0, help="0 means loop until no task remains")
     parser.add_argument("--execute", action="store_true", help="run opencode after each claim")
     parser.add_argument("--opencode-bin", default="opencode")
-    parser.add_argument("--opencode-agent", default="build", help="OpenCode --agent value")
+    parser.add_argument("--opencode-agent", default="general", help="OpenCode --agent value")
     parser.add_argument("--opencode-model", default="agent-loop/standard", help="OpenCode provider/model value")
+    parser.add_argument("--opencode-auto", action="store_true", help="pass --auto to OpenCode")
     parser.add_argument("--auto-done", action="store_true", help="mark done if opencode exits 0; use only if the prompt performs validation")
     parser.add_argument("--git-commit", action="store_true", help="commit repository changes after a task is marked done")
     parser.add_argument("--sleep-seconds", type=int, default=30, help="sleep between tasks when looping")
@@ -109,6 +110,8 @@ def main() -> int:
         log(f"START opencode task={task_id}")
         prompt_text = Path(prompt_path).read_text(encoding="utf-8")
         command = [args.opencode_bin, "run", "--agent", args.opencode_agent, "--model", args.opencode_model]
+        if args.opencode_auto:
+            command.append("--auto")
         command.append(prompt_text)
         result = subprocess.run(command, check=False)
         log(f"END opencode task={task_id} exit={result.returncode}")

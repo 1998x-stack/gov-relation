@@ -8,10 +8,11 @@ WORKER_COUNT="${WORKER_COUNT:-4}"
 MAX_TASKS="${MAX_TASKS:-0}"
 SLEEP_SECONDS="${SLEEP_SECONDS:-30}"
 OPENCODE_BIN="${OPENCODE_BIN:-opencode}"
-OPENCODE_AGENT="${OPENCODE_AGENT:-build}"
+OPENCODE_AGENT="${OPENCODE_AGENT:-general}"
 LOG_DIR="${LOG_DIR:-logs/workers}"
 AUTO_DONE="${AUTO_DONE:-1}"
 GIT_COMMIT="${GIT_COMMIT:-1}"
+OPENCODE_AUTO="${OPENCODE_AUTO:-1}"
 
 mkdir -p "$LOG_DIR" logs/dispatch data/tmp
 
@@ -45,10 +46,13 @@ start_worker() {
   if [[ "$GIT_COMMIT" == "1" ]]; then
     args+=(--git-commit)
   fi
+  if [[ "$OPENCODE_AUTO" == "1" ]]; then
+    args+=(--opencode-auto)
+  fi
 
   echo "Starting ${worker_id} intent=${model_intent} agent=${OPENCODE_AGENT} model=${opencode_model} log=${log_file}"
   {
-    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] START ${worker_id} intent=${model_intent} agent=${OPENCODE_AGENT} model=${opencode_model} max_tasks=${MAX_TASKS} auto_done=${AUTO_DONE} git_commit=${GIT_COMMIT} opencode=${OPENCODE_BIN}"
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] START ${worker_id} intent=${model_intent} agent=${OPENCODE_AGENT} model=${opencode_model} max_tasks=${MAX_TASKS} auto_done=${AUTO_DONE} git_commit=${GIT_COMMIT} opencode_auto=${OPENCODE_AUTO} opencode=${OPENCODE_BIN}"
   } >>"$log_file"
   nohup env PYTHONUNBUFFERED=1 "${args[@]}" >>"$log_file" 2>&1 &
   echo "$!" >"$pid_file"
