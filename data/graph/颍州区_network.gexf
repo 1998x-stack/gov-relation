@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>颍州区（阜阳市）领导班子工作关系网络 — 2026年7月研究数据</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="context" type="string"/>
+      <attribute id="3" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="yingzhou_tong_kun" label="童坤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍州区委书记（一级调研员）"/>
+          <attvalue for="2" value="中共阜阳市颍州区委员会"/>
+          <attvalue for="3" value="1976-10"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingzhou_wang_xu" label="王许">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="颍州区委副书记、区长"/>
+          <attvalue for="2" value="颍州区人民政府"/>
+          <attvalue for="3" value="1982-10"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="yingzhou_duan_xianglin" label="段相霖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原阜阳师范大学党委副书记，已被双开）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1972-11"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="yingzhou_zhang_huajiu" label="张华久">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="阜阳市政协党组副书记、副主席"/>
+          <attvalue for="2" value="阜阳市政协"/>
+          <attvalue for="3" value="1965-10"/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="org_yingzhou_party_committee" label="中共阜阳市颍州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共阜阳市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingzhou_government" label="颍州区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingzhou_npc" label="阜阳市颍州区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="阜阳市人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingzhou_cppcc" label="阜阳市颍州区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="阜阳市政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_yingzhou_cdc" label="中共阜阳市颍州区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="中共阜阳市纪委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_government" label="阜阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="安徽省人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_party" label="中共阜阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安徽省委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_data_bureau" label="阜阳市数据资源管理局（市政务服务管理局）">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_post_bureau" label="阜阳市邮政管理局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="安徽省邮政管理局"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_transport_bureau" label="阜阳市交通运输局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_tax_bureau" label="阜阳市地税局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="安徽省地税局"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_economic_committee" label="阜阳市经济和信息化委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_finance_bureau" label="阜阳市财政局（市政府国有资产监督管理委员会）">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_development_zone" label="阜阳经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_cppcc" label="阜阳市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="安徽省政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_linquan_county_gov" label="临泉县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="阜阳市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuyang_normal_university" label="阜阳师范大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="安徽省教育厅"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_maanshan_bowang_party" label="中共马鞍山市博望区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共马鞍山市委"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="yingzhou_tong_kun" target="org_yingzhou_party_committee" label="颍州区委书记（一级调研员）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区委书记（一级调研员）"/>
+          <attvalue for="3" value="2026-03-"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="yingzhou_tong_kun" target="org_yingzhou_government" label="颍州区人民政府区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区人民政府区长"/>
+          <attvalue for="3" value="2025-01-2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="yingzhou_tong_kun" target="org_yingzhou_government" label="颍州区人民政府代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区人民政府代区长"/>
+          <attvalue for="3" value="2024-2025-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="yingzhou_tong_kun" target="org_yingzhou_party_committee" label="颍州区委副书记（正处级）、党校校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区委副书记（正处级）、党校校长"/>
+          <attvalue for="3" value="2024-2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="yingzhou_tong_kun" target="org_fuyang_data_bureau" label="阜阳市数据资源管理局（市政务服务管理局）局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市数据资源管理局（市政务服务管理局）局长"/>
+          <attvalue for="3" value="2022-09-2024-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="阜阳市邮政管理局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市邮政管理局党组书记、局长"/>
+          <attvalue for="3" value="2020-04-2022-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="yingzhou_tong_kun" target="org_fuyang_transport_bureau" label="阜阳市交通运输局党组成员、副局长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市交通运输局党组成员、副局长（兼）"/>
+          <attvalue for="3" value="2020-04-2022"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="阜阳市邮政管理局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市邮政管理局党组书记、局长"/>
+          <attvalue for="3" value="2020-03-2020-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="马鞍山市邮政管理局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="马鞍山市邮政管理局党组书记、局长"/>
+          <attvalue for="3" value="2019-07-2020-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="马鞍山市邮政管理局党组成员、副局长（主持工作）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="马鞍山市邮政管理局党组成员、副局长（主持工作）"/>
+          <attvalue for="3" value="2018-12-2019-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="亳州市邮政管理局党组成员、副局长、纪检组长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="亳州市邮政管理局党组成员、副局长、纪检组长"/>
+          <attvalue for="3" value="2017-06-2018-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="阜阳市邮政管理局党组成员、行业管理科科长、界首邮政管理局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市邮政管理局党组成员、行业管理科科长、界首邮政管理局局长"/>
+          <attvalue for="3" value="2015-09-2017-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="阜阳市邮政管理局党组成员、行业管理科科长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市邮政管理局党组成员、行业管理科科长"/>
+          <attvalue for="3" value="2014-04-2015-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="yingzhou_tong_kun" target="org_fuyang_post_bureau" label="阜阳市邮政管理局行业管理科科长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市邮政管理局行业管理科科长"/>
+          <attvalue for="3" value="2013-04-2014-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="yingzhou_tong_kun" target="org_fuyang_tax_bureau" label="阜阳市地税局信息中心主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市地税局信息中心主任"/>
+          <attvalue for="3" value="2012-03-2013-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="yingzhou_tong_kun" target="org_fuyang_tax_bureau" label="阜阳市地税局信息中心副主任（主持工作）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市地税局信息中心副主任（主持工作）"/>
+          <attvalue for="3" value="2011-01-2012-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="yingzhou_tong_kun" target="org_fuyang_tax_bureau" label="阜阳市地税局信息中心副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市地税局信息中心副主任"/>
+          <attvalue for="3" value="2005-11-2011-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="yingzhou_tong_kun" target="org_fuyang_tax_bureau" label="阜阳市地税局信息中心科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市地税局信息中心科员"/>
+          <attvalue for="3" value="2001-04-2005-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="yingzhou_tong_kun" target="org_fuyang_tax_bureau" label="阜阳市地税局计会科科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市地税局计会科科员"/>
+          <attvalue for="3" value="2000-11-2001-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="yingzhou_tong_kun" target="org_fuyang_tax_bureau" label="阜阳市地税局直属分局科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市地税局直属分局科员"/>
+          <attvalue for="3" value="1999-07-2000-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="yingzhou_wang_xu" target="org_yingzhou_government" label="颍州区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区委副书记、区长"/>
+          <attvalue for="3" value="2026-06-"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="yingzhou_wang_xu" target="org_yingzhou_government" label="颍州区人民政府副区长、代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区人民政府副区长、代区长"/>
+          <attvalue for="3" value="2026-05-2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="yingzhou_wang_xu" target="org_maanshan_bowang_party" label="马鞍山市博望区委副书记（正处级）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="马鞍山市博望区委副书记（正处级）"/>
+          <attvalue for="3" value="-2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="yingzhou_duan_xianglin" target="org_yingzhou_party_committee" label="颍州区委书记（兼阜阳经开区党工委书记、管委会主任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区委书记（兼阜阳经开区党工委书记、管委会主任）"/>
+          <attvalue for="3" value="2022-03-2024-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="yingzhou_duan_xianglin" target="org_fuyang_development_zone" label="阜阳经开区党工委书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳经开区党工委书记、管委会主任"/>
+          <attvalue for="3" value="2022-03-2024-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="yingzhou_duan_xianglin" target="org_fuyang_finance_bureau" label="阜阳市财政局（市政府国资委）局长（主任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市财政局（市政府国资委）局长（主任）"/>
+          <attvalue for="3" value="2019-03-2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="yingzhou_duan_xianglin" target="org_fuyang_economic_committee" label="阜阳市经济和信息化委员会副主任、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市经济和信息化委员会副主任、党组成员"/>
+          <attvalue for="3" value="2011-05-2014-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="yingzhou_duan_xianglin" target="org_linquan_county_gov" label="临泉县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="临泉县委常委、常务副县长"/>
+          <attvalue for="3" value="2014-11-2016-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="yingzhou_duan_xianglin" target="org_fuyang_normal_university" label="阜阳师范大学党委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳师范大学党委副书记"/>
+          <attvalue for="3" value="2024-10-2025-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="yingzhou_zhang_huajiu" target="org_yingzhou_party_committee" label="颍州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="颍州区委书记"/>
+          <attvalue for="3" value="-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="yingzhou_zhang_huajiu" target="org_fuyang_cppcc" label="阜阳市政协党组副书记、副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+          <attvalue for="2" value="阜阳市政协党组副书记、副主席"/>
+          <attvalue for="3" value="-"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="yingzhou_tong_kun" target="yingzhou_wang_xu" label="区委书记与区长（党政正职搭档）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="区委书记与区长（党政正职搭档）"/>
+          <attvalue for="3" value="2026-06至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="yingzhou_tong_kun" target="yingzhou_duan_xianglin" label="童坤接替段相霖担任颍州区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="童坤接替段相霖担任颍州区委书记"/>
+          <attvalue for="3" value="2022-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="yingzhou_duan_xianglin" target="yingzhou_zhang_huajiu" label="段相霖接替张华久担任颍州区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="段相霖接替张华久担任颍州区委书记"/>
+          <attvalue for="3" value="~2021-2022"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="yingzhou_tong_kun" target="yingzhou_wang_xu" label="童坤升任区委书记后，王许接任区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="童坤升任区委书记后，王许接任区长"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="yingzhou_duan_xianglin" target="yingzhou_tong_kun" label="段相霖担任区委书记期间，童坤曾任区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="段相霖担任区委书记期间，童坤曾任区委副书记、区长"/>
+          <attvalue for="3" value="2024-2024.10"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
