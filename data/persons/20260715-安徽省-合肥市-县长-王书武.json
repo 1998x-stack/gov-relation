@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "合肥市",
+    "region": "肥东县",
+    "job": "县长",
+    "task_id": "anhui_肥东县",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "feidong_wang_shuwu",
+    "name": "王书武",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1975-08",
+    "birthplace": "安徽肥东",
+    "native_place": "安徽肥东",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "在职研究生",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "part_time",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1997",
+    "dedupe_keys": {
+      "name_birth": "王书武_1975-08",
+      "name_birthplace": "王书武_安徽肥东",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "肥东县长",
+    "current_org": "肥东县人民政府",
+    "administrative_rank": "正处",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "1997年参加工作至2021年任肥东县长之间约24年的公开履历未获取到完整信息。已知出生于1975年8月，安徽肥东人，在职研究生学历，1997年参加工作，中共党员。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "肥东县人民政府",
+      "title": "肥东县长",
+      "level": "正处",
+      "location": "肥东县",
+      "system": "government",
+      "rank": "正处",
+      "is_key_promotion": true,
+      "notes": "2021年任肥东县长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_feidong_county_gov",
+      "name": "肥东县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "relationship": "current_leader"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "姚飞",
+      "person_id": "feidong_yao_fei",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "党政同僚：肥东县委书记与县长搭档，自2021年起共事至今",
+      "overlap_org": "肥东县",
+      "overlap_period": "2021-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-",
+      "domain": "economic_development",
+      "achievement_or_event": "主持肥东县政府全面工作，负责县域经济社会发展管理",
+      "role_in_event": "县长",
+      "measurable_outcome": "",
+      "location": "肥东县",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方行政", "县域治理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["政府"],
+    "geographic_pattern": ["安徽肥东"],
+    "promotion_velocity": {
+      "summary": "本地成长型县长，肥东县本土出生，长期在本地工作后晋升",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，尚无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "superior_connections": ["姚飞（肥东县委书记）"],
+    "peer_count": 0,
+    "direct_reports": []
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现王书武本人相关的纪律处分、审计问题或负面舆情报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_合肥市_data.py - 合肥市领导班子工作关系网络",
+      "url": "build_合肥市_data.py",
+      "publisher": "仓库已有数据",
+      "published_at": "",
+      "accessed_at": "2026-07-15",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "基于公开报道汇编的合肥市级领导班子数据，含肥东县基础信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "1997-2021年间约24年的早期职业生涯完全缺失，包括教育背景、历任职务等关键信息"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王书武1997年参加工作后的早期履历是什么？",
+      "why_it_matters": "完整的职业生涯轨迹是分析其晋升模式和人脉网络的基础",
+      "suggested_queries": ["王书武 简历 肥东县", "王书武 任前公示"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "王书武在任肥东县长前曾担任哪些职务？",
+      "why_it_matters": "了解其晋升路径和可能的工作关系网络",
+      "suggested_queries": ["王书武 肥东 任职", "王书武 此前 担任"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "medium",
+      "question": "王书武的教育背景具体细节？在职研究生专业方向？",
+      "why_it_matters": "教育背景帮助判断其专业化方向",
+      "suggested_queries": ["王书武 在职研究生 专业"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
