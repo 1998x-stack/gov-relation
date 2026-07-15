@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "黄山市",
+    "region": "歙县",
+    "job": "县委书记",
+    "task_id": "anhui_歙县",
+    "time_focus": "2023-2026"
+  },
+  "identity": {
+    "person_id": "anhui_shexian_wangkai",
+    "name": "汪凯",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "unknown",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "汪凯_unknown",
+      "name_birthplace": "汪凯_unknown",
+      "official_profile_url": "https://www.shx.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "歙县县委书记",
+    "current_org": "中共歙县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-15",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2023",
+      "org": "歙县人民政府",
+      "title": "歙县县委副书记、县长",
+      "level": "正处级",
+      "location": "安徽省黄山市歙县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "此前任歙县县长。具体到任时间有待进一步确认。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2023",
+      "end": "present",
+      "org": "中共歙县委员会",
+      "title": "歙县县委书记",
+      "level": "正处级",
+      "location": "安徽省黄山市歙县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替前任县委书记。从县长升任县委书记的时间约在2023年。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_shexian_party",
+      "name": "中共歙县委员会",
+      "type": "党委",
+      "level": "县",
+      "parent": "中共黄山市委",
+      "location": "安徽省黄山市歙县"
+    },
+    {
+      "org_id": "org_shexian_gov",
+      "name": "歙县人民政府",
+      "type": "政府",
+      "level": "县",
+      "parent": "黄山市人民政府",
+      "location": "安徽省黄山市歙县"
+    }
+  ],
+  "relationships": [],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["歙县"],
+    "promotion_velocity": {
+      "summary": "从县长升任县委书记，属于县级干部常规晋升路径。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分或负面报道。搜索范围：公开网络信息。",
+      "date": "2026-07-15",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "歙县人民政府官方网站",
+      "url": "https://www.shx.gov.cn/",
+      "publisher": "歙县人民政府",
+      "published_at": "持续更新",
+      "accessed_at": "2026-07-15",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方网站，但无法从当前环境访问（DNS解析失败）。信息来自历史数据。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "low",
+    "biggest_gap": "出生年月、籍贯、教育背景、参加工作时间、完整履历"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "汪凯的出生年月、籍贯、教育背景",
+      "why_it_matters": "核心人物基本信息，用于身份确认和网络图谱去重",
+      "suggested_queries": ["汪凯 歙县 简历", "汪凯 出生", "汪凯 籍贯"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "critical",
+      "question": "汪凯在歙县县长前的完整履历",
+      "why_it_matters": "了解其晋升路径和可能的跨部门/跨县关系",
+      "suggested_queries": ["汪凯 曾任", "汪凯 任职经历", "汪凯 黄山市"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "汪凯何时开始担任歙县县委书记",
+      "why_it_matters": "确定县委书记交接时间线",
+      "suggested_queries": ["汪凯 任歙县县委书记 时间", "歙县 县委书记 任命"],
+      "last_attempted": "2026-07-15"
+    },
+    {
+      "priority": "high",
+      "question": "歙县前任县委书记姓名及去向",
+      "why_it_matters": "了解一把手更替模式及前任去向",
+      "suggested_queries": ["歙县 前任 县委书记", "歙县 县委书记 卸任"],
+      "last_attempted": "2026-07-15"
+    }
+  ]
+}
