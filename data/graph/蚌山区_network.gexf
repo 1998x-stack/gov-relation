@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>Gov Relation Research Agent</creator>
+    <description>蚌山区（安徽省蚌埠市）领导关系网络 — 区委书记、区长及领导班子</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王志">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区委书记"/>
+          <attvalue for="2" value="中共蚌埠市蚌山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="张圣辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区委副书记、区长"/>
+          <attvalue for="2" value="蚌埠市蚌山区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p3" label="潘成佳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区委副书记"/>
+          <attvalue for="2" value="中共蚌埠市蚌山区委员会"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p4" label="闫小京">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区领导（常委/副区长级）"/>
+          <attvalue for="2" value="蚌埠市蚌山区"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p5" label="陈光华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区领导（常委/副区长级）"/>
+          <attvalue for="2" value="蚌埠市蚌山区"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p6" label="潘俞伊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区领导（常委/副区长级）"/>
+          <attvalue for="2" value="蚌埠市蚌山区"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p7" label="邵兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区领导（常委/副区长级）"/>
+          <attvalue for="2" value="蚌埠市蚌山区"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p8" label="单桂云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区领导（常委/副区长级）"/>
+          <attvalue for="2" value="蚌埠市蚌山区"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p9" label="谢庆元">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="蚌山区领导"/>
+          <attvalue for="2" value="蚌埠市蚌山区"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共蚌埠市蚌山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="蚌埠市蚌山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="蚌埠市蚌山区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="行政区域"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="蚌山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="以区委书记身份作区第五次党代会报告 (2026-06-23)"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="蚌山区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="以区委副书记、区长身份主持消防专项整治会 (2026-07-14)"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="蚌山区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记兼区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="蚌山区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持'两优一先'表彰大会 (2026-07-02)"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o3" label="区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席区消防专项整治会 (2026-07-14)及多次会议"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o3" label="区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席全区安全生产会 (2026-06-06)"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o3" label="区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席二季度安委会 (2026-07-03)及台风防范会 (2026-07-12)"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p7" target="o3" label="区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席二季度安委会 (2026-07-03)"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p8" target="o3" label="区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席消防专项整治会 (2026-07-14)及台风防范会 (2026-07-12)"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p9" target="o3" label="区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席消防专项整治会 (2026-07-14)"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王志（区委书记）与张圣辉（区长）为蚌山区党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王志（区委书记）与潘成佳（区委副书记）同为蚌山区委领导班子成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张圣辉（区委副书记/区长）与潘成佳（专职副书记）同为蚌山区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张圣辉（区长）与闫小京（区领导）同届在蚌山区工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王志（区委书记）与闫小京同届在蚌山区工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p2" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张圣辉（区长）与潘俞伊（区领导）共同出席安委会和台风防范会议"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p2" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张圣辉（区长）与单桂云（区领导）共同出席消防专项整治会和安委会"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
