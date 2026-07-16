@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "北京市",
+    "city": "",
+    "region": "石景山区",
+    "job": "区委书记",
+    "task_id": "beijing_石景山区",
+    "time_focus": "current as of 2026-07"
+  },
+  "identity": {
+    "person_id": "beijing_shijingshan_changwei_1966",
+    "name": "常卫",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1966年9月",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "未知",
+        "major": "未知",
+        "degree": "在职研究生",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "常卫_1966年9月",
+      "name_birthplace": "常卫_待查",
+      "official_profile_url": "https://www.bjsjs.gov.cn/gongkai/zwgkpd/ldjs_1946/qw_1947/"
+    }
+  },
+  "current_status": {
+    "current_post": "区委书记",
+    "current_org": "中共北京市石景山区委员会",
+    "administrative_rank": "正厅级",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "至今",
+      "org": "中共北京市石景山区委员会",
+      "title": "区委书记",
+      "level": "地厅级",
+      "location": "北京市石景山区",
+      "system": "party",
+      "rank": "正厅级",
+      "is_key_promotion": true,
+      "notes": "主持区委全面工作。到任时间待查。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "sjs_party_committee",
+      "name": "中共北京市石景山区委员会",
+      "type": "党委",
+      "level": "地厅级",
+      "parent": "中共北京市委",
+      "location": "北京市石景山区"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "万隆",
+      "person_id": "beijing_shijingshan_wanlong_1976",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记与区长（区委副书记）党政正职搭档关系，官方领导页面确认",
+      "overlap_org": "中共北京市石景山区委员会/石景山区人民政府",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张利军",
+      "person_id": "beijing_shijingshan_zhanglijun_1971",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记与专职副书记，官方领导页面确认",
+      "overlap_org": "中共北京市石景山区委员会",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "待查",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开信息中未发现常卫的纪律处分、审计问题或负面舆情",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "石景山区委领导页面",
+      "url": "https://www.bjsjs.gov.cn/gongkai/zwgkpd/ldjs_1946/qw_1947/",
+      "publisher": "北京市石景山区人民政府",
+      "published_at": "2026-07",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方领导之窗页面，含照片和基本信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "常卫的完整职业生涯时间线缺失：出生地、籍贯、教育背景详情、入党/参加工作时间、担任石景山区委书记前的全部履历"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "常卫的出生地、籍贯和教育背景（具体院校和专业）是什么？",
+      "why_it_matters": "需要确认身份信息用于去重和关系网络分析",
+      "suggested_queries": ["常卫 籍贯", "常卫 出生地", "常卫 毕业院校", "常卫 百度百科"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "critical",
+      "question": "常卫何时开始担任石景山区委书记？此前在何处任职？",
+      "why_it_matters": "了解其政治晋升路径和跨区/跨部门交流历史",
+      "suggested_queries": ["常卫 任石景山区委书记 时间", "常卫 历任", "常卫 曾任"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "critical",
+      "question": "常卫的入党时间和参加工作时间是什么？",
+      "why_it_matters": "评估其政治资历和工龄",
+      "suggested_queries": ["常卫 入党", "常卫 参加工作"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "石景山区委书记常卫的前任是谁？前任的去向如何？",
+      "why_it_matters": "分析区委书记的晋升通道和干部交流模式",
+      "suggested_queries": ["石景山区 前任 区委书记", "石景山区委书记 任免"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}

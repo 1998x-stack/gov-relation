@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>北京市石景山区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="psjs_chang_wei" label="常卫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="psjs_wan_long" label="万隆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_zhang_lijun" label="张利军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区委党校（行政学院）校（院）长"/>
+          <attvalue for="2" value="中共北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_wang_xiaodong" label="王晓东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区纪委书记、区监察委员会主任"/>
+          <attvalue for="2" value="中共北京市石景山区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_qian_xing" label="钱行">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长，区政协党组副书记，区社会主义学院院长（兼）"/>
+          <attvalue for="2" value="中共北京市石景山区委统战部"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_chi_zhiyu" label="迟志禹">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记、区委办公室主任，区档案局局长（兼）"/>
+          <attvalue for="2" value="中共北京市石景山区委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_zhang_weixin" label="张维新">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、武装部政委"/>
+          <attvalue for="2" value="北京市石景山区人民武装部"/>
+        </attvalues>
+        <viz:color r="150" g="200" b="150"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_shen_jian" label="申键">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共北京市石景山区委宣传部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_li_wenhua" label="李文化">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委，区政府党组副书记、副区长，中关村科技园区石景山园工委书记（兼）"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_wang_xin" label="王昕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+          <attvalue for="2" value="中共北京市石景山区委组织部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_hu_hao" label="胡浩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_zhong_mianmian" label="钟棉棉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_zhang_jingyuan" label="张景渊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长、区公安分局党委书记、局长、区委政法委副书记（兼）"/>
+          <attvalue for="2" value="北京市公安局石景山分局"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_cao_shihui" label="曹世辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_ma_bin" label="马斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长、区红十字会会长（兼）"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_zhang_shengjun" label="张盛军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市石景山区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_tian_liyue" label="田利跃">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组书记、主任"/>
+          <attvalue for="2" value="北京市石景山区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_ning_huijuan" label="宁慧娟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组副书记、副主任"/>
+          <attvalue for="2" value="北京市石景山区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_zhang_yuguo" label="张玉国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任，区总工会主席（兼）"/>
+          <attvalue for="2" value="北京市石景山区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_shi_xianfu" label="石显富">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="北京市石景山区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_zhang_wei" label="张伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="北京市石景山区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_jin_xiubin" label="金秀斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组书记、主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_ge_qiang" label="葛强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组副书记、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="psjs_yang_guibao" label="杨贵宝">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_ding_renmeng" label="丁仁猛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_mao_xuan" label="毛轩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席（不驻会），民盟石景山区工委主委"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_wang_lijun" label="汪礼俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席（不驻会），民建石景山区工委主委"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="psjs_liu_tiejun" label="刘铁军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席（不驻会），九三学社石景山区工委主委"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市石景山区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="osjs_party_committee" label="中共北京市石景山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共北京市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_gov" label="北京市石景山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="北京市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_discipline" label="中共北京市石景山区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="北京市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_org_department" label="中共北京市石景山区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="石景山区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_propaganda" label="中共北京市石景山区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="石景山区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_united_front" label="中共北京市石景山区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="石景山区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_political_legal" label="中共北京市石景山区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="石景山区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_party_school" label="中共北京市石景山区委党校（行政学院）">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="石景山区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_military_department" label="北京市石景山区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="军事"/>
+          <attvalue for="2" value="北京卫戍区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_public_security" label="北京市公安局石景山分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="北京市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_zone_park" label="中关村科技园区石景山园">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="中关村科技园区管委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_peoples_congress" label="北京市石景山区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="北京市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="osjs_cppcc" label="中国人民政治协商会议北京市石景山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="北京市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="psjs_chang_wei" target="osjs_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="psjs_wan_long" target="osjs_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="psjs_wan_long" target="osjs_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="psjs_zhang_lijun" target="osjs_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="psjs_zhang_lijun" target="osjs_party_school" label="区委党校（行政学院）校（院）长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委党校（行政学院）校（院）长（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="psjs_wang_xiaodong" target="osjs_discipline" label="区委常委、区纪委书记、区监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、区纪委书记、区监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="psjs_qian_xing" target="osjs_united_front" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="psjs_chi_zhiyu" target="osjs_political_legal" label="区委常委、政法委书记、区委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记、区委办公室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="psjs_zhang_weixin" target="osjs_military_department" label="区委常委、武装部政委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、武装部政委"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="psjs_shen_jian" target="osjs_propaganda" label="区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="psjs_li_wenhua" target="osjs_gov" label="区委常委、党组副书记、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、党组副书记、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="psjs_li_wenhua" target="osjs_zone_park" label="中关村科技园区石景山园工委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中关村科技园区石景山园工委书记（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="psjs_wang_xin" target="osjs_org_department" label="区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="psjs_hu_hao" target="osjs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="psjs_zhong_mianmian" target="osjs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="psjs_zhang_jingyuan" target="osjs_gov" label="副区长、区公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="psjs_zhang_jingyuan" target="osjs_public_security" label="党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="党委书记、局长"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="psjs_cao_shihui" target="osjs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="psjs_ma_bin" target="osjs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="psjs_zhang_shengjun" target="osjs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="psjs_tian_liyue" target="osjs_peoples_congress" label="区人大常委会党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会党组书记、主任"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="psjs_ning_huijuan" target="osjs_peoples_congress" label="区人大常委会党组副书记、副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会党组副书记、副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="psjs_zhang_yuguo" target="osjs_peoples_congress" label="区人大常委会党组成员、副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="psjs_shi_xianfu" target="osjs_peoples_congress" label="区人大常委会党组成员、副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="psjs_zhang_wei" target="osjs_peoples_congress" label="区人大常委会党组成员、副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="psjs_jin_xiubin" target="osjs_cppcc" label="区政协党组书记、主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协党组书记、主席"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="psjs_ge_qiang" target="osjs_cppcc" label="区政协党组副书记、副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协党组副书记、副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="psjs_yang_guibao" target="osjs_cppcc" label="区政协党组成员、副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="psjs_ding_renmeng" target="osjs_cppcc" label="区政协党组成员、副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="psjs_mao_xuan" target="osjs_cppcc" label="区政协副主席（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="psjs_wang_lijun" target="osjs_cppcc" label="区政协副主席（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="psjs_liu_tiejun" target="osjs_cppcc" label="区政协副主席（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="psjs_chang_wei" target="psjs_wan_long" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="psjs_chang_wei" target="psjs_zhang_lijun" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="psjs_wan_long" target="psjs_zhang_lijun" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与专职副书记在区委常委会共事"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="psjs_chang_wei" target="psjs_li_wenhua" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="psjs_wan_long" target="psjs_li_wenhua" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常务副区长（区政府日常运作）"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="psjs_chang_wei" target="psjs_wang_xin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与组织部部长（干部管理）"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="psjs_chang_wei" target="psjs_wang_xiaodong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与纪委书记（从严治党主体责任）"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="psjs_chang_wei" target="psjs_chi_zhiyu" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="psjs_chang_wei" target="psjs_shen_jian" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="psjs_chang_wei" target="psjs_qian_xing" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="psjs_wan_long" target="psjs_zhang_jingyuan" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与公安分局局长（安全稳定）"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="psjs_wang_xiaodong" target="psjs_wang_xin" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="组织部与纪委在干部监督方面的协作"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="psjs_chi_zhiyu" target="psjs_zhang_jingyuan" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="政法委书记与公安分局局长的政法系统协作"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
