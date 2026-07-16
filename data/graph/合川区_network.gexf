@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>China Gov Network Research Agent</creator>
+    <description>合川区领导班子工作关系网络 — 重庆市合川区区委书记 & 区长</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="education" type="string"/>
+      <attribute id="4" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="phc_zheng_liwei" label="郑立伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="1970年5月"/>
+          <attvalue for="3" value="大学/法律硕士"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phc_jiang_xuesong" label="姜雪松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="1972年5月"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phc_xie_dong" label="谢东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记（专职）"/>
+          <attvalue for="2" value="1970年12月"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phc_zeng_rong" label="曾荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区政府常务副区长"/>
+          <attvalue for="2" value="1975年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_zhou_fuyong" label="周富勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="1973年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_he_chuan" label="何川">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+          <attvalue for="2" value="1976年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_wu_daming" label="吴达明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="1974年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_qin_huifu" label="秦辉富">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+          <attvalue for="2" value="1972年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phc_deng_li" label="邓立">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+          <attvalue for="2" value="1975年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_tang_jun" label="汤峻">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区人武部政委"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_chen_ying" label="陈颖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长、党组成员"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_zhao_jichun" label="赵吉春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长、党组成员，区公安分局局长、督察长（兼）"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_zhang_yulin" label="张玉林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长、党组成员"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_yang_chunmei" label="杨春梅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长、党组成员"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_cheng_wei" label="程卫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_ye_hua" label="叶华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="100" g="200" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phc_li_yinglan" label="李应兰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前区委书记"/>
+          <attvalue for="2" value="1964年10月"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phc_xu_wanzhong" label="徐万忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前区长（已被双开）"/>
+          <attvalue for="2" value="1967年"/>
+          <attvalue for="3" value="大学"/>
+          <attvalue for="4" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ohc_party_committee" label="中共重庆市合川区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_gov" label="重庆市合川区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_org_department" label="中共重庆市合川区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_discipline" label="中共重庆市合川区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_propaganda" label="中共重庆市合川区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_united_front" label="中共重庆市合川区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_political_legal" label="中共重庆市合川区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_peoples_armed_forces" label="重庆市合川区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="军事"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_public_security" label="重庆市公安局合川分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_peoples_congress" label="重庆市合川区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohc_cppcc" label="中国人民政治协商会议重庆市合川区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="phc_zheng_liwei" target="ohc_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021-09 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="phc_zheng_liwei" target="ohc_party_committee" label="区委副书记（渝北区）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016-12 — 2021-09"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="phc_zheng_liwei" target="ohc_gov" label="市政府法制办副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 2016-12"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="phc_jiang_xuesong" target="ohc_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021-09 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="phc_jiang_xuesong" target="ohc_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2020 — 2021-09"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="phc_jiang_xuesong" target="ohc_gov" label="市经信委副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 2020"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="phc_xie_dong" target="ohc_party_committee" label="区委副书记（专职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="phc_xie_dong" target="ohc_political_legal" label="政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 待查"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="phc_zeng_rong" target="ohc_gov" label="常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="phc_zeng_rong" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="phc_zhou_fuyong" target="ohc_discipline" label="纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="phc_zhou_fuyong" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="phc_he_chuan" target="ohc_org_department" label="组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="phc_he_chuan" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="phc_wu_daming" target="ohc_propaganda" label="宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="phc_wu_daming" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="phc_qin_huifu" target="ohc_political_legal" label="政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="phc_qin_huifu" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="phc_deng_li" target="ohc_united_front" label="统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="phc_deng_li" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="phc_tang_jun" target="ohc_peoples_armed_forces" label="政委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="phc_tang_jun" target="ohc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="phc_chen_ying" target="ohc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="phc_zhao_jichun" target="ohc_gov" label="副区长、区公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="phc_zhao_jichun" target="ohc_public_security" label="局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="phc_zhang_yulin" target="ohc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="phc_yang_chunmei" target="ohc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="phc_cheng_wei" target="ohc_peoples_congress" label="主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="phc_ye_hua" target="ohc_cppcc" label="主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="phc_li_yinglan" target="ohc_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2015 — 2021-09"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="phc_xu_wanzhong" target="ohc_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 2021"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="phc_zheng_liwei" target="phc_jiang_xuesong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政搭档关系"/>
+          <attvalue for="2" value="2021年至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="phc_zheng_liwei" target="phc_xie_dong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+          <attvalue for="2" value="2021年至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="phc_jiang_xuesong" target="phc_xie_dong" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与专职副书记在区委班子共事"/>
+          <attvalue for="2" value="2021年至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="phc_zheng_liwei" target="phc_zeng_rong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+          <attvalue for="2" value="待查至今"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="phc_zheng_liwei" target="phc_li_yinglan" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="前任区委书记与接任者"/>
+          <attvalue for="2" value="2015-2021（李）→2021至今（郑）"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="phc_jiang_xuesong" target="phc_xu_wanzhong" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="前任区长与被调查前区长"/>
+          <attvalue for="2" value="待查-2021（徐）→2021至今（姜）"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
