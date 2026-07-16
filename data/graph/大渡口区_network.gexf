@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>重庆市大渡口区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pddk_zhang_guo" label="张果">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共重庆市大渡口区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pddk_zhang_tao" label="张涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pddk_liu_yang" label="刘扬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_xia_xiaoping" label="夏小平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_liu_liguo" label="刘理国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_wang_xihui" label="王希辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_li_jiamin" label="李佳敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_wu_pingwei" label="伍平伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_cao_hua" label="曹华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市大渡口区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_yu_changming" label="余长明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任区委书记（被查）"/>
+          <attvalue for="2" value="中共重庆市大渡口区委员会（原）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pddk_wang_jun" label="王俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任区委书记（更早）"/>
+          <attvalue for="2" value="中共重庆市大渡口区委员会（原）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="oddk_party_committee" label="中共重庆市大渡口区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共重庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_gov" label="重庆市大渡口区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_discipline" label="中共重庆市大渡口区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="重庆市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_organization" label="中共重庆市大渡口区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="大渡口区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_propaganda" label="中共重庆市大渡口区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="大渡口区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_united_front" label="中共重庆市大渡口区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="大渡口区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_political_legal" label="中共重庆市大渡口区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="大渡口区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_military_department" label="重庆市大渡口区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="军事"/>
+          <attvalue for="2" value="重庆警备区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_public_security" label="重庆市公安局大渡口区分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="重庆市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_procuratorate" label="重庆市大渡口区人民检察院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="检察院"/>
+          <attvalue for="2" value="重庆市检察院"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_court" label="重庆市大渡口区人民法院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="法院"/>
+          <attvalue for="2" value="重庆市高院"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_peoples_congress" label="重庆市大渡口区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="重庆市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_cppcc" label="中国人民政治协商会议重庆市大渡口区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="重庆市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_finance_bureau" label="重庆市大渡口区财政局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="大渡口区政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_audit_bureau" label="重庆市大渡口区审计局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="大渡口区政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_yongchuan_gov" label="重庆市永川区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_chongqing_science" label="重庆市科学技术局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_chongqing_reform" label="中共重庆市委全面深化改革委员会办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="中共重庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_qianjiang_party" label="中共重庆市黔江区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共重庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_nanan_party" label="中共重庆市南岸区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共重庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oddk_nanan_gov" label="重庆市南岸区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="pddk_zhang_guo" target="oddk_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="pddk_zhang_guo" target="oddk_yongchuan_gov" label="永川区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="永川区委副书记、区长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="pddk_zhang_guo" target="oddk_chongqing_science" label="重庆市科技局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市科技局党组书记、局长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="pddk_zhang_guo" target="oddk_chongqing_reform" label="重庆市委改革办副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市委改革办副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="pddk_zhang_guo" target="oddk_chongqing_reform" label="重庆市委改革办（法治办）处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市委改革办（法治办）处长"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="pddk_zhang_guo" target="oddk_nanan_party" label="南岸区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南岸区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="pddk_zhang_guo" target="oddk_nanan_gov" label="南岸区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南岸区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="pddk_zhang_guo" target="oddk_nanan_gov" label="南岸区长助理" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南岸区长助理"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="pddk_zhang_tao" target="oddk_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="pddk_zhang_tao" target="oddk_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="pddk_zhang_tao" target="oddk_gov" label="区政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组书记"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="pddk_liu_yang" target="oddk_gov" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="pddk_liu_yang" target="oddk_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="pddk_xia_xiaoping" target="oddk_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="pddk_xia_xiaoping" target="oddk_public_security" label="区公安分局党委书记、局长、督察长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区公安分局党委书记、局长、督察长"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="pddk_liu_liguo" target="oddk_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="pddk_wang_xihui" target="oddk_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="pddk_li_jiamin" target="oddk_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="pddk_wu_pingwei" target="oddk_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="pddk_cao_hua" target="oddk_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="pddk_yu_changming" target="oddk_party_committee" label="前任区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="pddk_yu_changming" target="oddk_qianjiang_party" label="黔江区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="黔江区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="pddk_yu_changming" target="oddk_chongqing_reform" label="重庆市委副秘书长、办公厅主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市委副秘书长、办公厅主任"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="pddk_yu_changming" target="oddk_chongqing_reform" label="重庆市委副秘书长、督查室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市委副秘书长、督查室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="pddk_yu_changming" target="oddk_chongqing_reform" label="重庆市委办公厅副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市委办公厅副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="pddk_wang_jun" target="oddk_party_committee" label="前任区委书记（更早）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区委书记（更早）"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="pddk_wang_jun" target="oddk_nanan_gov" label="南岸区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南岸区委副书记、区长"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="pddk_zhang_guo" target="pddk_zhang_tao" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档关系"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="pddk_zhang_guo" target="pddk_liu_yang" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区委常委（副区长）"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="pddk_zhang_guo" target="pddk_yu_changming" label="predecessor_successor" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="张果接替被查的余长明任大渡口区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="pddk_yu_changming" target="pddk_wang_jun" label="predecessor_successor" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="余长明接替王俊任大渡口区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="pddk_zhang_tao" target="pddk_liu_yang" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与区委常委、副区长（区政府分管领导）"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="pddk_zhang_tao" target="pddk_xia_xiaoping" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长（公安分局局长）"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="pddk_zhang_tao" target="pddk_liu_liguo" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="pddk_zhang_tao" target="pddk_wang_xihui" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="pddk_zhang_tao" target="pddk_li_jiamin" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="pddk_zhang_tao" target="pddk_wu_pingwei" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="pddk_zhang_tao" target="pddk_cao_hua" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="pddk_zhang_guo" target="pddk_yu_changming" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="先后任大渡口区委书记（张果接替被查的余长明）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
