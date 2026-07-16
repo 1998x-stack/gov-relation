@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov Relation Research Agent</creator>
+    <description>诏安县领导工作关系网络 - Zhaoan County Leadership Network</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="subtype" type="string"/>
+      <attribute id="2" title="job_title" type="string"/>
+      <attribute id="3" title="level" type="string"/>
+      <attribute id="4" title="birth" type="string"/>
+      <attribute id="5" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="远洋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="诏安县委书记"/>
+          <attvalue for="2" value="诏安县委书记"/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="许仲岚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="诏安县人民政府办公室党组书记、主任"/>
+          <attvalue for="2" value="诏安县人民政府办公室党组书记、主任"/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value="1975年9月"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="许昊鲁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="诏安县人民政府办公室副主任、党组成员"/>
+          <attvalue for="2" value="诏安县人民政府办公室副主任、党组成员"/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value="1989年1月"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="胡建生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="诏安县政府办党组成员、一级主任科员"/>
+          <attvalue for="2" value="诏安县政府办党组成员、一级主任科员"/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value="1969年3月"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共诏安县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="诏安县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="诏安县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协诏安县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="诏安县人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="正科级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共诏安县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共诏安县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共诏安县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共诏安县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="诏安县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="诏安县委书记"/>
+          <attvalue for="2" value="~2026-03-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o5" label="诏安县人民政府办公室党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="诏安县人民政府办公室党组书记、主任"/>
+          <attvalue for="2" value="-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o5" label="诏安县人民政府办公室副主任、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="诏安县人民政府办公室副主任、党组成员"/>
+          <attvalue for="2" value="-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o5" label="诏安县政府办党组成员、一级主任科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="诏安县政府办党组成员、一级主任科员"/>
+          <attvalue for="2" value="-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县政府办公室党组书记-副主任"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县政府办公室党组成员同僚"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
