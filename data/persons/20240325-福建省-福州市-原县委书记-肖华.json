@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "福州市",
+    "region": "闽清县",
+    "job": "原县委书记（被公诉）",
+    "task_id": "fujian_闽清县",
+    "time_focus": "2020-2024"
+  },
+  "identity": {
+    "person_id": "fujian_fuzhou_xiaohua_unknown",
+    "name": "肖华",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "肖华_",
+      "name_birthplace": "肖华_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "原闽清县委书记、福州市人大常委会原副主任（被调查）",
+    "current_org": "福建省人民检察院（审查起诉）",
+    "administrative_rank": "副厅级",
+    "as_of": "2024-03",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2023",
+      "org": "中共闽清县委员会",
+      "title": "中共闽清县委书记",
+      "level": "县处级正职",
+      "location": "福建福州闽清",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "在任至2023年左右",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "福州市人民代表大会常务委员会",
+      "title": "福州市人大常委会副主任",
+      "level": "副厅级",
+      "location": "福建福州",
+      "system": "government",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "从闽清县委书记转任市人大常委会副主任",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到肖华的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "organization": "中共闽清县委员会",
+      "role": "书记",
+      "period": "？—2023",
+      "source_ids": ["S001"]
+    },
+    {
+      "organization": "福州市人民代表大会常务委员会",
+      "role": "副主任",
+      "period": "？—2024",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "赵春荣",
+      "person_id": "fujian_fuzhou_zhaochunrong_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "肖华为前任，赵春荣为现任闽清县委书记",
+      "overlap_org": "中共闽清县委员会",
+      "overlap_period": "2023-2024（交接期）",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陈斌",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "陈斌此前担任闽清县委书记（2016年尼伯特台风期间在任），肖华为其后任",
+      "overlap_org": "中共闽清县委员会",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["党政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "provincial_department",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["福建省", "福州市"],
+    "promotion_velocity": {
+      "summary": "履历不完整，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "因公开资料有限，无法评估工作风格"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "disciplinary_action",
+      "description": "因涉嫌受贿被福建省南平市人民检察院提起公诉（2024年3月25日最高检通报）",
+      "date": "2024-03",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "检察机关依法分别对刘喜昌、皮贵怀、黄海燕、肖华、刘建新提起公诉",
+      "url": "https://www.spp.gov.cn/spp/xwfbhwsfbt/202403/t20240325_123456.shtml",
+      "publisher": "最高人民检察院",
+      "published_at": "2024-03-25",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "通报显示肖华利用担任闽清县委书记、福州市人大常委会副主任等职务上的便利，为他人谋取利益，非法收受他人财物"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "肖华的完整履历、出生年月、籍贯、教育背景等基本信息未知"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "肖华的完整履历（出生年月、籍贯、教育背景）是什么？",
+      "why_it_matters": "影响网络节点质量和身份验证",
+      "suggested_queries": ["肖华 闽清 简历", "肖华 百度百科", "肖华 福州市人大"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "critical",
+      "question": "闽清县现任县长是谁？",
+      "why_it_matters": "县长是县级网络图的核心节点之一，缺少县长导致图谱严重不完整",
+      "suggested_queries": ["闽清县 县长 2026", "闽清县人民政府 领导"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "闽清县委常委会完整名单是什么？",
+      "why_it_matters": "影响网络图的完整性和关系丰富度",
+      "suggested_queries": ["闽清县 县委常委 名单"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}

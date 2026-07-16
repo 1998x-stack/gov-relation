@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>china-gov-network skill</creator>
+    <description>闽清县领导班子工作关系网络 - 2026-07-16</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="category" title="Category" type="string"/>
+      <attribute id="birth" title="Birth" type="string"/>
+      <attribute id="birthplace" title="Birthplace" type="string"/>
+      <attribute id="education" title="Education" type="string"/>
+      <attribute id="current_post" title="Current Post" type="string"/>
+      <attribute id="source" title="Source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="period" title="Period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="1" label="赵春荣">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="中共闽清县委书记"/>
+          <attvalue for="source" value="https://search.cctv.com/search.php?qtext=闽清县+县委书记（2025年12月报道）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="2" label="肖华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="原闽清县委书记（被调查）"/>
+          <attvalue for="source" value="https://www.spp.gov.cn（2024年3月25日通报）"/>
+        </attvalues>
+        <viz:color r="200" g="80" b="50"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="3" label="陈斌">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="永泰县委书记"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/陈斌（2016年尼伯特台风期间在任）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="1001" label="中共闽清县委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="44" g="62" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1002" label="闽清县人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="政府"/>
+        </attvalues>
+        <viz:color r="44" g="62" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1003" label="中共福州市委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="44" g="62" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1004" label="福州市人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="政府"/>
+        </attvalues>
+        <viz:color r="44" g="62" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1005" label="中共永泰县委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="44" g="62" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="1" target="1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共闽清县委书记"/>
+          <attvalue for="period" value="? → 今"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="2" target="1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共闽清县委书记"/>
+          <attvalue for="period" value="? → 2023"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="2" target="1003" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="福州市人大常委会副主任"/>
+          <attvalue for="period" value="? → 今"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="3" target="1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共闽清县委书记"/>
+          <attvalue for="period" value="2016 → 今"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="3" target="1005" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共永泰县委书记"/>
+          <attvalue for="period" value="? → 今"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="2" target="1" label="交接">
+        <attvalues>
+          <attvalue for="type" value="交接"/>
+          <attvalue for="context" value="肖华→赵春荣 闽清县委书记交接"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="3" target="2" label="交接">
+        <attvalues>
+          <attvalue for="type" value="交接"/>
+          <attvalue for="context" value="陈斌→肖华 闽清县委书记交接"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
