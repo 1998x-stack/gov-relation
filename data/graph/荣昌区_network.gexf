@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Claude Code Research Agent</creator>
+    <description>重庆市荣昌区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="万容">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共重庆市荣昌区委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="廖传锦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="重庆市荣昌区委副书记、区长、区政府党组书记"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="李学义">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区委副书记、组织部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="谢勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区委常委、宣传部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="程建林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区委常委、副区长、区政府党组成员"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="李皓">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区委常委、区政府党组成员、荣昌高新区党工委书记"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="张元斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区副区长、区政府党组成员、区公安局局长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="李德伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区副区长、区政府党组成员"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="王媛媛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="周鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="夏定文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共重庆市荣昌区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="重庆市荣昌区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="荣昌高新区党工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="荣昌区公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="中共重庆市荣昌区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共重庆市荣昌区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="重庆市荣昌区人民政府区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市荣昌区人民政府区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="荣昌区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="荣昌区委副书记、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区委副书记、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o1" label="荣昌区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o2" label="荣昌区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o2" label="荣昌区委常委、区政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区委常委、区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o3" label="荣昌高新区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌高新区党工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p7" target="o2" label="荣昌区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o4" label="荣昌区公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区公安局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p8" target="o2" label="荣昌区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p9" target="o2" label="荣昌区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p10" target="o2" label="荣昌区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p11" target="o2" label="荣昌区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="荣昌区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="荣昌区党政一把手搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p5" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="常务副区长协助区长工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="p1" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委副书记协助区委书记工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p7" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长分管公安、司法"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p8" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p9" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p10" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p11" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长工作"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
