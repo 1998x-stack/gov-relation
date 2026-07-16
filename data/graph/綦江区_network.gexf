@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>重庆市綦江区领导班子工作关系网络</description>
+    <date>2026-07-16</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="rank" title="Rank" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="chongqing_qijiang_yin_guoxi" label="尹国喜">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委书记"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="chongqing_qijiang_guo_xiaoping" label="郭小萍">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委副书记、区政府区长、党组书记"/>
+          <attvalue for="birth" value="1971年10月"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="chongqing_qijiang_li_wei" label="李炜">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委、区政府常务副区长、党组副书记"/>
+          <attvalue for="birth" value="1973年9月"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="chongqing_qijiang_ni_ming" label="倪明">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政府副区长、党组成员"/>
+          <attvalue for="birth" value="1971年1月"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="chongqing_qijiang_chen_xian" label="陈贤">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政府副区长"/>
+          <attvalue for="birth" value="1973年5月"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="chongqing_qijiang_li_qiansong" label="李钱松">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政府副区长、党组成员"/>
+          <attvalue for="birth" value="1982年4月"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="chongqing_qijiang_liu_shuran" label="刘书燃">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政府副区长、党组成员"/>
+          <attvalue for="birth" value="1979年12月"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="chongqing_qijiang_xue_chong" label="薛翀">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政府副区长、党组成员，区公安局党委书记、局长、督察长"/>
+          <attvalue for="birth" value="1970年1月"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="chongqing_qijiang_shi_xiuzhang" label="石秀章">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政府副区长、党组成员（兼新城建设党工委书记）"/>
+          <attvalue for="birth" value="1981年3月"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="chongqing_qijiang_tao_min" label="陶敏">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委、区纪委书记"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="180" g="130" b="50" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_ren_jun" label="任骏">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委、组织部部长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_cai_peng" label="蔡鹏">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委、宣传部部长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_wang_hongxing" label="王宏兴">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委、统战部部长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_xiong_jian" label="熊健">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委、政法委书记"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_song_bingzhou" label="宋秉洲">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区委常委"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_tang_pengcheng" label="唐鹏程">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区人大常委会主任"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="160" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_zhong_yuanping" label="钟远平">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="綦江区政协主席"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="chongqing_qijiang_jiang_tianbo" label="姜天波">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="（原綦江区委书记，约2020-2024，已调离）"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="chongqing_qijiang_ro_xiaoping_prev" label="罗成">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="（原綦江区区长，郭小萍前任，约2021-2023调离）"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="chongqing_qijiang_party_committee" label="中共重庆市綦江区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_gov" label="重庆市綦江区人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_discipline" label="中共重庆市綦江区纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="160" g="120" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_organization" label="中共重庆市綦江区委组织部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_propaganda" label="中共重庆市綦江区委宣传部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_united_front" label="中共重庆市綦江区委统一战线工作部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_politics_law" label="中共重庆市綦江区委政法委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_public_security" label="重庆市綦江区公安局">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_people_congress" label="重庆市綦江区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="chongqing_qijiang_cppcc" label="中国人民政治协商会议重庆市綦江区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政协"/>
+        </attvalues>
+        <viz:color r="180" g="130" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_party_committee" type="directed" label="綦江区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024-10"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级（直辖市辖区）"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="chongqing_qijiang_guo_xiaoping" target="chongqing_qijiang_gov" type="directed" label="綦江区区长、党组书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级（直辖市辖区）"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="chongqing_qijiang_guo_xiaoping" target="chongqing_qijiang_party_committee" type="directed" label="綦江区委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级（直辖市辖区）"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="chongqing_qijiang_li_wei" target="chongqing_qijiang_gov" type="directed" label="綦江区委常委、区政府常务副区长、党组副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023-12"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="chongqing_qijiang_ni_ming" target="chongqing_qijiang_gov" type="directed" label="綦江区政府副区长、党组成员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2022-01"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="chongqing_qijiang_chen_xian" target="chongqing_qijiang_gov" type="directed" label="綦江区政府副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2022-01"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="chongqing_qijiang_li_qiansong" target="chongqing_qijiang_gov" type="directed" label="綦江区政府副区长、党组成员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024-05"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="chongqing_qijiang_liu_shuran" target="chongqing_qijiang_gov" type="directed" label="綦江区政府副区长、党组成员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-01"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="chongqing_qijiang_xue_chong" target="chongqing_qijiang_gov" type="directed" label="綦江区政府副区长、党组成员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-07"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="chongqing_qijiang_xue_chong" target="chongqing_qijiang_public_security" type="directed" label="区公安局党委书记、局长、督察长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025-07"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="chongqing_qijiang_shi_xiuzhang" target="chongqing_qijiang_gov" type="directed" label="綦江区政府副区长、党组成员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2026-01"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="chongqing_qijiang_tao_min" target="chongqing_qijiang_discipline" type="directed" label="綦江区委常委、区纪委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="chongqing_qijiang_ren_jun" target="chongqing_qijiang_organization" type="directed" label="綦江区委常委、组织部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="chongqing_qijiang_cai_peng" target="chongqing_qijiang_propaganda" type="directed" label="綦江区委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="chongqing_qijiang_wang_hongxing" target="chongqing_qijiang_united_front" type="directed" label="綦江区委常委、统战部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="chongqing_qijiang_xiong_jian" target="chongqing_qijiang_politics_law" type="directed" label="綦江区委常委、政法委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e17" source="chongqing_qijiang_song_bingzhou" target="chongqing_qijiang_party_committee" type="directed" label="綦江区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e18" source="chongqing_qijiang_tang_pengcheng" target="chongqing_qijiang_people_congress" type="directed" label="綦江区人大常委会主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e19" source="chongqing_qijiang_zhong_yuanping" target="chongqing_qijiang_cppcc" type="directed" label="綦江区政协主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="unknown"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e20" source="chongqing_qijiang_jiang_tianbo" target="chongqing_qijiang_party_committee" type="directed" label="綦江区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2020"/>
+          <attvalue for="end" value="2024-10"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e21" source="chongqing_qijiang_ro_xiaoping_prev" target="chongqing_qijiang_gov" type="directed" label="綦江区区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021"/>
+          <attvalue for="end" value="2023"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e22" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_guo_xiaoping" type="undirected" label="区委书记与区长党政正职搭档">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与区长党政正职搭档"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e23" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_li_wei" type="undirected" label="区委书记与常务副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与常务副区长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e24" source="chongqing_qijiang_guo_xiaoping" target="chongqing_qijiang_li_wei" type="undirected" label="区长与常务副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区长与常务副区长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e25" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_tao_min" type="undirected" label="区委书记与纪委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与纪委书记"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e26" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_ren_jun" type="undirected" label="区委书记与组织部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与组织部长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e27" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_cai_peng" type="undirected" label="区委书记与宣传部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与宣传部长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e28" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_wang_hongxing" type="undirected" label="区委书记与统战部长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与统战部长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e29" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_xiong_jian" type="undirected" label="区委书记与政法委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与政法委书记"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e30" source="chongqing_qijiang_yin_guoxi" target="chongqing_qijiang_jiang_tianbo" type="undirected" label="尹国喜接替姜天波任綦江区委书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="尹国喜接替姜天波任綦江区委书记"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e31" source="chongqing_qijiang_guo_xiaoping" target="chongqing_qijiang_ro_xiaoping_prev" type="undirected" label="郭小萍接替罗成任綦江区区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="郭小萍接替罗成任綦江区区长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e32" source="chongqing_qijiang_ni_ming" target="chongqing_qijiang_li_wei" type="undirected" label="同为区政府副职领导">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区政府副职领导"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e33" source="chongqing_qijiang_li_qiansong" target="chongqing_qijiang_liu_shuran" type="undirected" label="同为区政府副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区政府副区长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e34" source="chongqing_qijiang_tao_min" target="chongqing_qijiang_ren_jun" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e35" source="chongqing_qijiang_cai_peng" target="chongqing_qijiang_wang_hongxing" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e36" source="chongqing_qijiang_xiong_jian" target="chongqing_qijiang_song_bingzhou" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
