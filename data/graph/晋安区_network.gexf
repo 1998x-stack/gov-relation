@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Sisyphus Research Agent</creator>
+    <description>晋安区（福州市辖区）领导班子工作关系网络 — 2026年7月生成</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+      <attribute id="4" title="entity_type" type="string"/>
+      <attribute id="5" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="林涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福州市人大常委会副主任、晋安区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="夏星">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="原晋安区委副书记、区长（2026年5-6月离任）"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="吴思斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="晋安区委副书记、代区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共福州市晋安区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="福州市晋安区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="福州市晋安区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="福州市晋安区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="福州市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="福州市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="副厅级"/>
+        </attvalues>
+        <viz:color r="200" g="230" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="福兴经济开发区管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="福州市晋安区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="晋安区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="同时担任福州市人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o3" label="福州市人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="晋安区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="约2025-12"/>
+          <attvalue for="2" value="2026-05"/>
+          <attvalue for="3" value="2025年12月以代区长身份作政府工作报告；2026年5月后离任"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o2" label="晋安区委副书记、代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026-07"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="2026年7月15日首次以代区长身份公开报道"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="约2025-12至2026-05"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="林涛（区委书记）与夏星（区长）在晋安区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="p3" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="2026-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="林涛（区委书记）与吴思斌（代区长）在晋安区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p2" target="p3" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="不重叠（前后任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="夏星（前任区长）→ 吴思斌（现任代区长）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
