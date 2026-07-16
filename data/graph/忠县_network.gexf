@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>OpenCode Research Agent</creator>
+    <description>重庆市忠县领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县县委书记（现任）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县县委副书记、县长（现任）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="江夏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="长寿区委书记（已调离忠县）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="待确认（县委副书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县县委副书记（待确认）"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="待确认（常务副县长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县委常委、常务副县长（待确认）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="待确认（纪委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县委常委、县纪委书记、县监委主任（待确认）"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="待确认（组织部部长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县委常委、组织部部长（待确认）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="待确认（宣传部部长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县委常委、宣传部部长（待确认）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="待确认（政法委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县委常委、政法委书记（待确认）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="待确认（统战部部长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县委常委、统战部部长（待确认）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="待确认（县人大常委会主任）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县人大常委会主任（待确认）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="待确认（县政协主席）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="忠县政协主席（待确认）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共忠县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="忠县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="忠县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议忠县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共忠县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共忠县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共忠县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共忠县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共忠县委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共忠县委办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="忠县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="忠县县委书记（现任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="接替江夏（2023年3月离任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="忠县县委副书记、县长（现任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="接替江夏（2020年任县委书记时换任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o1" label="忠县县委书记（曾任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="confirmed from cqcs.gov.cn and ce.cn reports"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o2" label="忠县县委副书记、县长（曾任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="confirmed from cqcs.gov.cn"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o1" label="忠县县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o2" label="忠县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o5" label="忠县委常委、县纪委书记、县监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p7" target="o6" label="忠县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p8" target="o7" label="忠县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p9" target="o8" label="忠县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p10" target="o9" label="忠县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p11" target="o3" label="忠县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p12" target="o4" label="忠县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p3" target="p2" label="江夏曾任忠县县长（2016-2020），现任县长接替江夏" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="江夏曾任忠县县长（2016-2020），现任县长接替江夏"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p3" target="p1" label="江夏曾任忠县县委书记（2020-2023-03），现任书记接替江夏" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="江夏曾任忠县县委书记（2020-2023-03），现任书记接替江夏"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p2" label="当前县委书记与县长搭档关系（待确认）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="当前县委书记与县长搭档关系（待确认）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
