@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>OpenCode Research Agent (gov-relation project)</creator>
+    <description>海沧区领导班子工作关系网络 — 厦门市海沧区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="start" type="string"/>
+      <attribute id="3" title="end" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="龚建阳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧台商投资区党工委书记、海沧区委书记"/>
+          <attvalue for="2" value="中共海沧区委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="黄鹤麟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧台商投资区管委会主任、海沧区区长"/>
+          <attvalue for="2" value="海沧区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="许永良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧区人大常委会主任"/>
+          <attvalue for="2" value="海沧区人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="黄炳文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧区政协主席"/>
+          <attvalue for="2" value="政协海沧区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="游文昌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="厦门市委常委、政法委书记"/>
+          <attvalue for="2" value="中共厦门市委政法委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="连维兴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湖里区人大常委会主任"/>
+          <attvalue for="2" value="湖里区人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="吴申宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧区委副书记、海沧台商投资区管委会副主任"/>
+          <attvalue for="2" value="中共海沧区委"/>
+        </attvalues>
+        <viz:color r="180" g="80" b="80"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="陈仲谋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧区委常委、区政府常务副区长"/>
+          <attvalue for="2" value="海沧区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="邓英志">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧台商投资区纪工委书记、区纪委书记、区监委主任"/>
+          <attvalue for="2" value="中共海沧区纪委"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="彭延敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧区副区长"/>
+          <attvalue for="2" value="海沧区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="眭国瑜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧台商投资区管委会副主任"/>
+          <attvalue for="2" value="海沧台商投资区管委会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="黄书枚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="海沧区副区长"/>
+          <attvalue for="2" value="海沧区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共海沧区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="海沧区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="海沧区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协海沧区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共海沧区纪委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="海沧台商投资区管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共厦门市委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="湖里区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共翔安区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="政协三明市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共湖里区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="厦门市自然资源和规划局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="厦门市市政园林局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="厦门市交通运输局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="海沧台商投资区党工委书记、海沧区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧台商投资区党工委书记、海沧区委书记"/>
+          <attvalue for="2" value="2024-07"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="海沧区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区区长"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="2024-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o11" label="湖里区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖里区委书记"/>
+          <attvalue for="2" value="2020"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o12" label="厦门市自然资源和规划局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市自然资源和规划局党组书记、局长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="2020"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o13" label="厦门市市政园林局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市市政园林局党组书记、局长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o14" label="厦门市交通运输局副局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市交通运输局副局长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p2" target="o2" label="海沧台商投资区管委会主任、海沧区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧台商投资区管委会主任、海沧区区长"/>
+          <attvalue for="2" value="2024-07"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p2" target="o9" label="翔安区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="翔安区委书记"/>
+          <attvalue for="2" value="2021-07"/>
+          <attvalue for="3" value="2024-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="o10" label="三明市政协主席、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="三明市政协主席、党组书记"/>
+          <attvalue for="2" value="2020-01"/>
+          <attvalue for="3" value="2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="o1" label="福建省第七批援疆工作队领队（挂职昌吉州党委副书记）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福建省第七批援疆工作队领队（挂职昌吉州党委副书记）"/>
+          <attvalue for="2" value="2017-02"/>
+          <attvalue for="3" value="2020-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p2" target="o1" label="厦门市委宣传部副部长、市委文明办主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市委宣传部副部长、市委文明办主任"/>
+          <attvalue for="2" value="2012"/>
+          <attvalue for="3" value="2017-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o1" label="共青团厦门市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团厦门市委书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="2012"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="o1" label="共青团厦门市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团厦门市委副书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p3" target="o3" label="海沧区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区人大常委会主任"/>
+          <attvalue for="2" value="2024-12"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p3" target="o3" label="海沧区人大常委会党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区人大常委会党组书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p4" target="o4" label="海沧区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区政协主席"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p5" target="o7" label="厦门市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市委常委、政法委书记"/>
+          <attvalue for="2" value="2024-08"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p5" target="o1" label="海沧台商投资区党工委书记、海沧区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧台商投资区党工委书记、海沧区委书记"/>
+          <attvalue for="2" value="2018"/>
+          <attvalue for="3" value="2024-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p5" target="o2" label="海沧区代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区代区长"/>
+          <attvalue for="2" value="2018"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p5" target="o1" label="思明区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="2018"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p5" target="o1" label="翔安区委副书记、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="翔安区委副书记、副区长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p5" target="o1" label="厦门火炬高技术产业开发区党工委书记、管委会常务副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门火炬高技术产业开发区党工委书记、管委会常务副主任"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p6" target="o8" label="湖里区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖里区人大常委会主任"/>
+          <attvalue for="2" value="2023-11"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p6" target="o1" label="海沧区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区委副书记"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="2023-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p6" target="o2" label="海沧区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区副区长"/>
+          <attvalue for="2" value="2017"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p6" target="o1" label="厦门市教育局办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市教育局办公室主任"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="2017"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p7" target="o1" label="海沧区委副书记、海沧台商投资区管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区委副书记、海沧台商投资区管委会副主任"/>
+          <attvalue for="2" value="2023-10"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p7" target="o2" label="思明区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委常委、政法委书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="2023"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p7" target="o2" label="思明区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区副区长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p7" target="o1" label="共青团厦门市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团厦门市委书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p7" target="o1" label="共青团厦门市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团厦门市委副书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p7" target="o1" label="厦门市同安区洪塘镇党委副书记、镇长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市同安区洪塘镇党委副书记、镇长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p7" target="o1" label="共青团厦门市同安区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团厦门市同安区委书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p7" target="o1" label="共青团厦门市同安区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团厦门市同安区委副书记"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="unknown"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p8" target="o2" label="海沧区委常委、区政府常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区委常委、区政府常务副区长"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p8" target="o11" label="湖里区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖里区副区长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p9" target="o5" label="海沧台商投资区纪工委书记、区纪委书记、区监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧台商投资区纪工委书记、区纪委书记、区监委主任"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p10" target="o2" label="海沧区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区副区长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p11" target="o6" label="海沧台商投资区管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧台商投资区管委会副主任"/>
+          <attvalue for="2" value="2023-10"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p12" target="o2" label="海沧区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海沧区副区长"/>
+          <attvalue for="2" value="unknown"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p5" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="游文昌2018-2024年任海沧区委书记，龚建阳2024年7月接任"/>
+          <attvalue for="2" value="2024-07交接"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p1" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="龚建阳2021-2024年任海沧区区长，黄鹤麟2024年7月接任"/>
+          <attvalue for="2" value="2024-07交接"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="龚建阳担任海沧区长期间，连维兴任海沧区委副书记(2021-2023年)"/>
+          <attvalue for="2" value="2021-2023"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p5" target="p1" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="游文昌任海沧区委书记期间，龚建阳任海沧区区长"/>
+          <attvalue for="2" value="2021-2024"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p8" target="p1" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="龚建阳2020-2021年任湖里区委书记，陈仲谋此前曾任湖里区副区长"/>
+          <attvalue for="2" value="2020-2021"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p7" target="p1" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴申宇任海沧区委副书记，龚建阳任区委书记，为当前班子搭档"/>
+          <attvalue for="2" value="2023-至今"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p7" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="吴申宇任海沧区委副书记并兼管台港澳事务，黄鹤麟任区长"/>
+          <attvalue for="2" value="2024-至今"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
