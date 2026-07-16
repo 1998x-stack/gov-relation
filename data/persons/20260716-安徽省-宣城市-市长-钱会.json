@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "安徽省",
+    "city": "广德市",
+    "region": "广德市",
+    "job": "市长",
+    "task_id": "anhui_广德市",
+    "time_focus": "2026年至今"
+  },
+  "identity": {
+    "person_id": "anhui_guangde_qian_hui",
+    "name": "钱会",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1980年5月",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "钱会_1980年5月",
+      "name_birthplace": "钱会_",
+      "official_profile_url": "https://www.guangde.gov.cn/SiteLeader/21.html"
+    }
+  },
+  "current_status": {
+    "current_post": "广德市委副书记、市长",
+    "current_org": "广德市人民政府",
+    "administrative_rank": "正县级",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "广德县人民政府",
+      "title": "广德县政府副县长",
+      "level": "县级",
+      "location": "广德县",
+      "system": "government",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "早期任职",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "",
+      "org": "中国共产党广德县委员会",
+      "title": "广德县委常委、县政府党组成员",
+      "level": "县级",
+      "location": "广德县",
+      "system": "party",
+      "rank": "副县级",
+      "is_key_promotion": true,
+      "notes": "进入县委常委",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "",
+      "org": "共青团宣城市委员会",
+      "title": "共青团宣城市委党组书记、书记",
+      "level": "地市级",
+      "location": "宣城市",
+      "system": "other",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "从县级到市群团组织任职",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "",
+      "org": "中国共产党泾县委员会",
+      "title": "泾县县委副书记、党校校长",
+      "level": "县级",
+      "location": "泾县",
+      "system": "party",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "跨县交流任职",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "present",
+      "org": "广德市人民政府",
+      "title": "广德市委副书记、市长",
+      "level": "县级",
+      "location": "广德市",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "现任广德市市长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "guangde_gov",
+      "name": "广德市人民政府",
+      "type": "政府",
+      "level": "县级",
+      "parent": "宣城市人民政府"
+    },
+    {
+      "org_id": "guangde_cpc",
+      "name": "中国共产党广德市委员会",
+      "type": "党委",
+      "level": "县级",
+      "parent": "中国共产党宣城市委员会"
+    },
+    {
+      "org_id": "xuancheng_cyl",
+      "name": "共青团宣城市委员会",
+      "type": "群团",
+      "level": "地市级"
+    },
+    {
+      "org_id": "jingxian_cpc",
+      "name": "中国共产党泾县委员会",
+      "type": "党委",
+      "level": "县级",
+      "parent": "中国共产党宣城市委员会"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "金宁",
+      "person_id": "anhui_guangde_jin_ning",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "市长作为市委副书记，与市委书记金宁构成党政主要领导搭档",
+      "overlap_org": "广德市",
+      "overlap_period": "2026年6月至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    },
+    {
+      "person": "胡兴华",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "市长与常务副市长的工作搭档关系",
+      "overlap_org": "广德市人民政府",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张勇国",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "市长与曾长期在广德任职的市政府党组副书记同在市府班子",
+      "overlap_org": "广德市人民政府",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "王泽银",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "市长与分管公安的副市长",
+      "overlap_org": "广德市人民政府",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026年7月",
+      "domain": "economic_development",
+      "achievement_or_event": "赴新杭镇调研",
+      "role_in_event": "带队调研",
+      "measurable_outcome": "了解基层发展状况",
+      "location": "广德市新杭镇",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "period": "2026年7月",
+      "domain": "other",
+      "achievement_or_event": "出席市委专题会议，参与全市工作部署",
+      "role_in_event": "出席会议",
+      "measurable_outcome": "参与决策全市工业、项目、城镇建设等工作方向",
+      "location": "广德市",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2026年7月",
+      "domain": "other",
+      "achievement_or_event": "全市二季度安防委（扩大）暨防汛抗旱工作会议",
+      "role_in_event": "领导",
+      "measurable_outcome": "安全生产和防汛部署",
+      "location": "广德市",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["政府行政管理"],
+    "secondary_specializations": ["共青团工作"],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party", "群团"],
+    "geographic_pattern": ["广德县（市）", "宣城市", "泾县"],
+    "promotion_velocity": {
+      "summary": "1980年出生，县级市市长（正县级），40岁左右晋升正县级，属较快晋升节奏",
+      "notable_fast_promotions": ["从共青团宣城市委书记（正县级）后任泾县县委副书记，再任广德市市长"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "多次赴乡镇基层调研（新杭镇等）",
+        "confidence": "plausible",
+        "source_ids": ["S003"]
+      },
+      {
+        "trait": "pragmatic",
+        "evidence": "参与经济、安全、防汛等具体工作部署",
+        "confidence": "plausible",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": ["经济发展", "安全生产", "民生保障"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现有关钱会的纪律处分、审计问题或负面媒体报道",
+      "date": "2026-07-16",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "广德市人民政府—钱会个人简介",
+      "url": "https://www.guangde.gov.cn/SiteLeader/21.html",
+      "publisher": "广德市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方个人简介含完整履历概要"
+    },
+    {
+      "id": "S002",
+      "title": "市委专题会议召开",
+      "url": "https://www.guangde.gov.cn/News/show/1720694.html",
+      "publisher": "广德市人民政府",
+      "published_at": "2026-07-09",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认市长参与市四大班子议事"
+    },
+    {
+      "id": "S003",
+      "title": "钱会赴新杭镇调研",
+      "url": "https://www.guangde.gov.cn/News/show/1720261.html",
+      "publisher": "广德市人民政府",
+      "published_at": "2026-07-06",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "市长调研活动"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "钱会各段职务的具体任职起止时间不明，教育背景仅知研究生学历，具体院校和专业未知"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "钱会各段职务的具体起止年月是什么？",
+      "why_it_matters": "精确的时间线对于分析晋升速度和关系网络重叠期至关重要",
+      "suggested_queries": ["钱会 县长 副县长 任职时间", "钱会 共青团宣城市委 任职时间", "钱会 泾县县委副书记 任职时间"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "钱会的籍贯和出生地是哪里？",
+      "why_it_matters": "用于地域关联分析和人员去重",
+      "suggested_queries": ["钱会 安徽 广德", "钱会 籍贯"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "medium",
+      "question": "钱会的研究生学历具体院校和专业是什么？",
+      "why_it_matters": "教育背景可揭示同学校友关系",
+      "suggested_queries": ["钱会 研究生 毕业院校"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}
