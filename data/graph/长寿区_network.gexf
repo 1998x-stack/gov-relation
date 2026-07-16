@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>重庆市长寿区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pcs_jiang_xia" label="江夏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记、长寿经开区党工委书记"/>
+          <attvalue for="2" value="中共重庆市长寿区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_li_maotao" label="李茂涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcs_shi_mengming" label="师明萌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议重庆市长寿区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_ran_hong" label="冉洪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="经开区党工委副书记、管委会主任"/>
+          <attvalue for="2" value="重庆市长寿经济技术开发区"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcs_jing_kaiyuan" label="靖开媛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_shi_shaolin" label="石少林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_liu_chaoyu" label="刘朝煜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_jiang_famao" label="江发茂">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_tu_qing" label="涂庆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_jiang_faping" label="蒋发平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_zou_xiangming" label="邹翔名">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_li_jia" label="李佳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="重庆市长寿区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_deng_jun" label="邓军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、办公室主任"/>
+          <attvalue for="2" value="重庆市长寿区人民政府办公室"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_li_yuanyuan" label="李源源">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共重庆市长寿区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_hu_hongbing" label="胡红兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+          <attvalue for="2" value="中共重庆市长寿区委统战部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_zhang_mingwan" label="张明万">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+          <attvalue for="2" value="中共重庆市长寿区委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcs_liu_xiaoqiang" label="刘小强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任区委书记(2021-2024)"/>
+          <attvalue for="2" value="中共重庆市长寿区委员会(前)"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pcs_dai_ming" label="戴明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任区长(2020-2025)"/>
+          <attvalue for="2" value="重庆市长寿区人民政府(前)"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="ocs_party_committee" label="中共重庆市长寿区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共重庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_gov" label="重庆市长寿区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_gov_office" label="重庆市长寿区人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="长寿区政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_etz" label="重庆市长寿经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_discipline" label="中共重庆市长寿区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="重庆市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_united_front" label="中共重庆市长寿区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="长寿区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_political_legal" label="中共重庆市长寿区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="长寿区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocs_cppcc" label="中国人民政治协商会议重庆市长寿区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="重庆市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="pcs_jiang_xia" target="ocs_party_committee" label="区委书记、长寿经开区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记、长寿经开区党工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="pcs_jiang_xia" target="ocs_etz" label="长寿经开区党工委书记(兼)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="长寿经开区党工委书记(兼)"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="pcs_jiang_xia" target="ocs_gov" label="重庆市水利局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市水利局党组书记、局长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="pcs_jiang_xia" target="ocs_gov" label="忠县县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="忠县县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="pcs_jiang_xia" target="ocs_gov" label="忠县县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="忠县县委副书记、县长"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="pcs_jiang_xia" target="ocs_gov" label="江津区委常委、双福新区党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江津区委常委、双福新区党委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="pcs_jiang_xia" target="ocs_gov" label="大渡口区委组织部、区委办" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="大渡口区委组织部、区委办"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="pcs_jiang_xia" target="ocs_gov" label="大渡口区团委副书记、书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="大渡口区团委副书记、书记"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="pcs_jiang_xia" target="ocs_gov" label="重钢实验校、重钢子弟小学教师" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重钢实验校、重钢子弟小学教师"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="pcs_jiang_xia" target="ocs_gov" label="履历缺口(需补充)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口(需补充)"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="pcs_li_maotao" target="ocs_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="pcs_li_maotao" target="ocs_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="pcs_li_maotao" target="ocs_gov" label="云阳县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="云阳县委副书记、县长"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="pcs_li_maotao" target="ocs_gov" label="重庆市发改委党组成员、副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市发改委党组成员、副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="pcs_li_maotao" target="ocs_gov" label="重庆市发改委固定资产投资处处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市发改委固定资产投资处处长"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="pcs_li_maotao" target="ocs_gov" label="重庆市发改委固定资产投资处副处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市发改委固定资产投资处副处长"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="pcs_li_maotao" target="ocs_gov" label="重庆市发改委交通处副处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市发改委交通处副处长"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="pcs_li_maotao" target="ocs_gov" label="重庆市发改委工作" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市发改委工作"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="pcs_jing_kaiyuan" target="ocs_gov" label="区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="pcs_jing_kaiyuan" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="pcs_shi_shaolin" target="ocs_gov" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="pcs_shi_shaolin" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="pcs_liu_chaoyu" target="ocs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="pcs_liu_chaoyu" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="pcs_jiang_famao" target="ocs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="pcs_jiang_famao" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="pcs_tu_qing" target="ocs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="pcs_tu_qing" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="pcs_jiang_faping" target="ocs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="pcs_jiang_faping" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="pcs_zou_xiangming" target="ocs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="pcs_zou_xiangming" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="pcs_li_jia" target="ocs_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="pcs_li_jia" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="pcs_deng_jun" target="ocs_gov_office" label="区政府党组成员、办公室主任、外事办主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员、办公室主任、外事办主任"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="pcs_deng_jun" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="pcs_shi_mengming" target="ocs_cppcc" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="pcs_shi_mengming" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="pcs_ran_hong" target="ocs_etz" label="经开区党工委副书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="经开区党工委副书记、管委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="pcs_ran_hong" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="pcs_li_yuanyuan" target="ocs_discipline" label="区委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="pcs_li_yuanyuan" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="pcs_hu_hongbing" target="ocs_united_front" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="pcs_hu_hongbing" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="pcs_zhang_mingwan" target="ocs_political_legal" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="pcs_zhang_mingwan" target="ocs_gov" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="pcs_liu_xiaoqiang" target="ocs_party_committee" label="区委书记(前)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记(前)"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="pcs_liu_xiaoqiang" target="ocs_gov" label="重庆市九龙坡区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市九龙坡区委副书记、区长"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="pcs_dai_ming" target="ocs_gov" label="区长(前)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长(前)"/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="pcs_dai_ming" target="ocs_gov" label="万盛经开区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="万盛经开区党工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="pcs_jiang_xia" target="pcs_li_maotao" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="pcs_jiang_xia" target="pcs_jing_kaiyuan" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="pcs_jiang_xia" target="pcs_shi_shaolin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区委常委副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="pcs_jiang_xia" target="pcs_jiang_faping" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与分管经济的副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="pcs_jiang_xia" target="pcs_li_yuanyuan" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="pcs_jiang_xia" target="pcs_ran_hong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记(兼经开区党工委书记)与经开区管委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="pcs_li_maotao" target="pcs_jing_kaiyuan" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常务副区长（区政府日常运作）"/>
+        </attvalues>
+      </edge>
+      <edge id="58" source="pcs_li_maotao" target="pcs_shi_shaolin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常委副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="59" source="pcs_li_maotao" target="pcs_liu_chaoyu" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与分管水利副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="60" source="pcs_li_maotao" target="pcs_jiang_faping" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与分管产业副区长（经常同场调研）"/>
+        </attvalues>
+      </edge>
+      <edge id="61" source="pcs_li_maotao" target="pcs_zou_xiangming" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长（2026-07-15同场调研政协提案）"/>
+        </attvalues>
+      </edge>
+      <edge id="62" source="pcs_jing_kaiyuan" target="pcs_jiang_faping" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="常务副区长与副区长的政府内部协作"/>
+        </attvalues>
+      </edge>
+      <edge id="63" source="pcs_jiang_xia" target="pcs_liu_xiaoqiang" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="江夏2024年12月接替刘小强任长寿区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="64" source="pcs_li_maotao" target="pcs_dai_ming" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="李茂涛2025年10月接替戴明任长寿区长"/>
+        </attvalues>
+      </edge>
+      <edge id="65" source="pcs_li_maotao" target="pcs_dai_ming" label="same_system" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="李茂涛与戴明均出身重庆市发改委系统，可能互有交集"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
