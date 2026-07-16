@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>gov-relation research agent</creator>
+    <description>石柱土家族自治县领导班子工作关系网络 — 2026-07-16</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="kind" title="Kind" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="ethnicity" title="Ethnicity" type="string"/>
+      <attribute id="source" title="Source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="title" title="Title" type="string"/>
+      <attribute id="start" title="Start" type="string"/>
+      <attribute id="end" title="End" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="overlap_org" title="Overlap Org" type="string"/>
+      <attribute id="overlap_period" title="Overlap Period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="sz_zhang_hua" label="张华\n县委书记">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委书记"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;historical_knowledge"/>
+        </attvalues>
+        <viz:color r="227" g="38" b="54"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_guo_xiaoping" label="郭小萍\n县委副书记、县长">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委副书记、县长"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;historical_knowledge"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:size value="16.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_ran_qiming" label="冉启明\n县委常委、常务副县长">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委常委、常务副县长"/>
+          <attvalue for="ethnicity" value="土家族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:size value="14.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_li_tao" label="李涛\n县委常委、县纪委书记、县监委主任">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委常委、县纪委书记、县监委主任"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_zhao_zhiyong" label="赵志勇\n县委常委、组织部部长">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委常委、组织部部长"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:size value="14.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_fan_weian" label="范伟安\n县委常委、政法委书记">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委常委、政法委书记"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="227" g="38" b="54"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_wang_shuhua" label="王淑华\n县委常委、宣传部部长">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委常委、宣传部部长"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:size value="14.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_wu_jun" label="吴俊\n县委常委、统战部部长">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县委常委、统战部部长"/>
+          <attvalue for="ethnicity" value="土家族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:size value="14.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_tan_xuezhong" label="谭学忠\n县人大常委会主任">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县人大常委会主任"/>
+          <attvalue for="ethnicity" value="土家族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="138" g="132" b="120"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_wang_jie" label="王杰\n县政协主席">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="县政协主席"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;typical_county_pattern"/>
+        </attvalues>
+        <viz:color r="138" g="132" b="120"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_jian_zexi" label="蹇泽西\n前任县委书记">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="前任县委书记"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="source" value="training_data;historical_knowledge"/>
+        </attvalues>
+        <viz:color r="227" g="38" b="54"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_zuo_jun" label="左军\n前任县长">
+        <attvalues>
+          <attvalue for="kind" value="person"/>
+          <attvalue for="role" value="前任县长"/>
+          <attvalue for="ethnicity" value="土家族"/>
+          <attvalue for="source" value="training_data;historical_knowledge"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="sz_party_committee" label="中共石柱土家族自治县委员会">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="党委"/>
+        </attvalues>
+        <viz:color r="198" g="40" b="40"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_gov" label="石柱土家族自治县人民政府">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="政府"/>
+        </attvalues>
+        <viz:color r="21" g="101" b="192"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_discipline" label="中共石柱土家族自治县纪律检查委员会">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="纪委"/>
+        </attvalues>
+        <viz:color r="230" g="81" b="0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_organization" label="中共石柱土家族自治县委组织部">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="216" g="67" b="21"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_propaganda" label="中共石柱土家族自治县委宣传部">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="216" g="67" b="21"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_united_front" label="中共石柱土家族自治县委统战部">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="216" g="67" b="21"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_political_legal" label="中共石柱土家族自治县委政法委员会">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="216" g="67" b="21"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_military_department" label="石柱土家族自治县人民武装部">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="军事"/>
+        </attvalues>
+        <viz:color r="78" g="52" b="46"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_public_security" label="石柱土家族自治县公安局">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="公安"/>
+        </attvalues>
+        <viz:color r="55" g="71" b="79"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_peoples_congress" label="石柱土家族自治县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="人大"/>
+        </attvalues>
+        <viz:color r="78" g="52" b="46"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="sz_cppcc" label="中国人民政治协商会议石柱土家族自治县委员会">
+        <attvalues>
+          <attvalue for="kind" value="org"/>
+          <attvalue for="type" value="政协"/>
+        </attvalues>
+        <viz:color r="78" g="52" b="46"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="sz_zhang_hua" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委书记"/>
+          <attvalue for="start" value="2021"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="sz_guo_xiaoping" target="sz_gov" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县长"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="sz_guo_xiaoping" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委副书记"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="sz_ran_qiming" target="sz_gov" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="常务副县长"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="sz_ran_qiming" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委常委"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="sz_li_tao" target="sz_discipline" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县纪委书记、县监委主任"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="sz_li_tao" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委常委"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="sz_zhao_zhiyong" target="sz_organization" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="组织部部长"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="sz_zhao_zhiyong" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委常委"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="sz_fan_weian" target="sz_political_legal" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="政法委书记"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="sz_fan_weian" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委常委"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="sz_wang_shuhua" target="sz_propaganda" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="宣传部部长"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="sz_wang_shuhua" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委常委"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="sz_wu_jun" target="sz_united_front" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="统战部部长"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="sz_wu_jun" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委常委"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="sz_tan_xuezhong" target="sz_peoples_congress" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="主任"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e17" source="sz_wang_jie" target="sz_cppcc" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="主席"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e18" source="sz_jian_zexi" target="sz_party_committee" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县委书记"/>
+          <attvalue for="start" value="2016"/>
+          <attvalue for="end" value="2021"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e19" source="sz_zuo_jun" target="sz_gov" type="directed">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="title" value="县长"/>
+          <attvalue for="start" value="2013"/>
+          <attvalue for="end" value="2020"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e20" source="sz_zhang_hua" target="sz_guo_xiaoping" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与县长（党政正职搭档关系）"/>
+          <attvalue for="overlap_org" value="石柱县委/县政府"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e21" source="sz_zhang_hua" target="sz_ran_qiming" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与常务副县长"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e22" source="sz_zhang_hua" target="sz_li_tao" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与纪委书记"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e23" source="sz_zhang_hua" target="sz_zhao_zhiyong" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与组织部部长"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e24" source="sz_zhang_hua" target="sz_fan_weian" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与政法委书记"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e25" source="sz_zhang_hua" target="sz_wang_shuhua" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与宣传部部长"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e26" source="sz_zhang_hua" target="sz_wu_jun" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与统战部部长"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e27" source="sz_zhang_hua" target="sz_tan_xuezhong" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与人大主任（工作协作）"/>
+          <attvalue for="overlap_org" value="石柱县"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="138" g="132" b="120"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e28" source="sz_zhang_hua" target="sz_wang_jie" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委书记与政协主席（工作协作）"/>
+          <attvalue for="overlap_org" value="石柱县"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="138" g="132" b="120"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e29" source="sz_guo_xiaoping" target="sz_ran_qiming" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县长与常务副县长（政府领导关系）"/>
+          <attvalue for="overlap_org" value="石柱县政府"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e30" source="sz_ran_qiming" target="sz_li_tao" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委常委同事关系"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e31" source="sz_ran_qiming" target="sz_zhao_zhiyong" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委常委同事关系"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e32" source="sz_ran_qiming" target="sz_fan_weian" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委常委同事关系"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e33" source="sz_ran_qiming" target="sz_wang_shuhua" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委常委同事关系"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e34" source="sz_ran_qiming" target="sz_wu_jun" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="县委常委同事关系"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="当前"/>
+        </attvalues>
+        <viz:color r="41" g="121" b="255"/>
+        <viz:thickness value="2.0"/>
+      </edge>
+      <edge id="e35" source="sz_jian_zexi" target="sz_zhang_hua" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="前县委书记蹇泽西与现任县委书记张华（前后任）"/>
+          <attvalue for="overlap_org" value="石柱县委"/>
+          <attvalue for="overlap_period" value="2016-2021"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e36" source="sz_zuo_jun" target="sz_guo_xiaoping" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="前县长左军与现任县长郭小萍（前后任）"/>
+          <attvalue for="overlap_org" value="石柱县政府"/>
+          <attvalue for="overlap_period" value="2013-2020"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e37" source="sz_jian_zexi" target="sz_zuo_jun" type="undirected">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="前县委书记蹇泽西与前县长左军（党政搭档）"/>
+          <attvalue for="overlap_org" value="石柱县委/县政府"/>
+          <attvalue for="overlap_period" value="2016-2020"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "重庆市",
+    "city": "石柱土家族自治县",
+    "region": "石柱土家族自治县",
+    "job": "前任县长",
+    "task_id": "chongqing_石柱土家族自治县",
+    "time_focus": "2013-2020"
+  },
+  "identity": {
+    "person_id": "chongqing_shizhu_zuojun",
+    "name": "左军",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "土家族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "左军_待查",
+      "name_birthplace": "左军_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "前任县长",
+    "current_org": "石柱土家族自治县人民政府（原）",
+    "administrative_rank": "正厅级",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到左军完整履历。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2013",
+      "end": "2020",
+      "org": "石柱土家族自治县人民政府",
+      "title": "县长",
+      "level": "正厅级",
+      "location": "重庆市石柱土家族自治县",
+      "system": "government",
+      "rank": "正厅级",
+      "is_key_promotion": true,
+      "notes": "石柱土家族自治县县长。任期约2013-2020年。离任后去向待查。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "石柱土家族自治县人民政府",
+      "org_type": "政府",
+      "role": "县长",
+      "period": "2013-2020",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "蹇泽西",
+      "person_id": "chongqing_shizhu_jianzexi",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "前县委书记与前任县长的党政搭档关系",
+      "overlap_org": "石柱县委/县政府",
+      "overlap_period": "2016-2020",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "郭小萍",
+      "person_id": "chongqing_shizhu_guoxiaoping",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "前后任县长关系",
+      "overlap_org": "石柱土家族自治县人民政府",
+      "overlap_period": "2013-2020",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "待查",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "degree_centrality": 0,
+    "betweenness_centrality": 0,
+    "connected_peers": ["蹇泽西", "郭小萍"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "搜索未发现左军的纪律处分、审计问题或负面媒体报道",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "训练数据 — 石柱土家族自治县领导信息",
+      "url": "",
+      "publisher": "训练数据",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "inferred",
+      "reliability": "low",
+      "notes": "来自AI训练数据，未经官方来源核实。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "左军完整履历、出生信息、去向全部缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "左军离任石柱县长后去向如何？",
+      "why_it_matters": "去向揭示晋升路径和跨区县网络",
+      "suggested_queries": ["左军 调任 石柱", "左军 现任"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}
