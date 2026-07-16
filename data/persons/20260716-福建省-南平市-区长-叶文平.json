@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "南平市",
+    "region": "延平区",
+    "job": "区长",
+    "task_id": "fujian_延平区",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "fujian_nanping_yanping_yewenping",
+    "name": "叶文平",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "叶文平_",
+      "name_birthplace": "叶文平_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "延平区委副书记、区长",
+    "current_org": "延平区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到叶文平任延平区长前的完整履历。仅从延平区人民政府官网确认其在任。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中共延平区委员会",
+      "org_type": "党委",
+      "org_level": "县处级",
+      "role": "副书记",
+      "period": "至今",
+      "source_ids": ["S001"]
+    },
+    {
+      "org_name": "延平区人民政府",
+      "org_type": "政府",
+      "org_level": "县处级",
+      "role": "区长",
+      "period": "至今",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "何明星",
+      "person_id": "fujian_nanping_yanping_hemingxing",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "叶文平（区长）与何明星（区委书记）为延平区党政正职搭档",
+      "overlap_org": "延平区",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "邵良辉",
+      "person_id": "fujian_nanping_yanping_shaolianghui",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "叶文平（区长）与邵良辉（常委、副区长）为直接上下级关系",
+      "overlap_org": "延平区人民政府",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "缺少公开履历数据，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality_in_graph": "high",
+    "connections_count": 10,
+    "role_in_network": "核心领导"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现叶文平相关的违纪、审查或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "延平区人民政府官网 - 首页领导信息",
+      "url": "http://www.ypzf.gov.cn",
+      "publisher": "延平区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "政府官网首页显示'区长：叶文平'及副区长名单"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "叶文平的出生年份、籍贯、教育背景、入党时间、参加工作时间以及任延平区长前的完整履历均未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "叶文平的出生年份、籍贯、教育背景是？",
+      "why_it_matters": "身份确认和去重的基本信息",
+      "suggested_queries": ["叶文平 百度百科", "叶文平 简历", "延平区长 叶文平 出生"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "critical",
+      "question": "叶文平何时开始担任延平区长？调任前任何职？",
+      "why_it_matters": "填补核心履历空白",
+      "suggested_queries": ["叶文平 任延平区长", "延平区长 任命", "叶文平 前任职务"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "叶文平的前任区长是谁？",
+      "why_it_matters": "理解区长职务的交接链条和晋升路径",
+      "suggested_queries": ["延平区前任区长", "延平区长 历任"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}
