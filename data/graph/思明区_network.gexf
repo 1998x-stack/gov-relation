@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Sisyphus Research Agent</creator>
+    <description>思明区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="sm_1" label="陈通汕 (思明区委书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="思明区委书记"/>
+          <attvalue for="2" value="中共思明区委"/>
+          <attvalue for="3" value="1969-11"/>
+          <attvalue for="4" value="广东大埔"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="sm_2" label="苏国辉 (思明区委副书记、区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="思明区委副书记、区长"/>
+          <attvalue for="2" value="思明区人民政府"/>
+          <attvalue for="3" value="1977-01"/>
+          <attvalue for="4" value="福建龙岩"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="sm_3" label="吕永辉 (思明区人大常委会主任)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="思明区人大常委会主任"/>
+          <attvalue for="2" value="思明区人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="sm_4" label="占兆文 (思明区委常委、常务副区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="思明区委常委、常务副区长"/>
+          <attvalue for="2" value="思明区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="sm_5" label="吴鲤鹏 (思明区委常委、区纪委书记、区监委主任)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="思明区委常委、区纪委书记、区监委主任"/>
+          <attvalue for="2" value="中共思明区纪律检查委员会"/>
+          <attvalue for="3" value="1978-10"/>
+          <attvalue for="4" value="福建安溪"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="sm_6" label="林重阳 (厦门市政协副主席（原思明区委书记）)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="厦门市政协副主席（原思明区委书记）"/>
+          <attvalue for="2" value="政协厦门市委员会"/>
+          <attvalue for="3" value="1967-03"/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="sm_7" label="王意达 (思明区副区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="思明区副区长"/>
+          <attvalue for="2" value="思明区人民政府"/>
+          <attvalue for="3" value="1974-01"/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="sm_org_1" label="中共思明区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="正厅级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="sm_org_2" label="思明区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正厅级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="sm_org_3" label="思明区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="正厅级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="sm_org_4" label="政协厦门市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="副省级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="sm_org_5" label="中共思明区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="正处级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="180"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="sm_org_6" label="思明区监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="正处级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="180"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="sm_1" target="sm_org_1" label="陈通汕 → 中共思明区委 (思明区委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="sm_1" target="sm_org_2" label="陈通汕 → 思明区人民政府 (思明区区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="sm_2" target="sm_org_2" label="苏国辉 → 思明区人民政府 (思明区委副书记、区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委副书记、区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="sm_2" target="sm_org_2" label="苏国辉 → 思明区人民政府 (思明区副区长、代理区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区副区长、代理区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="sm_3" target="sm_org_3" label="吕永辉 → 思明区人大常委会 (思明区人大常委会主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="sm_4" target="sm_org_2" label="占兆文 → 思明区人民政府 (思明区委常委、常务副区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委常委、常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="sm_5" target="sm_org_5" label="吴鲤鹏 → 中共思明区纪律检查委员会 (思明区委常委、纪委书记、监委主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委常委、纪委书记、监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="sm_7" target="sm_org_2" label="王意达 → 思明区人民政府 (思明区副区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="sm_6" target="sm_org_1" label="林重阳 → 中共思明区委 (思明区委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="思明区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="sm_6" target="sm_org_4" label="林重阳 → 政协厦门市委员会 (厦门市政协副主席)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="sm_1" target="sm_org_1" label="陈通汕 → 中共思明区委 (厦门市委组织部干部三处处长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市委组织部干部三处处长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="sm_1" target="sm_org_2" label="陈通汕 → 思明区人民政府 (厦门市政府副秘书长、办公厅主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市政府副秘书长、办公厅主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="sm_2" target="sm_org_2" label="苏国辉 → 思明区人民政府 (厦门市政府办公厅经济社会二处处长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市政府办公厅经济社会二处处长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="sm_2" target="sm_org_2" label="苏国辉 → 思明区人民政府 (厦门市政府副秘书长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市政府副秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="sm_2" target="sm_org_1" label="苏国辉 → 中共思明区委 (厦门市集美区委副书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市集美区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="sm_1" target="sm_2" label="陈通汕（区委书记）与苏国辉（区长）党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈通汕（区委书记）与苏国辉（区长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="sm_1" target="sm_3" label="区委书记与人大主任搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与人大主任搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="sm_6" target="sm_1" label="林重阳→陈通汕 思明区委书记交接(2025.05)" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林重阳→陈通汕 思明区委书记交接(2025.05)"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="sm_1" target="sm_2" label="陈通汕→苏国辉 思明区长交接(2025.07)" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈通汕→苏国辉 思明区长交接(2025.07)"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="sm_1" target="sm_4" label="区委书记与常务副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="sm_1" target="sm_5" label="区委书记与纪委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="sm_2" target="sm_4" label="区长与常务副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="sm_2" target="sm_5" label="区长与纪委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="sm_3" target="sm_2" label="人大主任与区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="人大主任与区长"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
