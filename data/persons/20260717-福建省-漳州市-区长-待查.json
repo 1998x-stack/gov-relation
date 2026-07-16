@@ -4,13 +4,13 @@
   "investigation_scope": {
     "province": "福建省",
     "city": "漳州市",
-    "region": "龙文区",
+    "region": "长泰区",
     "job": "区长",
-    "task_id": "fujian_龙文区",
+    "task_id": "fujian_长泰区",
     "time_focus": "2026-07"
   },
   "identity": {
-    "person_id": "longwen_quzhang_daicha",
+    "person_id": "changtai_quzhang_daicha",
     "name": "（区长待查）",
     "aliases": [],
     "gender": "",
@@ -24,12 +24,12 @@
     "dedupe_keys": {
       "name_birth": "未知_未知",
       "name_birthplace": "未知_未知",
-      "official_profile_url": ""
+      "official_profile_url": "http://www.changtai.gov.cn/"
     }
   },
   "current_status": {
-    "current_post": "龙文区区长",
-    "current_org": "漳州市龙文区人民政府",
+    "current_post": "长泰区区长",
+    "current_org": "漳州市长泰区人民政府",
     "administrative_rank": "正处级",
     "as_of": "2026-07-17",
     "is_current_confirmed": false,
@@ -41,7 +41,7 @@
       "end": "未知",
       "org": "履历缺口",
       "title": "",
-      "notes": "现任龙文区区长身份完全未知——公开资料（Wikipedia、新闻搜索、政府网站）均未能确认其姓名",
+      "notes": "现任长泰区区长身份尚未从公开信息中确认。政府网站(changtai.gov.cn)无法访问；Google、百度搜索受限；CCTV搜索结果未包含明确的区长信息。",
       "confidence": "unverified",
       "source_ids": []
     }
@@ -56,7 +56,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "完全未知",
+      "summary": "缺乏身份信息，无法评估",
       "notable_fast_promotions": []
     }
   },
@@ -64,7 +64,7 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "无公开信息，无法评估"
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
   "network_metrics": {},
   "risk_and_integrity_signals": [],
@@ -74,21 +74,28 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "龙文区区长姓名、性别、履历等全部身份信息均为未知"
+    "biggest_gap": "长泰区现任区长的姓名、身份、履历等全部信息均无法从公开途径获取。"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "龙文区区长是谁？姓名、性别、出生年月、籍贯？",
-      "why_it_matters": "区长是龙文区核心领导之一，与区委书记搭档，身份未知意味着完整的核心关系网络无法建立",
-      "suggested_queries": ["龙文区区长 2026", "龙文区人民政府 区长 任命", "漳州龙文区长"],
+      "question": "长泰区现任区长是谁？",
+      "why_it_matters": "区长是县级行政区二把手，是网络图谱的核心节点之一。",
+      "suggested_queries": ["长泰区 区长 2026", "长泰区 人民政府 区长", "长泰区 区长 任命", "changtai district mayor zhangzhou"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "critical",
+      "question": "长泰区区长何时上任？前任区长是谁？",
+      "why_it_matters": "区长更替信息有助于构建区长链和判断政治变动。",
+      "suggested_queries": ["长泰区 前任区长", "长泰区 区长 免职"],
       "last_attempted": "2026-07-17"
     },
     {
       "priority": "high",
-      "question": "龙文区区长何时上任？此前担任什么职务？",
-      "why_it_matters": "了解其晋升路径和与区委书记的关系",
-      "suggested_queries": ["龙文区区长 任职", "龙文区 区长 此前 担任"],
+      "question": "长泰区区长是否同时担任区委副书记？",
+      "why_it_matters": "按照常规，区长通常兼任区委副书记，但需要确认。",
+      "suggested_queries": ["长泰区 区委副书记"],
       "last_attempted": "2026-07-17"
     }
   ]
