@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>重庆市巫溪县领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pwx_li_weidong" label="李卫东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委书记"/>
+          <attvalue for="2" value="中共重庆市巫溪县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pwx_wang_zhong" label="王中">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委副书记、县长"/>
+          <attvalue for="2" value="重庆市巫溪县人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pwx_deputy_secretary" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委副书记（专职）"/>
+          <attvalue for="2" value="中共重庆市巫溪县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pwx_executive_deputy" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、常务副县长"/>
+          <attvalue for="2" value="重庆市巫溪县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pwx_discipline_head" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共重庆市巫溪县纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pwx_org_head" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+          <attvalue for="2" value="中共重庆市巫溪县委组织部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pwx_political_legal" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+          <attvalue for="2" value="中共重庆市巫溪县委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pwx_propaganda_head" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共重庆市巫溪县委宣传部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pwx_united_front" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+          <attvalue for="2" value="中共重庆市巫溪县委统战部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="owx_party_committee" label="中共重庆市巫溪县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共重庆市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_gov" label="重庆市巫溪县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="重庆市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_org_department" label="中共重庆市巫溪县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="巫溪县委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_discipline" label="中共重庆市巫溪县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="重庆市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_propaganda" label="中共重庆市巫溪县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="巫溪县委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_united_front" label="中共重庆市巫溪县委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="巫溪县委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_political_legal" label="中共重庆市巫溪县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="巫溪县委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_public_security" label="巫溪县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="重庆市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_peoples_congress" label="巫溪县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="重庆市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="owx_cppcc" label="中国人民政治协商会议巫溪县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="重庆市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="pwx_li_weidong" target="owx_party_committee" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="pwx_li_weidong" target="owx_org_department" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="pwx_wang_zhong" target="owx_gov" label="县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="pwx_wang_zhong" target="owx_party_committee" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="pwx_wang_zhong" target="owx_org_department" label="履历缺口" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="pwx_deputy_secretary" target="owx_party_committee" label="县委副书记（专职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委副书记（专职）"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="pwx_executive_deputy" target="owx_gov" label="县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、常务副县长"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="pwx_discipline_head" target="owx_discipline" label="县委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、纪委书记、监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="pwx_org_head" target="owx_org_department" label="县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="pwx_political_legal" target="owx_political_legal" label="县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="pwx_propaganda_head" target="owx_propaganda" label="县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="pwx_united_front" target="owx_united_front" label="县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="pwx_li_weidong" target="pwx_wang_zhong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记与县长党政正职搭档。"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
