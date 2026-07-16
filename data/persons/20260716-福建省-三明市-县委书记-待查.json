@@ -4,14 +4,14 @@
   "investigation_scope": {
     "province": "福建省",
     "city": "三明市",
-    "region": "宁化县",
+    "region": "将乐县",
     "job": "县委书记",
-    "task_id": "fujian_宁化县",
-    "time_focus": "present"
+    "task_id": "fujian_将乐县",
+    "time_focus": "current as of 2026-07-16"
   },
   "identity": {
-    "person_id": "fujian_nignhua_daicha",
-    "name": "（待查·县委书记）",
+    "person_id": "fujian_sanming_jiangle_secretary_unknown",
+    "name": "（待查）",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
@@ -28,23 +28,25 @@
     }
   },
   "current_status": {
-    "current_post": "宁化县委书记",
-    "current_org": "中共宁化县委员会",
-    "administrative_rank": "县处级",
+    "current_post": "县委书记",
+    "current_org": "中共将乐县委员会",
+    "administrative_rank": "正处级",
     "as_of": "2026-07-16",
     "is_current_confirmed": false,
     "source_ids": []
   },
-  "career_timeline": [],
-  "organizations": [
+  "career_timeline": [
     {
-      "org_id": 1,
-      "name": "中共宁化县委员会",
-      "type": "党委",
-      "level": "县处级",
-      "location": "福建省三明市宁化县"
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料完全未知：将乐县人民政府网站(jiangle.gov.cn)不可达、百度百科403、所有搜索源均被网络限制。需要人工通过可访问的网络环境查询。",
+      "confidence": "unverified",
+      "source_ids": []
     }
   ],
+  "organizations": [],
   "relationships": [],
   "governance_record": [],
   "professional_profile": {
@@ -54,7 +56,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "履历不详",
+      "summary": "完全未知",
       "notable_fast_promotions": []
     }
   },
@@ -62,52 +64,81 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "Work style is inferred from public records, not private psychological assessment."
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
   "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "因县委书记姓名未知，无法查证",
-      "date": "",
+      "description": "因姓名未知，无法搜索任何纪律或负面信息",
+      "date": "2026-07-16",
       "confidence": "unverified",
       "source_ids": []
     }
   ],
-  "source_register": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "将乐县人民政府官方网站 — 领导之窗页面",
+      "url": "https://www.jiangle.gov.cn/ldzc/",
+      "publisher": "将乐县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "不可达 — 网络连接超时"
+    },
+    {
+      "id": "S002",
+      "title": "百度百科 — 将乐县",
+      "url": "https://baike.baidu.com/item/%E5%B0%86%E4%B9%90%E5%8E%BF",
+      "publisher": "百度",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "403 Forbidden"
+    },
+    {
+      "id": "S003",
+      "title": "维基百科中文 — 将乐县",
+      "url": "https://zh.wikipedia.org/wiki/%E5%B0%86%E4%B9%90%E5%8E%BF",
+      "publisher": "维基百科",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "仅有县情介绍，无领导信息"
+    }
+  ],
   "confidence_summary": {
     "identity": "unverified",
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "县委书记姓名及全部履历信息均未获取"
+    "biggest_gap": "县委书记姓名完全未知 — 所有政府网站和百科源均不可达"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "宁化县现任县委书记姓名",
-      "why_it_matters": "完成一把手身份确认",
+      "question": "将乐县现任县委书记是谁？",
+      "why_it_matters": "核心目标人物的身份识别是构建整个关系网络的起点",
       "suggested_queries": [
-        "宁化县 县委书记 现任 2025 2026",
-        "宁化县委书记 任免"
+        "将乐县 县委书记 2026",
+        "2026年 将乐县 领导分工",
+        "三明市 将乐县 书记 ldzc",
+        "site:jiangle.gov.cn 书记"
       ],
       "last_attempted": "2026-07-16"
     },
     {
       "priority": "critical",
-      "question": "宁化县委书记的出生日期、籍贯、教育背景",
-      "why_it_matters": "便于身份确认和与其他官员的关联分析",
+      "question": "将乐县现任县长是谁？",
+      "why_it_matters": "核心目标人物的身份识别",
       "suggested_queries": [
-        "宁化县委书记 简历"
-      ],
-      "last_attempted": "2026-07-16"
-    },
-    {
-      "priority": "high",
-      "question": "宁化县委书记的前任及继任信息",
-      "why_it_matters": "建立县委书记的职务变迁链条",
-      "suggested_queries": [
-        "宁化县 历任县委书记"
+        "将乐县 县长 2026",
+        "将乐县 人民政府 县长",
+        "三明市 将乐 县长 任前公示"
       ],
       "last_attempted": "2026-07-16"
     }

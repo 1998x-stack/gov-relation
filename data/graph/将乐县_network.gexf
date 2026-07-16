@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov Relation Research Agent</creator>
+    <description>将乐县领导班子工作关系网络 — Party Secretary & County Mayor: NAMES UNKNOWN (government website unreachable)</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="start" type="string"/>
+      <attribute id="3" title="end" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="jiangle_secretary" label="（待查）县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_mayor" label="（待查）县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委副书记、县长"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_deputy_secretary" label="（待查）专职副书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委专职副书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_executive_vice_mayor" label="（待查）常务副县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、常务副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_discipline_secretary" label="（待查）县纪委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县纪委书记、县监委主任"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_org_minister" label="（待查）组织部部长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_propaganda_minister" label="（待查）宣传部部长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_legal_secretary" label="（待查）政法委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_united_front_minister" label="（待查）统战部部长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_military_commissar" label="（待查）人武部政委">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县人武部政委（或部长）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="jiangle_npc_chair" label="（待查）县人大常委会主任">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会主任"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_ccppcc_chair" label="（待查）县政协主席">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协主席"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_vice_mayor_1" label="（待查）副县长1">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_vice_mayor_2" label="（待查）副县长2">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_vice_mayor_3" label="（待查）副县长3">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_vice_mayor_4" label="（待查）副县长4">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_vice_mayor_5" label="（待查）副县长5">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_vice_mayor_6" label="（待查）副县长6">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_prev_secretary" label="（待查）前任县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（前任县委书记，已离任）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="jiangle_prev_mayor" label="（待查）前任县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（前任县长，已离任）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="org_中共将乐县委员会" label="中共将乐县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_将乐县人民政府" label="将乐县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_中共将乐县纪律检查委员会/将乐县监察委员会" label="中共将乐县纪律检查委员会/将乐县监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_中共将乐县委组织部" label="中共将乐县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_中共将乐县委宣传部" label="中共将乐县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_中共将乐县委政法委员会" label="中共将乐县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_中共将乐县委统一战线工作部" label="中共将乐县委统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_将乐县人民武装部" label="将乐县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_将乐县人民代表大会常务委员会" label="将乐县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_中国人民政治协商会议将乐县委员会" label="中国人民政治协商会议将乐县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="jiangle_secretary" target="org_中共将乐县委员会" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="当前在任"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="jiangle_mayor" target="org_将乐县人民政府" label="县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="当前在任"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="jiangle_deputy_secretary" target="org_中共将乐县委员会" label="县委专职副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="jiangle_executive_vice_mayor" target="org_将乐县人民政府" label="县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="jiangle_discipline_secretary" target="org_中共将乐县纪律检查委员会/将乐县监察委员会" label="县委常委、县纪委书记、县监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="jiangle_org_minister" target="org_中共将乐县委组织部" label="县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="jiangle_propaganda_minister" target="org_中共将乐县委宣传部" label="县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="jiangle_legal_secretary" target="org_中共将乐县委政法委员会" label="县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="jiangle_united_front_minister" target="org_中共将乐县委统一战线工作部" label="县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="jiangle_military_commissar" target="org_将乐县人民武装部" label="县委常委、县人武部政委（或部长）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="jiangle_npc_chair" target="org_将乐县人民代表大会常务委员会" label="县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="jiangle_ccppcc_chair" target="org_中国人民政治协商会议将乐县委员会" label="县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="jiangle_vice_mayor_1" target="org_将乐县人民政府" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="jiangle_vice_mayor_2" target="org_将乐县人民政府" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="jiangle_vice_mayor_3" target="org_将乐县人民政府" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="jiangle_vice_mayor_4" target="org_将乐县人民政府" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="jiangle_vice_mayor_5" target="org_将乐县人民政府" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="jiangle_vice_mayor_6" target="org_将乐县人民政府" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="任职中"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="jiangle_prev_secretary" target="org_中共将乐县委员会（前任）" label="前任县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="jiangle_prev_mayor" target="org_将乐县人民政府（前任）" label="前任县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="jiangle_mayor" target="jiangle_secretary" label="superior_subordinate" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县长在县委书记领导下主持县政府工作"/>
+          <attvalue for="2" value="当前"/>
+          <attvalue for="3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="jiangle_prev_secretary" target="jiangle_secretary" label="predecessor_successor" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="前任县委书记与现任县委书记交接"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="jiangle_prev_mayor" target="jiangle_mayor" label="predecessor_successor" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="前任县长与现任县长交接"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
