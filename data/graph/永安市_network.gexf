@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>China Gov Network Research Agent</creator>
+    <description>永安市 (Yong'an, Sanming, Fujian) — Leadership Network Graph</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="傅天宝">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="永安市市委书记"/>
+          <attvalue for="2" value="中共永安市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="周智伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="永安市代市长"/>
+          <attvalue for="2" value="永安市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="朱昶凯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="池昌江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="永安市委副书记"/>
+          <attvalue for="2" value="中共永安市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="廖艳希">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="永安市人大常委会主任"/>
+          <attvalue for="2" value="永安市人大常委会"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="钟宏华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="永安市政协主席"/>
+          <attvalue for="2" value="政协永安市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共永安市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="永安市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="永安市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协永安市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="p1" target="o1" label="永安市市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="当前任期"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="p2" target="o2" label="永安市代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月起任代市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o1" label="永安市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记兼代市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o2" label="永安市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年6月前在任，后由周智伟接替"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o1" label="永安市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o3" label="永安市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p6" target="o4" label="永安市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="朱昶凯与周智伟为市长职务的前任/继任关系"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="傅天宝（市委书记）与周智伟（代市长）为党政主要领导搭档"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="p4" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="傅天宝（书记）与池昌江（副书记）为党委班子上下级"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p1" target="p5" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="四套班子领导成员"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="p6" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="四套班子领导成员"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
