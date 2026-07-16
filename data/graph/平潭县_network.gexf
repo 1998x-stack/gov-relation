@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>OpenCode china-gov-network Research Agent</creator>
+    <description>平潭县（福建省福州市）领导班子工作关系网络 — 区县合一体制</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="level" type="string"/>
+      <attribute id="3" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pingtan_lai_jun" label="赖军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记、平潭县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="重庆云阳"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pingtan_huang_jianbo" label="黄建波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委副书记、管委会主任、平潭县县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pingtan_wen_xuelin" label="文学林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委副书记、省政协平潭工委主任（兼平潭县政协主席）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_huang_huiyuan" label="黄惠元">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员、纪工委书记、监察工委主任（兼平潭县纪委书记、监委主任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_he_jiemin" label="何杰民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员、管委会副主任（兼平潭县副县长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建永泰"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_chen_xunming" label="陈训明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员、管委会副主任（兼平潭县副县长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建福清"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_fang_liangdong" label="方良栋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员、管委会副主任（兼平潭县副县长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建平潭"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_pan_xinya" label="潘新雅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建永春"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_sun_shuqun" label="孙树群">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任（兼平潭县副县长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建宁化"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_chen_shanguang" label="陈善光">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省人大常委会社会委员会主任委员（已离任平潭）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建连江"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_zhang_zhaomin" label="张兆民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省政协副主席（2026年1月已届满离任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建邵武"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_gong_qinggai" label="龚清概">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="无（已落马）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建石狮"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_lin_wenyao" label="林文耀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已离任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_wu_liyuan" label="吴礼源">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="无（被调查）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福建"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pingtan_party_committee" label="中共平潭县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_exp_zone_party" label="中共福建省委平潭综合实验区工作委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="副厅级"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_gov" label="平潭县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_exp_zone_admin" label="平潭综合实验区管理委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="副厅级"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_discipline" label="平潭县纪律检查委员会 / 平潭县监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_exp_zone_discipline" label="平潭综合实验区纪工委 / 监察工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="副厅级"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_npc" label="平潭县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_cppcc" label="政协平潭县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_haitan" label="平潭县海坛片区管理局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value="乡镇级"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="pingtan_suping" label="平潭县苏平片区管理局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value="乡镇级"/>
+          <attvalue for="3" value="福建省福州市平潭县"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pingtan_lai_jun" target="pingtan_exp_zone_party" label="平潭综合实验区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-08 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pingtan_lai_jun" target="pingtan_party_committee" label="平潭县委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县委书记（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-08 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pingtan_huang_jianbo" target="pingtan_exp_zone_admin" label="平潭综合实验区管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-08 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pingtan_huang_jianbo" target="pingtan_exp_zone_party" label="平潭综合实验区党工委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-08 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pingtan_huang_jianbo" target="pingtan_gov" label="平潭县县长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县县长（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-08 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pingtan_wen_xuelin" target="pingtan_exp_zone_party" label="平潭综合实验区党工委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2024-07 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pingtan_wen_xuelin" target="pingtan_cppcc" label="省政协平潭工委主任（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="省政协平潭工委主任（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2024-07 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pingtan_wen_xuelin" target="pingtan_party_committee" label="平阳县委副书记（分管党群）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平阳县委副书记（分管党群）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2024-07 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pingtan_huang_huiyuan" target="pingtan_exp_zone_discipline" label="平潭综合实验区纪工委书记、监察工委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区纪工委书记、监察工委主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pingtan_huang_huiyuan" target="pingtan_discipline" label="平潭县纪委书记、监委主任（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县纪委书记、监委主任（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="unknown - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pingtan_he_jiemin" target="pingtan_exp_zone_admin" label="平潭综合实验区管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022-09 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pingtan_he_jiemin" target="pingtan_gov" label="平潭县副县长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县副县长（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022-09 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pingtan_chen_xunming" target="pingtan_exp_zone_party" label="平潭综合实验区党工委委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2023-03 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pingtan_chen_xunming" target="pingtan_exp_zone_admin" label="平潭综合实验区管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-05 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pingtan_chen_xunming" target="pingtan_gov" label="平潭县副县长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县副县长（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-05 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pingtan_fang_liangdong" target="pingtan_exp_zone_party" label="平潭综合实验区党工委委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2025-05 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pingtan_fang_liangdong" target="pingtan_exp_zone_admin" label="平潭综合实验区管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022-07 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pingtan_fang_liangdong" target="pingtan_gov" label="平潭县副县长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县副县长（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2016 - 2022-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pingtan_fang_liangdong" target="pingtan_haitan" label="海坛片区管理局党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海坛片区管理局党委书记、局长"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2019 - 2022-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pingtan_pan_xinya" target="pingtan_exp_zone_party" label="平潭综合实验区党工委委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2023-03 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pingtan_sun_shuqun" target="pingtan_exp_zone_admin" label="平潭综合实验区管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2025-03 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pingtan_sun_shuqun" target="pingtan_gov" label="平潭县副县长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县副县长（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2025-03 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pingtan_sun_shuqun" target="pingtan_suping" label="苏平片区管理局党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="苏平片区管理局党委书记、局长"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021 - 2025-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pingtan_chen_shanguang" target="pingtan_exp_zone_party" label="平潭综合实验区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2018-07 - 2021-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pingtan_chen_shanguang" target="pingtan_party_committee" label="平潭县委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县委书记（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2018-07 - 2021-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pingtan_zhang_zhaomin" target="pingtan_exp_zone_party" label="平潭综合实验区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2015-12 - 2018-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pingtan_zhang_zhaomin" target="pingtan_party_committee" label="平潭县委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县委书记（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2016-06 - 2018-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pingtan_lin_wenyao" target="pingtan_exp_zone_admin" label="平潭综合实验区管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2017 - 2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pingtan_lin_wenyao" target="pingtan_gov" label="平潭县县长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭县县长（兼）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2017 - 2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pingtan_lai_jun" target="pingtan_huang_jianbo" label="平潭综合实验区党政一把手搭档（书记+主任/县长）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党政一把手搭档（书记+主任/县长）"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021-08至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pingtan_lai_jun" target="pingtan_chen_shanguang" label="平潭综合实验区党工委书记前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记前后任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="交接2021年8月"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="pingtan_chen_shanguang" target="pingtan_zhang_zhaomin" label="平潭综合实验区党工委书记前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记前后任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="交接2018年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="pingtan_zhang_zhaomin" target="pingtan_gong_qinggai" label="平潭综合实验区党工委书记前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记前后任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="交接2015年12月"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="pingtan_huang_jianbo" target="pingtan_lin_wenyao" label="平潭综合实验区管委会主任前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任前后任"/>
+          <attvalue for="2" value="plausible"/>
+          <attvalue for="3" value="交接2021年8月"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="pingtan_lai_jun" target="pingtan_wen_xuelin" label="平潭综合实验区党工委书记与副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记与副书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2024年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="pingtan_huang_jianbo" target="pingtan_wen_xuelin" label="平潭综合实验区党工委副书记与管委会主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委副书记与管委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2024年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="pingtan_lai_jun" target="pingtan_huang_huiyuan" label="平潭综合实验区党工委书记与纪工委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记与纪工委书记"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021年8月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="pingtan_he_jiemin" target="pingtan_chen_xunming" label="平潭综合实验区管委会副主任同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任同事"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022年9月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="pingtan_he_jiemin" target="pingtan_fang_liangdong" label="平潭综合实验区管委会副主任同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任同事"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022年9月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="pingtan_chen_xunming" target="pingtan_fang_liangdong" label="平潭综合实验区管委会副主任同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会副主任同事"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="pingtan_he_jiemin" target="pingtan_huang_jianbo" label="平潭综合实验区管委会主任与副主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任与副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022年9月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="pingtan_fang_liangdong" target="pingtan_huang_jianbo" label="平潭综合实验区管委会主任与副主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任与副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="pingtan_chen_xunming" target="pingtan_huang_jianbo" label="平潭综合实验区管委会主任与副主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任与副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2021年5月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="pingtan_wen_xuelin" target="pingtan_wu_liyuan" label="平潭综合实验区党工委副书记前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委副书记前后任"/>
+          <attvalue for="2" value="plausible"/>
+          <attvalue for="3" value="交接2024年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="pingtan_he_jiemin" target="pingtan_lai_jun" label="平潭综合实验区党工委书记与委员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记与委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2022年9月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="pingtan_chen_xunming" target="pingtan_lai_jun" label="平潭综合实验区党工委书记与委员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记与委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2023年3月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="pingtan_pan_xinya" target="pingtan_lai_jun" label="平潭综合实验区党工委书记与委员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记与委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2023年3月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="pingtan_fang_liangdong" target="pingtan_lai_jun" label="平潭综合实验区党工委书记与委员" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区党工委书记与委员"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2025年5月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="pingtan_sun_shuqun" target="pingtan_huang_jianbo" label="平潭综合实验区管委会主任与副主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="平潭综合实验区管委会主任与副主任"/>
+          <attvalue for="2" value="confirmed"/>
+          <attvalue for="3" value="2025年3月至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
