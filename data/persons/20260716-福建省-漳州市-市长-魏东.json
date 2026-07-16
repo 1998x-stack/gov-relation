@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "漳州市",
+    "region": "漳州市",
+    "job": "市长",
+    "task_id": "fujian_漳州市",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "zhangzhou_weidong_1970",
+    "name": "魏东",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1970-01",
+    "birthplace": "云南镇雄",
+    "native_place": "云南镇雄",
+    "education": [
+      {
+        "period": "",
+        "institution": "未知",
+        "major": "",
+        "degree": "研究生学历",
+        "study_type": "unknown",
+        "source_ids": ["S003"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "未知",
+    "dedupe_keys": {
+      "name_birth": "魏东_1970",
+      "name_birthplace": "魏东_云南镇雄",
+      "official_profile_url": "https://zh.wikipedia.org/wiki/%E6%BC%B3%E5%B7%9E%E5%B8%82"
+    }
+  },
+  "current_status": {
+    "current_post": "漳州市委副书记、市长、市政府党组书记",
+    "current_org": "漳州市人民政府",
+    "administrative_rank": "正厅级",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002", "S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "~2021",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到魏东2021年之前的履历。已知其为云南镇雄人，1970年生。百度百科等主要中文人物资料库因访问限制无法获取。据中国经济网报道，曾任福建省政府副秘书长等职，但更早的职业生涯（是否有龙岩市委副书记、省生态环境厅厅长等经历）未经确认。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "~2021",
+      "end": "2023-08",
+      "org": "福建省人民政府办公厅",
+      "title": "福建省政府副秘书长（正厅长级）、办公厅党组成员",
+      "level": "正厅",
+      "location": "福建福州",
+      "system": "government",
+      "rank": "正厅",
+      "is_key_promotion": true,
+      "notes": "任省政府副秘书长，正厅长级。此前可能还有其他省级机关经历。",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "2023-08-02",
+      "end": "2023-08-29",
+      "org": "漳州市人民政府",
+      "title": "漳州市副市长、代市长",
+      "level": "正厅",
+      "location": "福建漳州",
+      "system": "government",
+      "rank": "正厅",
+      "is_key_promotion": true,
+      "notes": "从省政府副秘书长调任漳州，任代市长",
+      "confidence": "confirmed",
+      "source_ids": ["S002", "S003"]
+    },
+    {
+      "start": "2023-08-29",
+      "end": "present",
+      "org": "漳州市人民政府",
+      "title": "漳州市委副书记、市长、市政府党组书记",
+      "level": "正厅",
+      "location": "福建漳州",
+      "system": "government",
+      "rank": "正厅",
+      "is_key_promotion": true,
+      "notes": "当选漳州市市长，现任",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    }
+  ],
+  "organizations": [
+    {"org_id": 1, "name": "漳州市人民政府", "type": "政府", "level": "地级", "source_ids": ["S002"]},
+    {"org_id": 2, "name": "福建省人民政府办公厅", "type": "政府", "level": "省级", "source_ids": ["S003"]}
+  ],
+  "relationships": [
+    {
+      "person": "王进足",
+      "person_id": "zhangzhou_wangjinzu_1967",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "2023年8月起任漳州市长，与市委书记王进足搭档",
+      "overlap_org": "中共漳州市委员会/漳州市人民政府",
+      "overlap_period": "2023.08-至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "王进足",
+      "person_id": "zhangzhou_wangjinzu_1967",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "王进足升任市委书记后，魏东接任漳州市长",
+      "overlap_org": "漳州市人民政府",
+      "overlap_period": "2023.08",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "张国旺",
+      "person_id": "zhangzhou_zhangguowang_1964",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "魏东任省政府副秘书长期间，张国旺曾任漳州市委书记",
+      "overlap_org": "福建省/漳州市",
+      "overlap_period": "2021-2023",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2023.08-至今",
+      "domain": "other",
+      "achievement_or_event": "任漳州市市长，主持市政府全面工作",
+      "role_in_event": "市长",
+      "measurable_outcome": "",
+      "location": "福建漳州",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["政府管理"],
+    "secondary_specializations": [],
+    "career_pattern": "provincial_department",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["云南（籍贯）", "福建（职业生涯）"],
+    "promotion_velocity": {
+      "summary": "职业生涯前51年几乎完全未知（至2021年前），是当前最大的信息缺口。省政府副秘书长→地级市长的调动路径在福建省属于正常安排",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开信息有限，无法判断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "in_degree": 0,
+    "out_degree": 3,
+    "centrality": "high",
+    "roles": ["市长"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现任何纪律处分、审查调查、负面报道或审计问题",
+      "date": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "漳州市 - 维基百科",
+      "url": "https://zh.wikipedia.org/wiki/%E6%BC%B3%E5%B7%9E%E5%B8%82",
+      "publisher": "维基百科",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "encyclopedia",
+      "reliability": "high",
+      "notes": "漳州市领导表格确认魏东为市长"
+    },
+    {
+      "id": "S002",
+      "title": "漳州市人民政府官网",
+      "url": "https://www.zhangzhou.gov.cn",
+      "publisher": "漳州市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "政府会议新闻确认魏东以市长身份活动"
+    },
+    {
+      "id": "S003",
+      "title": "中国经济网 - 魏东任漳州市代市长",
+      "url": "http://district.ce.cn/newarea/sddy/202308/02/t20230802_38656403.shtml",
+      "publisher": "中国经济网",
+      "published_at": "2023-08-02",
+      "accessed_at": "2026-07-16",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "确认魏东从省政府副秘书长调任漳州代市长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "2021年前的完整职业生涯（~51岁前）完全未知。毕业院校、专业、入党时间、参加工作时间、历任职务等全部缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "魏东2021年前的全职业生涯是什么？",
+      "why_it_matters": "市长是漳州二号人物，其早年履历对理解其施政风格和关系网络至关重要",
+      "suggested_queries": ["魏东 简历", "魏东 百度百科", "魏东 曾任", "魏东 福建 生态环境厅"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "critical",
+      "question": "魏东的毕业院校和专业是什么？",
+      "why_it_matters": "教育背景是身份确认和关系网络的重要维度",
+      "suggested_queries": ["魏东 学历", "魏东 毕业"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "云南镇雄人魏东如何进入福建官场？何时入闽？",
+      "why_it_matters": "非福建籍（云南人）在福建省内升至正厅级，其入闽渠道和早期关系网络是关键缺口",
+      "suggested_queries": ["魏东 云南 调入福建", "魏东 福建 任职经历"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "魏东是否曾任龙岩市委副书记或福建省生态环境厅厅长？",
+      "why_it_matters": "维基媒体和搜索中存在这两种说法，但均未得到权威来源确认。亟需核实",
+      "suggested_queries": ["魏东 龙岩市委副书记", "魏东 生态环境厅"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}

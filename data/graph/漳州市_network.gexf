@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov Relation Research Agent</creator>
+    <description>漳州市领导工作关系网络 - Zhangzhou City Leadership Network</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="subtype" type="string"/>
+      <attribute id="2" title="job_title" type="string"/>
+      <attribute id="3" title="level" type="string"/>
+      <attribute id="4" title="birth" type="string"/>
+      <attribute id="5" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王进足">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委书记"/>
+          <attvalue for="2" value="漳州市委书记"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1967-01"/>
+          <attvalue for="5" value="福建泉州"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="魏东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委副书记、市长"/>
+          <attvalue for="2" value="漳州市委副书记、市长"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1970-01"/>
+          <attvalue for="5" value="云南镇雄"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="廖卓文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委常委、常务副市长"/>
+          <attvalue for="2" value="漳州市委常委、常务副市长"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="郑立敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委常委、副市长、古雷开发区党工委书"/>
+          <attvalue for="2" value="漳州市委常委、副市长、古雷开发区党工委书记"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1976-08"/>
+          <attvalue for="5" value="福建仙游"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="余向红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委常委、宣传部部长"/>
+          <attvalue for="2" value="漳州市委常委、宣传部部长"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="胡栋良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委常委、统战部部长、市政协党组副书"/>
+          <attvalue for="2" value="漳州市委常委、统战部部长、市政协党组副书记"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="陈文聪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="漳州市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1972-01"/>
+          <attvalue for="5" value="福建惠安"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="吴卫红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市人大常委会主任"/>
+          <attvalue for="2" value="漳州市人大常委会主任"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1966-11"/>
+          <attvalue for="5" value="福建龙岩永定"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="刘革生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳州市政协主席"/>
+          <attvalue for="2" value="漳州市政协主席"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1967-04"/>
+          <attvalue for="5" value="江苏南京"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="张国旺">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="厦门市政协主席"/>
+          <attvalue for="2" value="厦门市政协主席"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1964-10"/>
+          <attvalue for="5" value="福建建瓯"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="邵玉龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原漳州市委书记）"/>
+          <attvalue for="2" value="（原漳州市委书记）"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="檀云坤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省人大常委会副主任"/>
+          <attvalue for="2" value="福建省人大常委会副主任"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1963-01"/>
+          <attvalue for="5" value="福建永泰"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="陈家东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（原厦门市人大常委会主任，2023年判无"/>
+          <attvalue for="2" value="（原厦门市人大常委会主任，2023年判无期）"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1959-08"/>
+          <attvalue for="5" value="福建长乐"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="刘远">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省政协常委、经济委副主任"/>
+          <attvalue for="2" value="福建省政协常委、经济委副主任"/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value="1963-03"/>
+          <attvalue for="5" value="福建长汀"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共漳州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="漳州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="漳州市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协漳州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共漳州市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共漳州市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共漳州市委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="漳州古雷港经济开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共漳州市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共龙岩市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="龙岩市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="政协厦门市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="副省级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="福建省人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="省级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="福建省政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="省级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="福建省人民政府办公厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="省级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="福建省生态环境厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="省级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="中共福州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="中共三明市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="泉州市鲤城区地产公司">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="中共林芝地区工布江达县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="平潭综合实验区管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="中共福清市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="中共连江县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="县级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o24" label="中共福建省委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="省级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o25" label="共青团福州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="群团"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="地级"/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="255" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o19" label="泉州市鲤城区地产公司总经理等" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="泉州市鲤城区地产公司总经理等"/>
+          <attvalue for="2" value="1988-1998"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o1" label="泉州市洛江区乡镇领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="泉州市洛江区乡镇领导"/>
+          <attvalue for="2" value="1998-2006"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o1" label="泉州市洛江区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="泉州市洛江区政府副区长"/>
+          <attvalue for="2" value="2006-2007-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o20" label="援藏：西藏工布江达县委副书记、书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="援藏：西藏工布江达县委副书记、书记"/>
+          <attvalue for="2" value="2007-07-2013-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o21" label="平潭综合实验区党工委委员、管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平潭综合实验区党工委委员、管委会副主任"/>
+          <attvalue for="2" value="2013-10-2016-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o17" label="福州市委常委、福清市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福州市委常委、福清市委书记"/>
+          <attvalue for="2" value="2016-03-2019-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="o18" label="三明市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="三明市委副书记"/>
+          <attvalue for="2" value="2019-11-2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="o2" label="漳州市委副书记、市政府党组书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委副书记、市政府党组书记、市长"/>
+          <attvalue for="2" value="2021-06-2023-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="o1" label="漳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委书记"/>
+          <attvalue for="2" value="2023-08-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="o15" label="福建省政府副秘书长（正厅长级）、办公厅党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福建省政府副秘书长（正厅长级）、办公厅党组成员"/>
+          <attvalue for="2" value="~2021-2023-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p2" target="o2" label="漳州市副市长、代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市副市长、代市长"/>
+          <attvalue for="2" value="2023-08-02-2023-08-29"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o2" label="漳州市委副书记、市长、市政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委副书记、市长、市政府党组书记"/>
+          <attvalue for="2" value="2023-08-29-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p4" target="o24" label="福建省委统战部宣传信息办副主任科员、主任科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福建省委统战部宣传信息办副主任科员、主任科员"/>
+          <attvalue for="2" value="2004-2012"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p4" target="o25" label="共青团福州市委书记、晋安区委副书记（正处级）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团福州市委书记、晋安区委副书记（正处级）"/>
+          <attvalue for="2" value="2012-12-2016-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p4" target="o23" label="连江县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="连江县委副书记、县长"/>
+          <attvalue for="2" value="2016-06-2021-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p4" target="o2" label="漳州市政府党组成员、副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市政府党组成员、副市长"/>
+          <attvalue for="2" value="2021-08-2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p4" target="o1" label="漳州市委常委、副市长、古雷开发区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委常委、副市长、古雷开发区党工委书记"/>
+          <attvalue for="2" value="2025-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p7" target="o5" label="漳州市委常委、市纪委书记、市监委代主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委常委、市纪委书记、市监委代主任"/>
+          <attvalue for="2" value="2021-08-2021-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p7" target="o5" label="漳州市委常委、市纪委书记、市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="2021-08-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p8" target="o2" label="漳州市副市长（曾任常务副市长）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市副市长（曾任常务副市长）"/>
+          <attvalue for="2" value="~2016-2021-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p8" target="o3" label="漳州市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市人大常委会主任"/>
+          <attvalue for="2" value="2025-01-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p3" target="o2" label="漳州市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委常委、常务副市长"/>
+          <attvalue for="2" value="2025-12-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p5" target="o6" label="漳州市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委常委、宣传部部长"/>
+          <attvalue for="2" value="2025-12-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p6" target="o7" label="漳州市委常委、统战部部长、市政协党组副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委常委、统战部部长、市政协党组副书记"/>
+          <attvalue for="2" value="2025-08-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p9" target="o4" label="漳州市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市政协主席"/>
+          <attvalue for="2" value="2025-12-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p10" target="o11" label="龙岩市市长（来漳州前）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙岩市市长（来漳州前）"/>
+          <attvalue for="2" value="-2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p10" target="o1" label="漳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委书记"/>
+          <attvalue for="2" value="2021-06-2023-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p10" target="o12" label="厦门市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市政协主席"/>
+          <attvalue for="2" value="2025-01-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p11" target="o1" label="漳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委书记"/>
+          <attvalue for="2" value="2019-03-2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p12" target="o2" label="漳州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市市长"/>
+          <attvalue for="2" value="2013-12-2016-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p12" target="o1" label="漳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委书记"/>
+          <attvalue for="2" value="2016-12-2019-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p12" target="o13" label="福建省人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福建省人大常委会副主任"/>
+          <attvalue for="2" value="2019-03-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p13" target="o1" label="漳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市委书记"/>
+          <attvalue for="2" value="2013-07-2016-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p14" target="o2" label="漳州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳州市市长"/>
+          <attvalue for="2" value="2016-12-2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p14" target="o14" label="福建省政协常委、经济委副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福建省政协常委、经济委副主任"/>
+          <attvalue for="2" value="-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="漳州市委书记-市长搭档"/>
+          <attvalue for="2" value="2023.08-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p10" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张国旺→王进足 漳州市委书记交接"/>
+          <attvalue for="2" value="2023.08"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p1" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王进足升书记后、魏东接任市长"/>
+          <attvalue for="2" value="2023.08"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p4" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="漳州市委常委同僚"/>
+          <attvalue for="2" value="2025-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p4" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="漳州市政府正副市长"/>
+          <attvalue for="2" value="2025-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p12" target="p1" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为漳州从市长升书记路径"/>
+          <attvalue for="2" value="不同时期"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p13" target="p12" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈家东→檀云坤 漳州市委书记交接"/>
+          <attvalue for="2" value="2016.12"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p12" target="p11" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="檀云坤→邵玉龙 漳州市委书记交接"/>
+          <attvalue for="2" value="2019.03"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p11" target="p10" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵玉龙→张国旺 漳州市委书记交接"/>
+          <attvalue for="2" value="2021.06"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p14" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘远→王进足 漳州市长交接"/>
+          <attvalue for="2" value="2021.06"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
