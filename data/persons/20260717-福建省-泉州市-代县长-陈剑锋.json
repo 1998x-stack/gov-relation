@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "泉州市",
+    "region": "惠安县",
+    "job": "代县长",
+    "task_id": "fujian_惠安县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "huian_chen_jianfeng",
+    "name": "陈剑锋",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "陈剑锋_待查",
+      "name_birthplace": "陈剑锋_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "惠安县代县长",
+    "current_org": "惠安县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-17",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "惠安县人民政府",
+      "title": "惠安县代县长",
+      "level": "县处级正职",
+      "location": "福建省泉州市惠安县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "从惠安县政府官网主页确认任代县长，具体任职起始时间待查。此前职务待查。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到陈剑锋担任惠安县代县长前的履历信息",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_gov",
+      "name": "惠安县人民政府",
+      "role": "代县长",
+      "period": "2026-至今"
+    },
+    {
+      "org_id": "org_party",
+      "name": "中共惠安县委员会",
+      "role": "县委副书记（推定由县长兼任）",
+      "period": "2026-至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "蔡旭萌",
+      "person_id": "huian_cai_xumeng",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "县长与常务副县长在惠安县政府共事",
+      "overlap_org": "惠安县人民政府",
+      "overlap_period": "2026年7月起",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历不足，无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "degree_centrality": 10,
+    "role_in_network": "代县长，县政府主要领导"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未在公开渠道发现陈剑锋的纪律处分、审计问题或负面报道",
+      "date": "2026-07-17",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "惠安县人民政府官方网站 — 首页头部领导信息",
+      "url": "https://www.huian.gov.cn",
+      "publisher": "惠安县人民政府",
+      "published_at": "2026-07",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官网首页头部显示'代县长 陈剑锋'及副县长名单"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "陈剑锋代县长前全部履历完全缺失，包括出生年月、籍贯、教育背景、此前任职"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "陈剑锋任代县长前任何职？来自哪个系统（本地提拔/市直下派/其他县区交流）？",
+      "why_it_matters": "决定其职业升迁路径和可能的network关系",
+      "suggested_queries": ["陈剑锋 惠安 简历", "陈剑锋 泉州市 组织部 任前公示", "陈剑锋 任职"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "critical",
+      "question": "陈剑锋的出生年月、籍贯、教育背景？",
+      "why_it_matters": "基础身份信息用于去重和个人履历完整度",
+      "suggested_queries": ["陈剑锋 出生 惠安", "陈剑锋 籍贯"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "high",
+      "question": "陈剑锋何时由'代'转正？",
+      "why_it_matters": "确认正式任命时间",
+      "suggested_queries": ["惠安县人大 任命 陈剑锋", "惠安县人大常委会 陈剑锋"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}
