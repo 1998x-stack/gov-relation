@@ -4,14 +4,14 @@
   "investigation_scope": {
     "province": "福建省",
     "city": "三明市",
-    "region": "将乐县",
+    "region": "泰宁县",
     "job": "县长",
-    "task_id": "fujian_将乐县",
-    "time_focus": "current as of 2026-07-16"
+    "task_id": "fujian_泰宁县",
+    "time_focus": "2024-2026"
   },
   "identity": {
-    "person_id": "fujian_sanming_jiangle_mayor_unknown",
-    "name": "（待查）",
+    "person_id": "fujian_sanming_taining_mayor_unknown",
+    "name": "（待查）县长",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
@@ -29,7 +29,7 @@
   },
   "current_status": {
     "current_post": "县委副书记、县长",
-    "current_org": "将乐县人民政府",
+    "current_org": "泰宁县人民政府",
     "administrative_rank": "正处级",
     "as_of": "2026-07-16",
     "is_current_confirmed": false,
@@ -38,15 +38,29 @@
   "career_timeline": [
     {
       "start": "unknown",
-      "end": "unknown",
-      "org": "履历缺口",
-      "title": "",
-      "notes": "公开资料完全未知：将乐县人民政府网站(jiangle.gov.cn)不可达、百度百科403、所有搜索源均被网络限制。需要人工通过可访问的网络环境查询。",
+      "end": "present",
+      "org": "泰宁县人民政府",
+      "title": "县委副书记、县长",
+      "level": "正处级",
+      "location": "福建省三明市泰宁县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "当前在任，但姓名未知。所有政府网站和中文搜索源在研究时均不可达（www.fjtn.gov.cn 超时，百度百科 403 禁止，Exa 速率限制）",
       "confidence": "unverified",
       "source_ids": []
     }
   ],
-  "organizations": [],
+  "organizations": [
+    {
+      "org": "泰宁县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "parent": "三明市人民政府",
+      "location": "福建省三明市泰宁县",
+      "source_ids": []
+    }
+  ],
   "relationships": [],
   "governance_record": [],
   "professional_profile": {
@@ -70,7 +84,7 @@
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "因姓名未知，无法搜索任何纪律或负面信息",
+      "description": "所有中国网站不可达，无法搜索与现任县长相关的任何纪律或负面信息",
       "date": "2026-07-16",
       "confidence": "unverified",
       "source_ids": []
@@ -79,36 +93,25 @@
   "source_register": [
     {
       "id": "S001",
-      "title": "将乐县人民政府官方网站 — 领导之窗页面",
-      "url": "https://www.jiangle.gov.cn/ldzc/",
-      "publisher": "将乐县人民政府",
+      "title": "泰宁县人民政府官网",
+      "url": "https://www.fjtn.gov.cn/",
+      "publisher": "泰宁县人民政府",
       "published_at": "",
       "accessed_at": "2026-07-16",
       "source_type": "official",
       "reliability": "high",
-      "notes": "不可达 — 网络连接超时"
+      "notes": "连接超时，无法获取任何领导信息"
     },
     {
       "id": "S002",
-      "title": "百度百科 — 将乐县",
-      "url": "https://baike.baidu.com/item/%E5%B0%86%E4%B9%90%E5%8E%BF",
-      "publisher": "百度",
-      "published_at": "",
-      "accessed_at": "2026-07-16",
-      "source_type": "encyclopedia",
-      "reliability": "medium",
-      "notes": "403 Forbidden"
-    },
-    {
-      "id": "S003",
-      "title": "维基百科中文 — 将乐县",
-      "url": "https://zh.wikipedia.org/wiki/%E5%B0%86%E4%B9%90%E5%8E%BF",
+      "title": "维基百科 - 泰宁县",
+      "url": "https://zh.wikipedia.org/wiki/泰宁县",
       "publisher": "维基百科",
       "published_at": "",
       "accessed_at": "2026-07-16",
       "source_type": "encyclopedia",
       "reliability": "medium",
-      "notes": "仅有县情介绍，无领导信息"
+      "notes": "仅提供县级概览，无领导信息"
     }
   ],
   "confidence_summary": {
@@ -116,28 +119,47 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "县长姓名完全未知 — 所有政府网站和百科源均不可达"
+    "biggest_gap": "现任县长姓名完全未知——所有政府网站和中国搜索引擎均不可达"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "将乐县现任县长是谁？",
-      "why_it_matters": "核心目标人物的身份识别是构建整个关系网络的起点",
+      "question": "现任泰宁县县长是谁？",
+      "why_it_matters": "这是调查的核心人物之一；姓名是构建网络关系的基本前提",
       "suggested_queries": [
-        "将乐县 县长 2026",
-        "将乐县 人民政府 县长 2025",
-        "三明市 将乐 县长 任前公示",
-        "site:jiangle.gov.cn 县长"
+        "site:fjtn.gov.cn 县长",
+        "泰宁县 县长 任前公示",
+        "三明市 组织部 泰宁县 县长 任命"
       ],
       "last_attempted": "2026-07-16"
     },
     {
-      "priority": "critical",
-      "question": "将乐县前任县长是谁？何时接任？",
-      "why_it_matters": "理清县长接替关系是关系网络的重要组成部分",
+      "priority": "high",
+      "question": "现任县长的履历是什么？（出生地、教育、入党时间、工作起始时间）",
+      "why_it_matters": "了解其职业背景和晋升模式的基本信息",
       "suggested_queries": [
-        "将乐县 前任 县长",
-        "将乐县 县长 任命 人大"
+        "{name} 简历",
+        "泰宁县 县长 任前公示"
+      ],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "前任县长是谁？何时交接？",
+      "why_it_matters": "建立继承/调动关系链",
+      "suggested_queries": [
+        "泰宁县 前任 县长",
+        "三明市 干部任免"
+      ],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "medium",
+      "question": "县长与县委书记之前是否有过合作历史？",
+      "why_it_matters": "确认两人之间是否存在已有的工作关系",
+      "suggested_queries": [
+        "{name1} {name2} 泰宁",
+        "泰宁县 班子 配齐"
       ],
       "last_attempted": "2026-07-16"
     }
