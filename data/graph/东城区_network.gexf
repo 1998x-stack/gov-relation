@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>北京市东城区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pdc_sun_xinjun" label="孙新军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共北京市东城区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pdc_chen_xiansen" label="陈献森">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pdc_sang_pengfei" label="桑硼飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区委党校校长"/>
+          <attvalue for="2" value="中共北京市东城区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pdc_xue_guoqiang" label="薛国强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+          <attvalue for="2" value="中共北京市东城区委统战部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_wang_huawei" label="王华伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_wang_yongmin" label="王永民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共北京市东城区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_li_qiang" label="李强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="中共北京市东城区委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_sun_yang" label="孙扬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+          <attvalue for="2" value="中共北京市东城区委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_huang_dan" label="黄丹">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+          <attvalue for="2" value="中共北京市东城区委组织部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_su_hao" label="苏昊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_wang_zhiyong" label="王智勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共北京市东城区委宣传部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_ren_jianghao" label="任江浩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_deng_huimin" label="邓慧敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_xiao_song" label="肖松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+          <attvalue for="2" value="北京市公安局东城分局"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_wang_youming" label="王佑明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_zhang_xiaofeng" label="张晓峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_hu_yifeng" label="胡异峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_zhang_yanguo" label="张艳国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长（挂职）"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_lin_yanhong" label="林艳红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长（挂职）"/>
+          <attvalue for="2" value="北京市东城区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_zhou_jinxing" label="周金星">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前区长（现任昌平区委书记）"/>
+          <attvalue for="2" value="昌平区（已离任）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pdc_xiao_zhigang" label="肖志刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+          <attvalue for="2" value="北京市东城区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_bai_jingtao" label="白京涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="北京市东城区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pdc_tang_qinfei" label="汤钦飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市东城区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="odc_party_committee" label="中共北京市东城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共北京市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_gov" label="北京市东城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="北京市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_org_department" label="中共北京市东城区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="东城区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_discipline" label="中共北京市东城区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="北京市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_propaganda" label="中共北京市东城区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="东城区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_united_front" label="中共北京市东城区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="东城区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_political_legal" label="中共北京市东城区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="东城区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_party_school" label="中共北京市东城区委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="东城区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_public_security" label="北京市公安局东城分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="北京市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_peoples_congress" label="北京市东城区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="北京市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_cppcc" label="中国人民政治协商会议北京市东城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="北京市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_procuratorate" label="北京市东城区人民检察院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政法"/>
+          <attvalue for="2" value="北京市人民检察院"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="odc_court" label="北京市东城区人民法院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政法"/>
+          <attvalue for="2" value="北京市高级人民法院"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="pdc_sun_xinjun" target="odc_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="pdc_sun_xinjun" target="odc_cppcc" label="北京市政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="pdc_sun_xinjun" target="odc_gov" label="东城区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="东城区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="pdc_sun_xinjun" target="odc_gov" label="东城区常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="东城区常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="pdc_sun_xinjun" target="odc_party_committee" label="东城区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="东城区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="pdc_sun_xinjun" target="odc_org_department" label="履历缺口（1990-2015年约25年）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口（1990-2015年约25年）"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="pdc_chen_xiansen" target="odc_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="pdc_chen_xiansen" target="odc_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="pdc_chen_xiansen" target="odc_party_school" label="区行政学院院长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区行政学院院长（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="pdc_chen_xiansen" target="odc_political_legal" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="pdc_chen_xiansen" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="pdc_chen_xiansen" target="odc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="pdc_chen_xiansen" target="odc_org_department" label="履历缺口（2016.04-2020.06）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口（2016.04-2020.06）"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="pdc_chen_xiansen" target="odc_org_department" label="援藏：堆龙德庆县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="援藏：堆龙德庆县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="pdc_chen_xiansen" target="odc_party_committee" label="北京市对口支援指挥部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市对口支援指挥部"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="pdc_chen_xiansen" target="odc_org_department" label="西城区德胜街道工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="西城区德胜街道工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="pdc_chen_xiansen" target="odc_org_department" label="西城区德胜街道工委副书记、办事处主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="西城区德胜街道工委副书记、办事处主任"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="pdc_chen_xiansen" target="odc_org_department" label="共青团西城区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团西城区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="pdc_chen_xiansen" target="odc_org_department" label="共青团西城区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团西城区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="pdc_chen_xiansen" target="odc_public_security" label="北京市公安局西城分局法制处副处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市公安局西城分局法制处副处长"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="pdc_chen_xiansen" target="odc_public_security" label="北京市公安局西城分局法制处科员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市公安局西城分局法制处科员"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="pdc_chen_xiansen" target="odc_org_department" label="北京大学公共管理硕士（MPA）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京大学公共管理硕士（MPA）"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="pdc_chen_xiansen" target="odc_org_department" label="中国人民公安大学安全防范专业学生" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中国人民公安大学安全防范专业学生"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="pdc_sang_pengfei" target="odc_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="pdc_sang_pengfei" target="odc_party_school" label="区委党校校长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委党校校长（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="pdc_xue_guoqiang" target="odc_united_front" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="pdc_xue_guoqiang" target="odc_cppcc" label="区政协党组副书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协党组副书记（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="pdc_wang_huawei" target="odc_gov" label="常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="pdc_wang_yongmin" target="odc_discipline" label="区委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="pdc_li_qiang" target="odc_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="pdc_sun_yang" target="odc_political_legal" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="pdc_huang_dan" target="odc_org_department" label="区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="pdc_su_hao" target="odc_gov" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="pdc_su_hao" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="pdc_wang_zhiyong" target="odc_propaganda" label="区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="pdc_ren_jianghao" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="pdc_deng_huimin" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="pdc_xiao_song" target="odc_gov" label="副区长、区公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="pdc_wang_youming" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="pdc_zhang_xiaofeng" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="pdc_hu_yifeng" target="odc_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="pdc_zhang_yanguo" target="odc_gov" label="副区长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长（挂职）"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="pdc_lin_yanhong" target="odc_gov" label="副区长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长（挂职）"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="pdc_zhou_jinxing" target="odc_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="pdc_zhou_jinxing" target="odc_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="pdc_xiao_zhigang" target="odc_peoples_congress" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="pdc_bai_jingtao" target="odc_peoples_congress" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="pdc_tang_qinfei" target="odc_cppcc" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="pdc_sun_xinjun" target="pdc_chen_xiansen" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="pdc_sun_xinjun" target="pdc_sang_pengfei" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="pdc_chen_xiansen" target="pdc_sang_pengfei" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与专职副书记在区委常委会共事"/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="pdc_sun_xinjun" target="pdc_wang_huawei" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="pdc_chen_xiansen" target="pdc_wang_huawei" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常务副区长（区政府日常运作）"/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="pdc_sun_xinjun" target="pdc_huang_dan" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与组织部部长（干部管理）"/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="pdc_sun_xinjun" target="pdc_wang_yongmin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与纪委书记（从严治党主体责任）"/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="pdc_sun_xinjun" target="pdc_sun_yang" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="pdc_chen_xiansen" target="pdc_xiao_song" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与公安分局局长（安全稳定）"/>
+        </attvalues>
+      </edge>
+      <edge id="58" source="pdc_chen_xiansen" target="pdc_su_hao" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常委副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="59" source="pdc_huang_dan" target="pdc_wang_yongmin" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="组织部与纪委在干部监督方面的协作"/>
+        </attvalues>
+      </edge>
+      <edge id="60" source="pdc_sun_yang" target="pdc_xiao_song" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="政法委书记与公安分局局长的政法系统协作"/>
+        </attvalues>
+      </edge>
+      <edge id="61" source="pdc_chen_xiansen" target="pdc_zhou_jinxing" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="陈献森接替周金星任区长（周金星调任昌平区委书记）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

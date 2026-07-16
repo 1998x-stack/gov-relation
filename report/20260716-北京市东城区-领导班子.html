@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北京市东城区 · 领导班子工作关系网络</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:#0C0C0C;
+  color:#E8E0D4;
+  font-family:'Inter','Noto Sans SC',sans-serif;
+  font-weight:300;
+  line-height:1.6;
+}
+::selection { background:rgba(224,60,49,0.3); color:#fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:#0C0C0C; }
+::-webkit-scrollbar-thumb { background:#333; }
+
+.container { max-width:1280px; margin:0 auto; padding:0 24px; }
+
+/* HEADER */
+.header {
+  padding:60px 0 40px;
+  border-bottom:1px solid rgba(232,224,212,0.08);
+  position:relative;
+}
+.header::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg,#E03C31 0%,#E03C31 30%,transparent 100%);
+}
+.header-eyebrow {
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:rgba(232,224,212,0.4);
+  margin-bottom:16px;
+}
+.header-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:36px;
+  font-weight:900;
+  color:#E8E0D4;
+  line-height:1.2;
+  margin-bottom:8px;
+}
+.header-sub {
+  font-size:16px;
+  color:rgba(232,224,212,0.5);
+  font-weight:300;
+}
+.stats-bar {
+  display:flex;
+  gap:48px;
+  margin-top:28px;
+  padding-top:28px;
+  border-top:1px solid rgba(232,224,212,0.06);
+}
+.stat-item {
+  display:flex;
+  flex-direction:column;
+}
+.stat-num {
+  font-family:'Noto Serif SC',serif;
+  font-size:32px;
+  font-weight:700;
+  color:#E8E0D4;
+  line-height:1;
+}
+.stat-num.accent { color:#E03C31; }
+.stat-label {
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:2px;
+  color:rgba(232,224,212,0.4);
+  text-transform:uppercase;
+  margin-top:6px;
+}
+
+/* SECTION */
+.section {
+  padding:48px 0;
+  border-bottom:1px solid rgba(232,224,212,0.06);
+}
+.section:last-child { border-bottom:none; }
+.section-title {
+  font-family:'Noto Serif SC',serif;
+  font-size:20px;
+  font-weight:700;
+  color:#E8E0D4;
+  margin-bottom:4px;
+  position:relative;
+  padding-left:16px;
+}
+.section-title::before {
+  content:'';
+  position:absolute;
+  left:0; top:4px; bottom:4px;
+  width:3px;
+  background:#E03C31;
+}
+.section-desc {
+  font-size:13px;
+  color:rgba(232,224,212,0.35);
+  margin-bottom:28px;
+  margin-left:16px;
+}
+
+/* PERSON CARDS GRID */
+.cards-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:12px;
+}
+.person-card {
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:16px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(232,224,212,0.06);
+  position:relative;
+  overflow:hidden;
+  transition:background 0.2s,border-color 0.2s;
+}
+.person-card:hover {
+  background:rgba(255,255,255,0.04);
+  border-color:rgba(232,224,212,0.12);
+}
+.card-accent {
+  position:absolute;
+  top:0; left:0; bottom:0;
+  width:2px;
+  opacity:0.6;
+}
+.card-avatar {
+  width:40px; height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Noto Serif SC',serif;
+  font-size:18px;
+  font-weight:700;
+  flex-shrink:0;
+}
+.card-body {
+  flex:1;
+  min-width:0;
+}
+.card-name {
+  font-family:'Noto Serif SC',serif;
+  font-size:16px;
+  font-weight:700;
+  color:#E8E0D4;
+  line-height:1.2;
+}
+.card-title {
+  font-size:12px;
+  font-weight:400;
+  color:rgba(232,224,212,0.65);
+  margin-top:2px;
+  line-height:1.3;
+}
+.card-meta {
+  font-size:11px;
+  color:rgba(232,224,212,0.3);
+  margin-top:4px;
+}
+.card-meta .dot { margin:0 4px; }
+.card-detail {
+  font-size:11px;
+  color:rgba(232,224,212,0.4);
+  margin-top:4px;
+}
+.card-badges {
+  margin-top:6px;
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+}
+.badge {
+  display:inline-block;
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:0.5px;
+  padding:1px 6px;
+  border:1px solid;
+}
+.badge-party { color:#E03C31; border-color:rgba(224,60,49,0.3); }
+.badge-gov { color:#5B8DEF; border-color:rgba(91,141,239,0.3); }
+.badge-deputy { color:#7BA7FF; border-color:rgba(123,167,255,0.3); }
+.badge-deputy-party { color:#C0693A; border-color:rgba(192,105,58,0.3); }
+.badge-disc { color:#FFA500; border-color:rgba(255,165,0,0.3); }
+.badge-org { color:#C864C8; border-color:rgba(200,100,200,0.3); }
+.badge-prop { color:#64C8C8; border-color:rgba(100,200,200,0.3); }
+.badge-pl { color:#649632; border-color:rgba(100,150,50,0.3); }
+.badge-uf { color:#966432; border-color:rgba(150,100,50,0.3); }
+.badge-cong { color:#32C8C8; border-color:rgba(50,200,200,0.3); }
+.badge-cppcc { color:#C9A94E; border-color:rgba(201,169,78,0.3); }
+.badge-seconded { color:#9696C8; border-color:rgba(150,150,200,0.3); }
+
+/* FILTER BAR */
+.filter-bar {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:20px;
+}
+.filter-btn {
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:0.5px;
+  padding:4px 12px;
+  background:transparent;
+  color:rgba(232,224,212,0.4);
+  border:1px solid rgba(232,224,212,0.1);
+  cursor:pointer;
+  transition:all 0.15s;
+}
+.filter-btn:hover { color:#E8E0D4; border-color:rgba(232,224,212,0.3); }
+.filter-btn.active { color:#E8E0D4; border-color:#E03C31; background:rgba(224,60,49,0.08); }
+
+/* RELATIONSHIPS TABLE */
+.rels-table {
+  width:100%;
+  border-collapse:collapse;
+}
+.rels-table td {
+  padding:10px 8px;
+  border-bottom:1px solid rgba(232,224,212,0.04);
+  font-size:13px;
+  vertical-align:middle;
+}
+.rels-table tr:last-child td { border-bottom:none; }
+.rel-name { font-weight:500; color:#E8E0D4; }
+.rel-arrow { color:rgba(232,224,212,0.2); margin:0 8px; }
+.rel-type { font-weight:500; font-size:12px; }
+.rel-period { font-size:11px; color:rgba(232,224,212,0.35); }
+
+/* TIMELINE */
+.timeline {
+  position:relative;
+  padding-left:28px;
+}
+.timeline::before {
+  content:'';
+  position:absolute;
+  left:7px; top:4px; bottom:4px;
+  width:1px;
+  background:rgba(232,224,212,0.1);
+}
+.tl-item {
+  position:relative;
+  padding-bottom:24px;
+}
+.tl-item:last-child { padding-bottom:0; }
+.tl-dot {
+  position:absolute;
+  left:-21px; top:4px;
+  width:7px; height:7px;
+  background:#E03C31;
+}
+.tl-date {
+  font-size:11px;
+  font-weight:500;
+  color:#E03C31;
+  letter-spacing:0.5px;
+  margin-bottom:2px;
+}
+.tl-event {
+  font-size:14px;
+  font-weight:500;
+  color:#E8E0D4;
+}
+.tl-note {
+  font-size:12px;
+  color:rgba(232,224,212,0.35);
+  margin-top:2px;
+}
+
+/* INSIGHTS */
+.insights-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.insight-card {
+  padding:20px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(232,224,212,0.06);
+  position:relative;
+}
+.insight-card::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:2px;
+  background:linear-gradient(90deg,#E03C31 0%,transparent 100%);
+}
+.insight-num {
+  font-family:'Noto Serif SC',serif;
+  font-size:28px;
+  font-weight:700;
+  color:rgba(224,60,49,0.15);
+  line-height:1;
+  margin-bottom:8px;
+}
+.insight-title {
+  font-size:13px;
+  font-weight:600;
+  color:#E8E0D4;
+  margin-bottom:6px;
+}
+.insight-text {
+  font-size:12px;
+  color:rgba(232,224,212,0.5);
+  line-height:1.5;
+}
+
+/* SOURCE FOOTER */
+.footer {
+  padding:32px 0;
+  border-top:1px solid rgba(232,224,212,0.06);
+}
+.footer-text {
+  font-size:11px;
+  color:rgba(232,224,212,0.2);
+}
+.footer-text a {
+  color:rgba(232,224,212,0.3);
+  text-decoration:none;
+  border-bottom:1px solid rgba(232,224,212,0.1);
+}
+.footer-text a:hover { color:#E8E0D4; }
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .header-title { font-size:26px; }
+  .stats-bar { gap:24px; flex-wrap:wrap; }
+  .stat-num { font-size:24px; }
+  .cards-grid { grid-template-columns:1fr; }
+  .insights-grid { grid-template-columns:1fr; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce) {
+  .person-card { transition:none; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-eyebrow">Intelligence Briefing · Classified</div>
+  <h1 class="header-title">北京市东城区<br>领导班子工作关系网络</h1>
+  <div class="header-sub">2026年7月16日 · 数据来源：bjdch.gov.cn</div>
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num accent">35</span>
+      <span class="stat-label">人物</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">12</span>
+      <span class="stat-label">机构</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">47</span>
+      <span class="stat-label">任职记录</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">11</span>
+      <span class="stat-label">关系连线</span>
+    </div>
+  </div>
+</header>
+
+<!-- SECTION 1: PERSONNEL -->
+<section class="section">
+  <h2 class="section-title">领导班子名册</h2>
+  <div class="section-desc">区委 · 区政府 · 区人大 · 区政协 — 共35人</div>
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="party,deputy_party,party_other,org,propaganda,politicallaw,unitedfront,discipline">区委</button>
+    <button class="filter-btn" data-filter="gov,deputy_gov,seconded">区政府</button>
+    <button class="filter-btn" data-filter="congress">区人大</button>
+    <button class="filter-btn" data-filter="cppcc">区政协</button>
+  </div>
+  <div class="cards-grid" id="personGrid">
+    
+        <div class="person-card" data-category="party">
+          <div class="card-avatar" style="background:#E03C31;color:#fff;">孙</div>
+          <div class="card-body">
+            <div class="card-name">孙新军</div>
+            <div class="card-title">中共北京市东城区委书记</div>
+            <div class="card-meta"><span>1968.10</span><span class="dot">·</span><span>在职研究生</span></div>
+            <div class="card-detail">主持区委全面工作</div>
+            <div class="card-badges"><span class="badge badge-party">区委书记</span></div>
+          </div>
+          <div class="card-accent" style="background:#E03C31;"></div>
+        </div>
+        <div class="person-card" data-category="gov">
+          <div class="card-avatar" style="background:#5B8DEF;color:#fff;">陈</div>
+          <div class="card-body">
+            <div class="card-name">陈献森</div>
+            <div class="card-title">区委副书记·区长</div>
+            <div class="card-meta"><span>1972.09</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">领导区政府全面工作，负责规划、审计</div>
+            <div class="card-badges"><span class="badge badge-gov">区政府</span></div>
+          </div>
+          <div class="card-accent" style="background:#5B8DEF;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_party">
+          <div class="card-avatar" style="background:#C0693A;color:#fff;">桑</div>
+          <div class="card-body">
+            <div class="card-name">桑硼飞</div>
+            <div class="card-title">区委副书记（兼区委党校校长）</div>
+            <div class="card-meta"><span>1980.02</span><span class="dot">·</span><span>在职研究生</span></div>
+            <div class="card-detail">2026年4月任职</div>
+            <div class="card-badges"><span class="badge badge-deputy-party">区委</span></div>
+          </div>
+          <div class="card-accent" style="background:#C0693A;"></div>
+        </div>
+        <div class="person-card" data-category="unitedfront">
+          <div class="card-avatar" style="background:#966432;color:#fff;">薛</div>
+          <div class="card-body">
+            <div class="card-name">薛国强</div>
+            <div class="card-title">区委常委·统战部部长</div>
+            <div class="card-meta"><span>1973.03</span><span class="dot">·</span><span>中央党校研究生</span></div>
+            <div class="card-detail">兼区政协党组副书记</div>
+            <div class="card-badges"><span class="badge badge-uf">统战</span></div>
+          </div>
+          <div class="card-accent" style="background:#966432;"></div>
+        </div>
+        <div class="person-card" data-category="gov">
+          <div class="card-avatar" style="background:#5B8DEF;color:#fff;">王</div>
+          <div class="card-body">
+            <div class="card-name">王华伟</div>
+            <div class="card-title">区委常委·常务副区长</div>
+            <div class="card-meta"><span>1970.09</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">区政府党组副书记，分管发改、财政、应急等</div>
+            <div class="card-badges"><span class="badge badge-gov">区政府</span></div>
+          </div>
+          <div class="card-accent" style="background:#5B8DEF;"></div>
+        </div>
+        <div class="person-card" data-category="discipline">
+          <div class="card-avatar" style="background:#FFA500;color:#fff;">王</div>
+          <div class="card-body">
+            <div class="card-name">王永民</div>
+            <div class="card-title">区委常委·区纪委书记·监委主任</div>
+            <div class="card-meta"><span>1978.12</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">二级高级监察官</div>
+            <div class="card-badges"><span class="badge badge-disc">纪检</span></div>
+          </div>
+          <div class="card-accent" style="background:#FFA500;"></div>
+        </div>
+        <div class="person-card" data-category="party_other">
+          <div class="card-avatar" style="background:#888;color:#fff;">李</div>
+          <div class="card-body">
+            <div class="card-name">李强</div>
+            <div class="card-title">区委常委</div>
+            <div class="card-meta"><span>1976.10</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">具体分管领域待确认</div>
+            <div class="card-badges"></div>
+          </div>
+          <div class="card-accent" style="background:#888;"></div>
+        </div>
+        <div class="person-card" data-category="politicallaw">
+          <div class="card-avatar" style="background:#649632;color:#fff;">孙</div>
+          <div class="card-body">
+            <div class="card-name">孙扬</div>
+            <div class="card-title">区委常委·政法委书记</div>
+            <div class="card-meta"><span>1979.02</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">主持区委政法委工作</div>
+            <div class="card-badges"><span class="badge badge-pl">政法</span></div>
+          </div>
+          <div class="card-accent" style="background:#649632;"></div>
+        </div>
+        <div class="person-card" data-category="org">
+          <div class="card-avatar" style="background:#C864C8;color:#fff;">黄</div>
+          <div class="card-body">
+            <div class="card-name">黄丹</div>
+            <div class="card-title">区委常委·组织部部长</div>
+            <div class="card-meta"><span>1977.02</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">女，兼区直属机关工委书记</div>
+            <div class="card-badges"><span class="badge badge-org">组织</span></div>
+          </div>
+          <div class="card-accent" style="background:#C864C8;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">苏</div>
+          <div class="card-body">
+            <div class="card-name">苏昊</div>
+            <div class="card-title">区委常委·副区长</div>
+            <div class="card-meta"><span>1980.05</span><span class="dot">·</span><span>在职研究生</span></div>
+            <div class="card-detail">分管住建、国防动员</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="propaganda">
+          <div class="card-avatar" style="background:#64C8C8;color:#fff;">王</div>
+          <div class="card-body">
+            <div class="card-name">王智勇</div>
+            <div class="card-title">区委常委·宣传部部长</div>
+            <div class="card-meta"><span>1983.08</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">满族，班子最年轻</div>
+            <div class="card-badges"><span class="badge badge-prop">宣传</span></div>
+          </div>
+          <div class="card-accent" style="background:#64C8C8;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">任</div>
+          <div class="card-body">
+            <div class="card-name">任江浩</div>
+            <div class="card-title">副区长</div>
+            <div class="card-meta"><span>1972.04</span><span class="dot">·</span><span>在职研究生</span></div>
+            <div class="card-detail">九三学社，分管商务、文旅、体育</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">邓</div>
+          <div class="card-body">
+            <div class="card-name">邓慧敏</div>
+            <div class="card-title">副区长</div>
+            <div class="card-meta"><span>1977.06</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">女·回族，分管科技、卫健、市场监管</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">肖</div>
+          <div class="card-body">
+            <div class="card-name">肖松</div>
+            <div class="card-title">副区长·公安分局局长</div>
+            <div class="card-meta"><span>1977.06</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">分管公安工作</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">王</div>
+          <div class="card-body">
+            <div class="card-name">王佑明</div>
+            <div class="card-title">副区长</div>
+            <div class="card-meta"><span>1972.09</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">分管教育、民政、人社</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">张</div>
+          <div class="card-body">
+            <div class="card-name">张晓峰</div>
+            <div class="card-title">副区长</div>
+            <div class="card-meta"><span>1971.02</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">分管司法、国资、信访</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="deputy_gov">
+          <div class="card-avatar" style="background:#7BA7FF;color:#fff;">胡</div>
+          <div class="card-body">
+            <div class="card-name">胡异峰</div>
+            <div class="card-title">副区长</div>
+            <div class="card-meta"><span>1977.11</span><span class="dot">·</span><span>大学</span></div>
+            <div class="card-detail">分管城管、环保</div>
+            <div class="card-badges"><span class="badge badge-deputy">副区长</span></div>
+          </div>
+          <div class="card-accent" style="background:#7BA7FF;"></div>
+        </div>
+        <div class="person-card" data-category="seconded">
+          <div class="card-avatar" style="background:#9696C8;color:#fff;">张</div>
+          <div class="card-body">
+            <div class="card-name">张艳国</div>
+            <div class="card-title">副区长（挂职）</div>
+            <div class="card-meta"><span>1974.12</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">国开行风险管理部挂职，协助王华伟</div>
+            <div class="card-badges"><span class="badge badge-seconded">挂职</span></div>
+          </div>
+          <div class="card-accent" style="background:#9696C8;"></div>
+        </div>
+        <div class="person-card" data-category="seconded">
+          <div class="card-avatar" style="background:#9696C8;color:#fff;">林</div>
+          <div class="card-body">
+            <div class="card-name">林艳红</div>
+            <div class="card-title">副区长（挂职）</div>
+            <div class="card-meta"><span>1977.01</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">外汇管理局挂职，协助任江浩</div>
+            <div class="card-badges"><span class="badge badge-seconded">挂职</span></div>
+          </div>
+          <div class="card-accent" style="background:#9696C8;"></div>
+        </div>
+        <div class="person-card" data-category="congress">
+          <div class="card-avatar" style="background:#32C8C8;color:#fff;">肖</div>
+          <div class="card-body">
+            <div class="card-name">肖志刚</div>
+            <div class="card-title">区人大常委会主任</div>
+            <div class="card-meta"><span>1968.12</span><span class="dot">·</span><span>中央党校研究生</span></div>
+            <div class="card-detail">主持区人大常委会全面工作</div>
+            <div class="card-badges"><span class="badge badge-cong">人大</span></div>
+          </div>
+          <div class="card-accent" style="background:#32C8C8;"></div>
+        </div>
+        <div class="person-card" data-category="cppcc">
+          <div class="card-avatar" style="background:#C9A94E;color:#fff;">汤</div>
+          <div class="card-body">
+            <div class="card-name">汤钦飞</div>
+            <div class="card-title">区政协主席</div>
+            <div class="card-meta"><span>1967.02</span><span class="dot">·</span><span>研究生</span></div>
+            <div class="card-detail">主持区政协全面工作</div>
+            <div class="card-badges"><span class="badge badge-cppcc">政协</span></div>
+          </div>
+          <div class="card-accent" style="background:#C9A94E;"></div>
+        </div>
+  </div>
+</section>
+
+<!-- SECTION 2: TIMELINE -->
+<section class="section">
+  <h2 class="section-title">近期人事变动</h2>
+  <div class="section-desc">2024年12月至今关键任职调整</div>
+  <div class="timeline">
+    
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2024-12</div>
+            <div class="tl-event">陈献森任区长</div>
+            <div class="tl-note">此前周金星调任昌平区委书记</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2025-01</div>
+            <div class="tl-event">人大政协增补</div>
+            <div class="tl-note">王万青、安虹任人大副主任；贾邦、霍力任政协副主席</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2025-04</div>
+            <div class="tl-event">苏昊晋升常委</div>
+            <div class="tl-note">入区委常委班子，保留副区长</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2025-05</div>
+            <div class="tl-event">王智勇任宣传部长</div>
+            <div class="tl-note">1983年生，班子最年轻成员</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2025-06</div>
+            <div class="tl-event">邓慧敏、胡异峰任副区长</div>
+            <div class="tl-note">邓兼中关村东城园工委书记</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2025-12</div>
+            <div class="tl-event">肖松任副区长兼公安局长</div>
+            <div class="tl-note">兼区委政法委副书记</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2026-02</div>
+            <div class="tl-event">中央挂职</div>
+            <div class="tl-note">张艳国（国开行）、林艳红（外汇局）挂职副区长</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-date">2026-04</div>
+            <div class="tl-event">桑硼飞任副书记</div>
+            <div class="tl-note">兼区委党校校长</div>
+          </div>
+        </div>
+  </div>
+</section>
+
+<!-- SECTION 3: RELATIONSHIPS -->
+<section class="section">
+  <h2 class="section-title">工作关系矩阵</h2>
+  <div class="section-desc">领导班子成员间的直接工作交集</div>
+  <table class="rels-table">
+    <tbody>
+      
+        <tr>
+          <td><span class="rel-name">孙新军</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">陈献森</span></td>
+          <td><span class="rel-type" style="color:#E03C31;">党政搭档</span></td>
+          <td><span class="rel-period">2024.12至今</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">孙新军</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">桑硼飞</span></td>
+          <td><span class="rel-type" style="color:#E03C31;">正副书记搭档</span></td>
+          <td><span class="rel-period">2026.04至今</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">陈献森</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">桑硼飞</span></td>
+          <td><span class="rel-type" style="color:#5B8DEF;">副书记同僚</span></td>
+          <td><span class="rel-period">2026.04至今</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">王华伟</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">陈献森</span></td>
+          <td><span class="rel-type" style="color:#7BA7FF;">常务副区长协助区长</span></td>
+          <td><span class="rel-period">2024.12至今</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">黄丹</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">孙新军</span></td>
+          <td><span class="rel-type" style="color:#C864C8;">组织部长在书记领导下</span></td>
+          <td><span class="rel-period">—</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">王永民</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">孙新军</span></td>
+          <td><span class="rel-type" style="color:#FFA500;">纪委监督区委</span></td>
+          <td><span class="rel-period">—</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">薛国强</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">汤钦飞</span></td>
+          <td><span class="rel-type" style="color:#966432;">统战部长兼政协党组副书记</span></td>
+          <td><span class="rel-period">—</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">孙扬</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">肖松</span></td>
+          <td><span class="rel-type" style="color:#649632;">政法委书记-公安分局长</span></td>
+          <td><span class="rel-period">2025.12至今</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">张艳国</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">王华伟</span></td>
+          <td><span class="rel-type" style="color:#9696C8;">挂职协助</span></td>
+          <td><span class="rel-period">2026.02至今</span></td>
+        </tr>
+        <tr>
+          <td><span class="rel-name">林艳红</span></td>
+          <td><span class="rel-arrow">→</span></td>
+          <td><span class="rel-name">任江浩</span></td>
+          <td><span class="rel-type" style="color:#9696C8;">挂职协助</span></td>
+          <td><span class="rel-period">2026.02至今</span></td>
+        </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- SECTION 4: INSIGHTS -->
+<section class="section">
+  <h2 class="section-title">关键洞察</h2>
+  <div class="section-desc">领导班子结构和权力配置分析</div>
+  <div class="insights-grid">
+    <div class="insight-card">
+      <div class="insight-num">01</div>
+      <div class="insight-title">核心区年轻化</div>
+      <div class="insight-text">班子平均年龄约48岁。副书记桑硼飞（1980年生）、常委王智勇（1983年生·满族）为80后，体现首都功能核心区干部年轻化趋势。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-num">02</div>
+      <div class="insight-title">中央-区级挂职通道</div>
+      <div class="insight-text">张艳国（国开行风险管理部副总经理）和林艳红（国家外汇管理局综合司副司长）挂职副区长，体现中央金融单位与核心区的人才交流机制。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-num">03</div>
+      <div class="insight-title">交叉任职模式</div>
+      <div class="insight-text">王华伟（区委常委兼常务副区长）、苏昊（区委常委兼副区长）、薛国强（统战部长兼政协党组副书记），体现区委-政府-政协之间的深度融合。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-num">04</div>
+      <div class="insight-title">多党合作安排</div>
+      <div class="insight-text">副区长任江浩为九三学社社员，体现了共产党领导下的多党合作和政治协商制度在区政府层面的具体实践。</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-text">
+    本报告数据来源于北京市东城区人民政府官方网站 <a href="https://www.bjdch.gov.cn/zwgk/ldjs/" target="_blank">bjdch.gov.cn/zwgk/ldjs/</a><br>
+    数据时效：截至2026年7月 · 所有25条信息来源均为官方一级来源<br>
+    数据库：<a href="../../data/database/dongcheng_network.db">dongcheng_network.db</a> · 
+    关系图：<a href="../../data/graph/dongcheng_network.gexf">dongcheng_network.gexf</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    const cards = document.querySelectorAll('.person-card');
+    cards.forEach(card => {
+      if (filter === 'all') {
+        card.style.display = 'flex';
+      } else {
+        const cats = filter.split(',');
+        const match = cats.some(c => card.dataset.category === c);
+        card.style.display = match ? 'flex' : 'none';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
