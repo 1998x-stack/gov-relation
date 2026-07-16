@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "福州市",
+    "region": "福清市",
+    "job": "市委书记",
+    "task_id": "fujian_福清市",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "fujian_fuqing_ye_renyou",
+    "name": "叶仁佑",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1974-05",
+    "birthplace": "福建福州",
+    "native_place": "福建福州",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1997-09",
+    "dedupe_keys": {
+      "name_birth": "叶仁佑_1974-05",
+      "name_birthplace": "叶仁佑_福建福州",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "福州市委常委、福清市委书记",
+    "current_org": "中共福清市委员会",
+    "administrative_rank": "副厅级（福州市委常委兼任）",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021-06",
+      "end": "present",
+      "org": "中共福清市委员会",
+      "title": "福州市委常委、福清市委书记",
+      "level": "副厅级",
+      "location": "福建福州福清",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "以福州市委常委身份兼任福清市委书记。2021年6月上任。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "2021-06",
+      "org": "中共福州市台江区委员会",
+      "title": "台江区委书记（曾任）",
+      "level": "县处级正职",
+      "location": "福建福州台江",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "此前任台江区委书记。资料显示在闽侯县委书记/台江区委书记间有职务交叉，具体时间线待精确。",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到2010年代初期至任台江区委书记前的完整履历。包括早期职务、学历经历等。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_id": "fuqing_party", "name": "中共福清市委员会", "role": "现任市委书记"},
+    {"org_id": "fuzhou_party", "name": "中共福州市委员会", "role": "现任市委常委"},
+    {"org_id": "taijiang_party", "name": "中共福州市台江区委员会", "role": "曾任区委书记"}
+  ],
+  "relationships": [
+    {
+      "person": "张帆",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "叶仁佑于2021年6月接替张帆任福清市委书记",
+      "overlap_org": "中共福清市委员会",
+      "overlap_period": "2021-06",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陈登峰",
+      "person_id": "fujian_fuqing_chen_dengfeng",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "叶仁佑作为市委书记、陈登峰作为市长，构成党政主要领导搭档",
+      "overlap_org": "中共福清市委员会/福清市人民政府",
+      "overlap_period": "2024?—present",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S004"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["党务管理", "地方治理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party"],
+    "geographic_pattern": ["福建福州"],
+    "promotion_velocity": {
+      "summary": "信息不足，无法完整评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开信息有限",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现叶仁佑的相关风险信号",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "福清市领导班子数据 — build_福清市_data.py",
+      "url": "",
+      "publisher": "gov-relation",
+      "published_at": "2026-07-16",
+      "accessed_at": "2026-07-16",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "本地构建脚本数据，标注来源为百度百科"
+    },
+    {
+      "id": "S002",
+      "title": "福州市委领导名单 — build_福州市_data.py",
+      "url": "",
+      "publisher": "gov-relation",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "福州市领导名单确认叶仁佑为福州市委常委"
+    },
+    {
+      "id": "S003",
+      "title": "闽侯县领导班子数据 — build_闽侯县_data.py",
+      "url": "",
+      "publisher": "gov-relation",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "闽侯数据中列出叶仁佑曾任台江区委书记（按该数据标记为现任，可能过时）"
+    },
+    {
+      "id": "S004",
+      "title": "陈登峰_领导之窗_福清市人民政府",
+      "url": "https://www.fuqing.gov.cn/xjwz/zwgk/ldzc/cdf/",
+      "publisher": "福清市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方市长页面确认市政府领导班子"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "叶仁佑的完整履历（早期职务、教育经历、晋升时间线）"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "叶仁佑的完整履历是什么？（任台江区委书记前、2010年代的职务）",
+      "why_it_matters": "核心人物的履历完整性",
+      "suggested_queries": ["叶仁佑 简历 福清", "叶仁佑 台江区", "叶仁佑 任前公示"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "叶仁佑任台江区委书记的具体时间？",
+      "why_it_matters": "完善晋升链",
+      "suggested_queries": ["叶仁佑 台江区委书记 任职时间"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "medium",
+      "question": "叶仁佑的籍贯和出生地具体到县级？",
+      "why_it_matters": "用于人员去重和网络分析",
+      "suggested_queries": ["叶仁佑 出生 福州"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}
