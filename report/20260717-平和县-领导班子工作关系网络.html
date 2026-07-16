@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>平和县领导班子工作关系网络 — 情报简报</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  background: #1a1a1a;
+  color: #e8e0d0;
+  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif SC', 'SimSun', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid rgba(201, 169, 78, 0.3);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.header::after {
+  content: '密';
+  position: absolute;
+  top: 0; right: 0;
+  color: #E03C31;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  border: 1px solid #E03C31;
+  padding: 0.1rem 0.5rem;
+  opacity: 0.6;
+}
+.header h1 {
+  font-size: 2rem;
+  color: #e8e0d0;
+  margin-bottom: 0.5rem;
+}
+.header .subtitle {
+  color: #999;
+  font-size: 0.9rem;
+}
+.header .date {
+  color: #C9A94E;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+/* Stats bar */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(201, 169, 78, 0.2);
+  border: 1px solid rgba(201, 169, 78, 0.2);
+  margin-bottom: 2rem;
+}
+.stat {
+  background: #222;
+  padding: 1.2rem;
+  text-align: center;
+}
+.stat .num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2rem;
+  color: #C9A94E;
+  font-weight: 700;
+}
+.stat .label {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+/* Section title */
+.section-title {
+  font-size: 1.3rem;
+  color: #e8e0d0;
+  padding-left: 0.8rem;
+  border-left: 3px solid #E03C31;
+  margin-bottom: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* Person card grid */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 2rem;
+}
+.person-card {
+  background: #222;
+  padding: 1.2rem;
+  position: relative;
+}
+.person-card .badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Sans SC', sans-serif;
+  letter-spacing: 0.05em;
+}
+.badge-secretary { background: #E03C31; color: #fff; }
+.badge-mayor { background: #c0392b; color: #fff; }
+.badge-standing { background: #8e44ad; color: #fff; }
+.badge-deputy { background: #2c3e50; color: #ccc; border: 1px solid rgba(255,255,255,0.1); }
+.badge-other { background: #333; color: #999; border: 1px solid rgba(255,255,255,0.05); }
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e8e0d0;
+}
+.person-card .role {
+  font-size: 0.85rem;
+  color: #C9A94E;
+  margin: 0.3rem 0;
+}
+.person-card .info {
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.5;
+}
+.person-card .source {
+  font-size: 0.7rem;
+  color: #555;
+  margin-top: 0.5rem;
+  word-break: break-all;
+}
+.person-card .status-confirmed {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.65rem;
+  color: #27ae60;
+  border: 1px solid #27ae60;
+  padding: 0.1rem 0.3rem;
+}
+.person-card .status-gap {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.65rem;
+  color: #e67e22;
+  border: 1px solid #e67e22;
+  padding: 0.1rem 0.3rem;
+}
+
+/* Timeline */
+.timeline-section { margin-bottom: 2rem; }
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.8rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(201, 169, 78, 0.3);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.2rem;
+  top: 0.3rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #C9A94E;
+  border-radius: 50%;
+}
+.timeline-item .tl-title {
+  font-weight: 500;
+  color: #e8e0d0;
+}
+.timeline-item .tl-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+.timeline-item .tl-detail {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 0.2rem;
+}
+
+/* Relationship matrix */
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+.matrix th, .matrix td {
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.5rem;
+  text-align: center;
+}
+.matrix th {
+  background: #2a2a2a;
+  color: #C9A94E;
+  font-weight: 500;
+  font-family: 'Noto Serif SC', serif;
+}
+.matrix td {
+  color: #ccc;
+}
+.matrix .conn-yes {
+  color: #C9A94E;
+}
+.matrix .conn-no {
+  color: #444;
+}
+.matrix .person-label {
+  text-align: left;
+  font-weight: 500;
+  color: #e8e0d0;
+  white-space: nowrap;
+  padding-left: 0.8rem;
+}
+
+/* Insights panel */
+.insights {
+  background: #1e1e1e;
+  border: 1px solid rgba(224, 60, 49, 0.3);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.insights h3 {
+  color: #E03C31;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+.insights ul {
+  list-style: none;
+  padding: 0;
+}
+.insights li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.insights li:last-child { border-bottom: none; }
+.insights .priority-critical { color: #E03C31; }
+.insights .priority-high { color: #e67e22; }
+.insights .priority-medium { color: #C9A94E; }
+
+/* Data sources */
+.sources {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: #666;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 1rem;
+}
+.sources a {
+  color: #888;
+  text-decoration: none;
+}
+.sources a:hover { color: #C9A94E; }
+
+/* Confidence legend */
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+.legend-item { display: flex; align-items: center; gap: 0.3rem; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.legend-dot.red { background: #E03C31; }
+.legend-dot.gold { background: #C9A94E; }
+.legend-dot.purple { background: #8e44ad; }
+.legend-dot.grey { background: #666; }
+
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .person-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>平和县领导班子工作关系网络</h1>
+  <div class="subtitle">福建省漳州市平和县 · Intelligence Briefing</div>
+  <div class="date">2026-07-17 · 数据来源: 平和县人民政府官方网站</div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat"><div class="num">17</div><div class="label">人物</div></div>
+  <div class="stat"><div class="num">5</div><div class="label">机构</div></div>
+  <div class="stat"><div class="num">15</div><div class="label">任职记录</div></div>
+  <div class="stat"><div class="num">12</div><div class="label">关系对</div></div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <span class="legend-item"><span class="legend-dot red"></span> 县委书记 (核心)</span>
+  <span class="legend-item"><span class="legend-dot gold"></span> 政府正职</span>
+  <span class="legend-item"><span class="legend-dot purple"></span> 县委常委</span>
+  <span class="legend-item"><span class="legend-dot grey"></span> 县政府副职</span>
+</div>
+
+<!-- Person Cards -->
+<div class="section-title">关键人物</div>
+<div class="person-grid">
+  <!-- 沈义勇 -->
+  <div class="person-card">
+    <span class="badge badge-secretary">县委书记</span>
+    <span class="status-gap">⚠ 履历缺失</span>
+    <div class="name">沈义勇</div>
+    <div class="role">中共平和县委书记</div>
+    <div class="info">
+      <div>出生: <span style="color:#e67e22;">待查</span></div>
+      <div>学历: <span style="color:#e67e22;">待查</span></div>
+      <div>籍贯: <span style="color:#e67e22;">待查</span></div>
+      <div>就任: ~2025-2026年</div>
+    </div>
+    <div class="source">来源: 平和新闻网 (2026-07新闻报道)</div>
+  </div>
+
+  <!-- 周绍斌 -->
+  <div class="person-card">
+    <span class="badge badge-mayor">代县长</span>
+    <span class="status-confirmed">✓ 已确认</span>
+    <div class="name">周绍斌</div>
+    <div class="role">平和县委副书记、代县长</div>
+    <div class="info">
+      <div>出生: 1977年12月</div>
+      <div>学历: 大学</div>
+      <div>籍贯: <span style="color:#e67e22;">待查</span></div>
+      <div>此前任职: 漳州市直单位 (具体待查)</div>
+    </div>
+    <div class="source">来源: 平和县政府官网</div>
+  </div>
+
+  <!-- 戴永福 -->
+  <div class="person-card">
+    <span class="badge badge-standing">县委常委</span>
+    <span class="status-confirmed">✓ 已确认</span>
+    <div class="name">戴永福</div>
+    <div class="role">平和县委常委、常务副县长</div>
+    <div class="info">
+      <div>出生: 1976年04月</div>
+      <div>学历: 大学</div>
+      <div>籍贯: <span style="color:#e67e22;">待查</span></div>
+    </div>
+    <div class="source">来源: 平和县政府官网</div>
+  </div>
+
+  <!-- 庞健安 -->
+  <div class="person-card">
+    <span class="badge badge-standing">县委常委</span>
+    <span class="status-confirmed">✓ 已确认</span>
+    <div class="name">庞健安</div>
+    <div class="role">平和县委常委、副县长</div>
+    <div class="info">
+      <div>出生: 1978年08月</div>
+      <div>学历: 大学</div>
+      <div>籍贯: <span style="color:#e67e22;">待查</span></div>
+    </div>
+    <div class="source">来源: 平和县政府官网</div>
+  </div>
+
+  <!-- 林清山 -->
+  <div class="person-card">
+    <span class="badge badge-deputy">副县长</span>
+    <span class="status-confirmed">✓ 已确认</span>
+    <div class="name">林清山</div>
+    <div class="role">平和县副县长</div>
+    <div class="info">
+      <div>出生: 1971年12月</div>
+      <div>学历: 在职研究生 · 理学博士</div>
+    </div>
+    <div class="source">来源: 平和县政府官网</div>
+  </div>
+
+  <!-- 吴映红 -->
+  <div class="person-card">
+    <span class="badge badge-deputy">副县长</span>
+    <span class="status-confirmed">✓ 已确认</span>
+    <div class="name">吴映红</div>
+    <div class="role">平和县副县长</div>
+    <div class="info">
+      <div>出生: 1973年05月</div>
+      <div>学历: 大学</div>
+    </div>
+    <div class="source">来源: 平和县政府官网</div>
+  </div>
+
+  <!-- 林贵良等 -->
+  <div class="person-card">
+    <span class="badge badge-deputy">副县长</span>
+    <span class="status-gap">⚠ 信息有限</span>
+    <div class="name">林贵良</div>
+    <div class="role">平和县副县长</div>
+    <div class="info"><div>基本信息: 政府官网仅列姓名</div></div>
+  </div>
+
+  <div class="person-card">
+    <span class="badge badge-other">县政府</span>
+    <div class="name" style="font-size:1rem;">吴朝东 · 黄建鑫 · 黄淳杰 · 邱炳晖</div>
+    <div class="role">平和县副县长</div>
+    <div class="info"><div>基本信息: 政府官网仅列姓名</div></div>
+  </div>
+
+  <div class="person-card">
+    <span class="badge badge-other">党组成员</span>
+    <div class="name">卢文深</div>
+    <div class="role">平和县政府党组成员</div>
+    <div class="info"><div>基本信息: 政府官网仅列姓名</div></div>
+  </div>
+
+  <div class="person-card">
+    <span class="badge badge-standing">待确认</span>
+    <span class="status-gap">⚠ 推测</span>
+    <div class="name" style="font-size:1rem;">蔡立保 · 马长健 · 吴宇嫔 · 赖文尧 · 汪冕</div>
+    <div class="role">县领导（具体职务待确认）</div>
+    <div class="info">来自2026-07新闻报道的列名</div>
+  </div>
+</div>
+
+<!-- Timeline -->
+<div class="section-title">近期人事变动时间线</div>
+<div class="timeline-section">
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="tl-title">沈义勇以县委书记身份活动</div>
+    <div class="tl-date">2026年7月</div>
+    <div class="tl-detail">多次以"平和县委书记"身份带队督导安全生产、防台风防汛工作、主持召开县委常委会会议</div>
+  </div>
+  <div class="timeline-item">
+    <div class="tl-title">周绍斌调任平和县代县长</div>
+    <div class="tl-date">2026年6-7月</div>
+    <div class="tl-detail">漳州市政府发布周绍斌免职通知（此前在市直单位任职），以平和县代县长身份首次公开活动</div>
+  </div>
+  <div class="timeline-item">
+    <div class="tl-title">周绍斌主持召开县政府全体会议</div>
+    <div class="tl-date">2026-07-15</div>
+    <div class="tl-detail">以县委副书记、代县长身份部署下一阶段重点工作</div>
+  </div>
+  <div class="timeline-item">
+    <div class="tl-title" style="color:#e67e22;">前任县委书记信息缺失</div>
+    <div class="tl-date">—</div>
+    <div class="tl-detail">沈义勇的就任时间和前任信息完全未知，需进一步调查</div>
+  </div>
+</div>
+</div>
+
+<!-- Relationship Matrix -->
+<div class="section-title">工作关系矩阵</div>
+<table class="matrix">
+  <thead>
+    <tr><th></th><th>沈义勇</th><th>周绍斌</th><th>戴永福</th><th>庞健安</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="person-label">沈义勇</td>
+      <td>—</td>
+      <td class="conn-yes">书记-县长搭档</td>
+      <td class="conn-yes">书记-常务</td>
+      <td class="conn-yes">书记-常委</td>
+    </tr>
+    <tr>
+      <td class="person-label">周绍斌</td>
+      <td class="conn-yes">书记-县长搭档</td>
+      <td>—</td>
+      <td class="conn-yes">县长-常务</td>
+      <td class="conn-yes">县长-副县长</td>
+    </tr>
+    <tr>
+      <td class="person-label">戴永福</td>
+      <td class="conn-yes">书记-常务</td>
+      <td class="conn-yes">县长-常务</td>
+      <td>—</td>
+      <td class="conn-yes">同班子</td>
+    </tr>
+    <tr>
+      <td class="person-label">庞健安</td>
+      <td class="conn-yes">书记-常委</td>
+      <td class="conn-yes">县长-副县长</td>
+      <td class="conn-yes">同班子</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Key Insights -->
+<div class="section-title">关键洞察与突破线索</div>
+<div class="insights">
+  <h3>🔴 优先级最高的调查方向</h3>
+  <ul>
+    <li class="priority-critical"><strong>沈义勇的完整履历</strong> — 这是最大的信息缺口。出生年份、籍贯、教育背景、就任县委书记前的完整任职经历全部未知。</li>
+    <li class="priority-critical"><strong>前任县委书记的身份与去向</strong> — 谁在沈义勇之前担任平和县委书记？此人现在何处？这直接关系到平和县的政治生态变迁。</li>
+    <li class="priority-high"><strong>周绍斌来平和前的任职</strong> — 已知其从漳州市直单位调任，但具体任职单位、职务均未知。这能揭示县-市之间的干部流动路径。</li>
+    <li class="priority-medium"><strong>蔡立保等5位县领导的具体职务</strong> — 出现在新闻报道中但具体分管领域不明，推测其中可能有多位县委常委。</li>
+    <li class="priority-medium"><strong>6位副县长详细信息</strong> — 林贵良、吴朝东、黄建鑫、黄淳杰、邱炳晖的出生年月、学历等基本信息在政府官网上未显示。</li>
+  </ul>
+</div>
+
+<div class="insights" style="border-color: rgba(201,169,78,0.3);">
+  <h3 style="color:#C9A94E;">📊 结构分析</h3>
+  <ul>
+    <li>平和县政府领导班子规模较大：1名代县长 + 1名常务副县长 + 8名副县长 + 1名党组成员</li>
+    <li>县委常委班子中目前可以确认包含至少3人：沈义勇、周绍斌、戴永福、庞健安</li>
+    <li>"代县长"称谓表明周绍斌上任不久（或正在等待人大正式任命），这是近期最重要的人事变动</li>
+    <li>班子成员年龄跨度：1971-1978年，属于典型的"70后"领导班子</li>
+    <li>林清山是在职博士，学历层次突出；庞健安、吴映红为女性领导</li>
+  </ul>
+</div>
+
+<!-- Data Sources -->
+<div class="sections-title section-title">数据来源</div>
+<div class="sources">
+  <p>所有数据来源于平和县人民政府官方网站 (pinghe.gov.cn / zhangzhou.gov.cn/cms/html/phxrmzf/)，访问日期 2026-07-17。</p>
+  <p>主要来源页面:</p>
+  <ul>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/zsb/index.html" target="_blank">领导之窗 - 代县长周绍斌</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/czl/index.html" target="_blank">领导之窗 - 常务副县长戴永福</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/dyf/index.html" target="_blank">领导之窗 - 副县长庞健安</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/lqs/index.html" target="_blank">领导之窗 - 副县长林清山</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/wyh/index.html" target="_blank">领导之窗 - 副县长吴映红</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/2026-07-13/1971285273.html" target="_blank">平和县委书记带队督导安全生产工作</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/2026-07-15/1630871462.html" target="_blank">平和县委常委会会议召开</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/2026-07-16/1886323372.html" target="_blank">平和县召开县政府全体会议</a></li>
+    <li><a href="https://www.zhangzhou.gov.cn/cms/html/phxrmzf/ldzc/index.html" target="_blank">领导之窗首页</a></li>
+  </ul>
+  <p style="margin-top:0.8rem; color:#555;">数据文件: data/database/pinghe_network.db (SQLite) · data/graph/pinghe_network.gexf (GEXF) · build_pinghe_data.py</p>
+  <p style="color:#555;">报告: report/20260717-平和县-领导班子工作关系网络调查报告.md</p>
+</div>
+
+</div>
+</body>
+</html>
