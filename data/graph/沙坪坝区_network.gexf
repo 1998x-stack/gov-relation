@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>OpenCode Gov Research Agent</creator>
+    <description>重庆市沙坪坝区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="level" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pspb_lin_xuyang" label="林旭阳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1998年？"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="1998年？"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pspb_wang_yinchuan" label="王银川">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pspb_hu_yi" label="户邑">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pspb_he_yong" label="何勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pspb_qu_kexun" label="屈克逊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pspb_yang_yong" label="阳勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pspb_qi_meiwen" label="祁美文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1990年7月"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="1990年7月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pspb_tang_xiaoping" label="唐小平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pspb_xiao_qinghua" label="肖庆华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="person"/>
+          <attvalue for="3" value="待查"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ospb_party_committee" label="中共重庆市沙坪坝区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_gov" label="重庆市沙坪坝区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_discipline" label="中共重庆市沙坪坝区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_organization" label="中共重庆市沙坪坝区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_propaganda" label="中共重庆市沙坪坝区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_united_front" label="中共重庆市沙坪坝区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_political_legal" label="中共重庆市沙坪坝区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_military_department" label="重庆市沙坪坝区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="军事"/>
+          <attvalue for="2" value="正师级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_science_park" label="中共西部（重庆）科学城沙坪坝片区工作委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_finance_bureau" label="重庆市沙坪坝区财政局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_public_security" label="重庆市公安局沙坪坝区分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_procuratorate" label="重庆市沙坪坝区人民检察院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="检察院"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_court" label="重庆市沙坪坝区人民法院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="法院"/>
+          <attvalue for="2" value="正处级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_peoples_congress" label="重庆市沙坪坝区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_cppcc" label="中国人民政治协商会议重庆市沙坪坝区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_xiamen_gov" label="厦门市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="副省级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_wuyishan_city" label="武夷山市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级市"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_nanping_party" label="中共南平市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_putian_gov" label="莆田市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_beibei_party" label="中共重庆市北碚区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_chongqing_finance" label="重庆市财政局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ospb_taizhou_gov" label="浙江省台州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地厅级"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pspb_lin_xuyang" target="ospb_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="2026-07-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pspb_lin_xuyang" target="ospb_beibei_party" label="北碚区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北碚区委书记"/>
+          <attvalue for="2" value="spb_beibei_party"/>
+          <attvalue for="3" value="2024-10-2026-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pspb_lin_xuyang" target="ospb_putian_gov" label="莆田市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莆田市委副书记、市长"/>
+          <attvalue for="2" value="spb_putian_gov"/>
+          <attvalue for="3" value="2021-2024-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pspb_lin_xuyang" target="ospb_nanping_party" label="南平市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南平市委常委、组织部部长"/>
+          <attvalue for="2" value="spb_nanping_party"/>
+          <attvalue for="3" value="2019-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pspb_lin_xuyang" target="ospb_wuyishan_city" label="武夷山市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武夷山市委书记"/>
+          <attvalue for="2" value="spb_wuyishan_city"/>
+          <attvalue for="3" value="2017-2019"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pspb_lin_xuyang" target="ospb_wuyishan_city" label="武夷山市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武夷山市长"/>
+          <attvalue for="2" value="spb_wuyishan_city"/>
+          <attvalue for="3" value="2016-2017"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pspb_lin_xuyang" target="ospb_xiamen_gov" label="厦门市思明区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市思明区副区长"/>
+          <attvalue for="2" value="spb_xiamen_gov"/>
+          <attvalue for="3" value="2011-2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pspb_lin_xuyang" target="ospb_xiamen_gov" label="厦门市委宣传部部务会成员、办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市委宣传部部务会成员、办公室主任"/>
+          <attvalue for="2" value="spb_xiamen_gov"/>
+          <attvalue for="3" value="2008-2011"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pspb_lin_xuyang" target="ospb_xiamen_gov" label="厦门市湖里团区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市湖里团区委书记"/>
+          <attvalue for="2" value="spb_xiamen_gov"/>
+          <attvalue for="3" value="2003-2008"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pspb_lin_xuyang" target="ospb_xiamen_gov" label="厦门市湖里区殿前街道团委书记（起步）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="厦门市湖里区殿前街道团委书记（起步）"/>
+          <attvalue for="2" value="spb_xiamen_gov"/>
+          <attvalue for="3" value="1998?-2003"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pspb_wang_yinchuan" target="ospb_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+          <attvalue for="2" value="spb_gov"/>
+          <attvalue for="3" value="2025-04-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pspb_wang_yinchuan" target="ospb_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="2024-12-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pspb_wang_yinchuan" target="ospb_taizhou_gov" label="台州市副市长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="台州市副市长（挂职）"/>
+          <attvalue for="2" value="spb_taizhou_gov"/>
+          <attvalue for="3" value="2024-04-2025-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pspb_wang_yinchuan" target="ospb_chongqing_finance" label="重庆市财政局副局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市财政局副局长"/>
+          <attvalue for="2" value="spb_chongqing_finance"/>
+          <attvalue for="3" value="2021?-2024-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pspb_wang_yinchuan" target="ospb_chongqing_finance" label="重庆市财政局总会计师" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市财政局总会计师"/>
+          <attvalue for="2" value="spb_chongqing_finance"/>
+          <attvalue for="3" value="2020?-2021?"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pspb_wang_yinchuan" target="ospb_chongqing_finance" label="重庆市财政局预算处处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市财政局预算处处长"/>
+          <attvalue for="2" value="spb_chongqing_finance"/>
+          <attvalue for="3" value="2018?-2020?"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pspb_wang_yinchuan" target="ospb_chongqing_finance" label="重庆市财政局研究室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市财政局研究室主任"/>
+          <attvalue for="2" value="spb_chongqing_finance"/>
+          <attvalue for="3" value="2015?-2018?"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pspb_wang_yinchuan" target="ospb_chongqing_finance" label="重庆市财政局办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="重庆市财政局办公室副主任"/>
+          <attvalue for="2" value="spb_chongqing_finance"/>
+          <attvalue for="3" value="2012?-2015?"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pspb_hu_yi" target="ospb_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pspb_he_yong" target="ospb_gov" label="区委常委、区政府常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、区政府常务副区长"/>
+          <attvalue for="2" value="spb_gov"/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pspb_he_yong" target="ospb_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pspb_qu_kexun" target="ospb_science_park" label="区委常委、西部科学城沙坪坝片区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、西部科学城沙坪坝片区党工委书记"/>
+          <attvalue for="2" value="spb_science_park"/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pspb_qu_kexun" target="ospb_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pspb_yang_yong" target="ospb_political_legal" label="区委常委、区委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、区委政法委书记"/>
+          <attvalue for="2" value="spb_political_legal"/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pspb_qi_meiwen" target="ospb_party_committee" label="前任区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区委书记"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="2024-09-2026-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pspb_tang_xiaoping" target="ospb_party_committee" label="前任区委书记（更早）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区委书记（更早）"/>
+          <attvalue for="2" value="spb_party_committee"/>
+          <attvalue for="3" value="2021-12?-2024-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pspb_xiao_qinghua" target="ospb_gov" label="前任区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区长"/>
+          <attvalue for="2" value="spb_gov"/>
+          <attvalue for="3" value="待查-2024?"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pspb_lin_xuyang" target="pspb_wang_yinchuan" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档关系"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会;重庆市沙坪坝区人民政府"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pspb_lin_xuyang" target="pspb_hu_yi" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与专职副书记（区委日常工作协调）"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pspb_lin_xuyang" target="pspb_he_yong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与常务副区长（区政府常务工作）"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pspb_lin_xuyang" target="pspb_qu_kexun" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区委常委（科学城片区工作）"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="pspb_lin_xuyang" target="pspb_yang_yong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与政法委书记（政法系统工作）"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="pspb_wang_yinchuan" target="pspb_he_yong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常务副区长（区政府日常运作）"/>
+          <attvalue for="2" value="重庆市沙坪坝区人民政府"/>
+          <attvalue for="3" value="2025-04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="pspb_wang_yinchuan" target="pspb_hu_yi" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与区委副书记（区委区政府协调）"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2025-04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="pspb_lin_xuyang" target="pspb_qi_meiwen" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="林旭阳接替祁美文任沙坪坝区委书记"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2026-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="pspb_qi_meiwen" target="pspb_tang_xiaoping" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="祁美文接替唐小平任沙坪坝区委书记"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2024-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="pspb_wang_yinchuan" target="pspb_xiao_qinghua" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="王银川接替肖庆华任沙坪坝区长"/>
+          <attvalue for="2" value="重庆市沙坪坝区人民政府"/>
+          <attvalue for="3" value="2024-2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="pspb_qi_meiwen" target="pspb_hu_yi" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="前任区委书记与专职副书记（曾共同工作）"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="pspb_qi_meiwen" target="pspb_he_yong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="前任区委书记与区委常委、常务副区长"/>
+          <attvalue for="2" value="中共重庆市沙坪坝区委员会"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
