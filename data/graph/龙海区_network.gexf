@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>China Gov Network Research Agent</creator>
+    <description>龙海区 (Longhai District, Zhangzhou, Fujian) — Leadership Network Graph</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="叶毓">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙海区委书记"/>
+          <attvalue for="2" value="中共漳州市龙海区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="陈艺章">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙海区委副书记、区长"/>
+          <attvalue for="2" value="漳州市龙海区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="林文生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙海区人大常委会主任"/>
+          <attvalue for="2" value="漳州市龙海区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="洪海涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙海区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议漳州市龙海区委员会"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共漳州市龙海区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="中共漳州市龙海区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共漳州市龙海区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共漳州市龙海区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共漳州市龙海区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共漳州市龙海区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="漳州市龙海区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="漳州市龙海区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中国人民政治协商会议漳州市龙海区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="漳州市龙海区监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="监察"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="漳州市龙海区发展和改革局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府部门"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="漳州市龙海区教育局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府部门"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="漳州市龙海区公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府部门"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="漳州市龙海区财政局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府部门"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="漳州市龙海区人力资源和社会保障局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府部门"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="漳州市龙海区石码街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="漳州市龙海区榜山街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="漳州市龙海区角美街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="漳州市龙海区海澄镇">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="漳州市龙海区港尾镇">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="p1" target="o1" label="龙海区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="confirmed current role"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="p2" target="o7" label="龙海区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="confirmed current role"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o1" label="龙海区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="concurrent party post"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o8" label="龙海区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="confirmed current role"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o9" label="龙海区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="confirmed current role"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与区长搭档，共同领导龙海区工作"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="p3" label="党政人大" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与人大常委会主任"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p2" target="p3" label="政府人大" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长向区人大报告工作"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
