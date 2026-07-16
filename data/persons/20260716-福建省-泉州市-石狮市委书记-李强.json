@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-16",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "泉州市",
+    "region": "石狮市",
+    "job": "石狮市委书记",
+    "task_id": "fujian_石狮市",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "shishi_li_qiang",
+    "name": "李强",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "未知",
+    "birthplace": "未知",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李强_unknown",
+      "name_birthplace": "李强_unknown",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "泉州市委常委、石狮市委书记",
+    "current_org": "中共石狮市委",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-16",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共石狮市委",
+      "title": "石狮市委书记",
+      "level": "副厅级",
+      "location": "福建省泉州市石狮市",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": false,
+      "notes": "兼任泉州市委常委",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共泉州市委",
+      "title": "泉州市委常委",
+      "level": "副厅级",
+      "location": "福建省泉州市",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": false,
+      "notes": "石狮市委书记高配泉州市委常委",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到李强在任石狮市委书记前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "shiwei",
+      "name": "中共石狮市委",
+      "type": "党委",
+      "level": "县级市",
+      "parent": "中共泉州市委",
+      "location": "福建省泉州市石狮市"
+    },
+    {
+      "org_id": "quanzhou_shiwei",
+      "name": "中共泉州市委",
+      "type": "党委",
+      "level": "地级市",
+      "parent": "中共福建省委",
+      "location": "福建省泉州市"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "余志伟",
+      "person_id": "shishi_yu_zhiwei",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "石狮市委书记与市长搭档关系",
+      "overlap_org": "中共石狮市委",
+      "overlap_period": "present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "郭小强",
+      "person_id": "shishi_guo_xiaoqiang",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "石狮市委常委班子内的上下级关系",
+      "overlap_org": "中共石狮市委",
+      "overlap_period": "present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "缺乏完整履历，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现李强相关的纪律处分、审计问题或负面媒体报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "中文维基百科 — 泉州市词条（市委常委会名单）",
+      "url": "https://zh.wikipedia.org/wiki/%E6%B3%89%E5%B7%9E%E5%B8%82",
+      "publisher": "维基百科",
+      "published_at": "",
+      "accessed_at": "2026-07-16",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "列出李强为泉州市委常委、石狮市委书记"
+    },
+    {
+      "id": "S002",
+      "title": "build_泉州市_data.py — 现有仓库产物",
+      "url": "",
+      "publisher": "gov-relation 仓库",
+      "published_at": "2026-07-16",
+      "accessed_at": "2026-07-16",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "泉州市网络构建脚本中确认李强为石狮市委书记"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李强在任石狮市委书记前的完整履历（出生年月、籍贯、教育背景、晋升路径）完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李强的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "核心领导人的基本身份信息缺失，影响网络图谱的完整性",
+      "suggested_queries": ["李强 石狮 简历", "李强 泉州 常委 任职经历", "李强 任前公示"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "high",
+      "question": "李强何时开始担任石狮市委书记？之前任何职？",
+      "why_it_matters": "缺失晋升路径，无法了解其成长轨迹和系统经验",
+      "suggested_queries": ["李强 石狮市委书记 任命", "李强 此前 担任"],
+      "last_attempted": "2026-07-16"
+    },
+    {
+      "priority": "medium",
+      "question": "石狮市前任市委书记是谁？去向何处？",
+      "why_it_matters": "前任-继任关系是重要的网络连接线索",
+      "suggested_queries": ["石狮市 前任市委书记", "石狮市委书记 卸任"],
+      "last_attempted": "2026-07-16"
+    }
+  ]
+}
