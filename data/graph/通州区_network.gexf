@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Claude Code Research Agent</creator>
+    <description>北京市通州区领导班子工作关系网络 - Party Secretary, District Mayor and Leadership Team</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="education" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="ptz_lijunjie" label="李俊杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="other"/>
+          <attvalue for="2" value="1978年8月"/>
+          <attvalue for="3" value="研究生，经济学博士"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_zheng_hao" label="郑皓">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+          <attvalue for="2" value="1977年2月"/>
+          <attvalue for="3" value="在职研究生，文学博士"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_lijinke" label="李金克">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy_secretary"/>
+          <attvalue for="2" value="1972年4月"/>
+          <attvalue for="3" value="大学，经济学硕士"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="ptz_hou_jianmei" label="侯健美">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+          <attvalue for="2" value="1978年12月"/>
+          <attvalue for="3" value="研究生，哲学硕士、工商管理硕士"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_li_xianxia" label="李先侠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+          <attvalue for="2" value="1979年5月"/>
+          <attvalue for="3" value="研究生，管理学硕士"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_wu_kongan" label="吴孔安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+          <attvalue for="2" value="1976年8月"/>
+          <attvalue for="3" value="中央党校研究生，管理学学士"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_wang_xiangyu" label="王翔宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+          <attvalue for="2" value="1980年1月"/>
+          <attvalue for="3" value="研究生，工学硕士"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_qin_tao" label="秦涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+          <attvalue for="2" value="1972年2月"/>
+          <attvalue for="3" value="在职研究生，管理学硕士"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_lai_yibin" label="赖毅斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="discipline"/>
+          <attvalue for="2" value="1979年3月"/>
+          <attvalue for="3" value="研究生，法学硕士"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_dong_lixian" label="董丽献">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+          <attvalue for="2" value="1976年6月"/>
+          <attvalue for="3" value="中央党校大学"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_lu_qinglei" label="卢庆雷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+          <attvalue for="2" value="1976年4月"/>
+          <attvalue for="3" value="在职研究生，工商管理硕士"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_dong_minghui" label="董明慧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_gao_fei" label="高飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_han_song" label="韩松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_lin_zhenghang" label="林正航">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_yao_weilong" label="姚伟龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_zou_haitao" label="邹海涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_zheng_yi" label="郑毅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_he_ming" label="何明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="district_mayor"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ptz_zhao_yuying" label="赵玉影">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_cheng_weimin" label="程卫民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_lu_xinhong" label="鲁新红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_fang_yajun" label="房亚军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_liu_xiujie" label="刘秀杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="standing_committee"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ptz_hu_xuefeng" label="胡雪峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="ptz_ni_decai" label="倪德才">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="ptz_zhen_yu" label="甄宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="ptz_jin_wenling" label="金文岭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="ptz_pei_zhigang" label="裴志刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="ptz_xu_xiaoyun" label="徐晓云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="oorg_qw" label="中共北京市通州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_qw_xcb" label="中共北京市通州区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_qw_zzb" label="中共北京市通州区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_qw_zfw" label="中共北京市通州区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_qw_tyzxb" label="中共北京市通州区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_qw_jw" label="中共北京市通州区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_zf" label="北京市通州区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_rd" label="北京市通州区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_zx" label="北京市通州区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_wzb" label="北京市通州区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、纪委书记、区监察委员会主任"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、武装部政委"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="ptz_lijunjie" target="ptz_zheng_hao" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委/区政府"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="ptz_lijunjie" target="ptz_lijinke" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="ptz_zheng_hao" target="ptz_li_xianxia" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="北京市通州区人民政府"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="ptz_zheng_hao" target="ptz_wu_kongan" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="北京市通州区人民政府"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="ptz_lijunjie" target="ptz_hou_jianmei" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="ptz_lijunjie" target="ptz_li_xianxia" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="ptz_lijunjie" target="ptz_wu_kongan" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="ptz_lijunjie" target="ptz_wang_xiangyu" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="ptz_lijunjie" target="ptz_qin_tao" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="ptz_lijunjie" target="ptz_lai_yibin" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="ptz_lijunjie" target="ptz_dong_lixian" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="ptz_lijunjie" target="ptz_lu_qinglei" label="区委常委班子" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="ptz_lijinke" target="ptz_hou_jianmei" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="ptz_lijinke" target="ptz_li_xianxia" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="ptz_lijinke" target="ptz_wu_kongan" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="ptz_lijinke" target="ptz_wang_xiangyu" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="ptz_lijinke" target="ptz_qin_tao" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="ptz_lijinke" target="ptz_lai_yibin" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="ptz_lijinke" target="ptz_dong_lixian" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="ptz_lijinke" target="ptz_lu_qinglei" label="专职副书记与常委" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="中共北京市通州区委"/>
+          <attvalue for="2" value="2025-"/>
+          <attvalue for="3" value="medium"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
