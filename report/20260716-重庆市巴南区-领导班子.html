@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>重庆市巴南区领导班子 · 工作关系网络简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface2: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e8e6e3;
+  --text-dim: #88847e;
+  --accent: #E03C31;
+  --accent-dim: rgba(224, 60, 49, 0.15);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201, 169, 78, 0.12);
+  --blue: #3b82f6;
+  --blue-dim: rgba(59, 130, 246, 0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 60px 0 40px;
+}
+.header .label {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 36px;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.header .sub {
+  color: var(--text-dim);
+  font-size: 15px;
+  font-weight: 300;
+}
+.header .date {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 40px 0;
+  border: 1px solid var(--border);
+}
+.stat {
+  background: var(--surface);
+  padding: 24px 16px;
+  text-align: center;
+}
+.stat .num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.stat .num.accent { color: var(--accent); }
+.stat .label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  letter-spacing: 0.1em;
+}
+
+/* SECTION */
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section h2::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 22px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* PERSON CARD */
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.person-card:last-child { margin-bottom: 0; }
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.person-card .role {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.person-card .meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.person-card .meta span strong { color: var(--text); font-weight: 500; }
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  letter-spacing: 0.05em;
+  margin-right: 6px;
+}
+.badge.confirmed {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.badge.gap {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+
+/* TABLE */
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+tr:last-child td { border-bottom: none; }
+
+/* RELATIONSHIP */
+.rel-list { list-style: none; }
+.rel-list li {
+  padding: 12px 16px;
+  border-left: 2px solid var(--border);
+  margin-bottom: 8px;
+  background: var(--surface);
+  font-size: 14px;
+}
+.rel-list li strong { color: var(--gold); }
+
+/* GAPS */
+.gap-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--surface2);
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.gap-item .priority {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px 0;
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .header { padding: 40px 0 24px; }
+  .header h1 { font-size: 26px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat .num { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+  <div class="label">● 情报简报 INTELLIGENCE BRIEFING</div>
+  <h1>重庆市巴南区<br>领导班子工作关系网络</h1>
+  <div class="sub">Banan District · Chongqing Municipality</div>
+  <div class="date">2026-07-16 &nbsp;|&nbsp; 调查编号: chongqing_巴南区 &nbsp;|&nbsp; 级别: 直辖市市辖区（正厅级）</div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="num">10</div>
+    <div class="label">人物 Persons</div>
+  </div>
+  <div class="stat">
+    <div class="num">9</div>
+    <div class="label">机构 Organizations</div>
+  </div>
+  <div class="stat">
+    <div class="num">11</div>
+    <div class="label">任职 Positions</div>
+  </div>
+  <div class="stat">
+    <div class="num accent">6</div>
+    <div class="label">关系 Relationships</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>党政一把手</h2>
+
+  <div class="person-card">
+    <div class="name">陶世祥</div>
+    <div class="role">区委书记 · Party Secretary</div>
+    <span class="badge confirmed">CONFIRMED</span>
+    <span class="badge gap">履历待查</span>
+    <div class="meta" style="margin-top:12px;">
+      <span>任职：<strong>约2025年至今</strong></span>
+      <span>此前：<strong>推测曾任巴南区区长</strong></span>
+      <span>来源：<strong>cqbn.gov.cn</strong></span>
+    </div>
+  </div>
+
+  <div class="person-card">
+    <div class="name">钟涛</div>
+    <div class="role">区委副书记、区长 · District Mayor</div>
+    <span class="badge confirmed">CONFIRMED</span>
+    <span class="badge gap">履历待查</span>
+    <div class="meta" style="margin-top:12px;">
+      <span>任职：<strong>约2025年至今</strong></span>
+      <span>主持常务会议：<strong>第144-174次</strong></span>
+      <span>来源：<strong>cqbn.gov.cn</strong></span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>四套班子领导</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>姓名</th><th>职务</th><th>系统</th><th>状态</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>陶世祥</td><td>区委书记</td><td>党委</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>钟涛</td><td>区委副书记、区长</td><td>政府</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>周密</td><td>区委副书记</td><td>党委</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>朱激扬</td><td>区委常委、区政府党组成员</td><td>党委/政府</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>王波</td><td>区领导（推测常委）</td><td>党委</td><td><span class="badge gap">推测</span></td></tr>
+      <tr><td>刘秀荣</td><td>区领导（推测常委）</td><td>党委</td><td><span class="badge gap">推测</span></td></tr>
+      <tr><td>杨亚平</td><td>区领导</td><td>政府</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>刘功峰</td><td>区领导</td><td>政府</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>刘永全</td><td>区人大常委会主任</td><td>人大</td><td><span class="badge confirmed">确认</span></td></tr>
+      <tr><td>何永革</td><td>区政协主席</td><td>政协</td><td><span class="badge confirmed">确认</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section">
+  <h2>待确认关键职务</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>职务</th><th>状态</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>区纪委书记</td><td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td><td>未在任何报道中出现</td></tr>
+      <tr><td>区委组织部部长</td><td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td><td>未在任何报道中出现</td></tr>
+      <tr><td>区委宣传部部长</td><td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td><td>未在任何报道中出现</td></tr>
+      <tr><td>区委政法委书记</td><td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td><td>未在任何报道中出现</td></tr>
+      <tr><td>常务副区长</td><td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td><td>未在任何报道中出现</td></tr>
+      <tr><td>其他副区长</td><td><span class="badge gap">部分已知</span></td><td>仅确认部分领导姓名</td></tr>
+      <tr><td>区人武部部长</td><td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td><td>未在任何报道中出现</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section">
+  <h2>工作关系网络</h2>
+
+  <ul class="rel-list">
+    <li>
+      <strong>陶世祥 ↔ 钟涛</strong><br>
+      <span style="color:var(--text-dim);font-size:13px;">党政一把手搭档 · 2025-2026 · 多次共同出席调研、会见、会议</span>
+    </li>
+    <li>
+      <strong>陶世祥 ↔ 周密</strong><br>
+      <span style="color:var(--text-dim);font-size:13px;">区委书记与区委副书记 · 2026 · 两优一先表彰大会</span>
+    </li>
+    <li>
+      <strong>钟涛 ↔ 刘永全</strong><br>
+      <span style="color:var(--text-dim);font-size:13px;">区长与人大常委会主任 · 2026 · 春节团拜会</span>
+    </li>
+    <li>
+      <strong>钟涛 ↔ 何永革</strong><br>
+      <span style="color:var(--text-dim);font-size:13px;">区长与政协主席 · 2026 · 春节团拜会</span>
+    </li>
+    <li>
+      <strong>钟涛 ↔ 朱激扬</strong><br>
+      <span style="color:var(--text-dim);font-size:13px;">区政府同事 · 2026 · 生物医药调研</span>
+    </li>
+    <li>
+      <strong>钟涛 ↔ 杨亚平 · 刘功峰</strong><br>
+      <span style="color:var(--text-dim);font-size:13px;">区政府同事 · 2026 · 满天星行动计划推进会</span>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>前任信息</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>职位</th><th>前任姓名</th><th>任职时期</th><th>去向</th><th>状态</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>区委书记</td><td>何友生（推测）</td><td>~2018-~2025</td><td>待查</td>
+        <td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td>
+      </tr>
+      <tr>
+        <td>区长</td><td>贾晖（推测）</td><td>~2021-~2025</td><td>待查</td>
+        <td><span class="badge gap" style="color:var(--accent);border-color:var(--accent);">待查</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section" style="border-bottom:none;">
+  <h2>信息缺口</h2>
+
+  <div class="gap-item">
+    <div class="priority">⚡⚡⚡⚡⚡</div>
+    <div><strong>陶世祥的完整履历</strong> — 出生年月、籍贯、教育背景、任区委书记前经历全部未知</div>
+  </div>
+  <div class="gap-item">
+    <div class="priority">⚡⚡⚡⚡⚡</div>
+    <div><strong>钟涛的完整履历</strong> — 出生年月、籍贯、教育背景、任区长前经历全部未知</div>
+  </div>
+  <div class="gap-item">
+    <div class="priority">⚡⚡⚡⚡⚡</div>
+    <div><strong>区委常委全体名单</strong> — 纪委书记、组织部长、宣传部长、政法委书记、统战部长等均未确认</div>
+  </div>
+  <div class="gap-item">
+    <div class="priority">⚡⚡⚡⚡</div>
+    <div><strong>前任区委书记何友生的去向</strong> — 需要确认其当前职务</div>
+  </div>
+  <div class="gap-item">
+    <div class="priority">⚡⚡⚡</div>
+    <div><strong>周密、朱激扬、王波等人的履历</strong> — 各人的完整职业经历</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>数据来源：巴南区人民政府官网 (cqbn.gov.cn) · 信息截止：2026-07-16</p>
+  <p style="margin-top:8px;">SQLite: data/database/巴南区_network.db · GEXF: data/graph/巴南区_network.gexf</p>
+</div>
+
+</div>
+</body>
+</html>
