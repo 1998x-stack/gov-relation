@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Claude Code Research Agent</creator>
+    <description>福建省领导关系网络 — Party Secretary, Governor, provincial leadership</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="周祖翼">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委书记、省人大常委会主任"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="赵龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委副书记、省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="王永礼">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委常委、常务副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="李建成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委常委、副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="林瑞良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委常委、副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="王金福">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="江尔雄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="赵增连">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="魏晓奎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省副省长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="伍斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省人民政府党组成员"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="康涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省人民政府党组成员"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="李斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省人民政府秘书长"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="尹力">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中央宣传部部长（原福建省委书记）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p14" label="于伟国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="全国人大（原福建省委书记）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p15" label="尤权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中央统战部原部长（原福建省委书记）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p16" label="孙春兰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="国务院原副总理（原福建省委书记）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p17" label="王宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中央金融委员会办公室（原福建省省长）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p18" label="唐登杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="民政部原部长（原福建省省长）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p19" label="于伟国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="全国人大（原福建省省长、省委书记）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p20" label="张彦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委常委、宣传部部长（原）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p21" label="迟耀云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委常委、省纪委书记（原）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p22" label="邢善萍">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委副书记（原）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p23" label="罗东川">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福建省委副书记、政法委书记（原）"/>
+          <attvalue for="2" value="province"/>
+        </attvalues>
+        <viz:color r="50" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共福建省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="福建省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="福建省人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协福建省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共福建省纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共福建省委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共福建省委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共福建省委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共福建省委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="福建省公安厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="福建省审计厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共厦门市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="副省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="厦门市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="副省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共福州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="福州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="中共泉州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="泉州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="中共中央宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="全国人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="中共中央统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="国务院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="中央金融委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="民政部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o24" label="中央政治局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o25" label="国家土地管理局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o26" label="国土资源部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o27" label="自然资源部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o28" label="国家土地督察济南局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o29" label="中央组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o30" label="中央机构编制委员会办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o31" label="人力资源和社会保障部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="国家级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o32" label="同济大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o33" label="浙江大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o34" label="中国人民大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="福建省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2022-11–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o3" label="福建省人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-01–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o31" label="人力资源和社会保障部党组书记、部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2022-05–2022-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o30" label="中央机构编制委员会办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2019-05–2022-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o29" label="中央组织部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016-10–2022-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o29" label="中央组织部部务委员兼干部二局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2014-08–2016-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="o32" label="同济大学党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2011-11–2014-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="o29" label="上海市委组织部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2008-11–2011-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="o32" label="同济大学党委常务副书记（正局级）兼副校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2007-06–2008-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p1" target="o32" label="同济大学党委副书记兼副校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2004-12–2007-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="o32" label="同济大学党委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2002-07–2004-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p1" target="o32" label="同济大学理学院党委书记兼海洋地质与地球物理系主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1998-08–2002-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1" target="o32" label="同济大学海洋地质与地球物理系研究员、副系主任、系党总支书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1994-04–1998-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="o32" label="同济大学海洋地质与地球物理系副教授、副系主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1992-1993–1994-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="o32" label="同济大学任教" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1989-10–1992"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p2" target="o2" label="福建省省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2022-01–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p2" target="o2" label="福建省代省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021-10–2022-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p2" target="o12" label="福建省委常委、厦门市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021-01–2021-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p2" target="o2" label="福建省常务副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2020-07–2021-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p2" target="o27" label="自然资源部副部长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2018-03–2020-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p2" target="o26" label="国土资源部副部长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016-06–2018-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p2" target="o26" label="国土资源部规划司司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2015-06–2016-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p2" target="o28" label="国家土地督察济南局局长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2009-12–2015-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p2" target="o26" label="国土资源部地籍管理司副司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2001-12–2009-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p2" target="o26" label="国土资源部地籍管理司登记处处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1998-12–2001-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p2" target="o26" label="国土资源部地籍管理司登记处副处长（主持工作）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1998-08–1998-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p2" target="o25" label="国家土地管理局办公室副处级秘书、综合处副处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1997-01–1998-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p2" target="o25" label="国家土地管理局科技宣教司教育处、办公室综合处科员、正科级秘书" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1989-07–1997-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p3" target="o2" label="福建省常务副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p4" target="o2" label="福建省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p5" target="o2" label="福建省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p6" target="o2" label="福建省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p7" target="o2" label="福建省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p8" target="o2" label="福建省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p9" target="o2" label="福建省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p10" target="o2" label="福建省人民政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p11" target="o2" label="福建省人民政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p12" target="o2" label="福建省人民政府秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–present"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p13" target="o1" label="福建省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2020-12–2022-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p14" target="o1" label="福建省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2017-10–2020-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p15" target="o1" label="福建省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2012-12–2017-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p16" target="o1" label="福建省委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2009-11–2012-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p17" target="o2" label="福建省省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2020-07–2021-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p18" target="o2" label="福建省省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2018-01–2020-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p19" target="o2" label="福建省省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016-01–2018-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p20" target="o7" label="福建省委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p21" target="o5" label="福建省委常委、省纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="p22" target="o1" label="福建省委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="p23" target="o9" label="福建省委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="–"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="p1" target="p13" label="周祖翼接替尹力任福建省委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="2022-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="p13" target="p14" label="尹力接替于伟国任福建省委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="2020-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="p2" target="p17" label="赵龙接替王宁任福建省省长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="2021-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e53" source="p1" target="p2" label="周祖翼（省委书记）与赵龙（省长）在福建省共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="2022-11至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e54" source="p2" target="p12" label="赵龙曾任厦门市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="2021-01至2021-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e55" source="p1" target="p32" label="周祖翼在同济大学工作20余年" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="1989-2014"/>
+        </attvalues>
+      </edge>
+      <edge id="e56" source="p2" target="p25" label="赵龙从国家土地管理局起步" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="1989-1998"/>
+        </attvalues>
+      </edge>
+      <edge id="e57" source="p2" target="p26" label="赵龙在国土资源部工作约18年" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="1998-2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e58" source="p1" target="p29" label="周祖翼在中央组织部工作约8年" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="2014-2022"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
