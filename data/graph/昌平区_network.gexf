@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>北京市昌平区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pcp_gan_jingzhong" label="甘靖中">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记，未来科学城党工委书记（兼）"/>
+          <attvalue for="2" value="中共北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_liu_xiaodong" label="刘晓东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记，区政府党组书记、区长，未来科学城党工委副书记、管委会主任（兼）"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_leng_qiangtian" label="冷强田">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记，区直机关工委书记，区委党校校长、区行政学院院长"/>
+          <attvalue for="2" value="中共北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_chen_xiang" label="陈祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共北京市昌平区委宣传部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_zhang_qingwu" label="张庆武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+          <attvalue for="2" value="中共北京市昌平区委组织部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_ma_qiang" label="马强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+          <attvalue for="2" value="中共北京市昌平区委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_guo_qingyao" label="郭清尧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长，区政协党组副书记（兼）"/>
+          <attvalue for="2" value="中共北京市昌平区委统战部"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_li_shugen" label="李树根">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委，区人民武装部部长"/>
+          <attvalue for="2" value="北京市昌平区人民武装部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_liu_qiang" label="柳强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委，区政府党组成员、副区长，区委中关村科技园区昌平园工委书记"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_ma_yajun" label="马亚军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区纪委书记，区监察委员会主任，未来科学城党工委委员、纪检监察工委书记（兼）"/>
+          <attvalue for="2" value="中共北京市昌平区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_ma_chunxiu" label="马春秀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长，区工商联主席，区红十字会会长"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_wang_weiguo" label="王卫国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长，区委政法委副书记，市公安局昌平分局党委书记、局长"/>
+          <attvalue for="2" value="北京市公安局昌平分局"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_lei_hailiang" label="雷海良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_lin_yu" label="林宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长，区委政法委副书记"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_zhang_shuo" label="张硕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_zhao_shiwei" label="赵仕伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="未来科学城党工委委员、管委会副主任，区政府党组成员、副区长（兼）"/>
+          <attvalue for="2" value="北京未来科学城管理委员会"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_cui_di" label="崔迪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长（挂职）"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_su_dalin" label="苏大林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府副区长（挂职）"/>
+          <attvalue for="2" value="北京市昌平区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_wang_yanqing" label="王燕庆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组书记、主任"/>
+          <attvalue for="2" value="北京市昌平区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_bai_xiangjun" label="白向军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组副书记、副主任，区总工会主席"/>
+          <attvalue for="2" value="北京市昌平区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_shi_youmin" label="史佑民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任，区委组织部分管日常工作的副部长"/>
+          <attvalue for="2" value="北京市昌平区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_wang_jun" label="王军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="北京市昌平区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_li_xin" label="李欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="北京市昌平区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_li_jiqing" label="李继清">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任（不驻会）"/>
+          <attvalue for="2" value="北京市昌平区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_jiang_dafeng" label="蒋达峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组书记、主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_wang_zhigang" label="王志刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组副书记、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="pcp_wang_jian2" label="王建">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、副主席，区委教育工委书记"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_ning_che" label="宁澈">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_li_xuehong" label="李雪红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_wang_libing" label="王立兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_bao_zhihua" label="鲍志华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市昌平区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pcp_zhou_jinxing" label="周金星">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任区委书记（原东城区区长调任）"/>
+          <attvalue for="2" value="中共北京市昌平区委员会（已离任）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="ocp_party_committee" label="中共北京市昌平区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共北京市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_gov" label="北京市昌平区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="北京市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_org_department" label="中共北京市昌平区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="昌平区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_discipline" label="中共北京市昌平区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="北京市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_propaganda" label="中共北京市昌平区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="昌平区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_united_front" label="中共北京市昌平区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="昌平区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_political_legal" label="中共北京市昌平区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="昌平区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_party_school" label="中共北京市昌平区委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="昌平区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_public_security" label="北京市公安局昌平分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="北京市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_military_department" label="北京市昌平区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="军队"/>
+          <attvalue for="2" value="北京卫戍区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_future_science_city" label="北京未来科学城管理委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="北京市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_peoples_congress" label="北京市昌平区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="北京市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ocp_cppcc" label="中国人民政治协商会议北京市昌平区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="北京市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="pcp_gan_jingzhong" target="ocp_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="pcp_gan_jingzhong" target="ocp_future_science_city" label="未来科学城党工委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="未来科学城党工委书记（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="pcp_liu_xiaodong" target="ocp_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="pcp_liu_xiaodong" target="ocp_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="pcp_liu_xiaodong" target="ocp_future_science_city" label="未来科学城党工委副书记、管委会主任（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="未来科学城党工委副书记、管委会主任（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="pcp_leng_qiangtian" target="ocp_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="pcp_leng_qiangtian" target="ocp_party_school" label="区委党校校长、区行政学院院长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委党校校长、区行政学院院长（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="pcp_chen_xiang" target="ocp_propaganda" label="区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="pcp_zhang_qingwu" target="ocp_org_department" label="区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="pcp_ma_qiang" target="ocp_political_legal" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="pcp_guo_qingyao" target="ocp_united_front" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="pcp_guo_qingyao" target="ocp_cppcc" label="区政协党组副书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协党组副书记（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="pcp_li_shugen" target="ocp_military_department" label="区委常委、区人民武装部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、区人民武装部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="pcp_liu_qiang" target="ocp_gov" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="pcp_ma_yajun" target="ocp_discipline" label="区委常委、区纪委书记、区监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、区纪委书记、区监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="pcp_ma_yajun" target="ocp_future_science_city" label="未来科学城党工委委员、纪检监察工委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="未来科学城党工委委员、纪检监察工委书记（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="pcp_ma_chunxiu" target="ocp_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="pcp_wang_weiguo" target="ocp_gov" label="副区长、区公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="pcp_wang_weiguo" target="ocp_public_security" label="市公安局昌平分局党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市公安局昌平分局党委书记、局长"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="pcp_lei_hailiang" target="ocp_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="pcp_lin_yu" target="ocp_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="pcp_zhang_shuo" target="ocp_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="pcp_zhao_shiwei" target="ocp_future_science_city" label="未来科学城管委会副主任（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="未来科学城管委会副主任（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="pcp_zhao_shiwei" target="ocp_gov" label="副区长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长（兼）"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="pcp_cui_di" target="ocp_gov" label="副区长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长（挂职）"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="pcp_su_dalin" target="ocp_gov" label="副区长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长（挂职）"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="pcp_wang_yanqing" target="ocp_peoples_congress" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="pcp_bai_xiangjun" target="ocp_peoples_congress" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="pcp_shi_youmin" target="ocp_peoples_congress" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="pcp_wang_jun" target="ocp_peoples_congress" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="pcp_li_xin" target="ocp_peoples_congress" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="pcp_li_jiqing" target="ocp_peoples_congress" label="区人大常委会副主任（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会副主任（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="pcp_jiang_dafeng" target="ocp_cppcc" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="pcp_wang_zhigang" target="ocp_cppcc" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="pcp_wang_jian2" target="ocp_cppcc" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="pcp_ning_che" target="ocp_cppcc" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="pcp_li_xuehong" target="ocp_cppcc" label="区政协副主席（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="pcp_wang_libing" target="ocp_cppcc" label="区政协副主席（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="pcp_bao_zhihua" target="ocp_cppcc" label="区政协副主席（不驻会）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协副主席（不驻会）"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="pcp_zhou_jinxing" target="ocp_party_committee" label="区委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记（前任）"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="pcp_gan_jingzhong" target="pcp_liu_xiaodong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="pcp_gan_jingzhong" target="pcp_leng_qiangtian" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="pcp_liu_xiaodong" target="pcp_leng_qiangtian" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与专职副书记在区委常委会共事"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="pcp_gan_jingzhong" target="pcp_zhang_qingwu" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与组织部部长（干部管理）"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="pcp_gan_jingzhong" target="pcp_ma_yajun" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与纪委书记（从严治党主体责任）"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="pcp_gan_jingzhong" target="pcp_ma_qiang" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="pcp_liu_xiaodong" target="pcp_liu_qiang" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常委副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="pcp_liu_xiaodong" target="pcp_wang_weiguo" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与公安分局局长（安全稳定）"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="pcp_ma_qiang" target="pcp_wang_weiguo" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="政法委书记与公安分局局长的政法系统协作"/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="pcp_zhang_qingwu" target="pcp_ma_yajun" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="组织部与纪委在干部监督方面的协作"/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="pcp_chen_xiang" target="pcp_zhang_qingwu" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="宣传部与组织部在意识形态和干部教育方面的协作"/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="pcp_guo_qingyao" target="pcp_jiang_dafeng" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="统战部部长与政协主席的工作关系（兼政协党组副书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="pcp_gan_jingzhong" target="pcp_zhou_jinxing" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="甘靖中接替周金星任昌平区委书记（周金星原为东城区区长调任昌平）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
