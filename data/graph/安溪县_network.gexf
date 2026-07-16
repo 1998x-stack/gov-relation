@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>gov-relation Research Agent</creator>
+    <description>安溪县 (福建省泉州市) 领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="panxi_wu_yuzhou" label="吴毓舟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="panxi_chen_qingyong" label="陈清拥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县代县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="panxi_liu_yongqiang" label="刘永强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查（已离任安溪县长）"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="panxi_deputy_party_sec_unknown" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县委专职副书记"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="panxi_exec_deputy_mayor_unknown" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县委常委、常务副县长"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="panxi_discipline_sec_unknown" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县委常委、县纪委书记"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="panxi_org_dept_head_unknown" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县委常委、组织部部长"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="panxi_politics_law_sec_unknown" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安溪县委常委、政法委书记"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_party" label="中共安溪县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_gov" label="安溪县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_discipline" label="中共安溪县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_npc" label="安溪县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_ppcc" label="中国人民政治协商会议安溪县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_organization" label="中共安溪县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_propaganda" label="中共安溪县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_politics_law" label="中共安溪县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_armed_forces" label="安溪县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_united_front" label="中共安溪县委统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="panxi_wu_yuzhou" target="oorg_party" label="安溪县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="panxi_chen_qingyong" target="oorg_gov" label="安溪县代县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="2026-07-03—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="panxi_chen_qingyong" target="oorg_party" label="安溪县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="2026-07-03—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="panxi_liu_yongqiang" target="oorg_gov" label="安溪县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—~2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="panxi_deputy_party_sec_unknown" target="oorg_party" label="安溪县委专职副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="panxi_exec_deputy_mayor_unknown" target="oorg_gov" label="安溪县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="panxi_discipline_sec_unknown" target="oorg_discipline" label="安溪县委常委、县纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="panxi_org_dept_head_unknown" target="oorg_organization" label="安溪县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="panxi_politics_law_sec_unknown" target="oorg_politics_law" label="安溪县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待查—present"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="panxi_wu_yuzhou" target="panxi_chen_qingyong" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委书记与代县长组成安溪县党政主要领导搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="panxi_chen_qingyong" target="panxi_liu_yongqiang" label="predecessor_successor" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="陈清拥接替刘永强担任安溪县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="panxi_wu_yuzhou" target="panxi_liu_yongqiang" label="overlap" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="吴毓舟与刘永强在安溪县党政班子共事"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
