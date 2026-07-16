@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-16">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>北京市海淀区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_or_type" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="edge_type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="phd_zhang_ge" label="张革">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记（北京市委常委兼任）"/>
+          <attvalue for="2" value="中共北京市海淀区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phd_li_junjie" label="李俊杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_yang_renkang" label="杨仁康">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区委党校校长"/>
+          <attvalue for="2" value="中共北京市海淀区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="100" b="100"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="phd_bao_jun" label="鲍雷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、纪委书记、区监委主任"/>
+          <attvalue for="2" value="中共北京市海淀区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_yue_fu" label="岳飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_qi_cong" label="齐聪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+          <attvalue for="2" value="中共北京市海淀区委组织部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_shen_yan" label="申焰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共北京市海淀区委宣传部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_wu_jiagui" label="吴家贵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+          <attvalue for="2" value="中共北京市海淀区委统战部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_zhou_dongwei" label="周东伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+          <attvalue for="2" value="中共北京市海淀区委政法委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_lin_hao" label="林浩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、副区长（中关村科学城管委会副主任）"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_liu_wenyuan" label="刘文远">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、武装部部长"/>
+          <attvalue for="2" value="北京市海淀区人民武装部"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_cao_xuandong" label="曹选东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长（中关村科学城管委会副主任）"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_zhu_xiaojie" label="朱晓杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_zhang_qing" label="张庆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+          <attvalue for="2" value="北京市公安局海淀分局"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_tang_yun" label="唐云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_ji_xiaoyan" label="嵇晓燕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_zhao_haoyi" label="赵皓懿">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="北京市海淀区人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_wang_he" label="王合">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前区委书记"/>
+          <attvalue for="2" value="北京市（已离任）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="phd_liu_changle" label="刘长利">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+          <attvalue for="2" value="北京市海淀区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="phd_tang_jianguo" label="汤建国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北京市海淀区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="ohd_party_committee" label="中共北京市海淀区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共北京市委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_gov" label="北京市海淀区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="北京市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_discipline" label="中共北京市海淀区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="北京市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_org_department" label="中共北京市海淀区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="海淀区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_propaganda" label="中共北京市海淀区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="海淀区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_united_front" label="中共北京市海淀区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="海淀区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_political_legal" label="中共北京市海淀区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="海淀区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_party_school" label="中共北京市海淀区委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="海淀区委"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_armed_forces" label="北京市海淀区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="军队"/>
+          <attvalue for="2" value="北京卫戍区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_public_security" label="北京市公安局海淀分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="公安"/>
+          <attvalue for="2" value="北京市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_zgc_management" label="中关村科学城管理委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="海淀区委/海淀区政府"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_peoples_congress" label="北京市海淀区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="北京市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ohd_cppcc" label="中国人民政治协商会议北京市海淀区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="北京市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="phd_zhang_ge" target="ohd_party_committee" label="区委书记（北京市委常委兼任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记（北京市委常委兼任）"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="phd_zhang_ge" target="ohd_org_department" label="北京市委组织部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市委组织部副部长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="phd_zhang_ge" target="ohd_org_department" label="北京市委组织部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市委组织部副部长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="phd_zhang_ge" target="ohd_org_department" label="北京市老干部局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市老干部局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="phd_zhang_ge" target="ohd_party_committee" label="北京市委副秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市委副秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="phd_zhang_ge" target="ohd_org_department" label="北京市教育委员会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市教育委员会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="phd_zhang_ge" target="ohd_org_department" label="履历缺口（1990年代-2013年约20余年）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="履历缺口（1990年代-2013年约20余年）"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="phd_li_junjie" target="ohd_gov" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="phd_li_junjie" target="ohd_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="phd_li_junjie" target="ohd_gov" label="区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="phd_li_junjie" target="ohd_party_committee" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="phd_li_junjie" target="ohd_zgc_management" label="中关村科学城管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中关村科学城管委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="phd_li_junjie" target="ohd_gov" label="海淀区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海淀区副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="phd_li_junjie" target="ohd_org_department" label="北京市财政局副局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市财政局副局长"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="phd_li_junjie" target="ohd_org_department" label="北京市财政局预算处处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市财政局预算处处长"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="phd_li_junjie" target="ohd_org_department" label="北京市财政局预算处副处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市财政局预算处副处长"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="phd_li_junjie" target="ohd_org_department" label="北京市财政局干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北京市财政局干部"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="phd_yang_renkang" target="ohd_party_committee" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="phd_bao_jun" target="ohd_discipline" label="区委常委、区纪委书记、区监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、区纪委书记、区监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="phd_yue_fu" target="ohd_gov" label="区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="phd_qi_cong" target="ohd_org_department" label="区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="phd_shen_yan" target="ohd_propaganda" label="区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="phd_wu_jiagui" target="ohd_united_front" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="phd_zhou_dongwei" target="ohd_political_legal" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="phd_lin_hao" target="ohd_gov" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="phd_liu_wenyuan" target="ohd_armed_forces" label="区委常委、武装部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、武装部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="phd_cao_xuandong" target="ohd_gov" label="副区长（中关村科学城管委会副主任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长（中关村科学城管委会副主任）"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="phd_zhu_xiaojie" target="ohd_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="phd_zhang_qing" target="ohd_gov" label="副区长、区公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长、区公安分局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="phd_tang_yun" target="ohd_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="phd_ji_xiaoyan" target="ohd_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="phd_zhao_haoyi" target="ohd_gov" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="phd_wang_he" target="ohd_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="phd_wang_he" target="ohd_party_committee" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="phd_liu_changle" target="ohd_peoples_congress" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="phd_tang_jianguo" target="ohd_cppcc" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="phd_zhang_ge" target="phd_li_junjie" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长党政正职搭档（张革2024年6月起任书记，李俊杰2023年11月起任区长）"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="phd_zhang_ge" target="phd_yang_renkang" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="phd_li_junjie" target="phd_yang_renkang" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与专职副书记在区委常委会共事"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="phd_zhang_ge" target="phd_bao_jun" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与纪委书记（从严治党主体责任）"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="phd_zhang_ge" target="phd_qi_cong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与组织部部长（干部管理）"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="phd_li_junjie" target="phd_yue_fu" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常务副区长（区政府日常运作）"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="phd_li_junjie" target="phd_lin_hao" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与常委副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="phd_li_junjie" target="phd_zhang_qing" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与公安分局局长（安全稳定）"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="phd_qi_cong" target="phd_bao_jun" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="组织部与纪委在干部监督方面的协作"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="phd_zhou_dongwei" target="phd_zhang_qing" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="政法委书记与公安分局局长的政法系统协作"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="phd_zhang_ge" target="phd_wang_he" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="张革接替王合任海淀区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="phd_li_junjie" target="phd_yue_fu" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="李俊杰此前任常务副区长，岳飞接任"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="phd_li_junjie" target="phd_cao_xuandong" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与中关村科学城管委会副主任（科技创新发展）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
