@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>gov-relation Research Agent</creator>
+    <description>七里河区领导班子工作关系网络 - 甘肃省兰州市七里河区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="胡真">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市七里河区委书记"/>
+          <attvalue for="2" value="中共兰州市七里河区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="孙洋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市七里河区委副书记、区长"/>
+          <attvalue for="2" value="兰州市七里河区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="芮文刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市政协副主席（原七里河区委书记）"/>
+          <attvalue for="2" value="兰州市政协"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="王瑞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共兰州市七里河区委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="岳红宾">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区委常委、统战部部长、政法委书记"/>
+          <attvalue for="2" value="中共兰州市七里河区委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="张福寿">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区人大常委会主任"/>
+          <attvalue for="2" value="七里河区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="高希明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议七里河区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="宋明安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区副区长"/>
+          <attvalue for="2" value="兰州市七里河区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="张国军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区副区长"/>
+          <attvalue for="2" value="兰州市七里河区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="张斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="七里河区副区长、公安分局局长"/>
+          <attvalue for="2" value="兰州市公安局七里河分局"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共兰州市七里河区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共兰州市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="兰州市七里河区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="兰州市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="七里河区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="兰州市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议七里河区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="兰州市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="兰州市公安局七里河分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="兰州市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="兰州市水务局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="兰州市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="兰州市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="兰州市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="兰州市城关区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共兰州市城关区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="共青团城关区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="群团"/>
+          <attvalue for="2" value="共青团兰州市委"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="兰州市城关区何家庄小学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="兰州市城关区教育局"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="兰州市城关区酒泉路街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value="兰州市城关区人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="兰州市环境保护局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="兰州市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o10" label="教师" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="城关区何家庄小学任教"/>
+          <attvalue for="2" value="1998-11~c.2003"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o8" label="城关区委组织部干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="c.2003~2005"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o9" label="共青团城关区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2005~c.2008"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o11" label="酒泉路街道党工委副书记、办事处主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="c.2008~c.2010"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o11" label="酒泉路街道党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="c.2010~2011-09"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="o1" label="七里河区委常委、区委办主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="首次到七里河区工作"/>
+          <attvalue for="2" value="2011-09~2014"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="o2" label="七里河区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2014~2022"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="o2" label="兰州经济技术开发区党工委委员、管委会主任（兼安宁区委副书记）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2022~2023-04"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="o6" label="兰州市水务局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2023-04~2023-12"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p1" target="o1" label="七里河区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年1月任七里河区委书记"/>
+          <attvalue for="2" value="2024-01~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p2" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兰州商学院毕业后，先后在安宁区工作"/>
+          <attvalue for="2" value="2011~2016"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o1" label="七里河区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2016~2021-04"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p2" target="o2" label="七里河区委副书记、代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2021-04~2021-04"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p2" target="o2" label="七里河区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年4月29日当选区长；2021年12月3日连任"/>
+          <attvalue for="2" value="2021-04-29~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p3" target="o12" label="兰州市环境保护局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p3" target="o1" label="七里河区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区委书记"/>
+          <attvalue for="2" value="~2024-01"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="o7" label="兰州市政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年1月当选"/>
+          <attvalue for="2" value="2024-01~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p4" target="o1" label="七里河区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="此前曾任七里河区副区长"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p4" target="o2" label="七里河区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="c.2021~"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p5" target="o1" label="七里河区委常委、区委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p5" target="o1" label="七里河区委常委、统战部部长、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼区政协党组副书记"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p6" target="o3" label="七里河区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年12月3日当选"/>
+          <attvalue for="2" value="2021-12~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p7" target="o4" label="七里河区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p8" target="o2" label="七里河区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p9" target="o2" label="七里河区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p10" target="o2" label="七里河区副区长、公安七里河分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="原贾波，现为张斌"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真作为区委书记，孙洋作为区长，是党政一把手搭档关系"/>
+          <attvalue for="2" value="2024-01至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真接替芮文刚任七里河区委书记"/>
+          <attvalue for="2" value="2024-01"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真与王瑞在七里河区委共事，王瑞任区委常委、宣传部部长"/>
+          <attvalue for="2" value="2024-01至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真与岳红宾在七里河区委共事，岳红宾任区委常委、统战部部长、政法委书记"/>
+          <attvalue for="2" value="2024-01至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p2" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孙洋与岳红宾在七里河区共事，岳红宾任区委常委兼政法委书记，孙洋任区长（区禁毒委主任），岳红宾任区禁毒委副主任"/>
+          <attvalue for="2" value="2021-至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p2" target="p4" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孙洋与王瑞在七里河区共事"/>
+          <attvalue for="2" value="2021-至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真与张福寿在七里河区党政班子共事"/>
+          <attvalue for="2" value="2024-01至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真与宋明安在七里河区共事，宋明安排名靠前的副区长"/>
+          <attvalue for="2" value="2024-01至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p1" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡真与张斌在七里河区共事，张斌任副区长兼公安分局局长"/>
+          <attvalue for="2" value="2024-至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
