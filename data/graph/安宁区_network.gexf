@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>gov-relation Research Agent</creator>
+    <description>安宁区领导班子工作关系网络 - 甘肃省兰州市安宁区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王立山">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委书记"/>
+          <attvalue for="2" value="中共安宁区委"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="曹宏亮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区区长"/>
+          <attvalue for="2" value="安宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="雒泽民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省信访局局长（原安宁区委书记）"/>
+          <attvalue for="2" value="甘肃省信访局"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="张吉彬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、常务副区长"/>
+          <attvalue for="2" value="安宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="王玉琨">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、组织部部长"/>
+          <attvalue for="2" value="中共安宁区委组织部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="陈涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共安宁区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="蒋源庆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、政法委书记"/>
+          <attvalue for="2" value="中共安宁区委政法委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="杨荣广">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共安宁区委宣传部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="冯宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、统战部部长"/>
+          <attvalue for="2" value="中共安宁区委统战部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="袁冬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区委常委、区委办公室主任"/>
+          <attvalue for="2" value="中共安宁区委办公室"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="康珺">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区人大常委会主任"/>
+          <attvalue for="2" value="安宁区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="贾向红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议安宁区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="李琦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区副区长（常务之后排名第一）"/>
+          <attvalue for="2" value="安宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="杨斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安宁区副区长、兰州市公安局安宁分局局长"/>
+          <attvalue for="2" value="兰州市公安局安宁分局"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共安宁区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共兰州市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="安宁区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="兰州市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="安宁区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="兰州市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议安宁区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="兰州市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共安宁区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共兰州市纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共安宁区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安宁区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共安宁区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安宁区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共安宁区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安宁区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共安宁区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安宁区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共安宁区委办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共安宁区委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="兰州市公安局安宁分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="兰州市公安局"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="甘肃省信访局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="兰州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共兰州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共甘肃省委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="兰州市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o2" label="安宁区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="此前曾任安宁区长, 后接任区委书记"/>
+          <attvalue for="2" value="~"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o1" label="安宁区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任安宁区委书记"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o13" label="兰州市政府副秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="此前曾任此职"/>
+          <attvalue for="2" value="~"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o2" label="安宁区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任安宁区长"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o1" label="安宁区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016-2022任安宁区委书记"/>
+          <attvalue for="2" value="2016~2022"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o15" label="兰州市政协党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2022~2023"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o12" label="甘肃省信访局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023年任甘肃省信访局局长"/>
+          <attvalue for="2" value="2023~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p4" target="o2" label="安宁区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o6" label="安宁区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o5" label="安宁区委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o9" label="安宁区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o7" label="安宁区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p9" target="o8" label="安宁区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p10" target="o10" label="安宁区委常委、区委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p11" target="o3" label="安宁区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p12" target="o4" label="安宁区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p13" target="o2" label="安宁区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p14" target="o2" label="安宁区副区长、安宁公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山作为区委书记, 曹宏亮作为区长, 是党政一把手搭档关系"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山接替雒泽民任安宁区委书记（中间可能隔有其他过渡）"/>
+          <attvalue for="2" value="2022-2023"/>
+          <attvalue for="3" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与张吉彬在安宁区委共事, 张吉彬任常务副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与王玉琨在安宁区委共事, 王玉琨任组织部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与陈涛在安宁区委共事, 陈涛任纪委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与蒋源庆在安宁区委共事, 蒋源庆任政法委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与杨荣广在安宁区委共事, 杨荣广任宣传部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与冯宁在安宁区委共事, 冯宁任统战部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王立山与袁冬在安宁区委共事, 袁冬任区委办主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹宏亮与张吉彬在安宁区政府共事"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p2" target="p13" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹宏亮与李琦在安宁区政府共事"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p2" target="p14" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹宏亮与杨斌在安宁区政府共事, 杨斌任副区长兼公安分局局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

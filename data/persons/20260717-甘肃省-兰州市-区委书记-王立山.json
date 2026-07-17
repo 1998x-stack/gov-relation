@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "兰州市",
+    "region": "安宁区",
+    "job": "区委书记",
+    "task_id": "gansu_安宁区",
+    "time_focus": "2022-2026"
+  },
+  "identity": {
+    "person_id": "lanzhou_anning_wang_lishan",
+    "name": "王立山",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "王立山_unknown",
+      "name_birthplace": "王立山_unknown",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "安宁区委书记",
+    "current_org": "中共安宁区委",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-17",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "安宁区人民政府",
+      "title": "安宁区区长",
+      "level": "正处级",
+      "location": "兰州市安宁区",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "此前曾任安宁区长, 后接任区委书记",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "present",
+      "org": "中共安宁区委",
+      "title": "安宁区委书记",
+      "level": "副厅级",
+      "location": "兰州市安宁区",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "现任安宁区委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中共安宁区委",
+      "type": "党委",
+      "role": "区委书记",
+      "period": "至今",
+      "source_ids": ["S001"]
+    },
+    {
+      "org_name": "安宁区人民政府",
+      "type": "政府",
+      "role": "区长",
+      "period": "此前",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "曹宏亮",
+      "person_id": "lanzhou_anning_cao_hongliang",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "王立山作为区委书记, 曹宏亮作为区长, 是党政一把手搭档关系",
+      "overlap_org": "中共安宁区委/安宁区人民政府",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "雒泽民",
+      "person_id": "lanzhou_anning_luo_zemin",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "王立山接替雒泽民任安宁区委书记",
+      "overlap_org": "中共安宁区委",
+      "overlap_period": "2022-2023",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["安宁区"],
+    "promotion_velocity": {
+      "summary": "在安宁区从区长升至区委书记, 属区内晋升。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "详细公开资料有限，风格尚未从公开报道中明显归纳",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 2,
+    "total_connections": 2,
+    "centrality": "medium"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月, 未发现公开的纪律处分、审计问题或负面报道",
+      "date": "2026-07-17",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "安宁区人民政府官网 - 领导之窗",
+      "url": "https://www.anningqu.gov.cn",
+      "publisher": "安宁区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官网暂时无法访问, 信息来自历史缓存和公开报道"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "王立山的出生年月、出生地、教育背景及完整履历均未找到公开详细资料"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王立山的出生年月、出生地、教育背景是什么？",
+      "why_it_matters": "人物身份确认和消歧的基础字段",
+      "suggested_queries": ["王立山 安宁区 简历", "王立山 出生 年月"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "high",
+      "question": "王立山的完整任职经历是什么？从区长到区委书记的具体时间节点？",
+      "why_it_matters": "构建完整履历需要精确日期",
+      "suggested_queries": ["王立山 任安宁区长 时间", "王立山 安宁区委书记 任命"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "medium",
+      "question": "王立山在安宁区之前担任过什么职务？",
+      "why_it_matters": "跨区/跨系统调动线索",
+      "suggested_queries": ["王立山 工作经历"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}
