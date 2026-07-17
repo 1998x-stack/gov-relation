@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "福建省",
+    "city": "宁德市",
+    "region": "屏南县",
+    "job": "县委书记",
+    "task_id": "fujian_屏南县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "fujian_pingnan_zhouchunhai",
+    "name": "周春海",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "周春海_",
+      "name_birthplace": "周春海_",
+      "official_profile_url": "https://www.pingnan.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "中共屏南县委书记",
+    "current_org": "中共屏南县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-17",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "至今",
+      "org": "中共屏南县委员会",
+      "title": "中共屏南县委书记",
+      "level": "县",
+      "location": "福建省宁德市屏南县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "现任屏南县委书记，截至2026年5月已以县委书记身份公开活动",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_pingnan_party",
+      "name": "中共屏南县委员会",
+      "type": "党委",
+      "level": "县",
+      "parent": "中共宁德市委员会",
+      "location": "福建省宁德市屏南县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "霍立昀",
+      "person_id": "fujian_pingnan_huoliyun",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "作为县委书记与县长霍立昀共同出席多项活动，包括2026年5月29日看望慰问高三师生",
+      "overlap_org": "中共屏南县委员会",
+      "overlap_period": "2026",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "党帅",
+      "person_id": "fujian_gutian_dangshuai",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "接替党帅任屏南县委书记。党帅此前任屏南县委书记（约2021-），后另有任用",
+      "overlap_org": "中共屏南县委员会",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-05",
+      "domain": "education",
+      "achievement_or_event": "前往屏南县第一中学看望慰问高三师生并检查高考备考工作",
+      "role_in_event": "县委书记，带队关怀高考备考",
+      "measurable_outcome": "",
+      "location": "屏南县第一中学",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "公开信息不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开活动记录有限，尚未能对手法风格做出判断",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality": "high",
+    "role": "core_top_leader"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月未发现公开的纪律处分或负面报道",
+      "date": "2026-07-17",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "屏南县人民政府-政务公开",
+      "url": "https://www.pingnan.gov.cn",
+      "publisher": "屏南县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "屏南县人民政府官方网站，含新闻动态及领导信息"
+    },
+    {
+      "id": "S002",
+      "title": "古田县领导数据",
+      "url": "https://www.gutian.gov.cn",
+      "publisher": "古田县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "build_古田县_data.py中引用的党帅-屏南县委书记信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "周春海的完整简历（出生年月、教育背景、此前职务）在公开渠道未找到，目前仅确认其作为屏南县委书记的身份"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "周春海的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "身份核验和人物deduplication的基础信息",
+      "suggested_queries": ["周春海 出生", "周春海 简历", "周春海 屏南"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "high",
+      "question": "周春海任屏南县委书记前的职务是什么？何时任职？",
+      "why_it_matters": "需要完整的职业履历以理解其晋升路径",
+      "suggested_queries": ["周春海 任前公示", "周春海 职务任免"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "medium",
+      "question": "党帅卸任屏南县委书记后的去向？",
+      "why_it_matters": "补充前任书记的职业轨迹，完善关系网络",
+      "suggested_queries": ["党帅 屏南 县委书记 任职"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}
