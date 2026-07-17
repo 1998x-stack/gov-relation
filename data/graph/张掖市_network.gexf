@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>张掖市领导班子工作关系网络 - 数据来源: 张掖市人民政府官网及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="李兴华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="叶尔波力·孜汗">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委副书记、市政府党组书记、市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="李泽文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委副书记、政法委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp04" label="景国诚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp05" label="张永刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、常务副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp06" label="杨宪辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、市委秘书长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp07" label="李毓刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、组织部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp08" label="王韶华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、副市长、宣传部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp09" label="李锐">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、甘州区委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp10" label="芦建平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、张掖军分区司令员"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp11" label="白冰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp12" label="武冰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、统战部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp13" label="娄金华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp14" label="安宏亮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市副市长、市公安局局长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp15" label="陆思东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp16" label="杨育林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市政府秘书长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp17" label="卢小亨">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省交通运输厅厅长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp18" label="赵立香">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州理工大学党委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp19" label="杨维俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省人大法制委员会主任委员"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp20" label="谢又生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省司法厅厅长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="oo01" label="中共张掖市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="张掖市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="中共张掖市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="中共张掖市委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="中共张掖市委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="中共张掖市委员会统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="中共张掖市委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo08" label="中共甘州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo09" label="张掖军分区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo10" label="张掖市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo11" label="甘肃省交通运输厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo12" label="兰州理工大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo13" label="甘肃省人民代表大会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo14" label="甘肃省司法厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo15" label="张掖市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo16" label="张掖市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo17" label="中共张掖市委员会办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="张掖市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="张掖市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp02" target="oo01" label="张掖市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp02" target="oo02" label="张掖市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp03" target="oo01" label="张掖市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp03" target="oo07" label="张掖市委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp04" target="oo03" label="张掖市纪委书记、市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市纪委书记、市监委主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp05" target="oo02" label="张掖市常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市常务副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp06" target="oo17" label="张掖市委秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委秘书长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp07" target="oo04" label="张掖市委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp08" target="oo05" label="张掖市委宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委宣传部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp08" target="oo02" label="张掖市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp09" target="oo08" label="甘州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘州区委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp10" target="oo09" label="张掖军分区司令员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖军分区司令员"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp11" target="oo02" label="张掖市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp12" target="oo06" label="张掖市委统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委统战部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp13" target="oo02" label="张掖市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp14" target="oo02" label="张掖市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pp14" target="oo10" label="张掖市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市公安局局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pp15" target="oo02" label="张掖市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pp16" target="oo17" label="张掖市政府秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市政府秘书长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pp17" target="oo01" label="张掖市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pp17" target="oo11" label="甘肃省交通运输厅厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省交通运输厅厅长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pp18" target="oo02" label="张掖市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pp18" target="oo12" label="兰州理工大学党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兰州理工大学党委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pp19" target="oo01" label="张掖市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pp19" target="oo13" label="甘肃省人大法制委员会主任委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省人大法制委员会主任委员"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pp20" target="oo02" label="张掖市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pp20" target="oo14" label="甘肃省司法厅厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省司法厅厅长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pp01" target="pp02" label="李兴华(书记)与叶尔波力·孜汗(市长): 党政一把手配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李兴华(书记)与叶尔波力·孜汗(市长): 党政一把手配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pp01" target="pp03" label="李兴华(书记)与李泽文(副书记/政法委书记): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李兴华(书记)与李泽文(副书记/政法委书记): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pp01" target="pp04" label="李兴华(书记)与景国诚(纪委书记): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李兴华(书记)与景国诚(纪委书记): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="pp01" target="pp05" label="李兴华(书记)与张永刚(常务副市长): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李兴华(书记)与张永刚(常务副市长): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="pp02" target="pp05" label="叶尔波力·孜汗(市长)与张永刚(常务副市长): 正副手关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="叶尔波力·孜汗(市长)与张永刚(常务副市长): 正副手关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="pp02" target="pp03" label="叶尔波力·孜汗(市长)与李泽文(副书记): 同为市委副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="叶尔波力·孜汗(市长)与李泽文(副书记): 同为市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="pp05" target="pp07" label="张永刚(前陇南组织部长)与李毓刚(现张掖组织部长): 同为组织系统干部" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张永刚(前陇南组织部长)与李毓刚(现张掖组织部长): 同为组织系统干部"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="pp01" target="pp17" label="李兴华接替卢小亨任张掖市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="李兴华接替卢小亨任张掖市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="pp02" target="pp18" label="叶尔波力·孜汗接替赵立香任张掖市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="叶尔波力·孜汗接替赵立香任张掖市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="pp17" target="pp19" label="卢小亨接替杨维俊任张掖市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="卢小亨接替杨维俊任张掖市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="pp18" target="pp20" label="赵立香接替谢又生任张掖市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="赵立香接替谢又生任张掖市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="pp17" target="pp18" label="卢小亨(书记)与赵立香(市长): 原党政一把手配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="卢小亨(书记)与赵立香(市长): 原党政一把手配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="pp19" target="pp20" label="杨维俊(书记)与谢又生(市长): 原党政一把手配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="杨维俊(书记)与谢又生(市长): 原党政一把手配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="pp17" target="pp19" label="卢小亨与杨维俊先后从陇东地级市长调任张掖市委书记, 体现东西干部交流模式" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="卢小亨与杨维俊先后从陇东地级市长调任张掖市委书记, 体现东西干部交流模式"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="pp20" target="pp17" label="谢又生(省司法厅)→卢小亨(省交通厅): 张掖主要领导离任后均任省直部门正职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="谢又生(省司法厅)→卢小亨(省交通厅): 张掖主要领导离任后均任省直部门正职"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
