@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Gov Research Agent</creator>
+    <description>漳平市（龙岩市）领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pzhangping_yu_hai" label="于海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记 — 中共漳平市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pzhangping_li_yuwen" label="李毓文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pzhangping_fan_furong" label="范富荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_chen_qingmu" label="陈清木">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_wu_yancheng" label="吴彦成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_xiong_gongshou" label="熊功首">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_xu_cijiang" label="许赐江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_wu_lin" label="伍琳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_chen_jian" label="陈键">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_li_lin" label="李琳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_yang_limin" label="杨立敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangping_zhang_huimin" label="张慧敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市领导 — 漳平市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="oorg_zhangping_party" label="中共漳平市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oorg_zhangping_gov" label="漳平市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="pzhangping_yu_hai" target="oorg_zhangping_party" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="pzhangping_li_yuwen" target="oorg_zhangping_gov" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pzhangping_li_yuwen" target="oorg_zhangping_party" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pzhangping_fan_furong" target="oorg_zhangping_gov" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pzhangping_chen_qingmu" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pzhangping_chen_qingmu" target="oorg_zhangping_party" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pzhangping_wu_yancheng" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pzhangping_wu_yancheng" target="oorg_zhangping_party" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pzhangping_xiong_gongshou" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pzhangping_xu_cijiang" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pzhangping_wu_lin" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pzhangping_chen_jian" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pzhangping_li_lin" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pzhangping_yang_limin" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pzhangping_zhang_huimin" target="oorg_zhangping_gov" label="市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pzhangping_yu_hai" target="pzhangping_li_yuwen" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记与市长党政搭档关系"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pzhangping_li_yuwen" target="pzhangping_fan_furong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与副市长的工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pzhangping_yu_hai" target="pzhangping_yang_limin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="2026年6月23日陪同市委书记赴基层调研"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pzhangping_yu_hai" target="pzhangping_zhang_huimin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="2026年6月23日陪同市委书记赴基层调研"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pzhangping_yu_hai" target="pzhangping_chen_jian" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="2026年6月8日参与高考巡考工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pzhangping_yu_hai" target="pzhangping_li_lin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="2026年6月8日参与高考巡考工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pzhangping_li_yuwen" target="pzhangping_fan_furong" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="2026年7月13日助企服务日法治活动共同出席"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pzhangping_chen_qingmu" target="pzhangping_wu_yancheng" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为市领导出席矿业招商推介会"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pzhangping_chen_qingmu" target="pzhangping_xiong_gongshou" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为市领导出席矿业招商推介会"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pzhangping_chen_qingmu" target="pzhangping_xu_cijiang" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为市领导出席矿业招商推介会"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pzhangping_wu_yancheng" target="pzhangping_xiong_gongshou" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为市领导出席矿业招商推介会"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pzhangping_wu_yancheng" target="pzhangping_xu_cijiang" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为市领导出席矿业招商推介会"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pzhangping_xiong_gongshou" target="pzhangping_xu_cijiang" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同为市领导出席矿业招商推介会"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
