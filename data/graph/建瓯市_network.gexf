@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Sisyphus Research Agent</creator>
+    <description>建瓯市领导班子工作关系网络 - Jian'ou City Leadership Network</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role_type" type="string"/>
+      <attribute id="2" title="current_post" type="string"/>
+      <attribute id="3" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="周靖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="建瓯市委书记"/>
+          <attvalue for="3" value="https://zh.wikipedia.org/wiki/%E5%BB%BA%E7%93%AF%E5%B8%82"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="黄河">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="government_leader"/>
+          <attvalue for="2" value="建瓯市人民政府代市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="吴慧强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="练维军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="杨军波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="韩盛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="王和邻">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="陈静怡">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="徐凡铭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="赖呈纯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="deputy"/>
+          <attvalue for="2" value="建瓯市副市长"/>
+          <attvalue for="3" value="https://www.jo.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="130" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="陈建新">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="predecessor"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="plausible - previous Jian'ou party secretary"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="吴伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="predecessor"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="plausible - previous Jian'ou mayor"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共建瓯市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="建瓯市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="建瓯市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协建瓯市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共建瓯市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="建瓯市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="建瓯市人民政府代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="appointed acting mayor as of 2026-07-16 per jo.gov.cn"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p6" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p7" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p8" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p9" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p10" target="o2" label="建瓯市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="current as of 2026-07"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p11" target="o1" label="建瓯市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="predecessor, exact dates unknown"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p12" target="o2" label="建瓯市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="predecessor mayor, exact dates unknown"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记与代市长，当前党政一把手"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
