@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Claude Code Research Agent</creator>
+    <description>连城县领导工作关系网络 — Liancheng County Leadership Network</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="description" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="蔡东阳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="连城县委书记"/>
+          <attvalue for="2" value="中共连城县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="龚友清">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="连城县委副书记、代理县长"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="周龙辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="连城县副县长"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="p4" label="韩小刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="连城县副县长（挂职）"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="p5" label="陈路招">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="连城县副县长"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="p6" label="朱建斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="连城县副县长、县公安局局长"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="p7" label="李川龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政府党组成员、冠豸山风景区管委会党委书记"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="傅致通">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政府党组成员"/>
+          <attvalue for="2" value="连城县人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共连城县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="连城县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="连城县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协连城县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共连城县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共连城县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共连城县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共连城县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="冠豸山风景区管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="连城县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o1" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="代理县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="代理县长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o2" label="县政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县政府党组书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o2" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="副县长"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="o2" label="副县长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="副县长（挂职）"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p5" target="o2" label="副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="副县长"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p6" target="o2" label="副县长、县公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="副县长、县公安局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p6" target="o10" label="县公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县公安局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p7" target="o2" label="县政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p7" target="o9" label="冠豸山风景区管委会党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="冠豸山风景区管委会党委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p8" target="o2" label="县政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委书记-县长搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县委书记-副县长"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p2" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="县长-副县长工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p2" target="p4" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="县长-挂职副县长工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p2" target="p5" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="县长-副县长工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p2" target="p6" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="县长-副县长(公安)工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p2" target="p7" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="县长-党组成员工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p2" target="p8" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="县长-党组成员工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p3" target="p5" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="副县长-副县长工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p3" target="p6" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="副县长-副县长工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p5" target="p6" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="副县长-副县长工作关系"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
