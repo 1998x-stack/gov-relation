@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "白银市",
+    "region": "靖远县",
+    "job": "县委书记/县长",
+    "task_id": "gansu_靖远县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "gansu_baiyin_jingyuan_li_xiaoqing",
+    "name": "李晓清",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李晓清_",
+      "name_birthplace": "李晓清_",
+      "official_profile_url": "https://www.jingyuan.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "靖远县委书记、县长",
+    "current_org": "中共靖远县委员会、靖远县人民政府",
+    "administrative_rank": "正县级",
+    "as_of": "2026-07-17",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2025",
+      "org": "未知",
+      "title": "履历缺口",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到李晓清2025年前的详细履历。推测为白银市本地成长干部或在市级机关任职后下派。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2025",
+      "end": "2026-06",
+      "org": "靖远县人民政府",
+      "title": "靖远县委副书记、县长",
+      "level": "县",
+      "location": "甘肃省靖远县",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "2026年2月以县委副书记、县长身份公开活动（检查节前安全生产）。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2026-06",
+      "end": "present",
+      "org": "中共靖远县委员会、靖远县人民政府",
+      "title": "靖远县委书记、县长（一肩挑）",
+      "level": "县",
+      "location": "甘肃省靖远县",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "2026年6-7月升任县委书记，同时保留县长职务。2026年7月以县委书记身份主持县委巡察工作领导小组会议、调研矿山安全及防汛减灾工作。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003", "S004"]
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共靖远县委员会",
+      "type": "党委",
+      "level": "县",
+      "location": "靖远县乌兰镇"
+    },
+    {
+      "name": "靖远县人民政府",
+      "type": "政府",
+      "level": "县",
+      "location": "靖远县乌兰镇"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "王有儒",
+      "person_id": "jingyuan_wang_youru",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "李晓清为县委书记，王有儒为人大常委会主任，两人在多次会议中同台。",
+      "overlap_org": "靖远县",
+      "overlap_period": "2025-present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "曹榕",
+      "person_id": "jingyuan_cao_rong",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "曹榕系县政协主席候选人，李晓清主持县委全面工作。",
+      "overlap_org": "靖远县",
+      "overlap_period": "2026-07-present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S005"]
+    },
+    {
+      "person": "马金栋",
+      "person_id": "jingyuan_ma_jindong",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "马金栋作为县委常委，多次陪同李晓清调研安全生产工作、防汛工作等。",
+      "overlap_org": "中共靖远县委员会",
+      "overlap_period": "2026-present",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    },
+    {
+      "person": "曹怀睿",
+      "person_id": "jingyuan_cao_huaixuan",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "曹怀睿作为县委常委，出席县委巡察工作领导小组会议。",
+      "overlap_org": "中共靖远县委员会",
+      "overlap_period": "2026-present",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "马保景",
+      "person_id": "jingyuan_ma_baojing",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "马保景作为县委常委，出席县委巡察工作领导小组会议。",
+      "overlap_org": "中共靖远县委员会",
+      "overlap_period": "2026-present",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026",
+      "domain": "public_security",
+      "achievement_or_event": "检查春节前安全生产工作，强调道路交通、烟花爆竹、森林防火等安全措施",
+      "role_in_event": "县委副书记、县长（时）",
+      "measurable_outcome": "",
+      "location": "靖远县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "public_security",
+      "achievement_or_event": "调研矿山安全生产工作，对王家山煤业等企业提出整改要求",
+      "role_in_event": "县委书记",
+      "measurable_outcome": "",
+      "location": "靖远县",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "other",
+      "achievement_or_event": "调研防汛减灾工作，检查乌兰镇、糜滩镇等地防汛措施",
+      "role_in_event": "县委书记",
+      "measurable_outcome": "",
+      "location": "靖远县",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "晋升速度无法判断——公开履历严重缺失",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "调研矿山安全时强调'隐患早发现、早处置、早清零'，要求用科技手段提升安全监管",
+        "confidence": "plausible",
+        "source_ids": ["S004"]
+      },
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "防汛调研中特别关注独居老人、留守儿童、危房住户等重点人群的包保责任",
+        "confidence": "plausible",
+        "source_ids": ["S003"]
+      }
+    ],
+    "speech_themes": ["安全生产", "防汛减灾", "隐患排查", "群众安全"],
+    "management_signals": ["强调'清单化管理'", "要求'对账销号'"],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "centrality_notes": "当前靖远县权力中心人物，同时兼任县委书记和县长两个关键岗位",
+    "key_connections": ["王有儒", "马金栋", "曹怀睿", "马保景"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现李晓清在公开记录中有任何纪律处分、审查调查或负面媒体报道。",
+      "date": "2026-07-17",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "靖远县人民政府官方网站 - 靖远要闻",
+      "url": "https://www.jingyuan.gov.cn/xwzx/jyyw/index.html",
+      "publisher": "靖远县人民政府",
+      "published_at": "2026-07-17",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "靖远县政府网站，包含县委常委会、政府会议、调研活动报道"
+    },
+    {
+      "id": "S002",
+      "title": "李晓清检查节前安全生产工作",
+      "url": "https://www.jingyuan.gov.cn/xwzx/jyyw/art/2026/art_11553a9641e741bcbe2f09312a1d3b6f.html",
+      "publisher": "靖远县融媒体中心",
+      "published_at": "2026-02-14",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认李晓清当时职务为县委副书记、县长"
+    },
+    {
+      "id": "S003",
+      "title": "县委巡察工作领导小组2026年第三次会议召开",
+      "url": "https://www.jingyuan.gov.cn/xwzx/jyyw/art/2026/art_e4bf307b7d5548cbb55ba3181c501dda.html",
+      "publisher": "靖远县融媒体中心",
+      "published_at": "2026-07-17",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认李晓清职务为县委书记、县委巡察工作领导小组组长"
+    },
+    {
+      "id": "S004",
+      "title": "李晓清调研矿山安全生产工作",
+      "url": "https://www.jingyuan.gov.cn/xwzx/jyyw/art/2026/art_4482c6d871f8455981f97f213f0986ae.html",
+      "publisher": "靖远县融媒体中心",
+      "published_at": "2026-07-17",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认李晓清以县委书记身份调研"
+    },
+    {
+      "id": "S005",
+      "title": "靖远县2026年枸杞产业高质量发展暨经贸洽谈会举行",
+      "url": "https://www.jingyuan.gov.cn/xwzx/jyyw/art/2026/art_44cad7e3f51b4673a63a101988a8ed3c.html",
+      "publisher": "靖远县融媒体中心",
+      "published_at": "2026-07-17",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认曹榕为县政协党组书记、主席候选人；李敬珣为副县长"
+    },
+    {
+      "id": "S006",
+      "title": "靖远县十八届人大常委会第三十六次会议召开",
+      "url": "https://www.jingyuan.gov.cn/xwzx/jyyw/art/2026/art_665af0a048494dbeb8792c971ab607d2.html",
+      "publisher": "靖远县融媒体中心",
+      "published_at": "2026-07-17",
+      "accessed_at": "2026-07-17",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认人大副主任名单；吴晓兰副县长；高兴明检察长"
+    },
+    {
+      "id": "S007",
+      "title": "靖远县百度百科条目",
+      "url": "https://baike.baidu.com/item/%E9%9D%96%E8%BF%9C%E5%8E%BF",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-17",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "政治表格确认李晓清（县委书记/县长）、王有儒（人大主任）、刘丽春（政协主席）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李晓清在2025年之前的所有履历完全缺失，包括出生信息、教育背景、早期职业生涯和工作调动路线"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李晓清在2025年之前的完整履历是什么？",
+      "why_it_matters": "这是靖远县最高权力人物，但其出生年份、籍贯、教育背景、早期职务完全未知",
+      "suggested_queries": ["李晓清 简历", "李晓清 白银", "李晓清 任前公示", "李晓清 甘肃"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "critical",
+      "question": "李晓清的前任县委书记是谁？何时调离/卸任？",
+      "why_it_matters": "无法判断近期人事变动模式和权力交接背景",
+      "suggested_queries": ["靖远县 前任 县委书记", "靖远县 县委书记 许伟民 白银"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "high",
+      "question": "李晓清兼任县长后，是否有新人选接替县长职务？",
+      "why_it_matters": "一肩挑可能是临时安排，了解后续调整可判断组织意图",
+      "suggested_queries": ["靖远县 县长 人选", "靖远县 代理县长"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}
