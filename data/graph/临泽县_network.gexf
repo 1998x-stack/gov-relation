@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>临泽县领导班子工作关系网络 - 数据来源: 临泽县政府网站, 百度百科及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="张成琦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="秦楠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委副书记、县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="许兴权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县人大常委会主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp04" label="邢学伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县政协主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp05" label="张鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="民乐县委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp06" label="张学勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、市委秘书长(近期调整)"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp07" label="李作明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原民乐县委书记(2024年5月被查)"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp08" label="李国志">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委常委、常务副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp09" label="谢青春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委常委、组织部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp10" label="王晓霞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp11" label="任刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委常委、政法委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp12" label="牛伟全">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临泽县委常委、副县长(分管工业)"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp13" label="李锐">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张掖市委常委、甘州区委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp14" label="牛生波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘州区副区长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="oo01" label="中共临泽县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="临泽县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="临泽县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="政协临泽县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="中共临泽县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="中共临泽县委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="中共临泽县委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo08" label="中共民乐县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo09" label="中共甘州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo10" label="甘州区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo11" label="张掖市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo12" label="中共张掖市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo13" label="中共张掖市委员会办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="临泽县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="临泽县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp02" target="oo01" label="临泽县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp02" target="oo02" label="临泽县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp02" target="oo09" label="甘州区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘州区副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp03" target="oo03" label="临泽县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp04" target="oo04" label="临泽县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp05" target="oo02" label="临泽县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委副书记、县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp05" target="oo08" label="民乐县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="民乐县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp06" target="oo01" label="临泽县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp08" target="oo02" label="临泽县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委常委、常务副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp09" target="oo06" label="临泽县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委常委、组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp10" target="oo05" label="临泽县委常委、县纪委书记、县监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委常委、县纪委书记、县监委主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp11" target="oo07" label="临泽县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委常委、政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp12" target="oo02" label="临泽县委常委、副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临泽县委常委、副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp13" target="oo09" label="甘州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘州区委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp14" target="oo10" label="甘州区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘州区副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp01" target="pp02" label="张成琦(书记)与秦楠(县长): 临泽县党政一把手配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与秦楠(县长): 临泽县党政一把手配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pp01" target="pp03" label="张成琦(书记)与许兴权(人大主任): 党委与人大配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与许兴权(人大主任): 党委与人大配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pp01" target="pp04" label="张成琦(书记)与邢学伟(政协主席): 党委与政协配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与邢学伟(政协主席): 党委与政协配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pp02" target="pp08" label="秦楠(县长)与李国志(常务副县长): 正副手关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="秦楠(县长)与李国志(常务副县长): 正副手关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pp01" target="pp09" label="张成琦(书记)与谢青春(组织部长): 党委班子上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与谢青春(组织部长): 党委班子上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pp01" target="pp10" label="张成琦(书记)与王晓霞(纪委书记): 党委班子上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与王晓霞(纪委书记): 党委班子上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pp01" target="pp11" label="张成琦(书记)与任刚(政法委书记): 党委班子上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与任刚(政法委书记): 党委班子上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pp01" target="pp12" label="张成琦(书记)与牛伟全(副县长): 党委班子上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张成琦(书记)与牛伟全(副县长): 党委班子上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pp05" target="pp02" label="张鹏(前任县长)与秦楠(现任县长): 临泽县长交接" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="张鹏(前任县长)与秦楠(现任县长): 临泽县长交接"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pp06" target="pp01" label="张学勇(前任县委书记)与张成琦(现任县委书记): 书记交接" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="张学勇(前任县委书记)与张成琦(现任县委书记): 书记交接"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pp02" target="pp05" label="秦楠接替张鹏? 秦楠任县长可能发生在张鹏调任民乐之后" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="秦楠接替张鹏? 秦楠任县长可能发生在张鹏调任民乐之后"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pp02" target="pp14" label="秦楠与牛生波: 此前同在甘州区政府任副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="秦楠与牛生波: 此前同在甘州区政府任副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pp02" target="pp13" label="秦楠曾任甘州区副区长, 李锐为甘州区委书记(后兼任市委常委)" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="秦楠曾任甘州区副区长, 李锐为甘州区委书记(后兼任市委常委)"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pp05" target="pp07" label="张鹏接替被查的李作明任民乐县委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="张鹏接替被查的李作明任民乐县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pp05" target="pp01" label="张鹏(前任县长)与张成琦(现任书记): 曾在临泽县共事?" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张鹏(前任县长)与张成琦(现任书记): 曾在临泽县共事?"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
