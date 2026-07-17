@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Claude Code Research Agent / github.com/gov-relation</creator>
+    <description>武威市（甘肃省地级市）领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="武和谦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="武威市委书记"/>
+          <attvalue for="2" value="1971-01"/>
+          <attvalue for="3" value="甘肃白银"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="叶万彬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="武威市人民政府市长"/>
+          <attvalue for="2" value="1977-05"/>
+          <attvalue for="3" value="青海乐都"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="曾国俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="武威市人大常委会主任"/>
+          <attvalue for="2" value="1968-03"/>
+          <attvalue for="3" value="甘肃景泰"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="李宏伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="武威市政协主席"/>
+          <attvalue for="2" value="1966-10"/>
+          <attvalue for="3" value="甘肃张掖"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="王国斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临夏州委书记（原武威市委书记）"/>
+          <attvalue for="2" value="1972-07"/>
+          <attvalue for="3" value="甘肃清水"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="柳鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省发改委主任（原武威市委书记）"/>
+          <attvalue for="2" value="1971-11"/>
+          <attvalue for="3" value="甘肃兰州"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="火荣贵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原武威市委书记（2019年因严重违纪被双开，判刑18年）"/>
+          <attvalue for="2" value="1962-10"/>
+          <attvalue for="3" value="甘肃景泰"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="肖庆平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已退休（原甘肃省民政厅厅长）"/>
+          <attvalue for="2" value="1956-03"/>
+          <attvalue for="3" value="甘肃文县"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="马秀兰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宁夏中卫市委副书记、市长（原武威市长）"/>
+          <attvalue for="2" value="1974-03"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="周伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原武威市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="甘肃岷县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="郭承录">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已退休（原甘肃省政协副主席、平凉市委书记）"/>
+          <attvalue for="2" value="1962-08"/>
+          <attvalue for="3" value="甘肃永昌"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="李明生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已退休（原甘肃省农业农村厅副厅长）"/>
+          <attvalue for="2" value="1963-01"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="张绪胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已退休（原甘肃省人大常委会秘书长）"/>
+          <attvalue for="2" value="1954-07"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共武威市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="武威市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="武威市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="武威市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共武威市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共甘肃省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="甘肃省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="甘肃省人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="政协甘肃省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="甘肃省发展和改革委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共临夏回族自治州委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共白银市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共平凉市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中卫市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="甘肃省交通运输厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="武威市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市委书记"/>
+          <attvalue for="2" value="2026-06 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o6" label="定西市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="定西市委副书记、市长"/>
+          <attvalue for="2" value="2023-04 - 2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o7" label="张掖市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委常委、常务副市长"/>
+          <attvalue for="2" value=" - 2023-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o8" label="兰州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兰州市副市长"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o9" label="兰州市城关区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兰州市城关区委书记"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="o2" label="武威市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市人民政府市长"/>
+          <attvalue for="2" value="2025-08 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p2" target="o10" label="果洛藏族自治州委副书记、州长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="果洛藏族自治州委副书记、州长"/>
+          <attvalue for="2" value="2021-04 - 2025-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p2" target="o11" label="海南藏族自治州委常委、副州长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="海南藏族自治州委常委、副州长"/>
+          <attvalue for="2" value=" - 2021-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p3" target="o3" label="武威市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市人大常委会主任"/>
+          <attvalue for="2" value="2024-01 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p4" target="o4" label="武威市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市政协主席"/>
+          <attvalue for="2" value="2024-01 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p5" target="o11" label="临夏州委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临夏州委书记"/>
+          <attvalue for="2" value="2026-06 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p5" target="o1" label="武威市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市委书记"/>
+          <attvalue for="2" value="2023-03 - 2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p5" target="o2" label="武威市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市人民政府市长"/>
+          <attvalue for="2" value="2021-08 - 2023-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p6" target="o10" label="甘肃省发改委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省发改委主任"/>
+          <attvalue for="2" value="2026-03 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p6" target="o15" label="甘肃省交通运输厅厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省交通运输厅厅长"/>
+          <attvalue for="2" value="2023-03 - 2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p6" target="o1" label="武威市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市委书记"/>
+          <attvalue for="2" value="2017-04 - 2023-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p6" target="o13" label="嘉峪关市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="嘉峪关市委书记"/>
+          <attvalue for="2" value="2016-08 - 2017-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p7" target="o1" label="武威市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市委书记"/>
+          <attvalue for="2" value="2010-01 - 2017-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p8" target="o12" label="白银市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="白银市委书记"/>
+          <attvalue for="2" value="2010-01 - "/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p8" target="o1" label="武威市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市委书记"/>
+          <attvalue for="2" value="2008-05 - 2010-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p8" target="o2" label="武威市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市人民政府市长"/>
+          <attvalue for="2" value="2006-07 - 2008-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p9" target="o14" label="宁夏中卫市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="宁夏中卫市委副书记、市长"/>
+          <attvalue for="2" value="2025-07 - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p9" target="o2" label="武威市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市人民政府市长"/>
+          <attvalue for="2" value="2023-04 - 2025-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p11" target="o13" label="平凉市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平凉市委书记"/>
+          <attvalue for="2" value="2017 - 2018"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p11" target="o2" label="武威市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武威市人民政府市长"/>
+          <attvalue for="2" value="2008-05 - 2011-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="武和谦（书记）与叶万彬（市长）为党政一把手搭档"/>
+          <attvalue for="2" value="2026-06至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="王国斌→武和谦: 王国斌2026年6月转任临夏州委书记, 武和谦任武威市委书记"/>
+          <attvalue for="2" value="2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p5" target="p6" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="柳鹏→王国斌: 柳鹏2023年3月转任省交通厅长, 王国斌由市长接任书记"/>
+          <attvalue for="2" value="2023-03"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p2" target="p9" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="马秀兰→叶万彬: 马秀兰2025年7月跨省调任宁夏中卫市长, 叶万彬跨省调任武威市长"/>
+          <attvalue for="2" value="2025-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p5" target="p9" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="王国斌任市长(2021.8-2023.4)后升书记, 马秀兰接任市长"/>
+          <attvalue for="2" value="2023-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p6" target="p7" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="火荣贵→柳鹏: 火荣贵2017年4月落马被查, 柳鹏接任书记进行政治生态修复"/>
+          <attvalue for="2" value="2017-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p8" target="p7" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="肖庆平→火荣贵: 火荣贵2010年1月接任书记"/>
+          <attvalue for="2" value="2010-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p11" target="p5" label="same_system" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="郭承录（武威市长→平凉书记）与王国斌（武威市长→临夏书记）均为武威市长升迁至其他地市一把手"/>
+          <attvalue for="2" value="跨时期"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p8" target="p11" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="肖庆平由市长升书记, 郭承录接任市长"/>
+          <attvalue for="2" value="2008-05"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
