@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Claude Code Research Agent</creator>
+    <description>盐城市（地级市）领导班子 + 9区市县工作关系网络 — 2026年7月14日生成</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+      <attribute id="4" title="entity_type" type="string"/>
+      <attribute id="5" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="严汉平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1974-11"/>
+          <attvalue for="2" value="陕西西安"/>
+          <attvalue for="3" value="盐城市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="吴炜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1972-12"/>
+          <attvalue for="2" value="江苏如东"/>
+          <attvalue for="3" value="盐城市市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="田海波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="亭湖区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="董玲玲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="亭湖区代区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="盐都区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="盐都区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="盐都区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="盐都区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="大丰区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="大丰区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="大丰区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="大丰区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="响水县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="响水县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="响水县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="响水县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="滨海县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="滨海县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="滨海县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="滨海县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="阜宁县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="阜宁县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="阜宁县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="阜宁县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="射阳县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="射阳县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="射阳县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="射阳县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="建湖县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="建湖县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="建湖县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="建湖县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p19" label="东台市委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="东台市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p20" label="东台市长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="东台市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共盐城市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="盐城市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="盐城市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协盐城市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="220" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共盐城市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共亭湖区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市亭湖区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共盐都区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市盐都区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共大丰区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市大丰区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共响水县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市响水县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共滨海县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市滨海县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共阜宁县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市阜宁县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共射阳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市射阳县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共建湖县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市建湖县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共东台市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市东台市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="亭湖区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市亭湖区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="盐都区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市盐都区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="大丰区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市大丰区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="响水县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市响水县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="滨海县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市滨海县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="阜宁县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市阜宁县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="射阳县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市射阳县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="建湖县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市建湖县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="东台市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省盐城市东台市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o24" label="中共江苏省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o25" label="江苏省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="盐城市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1974年生，陕西西安人，2026.07任"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="盐城市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="盐城市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1972-12，江苏如东人"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o1" label="盐城市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o6" label="亭湖区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="o15" label="亭湖区代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="女"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p5" target="o7" label="盐都区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p6" target="o16" label="盐都区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p7" target="o8" label="大丰区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p8" target="o17" label="大丰区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p9" target="o9" label="响水县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p10" target="o18" label="响水县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p11" target="o10" label="滨海县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p12" target="o19" label="滨海县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p13" target="o11" label="阜宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p14" target="o20" label="阜宁县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p15" target="o12" label="射阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p16" target="o21" label="射阳县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p17" target="o13" label="建湖县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p18" target="o22" label="建湖县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p19" target="o14" label="东台市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p20" target="o23" label="东台市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="2026-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（盐城市委书记）与吴炜（市长）为盐城市党政一把手搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p3" target="p4" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="田海波（亭湖区委书记）与董玲玲（亭湖区代区长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p5" target="p6" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盐都区委书记与盐都区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p7" target="p8" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="大丰区委书记与大丰区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p9" target="p10" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="响水县委书记与响水县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p11" target="p12" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="滨海县委书记与滨海县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p13" target="p14" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="阜宁县委书记与阜宁县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p15" target="p16" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="射阳县委书记与射阳县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p17" target="p18" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="建湖县委书记与建湖县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p19" target="p20" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="东台市委书记与东台市长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p1" target="p3" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导田海波（亭湖区委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p1" target="p5" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导盐都区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p1" target="p7" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导大丰区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p1" target="p9" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导响水县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p1" target="p11" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导滨海县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p1" target="p13" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导阜宁县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p1" target="p15" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导射阳县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p1" target="p17" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导建湖县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p1" target="p19" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="严汉平（市委书记）领导东台市委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

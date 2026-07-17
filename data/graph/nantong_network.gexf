@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Claude Code Research Agent</creator>
+    <description>南通市（地级市）领导班子 + 7区县市工作关系网络 — 2026年7月14日生成</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+      <attribute id="4" title="entity_type" type="string"/>
+      <attribute id="5" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="吴新明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1969-06"/>
+          <attvalue for="2" value="江苏苏州吴江"/>
+          <attvalue for="3" value="南通市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="张彤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1971-10"/>
+          <attvalue for="2" value="江苏宿迁"/>
+          <attvalue for="3" value="南通市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="周伟文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1968-12"/>
+          <attvalue for="2" value="江苏涟水"/>
+          <attvalue for="3" value="南通市政协主席"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="180" g="160" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="沈旭东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="海门区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="杨万平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="如东县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="杨中坚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="启东市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="王鸣昊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="如皋市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="崇川区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="崇川区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="崇川区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="崇川区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="通州区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="通州区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="通州区区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="通州区区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="海门区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="海门区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="如东县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="如东县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="启东市委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="启东市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p15" label="如皋市长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="如皋市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p16" label="海安市委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="海安市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p17" label="海安市市长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="海安市市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共南通市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="南通市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="南通市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协南通市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="220" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共南通市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共崇川区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市崇川区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共通州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市通州区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共海门区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市海门区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共如东县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市如东县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共启东市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市启东市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共如皋市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市如皋市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共海安市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市海安市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="崇川区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市崇川区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="通州区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市通州区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="海门区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市海门区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="如东县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市如东县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="启东市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市启东市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="如皋市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市如皋市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="海安市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南通市海安市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="中共江苏省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="江苏省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="南通市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-03"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1969年生，江苏苏州吴江人，2023.03任"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="南通市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-03"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="南通市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="女，1971年生，江苏宿迁人，2023.07任"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o1" label="南通市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o4" label="南通市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1968年生，江苏涟水人"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="o8" label="海门区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p5" target="o9" label="如东县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p6" target="o17" label="启东市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p7" target="o11" label="如皋市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p8" target="o6" label="崇川区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p9" target="o13" label="崇川区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p10" target="o7" label="通州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p11" target="o14" label="通州区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p12" target="o15" label="海门区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p13" target="o16" label="如东县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p14" target="o10" label="启东市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p15" target="o18" label="如皋市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p16" target="o12" label="海安市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p17" target="o19" label="海安市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="2023.07"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（南通市委书记）与张彤（市长）为南通市党政一把手搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p1" target="p8" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导崇川区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p10" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导通州区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p4" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导沈旭东（海门区委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p1" target="p5" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导杨万平（如东县委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p1" target="p14" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导启东市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p1" target="p7" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导王鸣昊（如皋市委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p1" target="p16" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴新明（市委书记）领导海安市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p8" target="p9" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="崇川区委书记与崇川区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p10" target="p11" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="通州区委书记与通州区区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p4" target="p12" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="沈旭东（海门区委书记）与海门区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p5" target="p13" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="杨万平（如东县委书记）与如东县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p14" target="p6" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="启东市委书记与杨中坚（启东市长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p7" target="p15" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="王鸣昊（如皋市委书记）与如皋市长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p16" target="p17" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="海安市委书记与海安市市长党政搭档"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

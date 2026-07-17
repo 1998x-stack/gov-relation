@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湖南省委书记沈晓明 · 工作关系网络</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  
+  :root {
+    --bg: #0d0d0d;
+    --surface: #141414;
+    --surface-2: #1a1a1a;
+    --border: rgba(255,255,255,0.06);
+    --text: #e8e0d4;
+    --text-dim: #8a8078;
+    --accent: #E03C31;
+    --accent-dim: rgba(224,60,49,0.15);
+    --gold: #C9A94E;
+    --gold-dim: rgba(201,169,78,0.12);
+    --blue: #4a7db5;
+    --blue-dim: rgba(74,125,181,0.12);
+    --orange: #e8943a;
+    --green: #5a9e6f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.7;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1210 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224,60,49,0.04) 0%, transparent 70%);
+  }
+  .header-badge {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: var(--text);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .header h1 span { color: var(--accent); }
+  .header .subtitle {
+    color: var(--text-dim);
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  .stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    border-right: 1px solid var(--border);
+    padding-right: 30px;
+  }
+  .stat:last-child { border: none; }
+  .stat-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ── CONTENT ── */
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+  section { margin-bottom: 60px; }
+  h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 22px;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+  h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--gold);
+    margin: 20px 0 12px;
+  }
+
+  /* ── PERSON CARD ── */
+  .person-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .person-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+  }
+  .person-card.gold::before { background: var(--gold); }
+  .person-card.blue::before { background: var(--blue); }
+  .person-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .person-role {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+  }
+  .person-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 10px;
+    border: 1px solid var(--border);
+  }
+  .tag.accent { border-color: var(--accent); color: var(--accent); }
+  .tag.gold { border-color: var(--gold); color: var(--gold); }
+  .tag.blue { border-color: var(--blue); color: var(--blue); }
+  .tag.green { border-color: var(--green); color: var(--green); }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    font-size: 14px;
+  }
+  .info-grid .label { color: var(--text-dim); }
+  .info-grid .value { color: var(--text); }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    padding: 0 0 20px 20px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+  .tl-item.promotion::before { background: var(--gold); }
+  .tl-date {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 2px;
+    font-weight: 500;
+  }
+  .tl-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .tl-org {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* ── TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+  th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text-dim);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 10px;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+  tr:hover { background: var(--surface-2); }
+
+  /* ── RELATIONSHIP MATRIX ── */
+  .matrix {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    font-size: 12px;
+    overflow-x: auto;
+  }
+  .matrix-row { display: flex; }
+  .matrix-cell {
+    padding: 6px 10px;
+    background: var(--surface);
+    min-width: 80px;
+    text-align: center;
+  }
+  .matrix-cell.label {
+    min-width: 80px;
+    text-align: right;
+    font-weight: 500;
+    padding-right: 12px;
+    color: var(--text-dim);
+  }
+  .matrix-cell.header {
+    font-weight: 500;
+    color: var(--text-dim);
+    background: var(--surface-2);
+  }
+  .matrix-cell.strong {
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .matrix-cell.medium {
+    background: var(--gold-dim);
+    color: var(--gold);
+  }
+  .matrix-cell.weak {
+    background: rgba(255,255,255,0.03);
+    color: var(--text-dim);
+  }
+  .matrix-cell.none { color: #333; }
+
+  /* ── INSIGHTS ── */
+  .insight-box {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .insight-box.gold { border-left-color: var(--gold); }
+  .insight-box.blue { border-left-color: var(--blue); }
+  .insight-box h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .insight-box.gold h4 { color: var(--gold); }
+  .insight-box.blue h4 { color: var(--blue); }
+  .insight-box p { font-size: 14px; color: var(--text); }
+
+  .priority-list { list-style: none; padding: 0; }
+  .priority-list li {
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .priority-list .marker {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+  .priority-list .marker.red { background: var(--accent); }
+  .priority-list .marker.yellow { background: var(--gold); }
+  .priority-list .marker.green { background: var(--green); }
+
+  /* ── PATH DIAGRAM ── */
+  .path {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 20px 0;
+  }
+  .path-node {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .path-node.accent { border-color: var(--accent); color: var(--accent); }
+  .path-arrow {
+    color: var(--text-dim);
+    padding: 0 6px;
+    font-size: 14px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 24px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .header { padding: 40px 20px 30px; }
+    .header h1 { font-size: 24px; }
+    .stats { gap: 16px; }
+    .stat { padding-right: 16px; }
+    .stat-num { font-size: 22px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .path { flex-direction: column; align-items: flex-start; }
+    .path-arrow { transform: rotate(90deg); padding: 4px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header class="header">
+  <div class="header-badge">Classified · 2026-07-14</div>
+  <h1>湖南省委书记 <span>沈晓明</span></h1>
+  <p class="subtitle">工作关系网络调查报告 · Intelligence Briefing</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">19</div><div class="stat-label">人物</div></div>
+    <div class="stat"><div class="stat-num">27</div><div class="stat-label">机构</div></div>
+    <div class="stat"><div class="stat-num">48</div><div class="stat-label">任职</div></div>
+    <div class="stat"><div class="stat-num">13</div><div class="stat-label">关系</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--gold)">5</div><div class="stat-label">跨省</div></div>
+  </div>
+</header>
+
+<!-- ═══════════════════ CONTENT ═══════════════════ -->
+<div class="container">
+
+  <!-- SECTION 1: Subject -->
+  <section>
+    <h2><span class="num">01</span> 调查对象：沈晓明</h2>
+
+    <div class="person-card">
+      <div class="person-name">沈晓明</div>
+      <div class="person-role">中共湖南省委书记、省人大常委会主任 · 第十九届、二十届中央委员</div>
+      <div class="person-tags">
+        <span class="tag accent">省委书记</span>
+        <span class="tag gold">正部级</span>
+        <span class="tag blue">浙江籍</span>
+        <span class="tag green">医学博士</span>
+        <span class="tag green">NAM外籍院士</span>
+      </div>
+      <div class="info-grid">
+        <div><span class="label">出生：</span><span class="value">1963年5月（63岁）</span></div>
+        <div><span class="label">籍贯：</span><span class="value">浙江省上虞县</span></div>
+        <div><span class="label">民族：</span><span class="value">汉族</span></div>
+        <div><span class="label">入党：</span><span class="value">1984年8月</span></div>
+        <div><span class="label">工作：</span><span class="value">1987年7月</span></div>
+        <div><span class="label">教育：</span><span class="value">温州医学院本科/硕士 · 上海第二医科大学博士 · 美国爱因斯坦医学院博士后</span></div>
+      </div>
+    </div>
+
+    <h3>完整职业生涯</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2023.03 — 至今</div>
+        <div class="tl-title">湖南省委书记、省人大常委会主任</div>
+        <div class="tl-org">中共湖南省委</div>
+      </div>
+      <div class="tl-item promotion">
+        <div class="tl-date">2020.12 — 2023.03</div>
+        <div class="tl-title">海南省委书记、省人大常委会主任</div>
+        <div class="tl-org">中共海南省委</div>
+      </div>
+      <div class="tl-item promotion">
+        <div class="tl-date">2017.04 — 2020.12</div>
+        <div class="tl-title">海南省省长</div>
+        <div class="tl-org">海南省人民政府（从副部直升正部）</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2016.09 — 2017.03</div>
+        <div class="tl-title">教育部副部长、党组副书记</div>
+        <div class="tl-org">中华人民共和国教育部（过渡期约6个月）</div>
+      </div>
+      <div class="tl-item promotion">
+        <div class="tl-date">2013.07 — 2016.09</div>
+        <div class="tl-title">上海市委常委、浦东新区区委书记</div>
+        <div class="tl-org">中共上海市委（兼自贸区管委会主任）</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2008.01 — 2013.05</div>
+        <div class="tl-title">上海市副市长</div>
+        <div class="tl-org">上海市人民政府</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2006 — 2008.01</div>
+        <div class="tl-title">上海市教委主任</div>
+        <div class="tl-org">上海市教育委员会（从学界转入政界）</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2003 — 2006</div>
+        <div class="tl-title">上海第二医科大学校长→上海交大常务副校长兼医学院院长</div>
+        <div class="tl-org">上海第二医科大学 / 上海交通大学</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1991 — 2003</div>
+        <div class="tl-title">新华医院主治医师→副院长→院长</div>
+        <div class="tl-org">上海第二医科大学附属新华医院 / 上海儿童医学中心</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1987 — 1988</div>
+        <div class="tl-title">住院医师、助教（第一份工作）</div>
+        <div class="tl-org">浙江医科大学附属一院 / 温州医学院</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Key Partner -->
+  <section>
+    <h2><span class="num">02</span> 核心搭档：毛伟明（省长）</h2>
+
+    <div class="person-card gold">
+      <div class="person-name">毛伟明</div>
+      <div class="person-role">中共湖南省委副书记、湖南省人民政府省长 · 二十届中央委员</div>
+      <div class="person-tags">
+        <span class="tag gold">省长</span>
+        <span class="tag blue">浙江衢州</span>
+        <span class="tag blue">浙大工科</span>
+        <span class="tag">国家电网前董事长</span>
+      </div>
+      <div class="info-grid">
+        <div><span class="label">出生：</span><span class="value">1961年5月（65岁）</span></div>
+        <div><span class="label">省长任期：</span><span class="value">2021年1月至今（5年半）</span></div>
+        <div><span class="label">与沈晓明搭班：</span><span class="value">2023年3月至今（3年4个月）</span></div>
+        <div><span class="label">历史交集：</span><span class="value">无（中央统一调配的组合）</span></div>
+      </div>
+      <div class="path" style="margin-top:12px;">
+        <span class="path-node">浙江（出生）</span>
+        <span class="path-arrow">→</span>
+        <span class="path-node">江苏（31年）</span>
+        <span class="path-arrow">→</span>
+        <span class="path-node">工信部</span>
+        <span class="path-arrow">→</span>
+        <span class="path-node">江西（5年常务副省长）</span>
+        <span class="path-arrow">→</span>
+        <span class="path-node accent">国家电网</span>
+        <span class="path-arrow">→</span>
+        <span class="path-node">湖南·省长（2021至今）</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Predecessors -->
+  <section>
+    <h2><span class="num">03</span> 前任脉络</h2>
+
+    <h3>湖南省委书记交接线</h3>
+    <div class="path">
+      <span class="path-node">杜家毫<br><small>2016-2020</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node">许达哲<br><small>2021-2023</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node">张庆伟<br><small>2021-2023</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node accent">沈晓明<br><small>2023至今</small></span>
+    </div>
+
+    <h3>关键前任</h3>
+    <table>
+      <tr><th>人物</th><th>在湘职务</th><th>任期</th><th>籍贯</th><th>当前状态</th></tr>
+      <tr>
+        <td><strong>张庆伟</strong></td><td>湖南省委书记</td><td>2021.10-2023.03</td><td>吉林吉林</td><td>✅ 全国人大常委会副委员长（副国级）</td>
+      </tr>
+      <tr>
+        <td><strong>许达哲</strong></td><td>湖南省委书记</td><td>2021-2023</td><td>湖南浏阳</td><td>⚠️ 2025年9月被罢免人大代表（原因未公开）</td>
+      </tr>
+      <tr>
+        <td><strong>刘赐贵</strong></td><td>海南省委书记</td><td>2017-2020</td><td>福建惠安</td><td>✅ 全国政协港澳台侨委员会主任</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- SECTION 4: Leadership Team -->
+  <section>
+    <h2><span class="num">04</span> 省委常委班子</h2>
+
+    <table>
+      <tr><th>姓名</th><th>职务</th><th>出生</th><th>来源</th></tr>
+      <tr style="background:var(--accent-dim)"><td><strong>沈晓明</strong></td><td>省委书记</td><td>1963</td><td>海南</td></tr>
+      <tr><td><strong>毛伟明</strong></td><td>省委副书记、省长</td><td>1961</td><td>国家电网</td></tr>
+      <tr><td>谢卫江</td><td>省委副书记、岳阳书记</td><td>1973</td><td>央企（哈电）</td></tr>
+      <tr><td>隋忠诚</td><td>统战部部长</td><td>1967</td><td>吉林</td></tr>
+      <tr><td>魏建锋</td><td>省纪委书记</td><td>1966</td><td>陕西</td></tr>
+      <tr><td>王道席</td><td>常务副省长</td><td>1970</td><td>水利部</td></tr>
+      <tr><td>刘红兵</td><td>宣传部部长</td><td>1969</td><td>广东</td></tr>
+      <tr><td>郭灵计</td><td>组织部部长</td><td>1968</td><td>吉林</td></tr>
+      <tr><td>马永生</td><td>省军区政委</td><td>1961</td><td>军队</td></tr>
+      <tr><td>王俊寿</td><td>省委秘书长</td><td>1971</td><td>金融监管总局</td></tr>
+      <tr><td>陈竞</td><td>长沙书记、副省长</td><td>1971</td><td>湖南（唯一本地）</td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--text-dim);margin-top:8px;">11位常委来自9个不同省份（含军队），只有陈竞一人为湖南本土成长</p>
+  </section>
+
+  <!-- SECTION 5: Relationship Matrix -->
+  <section>
+    <h2><span class="num">05</span> 关系矩阵</h2>
+
+    <div class="matrix">
+      <div class="matrix-row">
+        <div class="matrix-cell label" style="background:transparent;"></div>
+        <div class="matrix-cell header">毛伟明</div>
+        <div class="matrix-cell header">谢卫江</div>
+        <div class="matrix-cell header">张庆伟</div>
+        <div class="matrix-cell header">刘赐贵</div>
+        <div class="matrix-cell header">冯飞</div>
+        <div class="matrix-cell header">许达哲</div>
+      </div>
+      <div class="matrix-row">
+        <div class="matrix-cell label">沈晓明</div>
+        <div class="matrix-cell strong">搭班</div>
+        <div class="matrix-cell strong">上下级</div>
+        <div class="matrix-cell medium">前后任</div>
+        <div class="matrix-cell strong">前任+搭班</div>
+        <div class="matrix-cell medium">前后任</div>
+        <div class="matrix-cell weak">隔任</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text-dim);margin-top:8px;">
+      红色=强关系 · 金色=中关系 · 灰色=弱关系
+    </p>
+  </section>
+
+  <!-- SECTION 6: Cross-Province -->
+  <section>
+    <h2><span class="num">06</span> 跨省干部交流</h2>
+
+    <h3>沈晓明个人跨省路径</h3>
+    <div class="path">
+      <span class="path-node">浙江上虞<br><small>出生</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node accent">上海<br><small>1988-2016（28年）</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node">北京·教育部<br><small>2016-2017</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node accent">海南<br><small>2017-2023（6年）</small></span>
+      <span class="path-arrow">→</span>
+      <span class="path-node accent">湖南<br><small>2023至今</small></span>
+    </div>
+
+    <h3>「浙江现象」</h3>
+    <div class="insight-box gold">
+      <h4>双浙配：连续13年至少一位浙江籍主官</h4>
+      <p>2013年杜家毫（浙江鄞县）→ 2021年毛伟明（浙江衢州）→ 2023年沈晓明（浙江上虞）。浙江是习近平2002-2007年主政的省份。2026年现任湖南省委书记和省长均为浙江籍。</p>
+    </div>
+
+    <h3>入湘流动（9人）</h3>
+    <table>
+      <tr><th>来源省</th><th>人物</th><th>湖南职务</th><th>年份</th></tr>
+      <tr><td>海南</td><td>沈晓明</td><td>省委书记</td><td>2023</td></tr>
+      <tr><td>国家电网</td><td>毛伟明</td><td>省长</td><td>2020</td></tr>
+      <tr><td>吉林</td><td>隋忠诚</td><td>统战部长</td><td>2021</td></tr>
+      <tr><td>陕西</td><td>魏建锋</td><td>纪委书记</td><td>2023</td></tr>
+      <tr><td>广东</td><td>刘红兵</td><td>宣传部长</td><td>2024</td></tr>
+      <tr><td>吉林</td><td>郭灵计</td><td>组织部长</td><td>2024</td></tr>
+      <tr><td>金融监管总局</td><td>王俊寿</td><td>省委秘书长</td><td>2024</td></tr>
+    </table>
+  </section>
+
+  <!-- SECTION 7: Key Insights -->
+  <section>
+    <h2><span class="num">07</span> 关键洞察</h2>
+
+    <div class="insight-box">
+      <h4>🔴 核心发现：无人旧部随行</h4>
+      <p>沈晓明在上海29年、海南6年、教育部6个月——未有任何前下属跟随其调至湖南任职。这印证了中国地方党委书记跨省调任的常规：不允许携带自己的团队。</p>
+    </div>
+
+    <div class="insight-box gold">
+      <h4>🟡 罕见特征：学术型省委书记</h4>
+      <p>沈晓明是现任31位省级党委书记中唯一的医学博士，极少数有美国博士后经历的主政大员。美国国家医学科学院外籍院士（2013年当选）。这种学术背景在地方主官中极为罕见。</p>
+    </div>
+
+    <div class="insight-box blue">
+      <h4>🟢 即将到来的考验：2026年底换届</h4>
+      <p>2021年11月产生的第十二届湖南省委将于2026年底到期换届。11位常委中的调整幅度、沈晓明能否连任进入第二任期、毛伟明（65岁）是否到龄退休——这些将是2026-2027年最关键的观察点。</p>
+    </div>
+
+    <h3>优先级排序</h3>
+    <ul class="priority-list">
+      <li>
+        <span class="marker red"></span>
+        <div><strong>许达哲被罢免事件</strong> — 2025年9月被罢免人大代表，原因未公开。涉航体系腐败传闻。需关注是否有链式反应波及更广。</div>
+      </li>
+      <li>
+        <span class="marker red"></span>
+        <div><strong>下届省委换届</strong> — 2026年底，沈晓明能否连任？毛伟明（1961年生，65岁）是否留任？11位常委谁会离开？</div>
+      </li>
+      <li>
+        <span class="marker yellow"></span>
+        <div><strong>上海系人脉的实际影响力</strong> — 沈晓明在上海29年积累的人脉网络，虽未直接体现为湖南班子中的旧部，但在沪湘经济合作、政策对接方面影响不可忽视。</div>
+      </li>
+      <li>
+        <span class="marker yellow"></span>
+        <div><strong>「双浙配」的政策走向</strong> — 书记+省长均来自浙江（习近平主政地），其政策取向、用人偏好是否受此影响，值得持续观察。</div>
+      </li>
+      <li>
+        <span class="marker green"></span>
+        <div><strong>新任常委背景深挖</strong> — 刘红兵、郭灵计、王俊寿（2024-2025年从外省密集调入）的完整履历仍有信息缺口。</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- SECTION 8: Data Files -->
+  <section>
+    <h2><span class="num">08</span> 数据文件</h2>
+    <table>
+      <tr><th>文件</th><th>路径</th><th>说明</th></tr>
+      <tr><td>SQLite</td><td>data/database/hunan_gov_network.db</td><td>19人 · 27机构 · 48任职 · 13关系</td></tr>
+      <tr><td>GEXF</td><td>data/graph/hunan_gov_network.gexf</td><td>可视化图（GEXF 1.3 / viz命名空间）</td></tr>
+      <tr><td>Markdown</td><td>report/20260714-湖南省-省委书记沈晓明.md</td><td>综合报告</td></tr>
+      <tr><td>HTML</td><td>report/20260714-湖南省-省委书记沈晓明.html</td><td>本页面</td></tr>
+      <tr><td>Graph</td><td>report/graph.html</td><td>vis.js交互式关系图</td></tr>
+    </table>
+  </section>
+
+</div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <p>报告生成日期：2026年7月14日 · 数据来源：维基百科</p>
+  <p style="margin-top:4px;">
+    <a href="20260714-湖南省-省长.md">→ 毛伟明省长专题报告</a>
+    &nbsp;·&nbsp;
+    <a href="graph.html">→ 交互式关系图</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">→ 总索引</a>
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江苏省领导班子工作关系网络</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d0d0d; color: #e8e0d0; font-family: 'Inter', 'Noto Serif SC', sans-serif;
+    line-height: 1.6; font-size: 0.85rem;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ── Header ── */
+  .header {
+    padding: 2.5rem 0 1.5rem; border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 2rem; position: relative;
+  }
+  .header::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: #E03C31;
+  }
+  .header .seal {
+    display: inline-block; border: 1.5px solid #E03C31; color: #E03C31;
+    padding: 0.2rem 0.6rem; font-family: 'Noto Serif SC', serif;
+    font-size: 0.65rem; letter-spacing: 0.05em; margin-bottom: 0.8rem;
+  }
+  .header h1 {
+    font-family: 'Noto Serif SC', serif; font-size: 2rem; font-weight: 700;
+    color: #f0e8d8; letter-spacing: 0.02em;
+  }
+  .header .sub {
+    font-size: 0.7rem; color: #8a8478; margin-top: 0.3rem;
+  }
+  .header .sub span { color: #C9A94E; }
+
+  /* ── Stats Bar ── */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: #2a2a2a; margin: 1.5rem 0 2rem; border: 1px solid #2a2a2a;
+  }
+  .stat-item {
+    background: #0f0f0f; padding: 1rem; text-align: center;
+  }
+  .stat-item .num {
+    font-family: 'Noto Serif SC', serif; font-size: 1.6rem; font-weight: 700;
+    color: #f0e8d8; line-height: 1.2;
+  }
+  .stat-item .label { font-size: 0.65rem; color: #8a8478; margin-top: 0.2rem; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 2.5rem; }
+  .section-title {
+    font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 600;
+    color: #f0e8d8; letter-spacing: 0.03em;
+    padding-bottom: 0.4rem; margin-bottom: 1rem;
+    border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section-title .tag {
+    font-size: 0.55rem; font-weight: 400; color: #8a8478;
+    background: #1a1a1a; padding: 0.1rem 0.4rem; border: 1px solid #2a2a2a;
+    font-family: 'Inter', sans-serif;
+  }
+  .section-title .accent { color: #E03C31; margin-right: 0.3rem; }
+
+  /* ── Subsection ── */
+  .sub-section-title {
+    font-family: 'Noto Serif SC', serif; font-size: 0.85rem; font-weight: 600;
+    color: #C9A94E; margin: 1.2rem 0 0.6rem; letter-spacing: 0.02em;
+  }
+
+  /* ── Timeline ── */
+  .timeline { position: relative; padding-left: 1.8rem; margin-bottom: 1.5rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0;
+    width: 1px; background: #2a2a2a;
+  }
+  .timeline-item {
+    position: relative; padding: 0.5rem 0 0.5rem 0.8rem;
+    border-left: 1px solid transparent; transition: all 0.2s;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -1.55rem; top: 0.9rem;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #2a2a2a; border: 1.5px solid #1a1a1a;
+  }
+  .timeline-item.highlight::before { background: #E03C31; border-color: #E03C31; }
+  .timeline-item.gov::before { background: #C9A94E; border-color: #C9A94E; }
+  .timeline-item .period {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+    color: #C9A94E; display: block; margin-bottom: 0.15rem;
+  }
+  .timeline-item .title {
+    font-size: 0.85rem; color: #f0e8d8; font-weight: 500;
+  }
+  .timeline-item .org {
+    font-size: 0.7rem; color: #8a8478; margin-top: 0.1rem;
+  }
+  .timeline-item .note {
+    font-size: 0.65rem; color: #6a6458; margin-top: 0.15rem; font-style: italic;
+  }
+
+  /* ── Person Cards ── */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem; margin-bottom: 1rem;
+  }
+  .card {
+    background: #0f0f0f; border: 1px solid #2a2a2a; padding: 1rem;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #3a3a3a; }
+  .card .name {
+    font-family: 'Noto Serif SC', serif; font-size: 0.95rem; font-weight: 600;
+    color: #f0e8d8; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+  }
+  .card .role {
+    font-size: 0.7rem; color: #C9A94E; margin: 0.2rem 0 0.3rem;
+  }
+  .card .badge {
+    display: inline-block; font-size: 0.6rem; padding: 0.1rem 0.4rem;
+    margin-right: 0.3rem; margin-top: 0.2rem;
+    border: 1px solid #2a2a2a; color: #8a8478;
+  }
+  .card .badge.red { border-color: #E03C31; color: #E03C31; }
+  .card .badge.gold { border-color: #C9A94E; color: #C9A94E; }
+  .card .badge.blue { border-color: #4a6aff; color: #6a8aff; }
+  .card .detail { font-size: 0.7rem; color: #8a8478; margin-top: 0.3rem; }
+  .card .birthplace { font-size: 0.65rem; color: #6a6458; margin-top: 0.3rem; }
+
+  /* ── Relation List ── */
+  .relation-list { margin-bottom: 1.5rem; }
+  .relation-group { margin-bottom: 1rem; }
+  .relation-group .group-label {
+    font-size: 0.7rem; color: #C9A94E; font-weight: 500;
+    margin-bottom: 0.4rem; border-left: 2px solid #C9A94E; padding-left: 0.5rem;
+  }
+  .relation-group .group-label.red-border { border-left-color: #E03C31; color: #E03C31; }
+  .relation-row {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.75rem; padding: 0.25rem 0; color: #d0c8b8;
+  }
+  .relation-row .arrow { color: #C9A94E; font-family: 'JetBrains Mono', monospace; }
+  .relation-row .arrow.red { color: #E03C31; }
+  .relation-row .desc { color: #8a8478; font-size: 0.65rem; }
+  .person-link { color: #f0e8d8; font-family: 'Noto Serif SC', serif; }
+  .person-link.muted { color: #8a8478; }
+
+  /* ── Insights ── */
+  .insight { margin-bottom: 0.8rem; }
+  .insight .priority {
+    display: inline-block; font-size: 0.55rem; padding: 0.05rem 0.4rem;
+    margin-right: 0.4rem; background: #1a1a1a; border: 1px solid #2a2a2a;
+  }
+  .insight .priority.high { border-color: #E03C31; color: #E03C31; }
+  .insight .priority.medium { border-color: #C9A94E; color: #C9A94E; }
+  .insight p { font-size: 0.78rem; color: #d0c8b8; line-height: 1.5; }
+  .insight p b { color: #f0e8d8; }
+
+  /* ── Data Links ── */
+  .data-links {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem;
+  }
+  .data-link {
+    border: 1px solid #2a2a2a; padding: 0.4rem 0.7rem;
+    font-size: 0.65rem; color: #8a8478; font-family: 'JetBrains Mono', monospace;
+  }
+  .data-link .ext {
+    color: #E03C31; margin-right: 0.3rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #2a2a2a;
+    font-size: 0.65rem; color: #6a6458;
+  }
+
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.3rem; }
+    .timeline-columns { grid-template-columns: 1fr; }
+  }
+
+  /* ── Timeline Columns ── */
+  .timeline-columns {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  }
+  .timeline-columns .tl-person-label {
+    font-family: 'Noto Serif SC', serif; font-size: 0.85rem; font-weight: 600;
+    color: #f0e8d8; margin-bottom: 0.3rem;
+  }
+  .timeline-columns .tl-person-role {
+    font-size: 0.65rem; color: #C9A94E; margin-bottom: 0.8rem;
+  }
+
+  /* ── Chain ── */
+  .chain-row {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 0.3rem 0.1rem; margin-bottom: 0.5rem; font-size: 0.75rem;
+  }
+  .chain-node {
+    font-family: 'Noto Serif SC', serif; padding: 0.15rem 0.5rem;
+    border: 1px solid #2a2a2a; color: #f0e8d8;
+  }
+  .chain-arrow { color: #C9A94E; font-size: 0.7rem; padding: 0 0.1rem; }
+  .chain-label { font-size: 0.6rem; color: #8a8478; margin-right: 0.3rem; }
+  .chain-node.current { border-color: #E03C31; color: #E03C31; }
+  .chain-node.output { border-color: #C9A94E; color: #C9A94E; }
+  .chain-node.intermediate { border-color: #4a6aff; color: #6a8aff; }
+  .cross-region-grid {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1rem;
+  }
+  .cross-person {
+    border: 1px solid #2a2a2a; padding: 0.3rem 0.6rem; font-size: 0.7rem;
+  }
+  .cross-person .name { color: #f0e8d8; font-family: 'Noto Serif SC', serif; }
+  .cross-person .path { color: #C9A94E; font-size: 0.6rem; margin-left: 0.3rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="seal">机密 · 人事网络分析</div>
+    <h1>江苏省领导班子工作关系网络</h1>
+    <div class="sub">
+      调查日期：<span>2026-07-14</span> · 分析范围：省委省政府核心班子成员及历史关联人物 · 来源：公开履历数据
+    </div>
+  </div>
+
+  <!-- ═══ STATS ═══ -->
+  <div class="stats">
+    <div class="stat-item"><div class="num">20</div><div class="label">人物</div></div>
+    <div class="stat-item"><div class="num">53</div><div class="label">机构</div></div>
+    <div class="stat-item"><div class="num">72</div><div class="label">任职</div></div>
+    <div class="stat-item"><div class="num">22</div><div class="label">关系</div></div>
+  </div>
+
+  <!-- ═══ PERSON CARD GRID ═══ -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 关键人物 <span class="tag">省委省政府领导班子 · 14人</span></div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="name">信长星 <span class="badge red">省委书记</span></div>
+        <div class="role">江苏省委书记 · 省人大常委会主任</div>
+        <span class="badge">山东惠民</span><span class="badge">1963-12</span>
+        <div class="birthplace">籍贯：山东惠民 · 人社部30年系统出身</div>
+        <div class="detail">劳动部→人社部→安徽副书记→青海省长→青海书记→江苏书记</div>
+      </div>
+
+      <div class="card">
+        <div class="name">刘小涛 <span class="badge red">省长</span></div>
+        <div class="role">江苏省委副书记 · 省长</div>
+        <span class="badge">广东兴宁</span><span class="badge">1970-07</span>
+        <div class="birthplace">籍贯：广东兴宁 · 粤→浙→苏跨省调动</div>
+        <div class="detail">广东劳动→茂名/汕头/潮州→浙江副省长→温州书记→苏州书记→江苏省长</div>
+      </div>
+
+      <div class="card">
+        <div class="name">张忠 <span class="badge blue">省纪委书记</span></div>
+        <div class="role">江苏省委常委 · 省纪委书记</div>
+        <span class="badge">山东莱州</span><span class="badge">1968-03</span>
+        <div class="birthplace">籍贯：山东莱州 · 中组部→吉林→江苏</div>
+        <div class="detail">中组部干部监督背景，曾任职吉林纪委书记</div>
+      </div>
+
+      <div class="card">
+        <div class="name">周红波 <span class="badge gold">南京市委书记</span></div>
+        <div class="role">江苏省委常委 · 南京市委书记</div>
+        <span class="badge">广西临桂</span><span class="badge">1970-10</span>
+        <div class="birthplace">籍贯：广西临桂 · 桂→琼→苏跨省调动</div>
+        <div class="detail">广西农业→南宁市长→广西副主席→三亚书记→南京书记</div>
+      </div>
+
+      <div class="card">
+        <div class="name">刘建洋 <span class="badge blue">组织部部长</span></div>
+        <div class="role">江苏省委常委 · 组织部部长</div>
+        <span class="badge">江西莲花</span><span class="badge">1966-04</span>
+        <div class="birthplace">籍贯：江西莲花 · 赣→闽→苏跨省</div>
+        <div class="detail">曾任福建省副省长、莆田书记，2023年调任江苏</div>
+      </div>
+
+      <div class="card">
+        <div class="name">马欣 <span class="badge gold">常务副省长</span></div>
+        <div class="role">江苏省委常委 · 常务副省长</div>
+        <span class="badge">天津</span><span class="badge">1967-11</span>
+        <div class="birthplace">籍贯：天津 · 国开行→江苏央地交流</div>
+        <div class="detail">国开行天津→青海分行→广西分行→国开行副行长→江苏副省长</div>
+      </div>
+
+      <div class="card">
+        <div class="name">范波 <span class="badge gold">苏州市委书记</span></div>
+        <div class="role">江苏省委常委 · 苏州市委书记</div>
+        <span class="badge">湖北洪湖</span><span class="badge">1969-10</span>
+        <div class="birthplace">籍贯：湖北洪湖 · 川→鲁→苏跨省</div>
+        <div class="detail">国家发改委→四川→山东省长助理→自贡书记→苏州书记</div>
+      </div>
+
+      <div class="card">
+        <div class="name">徐缨 <span class="badge blue">宣传部部长</span></div>
+        <div class="role">江苏省委常委 · 宣传部部长</div>
+        <span class="badge">江苏常州</span><span class="badge">1967-09</span>
+        <div class="birthplace">籍贯：江苏常州 · 本地干部</div>
+        <div class="detail">长期在江苏任职，曾任常州市委宣传部部长、省委网信办主任</div>
+      </div>
+
+      <div class="card">
+        <div class="name">李耀光 <span class="badge blue">政法委书记</span></div>
+        <div class="role">江苏省委常委 · 政法委书记</div>
+        <span class="badge">北京</span><span class="badge">1970-10</span>
+        <div class="birthplace">籍贯：北京 · 北京→江苏</div>
+        <div class="detail">长期在北京市公安系统工作，2023年调任江苏</div>
+      </div>
+
+      <div class="card">
+        <div class="name">陈忠伟 <span class="badge blue">省委秘书长</span></div>
+        <div class="role">江苏省委常委 · 省委秘书长</div>
+        <span class="badge">广东潮州</span><span class="badge">1969-06</span>
+        <div class="birthplace">籍贯：广东潮州 · 本地晋升</div>
+        <div class="detail">长期在江苏任职，曾任宿迁市委书记，本地逐步晋升</div>
+      </div>
+
+    </div>
+
+    <div class="sub-section-title">关联人物 · 历任</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="name">吴政隆 <span class="badge gold">前任书记→国务委员</span></div>
+        <div class="role">曾任江苏省委书记 · 现任国务委员 · 国务院党组成员</div>
+        <span class="badge">浙江宁波</span><span class="badge">1964</span>
+        <div class="detail">重庆→山西→江苏（省长→书记）→中央</div>
+      </div>
+
+      <div class="card">
+        <div class="name">李强 <span class="badge gold">前任书记→总理</span></div>
+        <div class="role">曾任江苏省委书记 · 现任国务院总理 · 中央政治局常委</div>
+        <span class="badge">浙江瑞安</span><span class="badge">1959</span>
+        <div class="detail">浙江→江苏（省长→书记）→中央（政治局常委·上海→总理）</div>
+      </div>
+
+      <div class="card">
+        <div class="name">许昆林 <span class="badge gold">前任省长→辽宁书记</span></div>
+        <div class="role">曾任江苏省长 · 现任辽宁省委书记</div>
+        <span class="badge">福建永春</span><span class="badge">1965</span>
+        <div class="detail">国家发改委→上海→江苏副省长→苏州书记→江苏→辽宁</div>
+      </div>
+
+      <div class="card">
+        <div class="name">石泰峰 <span class="badge gold">前任省长→政治局/中组部</span></div>
+        <div class="role">曾任江苏省长 · 现任中央政治局委员 · 中组部部长</div>
+        <span class="badge">山西榆社</span><span class="badge">1956</span>
+        <div class="detail">江苏（副书记→省长）→宁夏→内蒙→中央（副国级）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CAREER TIMELINES ═══ -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 核心人物职业生涯 <span class="tag">TOP 4 时间线</span></div>
+
+    <div class="timeline-columns">
+      <!-- 信长星 -->
+      <div>
+        <div class="tl-person-label">信长星 <span style="color:#E03C31; font-size:0.65rem; font-weight:400; font-family:'Inter',sans-serif;">省委书记</span></div>
+        <div class="tl-person-role">1963年生 · 山东惠民 · 42年仕途</div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="period">1986 – 2008</span><span class="title">劳动部 → 人社部</span><span class="org">北京 · 历任劳动部副处长、人社部副部长</span><span class="note">22年中央部委生涯，核心在劳动就业与人力资源政策</span></div>
+          <div class="timeline-item"><span class="period">2008 – 2016</span><span class="title">人社部副部长</span><span class="org">北京 · 分管就业促进司、职业能力建设司</span></div>
+          <div class="timeline-item highlight"><span class="period">2016 – 2020</span><span class="title">安徽省委副书记</span><span class="org">安徽合肥 · 首次地方任职，省委"三把手"</span><span class="note">从中央空降地方，完成身份转换</span></div>
+          <div class="timeline-item"><span class="period">2020 – 2022</span><span class="title">青海省长</span><span class="org">青海西宁 · 正部级 · 高海拔艰苦地区主政</span></div>
+          <div class="timeline-item"><span class="period">2022 – 2023</span><span class="title">青海省委书记</span><span class="org">青海西宁 · 省委一把手</span></div>
+          <div class="timeline-item gov"><span class="period">2023.01 – 至今</span><span class="title">江苏省委书记</span><span class="org">江苏南京 · 经济大省一把手</span><span class="note">青海→江苏，从人口600万到8500万的跨越</span></div>
+        </div>
+      </div>
+
+      <!-- 刘小涛 -->
+      <div>
+        <div class="tl-person-label">刘小涛 <span style="color:#E03C31; font-size:0.65rem; font-weight:400; font-family:'Inter',sans-serif;">省长</span></div>
+        <div class="tl-person-role">1970年生 · 广东兴宁 · 34年仕途</div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="period">1992 – 2012</span><span class="title">广东省劳动厅 → 省人社厅</span><span class="org">广东广州 · 20年广东劳动人事系统</span><span class="note">与信长星同为劳动人事系统出身</span></div>
+          <div class="timeline-item"><span class="period">2012 – 2017</span><span class="title">茂名副市长 → 汕头市长</span><span class="org">广东茂名/汕头 · 地方主政起步</span></div>
+          <div class="timeline-item"><span class="period">2017 – 2019</span><span class="title">潮州市委书记</span><span class="org">广东潮州 · 地级市一把手</span></div>
+          <div class="timeline-item highlight"><span class="period">2020 – 2021</span><span class="title">浙江省副省长</span><span class="org">浙江杭州 · 首次跨省 · 分管商务/市场监管</span><span class="note">粤→浙跨省调动，进入长三角</span></div>
+          <div class="timeline-item"><span class="period">2021 – 2023</span><span class="title">温州市委书记</span><span class="org">浙江温州 · 民营经济高地主政</span></div>
+          <div class="timeline-item"><span class="period">2023 – 2025.10</span><span class="title">苏州市委书记（江苏省委常委）</span><span class="org">江苏苏州 · "最强地级市"一把手</span></div>
+          <div class="timeline-item gov"><span class="period">2025.10 – 至今</span><span class="title">江苏省省长</span><span class="org">江苏南京 · 正部级 · 省委副书记</span><span class="note">苏州书记→省长的经典晋升管道</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-columns" style="margin-top:1rem;">
+      <!-- 马欣 -->
+      <div>
+        <div class="tl-person-label">马欣 <span style="color:#C9A94E; font-size:0.65rem; font-weight:400; font-family:'Inter',sans-serif;">常务副省长</span></div>
+        <div class="tl-person-role">1967年生 · 天津 · 国开行→地方</div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="period">2006 – 2014</span><span class="title">国开行天津分行</span><span class="org">天津 · 从基层到副行长</span></div>
+          <div class="timeline-item"><span class="period">2014 – 2016</span><span class="title">国开行青海分行行长</span><span class="org">青海西宁 · 省级分行一把手</span></div>
+          <div class="timeline-item"><span class="period">2016 – 2018</span><span class="title">国开行广西分行行长</span><span class="org">广西南宁 · 继续分行历练</span></div>
+          <div class="timeline-item highlight"><span class="period">2018 – 2020</span><span class="title">国开行副行长</span><span class="org">北京 · 晋升总行领导</span><span class="note">金融央企副职</span></div>
+          <div class="timeline-item"><span class="period">2020 – 2023</span><span class="title">江苏省副省长</span><span class="org">江苏南京 · 央地交流 · 分管金融</span></div>
+          <div class="timeline-item gov"><span class="period">2023 – 至今</span><span class="title">江苏省委常委 · 常务副省长</span><span class="org">江苏南京 · 省政府"二把手"</span></div>
+        </div>
+      </div>
+
+      <!-- 周红波 -->
+      <div>
+        <div class="tl-person-label">周红波 <span style="color:#C9A94E; font-size:0.65rem; font-weight:400; font-family:'Inter',sans-serif;">南京市委书记</span></div>
+        <div class="tl-person-role">1970年生 · 广西临桂 · 34年仕途</div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="period">1992 – 2006</span><span class="title">广西自治区农业系统</span><span class="org">广西南宁 · 从基层到自治区农业厅</span><span class="note">14年深耕广西地方</span></div>
+          <div class="timeline-item"><span class="period">2006 – 2011</span><span class="title">南宁市副市长 → 市长</span><span class="org">广西南宁 · 首府城市主官</span></div>
+          <div class="timeline-item highlight"><span class="period">2011 – 2020</span><span class="title">南宁市长 → 市委书记</span><span class="org">广西南宁 · 主政首府近10年</span><span class="note">广西本土培养的重要干部</span></div>
+          <div class="timeline-item"><span class="period">2020 – 2021</span><span class="title">广西自治区副主席</span><span class="org">广西南宁 · 晋升副部级</span></div>
+          <div class="timeline-item"><span class="period">2021 – 2023</span><span class="title">海南省委常委 · 三亚市委书记</span><span class="org">海南三亚 · 桂→琼跨省</span></div>
+          <div class="timeline-item gov"><span class="period">2024 – 至今</span><span class="title">江苏省委常委 · 南京市委书记</span><span class="org">江苏南京 · 海南省外调任经济大省省会</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ RELATIONSHIP MATRIX ═══ -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 关系矩阵 <span class="tag">核心关系 · 22条</span></div>
+
+    <!-- 党政搭档 -->
+    <div class="relation-group">
+      <div class="group-label red-border">党政搭档</div>
+      <div class="relation-row">
+        <span class="person-link">信长星</span>
+        <span class="arrow red">↔</span>
+        <span class="person-link">刘小涛</span>
+        <span class="desc">（2025.10 — 至今）党政正职搭班</span>
+      </div>
+      <div class="relation-row" style="margin-left:1.5rem; font-size:0.65rem; color:#6a6458;">
+        信长星（中央部委+青海）与刘小涛（广东+浙江+苏州）形成"中央空降+地方深耕"互补结构
+      </div>
+    </div>
+
+    <!-- 书记链 -->
+    <div class="relation-group">
+      <div class="group-label">书记链（传承路线）</div>
+      <div class="chain-row">
+        <span class="chain-label">省委书记：</span>
+        <span class="chain-node output">李强</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node intermediate">娄勤俭</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node intermediate">吴政隆</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node current">信长星</span>
+      </div>
+      <div class="chain-row" style="margin-top:0.3rem;">
+        <span class="chain-label">省　长：</span>
+        <span class="chain-node output">石泰峰</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node intermediate">吴政隆</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node intermediate">许昆林</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node current">刘小涛</span>
+      </div>
+      <div class="relation-row" style="margin-left:1.5rem; font-size:0.65rem; color:#6a6458;">
+        李强→总理 · 石泰峰→中组部部长 · 吴政隆→国务委员 · 许昆林→辽宁省委书记
+      </div>
+    </div>
+
+    <!-- 苏州书记→省长管道 -->
+    <div class="relation-group">
+      <div class="group-label">苏州书记 → 省长管道（关键路径）</div>
+      <div class="chain-row">
+        <span class="chain-node intermediate">石泰峰</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node intermediate">许昆林</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-node current">刘小涛</span>
+      </div>
+      <div class="relation-row" style="margin-left:1.5rem; font-size:0.65rem; color:#6a6458;">
+        连续三任苏州书记升任省长/省委书记，苏州已成为省部级晋升的高概率跳板
+      </div>
+    </div>
+
+    <!-- 跨省交流群 -->
+    <div class="relation-group">
+      <div class="group-label">跨省交流群</div>
+      <div class="cross-region-grid">
+        <div class="cross-person"><span class="name">刘小涛</span><span class="path">粤→浙→苏</span></div>
+        <div class="cross-person"><span class="name">周红波</span><span class="path">桂→琼→苏</span></div>
+        <div class="cross-person"><span class="name">刘建洋</span><span class="path">赣→闽→苏</span></div>
+        <div class="cross-person"><span class="name">范波</span><span class="path">川→鲁→苏</span></div>
+      </div>
+      <div class="relation-row" style="font-size:0.65rem; color:#6a6458;">
+        江苏领导班子呈现高度跨省流动性，7/12常委来自省外
+      </div>
+    </div>
+
+    <!-- 央地交流 -->
+    <div class="relation-group">
+      <div class="group-label">央地交流</div>
+      <div class="cross-region-grid">
+        <div class="cross-person"><span class="name">信长星</span><span class="path">劳动部/人社部(22年)→青海→江苏</span></div>
+        <div class="cross-person"><span class="name">马欣</span><span class="path">国开行(14年)→江苏副省长→常务副省长</span></div>
+        <div class="cross-person"><span class="name">张忠</span><span class="path">中组部→吉林纪委→江苏纪委</span></div>
+      </div>
+    </div>
+
+    <!-- 江苏→中央外流 -->
+    <div class="relation-group">
+      <div class="group-label red-border">江苏 → 中央 重要干部输出</div>
+      <div class="chain-row">
+        <span class="chain-node output">李强</span>
+        <span class="chain-arrow">→</span>
+        <span style="font-size:0.75rem; color:#E03C31; font-weight:500;">国务院总理</span>
+      </div>
+      <div class="chain-row">
+        <span class="chain-node output">吴政隆</span>
+        <span class="chain-arrow">→</span>
+        <span style="font-size:0.75rem; color:#E03C31; font-weight:500;">国务委员</span>
+      </div>
+      <div class="chain-row">
+        <span class="chain-node output">石泰峰</span>
+        <span class="chain-arrow">→</span>
+        <span style="font-size:0.75rem; color:#E03C31; font-weight:500;">中央政治局委员 · 中组部部长</span>
+      </div>
+      <div class="relation-row" style="font-size:0.65rem; color:#6a6458;">
+        江苏连续产出三位副国级以上领导人，被称为"省长摇篮"
+      </div>
+    </div>
+
+    <!-- 其他关系 -->
+    <div class="relation-group">
+      <div class="group-label">其他网络</div>
+      <div class="relation-row">
+        <span class="person-link">信长星</span>
+        <span class="arrow">↔</span>
+        <span class="person-link">刘小涛</span>
+        <span class="desc">均有劳动人事系统渊源（信长星：人社部22年，刘小涛：广东劳动厅20年）</span>
+      </div>
+      <div class="relation-row">
+        <span class="person-link">刘小涛</span>
+        <span class="arrow">→</span>
+        <span class="person-link">范波</span>
+        <span class="desc">苏州书记→现任苏州市委书记，前后任关系</span>
+      </div>
+      <div class="relation-row">
+        <span class="person-link">马欣</span>
+        <span class="arrow">↔</span>
+        <span class="person-link">信长星</span>
+        <span class="desc">曾在青海（信长星任省长/书记时，马欣任国开行青海分行行长）有交集可能</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ KEY INSIGHTS ═══ -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 关键洞察 <span class="tag">优先级排序</span></div>
+
+    <div class="insight">
+      <span class="priority high">高</span>
+      <p><b>1. 7/12常委来自省外，58%空降率</b> — 江苏现任省委常委中，过半数由中央或其他省份调任，本地干部比例处于全国较低水平。省委班子呈现"强控制、弱本地"特征，体现中央对经济大省的人事管控意图。</p>
+    </div>
+
+    <div class="insight">
+      <span class="priority high">高</span>
+      <p><b>2. 省委专职副书记空缺，由省长刘小涛兼任</b> — 省委副书记一职目前由省长刘小涛兼任，省委"三把手"职位的专职人选未定。这一安排可能是临时过渡，也可能是权力高度集中的人事信号。</p>
+    </div>
+
+    <div class="insight">
+      <span class="priority high">高</span>
+      <p><b>3. "苏州书记→省长"成为稳定晋升管道</b> — 石泰峰→许昆林→刘小涛，连续三任苏州市委书记升任省长/省委书记。苏州作为GDP超2万亿的"最强地级市"，已是省部级晋升的高概率跳板。该模式意味着苏州书记一职具有极高的政治含金量。</p>
+    </div>
+
+    <div class="insight">
+      <span class="priority medium">中</span>
+      <p><b>4. 江苏是中央级干部重要输出地</b> — 近十年间，李强（总理）、吴政隆（国务委员）、石泰峰（政治局委员/中组部部长）三位原江苏省委书记/省长晋升至副国级以上岗位。江苏已成为通往最高决策层的重要枢纽省份。</p>
+    </div>
+
+    <div class="insight">
+      <span class="priority medium">中</span>
+      <p><b>5. 信长星与刘小涛均有劳动人事系统渊源</b> — 信长星在人社部22年，刘小涛在广东省劳动厅/人社厅近20年。两人虽来自不同省份，但专业背景高度重叠。党政正职在同一专业领域均有深厚积累的情况在全国较为少见，可能影响江苏劳动就业与人才政策方向。</p>
+    </div>
+  </div>
+
+  <!-- ═══ DATA FILES ═══ -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 数据文件 <span class="tag">支持数据</span></div>
+    <div class="data-links">
+      <span class="data-link"><span class="ext">SQLite</span> data/database/jiangsu_province_network.db</span>
+      <span class="data-link"><span class="ext">GEXF</span> data/graph/jiangsu_province_network.gexf</span>
+      <span class="data-link"><span class="ext">MD</span> 详见同目录 .md 文件</span>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    江苏省领导班子工作关系网络 · 调查报告<br>
+    数据文件：data/database/jiangsu_province_network.db | data/graph/jiangsu_province_network.gexf<br>
+    报告日期：2026-07-14 · 分析工具：Government Personnel Network Investigator
+  </div>
+
+</div>
+</body>
+</html>

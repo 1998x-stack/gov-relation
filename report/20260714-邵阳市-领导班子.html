@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邵阳市领导班子 · 调查报告</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d0d0d; color: #e8e0d0; font-family: 'Inter', sans-serif; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .header { border-bottom: 1px solid #2a2a2a; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif SC', serif; font-size: 1.8rem; color: #e8e0d0; }
+  .header .sub { font-size: 0.85rem; color: #8a8478; margin-top: 0.3rem; }
+  .header .date { font-size: 0.75rem; color: #6a6458; margin-top: 0.2rem; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+  .stat-card { border: 1px solid #2a2a2a; padding: 1rem; background: #111; }
+  .stat-card .num { font-size: 1.8rem; font-weight: 600; color: #C9A94E; }
+  .stat-card .label { font-size: 0.7rem; color: #8a8478; margin-top: 0.2rem; }
+  h2 { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; color: #e8e0d0; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #2a2a2a; }
+  h2 .badge { font-size: 0.6rem; background: #E03C31; color: #fff; padding: 0.15rem 0.4rem; border-radius: 2px; margin-left: 0.5rem; vertical-align: middle; font-family: 'Inter', sans-serif; }
+  h3 { font-family: 'Noto Serif SC', serif; font-size: 0.95rem; color: #d0c8b0; margin: 1.2rem 0 0.6rem; }
+  .person-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .person-card { border: 1px solid #2a2a2a; padding: 1rem; background: #111; }
+  .person-card .name { font-family: 'Noto Serif SC', serif; font-size: 1.1rem; color: #e8e0d0; font-weight: 700; }
+  .person-card .role { font-size: 0.75rem; color: #C9A94E; margin: 0.2rem 0; }
+  .person-card .detail { font-size: 0.75rem; color: #8a8478; margin-top: 0.4rem; line-height: 1.5; }
+  .person-card .tag { display: inline-block; font-size: 0.6rem; padding: 0.1rem 0.4rem; border-radius: 2px; margin: 0.2rem 0.1rem; }
+  .tag-secretary { background: #E03C31; color: #fff; }
+  .tag-mayor { background: #4a7fc7; color: #fff; }
+  .tag-chairman { background: #5a7a9a; color: #fff; }
+  .tag-unknown { background: #444; color: #aaa; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.78rem; }
+  th, td { border: 1px solid #2a2a2a; padding: 0.5rem 0.6rem; text-align: left; }
+  th { background: #1a1a1a; color: #C9A94E; font-weight: 400; }
+  td { color: #c0b8a8; }
+  .gap-high { background: #1a0a0a; }
+  .gap-high td:first-child { border-left: 2px solid #E03C31; }
+  .confirm { color: #6a9a6a; }
+  .missing { color: #a06a6a; }
+  .source-link { color: #6a7a9a; text-decoration: none; font-size: 0.7rem; }
+  .source-link:hover { color: #8a9aba; text-decoration: underline; }
+  .section-divider { border: none; border-top: 1px solid #1a1a1a; margin: 1.5rem 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>邵阳市领导班子工作关系网络</h1>
+  <div class="sub">湖南省 · 地级市 · 综合调查报告</div>
+  <div class="date">2026年7月14日 | 数据来源：维基百科</div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="num">8</div>
+    <div class="label">已确认在职领导</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">12</div>
+    <div class="label">下辖区县（市）</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">24</div>
+    <div class="label">区县领导待查</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">4</div>
+    <div class="label">维基百科有领导表</div>
+  </div>
+</div>
+
+<!-- ===== A. City-Level ===== -->
+<h2>A. 邵阳市级领导</h2>
+
+<div class="person-grid">
+  <div class="person-card">
+    <div class="name">程蓓</div>
+    <div class="role"><span class="tag tag-secretary">市委书记</span> <span class="tag tag-mayor">市长</span>（一肩挑）</div>
+    <div class="detail">
+      女，汉族，1972年8月（53岁）<br>
+      籍贯：安徽省淮南市<br>
+      任职：市长（2024.09—），书记（2026.05—）<br>
+      <span class="missing">⚠ 完整履历待查——维基百科页面尚未创建</span>
+    </div>
+  </div>
+
+  <div class="person-card">
+    <div class="name">严华</div>
+    <div class="role"><span class="tag tag-secretary">前任市委书记</span></div>
+    <div class="detail">
+      1968年8月（57岁），湖南常德澧县人<br>
+      湖南师范大学思想政治教育专业<br>
+      市委书记任职：2021.08—2026.05<br>
+      去向：<span class="missing">⚠ "另有任用"——新职务未公布</span><br>
+      来源：<a class="source-link" href="https://zh.wikipedia.org/wiki/严华_(1968年)" target="_blank">维基百科</a>
+    </div>
+  </div>
+
+  <div class="person-card">
+    <div class="name">周迎春</div>
+    <div class="role"><span class="tag tag-chairman">市人大主任</span></div>
+    <div class="detail">
+      女，汉族，1969年1月（57岁）<br>
+      籍贯：湖南省安仁县<br>
+      就任：2022年1月
+    </div>
+  </div>
+
+  <div class="person-card">
+    <div class="name">周文</div>
+    <div class="role"><span class="tag tag-chairman">市政协主席</span></div>
+    <div class="detail">
+      1968年9月（57岁）<br>
+      籍贯：湖南省武冈市<br>
+      就任：2022年1月
+    </div>
+  </div>
+</div>
+
+<!-- ===== B. Districts/Counties ===== -->
+<h2>B. 区县领导 <span class="badge">4/12已确认</span></h2>
+
+<h3>✅ 已通过维基百科确认（4区县）</h3>
+
+<table>
+  <thead>
+    <tr><th>区县</th><th>职务</th><th>姓名</th><th>籍贯</th><th>出生</th><th>就任</th></tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan="2">邵阳县</td><td>县委书记</td><td><strong>袁胜良</strong></td><td>湖南隆回</td><td>1971.08</td><td>2021.06</td></tr>
+    <tr><td>县长</td><td><strong>周玉祥</strong></td><td>湖南新邵</td><td>1972.11</td><td>2021.10</td></tr>
+    <tr><td rowspan="2">新邵县</td><td>县委书记</td><td><strong>黄海蓉</strong></td><td>湖南邵阳</td><td>1973.04</td><td>2023.09</td></tr>
+    <tr><td>县长</td><td><strong>谢小军</strong></td><td>湖南邵东</td><td>1978.09</td><td>2023.10</td></tr>
+    <tr><td rowspan="2">隆回县</td><td>县委书记</td><td><strong>刘厚见</strong></td><td>湖南邵东</td><td>1973.11</td><td>2024.05</td></tr>
+    <tr><td>县长</td><td><strong>杨韶辉</strong>（瑶族）</td><td>湖南洞口</td><td>1974.02</td><td>2021.10</td></tr>
+  </tbody>
+</table>
+
+<h3>❌ 维基百科无领导表格（8区县待查）</h3>
+
+<table>
+  <thead>
+    <tr><th>区县</th><th>区委书记/市委书记</th><th>区长/市长/县长</th></tr>
+  </thead>
+  <tbody>
+    <tr class="gap-high"><td>双清区</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>大祥区</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>北塔区</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>洞口县</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>绥宁县</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>新宁县</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>城步苗族自治县</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>武冈市</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+    <tr class="gap-high"><td>邵东市</td><td class="missing">待查</td><td class="missing">待查</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== C. Predecessor Chain ===== -->
+<h2>C. 市委书记前任去向</h2>
+
+<table>
+  <thead>
+    <tr><th>姓名</th><th>任职期间</th><th>接任者</th><th>去向</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>龚文密</td><td>2016.03—2021.08</td><td>严华</td><td>—（已退/另有任用）</td></tr>
+    <tr><td>严华</td><td>2021.08—2026.05</td><td>程蓓</td><td class="missing">⚠ "另有任用"——待公布</td></tr>
+    <tr><td>程蓓（现任）</td><td>2026.05—</td><td>—</td><td>同时兼任市长</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== D. Cross-County ===== -->
+<h2>D. 跨区县人事交流分析</h2>
+
+<table>
+  <thead>
+    <tr><th>走廊</th><th>案例</th><th>类型</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>隆回 ↔ 邵东</td><td>刘厚见（邵东人→隆回书记）</td><td>籍贯跨县任职</td></tr>
+    <tr><td>隆回 ↔ 洞口</td><td>杨韶辉（洞口人→隆回县长）</td><td>籍贯跨县任职</td></tr>
+    <tr><td>邵阳县 ← 新邵</td><td>周玉祥（新邵人→邵阳县县长）</td><td>籍贯跨县任职</td></tr>
+    <tr><td>邵阳县 ← 隆回</td><td>袁胜良（隆回人→邵阳县委书记）</td><td>籍贯跨县任职</td></tr>
+    <tr><td>邵东外流</td><td>谢小军（邵东→新邵县长）</td><td>籍贯跨县任职</td></tr>
+    <tr><td>邵东外流</td><td>刘厚见（邵东→隆回书记）</td><td>籍贯跨县任职</td></tr>
+    <tr><td>武冈→邵阳市</td><td>周文（武冈人→市政协主席）</td><td>县级市→地级市</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== E. Gaps ===== -->
+<h2>E. 关键信息缺口</h2>
+
+<table>
+  <thead>
+    <tr><th>优先级</th><th>缺口</th><th>说明</th></tr>
+  </thead>
+  <tbody>
+    <tr class="gap-high"><td>🔴 最高</td><td>程蓓完整履历</td><td>1972年安徽淮南人，2024年任市长→2026年任书记。此前经历完全空白</td></tr>
+    <tr class="gap-high"><td>🔴 最高</td><td>严华去向</td><td>2026年5月卸任后"另有任用"未公布</td></tr>
+    <tr class="gap-high"><td>🔴 最高</td><td>8区县22位领导</td><td>双清/大祥/北塔/洞口/绥宁/新宁/城步/武冈/邵东——维基均无领导表格</td></tr>
+    <tr><td>🟡 高</td><td>邵阳市委常委班子</td><td>全名单待查</td></tr>
+    <tr><td>🟡 高</td><td>副市长名单</td><td>分管领域待查</td></tr>
+  </tbody>
+</table>
+
+<!-- ===== F. Sources ===== -->
+<h2>F. 信息来源</h2>
+<table>
+  <thead><tr><th>来源</th><th>URL</th></tr></thead>
+  <tbody>
+    <tr><td>邵阳市维基百科</td><td><a class="source-link" href="https://zh.wikipedia.org/wiki/邵阳市" target="_blank">zh.wikipedia.org/wiki/邵阳市</a></td></tr>
+    <tr><td>严华维基百科</td><td><a class="source-link" href="https://zh.wikipedia.org/wiki/严华_(1968年)" target="_blank">zh.wikipedia.org/wiki/严华_(1968年)</a></td></tr>
+    <tr><td>邵阳县维基百科</td><td><a class="source-link" href="https://zh.wikipedia.org/wiki/邵阳县" target="_blank">zh.wikipedia.org/wiki/邵阳县</a></td></tr>
+    <tr><td>新邵县维基百科</td><td><a class="source-link" href="https://zh.wikipedia.org/wiki/新邵县" target="_blank">zh.wikipedia.org/wiki/新邵县</a></td></tr>
+    <tr><td>隆回县维基百科</td><td><a class="source-link" href="https://zh.wikipedia.org/wiki/隆回县" target="_blank">zh.wikipedia.org/wiki/隆回县</a></td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:2rem; padding-top:1rem; border-top:1px solid #2a2a2a; text-align:center; color:#6a6458; font-size:0.7rem;">
+  报告编号：SY-20260714 | 调查范围：邵阳市本级 + 12区县 | 数据状态：部分完成（共有8名市级/县级领导确认）
+</p>
+
+</div>
+</body>
+</html>

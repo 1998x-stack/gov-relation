@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+<graph mode="static" defaultedgetype="undirected">
+<attributes class="node">
+        <attribute id="type" title="type" type="string"/>
+        <attribute id="birth" title="birth" type="string"/>
+        <attribute id="birthplace" title="birthplace" type="string"/>
+        <attribute id="current_post" title="current_post" type="string"/>
+        <attribute id="entity_type" title="entity_type" type="string"/>
+        <attribute id="level" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+        <attribute id="type" title="type" type="string"/>
+        <attribute id="start" title="start" type="string"/>
+        <attribute id="end" title="end" type="string"/>
+        <attribute id="context" title="context" type="string"/>
+    </attributes>
+<nodes>
+<node id="ys_peng_yong" label="彭勇">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="1970-09"/>
+            <attvalue for="birthplace" value="江西新余"/>
+            <attvalue for="current_post" value="1992-?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_guo_feng" label="郭峰">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="1972-?"/>
+            <attvalue for="birthplace" value="江西"/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_fu_qian" label="傅倩">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value="江西"/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_gong_xiaohua" label="龚小华">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value="江西"/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_liu_yinghao" label="刘颖豪">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value="江西"/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_jian_huafeng" label="简华锋">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value="江西"/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_deputy_secretary" label="（专职副书记）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_jiwei_head" label="（纪委书记）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_org_head" label="（组织部部长）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_propaganda_head" label="（宣传部部长）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_military_head" label="（人武部部长）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_npc_head" label="（区人大常委会主任）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_cppcc_head" label="（区政协主席）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_vice_mayor_a" label="（副区长A）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_vice_mayor_b" label="（副区长B）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="ys_vice_mayor_c" label="（副区长C）">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="?"/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value="?"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="xy_fang_xiangjun" label="方向军">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="1970-10"/>
+            <attvalue for="birthplace" value="浙江淳安"/>
+            <attvalue for="current_post" value="1996-07"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="xy_liao_liangsheng" label="廖良生">
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <attvalues>
+            <attvalue for="type" value="person"/>
+            <attvalue for="birth" value="1975-09"/>
+            <attvalue for="birthplace" value="江西石城"/>
+            <attvalue for="current_post" value="1993-07"/>
+            <attvalue for="entity_type" value="person"/>
+            <attvalue for="level" value=""/>
+        </attvalues>
+    </node>
+<node id="org_yushui_district" label="渝水区">
+        <viz:color r="120" g="180" b="240" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_cpc" label="中共新余市渝水区委员会">
+        <viz:color r="240" g="120" b="120" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_gov" label="渝水区人民政府">
+        <viz:color r="120" g="180" b="240" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_npc" label="渝水区人民代表大会常务委员会">
+        <viz:color r="120" g="220" b="140" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_cppcc" label="中国人民政治协商会议新余市渝水区委员会">
+        <viz:color r="120" g="220" b="140" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_jiwei" label="中共新余市渝水区纪律检查委员会">
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_org" label="中共新余市渝水区委组织部">
+        <viz:color r="240" g="120" b="120" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区部门"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_propaganda" label="中共新余市渝水区委宣传部">
+        <viz:color r="240" g="120" b="120" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区部门"/>
+        </attvalues>
+    </node>
+<node id="org_yushui_military" label="新余市渝水区人民武装部">
+        <viz:color r="180" g="180" b="100" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="市辖区"/>
+        </attvalues>
+    </node>
+<node id="org_xy_cpc" label="中共新余市委">
+        <viz:color r="240" g="120" b="120" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="地级市"/>
+        </attvalues>
+    </node>
+<node id="org_xy_gov" label="新余市人民政府">
+        <viz:color r="120" g="180" b="240" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="地级市"/>
+        </attvalues>
+    </node>
+<node id="org_xy_bureau_commerce" label="新余市商务局">
+        <viz:color r="120" g="180" b="240" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="地级市部门"/>
+        </attvalues>
+    </node>
+<node id="org_unknown" label="（待查）">
+        <viz:color r="180" g="180" b="180" a="1.0"/>
+        <viz:size value="8.0"/>
+        <attvalues>
+            <attvalue for="type" value="organization"/>
+            <attvalue for="birth" value=""/>
+            <attvalue for="birthplace" value=""/>
+            <attvalue for="current_post" value=""/>
+            <attvalue for="entity_type" value="org"/>
+            <attvalue for="level" value="未知"/>
+        </attvalues>
+    </node>
+</nodes>
+<edges>
+<edge id="1" source="ys_peng_yong" target="org_yushui_cpc" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="2024-09"/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委书记. 现任；2024年9月公示任职"/>
+        </attvalues>
+    </edge>
+<edge id="2" source="ys_peng_yong" target="org_unknown" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value="2024-09"/>
+            <attvalue for="context" value="（此前职务）. 待查"/>
+        </attvalues>
+    </edge>
+<edge id="3" source="ys_guo_feng" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="2024/2025?"/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委副书记、区长. 现任"/>
+        </attvalues>
+    </edge>
+<edge id="4" source="ys_guo_feng" target="org_unknown" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="（此前职务）. 待查"/>
+        </attvalues>
+    </edge>
+<edge id="5" source="ys_fu_qian" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="~2024"/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委常委、常务副区长. 现任"/>
+        </attvalues>
+    </edge>
+<edge id="6" source="ys_gong_xiaohua" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="~2024"/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委常委、副区长. 现任"/>
+        </attvalues>
+    </edge>
+<edge id="7" source="ys_liu_yinghao" target="org_yushui_cpc" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="~2022"/>
+            <attvalue for="end" value="2024-08"/>
+            <attvalue for="context" value="渝水区委书记. 离任"/>
+        </attvalues>
+    </edge>
+<edge id="8" source="ys_liu_yinghao" target="org_unknown" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="2024-08"/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="（调任）. 另有任用"/>
+        </attvalues>
+    </edge>
+<edge id="9" source="ys_jian_huafeng" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="~2021"/>
+            <attvalue for="end" value="2024"/>
+            <attvalue for="context" value="渝水区长. 离任"/>
+        </attvalues>
+    </edge>
+<edge id="10" source="ys_jian_huafeng" target="org_xy_bureau_commerce" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value="2024"/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="新余市商务局局长. 现任"/>
+        </attvalues>
+    </edge>
+<edge id="11" source="ys_deputy_secretary" target="org_yushui_cpc" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委副书记. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="12" source="ys_jiwei_head" target="org_yushui_jiwei" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委常委、纪委书记、区监委主任. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="13" source="ys_org_head" target="org_yushui_org" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委常委、组织部部长. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="14" source="ys_propaganda_head" target="org_yushui_propaganda" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委常委、宣传部部长. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="15" source="ys_military_head" target="org_yushui_military" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区委常委、人武部部长. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="16" source="ys_npc_head" target="org_yushui_npc" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区人大常委会主任. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="17" source="ys_cppcc_head" target="org_yushui_cppcc" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区政协主席. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="18" source="ys_vice_mayor_a" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区副区长. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="19" source="ys_vice_mayor_b" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区副区长. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="20" source="ys_vice_mayor_c" target="org_yushui_gov" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="worked_at"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="渝水区副区长. 待确认"/>
+        </attvalues>
+    </edge>
+<edge id="21" source="ys_peng_yong" target="xy_fang_xiangjun" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="隶属关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="彭勇任渝水区委书记，受新余市委领导；方为市委书记 (2024-)"/>
+        </attvalues>
+    </edge>
+<edge id="22" source="ys_peng_yong" target="ys_liu_yinghao" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="职位接替"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="彭勇接替刘颖豪任渝水区委书记 (2024)"/>
+        </attvalues>
+    </edge>
+<edge id="23" source="ys_guo_feng" target="ys_peng_yong" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="工作关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="郭峰任区委副书记、区长，在彭勇领导下工作 (2024-)"/>
+        </attvalues>
+    </edge>
+<edge id="24" source="ys_guo_feng" target="ys_jian_huafeng" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="职位接替"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="郭峰接替简华锋任渝水区长 (2024)"/>
+        </attvalues>
+    </edge>
+<edge id="25" source="ys_fu_qian" target="ys_guo_feng" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="工作关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="傅倩任常务副区长，协助郭峰主持区政府日常工作 (2024-)"/>
+        </attvalues>
+    </edge>
+<edge id="26" source="ys_gong_xiaohua" target="ys_guo_feng" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="工作关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="龚小华任区委常委、副区长，协助区长工作 (2024-)"/>
+        </attvalues>
+    </edge>
+<edge id="27" source="ys_fu_qian" target="ys_gong_xiaohua" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="同事关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="同为渝水区委常委、区政府副职领导 (2024-)"/>
+        </attvalues>
+    </edge>
+<edge id="28" source="ys_peng_yong" target="xy_liao_liangsheng" weight="1.0">
+        <attvalues>
+            <attvalue for="type" value="间接关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="彭勇任渝水区委书记，廖良生为新余市委常委/常务副市长，合作关系 (2025-)"/>
+        </attvalues>
+    </edge>
+<edge id="29" source="ys_guo_feng" target="xy_fang_xiangjun" weight="2.0">
+        <attvalues>
+            <attvalue for="type" value="隶属关系"/>
+            <attvalue for="start" value=""/>
+            <attvalue for="end" value=""/>
+            <attvalue for="context" value="郭峰任渝水区长，受新余市委市政府领导 (2024-)"/>
+        </attvalues>
+    </edge>
+</edges>
+</graph></gexf>

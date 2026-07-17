@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衡阳市领导班子 · 工作关系网络</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+  body {
+    background: #0D0D0D;
+    color: #E8E0D0;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  /* ── Typography ── */
+  h1, h2, h3, h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+  h1 { font-size: 2rem; }
+  h2 {
+    font-size: 1.25rem;
+    color: #E03C31;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  h2::before {
+    content: '';
+    display: inline-block;
+    width: 0.25rem;
+    height: 1.1em;
+    background: #E03C31;
+    flex-shrink: 0;
+  }
+  h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  a { color: #C9A94E; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid #333;
+    margin-bottom: 2rem;
+  }
+  .header__meta {
+    display: flex;
+    gap: 0.5rem 2rem;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .header__meta span { display: flex; align-items: center; gap: 0.3rem; }
+  .header__meta em { color: #C9A94E; font-style: normal; }
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+  }
+  .header h1 small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0.06em;
+    margin-top: 0.5rem;
+  }
+
+  /* ── Stats Bar ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #222;
+    margin-bottom: 2rem;
+    border: 1px solid #222;
+  }
+  .stats__item {
+    background: #141414;
+    padding: 1.25rem 0.75rem;
+    text-align: center;
+  }
+  .stats__num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #E03C31;
+    line-height: 1.2;
+  }
+  .stats__label {
+    font-size: 0.72rem;
+    color: #888;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Person Card Grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1px;
+    background: #222;
+    border: 1px solid #222;
+    margin-bottom: 2rem;
+  }
+  .card {
+    background: #141414;
+    padding: 1rem 1rem 1rem;
+    transition: background 0.2s;
+  }
+  .card:hover { background: #1a1a1a; }
+  .card__name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+  .card__role {
+    font-size: 0.78rem;
+    color: #C9A94E;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+  .card__detail {
+    font-size: 0.72rem;
+    color: #888;
+    line-height: 1.5;
+  }
+  .card__badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    border: 1px solid #444;
+    color: #aaa;
+    margin-top: 0.3rem;
+    letter-spacing: 0.04em;
+  }
+  .card__badge--key { border-color: #E03C31; color: #E03C31; }
+  .card__badge--gold { border-color: #C9A94E; color: #C9A94E; }
+
+  /* ── Timeline ── */
+  .timeline { margin-bottom: 2rem; }
+  .timeline__item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    position: relative;
+  }
+  .timeline__item::before {
+    content: '';
+    position: absolute;
+    left: 0.35rem;
+    top: 1.2rem;
+    bottom: 0;
+    width: 1px;
+    background: #333;
+  }
+  .timeline__item:last-child::before { display: none; }
+  .timeline__year {
+    flex: 0 0 5rem;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #E03C31;
+    padding-top: 0.1rem;
+  }
+  .timeline__body { flex: 1; }
+  .timeline__title {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .timeline__desc {
+    font-size: 0.78rem;
+    color: #888;
+    line-height: 1.4;
+  }
+
+  /* ── Chain (succession) ── */
+  .chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 0.25rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: #141414;
+    border: 1px solid #333;
+  }
+  .chain__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .chain__node {
+    padding: 0.3rem 0.6rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    font-size: 0.78rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .chain__node strong { display: block; font-size: 0.85rem; }
+  .chain__node small {
+    display: block;
+    font-size: 0.6rem;
+    color: #888;
+  }
+  .chain__arrow { color: #555; font-size: 0.75rem; }
+  .chain__node--current { border-color: #E03C31; }
+  .chain__node--current strong { color: #E03C31; }
+
+  /* ── Insights Panel ── */
+  .insights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #222;
+    border: 1px solid #222;
+    margin-bottom: 2rem;
+  }
+  .insight {
+    background: #141414;
+    padding: 1.25rem;
+  }
+  .insight__num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.7rem;
+    color: #E03C31;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+  }
+  .insight__title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  .insight__text {
+    font-size: 0.78rem;
+    color: #999;
+    line-height: 1.5;
+  }
+
+  /* ── Table ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border: 1px solid #222;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+  }
+  thead { background: #141414; }
+  th {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #C9A94E;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #1a1a1a;
+    color: #bbb;
+  }
+  tr:hover td { background: #1a1a1a; }
+  td.tbd { color: #555; font-style: italic; font-family: 'Noto Serif SC', serif; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #222;
+    font-size: 0.7rem;
+    color: #555;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .container { padding: 1rem; }
+    .header h1 { font-size: 1.4rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .insights { grid-template-columns: 1fr; }
+    .chain { flex-direction: column; align-items: stretch; }
+    .chain__arrow { transform: rotate(90deg); text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="header__meta">
+      <span>📅 2026-07-14</span>
+      <span>⚑ 湖南省·衡阳市</span>
+      <span><em>CLASSIFIED</em> · 内部参考</span>
+    </div>
+    <h1>衡阳市领导班子<br>工作关系网络<small>Hengyang City Political Personnel Network · Intelligence Briefing</small></h1>
+  </div>
+
+  <!-- ═══ STATS ═══ -->
+  <div class="stats">
+    <div class="stats__item">
+      <div class="stats__num">34</div>
+      <div class="stats__label">人物</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num">28</div>
+      <div class="stats__label">机构</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num">11</div>
+      <div class="stats__label">任职记录</div>
+    </div>
+    <div class="stats__item">
+      <div class="stats__num">7</div>
+      <div class="stats__label">关系链</div>
+    </div>
+  </div>
+
+  <!-- ═══ PERSON CARDS ═══ -->
+  <h2>核心人物</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card__name">朱健</div>
+      <div class="card__role">衡阳市委书记 <span class="card__badge card__badge--key">现任</span></div>
+      <div class="card__detail">1975.07 · 江苏江阴<br>上海交大博士</div>
+      <span class="card__badge card__badge--gold">市委</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">刘中杰</div>
+      <div class="card__role">衡阳市市长 <span class="card__badge card__badge--key">现任</span></div>
+      <div class="card__detail">1973.09 · 安徽无为<br>履历待查</div>
+      <span class="card__badge card__badge--gold">市政府</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">刘正兴</div>
+      <div class="card__role">市人大常委会主任 <span class="card__badge card__badge--key">现任</span></div>
+      <div class="card__detail">1967.09 · 湖南祁东</div>
+      <span class="card__badge">人大</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">吴曙光</div>
+      <div class="card__role">市政协主席 <span class="card__badge card__badge--key">现任</span></div>
+      <div class="card__detail">1968.02</div>
+      <span class="card__badge">政协</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">刘越高</div>
+      <div class="card__role">前任衡阳市委书记</div>
+      <div class="card__detail">2023—2025 · 去向待查</div>
+      <span class="card__badge">待查</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">秦国文</div>
+      <div class="card__role">前任衡阳市委书记</div>
+      <div class="card__detail">2021—2022 · 现任湖南省副省长</div>
+      <span class="card__badge card__badge--gold">省领导</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">邓群策</div>
+      <div class="card__role">前任衡阳市委书记/市长</div>
+      <div class="card__detail">1964.05 · 湖南祁阳 · 去向待查</div>
+      <span class="card__badge">待查</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">郑建新</div>
+      <div class="card__role">前任衡阳/长沙市委书记</div>
+      <div class="card__detail">1968.12 · 贵州贵阳 · 被调查</div>
+      <span class="card__badge">被查</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">周农</div>
+      <div class="card__role">前任衡阳市委书记</div>
+      <div class="card__detail">1962.08 · 湖南益阳<br>现任省人大常委会副主任</div>
+      <span class="card__badge card__badge--gold">省领导</span>
+    </div>
+
+    <div class="card">
+      <div class="card__name">李亿龙</div>
+      <div class="card__role">前任衡阳市委书记</div>
+      <div class="card__detail">1958.10 · 湖南长沙 · 已被判刑</div>
+      <span class="card__badge">已判刑</span>
+    </div>
+
+    <div class="card" style="opacity:0.5">
+      <div class="card__name">珠晖区 ❖ 区委书记</div>
+      <div class="card__role">【待查】</div>
+      <div class="card__detail">5市辖区 · 5县 · 2县级市 · 24个职位全部待查</div>
+      <span class="card__badge">待查</span>
+    </div>
+
+    <div class="card" style="opacity:0.5">
+      <div class="card__name">雁峰区 ❖ 区委书记</div>
+      <div class="card__role">【待查】</div>
+      <div class="card__detail">百度百科屏蔽 · 政府网站404</div>
+      <span class="card__badge">待查</span>
+    </div>
+
+  </div>
+
+  <!-- ═══ TIMELINE ═══ -->
+  <h2>朱健 · 职业生涯</h2>
+  <div class="timeline">
+
+    <div class="timeline__item">
+      <div class="timeline__year">1993—1997</div>
+      <div class="timeline__body">
+        <div class="timeline__title">上海交通大学 · 本科</div>
+        <div class="timeline__desc">动力机械工程系热能动力机械与装置专业 · 工学学士</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">1997—2001</div>
+      <div class="timeline__body">
+        <div class="timeline__title">上海交通大学 · 硕博连读</div>
+        <div class="timeline__desc">法学硕士 · 管理学博士</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">1997—2013</div>
+      <div class="timeline__body">
+        <div class="timeline__title">上海交通大学 · 任教</div>
+        <div class="timeline__desc">16年高校工作 · 从教师逐步晋升至高教管理岗</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">2013—2017</div>
+      <div class="timeline__body">
+        <div class="timeline__title">上海交通大学党委副书记</div>
+        <div class="timeline__desc">副厅级高校领导</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">2017—2019</div>
+      <div class="timeline__body">
+        <div class="timeline__title">怀化市委常委、副市长（挂职）</div>
+        <div class="timeline__desc">高校→地方：首次进入政界 · 省内挂职</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">2019—2020</div>
+      <div class="timeline__body">
+        <div class="timeline__title">长沙市委副书记</div>
+        <div class="timeline__desc">省会城市副书记 · 市委党校校长</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">2020—2025</div>
+      <div class="timeline__body">
+        <div class="timeline__title">衡阳市市长</div>
+        <div class="timeline__desc">5年市长生涯 · 从代市长到正式当选</div>
+      </div>
+    </div>
+
+    <div class="timeline__item">
+      <div class="timeline__year">2025.11—</div>
+      <div class="timeline__body">
+        <div class="timeline__title">衡阳市委书记</div>
+        <div class="timeline__desc">现任 · 地市级一把手</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ SUCCESSION CHAIN ═══ -->
+  <h2>市委书记接力链 · 2014—2026</h2>
+  <div class="chain">
+    <div class="chain__link">
+      <div class="chain__node">
+        <strong>李亿龙</strong>
+        <small>2014—2016</small>
+        <small style="color:#E03C31;">被判刑</small>
+      </div>
+      <span class="chain__arrow">→</span>
+    </div>
+    <div class="chain__link">
+      <div class="chain__node">
+        <strong>周农</strong>
+        <small>2016—2018</small>
+        <small style="color:#C9A94E;">省人大副主任</small>
+      </div>
+      <span class="chain__arrow">→</span>
+    </div>
+    <div class="chain__link">
+      <div class="chain__node">
+        <strong>郑建新</strong>
+        <small>2018—2020</small>
+        <small style="color:#E03C31;">被调查</small>
+      </div>
+      <span class="chain__arrow">→</span>
+    </div>
+    <div class="chain__link">
+      <div class="chain__node">
+        <strong>邓群策</strong>
+        <small>2020—2021</small>
+        <small>待查</small>
+      </div>
+      <span class="chain__arrow">→</span>
+    </div>
+    <div class="chain__link">
+      <div class="chain__node">
+        <strong>秦国文</strong>
+        <small>2021—2022</small>
+        <small style="color:#C9A94E;">副省长</small>
+      </div>
+      <span class="chain__arrow">→</span>
+    </div>
+    <div class="chain__link">
+      <div class="chain__node">
+        <strong>刘越高</strong>
+        <small>2023—2025</small>
+        <small>待查</small>
+      </div>
+      <span class="chain__arrow">→</span>
+    </div>
+    <div class="chain__link">
+      <div class="chain__node chain__node--current">
+        <strong>朱健</strong>
+        <small>2025.11—今</small>
+        <small style="color:#E03C31;">现任</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ COUNTY TABLE ═══ -->
+  <h2>县级领导班子 · 24个职位</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>县市区</th>
+          <th>类型</th>
+          <th>书记</th>
+          <th>县/区长</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>珠晖区</td><td>市辖区</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>雁峰区</td><td>市辖区</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>石鼓区</td><td>市辖区</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>蒸湘区</td><td>市辖区</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>南岳区</td><td>市辖区</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>衡阳县</td><td>县</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>衡南县</td><td>县</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>衡山县</td><td>县</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>衡东县</td><td>县</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>祁东县</td><td>县</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>耒阳市</td><td>县级市</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+        <tr><td>常宁市</td><td>县级市</td><td class="tbd">待查</td><td class="tbd">待查</td><td>🔴</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══ INSIGHTS ═══ -->
+  <h2>关键洞察</h2>
+  <div class="insights">
+
+    <div class="insight">
+      <div class="insight__num">01</div>
+      <div class="insight__title">高校出身书记</div>
+      <div class="insight__text">朱健是典型的「高校→地方」干部——上海交大17年→怀化挂职→长沙副书记→衡阳市长→书记。这种学而优则仕的路径在湖南十分常见（沈晓明、毛伟明均出自高校）。</div>
+    </div>
+
+    <div class="insight">
+      <div class="insight__num">02</div>
+      <div class="insight__title">空降市长</div>
+      <div class="insight__text">刘中杰（安徽无为）为异地任职市长，非衡阳本土成长，表明省委对该市人事安排引入了外部力量制衡。</div>
+    </div>
+
+    <div class="insight">
+      <div class="insight__num">03</div>
+      <div class="insight__title">书记频换（12年7任）</div>
+      <div class="insight__text">2014年以来衡阳更换7任市委书记，平均不到2年一换，频率异常高。李亿龙被判刑、郑建新被调查，显示曾存在严峻政治生态问题。</div>
+    </div>
+
+    <div class="insight">
+      <div class="insight__num">04</div>
+      <div class="insight__title">祁东出干部</div>
+      <div class="insight__text">市人大常委会主任刘正兴为衡阳下辖祁东县人。祁东县可能为衡阳干部体系中重要的输出地和文化纽带。</div>
+    </div>
+
+  </div>
+
+  <!-- ═══ GAPS ═══ -->
+  <h2>信息缺口</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>优先级</th><th>缺口描述</th><th>涉及人数</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="color:#E03C31;">⭐⭐⭐⭐⭐</td><td>12个县市区24名党政正职基本信息</td><td>24人</td></tr>
+        <tr><td style="color:#E03C31;">⭐⭐⭐⭐⭐</td><td>市长刘中杰完整履历</td><td>1人</td></tr>
+        <tr><td style="color:#E03C31;">⭐⭐⭐⭐⭐</td><td>前任书记刘越高去向及履历</td><td>1人</td></tr>
+        <tr><td>⭐⭐⭐⭐</td><td>全体市委常委（~11人）姓名及分工</td><td>~11人</td></tr>
+        <tr><td>⭐⭐⭐⭐</td><td>全体副市长（~7人）姓名及分工</td><td>~7人</td></tr>
+        <tr><td>⭐⭐⭐</td><td>邓群策卸任后去向</td><td>1人</td></tr>
+        <tr><td>⭐⭐⭐</td><td>县市区副书记/常委/副县区长团队</td><td>~120+人</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <p>数据来源：维基百科（中文） · 市领导信息已确认 · 县级领导信息全部待查</p>
+    <p>数据库：<code>data/database/hengyang_network.db</code> · 图形文件：<code>data/graph/hengyang_network.gexf</code></p>
+    <p style="margin-top:0.5rem;">Generated 2026-07-14 · 衡阳市领导班子工作关系网络调查报告</p>
+  </div>
+
+</div>
+</body>
+</html>

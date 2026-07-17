@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岳阳市 领导班子关系网络 · 交互图</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d0d0d; color: #e8e0d0; font-family: 'Inter', sans-serif; }
+  #mynetwork { width: 100%; height: calc(100vh - 120px); border-top: 1px solid #2a2a2a; }
+  .header {
+    padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .header h1 { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 700; }
+  .header .sub { font-size: 0.7rem; color: #8a8478; margin-top: 0.2rem; }
+  .header .links { display: flex; gap: 1rem; }
+  .header .links a { color: #C9A94E; font-size: 0.75rem; text-decoration: none; }
+  .header .links a:hover { text-decoration: underline; }
+  .legend {
+    display: flex; gap: 1.5rem; padding: 0.5rem 1.5rem;
+    font-size: 0.7rem; color: #8a8478;
+    border-bottom: 1px solid #2a2a2a;
+    flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; }
+  .legend-color { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #2a2a2a; }
+  .legend-line { width: 20px; height: 2px; border-radius: 0; }
+  .legend-box { width: 12px; height: 12px; border: 1px solid #2a2a2a; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>岳阳市领导班子工作关系网络</h1>
+    <div class="sub">湖南省 · 岳阳市 · 交互式关系图 · 点击节点查看详情</div>
+  </div>
+  <div class="links">
+    <a href="20260714-岳阳市-领导班子.html">← 返回简报</a>
+    <a href="20260714-岳阳市-领导班子.md">Markdown报告</a>
+  </div>
+</div>
+<div class="legend">
+  <span class="legend-item"><span class="legend-color" style="background:#E03C31;"></span> 党委一把手</span>
+  <span class="legend-item"><span class="legend-color" style="background:#4a7fc7;"></span> 政府主官</span>
+  <span class="legend-item"><span class="legend-color" style="background:#5a7a9a;"></span> 人大/政协</span>
+  <span class="legend-item"><span class="legend-color" style="background:#6a6a6a;"></span> 其他</span>
+  <span class="legend-item"><span class="legend-box" style="background:rgba(200,200,255,0.15);border-color:rgba(200,200,255,0.4);"></span> 机构</span>
+  <span class="legend-item"><span class="legend-line" style="background:#C9A94E;"></span> 党政搭档/职务接替</span>
+  <span class="legend-item"><span class="legend-line" style="background:rgba(100,150,200,0.6);"></span> 同乡/其他关系</span>
+  <span class="legend-item"><span class="legend-line" style="background:rgba(180,180,180,0.4);"></span> 任职关系</span>
+</div>
+<div id="mynetwork"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<script>
+  // ── Yueyang Data ──────────────────────────────────────────────────
+  var yueyang = {
+    orgPrefix: "yy",
+    persons: [
+      // City-level
+      {id:1,name:"谢卫江",post:"湖南省委副书记、岳阳市委书记",birth:"1973.01",birthplace:"河南扶沟"},
+      {id:2,name:"李挚",post:"岳阳市人民政府市长",birth:"1969.01",birthplace:"湖南浏阳"},
+      {id:3,name:"曹普华",post:"湖南省委副秘书长（原岳阳书记）",birth:"1966.09",birthplace:"湖南衡山"},
+      {id:4,name:"马娜",post:"岳阳市人大主任",birth:"1969.03",birthplace:"湖南临澧",gender:"女"},
+      {id:5,name:"汪涛",post:"岳阳市政协主席",birth:"1968.01",birthplace:"湖南湘阴"},
+      // Districts
+      {id:6,name:"曾平原",post:"岳阳楼区委书记",birth:"1971.09",birthplace:"湖南"},
+      {id:7,name:"杨钦涵",post:"岳阳楼区委副书记、代区长",birth:"1983.02",birthplace:"湖南"},
+      {id:8,name:"蒋春艳",post:"云溪区委书记、区长",birth:"1980.04",birthplace:"湖北随州",gender:"女"},
+      {id:9,name:"雷欣",post:"君山区委书记",birth:"—",birthplace:"湖南",gender:"女"},
+      {id:10,name:"陈淼",post:"君山区区长",birth:"—",birthplace:"湖南"},
+      // Counties
+      {id:11,name:"肖湘晖",post:"岳阳县委书记",birth:"1974.05",birthplace:"湖南洞口"},
+      {id:12,name:"吴光文",post:"岳阳县县长",birth:"1974.01",birthplace:"湖南汨罗"},
+      {id:13,name:"陶伟军",post:"华容县委书记",birth:"1970.10",birthplace:"湖南宁乡"},
+      {id:14,name:"周鹏",post:"华容县县长",birth:"1978.01",birthplace:"湖南湘阴"},
+      {id:15,name:"刘世奇",post:"湘阴县委书记、县长",birth:"1980.10",birthplace:"河南郾城"},
+      {id:16,name:"李勇",post:"平江县委书记",birth:"1969.03",birthplace:"湖南汨罗"},
+      {id:17,name:"彭方建",post:"平江县县长",birth:"1970.11",birthplace:"湖南汨罗"},
+      // County-level cities
+      {id:18,name:"王文华",post:"临湘市委书记",birth:"1969.01",birthplace:"湖南华容"},
+      {id:19,name:"刘琦",post:"临湘市市长",birth:"1969.10",birthplace:"湖南"},
+      {id:20,name:"朱平波",post:"汨罗市委书记",birth:"—",birthplace:"湖南"},
+      {id:21,name:"林恒求",post:"汨罗市市长",birth:"—",birthplace:"湖南"},
+    ],
+    orgs: [
+      "中共岳阳市委员会",
+      "岳阳市人民政府",
+      "岳阳市人大常委会",
+      "政协岳阳市委员会",
+      "中共湖南省委办公厅",
+      "岳阳楼区",
+      "云溪区",
+      "君山区",
+      "岳阳县",
+      "华容县",
+      "湘阴县",
+      "平江县",
+      "临湘市",
+      "汨罗市",
+    ],
+    edges: [
+      [1,2,"党政搭档","2023.12—至今"],
+      [1,3,"职务接替","曹普华→谢卫江"],
+      [1,4,"党政搭档","2023.12—至今"],
+      [1,5,"党政搭档","2023.12—至今"],
+      [16,12,"同乡(汨罗)","同籍汨罗"],
+      [16,17,"党政搭档","平江书记+县长"],
+      [11,12,"党政搭档","岳阳县委书记+县长"],
+      [13,14,"党政搭档","华容书记+县长"],
+      [18,19,"党政搭档","临湘书记+市长"],
+      [20,21,"党政搭档","汨罗书记+市长"],
+      [15,15,"一肩挑","湘阴书记兼县长"],
+      [8,8,"一肩挑","云溪书记兼区长"],
+    ]
+  };
+
+  // ── Build Network ─────────────────────────────────────────────────
+  var nodes = new vis.DataSet([]);
+  var edges = new vis.DataSet([]);
+  var nameBirthMap = {};
+  var nodeIdMap = {};
+
+  function getColor(post) {
+    if ((post.includes("书记") && !post.includes("副书记")) || post.includes("区长") || post.includes("县长")) return {bg:"#E03C31",border:"#8a1a1a"};
+    if (post.includes("市长") && !post.includes("副")) return {bg:"#4a7fc7",border:"#2a4f7a"};
+    if (post.includes("人大")) return {bg:"#5a7a9a",border:"#3a5a7a"};
+    if (post.includes("政协")) return {bg:"#7a5a9a",border:"#4a3a6a"};
+    return {bg:"#6a6a6a",border:"#3a3a3a"};
+  }
+
+  function getLabel(p) {
+    var l = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "湖南") l += "\n" + p.birthplace;
+    return l;
+  }
+
+  function getSize(post) {
+    if (post.includes("市委") && post.includes("书记") && !post.includes("副")) return 28;
+    if (post.includes("市长") && !post.includes("副")) return 25;
+    if (post.includes("书记") || post.includes("县长") || post.includes("区长")) return 22;
+    return 18;
+  }
+
+  var ds = yueyang;
+  ds.persons.forEach(function(p) {
+    var id = "p" + p.id;
+    var key = p.name;
+    if (nameBirthMap[key]) return;
+    var c = getColor(p.post);
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    nodes.add({
+      id: id,
+      label: getLabel(p),
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—"),
+      color: {background:c.bg, border:c.border},
+      size: getSize(p.post),
+      shape: "dot",
+      font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"},
+      borderWidth: 1,
+    });
+  });
+
+  ds.orgs.forEach(function(o, idx) {
+    var id = "o" + (idx + 1);
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id,
+      label: o,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10,
+      shape: "box",
+      font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  });
+
+  // person→org edges
+  var orgMap = {
+    1: "o1", 2: "o2", 3: "o5", 4: "o3", 5: "o4",
+    6: "o6", 7: "o6", 8: "o7", 9: "o8", 10: "o8",
+    11: "o9", 12: "o9", 13: "o10", 14: "o10", 15: "o11",
+    16: "o12", 17: "o12", 18: "o13", 19: "o13", 20: "o14", 21: "o14"
+  };
+  ds.persons.forEach(function(p) {
+    var pid = "p" + p.id;
+    var oid = orgMap[p.id];
+    if (oid) {
+      edges.add({
+        from: pid, to: oid,
+        color: {color:"rgba(180,180,180,0.4)"},
+        width: 1,
+        dashes: true,
+        font: {color:"#8a8478", size:7, strokeWidth:0},
+      });
+    }
+  });
+
+  // person↔person edges
+  ds.edges.forEach(function(e) {
+    var from = "p" + e[0];
+    var to = "p" + e[1];
+    var isStrong = (e[2] === "党政搭档" || e[2] === "职务接替");
+    var isOneShoulder = (e[2] === "一肩挑");
+    edges.add({
+      from: from,
+      to: to,
+      label: e[2],
+      title: e[3] || "",
+      color: isStrong ? {color:"#C9A94E", opacity:0.7} : (isOneShoulder ? {color:"#E03C31", opacity:0.5} : {color:"rgba(100,150,200,0.6)"}),
+      width: isStrong ? 3 : (isOneShoulder ? 2 : 1.5),
+      dashes: isOneShoulder,
+      font: {color: isStrong ? "#C9A94E" : "#8a8478", size:8, strokeWidth:0, face:"Inter", align:"middle"},
+    });
+  });
+
+  // ── Render ────────────────────────────────────────────────────────
+  var container = document.getElementById('mynetwork');
+  var data = { nodes: nodes, edges: edges };
+  var options = {
+    physics: {
+      solver: "forceAtlas2Based",
+      forceAtlas2Based: {
+        gravitationalConstant: -60,
+        centralGravity: 0.005,
+        springConstant: 0.02,
+        springLength: 250,
+        damping: 0.4,
+      },
+      stabilization: { iterations: 300 },
+    },
+    interaction: {
+      hover: true,
+      tooltipDelay: 100,
+      navigationButtons: true,
+    },
+    edges: {
+      smooth: { type: "curvedCW", roundness: 0.15 },
+    },
+    nodes: {
+      borderWidth: 1,
+      borderWidthSelected: 2,
+    },
+  };
+  var network = new vis.Network(container, data, options);
+
+  network.on("stabilizationIterationsDone", function() {
+    network.fit({ animation: true });
+  });
+
+  console.log("✅ Yueyang graph rendered: " + nodes.length + " nodes, " + edges.length + " edges");
+</script>
+</body>
+</html>

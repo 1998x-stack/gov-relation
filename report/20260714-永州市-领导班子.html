@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>永州市领导班子工作关系网络 · 调查简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #e8e0d0; font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  /* HEADER */
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 1px solid #1a1a1a; margin-bottom: 2rem; }
+  .header .badge { display: inline-block; border: 1px solid #E03C31; color: #E03C31; font-size: 0.65rem; letter-spacing: 0.15em; padding: 0.25rem 0.7rem; font-weight: 500; margin-bottom: 1rem; }
+  .header h1 { font-family: 'Noto Serif SC', serif; font-size: 1.8rem; font-weight: 700; color: #f0e8d8; letter-spacing: 0.05em; }
+  .header .sub { color: #7a7468; font-size: 0.85rem; margin-top: 0.5rem; }
+  .header .sub span { color: #C9A94E; }
+
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+  .stat-card { border: 1px solid #1a1a1a; padding: 1.2rem; text-align: center; background: #0e0e0e; }
+  .stat-card .num { font-family: 'Noto Serif SC', serif; font-size: 1.8rem; font-weight: 700; color: #f0e8d8; }
+  .stat-card .num span.accent { color: #E03C31; }
+  .stat-card .label { font-size: 0.7rem; color: #7a7468; margin-top: 0.3rem; letter-spacing: 0.05em; }
+
+  /* SECTION TITLE */
+  .section-title { font-family: 'Noto Serif SC', serif; font-size: 1.1rem; font-weight: 600; color: #E03C31; border-left: 3px solid #E03C31; padding-left: 0.7rem; margin-bottom: 1.2rem; }
+
+  /* PERSON CARD GRID */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+  .card { border: 1px solid #1a1a1a; background: #0e0e0e; padding: 1rem; }
+  .card .name-row { display: flex; justify-content: space-between; align-items: baseline; }
+  .card .name { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 600; color: #f0e8d8; }
+  .card .role { font-size: 0.7rem; padding: 0.15rem 0.5rem; border: 1px solid; font-weight: 500; }
+  .card .role.red { color: #E03C31; border-color: #E03C31; }
+  .card .role.blue { color: #4a7fc7; border-color: #4a7fc7; }
+  .card .role.green { color: #3a9a5a; border-color: #3a9a5a; }
+  .card .role.orange { color: #C9A94E; border-color: #C9A94E; }
+  .card .role.grey { color: #6a6a6a; border-color: #6a6a6a; }
+  .card .meta { margin-top: 0.5rem; font-size: 0.78rem; color: #8a8478; }
+  .card .meta span { display: inline-block; margin-right: 0.8rem; }
+  .card .meta strong { color: #b0a898; }
+  .card .badge-group { margin-top: 0.5rem; display: flex; gap: 0.3rem; flex-wrap: wrap; }
+  .card .badge-tag { font-size: 0.6rem; padding: 0.1rem 0.4rem; border: 1px solid #2a2a2a; color: #7a7468; }
+
+  /* TIMELINE */
+  .timeline-section { margin-bottom: 2.5rem; }
+  .timeline { position: relative; padding-left: 2rem; border-left: 1px solid #2a2a2a; margin-left: 0.5rem; }
+  .timeline-item { position: relative; margin-bottom: 1rem; padding-bottom: 0.5rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -2.1rem; top: 0.4rem; width: 8px; height: 8px; border-radius: 50%; background: #E03C31; }
+  .timeline-item .date { font-size: 0.7rem; color: #7a7468; }
+  .timeline-item .event { font-size: 0.85rem; color: #d0c8b8; }
+
+  /* TABLE */
+  .data-table { width: 100%; border-collapse: collapse; margin-bottom: 2.5rem; font-size: 0.75rem; }
+  .data-table th { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #2a2a2a; color: #7a7468; font-weight: 500; font-size: 0.65rem; letter-spacing: 0.05em; }
+  .data-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #151515; }
+  .data-table tr:hover td { background: #111; }
+  .data-table .status-ok { color: #3a9a5a; }
+  .data-table .status-missing { color: #7a5a3a; }
+
+  /* INSIGHT */
+  .insight-panel { border: 1px solid #1a1a1a; background: #0e0e0e; padding: 1.2rem; margin-bottom: 2.5rem; }
+  .insight-panel h3 { font-family: 'Noto Serif SC', serif; font-size: 0.85rem; color: #C9A94E; margin-bottom: 0.8rem; }
+  .insight-panel ul { list-style: none; }
+  .insight-panel li { padding: 0.35rem 0; font-size: 0.8rem; color: #b0a898; border-bottom: 1px solid #121212; }
+  .insight-panel li:last-child { border: none; }
+  .insight-panel li::before { content: '◆ '; color: #E03C31; font-size: 0.5rem; }
+
+  .source-list { font-size: 0.7rem; color: #6a6458; }
+  .source-list a { color: #5a7a9a; }
+
+  @media (max-width: 768px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="badge">HUNAN · YONGZHOU</div>
+  <h1>永州市领导班子<br>工作关系网络</h1>
+  <div class="sub">调查日期 2026.07.14 · 数据来源 <span>维基百科</span></div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="num"><span class="accent">20</span>/22</div>
+    <div class="label">已确认正职</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">15</div>
+    <div class="label">机构</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">25</div>
+    <div class="label">任职关系</div>
+  </div>
+  <div class="stat-card">
+    <div class="num">2</div>
+    <div class="label">空缺待补</div>
+  </div>
+</div>
+
+<div class="section-title">市级领导班子</div>
+<div class="card-grid">
+  <div class="card">
+    <div class="name-row">
+      <span class="name">陈爱林</span>
+      <span class="role red">市委书记</span>
+    </div>
+    <div class="meta">
+      <span><strong>出生</strong> 1970.5</span>
+      <span><strong>籍贯</strong> 湖北浠水</span>
+    </div>
+    <div class="meta">2026.5 由市长升任书记 · 经济学博士</div>
+    <div class="badge-group">
+      <span class="badge-tag">中组部出身</span>
+      <span class="badge-tag">跨省交流</span>
+      <span class="badge-tag">2026履新</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="name-row">
+      <span class="name">（空缺）</span>
+      <span class="role blue">市长</span>
+    </div>
+    <div class="meta">陈爱林升任书记后，市长职位空缺</div>
+    <div class="badge-group">
+      <span class="badge-tag">待补</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="name-row">
+      <span class="name">蒋强先</span>
+      <span class="role green">人大主任</span>
+    </div>
+    <div class="meta">
+      <span><strong>出生</strong> 1969.1</span>
+      <span><strong>籍贯</strong> 湖南南县</span>
+    </div>
+    <div class="meta">2023.12 任职</div>
+  </div>
+  <div class="card">
+    <div class="name-row">
+      <span class="name">谢景林</span>
+      <span class="role orange">政协主席</span>
+    </div>
+    <div class="meta">
+      <span><strong>出生</strong> 1966.4</span>
+      <span><strong>籍贯</strong> 湖南新田</span>
+    </div>
+    <div class="meta">2022.1 任职</div>
+  </div>
+</div>
+
+<div class="section-title">县市区正职一览</div>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>行政区</th>
+      <th>书记</th>
+      <th>出生</th>
+      <th>县长/市长</th>
+      <th>出生</th>
+      <th>状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>零陵区</td><td>（待查）</td><td>—</td><td>（待查）</td><td>—</td><td class="status-missing">⚠ 待查</td></tr>
+    <tr><td>冷水滩区</td><td>（待查）</td><td>—</td><td>（待查）</td><td>—</td><td class="status-missing">⚠ 待查</td></tr>
+    <tr><td>东安县</td><td>唐何</td><td>1977.10</td><td>蒋华</td><td>1980.10</td><td class="status-ok">确认</td></tr>
+    <tr><td>双牌县</td><td>张跃斌</td><td>1975.10</td><td>蔡富强</td><td>1975.3</td><td class="status-ok">确认</td></tr>
+    <tr><td>道县</td><td>唐超学</td><td>1980.8</td><td>刘华中</td><td>1976.11</td><td class="status-ok">确认</td></tr>
+    <tr><td>江永县</td><td>唐德荣</td><td>1972.12</td><td>何德波</td><td>1976.12</td><td class="status-ok">确认</td></tr>
+    <tr><td>宁远县</td><td>胡勇刚</td><td>1969.8</td><td>毛政</td><td>1976.11</td><td class="status-ok">确认</td></tr>
+    <tr><td>蓝山县</td><td>邓群（女）</td><td>1975.1</td><td>曾艺</td><td>1982.8</td><td class="status-ok">确认</td></tr>
+    <tr><td>新田县</td><td>陈雄</td><td>1978.6</td><td>黄永英</td><td>1973.6</td><td class="status-ok">确认</td></tr>
+    <tr><td>江华县</td><td>段贵建</td><td>1971.12</td><td>吴军臣</td><td>1978.12</td><td class="status-ok">确认</td></tr>
+    <tr><td>祁阳市</td><td>蒋崇华</td><td>1968.3</td><td>向子顺</td><td>1976.8</td><td class="status-ok">确认</td></tr>
+  </tbody>
+</table>
+
+<div class="timeline-section">
+<div class="section-title">近期人事变动时间线</div>
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="date">2026.05</div>
+    <div class="event">朱洪武卸任永州市委书记（另有任用），陈爱林由市长升任书记；市长职位空缺</div>
+  </div>
+  <div class="timeline-item">
+    <div class="date">2026.01</div>
+    <div class="event">曾艺任蓝山县县长</div>
+  </div>
+  <div class="timeline-item">
+    <div class="date">2025.12</div>
+    <div class="event">邓群任蓝山县委书记</div>
+  </div>
+  <div class="timeline-item">
+    <div class="date">2025.03</div>
+    <div class="event">向子顺任祁阳市市长</div>
+  </div>
+  <div class="timeline-item">
+    <div class="date">2024.12</div>
+    <div class="event">刘华中任道县县长</div>
+  </div>
+  <div class="timeline-item">
+    <div class="date">2024.10</div>
+    <div class="event">唐超学任道县县委书记</div>
+  </div>
+  <div class="timeline-item">
+    <div class="date">2024.02</div>
+    <div class="event">陈雄任新田县委书记</div>
+  </div>
+</div>
+</div>
+
+<div class="section-title">关键洞察</div>
+<div class="insight-panel">
+  <ul>
+    <li>陈爱林走完标准的"市长扶正"路径，从市长到书记无缝衔接，确保政策连续性</li>
+    <li>市长空缺已超过两个月，是当前最值得关注的权力缺口</li>
+    <li>朱洪武去向未公布 — 这位黎族跨省干部可能调回海南或另有重用</li>
+    <li>严华从永州到邵阳，年龄58岁卸任书记，"另有任用"暗示退二线可能</li>
+    <li>县级班子整体稳定，大部分2021-2022年到位，已履职近一个任期</li>
+    <li>道县、新田、蓝山、祁阳在2024-2026年完成新老交替</li>
+    <li>双牌县出现罕见的书记县长同籍（均来自冷水滩）</li>
+    <li>陈爱林是唯一的非湘籍市委书记（湖北浠水），体现跨省交流机制</li>
+  </ul>
+</div>
+
+<div class="section-title">信息来源</div>
+<div class="source-list">
+  <p><a href="https://zh.wikipedia.org/wiki/%E6%B0%B8%E5%B7%9E%E5%B8%82">永州市 — 维基百科</a></p>
+  <p><a href="https://zh.wikipedia.org/wiki/%E9%99%88%E7%88%B1%E6%9E%97_(1970%E5%B9%B4)">陈爱林 — 维基百科</a></p>
+  <p><a href="https://zh.wikipedia.org/wiki/%E6%9C%B1%E6%B4%AA%E6%AD%A6_(1971%E5%B9%B4)">朱洪武 — 维基百科</a></p>
+  <p><a href="https://zh.wikipedia.org/wiki/%E4%B8%A5%E5%8D%8E_(1968%E5%B9%B4)">严华 — 维基百科</a></p>
+  <p><a href="https://www.yzcity.gov.cn/">永州市政府门户网站</a></p>
+</div>
+
+</div>
+</body>
+</html>

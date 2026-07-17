@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="label" title="Label" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="刘海">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委书记"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="江斌">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="代理区长"/>
+        </attvalues>
+        <viz:color r="59" g="109" b="181"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="余文军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区领导"/>
+        </attvalues>
+        <viz:color r="232" g="118" b="45"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="徐锐">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区领导"/>
+        </attvalues>
+        <viz:color r="232" g="118" b="45"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="董玉成">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委统战部长"/>
+        </attvalues>
+        <viz:color r="232" g="118" b="45"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="高翔">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="[GAP]前任书记"/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="徐华">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="[GAP]原区长"/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o101" label="珠山区委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o102" label="珠山区政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o103" label="珠山区人大常委会">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="人大"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o104" label="珠山区政协">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="政协"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o105" label="珠山区纪委监委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="纪委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o106" label="珠山区委统战部">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委部门"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o107" label="景德镇市委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o108" label="景德镇市政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o109" label="浮梁县委">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="党委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o110" label="浮梁县政府">
+        <attvalues>
+          <attvalue for="type" value="organization"/>
+          <attvalue for="role" value="政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o101">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区委书记"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="p1" target="o107">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="[GAP]此前任职单位"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="p2" target="o101">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区委副书记"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="p2" target="o102">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区政府党组书记/代理区长"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="p2" target="o108">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="[GAP]此前任职单位"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="p3" target="o101">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区领导"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="p4" target="o101">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区领导"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="p5" target="o106">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区委常委/统战部部长"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="p5" target="o101">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="区委常委"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="p6" target="o101">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="[GAP]前任书记"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="p7" target="o102">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="label" value="[GAP]原区长"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="p1" target="p2">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="党政搭档"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e13" source="p1" target="p6">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="前后任（待核实）"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e14" source="p2" target="p7">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="前后任（待核实）"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e15" source="p1" target="p5">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="上下级"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e16" source="p2" target="p5">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="同级/上下级"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e17" source="p1" target="p3">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="共事"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e18" source="p1" target="p4">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="label" value="共事"/>
+        </attvalues>
+        <viz:color r="200" g="180" b="50"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

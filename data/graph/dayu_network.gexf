@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>sisyphus-junior</creator>
+    <description>大余县领导班子工作关系网络 - 2026-07-15</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="韩相云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1974-07"/>
+          <attvalue for="2" value="江西寻乌"/>
+          <attvalue for="3" value="大余县委书记"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="曾志平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1976-05"/>
+          <attvalue for="2" value="江西赣州"/>
+          <attvalue for="3" value="大余县委副书记、县长"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共大余县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州大余"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="大余县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州大余"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="大余县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任。此前担任大余县委副书记、县长"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="大余县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任。接替韩相云任县长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="韩相云（县委书记）与曾志平（县长）为大余县党政正职搭档"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

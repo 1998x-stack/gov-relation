@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Claude Code Research Agent</creator>
+    <description>娄底市（Loudi City, Hunan）领导班子工作关系网络 — 含市级及5区县主要领导</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="birthplace" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="start" type="string"/>
+      <attribute id="3" title="end" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="曾超群">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1975-09"/>
+          <attvalue for="3" value="湖南省邵东市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/曾超群_(1975年)"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="何朝晖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="mayor"/>
+          <attvalue for="2" value="1973-04"/>
+          <attvalue for="3" value="湖南省攸县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄底市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="邹文辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1965-02"/>
+          <attvalue for="3" value="湖南省常宁市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/邹文辉"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="李定桥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1970-09"/>
+          <attvalue for="3" value="湖南省安仁县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄底市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="梁立坚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+          <attvalue for="2" value="1972-10"/>
+          <attvalue for="3" value="湖南省涟源市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄底市"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="李彦文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1971-03"/>
+          <attvalue for="3" value="湖南省涟源市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄星区"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p11" label="刘志刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="mayor"/>
+          <attvalue for="2" value="1979-10"/>
+          <attvalue for="3" value="湖南省新化县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄星区"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p12" label="陈晓林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1966-02"/>
+          <attvalue for="3" value="湖南省新化县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄星区"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="邓伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+          <attvalue for="2" value="1972-04"/>
+          <attvalue for="3" value="湖南省宁乡市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/娄星区"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p20" label="彭石清">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1967-07"/>
+          <attvalue for="3" value="湖南省娄底市娄星区"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/双峰县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p21" label="李基联">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="mayor"/>
+          <attvalue for="2" value="1975-07"/>
+          <attvalue for="3" value="湖南省溆浦县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/双峰县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p22" label="段平屏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1971-10"/>
+          <attvalue for="3" value="湖南省冷水江市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/双峰县"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p23" label="王德文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+          <attvalue for="2" value="1972-07"/>
+          <attvalue for="3" value="（待查）"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/双峰县"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p30" label="彭韬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1984-01"/>
+          <attvalue for="3" value="湖南省新化县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/新化县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p31" label="邹剑锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="mayor"/>
+          <attvalue for="2" value="1985-09"/>
+          <attvalue for="3" value="湖南省长沙县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/新化县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p32" label="杨韶红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1966-11"/>
+          <attvalue for="3" value="湖南省新化县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/新化县"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p33" label="李笃成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+          <attvalue for="2" value="1968-04"/>
+          <attvalue for="3" value="（待查）"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/新化县"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p40" label="曾伯怡">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1971-10"/>
+          <attvalue for="3" value="湖南省双峰县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/冷水江市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p41" label="陈创业">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="mayor"/>
+          <attvalue for="2" value="1973-06"/>
+          <attvalue for="3" value="湖南省新化县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/冷水江市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p42" label="孙纬辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1972-10"/>
+          <attvalue for="3" value="湖南省新化县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/冷水江市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p43" label="罗中秋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+          <attvalue for="2" value="1965-09"/>
+          <attvalue for="3" value="湖南省邵东市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/冷水江市"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p50" label="段晓赛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1975-12"/>
+          <attvalue for="3" value="湖南省耒阳市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/段晓赛"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p51" label="邓伟谋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="mayor"/>
+          <attvalue for="2" value="1976-11"/>
+          <attvalue for="3" value="湖南省双峰县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/涟源市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p52" label="梁育清">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="npc"/>
+          <attvalue for="2" value="1967-11"/>
+          <attvalue for="3" value="湖南省涟源市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/涟源市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p53" label="周惠军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="cppcc"/>
+          <attvalue for="2" value="1971-03"/>
+          <attvalue for="3" value="湖南省娄底市娄星区"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/涟源市"/>
+        </attvalues>
+        <viz:color r="100" g="180" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p60" label="林武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="party_secretary"/>
+          <attvalue for="2" value="1962-02"/>
+          <attvalue for="3" value="福建省闽侯县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/林武_(1962年)"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p61" label="李荐国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="other"/>
+          <attvalue for="2" value="1963-03"/>
+          <attvalue for="3" value="湖南省衡东县"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/李荐国"/>
+        </attvalues>
+        <viz:color r="150" g="0" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p62" label="杨懿文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="other"/>
+          <attvalue for="2" value="1966-07"/>
+          <attvalue for="3" value="湖南省汨罗市"/>
+          <attvalue for="4" value="https://zh.wikipedia.org/wiki/杨懿文"/>
+        </attvalues>
+        <viz:color r="150" g="0" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共娄底市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="娄底市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="娄底市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="娄底市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共娄星区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="娄星区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="娄星区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="娄星区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="中共双峰县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="双峰县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="双峰县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="双峰县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o30" label="中共新化县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o31" label="新化县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o32" label="新化县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o33" label="新化县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o40" label="中共冷水江市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o41" label="冷水江市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o42" label="冷水江市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o43" label="冷水江市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o50" label="中共涟源市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o51" label="涟源市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o52" label="涟源市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o53" label="涟源市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100" label="中共湖南省委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o101" label="湖南省人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="中共娄底市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共娄底市委书记"/>
+          <attvalue for="2" value="2025-04"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o2" label="娄底市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄底市人民政府市长"/>
+          <attvalue for="2" value="2021-04"/>
+          <attvalue for="3" value="2025-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="娄底市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄底市人民政府市长"/>
+          <attvalue for="2" value="2025-11"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="中共娄底市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共娄底市委书记"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value="2025-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o101" label="湖南省人大常委会环资委主任委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖南省人大常委会环资委主任委员"/>
+          <attvalue for="2" value="2025-01"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o3" label="娄底市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄底市人大常委会主任"/>
+          <attvalue for="2" value="2026-01"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o4" label="娄底市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄底市政协主席"/>
+          <attvalue for="2" value="2022-01"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p10" target="o10" label="娄星区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄星区委书记"/>
+          <attvalue for="2" value="2018-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p11" target="o11" label="娄星区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄星区长"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p12" target="o12" label="娄星区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄星区人大常委会主任"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p13" target="o13" label="娄星区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄星区政协主席"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p20" target="o20" label="双峰县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="双峰县委书记"/>
+          <attvalue for="2" value="2021-07"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p21" target="o21" label="双峰县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="双峰县长"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p22" target="o22" label="双峰县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="双峰县人大常委会主任"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p23" target="o23" label="双峰县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="双峰县政协主席"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p30" target="o30" label="新化县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="新化县委书记"/>
+          <attvalue for="2" value="2025-06"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p30" target="o31" label="新化县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="新化县人民政府县长"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="2025-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p31" target="o31" label="新化县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="新化县长"/>
+          <attvalue for="2" value="2025-12"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p32" target="o32" label="新化县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="新化县人大常委会主任"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p33" target="o33" label="新化县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="新化县政协主席"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p40" target="o40" label="冷水江市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="冷水江市委书记"/>
+          <attvalue for="2" value="2021-07"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p41" target="o41" label="冷水江市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="冷水江市长"/>
+          <attvalue for="2" value="2021-09"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p42" target="o42" label="冷水江市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="冷水江市人大常委会主任"/>
+          <attvalue for="2" value="2021-11"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p43" target="o43" label="冷水江市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="冷水江市政协主席"/>
+          <attvalue for="2" value="2018"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p50" target="o50" label="涟源市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="涟源市委书记"/>
+          <attvalue for="2" value="2025-03"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p51" target="o51" label="涟源市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="涟源市长"/>
+          <attvalue for="2" value="2021-07"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p52" target="o52" label="涟源市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="涟源市人大常委会主任"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p53" target="o53" label="涟源市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="涟源市政协主席"/>
+          <attvalue for="2" value="2021-10"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p60" target="o1" label="中共娄底市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共娄底市委书记"/>
+          <attvalue for="2" value="2008-03"/>
+          <attvalue for="3" value="2012-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p61" target="o1" label="中共娄底市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共娄底市委书记"/>
+          <attvalue for="2" value="2016-03"/>
+          <attvalue for="3" value="2019-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p62" target="o2" label="娄底市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="娄底市人民政府市长"/>
+          <attvalue for="2" value="2016-03"/>
+          <attvalue for="3" value="2021-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p1" target="p3" label="曾超群接替邹文辉任娄底市委书记" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="succession"/>
+          <attvalue for="1" value="曾超群接替邹文辉任娄底市委书记"/>
+          <attvalue for="2" value="2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p1" target="p62" label="曾超群接替杨懿文任娄底市长" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="succession"/>
+          <attvalue for="1" value="曾超群接替杨懿文任娄底市长"/>
+          <attvalue for="2" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p1" target="p3" label="曾超群任市长期间与邹文辉（书记）共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="曾超群任市长期间与邹文辉（书记）共事"/>
+          <attvalue for="2" value="2021-2025"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p1" target="p4" label="曾超群与李定桥在娄底市共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="曾超群与李定桥在娄底市共事"/>
+          <attvalue for="2" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p1" target="p5" label="曾超群与梁立坚在娄底市共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="曾超群与梁立坚在娄底市共事"/>
+          <attvalue for="2" value="2022-"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p2" target="p4" label="何朝晖与李定桥在娄底市共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="何朝晖与李定桥在娄底市共事"/>
+          <attvalue for="2" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p2" target="p5" label="何朝晖与梁立坚在娄底市共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="何朝晖与梁立坚在娄底市共事"/>
+          <attvalue for="2" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p10" target="p5" label="李彦文（涟源人）与梁立坚（涟源人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="李彦文（涟源人）与梁立坚（涟源人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p11" target="p41" label="刘志刚（新化人）与陈创业（新化人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="刘志刚（新化人）与陈创业（新化人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p11" target="p40" label="刘志刚（新化人）与曾伯怡（双峰人，曾在双峰）" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="刘志刚（新化人）与曾伯怡（双峰人，曾在双峰）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p20" target="p51" label="彭石清（娄星区人）与周惠军（娄星区人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="彭石清（娄星区人）与周惠军（娄星区人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p21" target="p40" label="李基联（溆浦人）- 曾伯怡非同一家乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="李基联（溆浦人）- 曾伯怡非同一家乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p40" target="p51" label="曾伯怡（双峰人）与邓伟谋（双峰人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="曾伯怡（双峰人）与邓伟谋（双峰人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p40" target="p20" label="曾伯怡（双峰人）与彭石清（娄星区人）同乡跨县" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="曾伯怡（双峰人）与彭石清（娄星区人）同乡跨县"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p30" target="p32" label="彭韬与杨韶红在新化县委共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="彭韬与杨韶红在新化县委共事"/>
+          <attvalue for="2" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p30" target="p11" label="彭韬（新化人）与刘志刚（新化人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="彭韬（新化人）与刘志刚（新化人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="p30" target="p41" label="彭韬（新化人）与陈创业（新化人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="彭韬（新化人）与陈创业（新化人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="p30" target="p42" label="彭韬（新化人）与孙纬辉（新化人）同乡" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="彭韬（新化人）与孙纬辉（新化人）同乡"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="p31" target="p30" label="邹剑锋任县长、彭韬任书记，党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="subordinate"/>
+          <attvalue for="1" value="邹剑锋任县长、彭韬任书记，党政搭档"/>
+          <attvalue for="2" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="p50" target="p51" label="段晓赛与邓伟谋党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="段晓赛与邓伟谋党政搭档"/>
+          <attvalue for="2" value="2025-"/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="p10" target="p51" label="李彦文（涟源人）与邓伟谋（双峰人）毗邻" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="hometown"/>
+          <attvalue for="1" value="李彦文（涟源人）与邓伟谋（双峰人）毗邻"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e53" source="p3" target="p7" label="邹文辉与段晓赛无直接交集（段2025年调任）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="colleague"/>
+          <attvalue for="1" value="邹文辉与段晓赛无直接交集（段2025年调任）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e54" source="p61" target="p62" label="李荐国与杨懿文均涉及娄底腐败案" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="corruption"/>
+          <attvalue for="1" value="李荐国与杨懿文均涉及娄底腐败案"/>
+          <attvalue for="2" value="2015-2021"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

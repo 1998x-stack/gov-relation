@@ -52,6 +52,11 @@
     <a href="20260714-新余市-市长.html">新余市报告</a>
     <a href="20260714-鹰潭市-市长.html">鹰潭市简报</a>
     <a href="20260714-鹰潭市-市长.md">鹰潭市报告</a>
+    <a href="20260714-湖南省-省长.html">湖南省省长</a>
+    <a href="../report/20260714-湖南省-省长.md">湖南省省长报告</a>
+    <a href="../report/20260714-江苏省-省委书记省长.html">江苏省省委书记省长</a>
+    <a href="../report/20260714-江苏省-省委书记省长.md">江苏省报告</a>
+    <a href="../report/20260714-永州市-领导班子.html">永州市简报</a>
   </div>
 </div>
 <div class="legend">
@@ -861,9 +866,547 @@
     }
   });
 
+  // ── 湖南省省长 (Hunan Province Governor) ──
+  const hunan = {
+    orgPrefix: "hun",
+    persons: [
+      {id:1,name:"毛伟明",post:"湖南省省长",birth:"1961-05",birthplace:"浙江衢州"},
+      {id:2,name:"沈晓明",post:"湖南省委书记",birth:"1963-05",birthplace:"浙江上虞"},
+      {id:3,name:"许达哲",post:"原湖南省委书记（已退休）",birth:"1956-09",birthplace:"湖南浏阳"},
+      {id:4,name:"杜家毫",post:"原湖南省委书记",birth:"1955-07",birthplace:"浙江鄞县"},
+      {id:5,name:"王道席",post:"湖南省常务副省长",birth:"1968-12",birthplace:""},
+      {id:6,name:"谢卫江",post:"湖南省委副书记、岳阳市委书记",birth:"1973-01",birthplace:""},
+      {id:7,name:"王一鸥",post:"湖南省副省长、公安厅厅长",birth:"1967-10",birthplace:""},
+      {id:8,name:"魏建锋",post:"湖南省纪委书记",birth:"1966-04",birthplace:""},
+    ],
+    orgs: [
+      "湖南省人民政府",
+      "中共湖南省委",
+      "中共湖南省纪律检查委员会",
+      "湖南省公安厅",
+      "国家电网有限公司",
+      "中华人民共和国工业和信息化部",
+      "江苏省人民政府",
+      "江西省人民政府",
+      "浙江省衢州市",
+      "浙江省上虞区",
+    ],
+    edges: [
+      [1,2,"党政搭班","2023—至今"],
+      [1,3,"前后任省长","2020—2021"],
+      [1,4,"同籍浙江",""],
+      [2,3,"前后任书记","2023"],
+      [3,4,"前后任书记","2016—2020"],
+      [1,5,"上下级","省政府班子"],
+      [1,6,"同班子","省委常委会"],
+      [1,7,"上下级","省政府班子"],
+    ]
+  };
+  datasets.push(hunan);
+
+  // ── 江苏省 (Jiangsu Province) ──
+  const jiangsu = {
+    orgPrefix: "js",
+    persons: [
+      {id:1,name:"信长星",post:"江苏省委书记、省人大常委会主任",birth:"1963-12",birthplace:"山东惠民"},
+      {id:2,name:"刘小涛",post:"江苏省省长",birth:"1970-07",birthplace:"广东兴宁"},
+      {id:3,name:"张忠",post:"江苏省委常委、省纪委书记",birth:"1968-03",birthplace:"山东莱州"},
+      {id:4,name:"周红波",post:"江苏省委常委、南京市委书记",birth:"1970-10",birthplace:"广西临桂"},
+      {id:5,name:"刘建洋",post:"江苏省委常委、组织部部长",birth:"1966-04",birthplace:"江西莲花"},
+      {id:6,name:"马欣",post:"江苏省委常委、常务副省长",birth:"1967-11",birthplace:"天津"},
+      {id:7,name:"范波",post:"江苏省委常委、苏州市委书记",birth:"1969-10",birthplace:"湖北洪湖"},
+      {id:8,name:"徐缨",post:"江苏省委常委、宣传部部长",birth:"1967-09",birthplace:"江苏常州"},
+      {id:9,name:"李耀光",post:"江苏省委常委、政法委书记",birth:"1970-10",birthplace:"北京"},
+      {id:10,name:"陈忠伟",post:"江苏省委常委、省委秘书长",birth:"1969-06",birthplace:"广东潮州"},
+      {id:11,name:"赵岩",post:"江苏省副省长",birth:"1973-08",birthplace:"北京",note:"满族"},
+      {id:12,name:"沈剑荣",post:"江苏省副省长",birth:"1969-03",birthplace:"江苏苏州"},
+      {id:13,name:"吴政隆",post:"国务委员、国务院秘书长（原江苏省委书记/省长）",birth:"1964-11",birthplace:"浙江宁波"},
+      {id:14,name:"娄勤俭",post:"全国人大外事委员会副主任（原江苏省委书记）",birth:"1956-12",birthplace:"贵州桐梓"},
+      {id:15,name:"李强",post:"国务院总理（原江苏省委书记）",birth:"1959-07",birthplace:"浙江瑞安"},
+      {id:16,name:"许昆林",post:"辽宁省委书记（原江苏省省长）",birth:"1965",birthplace:""},
+      {id:17,name:"石泰峰",post:"中央政治局委员、中组部部长（原江苏省省长）",birth:"1956-09",birthplace:"山西榆社"},
+    ],
+    orgs: [
+      "中共江苏省委员会",
+      "江苏省人民政府",
+      "江苏省人大常委会",
+      "政协江苏省委员会",
+      "中共江苏省纪律检查委员会",
+      "中共江苏省委组织部","中共江苏省委宣传部","中共江苏省委统战部","中共江苏省委政法委",
+      "江苏省公安厅","江苏省军区",
+      "中共南京市委员会","中共苏州市委员会",
+      "国务院","国务院办公厅",
+      "中共辽宁省委员会","全国人大外事委员会",
+    ],
+    edges: [
+      [1,2,"党政搭档","2025.10—至今"],
+      [13,1,"前后任书记","吴政隆→信长星"],
+      [14,13,"前后任书记","娄勤俭→吴政隆"],
+      [15,14,"前后任书记","李强→娄勤俭"],
+      [13,16,"前后任省长","吴政隆→许昆林"],
+      [16,2,"前后任省长","许昆林→刘小涛"],
+      [17,13,"前后任省长","石泰峰→吴政隆"],
+      [13,1,"省长→书记晋升","吴政隆（省长升书记）"],
+      [1,2,"劳动人事系统渊源","信长星（人社部）↔刘小涛（广东劳动系统）"],
+      [2,7,"苏州书记→省长管道","刘小涛（前任苏州书记）↔范波（现任苏州书记）"],
+      [15,13,"江苏→中央外流","李强→总理"],
+      [13,1,"江苏→中央外流","吴政隆→国务委员"],
+      [17,1,"江苏→中央外流","石泰峰→中组部部长"],
+      [16,1,"江苏→辽宁","许昆林调任辽宁省委书记"],
+      [4,5,"跨省交流干部","周红波（桂→琼→苏）、刘建洋（赣→闽→苏）"],
+      [6,1,"央地交流","马欣（国开行→江苏）"],
+    ]
+  };
+  datasets.push(jiangsu);
+
+  // ── 南京市 (Nanjing City) ──
+  const nanjing = {
+    orgPrefix: "nj",
+    persons: [
+      {id:1,name:"周红波",post:"江苏省委常委、南京市委书记",birth:"1970-10",birthplace:"广西临桂"},
+      {id:2,name:"李忠军",post:"南京市委副书记、代市长",birth:"1972-06",birthplace:"",note:"央企→江苏"},
+      {id:3,name:"林涛",post:"南京市委常委、常务副市长、江宁区委书记",birth:"1970",birthplace:""},
+      {id:4,name:"陈之常",post:"内蒙古包头市委书记（原南京市长）",birth:"1974-12",birthplace:"四川大竹"},
+      {id:5,name:"闵一峰",post:"玄武区委书记",birth:"",birthplace:""},
+      {id:6,name:"王生",post:"秦淮区委书记",birth:"",birthplace:""},
+      {id:7,name:"姜宸",post:"建邺区委书记",birth:"",birthplace:""},
+      {id:8,name:"王安伟",post:"鼓楼区委书记",birth:"",birthplace:""},
+      {id:9,name:"陆卫东",post:"浦口区委书记",birth:"",birthplace:"",note:"南京市委常委兼任"},
+      {id:10,name:"孙海东",post:"栖霞区委书记",birth:"",birthplace:""},
+      {id:11,name:"张连春",post:"雨花台区委书记",birth:"",birthplace:""},
+      {id:12,name:"李方毅",post:"雨花台区长",birth:"",birthplace:""},
+      {id:13,name:"周勇",post:"六合区委书记",birth:"",birthplace:""},
+      {id:14,name:"张蕴",post:"溧水区委书记（南京市副市长）",birth:"1975-10",birthplace:""},
+      {id:15,name:"刘伟",post:"高淳区委书记",birth:"",birthplace:""},
+    ],
+    orgs: [
+      "中共南京市委员会","南京市人民政府",
+      "玄武区人民政府","秦淮区人民政府","建邺区人民政府",
+      "鼓楼区人民政府","浦口区人民政府","栖霞区人民政府",
+      "雨花台区人民政府","江宁区人民政府","六合区人民政府",
+      "溧水区人民政府","高淳区人民政府",
+    ],
+    edges: [
+      [1,2,"党政搭档","2025.11—至今"],
+      [4,2,"前后任市长","陈之常→李忠军"],
+    ]
+  };
+  datasets.push(nanjing);
+
+  // ── 无锡市 (Wuxi City) ──
+  const wuxi = {
+    orgPrefix: "wx",
+    persons: [
+      {id:1,name:"杜小刚",post:"无锡市委书记",birth:"1976-06",birthplace:"江苏常州",note:"苏州系统成长"},
+      {id:2,name:"蒋锋",post:"无锡市代市长",birth:"1972-07",birthplace:""},
+      {id:3,name:"赵建军",post:"原无锡市长",birth:"1972",birthplace:""},
+      {id:4,name:"黄钦",post:"原无锡市委书记（退休）",birth:"1962",birthplace:""},
+      {id:5,name:"吴建元",post:"惠山区委书记",birth:"",birthplace:""},
+      {id:6,name:"方力",post:"江阴市委书记",birth:"1977-07",birthplace:""},
+      {id:7,name:"封晓春",post:"宜兴市委书记",birth:"",birthplace:""},
+    ],
+    orgs: ["中共无锡市委员会","无锡市人民政府","无锡市人大常委会"],
+    edges: [
+      [1,2,"党政搭档","2025.07—至今"],
+      [3,2,"前后任市长"],
+      [4,1,"前后任书记","黄钦→杜小刚"],
+    ]
+  };
+  datasets.push(wuxi);
+
+  // ── 徐州市 (Xuzhou City) ──
+  const xuzhou = {
+    orgPrefix: "xz",
+    persons: [
+      {id:1,name:"宋乐伟",post:"徐州市委书记",birth:"1969-10",birthplace:"山东潍坊"},
+      {id:2,name:"沈峻峰",post:"徐州市长",birth:"1970-03",birthplace:"江苏如皋",note:"前省纪委副书记"},
+      {id:3,name:"王剑锋",post:"原徐州市长",birth:"",birthplace:""},
+      {id:4,name:"庄兆林",post:"江西省委组织部长（原徐州书记）",birth:"",birthplace:""},
+    ],
+    orgs: ["中共徐州市委员会","徐州市人民政府"],
+    edges: [
+      [1,2,"党政搭档","2025.06—至今"],
+      [3,2,"前后任市长"],
+      [4,1,"前后任书记","庄兆林→宋乐伟"],
+    ]
+  };
+  datasets.push(xuzhou);
+
+  // ── 常州市 (Changzhou City) ──
+  const changzhou = {
+    orgPrefix: "cz",
+    persons: [
+      {id:1,name:"李佰平",post:"常州市委书记",birth:"1975-08",birthplace:"江苏常州",note:"2026.07任,中央纪委出身"},
+      {id:2,name:"周伟",post:"常州市长",birth:"1974-07",birthplace:"江苏东台"},
+      {id:3,name:"陈金虎",post:"原常州书记（2025.02被查）",birth:"1967-12",birthplace:"江苏句容"},
+      {id:4,name:"盛蕾",post:"原常州市长",birth:"",birthplace:""},
+      {id:5,name:"乔俊杰",post:"武进区委书记",birth:"1974-01",birthplace:"江苏泰兴"},
+    ],
+    orgs: ["中共常州市委员会","常州市人民政府","中共武进区委员会"],
+    edges: [
+      [1,2,"党政搭档","2026.07—至今"],
+      [3,1,"前后任书记","陈金虎→李佰平"],
+      [4,2,"前后任市长","盛蕾→周伟"],
+    ]
+  };
+  datasets.push(changzhou);
+
+  // ── 苏州市 (Suzhou City) ──
+  const suzhou = {
+    orgPrefix: "sz",
+    persons: [
+      {id:1,name:"范波",post:"江苏省委常委、苏州市委书记",birth:"1969-10",birthplace:"湖北洪湖",note:"跨省四省"},
+      {id:2,name:"王维",post:"苏州市长",birth:"1971-04",birthplace:"",note:"博士"},
+      {id:3,name:"方文浜",post:"姑苏区委书记兼虎丘区委书记",birth:"1969-11",birthplace:"苏州"},
+      {id:4,name:"周伟",post:"昆山市委书记",birth:"1974-07",birthplace:"张家港"},
+    ],
+    orgs: ["中共苏州市委员会","苏州市人民政府"],
+    edges: [
+      [1,2,"党政搭档"],
+      [3,2,"区→市隶属"],
+    ]
+  };
+  datasets.push(suzhou);
+
+  // ── 南通市 (Nantong City) ──
+  const nantong = {
+    orgPrefix: "nt",
+    persons: [
+      {id:1,name:"吴新明",post:"南通市委书记",birth:"1969-06",birthplace:"江苏吴江"},
+      {id:2,name:"张彤",post:"南通市长",birth:"1971-10",birthplace:"江苏宿迁",note:"女"},
+    ],
+    orgs: ["中共南通市委员会","南通市人民政府"],
+    edges: [[1,2,"党政搭档","2023.07—至今"]]
+  };
+  datasets.push(nantong);
+
+  // ── 连云港市 (Lianyungang) ──
+  const lyg = {
+    orgPrefix: "lyg",
+    persons: [
+      {id:1,name:"邢正军",post:"连云港市委书记",birth:"",birthplace:""},
+      {id:2,name:"周进",post:"连云港市长",birth:"1975",birthplace:""},
+    ],
+    orgs: ["中共连云港市委员会","连云港市人民政府"],
+    edges: [[1,2,"党政搭档"]]
+  };
+  datasets.push(lyg);
+
+  // ── 淮安市 (Huai'an) ──
+  const huaian = {orgPrefix:"ha",persons:[{id:1,name:"史志军",post:"淮安市委书记",birth:"1969-04",birthplace:"江苏溧阳"},{id:2,name:"顾坤",post:"淮安市长",birth:"1976-01",birthplace:"江苏海门"}],orgs:["中共淮安市委员会","淮安市人民政府"],edges:[[1,2,"党政搭档","2023.07—至今"]]};
+  datasets.push(huaian);
+
+  // ── 盐城市 (Yancheng) ──
+  const yancheng = {orgPrefix:"yc",persons:[{id:1,name:"严汉平",post:"盐城市委书记",birth:"1974-11",birthplace:"陕西西安",note:"2026.07刚任"},{id:2,name:"吴炜",post:"盐城市长",birth:"1972-12",birthplace:"江苏如东"}],orgs:["中共盐城市委员会","盐城市人民政府"],edges:[[1,2,"党政搭档","2025.07—至今"]]};
+  datasets.push(yancheng);
+
+  // ── 扬州市 (Yangzhou) ──
+  const yangzhou = {orgPrefix:"yz",persons:[{id:1,name:"王进健",post:"扬州市委书记",birth:"",birthplace:""},{id:2,name:"郑海涛",post:"扬州市长",birth:"1975",birthplace:""}],orgs:["中共扬州市委员会","扬州市人民政府"],edges:[[1,2,"党政搭档"]]};
+  datasets.push(yangzhou);
+
+  // ── 镇江市 (Zhenjiang) ──
+  const zhenjiang = {orgPrefix:"zj",persons:[{id:1,name:"吴庆文",post:"镇江市委书记",birth:"1972-01",birthplace:"山东嘉祥",note:"2026.03任"},{id:2,name:"张克",post:"镇江市市长",birth:"1975-04",birthplace:"河南方城",note:"2026.06任"}],orgs:["中共镇江市委员会","镇江市人民政府"],edges:[[1,2,"党政搭档","2026.06—至今"]]};
+  datasets.push(zhenjiang);
+
+  // ── 泰州市 (Taizhou) ──
+  const taizhouj = {orgPrefix:"tzj",persons:[{id:1,name:"姜冬冬",post:"泰州市委书记",birth:"1976-10",birthplace:"安徽利辛"},{id:2,name:"李晖",post:"泰州市长",birth:"1970-11",birthplace:"江西新余",note:"2026.06任"}],orgs:["中共泰州市委员会","泰州市人民政府"],edges:[[1,2,"党政搭档","2024.10—至今"]]};
+  datasets.push(taizhouj);
+
+  // ── 宿迁市 (Suqian) ──
+  const suqian = {orgPrefix:"sq",persons:[{id:1,name:"盛蕾",post:"宿迁市委书记",birth:"1972-11",birthplace:"江苏苏州",note:"女"},{id:2,name:"刘浩",post:"宿迁市长",birth:"1973-05",birthplace:"江苏邳州"}],orgs:["中共宿迁市委员会","宿迁市人民政府"],edges:[[1,2,"党政搭档","2023.05—至今"]]};
+  datasets.push(suqian);
+
+  // ── 长沙市委书记前后任 (Changsha) ──
+  var changsha = {
+    persons: [
+      {id:1,name:"胡衡华",post:"原长沙市委书记→陕西省委副书记→重庆市长（被查）",birth:"1963.06",birthplace:"湖南衡南",note:"2020.10跨省→陕西省委副书记，2021.12→重庆市长，2026.03被查"},
+      {id:2,name:"吴桂英",post:"原长沙市委书记→湖南省人大常委会副主任",birth:"1966.02",birthplace:"河北唐山",note:"2021.02-2026.06任长沙市委书记"},
+      {id:3,name:"陈竞",post:"长沙市委书记/湖南省副省长",birth:"—",birthplace:"—",note:"2026.06接任长沙市委书记"},
+      {id:4,name:"易炼红",post:"原长沙市委书记→辽宁/浙江省委书记",birth:"1959.09",birthplace:"湖南涟源",note:"胡衡华的前任，后升任浙江省委书记"},
+    ],
+    orgs: [
+      "中共长沙市委",
+      "重庆市人民政府",
+      "中共陕西省委",
+      "湖南省人大常委会",
+      "湖南省人民政府",
+    ],
+    orgPrefix: "ocs",
+    edges: [
+      [2,1,"前后任","胡衡华→吴桂英：2021.02交接"],
+      [4,1,"前后任","易炼红→胡衡华：2017.07交接"],
+      [3,2,"前后任","吴桂英→陈竞：2026.06交接"],
+      [1,2,"跨省调任","胡衡华：长沙→陕西（2020.10）→重庆（2021.12）"],
+      [1,2,"问责关联","两人均因4·29自建房倒塌事故被问责"],
+    ]
+  };
+
+  changsha.persons.forEach(function(p) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      var existingId2 = nameBirthMap[key];
+      var existing2 = nodes.get(existingId2);
+      if (existing2) {
+        existing2.title = existing2.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing2);
+      }
+      p._nodeId = existingId2;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "changsha_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id, label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") + (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("市委书记") && !p.post.includes("副")) ? 25 : 18,
+      shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+    });
+  });
+
+  changsha.orgs.forEach(function(org, idx) {
+    var id = changsha.orgPrefix + idx;
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    nodes.add({
+      id: id, label: org,
+      color: {background:"rgba(200,200,255,0.15)", border:"rgba(200,200,255,0.4)"},
+      size: 10, shape: "box", font: {color:"#8a8478", size:8, face:"Inter"},
+    });
+  });
+
+  changsha.edges.forEach(function(e) {
+    var p1 = changsha.persons.find(function(p) { return p.id === e[0]; });
+    var p2 = changsha.persons.find(function(p) { return p.id === e[1]; });
+    if (p1 && p2) {
+      addEdge(p1._nodeId, p2._nodeId, e[2], e[3] || "", {color:"#C9A94E", opacity:0.6, width:2});
+    }
+  });
+
+  // ── 永州市 (Yongzhou) ──
+  var yongzhou = {
+    orgPrefix: "oyz",
+    persons: [
+      {id:1,name:"陈爱林",post:"永州市委书记",birth:"1970-05",birthplace:"湖北浠水"},
+      {id:2,name:"蒋强先",post:"永州市人大常委会主任",birth:"1969-01",birthplace:"湖南南县"},
+      {id:3,name:"谢景林",post:"永州市政协主席",birth:"1966-04",birthplace:"湖南新田"},
+      {id:4,name:"朱洪武",post:"原永州市委书记（2021-2026）",birth:"1971-09",birthplace:"海南澄迈（黎族）"},
+      {id:5,name:"严华",post:"原永州市委书记（2019-2021）/原邵阳市委书记",birth:"1968-08",birthplace:"湖南澧县"},
+      {id:6,name:"唐何",post:"东安县委书记",birth:"1977-10",birthplace:"湖南华容"},
+      {id:7,name:"蒋华",post:"东安县县长",birth:"1980-10",birthplace:"湖南道县（瑶族）"},
+      {id:8,name:"张跃斌",post:"双牌县委书记",birth:"1975-10",birthplace:"永州冷水滩"},
+      {id:9,name:"蔡富强",post:"双牌县县长",birth:"1975-03",birthplace:"永州冷水滩"},
+      {id:10,name:"唐超学",post:"道县县委书记",birth:"1980-08",birthplace:"湖南宁远"},
+      {id:11,name:"刘华中",post:"道县县长",birth:"1976-11",birthplace:"湖南隆回"},
+      {id:12,name:"唐德荣",post:"江永县委书记",birth:"1972-12",birthplace:"永州冷水滩"},
+      {id:13,name:"何德波",post:"江永县县长",birth:"1976-12",birthplace:"湖南道县"},
+      {id:14,name:"胡勇刚",post:"宁远县委书记",birth:"1969-08",birthplace:""},
+      {id:15,name:"毛政",post:"宁远县县长",birth:"1976-11",birthplace:"湖南衡阳"},
+      {id:16,name:"邓群",post:"蓝山县委书记",birth:"1975-01",birthplace:"湖南双牌",gender:"女"},
+      {id:17,name:"曾艺",post:"蓝山县县长",birth:"1982-08",birthplace:"湖南新化"},
+      {id:18,name:"陈雄",post:"新田县委书记",birth:"1978-06",birthplace:"湖南东安"},
+      {id:19,name:"黄永英",post:"新田县县长",birth:"1973-06",birthplace:"湖南蓝山"},
+      {id:20,name:"段贵建",post:"江华瑶族自治县委书记",birth:"1971-12",birthplace:"湖南祁阳"},
+      {id:21,name:"吴军臣",post:"江华瑶族自治县县长",birth:"1978-12",birthplace:"江华县（瑶族）"},
+      {id:22,name:"蒋崇华",post:"祁阳市委书记",birth:"1968-03",birthplace:"湖南东安"},
+      {id:23,name:"向子顺",post:"祁阳市市长",birth:"1976-08",birthplace:"湖南洪江"},
+    ],
+    orgs: [],
+    orgPrefix: "oyz",
+    edges: [
+      [1,4,"前后任书记交接","2026.05"],
+      [4,5,"前后任书记交接","2021.08"],
+      [7,13,"同籍道县","蒋华↔何德波"],
+      [22,18,"同籍东安","蒋崇华↔陈雄"],
+    ]
+  };
+
+  yongzhou.persons.forEach(function(p) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      var existingId = nameBirthMap[key];
+      var existing = nodes.get(existingId);
+      if (existing) {
+        existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing);
+      }
+      p._nodeId = existingId;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "yongzhou_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id, label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—") + (p.note ? "<br><em>" + p.note + "</em>" : ""),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("市委书记") || p.post.includes("县委书记") || p.post.includes("委书记")) ? 25 : 18,
+      shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+    });
+  });
+
+  yongzhou.edges.forEach(function(e) {
+    var p1 = yongzhou.persons.find(function(p) { return p.id === e[0]; });
+    var p2 = yongzhou.persons.find(function(p) { return p.id === e[1]; });
+    if (p1 && p2) {
+      addEdge(p1._nodeId, p2._nodeId, e[2], e[3] || "", {color:"#C9A94E", opacity:0.6, width:2});
+    }
+  });
+
+  // ═══════════════════════════════════════════════════════════════
+  // Henan Province (河南省) — added 2026-07-15
+  // ═══════════════════════════════════════════════════════════════
+  var henanNodes = [
+    {name:"刘宁",post:"河南省委书记",birth:"1962-01",birthplace:"辽宁丹东/吉林临江"},
+    {name:"王凯",post:"河南省省长",birth:"1962-07",birthplace:"河南洛阳"},
+    {name:"张巍",post:"河南省委副书记、政法委书记",birth:"1968-11",birthplace:"湖北松滋"},
+    {name:"安伟",post:"郑州市委书记",birth:"1966-05",birthplace:"河南镇平"},
+    {name:"秦国文",post:"河南省纪委书记",birth:"1967-07",birthplace:"江西南昌"},
+    {name:"王刚",post:"河南省委组织部部长",birth:"1969-09",birthplace:"宁夏同心"},
+    {name:"张雷明",post:"河南省委统战部部长",birth:"1966-06",birthplace:"河南淇县"},
+    {name:"张敏",post:"河南省常务副省长",birth:"1970-11",birthplace:"山东齐河",gender:"女"},
+    {name:"王崧",post:"河南省委宣传部部长",birth:"1971-02",birthplace:"江西安福"},
+    {name:"陈春江",post:"洛阳市委书记",birth:"1971-05",birthplace:"内蒙古（蒙古族）"},
+    {name:"李涛",post:"河南省委秘书长、副省长",birth:"1970-05",birthplace:"河南邓州"},
+    {name:"楼阳生",post:"原河南省委书记",birth:"1959-10",birthplace:"浙江浦江"},
+    {name:"王国生",post:"原河南省委书记",birth:"1956-12",birthplace:"山东东阿"},
+    {name:"谢伏瞻",post:"原河南省委书记",birth:"1954-08",birthplace:"湖北天门"},
+    {name:"尹弘",post:"江西省委书记（原河南省长）",birth:"1963-06",birthplace:"浙江湖州"},
+    {name:"金湘军",post:"原山西省长（被调查）",birth:"1964-07",birthplace:"湖南江华"},
+    {name:"信长星",post:"江苏省委书记（原青海省长）",birth:"1963-12",birthplace:"山东惠民"},
+    {name:"林武",post:"山东省委书记",birth:"1962-02",birthplace:"福建闽侯"},
+    {name:"王晓萍",post:"人力资源和社会保障部部长",birth:"1964-03",birthplace:"湖北黄冈"},
+  ];
+  henanNodes.forEach(function(p) {
+    var key = p.name + "|" + (p.birth || "");
+    if (nameBirthMap[key]) {
+      var existingId = nameBirthMap[key];
+      var existing = nodes.get(existingId);
+      if (existing) {
+        existing.title = existing.title + "<br><em>also: " + p.post + "</em>";
+        nodes.update(existing);
+      }
+      p._nodeId = existingId;
+      return;
+    }
+    var c = getColor(p.post);
+    var id = "henan_" + p.name;
+    nodeIdMap[id] = true;
+    nameBirthMap[key] = id;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    if (p.birthplace && p.birthplace !== "—" && p.birthplace !== "") label += "\n" + p.birthplace;
+    nodes.add({
+      id: id, label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—") + " · " + (p.birthplace || "—"),
+      color: {background:c.bg, border:c.border},
+      size: (p.post.includes("省委书记") || p.post.includes("省长") || p.post.includes("委书记")) ? 28 : 20,
+      shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+    });
+  });
+
+  var henanEdges = [
+    ["henan_刘宁","henan_王凯","党政搭档","2024-12至今"],
+    ["henan_楼阳生","henan_刘宁","省委书记前后任","2024.12接任"],
+    ["henan_王国生","henan_楼阳生","省委书记前后任","2021.06接任"],
+    ["henan_谢伏瞻","henan_王国生","省委书记前后任","2018.03接任"],
+    ["henan_尹弘","henan_王凯","省长前后任","2021.04接任"],
+    ["henan_尹弘","henan_金湘军","跨省关联","都曾任省长"],
+    ["henan_刘宁","henan_信长星","前后任（青海省长）","信长星接任青海省长"],
+    ["henan_王凯","henan_金湘军","前后任（玉林书记）","金湘军→王凯接任玉林书记"],
+    ["henan_王凯","henan_林武","前后任（吉林组织部长）","林武→王凯接任吉林组工"],
+    ["henan_王凯","henan_王晓萍","前后任（吉林组织部长）","王凯→王晓萍接任吉林组工"],
+  ];
+  henanEdges.forEach(function(e) {
+    addEdge(e[0], e[1], e[2], e[3], {color:"#C9A94E", opacity:0.6, width: e[1].includes("金湘军") ? 3 : 2});
+  });
+
+  // ═══════════════════════════════════════════════════════════════
+  // 铜鼓县 — Tonggu County
+  // ═══════════════════════════════════════════════════════════════
+  var tongguPersons = [
+    {name:"熊小亮", post:"铜鼓县委书记", birth:"—", birthplace:"—", color:"red"},
+    {name:"袁常青", post:"铜鼓县委副书记、县长候选人", birth:"—", birthplace:"—", color:"blue"},
+    {name:"巫晓怡", post:"铜鼓县委副书记", birth:"—", birthplace:"—", color:"blue"},
+    {name:"傅鹏", post:"铜鼓县委常委", birth:"—", birthplace:"—", color:"gold"},
+    {name:"卢柏意", post:"铜鼓县委常委、统战部部长", birth:"—", birthplace:"—", color:"gold"},
+    {name:"帅江", post:"铜鼓县委常委、副县长", birth:"—", birthplace:"—", color:"gold"},
+    {name:"熊涛", post:"铜鼓县委常委", birth:"—", birthplace:"—", color:"gold"},
+    {name:"谭光琅", post:"铜鼓县委常委", birth:"—", birthplace:"—", color:"gold"},
+    {name:"黄万荣", post:"铜鼓县委常委", birth:"—", birthplace:"—", color:"gold"},
+    {name:"刘长检", post:"铜鼓副县长", birth:"1983-05", birthplace:"—", color:"orange"},
+    {name:"潘小燕", post:"铜鼓副县长（福州挂职）", birth:"1982-07", birthplace:"—", color:"orange"},
+    {name:"彭浩屹", post:"铜鼓副县长、公安局长", birth:"1987-05", birthplace:"—", color:"orange"},
+    {name:"孙红星", post:"铜鼓副县长", birth:"1976-01", birthplace:"—", color:"orange"},
+    {name:"周升", post:"铜鼓副县长", birth:"1986-04", birthplace:"—", color:"orange"},
+    {name:"余伟彬", post:"铜鼓县人大主任", birth:"—", birthplace:"—", color:"grey"},
+    {name:"罗咏", post:"铜鼓县政协主席", birth:"—", birthplace:"—", color:"grey"},
+  ];
+  tongguPersons.forEach(function(p) {
+    var c = getColor(p.post);
+    var id = "tonggu_" + p.name;
+    if (nodeIdMap[id]) return;
+    nodeIdMap[id] = true;
+    p._nodeId = id;
+    var label = p.name + "\n" + p.post;
+    nodes.add({
+      id: id, label: label,
+      title: "<b>" + p.name + "</b><br>" + p.post + "<br>" + (p.birth || "—"),
+      color: {background:c.bg, border:c.border},
+      size: (p.color === "red" || p.color === "blue") ? 20 : 14,
+      shape: "dot", font: {color:"#e8e0d0", size:10, strokeWidth:0, face:"Noto Serif SC"}, borderWidth: 1,
+    });
+  });
+
+  var tongguEdges = [
+    ["tonggu_熊小亮","tonggu_袁常青","党政搭档","当前"],
+    ["tonggu_熊小亮","tonggu_巫晓怡","书记—副书记","当前"],
+    ["tonggu_熊小亮","tonggu_傅鹏","上下级","当前"],
+    ["tonggu_熊小亮","tonggu_卢柏意","上下级","当前"],
+    ["tonggu_熊小亮","tonggu_帅江","上下级","当前"],
+    ["tonggu_熊小亮","tonggu_熊涛","上下级","当前"],
+    ["tonggu_熊小亮","tonggu_谭光琅","上下级","当前"],
+    ["tonggu_熊小亮","tonggu_黄万荣","上下级","当前"],
+    ["tonggu_熊小亮","tonggu_余伟彬","协作","当前"],
+    ["tonggu_熊小亮","tonggu_罗咏","协作","当前"],
+  ];
+  tongguEdges.forEach(function(e) {
+    addEdge(e[0], e[1], e[2], e[3], {color:"#C9A94E", opacity:0.5, width:2});
+  });
+
   network.on("stabilizationIterationsDone", function() {
     network.fit({animation: true});
   });
+
+  // Add links to header
+  var linksDiv = document.querySelector(".header .links");
+  if (linksDiv) {
+    var a = document.createElement("a");
+    a.href = "20260715-河南省-省委书记省长.html";
+    a.textContent = "河南省简报";
+    linksDiv.appendChild(a);
+  }
+  if (linksDiv) {
+    var a2 = document.createElement("a");
+    a2.href = "20260715-河南省-省委书记省长.md";
+    a2.textContent = "河南省报告";
+    linksDiv.appendChild(a2);
+  }
+  if (linksDiv) {
+    var a3 = document.createElement("a");
+    a3.href = "20260715-铜鼓县-领导班子调查报告.md";
+    a3.textContent = "铜鼓县报告";
+    linksDiv.appendChild(a3);
+  }
 
 })();
 </script>

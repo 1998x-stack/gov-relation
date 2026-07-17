@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九江市浔阳区领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --surface-2: #1e1e1e;
+    --border: #2a2a2a;
+    --text: #e8e4da;
+    --text-muted: #8a867e;
+    --accent: #E03C31;
+    --gold: #C9A94E;
+    --gold-dim: rgba(201,169,78,0.15);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size: 15px; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'Noto Serif SC', serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* ── Header ── */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+  }
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    color: var(--text);
+  }
+  .header .meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+  .header .meta span { margin: 0 0.5rem; }
+  /* ── Stats ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat {
+    background: var(--surface);
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  .stat .num {
+    font-family: 'Inter', monospace;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  .stat .label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  /* ── Section ── */
+  .section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--accent), transparent);
+  }
+  /* ── Person Cards ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .card {
+    background: var(--surface);
+    padding: 1.25rem;
+    position: relative;
+  }
+  .card .role-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid;
+    text-transform: uppercase;
+  }
+  .card .role-tag.secretary { border-color: var(--accent); color: var(--accent); }
+  .card .role-tag.mayor { border-color: #4a7fc7; color: #4a7fc7; }
+  .card .role-tag.deputy { border-color: var(--gold); color: var(--gold); }
+  .card .role-tag.npc { border-color: #6a6a6a; color: #8a8a8a; }
+  .card .name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .card .title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+  .card .info {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .card .info b { color: var(--text); font-weight: 500; }
+  .card .badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    margin: 0.15rem;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+  .card .badge.gap { border-color: rgba(224,60,49,0.3); color: rgba(224,60,49,0.7); }
+  /* ── Timeline ── */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 1px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    padding-bottom: 1.25rem;
+  }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.75rem;
+    top: 0.4rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+  }
+  .tl-item.confirmed::before { background: var(--gold); border-color: var(--gold); }
+  .tl-item.speculative::before { background: transparent; border-color: var(--text-muted); }
+  .tl-item .date {
+    font-size: 0.75rem;
+    font-family: 'Inter', monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+  .tl-item .event {
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+  }
+  .tl-item .badge-spec {
+    font-size: 0.65rem;
+    color: rgba(224,60,49,0.6);
+    border: 1px solid rgba(224,60,49,0.2);
+    padding: 0.05rem 0.35rem;
+    margin-left: 0.3rem;
+  }
+  /* ── Relationship Matrix ── */
+  .matrix-wrap { overflow-x: auto; }
+  .matrix {
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+  .matrix th, .matrix td {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .matrix th {
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--surface);
+    font-size: 0.7rem;
+  }
+  .matrix td.name-cell {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--surface);
+  }
+  .matrix .strong { background: var(--gold-dim); color: var(--gold); }
+  .matrix .weak { background: rgba(74,127,199,0.1); color: #6a9cd4; }
+  .matrix .none { color: #333; }
+  /* ── Insights Panel ── */
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .insight-card {
+    background: var(--surface);
+    padding: 1.25rem;
+  }
+  .insight-card .priority {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .insight-card .priority.p5 { color: var(--accent); }
+  .insight-card .priority.p4 { color: var(--gold); }
+  .insight-card .content {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  /* ── Footer ── */
+  .footer {
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #444;
+    border-top: 1px solid var(--border);
+    letter-spacing: 0.05em;
+  }
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .insight-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>浔阳区领导班子工作关系网络</h1>
+  <div class="meta">情报简报 · 2026年7月14日 · 九江市人民政府</div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">20</div><div class="label">人物</div></div>
+  <div class="stat"><div class="num">14</div><div class="label">机构</div></div>
+  <div class="stat"><div class="num">24</div><div class="label">任职记录</div></div>
+  <div class="stat"><div class="num">16</div><div class="label">关系</div></div>
+</div>
+
+<!-- Key Persons -->
+<div class="section">
+  <div class="section-title">关键人物</div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="role-tag secretary">区委书记</div>
+      <div class="name">周荣卿</div>
+      <div class="title">中共九江市浔阳区委员会</div>
+      <div class="info">
+        <b>性别：</b>男 · <b>民族：</b>汉族<br>
+        <b>出生：</b>约1974年<br>
+        <b>来源：</b>浔阳区政府网站
+      </div>
+      <div class="info" style="margin-top:0.5rem;">
+        <span class="badge gap">履历待查</span>
+        <span class="badge gap">籍贯未知</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="role-tag mayor">区长候选人</div>
+      <div class="name">唐建宇</div>
+      <div class="title">浔阳区委副书记·区长候选人</div>
+      <div class="info">
+        <b>性别：</b>男 · <b>民族：</b>汉族<br>
+        <b>到任：</b>2026年7月<br>
+        <b>来源：</b>浔阳区政府网站
+      </div>
+      <div class="info" style="margin-top:0.5rem;">
+        <span class="badge gap">全部信息待查</span>
+        <span class="badge gap">最新任命</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="role-tag deputy">区委副书记</div>
+      <div class="name">查忠平</div>
+      <div class="title">中共九江市浔阳区委员会</div>
+      <div class="info">
+        <b>来源：</b>人大换届工作会报道<br>
+        <b>排位：</b>区委第三位
+      </div>
+      <div class="info" style="margin-top:0.5rem;">
+        <span class="badge gap">履历待查</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="role-tag deputy">常务副区长（推测）</div>
+      <div class="name">丁永豪</div>
+      <div class="title">九江市浔阳区人民政府</div>
+      <div class="info">
+        <b>来源：</b>防汛报道排位靠前
+      </div>
+      <div class="info" style="margin-top:0.5rem;">
+        <span class="badge gap">履历待查</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="role-tag deputy">组织部长（推测）</div>
+      <div class="name">李奇芳</div>
+      <div class="title">中共浔阳区委组织部</div>
+      <div class="info">
+        <b>来源：</b>多篇报道排位靠前
+      </div>
+      <div class="info" style="margin-top:0.5rem;">
+        <span class="badge gap">履历待查</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="role-tag npc">人大主任</div>
+      <div class="name">徐礼文</div>
+      <div class="title">浔阳区人大常委会</div>
+      <div class="info">
+        <b>来源：</b>人大换届工作会<br>
+        <b>排位：</b>正县级
+      </div>
+      <div class="info" style="margin-top:0.5rem;">
+        <span class="badge gap">履历待查</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Career Timeline -->
+<div class="section">
+  <div class="section-title">核心人物职业时间线</div>
+
+  <h3 style="font-family:'Noto Serif SC',serif;font-size:0.9rem;font-weight:600;color:var(--accent);margin-bottom:0.75rem;">周荣卿（区委书记）</h3>
+  <div class="timeline">
+    <div class="tl-item confirmed">
+      <div class="date">2024 — 至今</div>
+      <div class="event">浔阳区委书记</div>
+    </div>
+    <div class="tl-item speculative">
+      <div class="date">~2021 — ~2024（推测）</div>
+      <div class="event">浔阳区长 <span class="badge-spec">待核实</span></div>
+    </div>
+    <div class="tl-item speculative">
+      <div class="date">~2016 — ~2021（推测）</div>
+      <div class="event">九江市委部门任职 <span class="badge-spec">职务待查</span></div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Noto Serif SC',serif;font-size:0.9rem;font-weight:600;color:#4a7fc7;margin:1.5rem 0 0.75rem;">唐建宇（区长候选人）</h3>
+  <div class="timeline">
+    <div class="tl-item confirmed">
+      <div class="date">2026年7月 — 至今</div>
+      <div class="event">浔阳区委副书记、区长候选人</div>
+    </div>
+    <div class="tl-item speculative">
+      <div class="date">此前履历</div>
+      <div class="event">完全不明 <span class="badge-spec">关键缺口</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Relationship Matrix -->
+<div class="section">
+  <div class="section-title">工作关系矩阵</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th></th>
+          <th>周荣卿</th>
+          <th>唐建宇</th>
+          <th>查忠平</th>
+          <th>徐礼文</th>
+          <th>丁永豪</th>
+          <th>李奇芳</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name-cell"><b>周荣卿</b> · 书记</td>
+          <td>—</td>
+          <td class="strong">强·党政搭档</td>
+          <td class="strong">强·正副书记</td>
+          <td class="strong">强·区委人大</td>
+          <td class="weak">弱·班子</td>
+          <td class="weak">弱·班子</td>
+        </tr>
+        <tr>
+          <td class="name-cell"><b>唐建宇</b> · 区长候选人</td>
+          <td class="strong">强</td>
+          <td>—</td>
+          <td class="weak">弱·班子</td>
+          <td class="none">○ 待定</td>
+          <td class="weak">弱·政府线</td>
+          <td class="none">○ 待定</td>
+        </tr>
+        <tr>
+          <td class="name-cell"><b>查忠平</b> · 副书记</td>
+          <td class="strong">强</td>
+          <td class="weak">弱</td>
+          <td>—</td>
+          <td class="none">○ 待定</td>
+          <td class="weak">弱·班子</td>
+          <td class="weak">弱·班子</td>
+        </tr>
+        <tr>
+          <td class="name-cell"><b>徐礼文</b> · 人大主任</td>
+          <td class="strong">强</td>
+          <td class="none">○</td>
+          <td class="none">○</td>
+          <td>—</td>
+          <td class="none">○</td>
+          <td class="none">○</td>
+        </tr>
+        <tr>
+          <td class="name-cell"><b>丁永豪</b> · 常务副区长（推测）</td>
+          <td class="weak">弱</td>
+          <td class="weak">弱</td>
+          <td class="weak">弱</td>
+          <td class="none">○</td>
+          <td>—</td>
+          <td class="weak">弱·班子</td>
+        </tr>
+        <tr>
+          <td class="name-cell"><b>李奇芳</b> · 组织部长（推测）</td>
+          <td class="weak">弱</td>
+          <td class="none">○</td>
+          <td class="weak">弱</td>
+          <td class="none">○</td>
+          <td class="weak">弱</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.75rem;display:flex;gap:1.5rem;">
+    <span><span style="display:inline-block;width:10px;height:10px;background:var(--gold-dim);border:1px solid var(--gold);margin-right:0.3rem;"></span> 强关系（已确认合作）</span>
+    <span><span style="display:inline-block;width:10px;height:10px;background:rgba(74,127,199,0.1);border:1px solid #4a7fc7;margin-right:0.3rem;"></span> 弱关系（一般同事）</span>
+    <span><span style="display:inline-block;width:10px;height:10px;background:transparent;border:1px solid #333;margin-right:0.3rem;"></span> 待确认</span>
+  </div>
+</div>
+
+<!-- Organization -->
+<div class="section">
+  <div class="section-title">机构与上下级关系</div>
+  <div style="font-size:0.85rem;line-height:2;">
+    <div style="padding:0.5rem 1rem;border-left:2px solid var(--accent);margin-bottom:0.5rem;background:var(--surface);">
+      <b style="color:var(--accent);">中共九江市委员会</b>（市委·陈云书记）→
+      <span style="color:var(--gold);">中共浔阳区委员会</span>（区委·周荣卿书记）
+    </div>
+    <div style="padding:0.5rem 1rem;border-left:2px solid #4a7fc7;margin-bottom:0.5rem;background:var(--surface);">
+      <b style="color:#4a7fc7;">九江市人民政府</b>（市政府·邓永翔市长）→
+      <span style="color:var(--gold);">浔阳区人民政府</span>（区政府·唐建宇候选人）
+    </div>
+    <div style="padding:0.5rem 1rem;border-left:2px solid #666;background:var(--surface);">
+      <b style="color:#999;">区委直属：</b>组织部（李奇芳推测）· 宣传部 · 政法委 · 统战部
+    </div>
+  </div>
+</div>
+
+<!-- Key Insights -->
+<div class="section">
+  <div class="section-title">关键洞察与突破线索</div>
+  <div class="insight-grid">
+
+    <div class="insight-card">
+      <div class="priority p5">⭐⭐⭐⭐⭐ 关键缺口</div>
+      <div class="content">
+        <b>周荣卿的完整履历</b> — 区委书记是核心人物，但当前仅有2024年至今的任职记录确认。履历来源需突破百度百科封锁或查找九江市委组织部历任前公示。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="priority p5">⭐⭐⭐⭐⭐ 关键缺口</div>
+      <div class="content">
+        <b>唐建宇的来路</b> — 2026年7月新到区长候选人，此前职务、籍贯、教育背景完全未知。此人带来的人脉网络是本调查最重要的增量信息。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="priority p4">⭐⭐⭐⭐ 高优先</div>
+      <div class="content">
+        <b>常委分工不明</b> — 刘国栋、黄河、熊燕三位区委常委的具体分管领域需通过政府网站领导分工页面或新闻报道确认。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="priority p4">⭐⭐⭐⭐ 高优先</div>
+      <div class="content">
+        <b>前任链条待恢复</b> — 张宁（前书记）、钱志敏（前区长）的去向和完整履历是理解浔阳区近5年人事变迁的钥匙。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="priority p3">⭐⭐⭐ 中优先</div>
+      <div class="content">
+        <b>跨区交流数据</b> — 浔阳区与濂溪区、柴桑区同属九江市区，干部交流模式有待系统发掘。
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="priority p3">⭐⭐⭐ 中优先</div>
+      <div class="content">
+        <b>政府网站访问限制</b> — 浔阳区官网领导介绍页面和部分信息页无法访问（404），是当前所有信息缺口的技术根因。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  DATA FILES: data/database/xunyang_network.db · data/graph/xunyang_network.gexf<br>
+  REPORT: report/20260714-九江市浔阳区-领导班子.md<br>
+  BUILD: build_xunyang_data.py · 生成于 2026-07-14
+</div>
+
+</body>
+</html>

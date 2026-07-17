@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>sisyphus-junior</creator>
+    <description>寻乌县领导班子工作关系网络 - 2026-07-15</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="蓝贤林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1973-10"/>
+          <attvalue for="2" value="江西赣州"/>
+          <attvalue for="3" value="寻乌县委书记"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="何善祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1973-11"/>
+          <attvalue for="2" value="江西赣州"/>
+          <attvalue for="3" value="寻乌县委副书记、县长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="柯岩松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="（前任寻乌县委书记）"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="杨永飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="（前任寻乌县长）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="王冬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寻乌县委常委、常务副县长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="钟琳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寻乌县委常委、组织部部长"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="曹欣欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寻乌县委常委、纪委书记"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="谢欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寻乌县委常委、政法委书记"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="彭晨">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寻乌县委常委、宣传部部长"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="韩相云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1974-07"/>
+          <attvalue for="2" value="江西寻乌"/>
+          <attvalue for="3" value="大余县委书记"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共寻乌县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州寻乌"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="寻乌县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州寻乌"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共寻乌县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州寻乌"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共寻乌县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州寻乌"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共寻乌县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州寻乌"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共寻乌县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州寻乌"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共大余县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州大余"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="寻乌县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任；2021年起任寻乌县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="寻乌县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任；2021年起任寻乌县长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p3" target="o1" label="寻乌县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="前任书记；蓝贤林接任"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p4" target="o2" label="寻乌县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016"/>
+          <attvalue for="2" value="2021"/>
+          <attvalue for="3" value="前任县长；何善祥接任"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p5" target="o2" label="寻乌县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p6" target="o3" label="寻乌县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p7" target="o4" label="寻乌县委常委、纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p8" target="o5" label="寻乌县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p9" target="o6" label="寻乌县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p10" target="o2" label="寻乌县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2013"/>
+          <attvalue for="2" value="2016"/>
+          <attvalue for="3" value="起家在寻乌"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p10" target="o1" label="寻乌县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016"/>
+          <attvalue for="2" value="2020-03"/>
+          <attvalue for="3" value="寻乌县委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p10" target="o7" label="大余县委副书记、县长→县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2020"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="跨县晋升"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="蓝贤林（县委书记）与何善祥（县长）在寻乌县党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="蓝贤林接替柯岩松任寻乌县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p2" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="何善祥接替杨永飞任寻乌县长"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p1" target="p5" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="蓝贤林（书记）与王冬（常务副县长）在寻乌县党政班子共事"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="p6" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="蓝贤林（书记）与钟琳（组织部长）在寻乌县委班子共事"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p10" target="p1" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="韩相云2013-2020在寻乌县任副县长、常委；蓝贤林2021年起任书记，前后相接"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

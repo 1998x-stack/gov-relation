@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>sisyphus-junior</creator>
+    <description>章贡区领导班子工作关系网络 - 2026-07-14</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="连天浪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1969-03"/>
+          <attvalue for="2" value="江西信丰"/>
+          <attvalue for="3" value="赣州市副市长（原章贡区委书记）"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="刘志怀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1970-10"/>
+          <attvalue for="2" value="江西安远"/>
+          <attvalue for="3" value="章贡区委副书记、区长"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="刘文华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="（原章贡区委书记→赣州市委副书记、统战部长）"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共章贡区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州章贡"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="章贡区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州章贡"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="赣州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江西赣州"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="章贡区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="后升任赣州市副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o3" label="赣州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="章贡区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o1" label="章贡区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016"/>
+          <attvalue for="2" value="2020"/>
+          <attvalue for="3" value="前任"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="连天浪与刘志怀在章贡区党政搭档"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

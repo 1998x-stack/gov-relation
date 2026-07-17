@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Claude Code Research Agent</creator>
+    <description>苏州市（地级市）领导班子 + 9区市工作关系网络 — 2026年7月14日生成</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+      <attribute id="4" title="entity_type" type="string"/>
+      <attribute id="5" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="范波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1969-10"/>
+          <attvalue for="2" value="湖北洪湖"/>
+          <attvalue for="3" value="苏州市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王维">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1971-00"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="苏州市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="黄爱军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="苏州市人大常委会主任"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="160" g="200" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="朱民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1963-00"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="苏州市政协主席"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="180" g="160" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="俞愉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1973-03"/>
+          <attvalue for="2" value="苏州"/>
+          <attvalue for="3" value="虎丘区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="吴琦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1977-04"/>
+          <attvalue for="2" value="江苏泰兴"/>
+          <attvalue for="3" value="虎丘区代区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="丁立新">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="吴中区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="沈志栋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="相城区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="方文浜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1969-11"/>
+          <attvalue for="2" value="苏州"/>
+          <attvalue for="3" value="姑苏区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="陈羔">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1975-01"/>
+          <attvalue for="2" value="苏州"/>
+          <attvalue for="3" value="姑苏区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="王国荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="吴江区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="韩卫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="张家港市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p13" label="秦猛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="常熟市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p14" label="周伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1974-07"/>
+          <attvalue for="2" value="张家港"/>
+          <attvalue for="3" value="昆山市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p15" label="陈丽艳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1978-08"/>
+          <attvalue for="2" value="宜兴"/>
+          <attvalue for="3" value="昆山市市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p16" label="徐华东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="太仓市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p17" label="吴中区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="吴中区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="相城区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="相城区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p19" label="吴江区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="吴江区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p20" label="常熟市委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="常熟市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p21" label="张家港市长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="张家港市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p22" label="太仓市委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="太仓市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共苏州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="苏州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="苏州市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协苏州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="220" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共苏州市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共虎丘区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市虎丘区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共吴中区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市吴中区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共相城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市相城区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共姑苏区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市姑苏区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共吴江区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市吴江区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共张家港市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市张家港市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共常熟市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市常熟市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共昆山市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市昆山市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共太仓市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市太仓市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="虎丘区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市虎丘区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="吴中区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市吴中区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="相城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市相城区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="姑苏区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市姑苏区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="吴江区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市吴江区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="张家港市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市张家港市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="常熟市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市常熟市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="昆山市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市昆山市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="太仓市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省苏州市太仓市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o24" label="中共江苏省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o25" label="江苏省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="苏州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025-11"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1969年生，湖北洪湖人，2025.11任，江苏省委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="苏州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025-11"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o24" label="江苏省委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025-11"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o2" label="苏州市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1971年生"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p2" target="o1" label="苏州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p3" target="o3" label="苏州市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p4" target="o4" label="苏州市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1963年生"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p5" target="o6" label="虎丘区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1973-03，苏州人"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p6" target="o15" label="虎丘区代区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1977-04，江苏泰兴人"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p7" target="o7" label="吴中区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p8" target="o8" label="相城区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p9" target="o9" label="姑苏区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1969-11，苏州人，此前曾兼任虎丘区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p10" target="o18" label="姑苏区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1975-01，苏州人"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p11" target="o19" label="吴江区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p12" target="o11" label="张家港市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p13" target="o21" label="常熟市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p14" target="o13" label="昆山市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1974-07，张家港人"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p15" target="o22" label="昆山市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1978-08，宜兴人，女"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p16" target="o23" label="太仓市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p17" target="o16" label="吴中区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p18" target="o17" label="相城区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p19" target="o10" label="吴江区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p20" target="o12" label="常熟市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p21" target="o20" label="张家港市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p22" target="o14" label="太仓市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="2025-11"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（苏州市委书记）与王维（市长）为苏州市党政一把手搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p0" target="p1" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="不重叠（前后任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="刘小涛（前任苏州书记，已升省长）→ 范波（2025.11接任苏州书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p5" target="p9" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="不重叠（前后任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="俞愉（现虎丘区委书记）接替方文浜之前兼任的虎丘区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p5" target="p6" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="俞愉（虎丘区委书记）与吴琦（虎丘区代区长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p7" target="p17" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="丁立新（吴中区委书记）与吴中区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p8" target="p18" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="沈志栋（相城区委书记）与相城区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p9" target="p10" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="方文浜（姑苏区委书记）与陈羔（姑苏区长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p19" target="p11" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="吴江区委书记与王国荣（吴江区长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p12" target="p21" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="韩卫（张家港市委书记）与张家港市长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p20" target="p13" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="常熟市委书记与秦猛（常熟市长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p14" target="p15" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="周伟（昆山市委书记）与陈丽艳（昆山市市长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p22" target="p16" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="太仓市委书记与徐华东（太仓市长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p1" target="p5" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导俞愉（虎丘区委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p1" target="p7" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导丁立新（吴中区委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p1" target="p8" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导沈志栋（相城区委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p1" target="p9" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导方文浜（姑苏区委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p1" target="p19" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导吴江区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p1" target="p12" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导韩卫（张家港市委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p1" target="p20" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导常熟市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p1" target="p14" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导周伟（昆山市委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="p1" target="p22" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="范波（市委书记）领导太仓市委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

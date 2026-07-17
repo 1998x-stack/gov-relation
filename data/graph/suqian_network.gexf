@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Claude Code Research Agent</creator>
+    <description>宿迁市（地级市）领导班子 + 5区县工作关系网络 — 2026年7月14日生成</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+      <attribute id="4" title="entity_type" type="string"/>
+      <attribute id="5" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="盛蕾">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1972-11"/>
+          <attvalue for="2" value="江苏苏州"/>
+          <attvalue for="3" value="宿迁市委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="刘浩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1973-05"/>
+          <attvalue for="2" value="江苏邳州"/>
+          <attvalue for="3" value="宿迁市市长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="王瑞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="沭阳县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="马伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="泗阳县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="杨云峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="泗洪县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="宿城区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="宿城区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="宿城区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="宿城区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="宿豫区委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="宿豫区委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="宿豫区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="宿豫区长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="沭阳县委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="沭阳县委书记"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="泗阳县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="泗阳县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="泗洪县长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="信息待查"/>
+          <attvalue for="3" value="泗洪县长"/>
+          <attvalue for="4" value="person"/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="30" g="80" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共宿迁市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="宿迁市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="宿迁市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="200" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协宿迁市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="220" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共宿迁市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="地级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共宿城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市宿城区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共宿豫区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市宿豫区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共沭阳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市沭阳县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共泗阳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市泗阳县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共泗洪县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市泗洪县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="宿城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市宿城区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="宿豫区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市宿豫区"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="沭阳县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市沭阳县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="泗阳县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市泗阳县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="泗洪县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省宿迁市泗洪县"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="县级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="中共江苏省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="江苏省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="江苏省南京市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="organization"/>
+          <attvalue for="5" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="宿迁市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024-12"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1972年生，女，江苏苏州人，2024.12任"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="宿迁市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024-12"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="宿迁市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-05"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1973-05，江苏邳州人，2023.05任"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o1" label="宿迁市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023-05"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o13" label="沭阳县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="o9" label="泗阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p5" target="o10" label="泗洪县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p6" target="o6" label="宿城区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p7" target="o11" label="宿城区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p8" target="o7" label="宿豫区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p9" target="o12" label="宿豫区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p10" target="o8" label="沭阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p11" target="o14" label="泗阳县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p12" target="o15" label="泗洪县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="信息待查"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="2024-12"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盛蕾（宿迁市委书记）与刘浩（市长）为宿迁市党政一把手搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p6" target="p7" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="宿城区委书记与宿城区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p8" target="p9" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="宿豫区委书记与宿豫区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p10" target="p3" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="沭阳县委书记与王瑞（沭阳县长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p4" target="p11" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="马伟（泗阳县委书记）与泗阳县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p5" target="p12" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="杨云峰（泗洪县委书记）与泗洪县长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p1" target="p6" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盛蕾（市委书记）领导宿城区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p8" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盛蕾（市委书记）领导宿豫区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p10" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盛蕾（市委书记）领导沭阳县委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p1" target="p4" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盛蕾（市委书记）领导马伟（泗阳县委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p1" target="p5" label="隶属关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="隶属关系"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="盛蕾（市委书记）领导杨云峰（泗洪县委书记）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

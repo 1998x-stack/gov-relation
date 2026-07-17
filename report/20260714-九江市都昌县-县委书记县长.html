@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>都昌县领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0A0B0D;
+  --card: #121317;
+  --card-hover: #1A1C22;
+  --border: #1E2028;
+  --ink: #E3DDD4;
+  --ink-dim: #7D786E;
+  --cinnabar: #E03C31;
+  --cinnabar-dim: #8A1A1A;
+  --gold: #C9A94E;
+  --gold-dim: #6A5A2E;
+  --blue: #4A7FC7;
+  --purple: #7A5A9A;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--surface); color: var(--ink);
+  font-family: 'Inter', -apple-system, 'PingFang SC', sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--cinnabar);
+}
+header .badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--cinnabar);
+  border: 1px solid var(--cinnabar);
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+header .sub {
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  margin-top: 0.3rem;
+}
+.stats-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: center; }
+.stat-item b {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold);
+  font-family: 'Noto Serif SC', serif;
+}
+.stat-item span {
+  font-size: 0.6rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.06em;
+}
+
+/* Section */
+.section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-of-type { border-bottom: none; }
+h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+h2 .num {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: var(--cinnabar);
+  font-weight: 400;
+}
+
+/* Person Cards */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+.person-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.2rem;
+  position: relative;
+  border-radius: 2px;
+}
+.person-card.primary { border-left: 3px solid var(--cinnabar); }
+.person-card.secondary { border-left: 3px solid var(--blue); }
+.person-card.vice { border-left: 3px solid var(--gold-dim); }
+.person-card .role {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--cinnabar);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.person-card.primary .role { color: var(--cinnabar); }
+.person-card.secondary .role { color: var(--blue); }
+.person-card.vice .role { color: var(--gold); }
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.person-card .post {
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  margin-top: 0.2rem;
+}
+.person-card .meta {
+  font-size: 0.7rem;
+  color: var(--ink-dim);
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+.person-card .gap {
+  font-size: 0.7rem;
+  color: var(--cinnabar);
+  margin-top: 0.3rem;
+}
+
+/* Timeline */
+.timeline { position: relative; padding-left: 1.5rem; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.tl-item {
+  position: relative;
+  padding: 0 0 1.2rem 1rem;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--surface);
+}
+.tl-item.gap-item::before { background: var(--cinnabar); }
+.tl-item .date {
+  font-size: 0.7rem;
+  color: var(--cinnabar);
+  font-weight: 600;
+}
+.tl-item .event {
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+.tl-item .note {
+  font-size: 0.7rem;
+  color: var(--ink-dim);
+  margin-top: 0.1rem;
+}
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+.data-table th {
+  text-align: left;
+  color: var(--gold);
+  font-weight: 600;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.data-table td {
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-dim);
+}
+.data-table tr:hover td { color: var(--ink); }
+.data-table td.name { color: var(--ink); font-weight: 600; }
+
+/* Insights */
+.insight-list { list-style: none; }
+.insight-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+.insight-list li:last-child { border-bottom: none; }
+.insight-list li .priority {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--cinnabar);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+.insight-list li .priority.p2 { color: var(--gold); }
+.insight-list li .priority.p3 { color: var(--ink-dim); }
+
+/* Network List */
+.network-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 2px;
+}
+.network-item .name {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  color: var(--blue);
+}
+.network-item .detail {
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  margin-top: 0.15rem;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--blue); }
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 1.2rem; }
+  .person-grid { grid-template-columns: 1fr; }
+  .stats-row { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="badge">机密 · 干部人事关系调研</div>
+    <h1>都昌县领导班子工作关系网络</h1>
+    <div class="sub">九江市都昌县 · 县委书记 &amp; 县长 · 2026年7月14日</div>
+    <div class="stats-row">
+      <div class="stat-item"><b>23</b><span>人物收录</span></div>
+      <div class="stat-item"><b>13</b><span>机构</span></div>
+      <div class="stat-item"><b>25</b><span>任职记录</span></div>
+      <div class="stat-item"><b>17</b><span>人物关系</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- Section 1: Key Figures -->
+<div class="section">
+  <h2><span class="num">01</span>核心人物</h2>
+  <div class="person-grid">
+    <div class="person-card primary">
+      <div class="role">县委书记</div>
+      <div class="name">徐翔</div>
+      <div class="post">中共都昌县委书记</div>
+      <div class="meta">2026年上任 · 接替邱舰</div>
+      <div class="gap">⚠ 履历：出生年月、籍贯、教育背景等信息均待查</div>
+    </div>
+    <div class="person-card secondary">
+      <div class="role">代县长</div>
+      <div class="name">韩政兴</div>
+      <div class="post">都昌县人民政府副县长、代理县长</div>
+      <div class="meta">2026年7月13日任命 · 接替万述幼</div>
+      <div class="gap">⚠ 履历：所有基本信息均待查（最新信息缺口）</div>
+    </div>
+    <div class="person-card vice">
+      <div class="role">人大常委会主任</div>
+      <div class="name">叶长青</div>
+      <div class="post">都昌县人大常委会主任</div>
+    </div>
+    <div class="person-card vice">
+      <div class="role">政协主席</div>
+      <div class="name">谭四明</div>
+      <div class="post">政协都昌县委员会主席</div>
+    </div>
+    <div class="person-card vice">
+      <div class="role">组织部长</div>
+      <div class="name">沈承峰</div>
+      <div class="post">都昌县委常委、组织部部长</div>
+    </div>
+    <div class="person-card vice">
+      <div class="role">县委办主任</div>
+      <div class="name">余琦</div>
+      <div class="post">都昌县政协副主席、县委办公室主任</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Recent Changes -->
+<div class="section">
+  <h2><span class="num">02</span>近期人事变动</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="date">2026年（上半年）</div>
+      <div class="event">邱舰卸任都昌县委书记，徐翔接任</div>
+      <div class="note">精确时间待确认</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2026年（上半年）</div>
+      <div class="event">万述幼卸任都昌县县长</div>
+      <div class="note">精确时间待确认</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2026年7月13日</div>
+      <div class="event"><strong>韩政兴</strong>被任命为副县长、代县长</div>
+      <div class="note">县第十七届人大常委会第四十次会议</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">2026年7月13日</div>
+      <div class="event"><strong>刘小伟</strong>任法院代院长，<strong>万钧</strong>任检察院代检察长</div>
+      <div class="note">同日任命，司法系统同步换血</div>
+    </div>
+    <div class="tl-item gap-item">
+      <div class="date">2026年7月</div>
+      <div class="event">县乡两级人大换届选举工作启动</div>
+      <div class="note">培训会议已召开，标志都昌进入新一轮政治周期</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Leadership Team -->
+<div class="section">
+  <h2><span class="num">03</span>现任领导班子</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>姓名</th><th>职务</th><th>状态</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="name">徐翔</td><td>县委书记</td><td>现任</td></tr>
+      <tr><td class="name">韩政兴</td><td>代县长</td><td>2026.07新任</td></tr>
+      <tr><td class="name">叶长青</td><td>人大常委会主任</td><td>现任</td></tr>
+      <tr><td class="name">谭四明</td><td>政协主席</td><td>现任</td></tr>
+      <tr><td class="name">沈承峰</td><td>县委常委、组织部部长</td><td>现任</td></tr>
+      <tr><td class="name">梅中华</td><td>县领导</td><td>现任</td></tr>
+      <tr><td class="name">余琦</td><td>政协副主席、县委办主任</td><td>现任</td></tr>
+      <tr><td class="name">陈长虹</td><td>人大常委会副主任</td><td>现任</td></tr>
+      <tr><td class="name">江东海</td><td>人大常委会副主任</td><td>现任</td></tr>
+      <tr><td class="name">江康侥</td><td>人大常委会副主任</td><td>现任</td></tr>
+      <tr><td class="name">梅水荣</td><td>人大常委会副主任</td><td>现任</td></tr>
+      <tr><td class="name">邵新生</td><td>人大常委会副主任</td><td>现任</td></tr>
+      <tr><td class="name">刘小伟</td><td>法院代院长</td><td>2026.07新任</td></tr>
+      <tr><td class="name">万钧</td><td>检察院代检察长</td><td>2026.07新任</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:1rem; font-size:0.78rem; color:var(--cinnabar);">
+    ⚠ 县委常委班子（含县委副书记、纪委书记、政法委书记、宣传部长、统战部长、常务副县长、人武部政委等约7-8人）身份尚未从公开渠道确认
+  </div>
+</div>
+
+<!-- Section 4: Predecessors -->
+<div class="section">
+  <h2><span class="num">04</span>前任领导去向</h2>
+  <div class="person-grid">
+    <div class="person-card vice">
+      <div class="role">前任县委书记</div>
+      <div class="name">邱舰</div>
+      <div class="post">原中共都昌县委书记</div>
+      <div class="meta">去向：待查</div>
+      <div class="gap">⚠ 完整履历及当前职务均待查</div>
+    </div>
+    <div class="person-card vice">
+      <div class="role">前任县长</div>
+      <div class="name">万述幼</div>
+      <div class="post">原都昌县人民政府县长</div>
+      <div class="meta">去向：待查</div>
+      <div class="gap">⚠ 完整履历及当前职务均待查</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 5: Cross-county Network -->
+<div class="section">
+  <h2><span class="num">05</span>都昌籍跨县干部网络</h2>
+  <p style="font-size:0.78rem; color:var(--ink-dim); margin-bottom:1rem;">
+    都昌县作为九江人口大县（约77万户籍人口），向外输送了大量干部。
+    以下为本次调查识别到的都昌籍在外地任职的重要干部：
+  </p>
+
+  <div class="network-item">
+    <div class="name">江训开</div>
+    <div class="detail">鹰潭市委常委、常务副市长 — 副厅级</div>
+  </div>
+  <div class="network-item">
+    <div class="name">吴隽</div>
+    <div class="detail">景德镇市委专职副书记（博士/教授）— 副厅级</div>
+  </div>
+  <div class="network-item">
+    <div class="name">付磊</div>
+    <div class="detail">青山湖区委常委、组织部部长 — 县处级（1981年·都昌籍）</div>
+  </div>
+  <div class="network-item">
+    <div class="name">江龙</div>
+    <div class="detail">红谷滩区委常委、常务副区长 — 县处级（1981年·都昌籍）</div>
+  </div>
+  <div class="network-item">
+    <div class="name">谭翼直</div>
+    <div class="detail">安义县委常委、常务副县长 — 县处级（1988年·都昌籍）</div>
+  </div>
+  <div class="network-item">
+    <div class="name">余超</div>
+    <div class="detail">安义县委常委、副县长 — 县处级（1983年·都昌籍）</div>
+  </div>
+  <div class="network-item">
+    <div class="name">汪众华</div>
+    <div class="detail">南昌市文联党组书记（原青云谱区长）— 县处级（1979年·都昌籍）</div>
+  </div>
+</div>
+
+<!-- Section 6: Key Insights -->
+<div class="section">
+  <h2><span class="num">06</span>关键洞察</h2>
+  <ul class="insight-list">
+    <li>
+      <span class="priority">P1</span>
+      <div><strong>徐翔完整履历是首要缺口</strong> — 县委书记的职业生涯全程是理解都昌县权力结构的核心入口。目前除姓名和职务外，所有个人信息均不可得。</div>
+    </li>
+    <li>
+      <span class="priority">P1</span>
+      <div><strong>韩政兴来源地决定权力根基</strong> — 代县长从何处调任（九江本地提拔/市直空降/跨县交流）直接决定其在都昌的权力基础。目前完全未知。</div>
+    </li>
+    <li>
+      <span class="priority">P1</span>
+      <div><strong>县委常委班子成员基本空白</strong> — 目前仅确认书记徐翔和组织部长沈承峰2名常委，其余约7-8名常委身份完全未知。</div>
+    </li>
+    <li>
+      <span class="priority">P2</span>
+      <div><strong>邱舰和万述幼的去向</strong> — 前任书记和县长离任后的安排可揭示都昌县在九江市干部版图中的位置。</div>
+    </li>
+    <li>
+      <span class="priority">P2</span>
+      <div><strong>都昌籍跨市网络</strong> — 江训开（鹰潭·副厅级）和吴隽（景德镇·副厅级）两位都昌籍厅级干部构成跨市联络节点，值得深挖。</div>
+    </li>
+    <li>
+      <span class="priority">P3</span>
+      <div><strong>换届周期观察</strong> — 都昌县2026年7月启动县乡人大换届，结合县委书记和县长同时换人，标志都昌进入新一轮政治周期。</div>
+    </li>
+  </ul>
+</div>
+
+<!-- Section 7: Data Files -->
+<div class="section" style="border-bottom: none;">
+  <h2><span class="num">07</span>数据文件</h2>
+  <div style="font-size:0.78rem; color:var(--ink-dim);">
+    <p style="margin-bottom:0.5rem;"><strong style="color:var(--ink);">SQLite数据库</strong><br>data/database/duchang_network.db — 23人物 · 13机构 · 25任职 · 17关系</p>
+    <p style="margin-bottom:0.5rem;"><strong style="color:var(--ink);">GEXF图</strong><br>data/graph/duchang_network.gexf — 36节点 · 42边</p>
+    <p style="margin-bottom:0.5rem;"><strong style="color:var(--ink);">Markdown报告</strong><br>report/20260714-九江市都昌县-县委书记县长.md</p>
+    <p><strong style="color:var(--ink);">Python脚本</strong><br>build_duchang_data.py</p>
+  </div>
+</div>
+
+</div><!-- /.container -->
+
+<footer>
+  <div class="container">
+    <p>数据来源：都昌县人民政府官网 (duchang.gov.cn) · 百度百科 · 新闻报道</p>
+    <p style="margin-top:0.3rem;">生成时间：2026-07-14 · 编号：DC-20260714-001</p>
+    <p style="margin-top:0.3rem;"><a href="20260714-九江市都昌县-县委书记县长.md">查看完整报告</a> · <a href="../data/graph/duchang_network.gexf">下载GEXF图</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

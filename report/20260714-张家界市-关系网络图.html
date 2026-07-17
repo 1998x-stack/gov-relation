@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张家界市领导班子 — 关系网络图</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #e8e4dd; font-family: 'Inter', -apple-system, sans-serif; }
+#header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; border-bottom: 1px solid #222;
+}
+#header h1 { font-size: 18px; font-weight: 600; letter-spacing: 0.05em; }
+#header h1 span { color: #E03C31; }
+#header .info { font-size: 12px; color: #888; }
+#mynetwork {
+  width: 100%; height: calc(100vh - 120px);
+  background: #0a0a0a;
+}
+#legend {
+  position: fixed; bottom: 24px; left: 24px;
+  background: rgba(17,17,17,0.95); border: 1px solid #222; padding: 16px;
+  font-size: 12px; line-height: 1.8; z-index: 100;
+}
+#legend h3 { font-size: 11px; color: #888; margin-bottom: 6px; letter-spacing: 0.1em; }
+.legend-row { display: flex; align-items: center; gap: 8px; }
+.legend-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.legend-sq { display: inline-block; width: 12px; height: 12px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>张家界市 <span>领导班子</span> 关系网络</h1>
+  <div class="info">23 人物节点 · 20 组织机构 · 35 关系连线</div>
+</div>
+
+<div id="mynetwork"></div>
+
+<div id="legend">
+  <h3>图例</h3>
+  <div class="legend-row"><span class="legend-dot" style="background:#E03C31;"></span> 党委书记</div>
+  <div class="legend-row"><span class="legend-dot" style="background:#3B82F6;"></span> 政府首长</div>
+  <div class="legend-row"><span class="legend-dot" style="background:#F59E0B;"></span> 纪委书记</div>
+  <div class="legend-row"><span class="legend-dot" style="background:#10B981;"></span> 人大</div>
+  <div class="legend-row"><span class="legend-dot" style="background:#8B5CF6;"></span> 政协</div>
+  <div class="legend-row"><span class="legend-dot" style="background:#6B7280;"></span> 其他职务</div>
+  <div class="legend-row"><span class="legend-sq" style="background:#DC2626;"></span> 党委机关</div>
+  <div class="legend-row"><span class="legend-sq" style="background:#2563EB;"></span> 政府机关</div>
+  <div class="legend-row" style="margin-top:6px;"><span style="color:#C9A94E;">━━</span> 人员关系</div>
+  <div class="legend-row"><span style="color:#9CA3AF;">━━</span> 任职关系</div>
+</div>
+
+<script>
+const nodes = [
+  // 市级领导
+  { id: 1, label: '贺辉\n市委书记', group: 'party_secretary', title: '贺辉 · 1971.09 · 湖南益阳\n张家界市委书记\n博士（湘潭大学机械设计）', size: 25 },
+  { id: 2, label: '陈澎\n代市长', group: 'government', title: '陈澎 · 1974.04 · 湖南湘乡\n张家界市委副书记、代市长\n武汉大学新闻系 → 法学博士', size: 22 },
+  { id: 3, label: '田华玉\n人大主任', group: 'npc', title: '田华玉(女) · 1973.05 · 土家族 · 湖南慈利\n张家界市人大常委会主任', size: 18 },
+  { id: 4, label: '杨广林\n政协主席', group: 'cppcc', title: '杨广林 · 1965.08 · 湖南永州\n张家界市政协主席', size: 18 },
+  { id: 5, label: '王令波\n纪委书记', group: 'discipline', title: '王令波(女) · 1970.02\n市委常委、市纪委书记', size: 16 },
+  { id: 6, label: '廖国豪\n组织部长', group: 'other', title: '廖国豪 · 1973.04\n市委常委、组织部部长', size: 16 },
+  { id: 7, label: '贺建壬\n市委秘书长', group: 'other', title: '贺建壬 · 1972.06\n市委常委、秘书长', size: 14 },
+  { id: 8, label: '吴文海\n宣传部长', group: 'other', title: '吴文海 · 1977.05\n市委常委、宣传部部长\n外交学院法学硕士', size: 14 },
+  { id: 9, label: '林宏生\n军分区司令', group: 'other', title: '林宏生 · 1974.09\n市委常委、军分区司令员', size: 14 },
+  { id: 10, label: '赵云海\n统战部长', group: 'other', title: '赵云海 · 1974.09 · 土家族\n市委常委、统战部部长\n桑植县长出身', size: 16 },
+  { id: 11, label: '崔晓\n常务副市长', group: 'government', title: '崔晓(女) · 1982.02\n市委常委、常务副市长\n班子最年轻成员', size: 16 },
+  { id: 12, label: '马碧\n副市长', group: 'government', title: '马碧 · 1978.02\n市委常委、副市长', size: 14 },
+  // 区县领导
+  { id: 13, label: '张喜松\n永定区委书记', group: 'party_secretary', title: '张喜松\n中共永定区委书记', size: 16 },
+  { id: 14, label: '刘梦融\n永定代区长', group: 'government', title: '刘梦融\n永定区委副书记、代区长', size: 14 },
+  { id: 15, label: '钟跃波\n武陵源区委书记', group: 'party_secretary', title: '钟跃波（原区长升书记）\n武陵源区委书记、张管局党委书记', size: 16 },
+  { id: 16, label: '代劲\n武陵源代区长', group: 'government', title: '代劲\n武陵源区委副书记、代理区长', size: 14 },
+  { id: 17, label: '侯毅\n慈利县委书记', group: 'party_secretary', title: '侯毅\n中共慈利县委书记', size: 16 },
+  { id: 18, label: '姜华\n慈利代县长', group: 'government', title: '姜华\n慈利县委副书记、代县长', size: 14 },
+  { id: 19, label: '黄瑛\n桑植县委书记', group: 'party_secretary', title: '黄瑛(女)\n中共桑植县委书记', size: 16 },
+  { id: 20, label: '张冲\n桑植代县长', group: 'government', title: '张冲\n桑植县委副书记、代县长', size: 14 },
+  // 前任
+  { id: 21, label: '刘革安\n原市委书记', group: 'other', title: '刘革安\n原张家界市委书记(2021-2026)\n现调任湖南省委统战部', size: 14 },
+  { id: 22, label: '王洪斌\n原市长', group: 'other', title: '王洪斌\n原张家界市长(2021-2025)\n去向待核实', size: 14 },
+  { id: 23, label: '虢正贵\n湘西州委书记', group: 'party_secretary', title: '虢正贵\n原张家界市委书记(2016-2021)\n现任湘西州委书记', size: 16 },
+  // 组织机构
+  { id: 101, label: '市委', group: 'org_party', title: '中共张家界市委员会', size: 10, shape: 'box', color: '#DC2626' },
+  { id: 102, label: '市政府', group: 'org_gov', title: '张家界市人民政府', size: 10, shape: 'box', color: '#2563EB' },
+  { id: 103, label: '市人大常委会', group: 'org_other', title: '张家界市人大常委会', size: 8, shape: 'box', color: '#059669' },
+  { id: 104, label: '市政协', group: 'org_other', title: '张家界市政协', size: 8, shape: 'box', color: '#7C3AED' },
+  { id: 105, label: '市纪委', group: 'org_other', title: '中共张家界市纪律检查委员会', size: 8, shape: 'box', color: '#D97706' },
+  { id: 106, label: '市委组织部', group: 'org_other', title: '中共张家界市委组织部', size: 8, shape: 'box', color: '#9333EA' },
+  { id: 107, label: '市委宣传部', group: 'org_other', title: '中共张家界市委宣传部', size: 8, shape: 'box', color: '#9333EA' },
+  { id: 108, label: '市委统战部', group: 'org_other', title: '中共张家界市委统战部', size: 8, shape: 'box', color: '#9333EA' },
+  { id: 109, label: '市委办', group: 'org_other', title: '中共张家界市委办公室', size: 8, shape: 'box', color: '#9333EA' },
+  { id: 110, label: '军分区', group: 'org_other', title: '张家界军分区', size: 8, shape: 'box', color: '#4B5563' },
+  { id: 111, label: '永定区委', group: 'org_party', title: '中共永定区委员会', size: 8, shape: 'box', color: '#DC2626' },
+  { id: 112, label: '永定区政府', group: 'org_gov', title: '永定区人民政府', size: 8, shape: 'box', color: '#2563EB' },
+  { id: 113, label: '武陵源区委', group: 'org_party', title: '中共武陵源区委员会', size: 8, shape: 'box', color: '#DC2626' },
+  { id: 114, label: '武陵源区政府', group: 'org_gov', title: '武陵源区人民政府', size: 8, shape: 'box', color: '#2563EB' },
+  { id: 115, label: '慈利县委', group: 'org_party', title: '中共慈利县委员会', size: 8, shape: 'box', color: '#DC2626' },
+  { id: 116, label: '慈利县政府', group: 'org_gov', title: '慈利县人民政府', size: 8, shape: 'box', color: '#2563EB' },
+  { id: 117, label: '桑植县委', group: 'org_party', title: '中共桑植县委员会', size: 8, shape: 'box', color: '#DC2626' },
+  { id: 118, label: '桑植县政府', group: 'org_gov', title: '桑植县人民政府', size: 8, shape: 'box', color: '#2563EB' },
+  { id: 119, label: '省委统战部', group: 'org_other', title: '湖南省委统战部', size: 8, shape: 'box', color: '#9333EA' },
+  { id: 120, label: '湘西州委', group: 'org_party', title: '中共湘西州委员会', size: 8, shape: 'box', color: '#DC2626' },
+];
+
+const edges = [
+  // 人员→组织
+  { from: 1, to: 101, title: '市委书记', color: '#9CA3AF', width: 1 },
+  { from: 2, to: 102, title: '代市长、党组书记', color: '#9CA3AF', width: 1 },
+  { from: 3, to: 103, title: '市人大常委会主任', color: '#9CA3AF', width: 1 },
+  { from: 4, to: 104, title: '市政协主席', color: '#9CA3AF', width: 1 },
+  { from: 5, to: 105, title: '市纪委书记', color: '#9CA3AF', width: 1 },
+  { from: 6, to: 106, title: '组织部部长', color: '#9CA3AF', width: 1 },
+  { from: 7, to: 109, title: '市委秘书长', color: '#9CA3AF', width: 1 },
+  { from: 8, to: 107, title: '宣传部部长', color: '#9CA3AF', width: 1 },
+  { from: 9, to: 110, title: '军分区司令员', color: '#9CA3AF', width: 1 },
+  { from: 10, to: 108, title: '统战部部长', color: '#9CA3AF', width: 1 },
+  { from: 11, to: 102, title: '常务副市长', color: '#9CA3AF', width: 1 },
+  { from: 12, to: 102, title: '副市长', color: '#9CA3AF', width: 1 },
+  { from: 13, to: 111, title: '永定区委书记', color: '#9CA3AF', width: 1 },
+  { from: 14, to: 112, title: '代区长', color: '#9CA3AF', width: 1 },
+  { from: 15, to: 113, title: '武陵源区委书记', color: '#9CA3AF', width: 1 },
+  { from: 16, to: 114, title: '代理区长', color: '#9CA3AF', width: 1 },
+  { from: 17, to: 115, title: '慈利县委书记', color: '#9CA3AF', width: 1 },
+  { from: 18, to: 116, title: '代县长', color: '#9CA3AF', width: 1 },
+  { from: 19, to: 117, title: '桑植县委书记', color: '#9CA3AF', width: 1 },
+  { from: 20, to: 118, title: '代县长', color: '#9CA3AF', width: 1 },
+  { from: 21, to: 101, title: '原市委书记', color: '#9CA3AF', width: 1 },
+  { from: 21, to: 119, title: '调任省委统战部', color: '#9CA3AF', width: 1 },
+  { from: 22, to: 102, title: '原市长', color: '#9CA3AF', width: 1 },
+  { from: 23, to: 101, title: '原市委书记', color: '#9CA3AF', width: 1 },
+  { from: 23, to: 120, title: '现任湘西州委书记', color: '#9CA3AF', width: 1 },
+  // 人物↔人物
+  { from: 1, to: 2, title: '党政搭档：贺辉（书记）+ 陈澎（代市长）', color: '#C9A94E', width: 4, dashes: false },
+  { from: 21, to: 1, title: '前后任书记：刘革安→贺辉', color: '#C9A94E', width: 3, dashes: false },
+  { from: 22, to: 2, title: '前后任市长：王洪斌→陈澎', color: '#C9A94E', width: 3, dashes: false },
+  { from: 23, to: 21, title: '前后任书记：虢正贵→刘革安', color: '#C9A94E', width: 3, dashes: false },
+  { from: 10, to: 19, title: '桑植渊源：赵云海曾任桑植县长', color: '#C9A94E', width: 2, dashes: true },
+  { from: 10, to: 20, title: '桑植渊源：赵云海曾任桑植县长', color: '#C9A94E', width: 2, dashes: true },
+  { from: 15, to: 16, title: '党政搭档：钟跃波（书记）+ 代劲（代理区长）', color: '#C9A94E', width: 3, dashes: false },
+  { from: 13, to: 14, title: '党政搭档：张喜松（书记）+ 刘梦融（代区长）', color: '#C9A94E', width: 2, dashes: false },
+  { from: 17, to: 18, title: '党政搭档：侯毅（书记）+ 姜华（代县长）', color: '#C9A94E', width: 2, dashes: false },
+  { from: 19, to: 20, title: '党政搭档：黄瑛（书记）+ 张冲（代县长）', color: '#C9A94E', width: 2, dashes: false },
+];
+
+const container = document.getElementById('mynetwork');
+const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+const options = {
+  nodes: {
+    font: { color: '#e8e4dd', size: 11, face: 'Inter, sans-serif' },
+    borderWidth: 1,
+    borderWidthSelected: 2,
+    color: {
+      border: '#333',
+      highlight: { border: '#E03C31', background: '#2a1a1a' },
+    },
+    shape: 'dot',
+    shadow: { enabled: false },
+  },
+  edges: {
+    font: { color: '#888', size: 9, align: 'middle' },
+    smooth: { type: 'curvedCW', roundness: 0.2 },
+  },
+  groups: {
+    party_secretary: { color: { background: '#E03C31', border: '#a02a20' } },
+    government: { color: { background: '#3B82F6', border: '#1e40af' } },
+    discipline: { color: { background: '#F59E0B', border: '#b45309' } },
+    npc: { color: { background: '#10B981', border: '#047857' } },
+    cppcc: { color: { background: '#8B5CF6', border: '#6d28d9' } },
+    other: { color: { background: '#6B7280', border: '#374151' } },
+    org_party: { shape: 'box', color: { background: '#7F1D1D', border: '#DC2626' }, font: { size: 9 } },
+    org_gov: { shape: 'box', color: { background: '#1E3A5F', border: '#2563EB' }, font: { size: 9 } },
+    org_other: { shape: 'box', color: { background: '#2d1b4e', border: '#9333EA' }, font: { size: 9 } },
+  },
+  physics: {
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -40,
+      centralGravity: 0.005,
+      springLength: 180,
+      springConstant: 0.02,
+      damping: 0.4,
+    },
+    stabilization: { iterations: 300 },
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 200,
+    zoomView: true,
+    dragView: true,
+  },
+  layout: { improvedLayout: true },
+};
+
+const network = new vis.Network(container, data, options);
+network.once('stabilized', function() { network.fit({ animation: true }); });
+window.addEventListener('resize', function() { network.fit(); });
+</script>
+</body>
+</html>

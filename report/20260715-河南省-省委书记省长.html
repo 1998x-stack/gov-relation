@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>河南省委书记省长工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:15px}
+body{background:#0a0a0a;color:#e8ddd0;font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:#E03C31;color:#fff}
+
+/* Header */
+.header{border-bottom:1px solid #1e1e1e;padding:2.5rem 2.5rem 1.5rem;position:relative}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#E03C31}
+.header-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem}
+.header h1{font-family:'Noto Serif SC',serif;font-size:1.6rem;font-weight:900;color:#f0e8d8;letter-spacing:.04em}
+.header .sub{font-size:.75rem;color:#7a7266;margin-top:.35rem}
+.classification{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#E03C31;letter-spacing:.15em;border:1px solid #E03C31;padding:.2rem .6rem;display:inline-block;opacity:.7}
+.stats-row{display:flex;gap:2.5rem;margin-top:1.5rem;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat-num{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:500;color:#f0e8d8;line-height:1}
+.stat-label{font-size:.65rem;color:#6a6256;text-transform:uppercase;letter-spacing:.08em;margin-top:.35rem}
+
+/* Section */
+.section{padding:2rem 2.5rem;border-bottom:1px solid #1a1a1a}
+.section-title{font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:#f0e8d8;margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.section-title .num{color:#E03C31;font-weight:400;font-size:.85rem;font-family:'JetBrains Mono',monospace}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(to right,#1e1e1e,transparent)}
+
+/* Person cards */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:#1a1a1a}
+.pcard{background:#0d0d0d;padding:1.25rem;position:relative}
+.pcard::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
+.pcard.ps::before{background:#E03C31}
+.pcard.gov::before{background:#3a7bd5}
+.pcard.dep::before{background:#c49a2a}
+.pcard-role{font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6a6256;margin-bottom:.3rem}
+.pcard-name{font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:#f0e8d8}
+.pcard-post{font-size:.8rem;color:#b0a898;margin-top:.15rem}
+.pcard-meta{font-size:.68rem;color:#6a6256;margin-top:.5rem}
+.pcard-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.6rem}
+.tag{font-size:.6rem;padding:.15rem .5rem;border:1px solid #2a2a2a;color:#8a8276;background:transparent}
+.tag.strong{border-color:#C9A94E;color:#C9A94E}
+.tag.warn{border-color:#E03C31;color:#E03C31}
+
+/* Timeline */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:1px;background:#2a2a2a}
+.tl-section{margin-bottom:2rem}
+.tl-section:last-child{margin-bottom:0}
+.tl-province{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:600;color:#C9A94E;margin-bottom:.75rem;position:relative}
+.tl-province::before{content:'';position:absolute;left:-1.7rem;top:.4rem;width:.6rem;height:.6rem;border-radius:50%;background:#C9A94E;border:2px solid #0a0a0a}
+.tl-item{position:relative;padding:.4rem 0 .4rem 0;border-left:1px solid #1e1e1e;padding-left:1rem;margin-left:.5rem}
+.tl-item::before{content:'';position:absolute;left:-.35rem;top:.7rem;width:.5rem;height:.5rem;border-radius:50%;background:#1e1e1e;border:1px solid #3a3a3a}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:#6a6256}
+.tl-title{font-size:.82rem;color:#f0e8d8;margin-top:.05rem}
+.tl-note{font-size:.68rem;color:#6a6256;margin-top:.05rem}
+
+/* Chains */
+.chain{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;padding:.5rem 0}
+.chain-item{display:flex;flex-direction:column;align-items:center}
+.chain-name{font-family:'Noto Serif SC',serif;font-size:.9rem;font-weight:600;color:#f0e8d8}
+.chain-role{font-size:.6rem;color:#6a6256}
+.chain-arrow{color:#3a3a3a;font-size:1.2rem}
+.chain-dest{font-size:.68rem;color:#7a7266;font-style:italic;margin-top:.15rem}
+
+/* Matrix */
+.matrix-wrap{overflow-x:auto}
+.matrix{font-size:.68rem;border-collapse:collapse;width:100%}
+.matrix th,.matrix td{padding:.4rem .6rem;border:1px solid #1a1a1a;text-align:center;white-space:nowrap}
+.matrix th{background:#0d0d0d;color:#6a6256;font-weight:500;font-size:.6rem;letter-spacing:.05em}
+.matrix .conn{color:#C9A94E;font-size:.75rem}
+.matrix .empty{color:#1e1e1e}
+
+/* Flow */
+.flow-wrap{display:flex;gap:2rem;flex-wrap:wrap}
+.flow{flex:1;min-width:280px}
+.flow-name{font-family:'Noto Serif SC',serif;font-size:.85rem;font-weight:600;color:#f0e8d8;margin-bottom:.75rem}
+.flow-step{display:flex;align-items:center;gap:.5rem;padding:.3rem 0}
+.flow-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.flow-dot.red{background:#E03C31}
+.flow-dot.blue{background:#3a7bd5}
+.flow-dot.gold{background:#C9A94E}
+.flow-dot.grey{background:#6a6256}
+.flow-org{font-size:.75rem;color:#f0e8d8;min-width:100px}
+.flow-period{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#6a6256;min-width:60px}
+.flow-arrow{color:#2a2a2a;font-size:.6rem;margin:0 .25rem}
+
+/* Insights */
+.insights{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:#1a1a1a}
+.insight-card{background:#0d0d0d;padding:1.25rem}
+.insight-pri{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#E03C31;margin-bottom:.3rem}
+.insight-title{font-family:'Noto Serif SC',serif;font-size:.85rem;font-weight:600;color:#f0e8d8;margin-bottom:.35rem}
+.insight-body{font-size:.72rem;color:#8a8276;line-height:1.5}
+
+/* Footnotes */
+.footer{padding:1.5rem 2.5rem;font-size:.65rem;color:#4a4438;border-top:1px solid #1a1a1a}
+
+/* Utility */
+.flex{display:flex;flex-wrap:wrap;gap:.5rem}
+.gap-1{gap:1rem}
+
+@media(max-width:720px){
+  .header{padding:1.5rem 1rem 1rem}
+  .section{padding:1.5rem 1rem}
+  .header h1{font-size:1.2rem}
+  .cards-grid{grid-template-columns:1fr}
+  .insights{grid-template-columns:1fr}
+  .stats-row{gap:1.5rem}
+  .footer{padding:1rem}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="classification">机密 · INTELLIGENCE BRIEFING</div>
+  <div class="header-top">
+    <div>
+      <h1>河南省领导班子工作关系网络</h1>
+      <div class="sub">省委书记 · 省长 · 省委常委会 · 跨省交流网络 · 2026年7月15日</div>
+    </div>
+  </div>
+  <div class="stats-row">
+    <div class="stat"><span class="stat-num">31</span><span class="stat-label">人物</span></div>
+    <div class="stat"><span class="stat-num">33</span><span class="stat-label">机构</span></div>
+    <div class="stat"><span class="stat-num">58</span><span class="stat-label">任职记录</span></div>
+    <div class="stat"><span class="stat-num">20</span><span class="stat-label">关系</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="num">01</span>核心人物</div>
+  <div class="cards-grid">
+    <div class="pcard ps">
+      <div class="pcard-role">省委书记 · 人大常委会主任</div>
+      <div class="pcard-name">刘宁</div>
+      <div class="pcard-post">1962年1月 · 辽宁丹东（籍贯吉林临江）</div>
+      <div class="pcard-meta">清华大学水利系 · 武汉大学管理学/工学博士 · 20届中央委员</div>
+      <div class="pcard-tags">
+        <span class="tag strong">水利系统34年</span>
+        <span class="tag">青海省长</span>
+        <span class="tag">辽宁省长</span>
+        <span class="tag">广西书记</span>
+        <span class="tag">2024.12到任</span>
+      </div>
+    </div>
+    <div class="pcard gov">
+      <div class="pcard-role">省委副书记 · 省长</div>
+      <div class="pcard-name">王凯</div>
+      <div class="pcard-post">1962年7月 · 河南洛阳（本土籍贯）</div>
+      <div class="pcard-meta">山西大学 · 中国人民大学 · 武汉大学经济学博士 · 20届中央委员</div>
+      <div class="pcard-tags">
+        <span class="tag strong">中纪委10年</span>
+        <span class="tag">广西16年</span>
+        <span class="tag">吉林4年</span>
+        <span class="tag">2021.04到任</span>
+        <span class="tag warn">金湘军关联</span>
+      </div>
+    </div>
+    <div class="pcard dep">
+      <div class="pcard-role">省委副书记 · 政法委书记</div>
+      <div class="pcard-name">张巍</div>
+      <div class="pcard-post">1968年11月 · 湖北松滋</div>
+      <div class="pcard-meta">武汉大学 · 中央纪委出身 · 20届中央纪委委员</div>
+      <div class="pcard-tags">
+        <span class="tag">中央纪委</span>
+        <span class="tag">黑龙江纪委</span>
+        <span class="tag">河南省纪委→升</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 省纪委书记</div>
+      <div class="pcard-name">秦国文</div>
+      <div class="pcard-post">1967年7月 · 江西南昌</div>
+      <div class="pcard-meta">湘潭矿业学院 · 湖南大学MBA · 从湖南调任</div>
+      <div class="pcard-tags">
+        <span class="tag strong">衡阳书记</span>
+        <span class="tag">湖南省委秘书长</span>
+        <span class="tag">2025.08到任</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 组织部部长</div>
+      <div class="pcard-name">王刚</div>
+      <div class="pcard-post">1969年9月 · 宁夏同心</div>
+      <div class="pcard-meta">北京农业大学 · 从宁夏调任</div>
+      <div class="pcard-tags">
+        <span class="tag">宁夏27年</span>
+        <span class="tag">石嘴山书记</span>
+        <span class="tag">2023.05到任</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 宣传部部长</div>
+      <div class="pcard-name">王崧</div>
+      <div class="pcard-post">1971年2月 · 江西安福</div>
+      <div class="pcard-meta">西安交大本科/硕士 · 清华大学博士 · 中央网信办调任</div>
+      <div class="pcard-tags">
+        <span class="tag strong">清华博士</span>
+        <span class="tag">安徽21年</span>
+        <span class="tag">中央网信办</span>
+        <span class="tag">2025.04到任</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 郑州市委书记</div>
+      <div class="pcard-name">安伟</div>
+      <div class="pcard-post">1966年5月 · 河南镇平</div>
+      <div class="pcard-meta">河南大学 · 兰州大学硕士 · 20届中央候补委员</div>
+      <div class="pcard-tags">
+        <span class="tag strong">本土干部</span>
+        <span class="tag">省委研究室18年</span>
+        <span class="tag">三门峡市长</span>
+        <span class="tag">周口书记</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 洛阳市委书记</div>
+      <div class="pcard-name">陈春江</div>
+      <div class="pcard-post">1971年5月 · 内蒙古（蒙古族）</div>
+      <div class="pcard-meta">商务部助理部长 → 陕西副省长 → 河南调任</div>
+      <div class="pcard-tags">
+        <span class="tag strong">蒙古族</span>
+        <span class="tag">天津16年</span>
+        <span class="tag">商务部</span>
+        <span class="tag">2025.10到任</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 统战部部长</div>
+      <div class="pcard-name">张雷明</div>
+      <div class="pcard-post">1966年6月 · 河南淇县</div>
+      <div class="pcard-meta">北京农业工程大学（现中国农业大学）</div>
+      <div class="pcard-tags">
+        <span class="tag strong">本土干部</span>
+        <span class="tag">平顶山书记</span>
+        <span class="tag">省商务厅</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 常务副省长</div>
+      <div class="pcard-name">张敏</div>
+      <div class="pcard-post">1970年11月 · 山东齐河（女性）</div>
+      <div class="pcard-meta">华东工学院 · 陕西财经学院会计学硕士</div>
+      <div class="pcard-tags">
+        <span class="tag strong">建行副行长</span>
+        <span class="tag">金融转政府</span>
+        <span class="tag">2023到任</span>
+        <span class="tag">2026升常务</span>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role">省委常委 · 秘书长 · 副省长</div>
+      <div class="pcard-name">李涛</div>
+      <div class="pcard-post">1970年5月 · 河南邓州</div>
+      <div class="pcard-meta">郑州大学微电子技术</div>
+      <div class="pcard-tags">
+        <span class="tag strong">本土干部</span>
+        <span class="tag">省政府办公厅</span>
+        <span class="tag">国资委7年</span>
+        <span class="tag">2026.06升常委</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="num">02</span>刘宁 · 职业生涯</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+    <div>
+      <div class="timeline">
+        <div class="tl-section">
+          <div class="tl-province">水利系统 · 1983—2017（34年）</div>
+          <div class="tl-item"><div class="tl-date">1983—1998</div><div class="tl-title">长江水利委员会 技术员→副总工程师</div></div>
+          <div class="tl-item"><div class="tl-date">2001—2003</div><div class="tl-title">南水北调规划设计管理局总工程师</div><div class="tl-note">水利部副总工程师兼任</div></div>
+          <div class="tl-item"><div class="tl-date">2003—2009</div><div class="tl-title">水利部总工程师（正厅级）</div><div class="tl-note">指挥唐家山堰塞湖抢险</div></div>
+          <div class="tl-item"><div class="tl-date">2009—2017</div><div class="tl-title">水利部副部长（副部级）</div><div class="tl-note">兼国家防汛抗旱总指挥部秘书长</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province">青海省 · 2017—2020</div>
+          <div class="tl-item"><div class="tl-date">2017.05—2018.08</div><div class="tl-title">省委副书记、政法委书记</div></div>
+          <div class="tl-item"><div class="tl-date">2018.08—2020.07</div><div class="tl-title">青海省省长（正部级）</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province">辽宁省 · 2020—2021</div>
+          <div class="tl-item"><div class="tl-date">2020.07—2021.10</div><div class="tl-title">辽宁省省长（15个月）</div><div class="tl-note">生于丹东，辽宁为回乡任职</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province">广西壮族自治区 · 2021—2024</div>
+          <div class="tl-item"><div class="tl-date">2021.10—2024.12</div><div class="tl-title">广西壮族自治区党委书记</div><div class="tl-note">搭档蓝天立（政府主席）</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province" style="color:#E03C31">河南省 · 2024—至今</div>
+          <div class="tl-item"><div class="tl-date">2024.12.31</div><div class="tl-title">河南省委书记</div></div>
+          <div class="tl-item"><div class="tl-date">2025.01.21</div><div class="tl-title">兼省人大常委会主任</div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="timeline">
+        <div class="tl-section">
+          <div class="tl-province">中央纪委 · 1991—2001（10年）</div>
+          <div class="tl-item"><div class="tl-date">1991—2002</div><div class="tl-title">中央纪委案件审理室 科员→调研处处长</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province">广西壮族自治区 · 2001—2017（16年）</div>
+          <div class="tl-item"><div class="tl-date">2001—2008</div><div class="tl-title">梧州市副市长→副书记→市长</div><div class="tl-note">下派挂职后留任</div></div>
+          <div class="tl-item"><div class="tl-date">2008—2014</div><div class="tl-title">梧州市市长→玉林市市长</div></div>
+          <div class="tl-item"><div class="tl-date">2014—2017</div><div class="tl-title">玉林市委书记→广西党委常委</div><div class="tl-note">前任金湘军（已调查）</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province">吉林省 · 2017—2021（4年）</div>
+          <div class="tl-item"><div class="tl-date">2017—2019</div><div class="tl-title">吉林省委常委、组织部部长</div><div class="tl-note">前任林武（山东书记）/后任王晓萍（人社部长）</div></div>
+          <div class="tl-item"><div class="tl-date">2019—2021</div><div class="tl-title">长春市委书记</div></div>
+        </div>
+        <div class="tl-section">
+          <div class="tl-province" style="color:#E03C31">河南省 · 2021—至今</div>
+          <div class="tl-item"><div class="tl-date">2021.04.02</div><div class="tl-title">河南省省长（代省长→当选）</div><div class="tl-note">第三位河南籍河南省长</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="num">03</span>省委书记交接链</div>
+  <div style="margin-bottom:1.5rem">
+    <div class="chain">
+      <div class="chain-item"><span class="chain-name">谢伏瞻</span><span class="chain-role">省委书记 2016—2018</span><span class="chain-dest">→ 中国社科院院长</span></div>
+      <span class="chain-arrow">→</span>
+      <div class="chain-item"><span class="chain-name">王国生</span><span class="chain-role">省委书记 2018—2021</span><span class="chain-dest">→ 全国人大</span></div>
+      <span class="chain-arrow">→</span>
+      <div class="chain-item"><span class="chain-name">楼阳生</span><span class="chain-role">省委书记 2021—2024</span><span class="chain-dest">→ 到龄卸任</span></div>
+      <span class="chain-arrow">→</span>
+      <div class="chain-item"><span class="chain-name" style="color:#E03C31">刘宁</span><span class="chain-role">省委书记 2024—至今</span><span class="chain-dest">现任</span></div>
+    </div>
+  </div>
+  <div class="section-title" style="font-size:.9rem;margin-bottom:.75rem"><span class="num"></span>省长交接链</div>
+  <div class="chain">
+    <div class="chain-item"><span class="chain-name">陈润儿</span><span class="chain-role">省长 2016—2019</span><span class="chain-dest">→ 宁夏书记</span></div>
+    <span class="chain-arrow">→</span>
+    <div class="chain-item"><span class="chain-name">尹弘</span><span class="chain-role">省长 2019—2021</span><span class="chain-dest">→ 甘肃/江西书记</span></div>
+    <span class="chain-arrow">→</span>
+    <div class="chain-item"><span class="chain-name" style="color:#3a7bd5">王凯</span><span class="chain-role">省长 2021—至今</span><span class="chain-dest">现任</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="num">04</span>跨省交流网络</div>
+  <div class="flow-wrap">
+    <div class="flow">
+      <div class="flow-name">刘宁的跨省路径</div>
+      <div class="flow-step"><span class="flow-dot red"></span><span class="flow-org">长江水利委员会</span><span class="flow-period">1983—2001</span></div>
+      <div style="padding-left:1rem;color:#2a2a2a;font-size:.6rem">│</div>
+      <div class="flow-step"><span class="flow-dot red"></span><span class="flow-org">水利部（北京）</span><span class="flow-period">2001—2017</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot gold"></span><span class="flow-org">青海省省长</span><span class="flow-period">2018—2020</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot gold"></span><span class="flow-org">辽宁省省长</span><span class="flow-period">2020—2021</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot gold"></span><span class="flow-org">广西党委书记</span><span class="flow-period">2021—2024</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot red"></span><span class="flow-org" style="color:#E03C31;font-weight:600">河南省委书记</span><span class="flow-period">2024—</span></div>
+    </div>
+    <div class="flow">
+      <div class="flow-name">王凯的跨省路径</div>
+      <div class="flow-step"><span class="flow-dot blue"></span><span class="flow-org">中央纪委（北京）</span><span class="flow-period">1991—2001</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot gold"></span><span class="flow-org">广西梧州/玉林</span><span class="flow-period">2001—2017</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot gold"></span><span class="flow-org">吉林组织部长/长春书记</span><span class="flow-period">2017—2021</span></div>
+      <div style="padding-left:1rem"><span class="flow-arrow">────→</span></div>
+      <div class="flow-step"><span class="flow-dot blue"></span><span class="flow-org" style="color:#3a7bd5;font-weight:600">河南省省长</span><span class="flow-period">2021—</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="num">05</span>关键网络节点</div>
+  <div class="cards-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
+    <div class="pcard">
+      <div class="pcard-role" style="color:#E03C31">⚠ 风险节点</div>
+      <div class="pcard-name">金湘军</div>
+      <div class="pcard-post">王凯玉林书记前任</div>
+      <div class="pcard-meta">山西省省长 → 2025年被调查/开除党籍</div>
+      <div class="pcard-tags"><span class="tag warn">2025 被查</span></div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role" style="color:#C9A94E">刘宁后继者</div>
+      <div class="pcard-name">信长星</div>
+      <div class="pcard-post">接任青海省长</div>
+      <div class="pcard-meta">现任江苏省委书记</div>
+      <div class="pcard-tags"><span class="tag strong">青海→江苏书记</span></div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role" style="color:#C9A94E">王凯组工前任</div>
+      <div class="pcard-name">林武</div>
+      <div class="pcard-post">吉林组织部长前任</div>
+      <div class="pcard-meta">现任山东省委书记</div>
+      <div class="pcard-tags"><span class="tag strong">吉林→山东书记</span></div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-role" style="color:#C9A94E">王凯组工后任</div>
+      <div class="pcard-name">王晓萍</div>
+      <div class="pcard-post">吉林组织部长继任者</div>
+      <div class="pcard-meta">现任人力资源和社会保障部部长</div>
+      <div class="pcard-tags"><span class="tag strong">正部级</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="num">06</span>关键洞察</div>
+  <div class="insights">
+    <div class="insight-card">
+      <div class="insight-pri">PRIORITY 1</div>
+      <div class="insight-title">水利技术派主政河南</div>
+      <div class="insight-body">刘宁是全国极少数从水利工程技术岗位升至省委书记的干部。34年水利经历（长江委→水利部）在省级一把手中极其罕见。其7年4省区的快速轮换（青辽桂豫）显示中央对其的高度信任。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-pri">PRIORITY 2</div>
+      <div class="insight-title">金湘军关联风险</div>
+      <div class="insight-body">王凯的玉林市委书记前任金湘军（后升山西省省长）于2025年被调查并开除党籍。王凯与金湘军直接交接玉林书记岗位，需密切观察是否有任何网络牵连。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-pri">PRIORITY 3</div>
+      <div class="insight-title">吉林省组织部的"正部级生产线"</div>
+      <div class="insight-body">林武（山东书记）→王凯（河南省长）→王晓萍（人社部长）——三人先后接任吉林组织部长并全部升至正部级，这是罕见的组织系统产出率。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-pri">PRIORITY 4</div>
+      <div class="insight-title">"外调主导"的治理结构</div>
+      <div class="insight-body">省委11常委中仅3人为河南本土干部（安伟、张雷明、李涛），73%从中央或其他省份调任。这一格局延续了河南"不产生自己一把手"的历史传统。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-pri">PRIORITY 5</div>
+      <div class="insight-title">金融干部分权</div>
+      <div class="insight-body">常务副省长张敏从中国建设银行副行长直接转任政府职务（2023年），是中央推动金融系统与地方政府干部交流的典型案例。张敏是河南省目前唯一的女性省部级领导。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-pri">PRIORITY 6</div>
+      <div class="insight-title">"70后"梯队形成</div>
+      <div class="insight-body">张敏（1970）、王崧（1971）、陈春江（1971）、李涛（1970）四人占常委会36%。王崧是清华大学博士+中央网信办背景，陈春江为蒙古族干部，构成多元化的年轻梯队。</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="border-bottom:none">
+  <div class="section-title"><span class="num">07</span>关系矩阵</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <tr>
+        <th></th><th>刘宁</th><th>王凯</th><th>张巍</th><th>安伟</th><th>秦国文</th><th>王刚</th><th>张雷明</th><th>张敏</th><th>王崧</th><th>陈春江</th><th>李涛</th>
+      </tr>
+      <tr>
+        <td>刘宁</td><td class="empty">—</td><td class="conn">党政搭档</td><td class="conn">省委班子</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+      <tr>
+        <td>王凯</td><td class="conn">党政搭档</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="conn">政府搭档</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+      <tr>
+        <td>金湘军</td><td class="empty">—</td><td class="conn warn">前后任继</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+      <tr>
+        <td>信长星</td><td class="conn">前后任</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+      <tr>
+        <td>林武</td><td class="empty">—</td><td class="conn">前后任</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+      <tr>
+        <td>楼阳生</td><td class="conn">前后任</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+      <tr>
+        <td>尹弘</td><td class="empty">—</td><td class="conn">前后任</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+    </table>
+    <div style="font-size:.6rem;color:#4a4438;margin-top:.75rem">● 金黄色 = 确认的关系 · ● <span style="color:#E03C31">红色</span> = 风险关系 · 灰色 = 无直接关系</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>数据来源：Wikipedia（维基百科中文/英文） · 河南省人民政府官方网站</p>
+  <p style="margin-top:.3rem">SQLite: data/database/henan_province_network.db | GEXF: data/graph/henan_province_network.gexf | Markdown: report/20260715-河南省-省委书记省长.md</p>
+  <p style="margin-top:.3rem">本简报为研究用途。所有信息基于公开来源，区分"已确认"与"待核实"。编制日期：2026-07-15</p>
+</div>
+
+</body>
+</html>

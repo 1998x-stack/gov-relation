@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <graph defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="birth" title="Birth" type="string"/>
+      <attribute id="birthplace" title="Birthplace" type="string"/>
+      <attribute id="education" title="Education" type="string"/>
+      <attribute id="current_post" title="Current Post" type="string"/>
+      <attribute id="source" title="Source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="edge_type" title="Edge Type" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="period" title="Period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="person_1" label="陈竞">
+        <attvalues>
+          <attvalue for="role" value="Party Secretary"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value="1971-02"/>
+          <attvalue for="birthplace" value="湖南长沙"/>
+          <attvalue for="education" value="在职大学（中共湖南省委党校）"/>
+          <attvalue for="current_post" value="湖南省副省长、长沙市委书记"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E9%99%88%E7%AB%9E_(1971%E5%B9%B4)"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_2" label="陈博彰">
+        <attvalues>
+          <attvalue for="role" value="Government"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市人民政府市长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E9%95%BF%E6%B2%99%E5%B8%82%E5%B8%82%E9%95%BF%E5%88%97%E8%A1%A8"/>
+        </attvalues>
+        <viz:color r="59" g="130" b="246" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_3" label="周健">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value="1984-11"/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委副书记、湘江新区党工委书记、岳麓区委书记"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_4" label="吴桂英">
+        <attvalues>
+          <attvalue for="role" value="Former Party Secretary"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value="1966-02"/>
+          <attvalue for="birthplace" value="河北唐山"/>
+          <attvalue for="education" value="中国政法大学经济法系，研究生学历，哲学博士"/>
+          <attvalue for="current_post" value="湖南省人大常委会党组书记、副主任"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%90%B4%E6%A1%82%E8%8B%B1_(1966%E5%B9%B4)"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_5" label="李铁华">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委组织部部长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_6" label="张敏">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委政法委书记"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_7" label="伍贤运">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委宣传部部长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_8" label="周敏">
+        <attvalues>
+          <attvalue for="role" value="Government"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、湖南自贸区长沙片区党工委书记"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="59" g="130" b="246" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_9" label="陈刚">
+        <attvalues>
+          <attvalue for="role" value="Discipline"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="245" g="158" b="11" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_10" label="周凡">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、市委秘书长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_11" label="易长运">
+        <attvalues>
+          <attvalue for="role" value="Military"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、长沙警备区政委"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="139" g="92" b="246" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_12" label="付旭明">
+        <attvalues>
+          <attvalue for="role" value="Government"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、常务副市长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="59" g="130" b="246" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_13" label="胡小刚">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、浏阳市委书记"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_14" label="周春晖">
+        <attvalues>
+          <attvalue for="role" value="Other"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="长沙市委常委、统战部部长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E9%95%BF%E6%B2%99%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_15" label="郑建新">
+        <attvalues>
+          <attvalue for="role" value="Government"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="（原长沙市长，2023年5月离任）"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E9%95%BF%E6%B2%99%E5%B8%82%E5%B8%82%E9%95%BF%E5%88%97%E8%A1%A8"/>
+        </attvalues>
+        <viz:color r="59" g="130" b="246" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_16" label="周海兵">
+        <attvalues>
+          <attvalue for="role" value="Government"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="（原长沙市长，2025年5月离任）"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E9%95%BF%E6%B2%99%E5%B8%82%E5%B8%82%E9%95%BF%E5%88%97%E8%A1%A8"/>
+        </attvalues>
+        <viz:color r="59" g="130" b="246" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+      <node id="person_17" label="胡衡华">
+        <attvalues>
+          <attvalue for="role" value="Former Party Secretary"/>
+          <attvalue for="type" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="（原长沙市委书记，2017-2020）"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E8%83%A1%E8%A1%A1%E5%8D%8E"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="disc"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="person_1" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委书记 (2026-06-)"/>
+          <attvalue for="period" value="2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="person_1" target="org_8">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湖南省副省长 (2025-07-)"/>
+          <attvalue for="period" value="2025-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="person_1" target="org_11">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="益阳市委书记 (2023-02-2026-05)"/>
+          <attvalue for="period" value="2023-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="person_1" target="org_12">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="益阳市人民政府市长 (2021-08-2023-02)"/>
+          <attvalue for="period" value="2021-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="person_1" target="org_13">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湖南省委组织部副部长、省公务员局局长 (2019-10-2021-07)"/>
+          <attvalue for="period" value="2019-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="person_1" target="org_21">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湖南省公务员局局长 (2019-10-2021-08)"/>
+          <attvalue for="period" value="2019-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="person_1" target="org_20">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="衡阳市委常委、组织部部长 (2016-09-2019-10)"/>
+          <attvalue for="period" value="2016-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="person_1" target="org_19">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="衡阳市人民政府副市长 (2015-02-2016-09)"/>
+          <attvalue for="period" value="2015-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="person_1" target="org_18">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="衡阳市石鼓区委书记 (2013-12-2015-02)"/>
+          <attvalue for="period" value="2013-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="person_1" target="org_17">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="慈利县委书记 (2011-12-2013-12)"/>
+          <attvalue for="period" value="2011-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="person_1" target="org_16">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="张家界市永定区委副书记、区长 (2007-02-2011-12)"/>
+          <attvalue for="period" value="2007-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="person_1" target="org_15">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="共青团湖南省委青工部部长 (2003-07-2007-02)"/>
+          <attvalue for="period" value="2003-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="person_1" target="org_15">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="共青团湖南省委青工部副部长 (2000-2003-07)"/>
+          <attvalue for="period" value="2000"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="person_1" target="org_15">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="共青团湖南省委办公室副主任、组织部科长等 (1995-04-2000)"/>
+          <attvalue for="period" value="1995-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="person_1" target="org_14">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="中国建设银行长沙市分行职员 (1994-12-1995-03)"/>
+          <attvalue for="period" value="1994-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="person_1" target="org_26">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市节约用水办公室干部 (1990-07-1994-12)"/>
+          <attvalue for="period" value="1990-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="person_2" target="org_2">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市人民政府市长 (2025-11-)"/>
+          <attvalue for="period" value="2025-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="person_2" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委副书记 (2025-11-)"/>
+          <attvalue for="period" value="2025-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="person_3" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委副书记 (2025-11-)"/>
+          <attvalue for="period" value="2025-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="person_3" target="org_5">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湘江新区党工委书记 (2025-11-)"/>
+          <attvalue for="period" value="2025-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="person_4" target="org_10">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湖南省人大常委会党组书记、副主任 (2026-02-)"/>
+          <attvalue for="period" value="2026-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="person_4" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委书记 (2021-02-2026-06)"/>
+          <attvalue for="period" value="2021-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="person_4" target="org_8">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湖南省副省长 (2018-01-2021-02)"/>
+          <attvalue for="period" value="2018-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="person_4" target="org_23">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="北京市朝阳区委书记 (2015-09-2018-01)"/>
+          <attvalue for="period" value="2015-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="person_4" target="org_22">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="北京市朝阳区区长 (2012-07-2015-11)"/>
+          <attvalue for="period" value="2012-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="person_4" target="org_22">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="北京市朝阳区委常委、副区长 (2008-05-2012-07)"/>
+          <attvalue for="period" value="2008-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="person_4" target="org_25">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="北京市发改委副主任 (2001-11-2008-05)"/>
+          <attvalue for="period" value="2001-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="person_4" target="org_24">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="北京市工商局法制处处长 (1997-2001-11)"/>
+          <attvalue for="period" value="1997"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="person_4" target="org_24">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="北京市工商局干部 (1991-04-1997)"/>
+          <attvalue for="period" value="1991-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="person_5" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委组织部部长 (2025-02-)"/>
+          <attvalue for="period" value="2025-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="person_6" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委政法委书记 (-)"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="person_7" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委宣传部部长 (-)"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="person_8" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委 (2024-10-)"/>
+          <attvalue for="period" value="2024-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="person_8" target="org_6">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="湖南自贸区长沙片区党工委书记 (-)"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="person_9" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委、市纪委书记 (2023-05-)"/>
+          <attvalue for="period" value="2023-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="person_9" target="org_3">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市纪委书记、市监委主任 (2023-05-)"/>
+          <attvalue for="period" value="2023-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="person_10" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委、市委秘书长 (2025-12-)"/>
+          <attvalue for="period" value="2025-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="person_11" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委 (-)"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="person_11" target="org_4">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙警备区政委 (-)"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="person_12" target="org_2">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委、常务副市长 (2025-12-)"/>
+          <attvalue for="period" value="2025-12"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="person_13" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委 (2026-05-)"/>
+          <attvalue for="period" value="2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="person_13" target="org_7">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="浏阳市委书记 (-)"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="person_14" target="org_1">
+        <attvalues>
+          <attvalue for="edge_type" value="worked_at"/>
+          <attvalue for="context" value="长沙市委常委、统战部部长 (2026-06-)"/>
+          <attvalue for="period" value="2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="person_1" target="person_2">
+        <attvalues>
+          <attvalue for="edge_type" value="relationship"/>
+          <attvalue for="context" value="2026年6月起陈竞（市委书记）与陈博彰（市长）搭班任职长沙市委"/>
+          <attvalue for="period" value="2026-06至今"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="1.0"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e45" source="person_1" target="person_4">
+        <attvalues>
+          <attvalue for="edge_type" value="relationship"/>
+          <attvalue for="context" value="陈竞2026年6月接替吴桂英任长沙市委书记"/>
+          <attvalue for="period" value="2026-06"/>
+        </attvalues>
+        <viz:color r="96" g="165" b="250" a="1.0"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e46" source="person_1" target="person_5">
+        <attvalues>
+          <attvalue for="edge_type" value="relationship"/>
+          <attvalue for="context" value="陈竞（书记）与李铁华（组织部长）在长沙市委共事"/>
+          <attvalue for="period" value="2026-06至今"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="1.0"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e47" source="person_1" target="person_6">
+        <attvalues>
+          <attvalue for="edge_type" value="relationship"/>
+          <attvalue for="context" value="长沙市委常委班子"/>
+          <attvalue for="period" value="2026-06至今"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="1.0"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e48" source="person_1" target="person_9">
+        <attvalues>
+          <attvalue for="edge_type" value="relationship"/>
+          <attvalue for="context" value="陈竞（书记）与陈刚（纪委书记）在长沙市委共事"/>
+          <attvalue for="period" value="2026-06至今"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78" a="1.0"/>
+        <viz:thickness value="3.0"/>
+      </edge>
+      <edge id="e49" source="person_4" target="person_1">
+        <attvalues>
+          <attvalue for="edge_type" value="relationship"/>
+          <attvalue for="context" value="吴桂英（省人大常委会）与陈竞（副省长/长沙书记）同在湖南省领导层"/>
+          <attvalue for="period" value="2025-07至今"/>
+        </attvalues>
+        <viz:color r="96" g="165" b="250" a="1.0"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

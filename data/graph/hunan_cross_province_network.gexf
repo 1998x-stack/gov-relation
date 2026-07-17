@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-14">
+    <creator>Government Personnel Network Investigator</creator>
+    <description>湖南省跨省干部交流网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="directed">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="region" type="string"/>
+      <attribute id="2" title="detail" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="count" type="integer"/>
+      <attribute id="2" title="persons" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="prov_湖南" label="湖南省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="中部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="prov_浙江" label="浙江省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="东部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="200" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_上海" label="上海市">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="东部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="200" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_江苏" label="江苏省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="东部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="200" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_江西" label="江西省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="中部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_海南" label="海南省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="南部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="200" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_广东" label="广东省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="南部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="200" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_陕西" label="陕西省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="西部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="150" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_吉林" label="吉林省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="东北"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="150" g="150" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_甘肃" label="甘肃省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="西部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="150" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_北京" label="北京市（中央部委）">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="中央"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_黑龙江" label="黑龙江省">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="东北"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="150" g="150" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_西藏" label="西藏自治区">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="西部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="150" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="prov_新疆" label="新疆维吾尔自治区">
+        <attvalues>
+          <attvalue for="0" value="province"/>
+          <attvalue for="1" value="西部"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="150" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="per_1" label="毛伟明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="浙江衢州"/>
+          <attvalue for="2" value="湖南省省长"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_2" label="沈晓明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="浙江上虞"/>
+          <attvalue for="2" value="湖南省委书记"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_3" label="杜家毫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="浙江鄞县"/>
+          <attvalue for="2" value="曾任湖南省委书记（2016-2020）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_4" label="李小豹">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湖南永兴"/>
+          <attvalue for="2" value="曾任江西萍乡市委书记（已落马）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_5" label="刘锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湖南衡阳"/>
+          <attvalue for="2" value="曾任江西景德镇市委书记"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_6" label="杜家毫（沪）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="浙江鄞县"/>
+          <attvalue for="2" value="曾任上海市委副秘书长（湖南前任书记）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_7" label="沈晓明（琼）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="浙江上虞"/>
+          <attvalue for="2" value="曾任海南省委书记（调任湖南前）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_8" label="许达哲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湖南浏阳"/>
+          <attvalue for="2" value="曾任湖南省委书记（2021-2023）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_9" label="徐守盛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="江苏如东"/>
+          <attvalue for="2" value="曾任湖南省长（2010-2013，已故）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_10" label="魏建锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="湖南省纪委书记（从陕西调任）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_11" label="郭灵计">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="湖南省委组织部部长（从吉林调任）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_12" label="刘红兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="湖南省委宣传部部长（从广东调任）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_13" label="毛伟明（苏）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="浙江衢州"/>
+          <attvalue for="2" value="曾任江苏省副省长/省府秘书长（调任工信部前）"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="per_14" label="张庆伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="河北乐亭"/>
+          <attvalue for="2" value="曾任湖南省委书记（2021-2023），后任黑龙江"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="prov_湖南" target="prov_江西" label="湘籍干部赴赣任职" weight="2">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="2"/>
+          <attvalue for="2" value="李小豹、刘锋"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="prov_湖南" target="prov_黑龙江" label="省委书记回调" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="张庆伟"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="prov_海南" target="prov_湖南" label="省委书记调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="沈晓明"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="prov_北京" target="prov_湖南" label="中央/央企→省" weight="2">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="2"/>
+          <attvalue for="2" value="许达哲、毛伟明"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="prov_上海" target="prov_湖南" label="省际调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="杜家毫"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="prov_甘肃" target="prov_湖南" label="省际调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="徐守盛"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="prov_陕西" target="prov_湖南" label="省际调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="魏建锋"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="prov_吉林" target="prov_湖南" label="省际调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="郭灵计"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="prov_广东" target="prov_湖南" label="省际调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="刘红兵"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="prov_黑龙江" target="prov_湖南" label="省际调任" weight="1">
+        <attvalues>
+          <attvalue for="0" value="flow"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="张庆伟（2021调入湖南）"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="per_1" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="湖南省省长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="per_2" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="湖南省委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="per_3" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任湖南省委书记（2016-2020）"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="per_4" target="prov_江西" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任江西萍乡市委书记（已落马）"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="per_5" target="prov_江西" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任江西景德镇市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="per_6" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任上海市委副秘书长（湖南前任书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="per_7" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任海南省委书记（调任湖南前）"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="per_8" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任湖南省委书记（2021-2023）"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="per_9" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任湖南省长（2010-2013，已故）"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="per_10" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="湖南省纪委书记（从陕西调任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="per_11" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="湖南省委组织部部长（从吉林调任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="per_12" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="湖南省委宣传部部长（从广东调任）"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="per_13" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任江苏省副省长/省府秘书长（调任工信部前）"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="per_14" target="prov_湖南" label="works_in" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="works_in"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="曾任湖南省委书记（2021-2023），后任黑龙江"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="per_1" target="per_2" label="浙籍同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_origin"/>
+          <attvalue for="1" value="2"/>
+          <attvalue for="2" value="浙江籍+湖南省委正副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="per_3" target="per_1" label="浙籍前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="same_origin"/>
+          <attvalue for="1" value="2"/>
+          <attvalue for="2" value="浙江籍+先后任湖南省长"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

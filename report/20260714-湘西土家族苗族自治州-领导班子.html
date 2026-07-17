@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湘西州领导班子工作关系网络 — 情报简报</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface2: #1a1a1a;
+  --surface3: #222222;
+  --text: #e8e6e1;
+  --text-muted: #888581;
+  --text-dim: #5c5a56;
+  --cinnabar: #E03C31;
+  --cinnabar-dim: #8a1f18;
+  --gold: #C9A94E;
+  --gold-dim: #7a6630;
+  --blue: #3b82f6;
+  --orange: #f59e0b;
+  --purple: #8b5cf6;
+  --border: #222222;
+  --border-light: #2a2a28;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── LAYOUT ─── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+.section:last-child { border-bottom: none; }
+
+/* ─── HEADER ─── */
+.header {
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--cinnabar), var(--gold), transparent);
+}
+.header-accent {
+  display: inline-block;
+  color: var(--cinnabar);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border: 1px solid var(--cinnabar);
+  padding: 4px 12px;
+}
+.header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.header .subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.header .meta {
+  margin-top: 20px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+/* ─── STATS ─── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin: -30px 0 0;
+}
+.stat-card {
+  background: var(--surface);
+  padding: 28px 20px;
+  text-align: center;
+}
+.stat-card .num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--cinnabar);
+  line-height: 1;
+}
+.stat-card .num.gold { color: var(--gold); }
+.stat-card .num.blue { color: var(--blue); }
+.stat-card .num.orange { color: var(--orange); }
+.stat-card .label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ─── SECTION TITLES ─── */
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--cinnabar);
+  display: inline-block;
+}
+.section-subtitle {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+/* ─── PERSON CARDS ─── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+.person-card {
+  background: var(--surface);
+  padding: 24px;
+  position: relative;
+}
+.person-card .role-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  letter-spacing: 0.5px;
+}
+.person-card .role-badge.red { background: var(--cinnabar); color: #fff; }
+.person-card .role-badge.blue { background: var(--blue); color: #fff; }
+.person-card .role-badge.orange { background: var(--orange); color: #000; }
+.person-card .role-badge.purple { background: var(--purple); color: #fff; }
+.person-card .role-badge.grey { background: var(--surface3); color: var(--text-muted); }
+
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.person-card .title {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.person-card .info {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.person-card .info strong { color: var(--text); }
+.person-card .info .dim { color: var(--text-dim); }
+
+/* ─── TIMELINE ─── */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+.timeline-figure {
+  background: var(--surface);
+  padding: 24px;
+  border-left: 3px solid var(--cinnabar);
+}
+.timeline-figure .fig-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.timeline-figure .fig-name span {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+.timeline-step {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 16px;
+  border-left: 1px solid var(--border-light);
+}
+.timeline-step:last-child { border-left: 1px solid transparent; padding-bottom: 0; }
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.timeline-step .step-year {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.timeline-step .step-title {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* ─── TABLE ─── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.data-table th {
+  text-align: left;
+  padding: 12px 16px;
+  background: var(--surface2);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.data-table tr:hover td { background: var(--surface2); }
+.data-table .county-name {
+  font-weight: 600;
+  color: var(--gold);
+}
+.data-table .person-link {
+  color: var(--text);
+  text-decoration: none;
+}
+.data-table .person-link:hover { color: var(--cinnabar); }
+
+/* ─── INSIGHTS ─── */
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+.insight-card {
+  background: var(--surface);
+  padding: 24px;
+}
+.insight-card .priority {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.insight-card .priority.critical { background: var(--cinnabar); color: #fff; }
+.insight-card .priority.high { background: var(--orange); color: #000; }
+.insight-card .priority.medium { background: transparent; color: var(--text-muted); border: 1px solid var(--border-light); }
+.insight-card h4 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.insight-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ─── NETWORK ANALYSIS ─── */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 768px) { .analysis-grid { grid-template-columns: 1fr; } }
+.analysis-box {
+  background: var(--surface);
+  padding: 24px;
+}
+.analysis-box h4 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--gold);
+}
+.analysis-box ul {
+  list-style: none;
+  padding: 0;
+}
+.analysis-box li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+.analysis-box li:last-child { border-bottom: none; }
+.analysis-box li strong { color: var(--text); }
+
+/* ─── FOOTER ─── */
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+.footer a { color: var(--text-muted); text-decoration: none; }
+.footer a:hover { color: var(--gold); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .header h1 { font-size: 28px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .person-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header">
+  <div class="container">
+    <div class="header-accent">⚡ 情报简报 · 绝密</div>
+    <h1>湘西土家族苗族自治州<br>领导班子工作关系网络</h1>
+    <p class="subtitle">XIANGXI TUJIA-MIAO AUTONOMOUS PREFECTURE · LEADERSHIP PERSONNEL NETWORK</p>
+    <div class="meta">
+      <span>📅 调查日期: 2026年7月14日</span>
+      <span>📍 湖南省 · 湘西州</span>
+      <span>📋 覆盖: 州级 + 8县市 · 20名关键人物</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats-grid container">
+  <div class="stat-card">
+    <div class="num">20</div>
+    <div class="label">人物</div>
+  </div>
+  <div class="stat-card">
+    <div class="num gold">20</div>
+    <div class="label">机构</div>
+  </div>
+  <div class="stat-card">
+    <div class="num blue">21</div>
+    <div class="label">任职记录</div>
+  </div>
+  <div class="stat-card">
+    <div class="num orange">9</div>
+    <div class="label">关系连线</div>
+  </div>
+</section>
+
+<!-- ═══ PREFECTURE LEADERS ═══ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">州级领导班子</h2>
+    <p class="section-subtitle">湘西土家族苗族自治州四大机构现任正职</p>
+    <div class="person-grid">
+      <!-- 刘涛 -->
+      <div class="person-card">
+        <span class="role-badge red">州委书记</span>
+        <div class="name">刘涛</div>
+        <div class="title">中共湘西州委书记</div>
+        <div class="info">
+          <strong>1971年6月</strong>（55岁）· 男 · 汉族<br>
+          <span class="dim">籍贯:</span> 河南方城<br>
+          <span class="dim">学历:</span> 河南大学文学硕士<br>
+          <span class="dim">到任:</span> 2024年10月（跨省调任）<br>
+          <span class="dim">前职:</span> 河南许昌市长
+        </div>
+      </div>
+      <!-- 尚生龙 -->
+      <div class="person-card">
+        <span class="role-badge blue">州长（代理）</span>
+        <div class="name">尚生龙</div>
+        <div class="title">湘西州人民政府州长</div>
+        <div class="info">
+          <strong>1972年5月</strong>（54岁）· 男 · 土家族<br>
+          <span class="dim">籍贯:</span> 湖南桑植<br>
+          <span class="dim">到任:</span> 2026年6月<br>
+          <span class="dim">状态:</span> 代理
+        </div>
+      </div>
+      <!-- 虢正贵 -->
+      <div class="person-card">
+        <span class="role-badge orange">前任州委书记</span>
+        <div class="name">虢正贵</div>
+        <div class="title">湖南省政协副主席</div>
+        <div class="info">
+          <strong>1964年9月</strong>（61岁）· 男 · 汉族<br>
+          <span class="dim">籍贯:</span> 湖南长沙望城<br>
+          <span class="dim">湘西任期:</span> 2021.3 — 2024.10<br>
+          <span class="dim">现任:</span> 湖南省政协副主席
+        </div>
+      </div>
+      <!-- 龚明汉 -->
+      <div class="person-card">
+        <span class="role-badge orange">人大主任</span>
+        <div class="name">龚明汉</div>
+        <div class="title">州人大常委会主任</div>
+        <div class="info">
+          <strong>1964年9月</strong>（61岁）· 男 · 汉族<br>
+          <span class="dim">籍贯:</span> 张家界永定区<br>
+          <span class="dim">到任:</span> 2021年1月
+        </div>
+      </div>
+      <!-- 向邦伟 -->
+      <div class="person-card">
+        <span class="role-badge purple">政协主席</span>
+        <div class="name">向邦伟</div>
+        <div class="title">州政协主席</div>
+        <div class="info">
+          <strong>1969年3月</strong>（57岁）· 男 · 土家族<br>
+          <span class="dim">到任:</span> 2026年2月
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COUNTY LEADERS TABLE ═══ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">8县市党政正职</h2>
+    <p class="section-subtitle">16个正职岗位 · 覆盖全部8个县级行政区</p>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>县市</th>
+            <th>县委书记</th>
+            <th>出生</th>
+            <th>民族</th>
+            <th>县长/市长</th>
+            <th>出生</th>
+            <th>民族</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="county-name">吉首市</td>
+            <td><a class="person-link" href="#">周立志</a></td>
+            <td>1978.5</td>
+            <td>汉族</td>
+            <td><a class="person-link" href="#">符家盛</a></td>
+            <td>1973.4</td>
+            <td>苗族</td>
+            <td>搭班2年9月</td>
+          </tr>
+          <tr>
+            <td class="county-name">泸溪县</td>
+            <td><a class="person-link" href="#">彭武学</a></td>
+            <td>1971.5</td>
+            <td>土家族</td>
+            <td><a class="person-link" href="#">符家波</a></td>
+            <td>1979.5</td>
+            <td>苗族</td>
+            <td>搭班2年8月</td>
+          </tr>
+          <tr>
+            <td class="county-name">凤凰县</td>
+            <td><a class="person-link" href="#">毛家</a></td>
+            <td>1973.10</td>
+            <td>土家族</td>
+            <td><a class="person-link" href="#">樊忠清</a></td>
+            <td>1975.10</td>
+            <td>苗族</td>
+            <td>搭班4年4月</td>
+          </tr>
+          <tr>
+            <td class="county-name">花垣县</td>
+            <td><a class="person-link" href="#">王京海</a></td>
+            <td>1975.9</td>
+            <td>土家族</td>
+            <td><a class="person-link" href="#">王京海</a>（兼）</td>
+            <td>1975.9</td>
+            <td>土家族</td>
+            <td style="color:var(--cinnabar);">一肩挑</td>
+          </tr>
+          <tr>
+            <td class="county-name">保靖县</td>
+            <td><a class="person-link" href="#">周建武</a></td>
+            <td>1977.11</td>
+            <td>汉族</td>
+            <td><a class="person-link" href="#">郭应湘</a></td>
+            <td>1979.6</td>
+            <td>汉族</td>
+            <td>搭班2年</td>
+          </tr>
+          <tr>
+            <td class="county-name">古丈县</td>
+            <td><a class="person-link" href="#">滕朝辉</a></td>
+            <td>1974.10</td>
+            <td>土家族</td>
+            <td><a class="person-link" href="#">陈建新</a></td>
+            <td>1979.6</td>
+            <td>汉族</td>
+            <td>搭班2年</td>
+          </tr>
+          <tr>
+            <td class="county-name">永顺县</td>
+            <td><a class="person-link" href="#">向加茂</a></td>
+            <td>1973.2</td>
+            <td>苗族</td>
+            <td><a class="person-link" href="#">向加茂</a>（兼）</td>
+            <td>1973.2</td>
+            <td>苗族</td>
+            <td style="color:var(--cinnabar);">一肩挑</td>
+          </tr>
+          <tr>
+            <td class="county-name">龙山县</td>
+            <td><a class="person-link" href="#">时荣芬</a></td>
+            <td>1976.12</td>
+            <td>苗族</td>
+            <td><a class="person-link" href="#">周胜益</a></td>
+            <td>1972.9</td>
+            <td>苗族</td>
+            <td>搭班4年4月</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIMELINE ═══ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">关键人物晋升路径</h2>
+    <p class="section-subtitle">刘涛（州委书记）、虢正贵（前任州委书记）</p>
+    <div class="timeline-container">
+      <!-- 刘涛 Timeline -->
+      <div class="timeline-figure">
+        <div class="fig-name">刘涛 <span>湘西州委书记 · 2024.10—</span></div>
+        <div class="timeline-step">
+          <div class="step-year">1994</div>
+          <div class="step-title">河南大学中文系毕业</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">1997</div>
+          <div class="step-title">河南大学中国现代文学硕士</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">~2008</div>
+          <div class="step-title">河南省劳动和社会保障厅副厅长</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2015.2</div>
+          <div class="step-title">焦作市委常委、组织部长</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2017.12</div>
+          <div class="step-title">焦作市委副书记</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2021.7</div>
+          <div class="step-title">许昌市委副书记、市长</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2024.10</div>
+          <div class="step-title"><strong>跨省调任</strong> → 湘西州委书记</div>
+        </div>
+      </div>
+
+      <!-- 虢正贵 Timeline -->
+      <div class="timeline-figure">
+        <div class="fig-name">虢正贵 <span>湖南省政协副主席 · 前任州委书记</span></div>
+        <div class="timeline-step">
+          <div class="step-year">1984</div>
+          <div class="step-title">长沙基础大学毕业，参加工作</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2000-2004</div>
+          <div class="step-title">宁乡县长 → 宁乡县委书记</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2008-2013</div>
+          <div class="step-title">长沙市副市长 → 长沙市委常委<br>统战部长 → 政法委书记</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2013-2016</div>
+          <div class="step-title">省政府副秘书长、研究室主任<br>→ 长沙市委副书记、湘江新区主任</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2016.12-2021.3</div>
+          <div class="step-title">张家界市委书记</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2021.3-2024.10</div>
+          <div class="step-title">湘西州委书记</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2023.1 至今</div>
+          <div class="step-title">湖南省政协副主席（副省级）</div>
+        </div>
+      </div>
+
+      <!-- 尚生龙 Timeline (limited data) -->
+      <div class="timeline-figure">
+        <div class="fig-name">尚生龙 <span>湘西州代州长 · 2026.6—</span></div>
+        <div class="timeline-step">
+          <div class="step-year">1972.5</div>
+          <div class="step-title">出生于湖南桑植（土家族）</div>
+        </div>
+        <div class="timeline-step" style="opacity:0.4;">
+          <div class="step-year">1990s–2020s</div>
+          <div class="step-title" style="color:var(--text-dim);">[ 履历待查 — 公开资料有限 ]</div>
+        </div>
+        <div class="timeline-step">
+          <div class="step-year">2026.6</div>
+          <div class="step-title">代理湘西州州长</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NETWORK ANALYSIS ═══ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">工作关系网络分析</h2>
+    <p class="section-subtitle">搭班结构、跨县纽带、民族分布</p>
+    <div class="analysis-grid">
+      <div class="analysis-box">
+        <h4>搭班关系（8对书记+县长）</h4>
+        <ul>
+          <li><strong>周立志</strong>（吉首书记）↔ <strong>符家盛</strong>（吉首市长） · 2年9月</li>
+          <li><strong>彭武学</strong>（泸溪书记）↔ <strong>符家波</strong>（泸溪县长） · 2年8月</li>
+          <li><strong>毛家</strong>（凤凰书记）↔ <strong>樊忠清</strong>（凤凰县长） · 4年4月</li>
+          <li><strong>王京海</strong>（花垣书记兼县长）· <span style="color:var(--cinnabar);">一肩挑</span></li>
+          <li><strong>周建武</strong>（保靖书记）↔ <strong>郭应湘</strong>（保靖县长）· 2年</li>
+          <li><strong>滕朝辉</strong>（古丈书记）↔ <strong>陈建新</strong>（古丈县长）· 2年</li>
+          <li><strong>向加茂</strong>（永顺书记兼县长）· <span style="color:var(--cinnabar);">一肩挑</span></li>
+          <li><strong>时荣芬</strong>（龙山书记）↔ <strong>周胜益</strong>（龙山县长）· 4年4月</li>
+        </ul>
+      </div>
+      <div class="analysis-box">
+        <h4>跨县同乡纽带</h4>
+        <ul>
+          <li><strong>花垣人网络</strong>: 樊忠清（凤凰县长）、时荣芬（龙山书记）</li>
+          <li><strong>永顺人网络</strong>: 彭武学（泸溪书记）、毛家（凤凰书记）</li>
+          <li><strong>保靖人网络</strong>: 周胜益（龙山县长）</li>
+          <li><strong>慈利人网络</strong>: 王京海（花垣书记）</li>
+        </ul>
+        <h4 style="margin-top:20px;">民族分布</h4>
+        <ul>
+          <li><strong>土家族（7人）</strong>: 尚生龙、向邦伟、彭武学、毛家、王京海、滕朝辉</li>
+          <li><strong>苗族（6人）</strong>: 符家盛、符家波、樊忠清、向加茂、时荣芬、周胜益</li>
+          <li><strong>汉族（6人）</strong>: 刘涛（河南）、虢正贵、龚明汉、周立志、周建武、郭应湘、陈建新</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSIGHTS ═══ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">关键洞察与突破线索</h2>
+    <p class="section-subtitle">按优先级排序 · 红色=关键 橙色=重要 灰色=中等</p>
+    <div class="insight-grid">
+      <div class="insight-card">
+        <span class="priority critical">⭐⭐⭐⭐⭐ 关键</span>
+        <h4>刘涛跨省调任 — 湘西首次引入外省书记</h4>
+        <p>刘涛从河南许昌市长直接跨省调任湘西州委书记，是湘西州历史上首次由外省干部担任此职。打破了虢正贵、叶红专等历任书记均为湖南籍的惯例。中央/省委有意引入外部治理经验。</p>
+      </div>
+      <div class="insight-card">
+        <span class="priority critical">⭐⭐⭐⭐⭐ 关键</span>
+        <h4>花垣+永顺"书记县长一肩挑"</h4>
+        <p>两个县同时出现非常规状态：王京海（花垣，2025.2升书记仍兼县长）、向加茂（永顺，2025.2升书记仍兼县长）。或为过渡期安排，或涉及特定人事精简。需关注新县长任命公示。</p>
+      </div>
+      <div class="insight-card">
+        <span class="priority high">⭐⭐⭐⭐ 高</span>
+        <h4>尚生龙代理州长 — 履历完全不可查</h4>
+        <p>2026年6月代理任命，来自桑植县（土家族），但完整职业履历在公开渠道不可查。是湘西调查当前最大信息缺口。建议从湘西州政府网站及湖南省委组织部确认。</p>
+      </div>
+      <div class="insight-card">
+        <span class="priority high">⭐⭐⭐⭐ 高</span>
+        <h4>虢正贵"长沙帮"后续影响</h4>
+        <p>虢正贵在长沙深耕30年（宁乡→市委→湘江新区），其旧部仍在长沙重要岗位。虽已转省政协副主席（副省级退二线），但其政治网络在省政协层面仍有发挥空间。</p>
+      </div>
+      <div class="insight-card">
+        <span class="priority medium">⭐⭐⭐ 中</span>
+        <h4>符家盛任期最长（6年+）</h4>
+        <p>吉首市长符家盛（2020.4至今）是17个县级正职中任期最长的。通常县长/市长5年轮岗，其下一步动向值得关注。</p>
+      </div>
+      <div class="insight-card">
+        <span class="priority medium">⭐⭐⭐ 中</span>
+        <h4>永顺/花垣"双空缺"待关注</h4>
+        <p>两县因书记兼县长，空缺2个县长职位的同时，永顺的人大主任、政协主席信息也未完全确认。共计至少4个重要职位的"空缺/待查"。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <p>数据来源: 维基百科（中文）· 调查日期: 2026年7月14日</p>
+    <p style="margin-top:8px;">
+      <a href="data/database/xiangxi_network.db">📊 SQLite 数据库</a>
+      &nbsp;·&nbsp;
+      <a href="data/graph/xiangxi_network.gexf">🕸️ GEXF 图谱</a>
+    </p>
+    <p style="margin-top:16px; color:var(--text-dim); font-size:11px;">
+      ❖ 本简报基于公开信息编制 · 部分人物履历标记为"待查"即公开资料不可得 ❖
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

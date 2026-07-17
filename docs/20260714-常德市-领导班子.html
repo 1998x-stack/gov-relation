@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常德市领导班子 · 工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0D0E10;
+  --surface-raised: #15171B;
+  --surface-card: #1A1C21;
+  --border: #262830;
+  --border-light: #32343C;
+  --ink: #E3DFD8;
+  --ink-dim: #8A8680;
+  --ink-muted: #5C5955;
+  --cinnabar: #E03C31;
+  --cinnabar-dim: rgba(224,60,49,0.12);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201,169,78,0.12);
+  --blue: #6B8FA3;
+  --blue-dim: rgba(107,143,163,0.10);
+  --orange: #CC7722;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.header h1 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.header h1 span {
+  color: var(--cinnabar);
+}
+.header-meta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+}
+.header-meta span { white-space: nowrap; }
+.classified-stamp {
+  display: inline-block;
+  border: 1px solid var(--cinnabar);
+  color: var(--cinnabar);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  padding: 2px 10px;
+  margin-left: 1rem;
+}
+
+/* ── Stats bar ── */
+.stats {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+.stat {
+  background: var(--surface-raised);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+.stat-num {
+  font-family: "Noto Serif SC", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+/* ── Content ── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-title .num {
+  color: var(--cinnabar);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* ── Person card grid ── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.person-card {
+  background: var(--surface-card);
+  padding: 1.25rem;
+  position: relative;
+}
+.person-card .role-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid;
+}
+.role-tag.party { border-color: #E03C31; color: #E03C31; }
+.role-tag.gov  { border-color: #5588DD; color: #5588DD; }
+.role-tag.other { border-color: var(--ink-dim); color: var(--ink-dim); }
+.person-card .name {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.person-card .title {
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  margin: 0.2rem 0 0.5rem;
+}
+.person-card .meta {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+.person-card .badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.badge {
+  font-size: 0.55rem;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.badge-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(201,169,78,0.25); }
+.badge-blue { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(107,143,163,0.25); }
+.badge-cinnabar { background: var(--cinnabar-dim); color: var(--cinnabar); border: 1px solid rgba(224,60,49,0.2); }
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.625rem;
+  top: 0.45rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-light);
+  border: 1px solid var(--ink-dim);
+}
+.timeline-item.current::before {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+  box-shadow: 0 0 6px rgba(224,60,49,0.4);
+}
+.timeline-item .period {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.timeline-item .event {
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin-top: 0.15rem;
+}
+.timeline-item .event strong { font-weight: 600; }
+
+/* ── County table ── */
+.county-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.county-table th, .county-table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+.county-table th {
+  background: var(--surface-raised);
+  font-weight: 500;
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+}
+.county-table td { background: var(--surface-card); }
+.county-table .party-cell { color: #E03C31; font-weight: 600; }
+.county-table .gov-cell { color: #5588DD; font-weight: 600; }
+
+/* ── Relationship matrix ── */
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.matrix th, .matrix td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+.matrix th {
+  background: var(--surface-raised);
+  font-weight: 500;
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+}
+.matrix td { background: var(--surface-card); }
+.matrix .strong { color: var(--gold); }
+.matrix .weak { color: var(--blue); }
+
+/* ── Flow diagram ── */
+.flow-box {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  font-size: 0.82rem;
+}
+.flow-arrow {
+  color: var(--ink-muted);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.flow-org {
+  font-weight: 500;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.flow-person {
+  color: var(--ink);
+}
+.flow-note {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+}
+
+/* ── Insights ── */
+.insight {
+  background: var(--surface-card);
+  border-left: 2px solid var(--cinnabar);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.insight h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.insight p {
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+.insight .stars {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+/* ── Sources ── */
+.source-list {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  line-height: 1.8;
+}
+.source-list a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.source-list a:hover { text-decoration: underline; }
+.source-list .status {
+  font-size: 0.65rem;
+  padding: 1px 5px;
+  margin-left: 0.3rem;
+}
+.status.ok { color: #4CAF50; }
+.status.blocked { color: var(--cinnabar); }
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Responsive -- */
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .header h1 { font-size: 1.4rem; }
+  .person-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-eyebrow">CONFIDENTIAL · 湖南省常德市 · 人事情报简报</div>
+  <h1>常德市领导班子<br><span>工作关系网络</span></h1>
+  <div class="header-meta">
+    <span>📅 2026年7月14日</span>
+    <span>🏛️ 湖南省常德市</span>
+    <span>9个县级行政区 <span class="classified-stamp">机密 // INTERNAL</span></span>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">25</div>
+    <div class="stat-label">人物</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">23</div>
+    <div class="stat-label">机构</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">27</div>
+    <div class="stat-label">任职记录</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">11</div>
+    <div class="stat-label">关系连线</div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- Section 1: City-Level Core -->
+<div class="section">
+  <div class="section-title"><span class="num">01</span> 市级核心领导</div>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="role-tag party">市委书记</div>
+      <div class="name">罗毅君</div>
+      <div class="title">主持市委全面工作</div>
+      <div class="meta">1972年2月（54岁）· 湖南邵阳<br>长沙理工大学 · 1992年入党</div>
+      <div class="badges">
+        <span class="badge badge-gold">水利系统26年</span>
+        <span class="badge badge-blue">2024.04到任</span>
+        <span class="badge badge-cinnabar">二十大代表</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag gov">市长</div>
+      <div class="name">周振宇</div>
+      <div class="title">主持市政府全面工作</div>
+      <div class="meta">1970年1月（56岁）· 湖南邵阳县<br>中南大学 · 1991年入党</div>
+      <div class="badges">
+        <span class="badge badge-gold">省纪委12年</span>
+        <span class="badge badge-blue">2021.11到任</span>
+        <span class="badge">怀化→常德</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag other">人大主任</div>
+      <div class="name">蒋锋</div>
+      <div class="title">市人大常委会主任</div>
+      <div class="meta">1966年12月（59岁）· 湖南东安县<br>2024.12就任</div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag other">政协主席</div>
+      <div class="name">黄清宇</div>
+      <div class="title">市政协主席</div>
+      <div class="meta">1966年12月（59岁）· 湖南汉寿县<br>2022.01就任</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Mayor Career Timeline -->
+<div class="section">
+  <div class="section-title"><span class="num">02</span> 周振宇 · 晋升路径</div>
+  <div class="timeline">
+    <div class="timeline-item current">
+      <div class="period">2021.11 — 至今</div>
+      <div class="event"><strong>常德市委副书记、市长</strong> · 正厅级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2021.04 — 2021.11</div>
+      <div class="event"><strong>怀化市委副书记</strong> · 正厅级 · 7个月过渡</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2011.12 — 2021.04</div>
+      <div class="event"><strong>益阳市副市长</strong>→统战部部长 · 约9年</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2007.11 — 2011.12</div>
+      <div class="event"><strong>益阳市资阳区委书记</strong> · 正处级 · 4年</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2006.11 — 2007.11</div>
+      <div class="event"><strong>沅江市市长</strong> · 正处级 · 1年</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">1994.10 — 2006.11</div>
+      <div class="event"><strong>湖南省纪委</strong> · 从干事到副处级纪检员 · 12年</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">1991 — 1994.10</div>
+      <div class="event">长沙有色冶金设计研究院 · 助理工程师</div>
+    </div>
+    <div class="timeline-item current">
+      <div class="period">1987 — 1991</div>
+      <div class="event"><strong>中南工业大学</strong> · 矿业机械专业 · 本科</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Predecessor Trajectory -->
+<div class="section">
+  <div class="section-title"><span class="num">03</span> 前任书记 · 曹志强 · 晋升路径</div>
+  <div class="timeline">
+    <div class="timeline-item current">
+      <div class="period">2025.11 — 至今</div>
+      <div class="event"><strong>广西壮族自治区副主席</strong> · 副省级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2024.02 — 2025.11</div>
+      <div class="event"><strong>湖南省副省长</strong> · 副省级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2021.11 — 2024.04</div>
+      <div class="event"><strong>常德市委书记</strong> · 正厅级</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">2017.12 — 2021.11</div>
+      <div class="event"><strong>华菱钢铁集团董事长</strong> · 企业转政</div>
+    </div>
+    <div class="timeline-item">
+      <div class="period">1975.07</div>
+      <div class="event">出生 · 湖南双峰县 · 武汉科技大学</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 4: County-Level Leadership -->
+<div class="section">
+  <div class="section-title"><span class="num">04</span> 区县领导班子 · 9个县级行政区</div>
+  <table class="county-table">
+    <thead>
+      <tr>
+        <th>区县</th>
+        <th>党委</th>
+        <th>政府</th>
+        <th>备注</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>武陵区</strong></td>
+        <td class="party-cell">寻健（1979，浏阳）</td>
+        <td class="gov-cell">康少中（1974，桃源）</td>
+        <td>市委驻地</td>
+      </tr>
+      <tr>
+        <td><strong>鼎城区</strong></td>
+        <td class="party-cell">朱金平（1966，石门·土家）</td>
+        <td class="gov-cell">陈远（1982，古丈·苗）</td>
+        <td>2020年就任</td>
+      </tr>
+      <tr>
+        <td><strong>安乡县</strong></td>
+        <td class="party-cell">王先波（1971，常德）</td>
+        <td class="gov-cell">翦鹰（1975，桃源·维吾尔）</td>
+        <td>2023年调整</td>
+      </tr>
+      <tr>
+        <td><strong>汉寿县</strong></td>
+        <td class="party-cell">周功表（1977，安乡）</td>
+        <td class="gov-cell">王时雨（1976，—）</td>
+        <td>2022年调整</td>
+      </tr>
+      <tr>
+        <td><strong>澧县</strong></td>
+        <td class="party-cell">冷亮🆕（1982，益阳）</td>
+        <td class="gov-cell">陈溢🆕（1986，·土家）代县长</td>
+        <td>2026年大换血</td>
+      </tr>
+      <tr>
+        <td><strong>临澧县</strong></td>
+        <td class="party-cell">李雨初（1973，鼎城）</td>
+        <td class="gov-cell">胡彬彬（1980，安乡）</td>
+        <td>2011.11就任</td>
+      </tr>
+      <tr>
+        <td><strong>桃源县</strong></td>
+        <td class="party-cell">黄伟雄（1976，汨罗）</td>
+        <td class="gov-cell">马吉云（1971，临澧）</td>
+        <td>2023年调整</td>
+      </tr>
+      <tr>
+        <td><strong>石门县</strong></td>
+        <td class="party-cell">吴兴国（1972，临澧）</td>
+        <td class="gov-cell">丁克刚（1975，—）</td>
+        <td>2022年调整</td>
+      </tr>
+      <tr>
+        <td><strong>津市市</strong></td>
+        <td class="party-cell">黄旭峰（1973，长沙县）</td>
+        <td class="gov-cell">彭子晟（1983，—）</td>
+        <td>县级市</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 5: Relationship Matrix -->
+<div class="section">
+  <div class="section-title"><span class="num">05</span> 人物关系矩阵</div>
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>人物A</th>
+        <th>人物B</th>
+        <th>关系类型</th>
+        <th>共事背景</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>罗毅君</td><td>周振宇</td>
+        <td class="strong">强 · 党政搭档</td>
+        <td>常德市党政班子 · 均邵阳籍</td>
+      </tr>
+      <tr>
+        <td>曹志强</td><td>罗毅君</td>
+        <td class="strong">强 · 前后任</td>
+        <td>常德市委书记交接 · 2024.04</td>
+      </tr>
+      <tr>
+        <td>罗毅君</td><td>蒋锋</td>
+        <td class="strong">强 · 党政同僚</td>
+        <td>常德市2024- 书记与人大主任</td>
+      </tr>
+      <tr>
+        <td>王启武</td><td>冷亮</td>
+        <td class="strong">强 · 前后任</td>
+        <td>澧县县委书记 · 同益阳籍贯</td>
+      </tr>
+      <tr>
+        <td>李雨初</td><td>吴兴国</td>
+        <td class="weak">弱 · 临澧系</td>
+        <td>李雨初鼎城人·吴兴国临澧人·相邻区县</td>
+      </tr>
+      <tr>
+        <td>翦鹰</td><td>康少中</td>
+        <td class="weak">弱 · 桃源籍</td>
+        <td>翦鹰(桃源人/安乡县长)与康少中(桃源人/武陵区长)</td>
+      </tr>
+      <tr>
+        <td>周功表</td><td>胡彬彬</td>
+        <td class="weak">弱 · 安乡系</td>
+        <td>周功表(安乡人/汉寿书记)与胡彬彬(安乡人/临澧县长)</td>
+      </tr>
+      <tr>
+        <td>曹志强</td><td>周振宇</td>
+        <td class="strong">强 · 前党政搭档</td>
+        <td>常德市2021-2024 · 书记与市长</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 6: Cross-County Flow -->
+<div class="section">
+  <div class="section-title"><span class="num">06</span> 跨区县人事交流</div>
+
+  <div class="flow-box">
+    <h4 style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;color:var(--ink-dim);">→ 跨市调入常德</h4>
+    <div class="flow-row">
+      <span class="flow-org">省水利厅</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">罗毅君（厅长→市委书记）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">怀化市</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">周振宇（副书记→市长）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">益阳市</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">冷亮（桃江副书记→澧县县长→书记）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">岳阳市</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">黄伟雄（汨罗人→桃源县委书记）</span>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <h4 style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;color:var(--ink-dim);">← 流出常德</h4>
+    <div class="flow-row">
+      <span class="flow-org">常德市</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">曹志强（书记→湖南省副省长→广西副主席）</span>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <h4 style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;color:var(--ink-dim);">↔ 常德市内跨县流动</h4>
+    <div class="flow-row">
+      <span class="flow-org">石门县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">朱金平（石门人→鼎城区委书记）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">桃源县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">康少中（桃源人→武陵区长）、翦鹰（桃源人→安乡县长）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">临澧县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">吴兴国（临澧人→石门书记）、马吉云（临澧人→桃源县长）</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-org">安乡县</span>
+      <span class="flow-arrow">──→</span>
+      <span class="flow-person">周功表（安乡人→汉寿书记）、胡彬彬（安乡人→临澧县长）</span>
+    </div>
+  </div>
+</div>
+
+<!-- Section 7: Key Insights -->
+<div class="section">
+  <div class="section-title"><span class="num">07</span> 关键洞察</div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>线索1：市级"邵阳帮"配置罕见</h4>
+    <p>市委书记罗毅君（邵阳人）与市长周振宇（邵阳县人）均来自邵阳地区。在湖南省内地级市中，书记+市长同籍贯的配置较为少见。两人虽无明确的前期共事史，但共同的邵阳身份在网络型政治中可能形成非正式联系。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>线索2：曹志强的非常规晋升路径</h4>
+    <p>从华菱钢铁董事长直接转任常德市委书记（2021年11月），仅2.5年后升副省长，再跨省调广西副主席。企业高管→地方书记→副省级跨省调任的路径在湖南政坛极为罕见，背后可能涉及省委层面的特殊考虑。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索3：澧县2026年密集换血</h4>
+    <p>澧县在13个月内完成两次主要领导更迭：冷亮2025年5月由益阳调任县长，2026年6月升书记；陈溢2026年7月代理县长。王启武（书记）和朱正权（县长）均在2023年到任却快速离任，反映出澧县可能为省/市级重点关注对象。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐⭐</div>
+    <h4>线索4：区县"80后"干部梯队成型</h4>
+    <p>冷亮（1982）、陈溢（1986）、彭子晟（1983）、康少中（1974）、陈远（1982）等区县党政主官均为"75后-80后"，常德市已形成较为年轻化的县级领导梯队。其中陈溢（1986）若当选正式县长，将成为常德最年轻的县级政府主官。</p>
+  </div>
+
+  <div class="insight">
+    <div class="stars">⭐⭐⭐</div>
+    <h4>线索5：少数民族干部配置策略</h4>
+    <p>鼎城区委书记朱金平（土家族）、鼎城区长陈远（苗族）、安乡县长翦鹰（维吾尔族）在关键岗位配置少数民族干部。尤其翦鹰（桃源维吾尔族）在安乡县长位置上，是常德市唯一非汉族县长。</p>
+  </div>
+</div>
+
+<!-- Section 8: Sources -->
+<div class="section">
+  <div class="section-title"><span class="num">08</span> 信息来源</div>
+  <div class="source-list">
+    <div>• <a href="https://zh.wikipedia.org/wiki/常德市" target="_blank">维基百科 · 常德市</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/罗毅君" target="_blank">维基百科 · 罗毅君</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/周振宇" target="_blank">维基百科 · 周振宇</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/曹志强_(1975年)" target="_blank">维基百科 · 曹志强</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/武陵区" target="_blank">维基百科 · 武陵区</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/鼎城区" target="_blank">维基百科 · 鼎城区</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/安乡县" target="_blank">维基百科 · 安乡县</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/汉寿县" target="_blank">维基百科 · 汉寿县</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/澧县" target="_blank">维基百科 · 澧县</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/临澧县" target="_blank">维基百科 · 临澧县</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/桃源县" target="_blank">维基百科 · 桃源县</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/石门县" target="_blank">维基百科 · 石门县</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://zh.wikipedia.org/wiki/津市市" target="_blank">维基百科 · 津市市</a> <span class="status ok">✅</span></div>
+    <div>• <a href="https://www.changde.gov.cn" target="_blank">常德市人民政府门户网站</a> <span class="status ok">✅</span></div>
+    <div>• 百度百科 <span class="status blocked">❌ 403 不可达</span></div>
+    <div>• 澧县第十八届人大常委会公告（第五十七号）· 2026.07.06 <span class="status ok">✅</span></div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer">
+  本简报为内部参考资料，所有数据均可追溯至指定来源URL。<br>
+  常德市人民政府 · 人事关系网络 · 2026年7月 · 数据文件: data/database/changde_network.db
+</footer>
+
+</body>
+</html>

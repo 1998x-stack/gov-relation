@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湖南省省长 · 毛伟明 · 工作关系网络</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0b0b0a; color: #e8e0d0; font-family: 'Inter', 'Noto Serif SC', sans-serif;
+    line-height: 1.6; font-size: 0.85rem;
+  }
+  /* ── Layout ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+  /* ── Header ── */
+  .header {
+    padding: 2.5rem 0 1.5rem; border-bottom: 1px solid #1f1e1c;
+    margin-bottom: 2rem; position: relative;
+  }
+  .header::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: #E03C31;
+  }
+  .header .seal {
+    display: inline-block; border: 1.5px solid #E03C31; color: #E03C31;
+    padding: 0.2rem 0.6rem; font-family: 'Noto Serif SC', serif;
+    font-size: 0.65rem; letter-spacing: 0.05em; margin-bottom: 0.8rem;
+  }
+  .header h1 {
+    font-family: 'Noto Serif SC', serif; font-size: 1.8rem; font-weight: 700;
+    color: #f0e8d8; letter-spacing: 0.02em;
+  }
+  .header .sub {
+    font-size: 0.7rem; color: #8a8478; margin-top: 0.3rem;
+  }
+  .header .sub span { color: #C9A94E; }
+  /* ── Stats Bar ── */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: #1f1e1c; margin: 1.5rem 0 2rem; border: 1px solid #1f1e1c;
+  }
+  .stat-item {
+    background: #0f0f0e; padding: 1rem; text-align: center;
+  }
+  .stat-item .num {
+    font-family: 'Noto Serif SC', serif; font-size: 1.6rem; font-weight: 700;
+    color: #f0e8d8; line-height: 1.2;
+  }
+  .stat-item .label { font-size: 0.65rem; color: #8a8478; margin-top: 0.2rem; }
+  /* ── Section ── */
+  .section { margin-bottom: 2.5rem; }
+  .section-title {
+    font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 600;
+    color: #f0e8d8; letter-spacing: 0.03em;
+    padding-bottom: 0.4rem; margin-bottom: 1rem;
+    border-bottom: 1px solid #1f1e1c; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section-title .tag {
+    font-size: 0.55rem; font-weight: 400; color: #8a8478;
+    background: #1a1917; padding: 0.1rem 0.4rem; border: 1px solid #2a2825;
+    font-family: 'Inter', sans-serif;
+  }
+  .section-title .accent { color: #E03C31; margin-right: 0.3rem; }
+  /* ── Info Table ── */
+  .info-grid {
+    display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1.5rem;
+    font-size: 0.8rem; margin-bottom: 1.2rem;
+  }
+  .info-grid .key { color: #8a8478; white-space: nowrap; }
+  .info-grid .val { color: #e8e0d0; }
+  /* ── Timeline ── */
+  .timeline { position: relative; padding-left: 1.8rem; margin-bottom: 1.5rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0;
+    width: 1px; background: #2a2825;
+  }
+  .timeline-item {
+    position: relative; padding: 0.5rem 0 0.5rem 0.8rem;
+    border-left: 1px solid transparent; transition: all 0.2s;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -1.55rem; top: 0.9rem;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #2a2825; border: 1.5px solid #1f1e1c;
+  }
+  .timeline-item.highlight::before { background: #E03C31; border-color: #E03C31; }
+  .timeline-item.gov::before { background: #4a6aff; border-color: #4a6aff; }
+  .timeline-item .period {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+    color: #C9A94E; display: block; margin-bottom: 0.15rem;
+  }
+  .timeline-item .title {
+    font-size: 0.85rem; color: #f0e8d8; font-weight: 500;
+  }
+  .timeline-item .org {
+    font-size: 0.7rem; color: #8a8478; margin-top: 0.1rem;
+  }
+  .timeline-item .note {
+    font-size: 0.65rem; color: #6a6458; margin-top: 0.15rem; font-style: italic;
+  }
+  /* ── Person Cards ── */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .card {
+    background: #0f0f0e; border: 1px solid #1f1e1c; padding: 1rem;
+  }
+  .card .name {
+    font-family: 'Noto Serif SC', serif; font-size: 0.95rem; font-weight: 600;
+    color: #f0e8d8; display: flex; align-items: center; gap: 0.4rem;
+  }
+  .card .role {
+    font-size: 0.7rem; color: #C9A94E; margin: 0.2rem 0 0.3rem;
+  }
+  .card .badge {
+    display: inline-block; font-size: 0.6rem; padding: 0.1rem 0.4rem;
+    margin-right: 0.3rem; margin-top: 0.2rem;
+    border: 1px solid #2a2825; color: #8a8478;
+  }
+  .card .badge.red { border-color: #E03C31; color: #E03C31; }
+  .card .badge.blue { border-color: #4a6aff; color: #6a8aff; }
+  .card .badge.gold { border-color: #C9A94E; color: #C9A94E; }
+  .card .detail { font-size: 0.7rem; color: #8a8478; margin-top: 0.3rem; }
+  /* ── Relationship Matrix ── */
+  .matrix { width: 100%; border-collapse: collapse; font-size: 0.7rem; margin-bottom: 1.5rem; }
+  .matrix th, .matrix td {
+    border: 1px solid #1f1e1c; padding: 0.3rem 0.5rem; text-align: center;
+  }
+  .matrix th { color: #8a8478; font-weight: 400; background: #0d0d0c; }
+  .matrix td.name-cell { color: #f0e8d8; text-align: left; font-family: 'Noto Serif SC', serif; }
+  .matrix .strong { color: #C9A94E; }
+  .matrix .medium { color: #b09850; }
+  .matrix .weak { color: #4a6aff; }
+  /* ── Key Insights ── */
+  .insight { margin-bottom: 0.8rem; }
+  .insight .priority {
+    display: inline-block; font-size: 0.55rem; padding: 0.05rem 0.4rem;
+    margin-right: 0.4rem; background: #1a1917; border: 1px solid #2a2825;
+  }
+  .insight .priority.high { border-color: #E03C31; color: #E03C31; }
+  .insight .priority.medium { border-color: #C9A94E; color: #C9A94E; }
+  .insight .priority.low { border-color: #4a6aff; color: #6a8aff; }
+  .insight p { font-size: 0.78rem; color: #d0c8b8; line-height: 1.5; }
+  /* ── Footer ── */
+  .footer {
+    margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #1f1e1c;
+    font-size: 0.65rem; color: #6a6458;
+  }
+  .sources { margin: 1rem 0; }
+  .sources li { font-size: 0.7rem; color: #8a8478; margin-bottom: 0.2rem; word-break: break-all; }
+  .sources a { color: #6a8aff; text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="seal">机密 · 人事调查</div>
+    <h1>湖南省省长 · 毛伟明</h1>
+    <div class="sub">
+      工作关系网络调查报告 · <span>2026-07-14</span> ·
+      数据来源：维基百科 · 级别：<span>正部级</span> · 第二十届中央委员
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-item"><div class="num">17</div><div class="label">人物</div></div>
+    <div class="stat-item"><div class="num">23</div><div class="label">机构</div></div>
+    <div class="stat-item"><div class="num">39</div><div class="label">任职记录</div></div>
+    <div class="stat-item"><div class="num">9</div><div class="label">关系</div></div>
+  </div>
+
+  <!-- Section 1: Bio -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 个人档案 <span class="tag">PRIMARY</span></div>
+    <div class="info-grid">
+      <span class="key">姓名</span><span class="val">毛伟明</span>
+      <span class="key">性别</span><span class="val">男</span>
+      <span class="key">民族</span><span class="val">汉族</span>
+      <span class="key">出生</span><span class="val">1961年5月（65岁）</span>
+      <span class="key">籍贯</span><span class="val">浙江省衢州市</span>
+      <span class="key">学历</span><span class="val">浙江大学化学工程系化工机械专业 · 工学学士</span>
+      <span class="key">入党</span><span class="val">1985年9月</span>
+      <span class="key">参加工作</span><span class="val">1982年8月</span>
+      <span class="key">现任</span><span class="val">湖南省委副书记、省长 · 第二十届中央委员</span>
+      <span class="key">任期</span><span class="val">2020年11月至今（5年8个月）</span>
+    </div>
+  </div>
+
+  <!-- Section 2: Career Timeline -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 职业生涯时间线 <span class="tag">39年 • 3省 • 1部 • 1央企</span></div>
+    <div class="timeline">
+      <div class="timeline-item"><span class="period">1982 – 1993</span><span class="title">常州绝缘材料总厂</span><span class="org">江苏常州 · 车间主任→副厂长→厂长→党委书记</span><span class="note">第一份工作，11年企业生涯</span></div>
+      <div class="timeline-item"><span class="period">1993 – 1998</span><span class="title">武进市副市长、副书记</span><span class="org">江苏武进 · 转入地方党政系统</span></div>
+      <div class="timeline-item highlight"><span class="period">1998 – 2001</span><span class="title">武进市市长 → 市委书记</span><span class="org">江苏武进 · 1999年当选市长，2001年兼任书记</span><span class="note">首次主政一方（县级市）</span></div>
+      <div class="timeline-item"><span class="period">2003 – 2006</span><span class="title">泰州市市长</span><span class="org">江苏泰州 · 地级市市长</span></div>
+      <div class="timeline-item"><span class="period">2006 – 2011</span><span class="title">江苏省发改委主任</span><span class="org">江苏南京 · 省级经济部门主官</span></div>
+      <div class="timeline-item"><span class="period">2011 – 2013</span><span class="title">江苏省政府秘书长 → 副省长</span><span class="org">江苏南京 · 晋升副部级</span></div>
+      <div class="timeline-item"><span class="period">2013 – 2015</span><span class="title">工业和信息化部副部长</span><span class="org">北京 · 中央部委经历</span></div>
+      <div class="timeline-item"><span class="period">2015 – 2020</span><span class="title">江西省委常委、常务副省长</span><span class="org">江西南昌 · 跨省交流，省级政府"二把手"</span></div>
+      <div class="timeline-item"><span class="period">2020.01 – 2020.11</span><span class="title">国家电网有限公司董事长</span><span class="org">北京 · 央企一把手（10个月）</span><span class="note">罕见的"央企→省长"跳板</span></div>
+      <div class="timeline-item gov"><span class="period">2020.11 – 至今</span><span class="title">湖南省省长</span><span class="org">湖南长沙 · 正部级 · 省委副书记</span><span class="note">2021年1月正式当选</span></div>
+    </div>
+  </div>
+
+  <!-- Section 3: Person Cards -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 关键人物 <span class="tag">领导班子</span></div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="name">毛伟明 <span class="badge red">省长</span></div>
+        <div class="role">湖南省委副书记 · 省政府省长</div>
+        <span class="badge">浙江衢州</span><span class="badge">1961</span>
+        <div class="detail">工科出身 · 企业→地方→中央→央企→省长 · 全链条经历</div>
+      </div>
+      <div class="card">
+        <div class="name">沈晓明 <span class="badge gold">省委书记</span></div>
+        <div class="role">湖南省委书记 · 省人大常委会主任</div>
+        <span class="badge">浙江上虞</span><span class="badge">1963</span>
+        <div class="detail">医学博士背景 · 曾任海南省省长/书记 · 2023年调任湖南</div>
+      </div>
+      <div class="card">
+        <div class="name">许达哲 <span class="badge">前任省长</span></div>
+        <div class="role">曾任湖南省委书记（2021-2023）· 已退休</div>
+        <span class="badge">湖南浏阳</span><span class="badge">1956</span>
+        <div class="detail">航天系统出身 · 工信部/国防科工背景 · 毛伟明的前任</div>
+      </div>
+      <div class="card">
+        <div class="name">王道席 <span class="badge blue">常务副省长</span></div>
+        <div class="role">湖南省委常委 · 常务副省长</div>
+        <span class="badge">1968</span>
+        <div class="detail">协助毛伟明处理省政府日常工作</div>
+      </div>
+      <div class="card">
+        <div class="name">谢卫江 <span class="badge blue">省委副书记</span></div>
+        <div class="role">湖南省委副书记 · 岳阳市委书记</div>
+        <span class="badge">1973</span>
+        <div class="detail">省委"三把手"，毛伟明的主要副手</div>
+      </div>
+      <div class="card">
+        <div class="name">魏建锋 <span class="badge">纪委书记</span></div>
+        <div class="role">湖南省委常委 · 省纪委书记</div>
+        <span class="badge">1966</span>
+        <div class="detail">省级纪律检查负责人</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Relationship Matrix -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 关系矩阵 <span class="tag">毛伟明 · 核心关系</span></div>
+    <table class="matrix">
+      <tr><th></th><th>沈晓明</th><th>许达哲</th><th>杜家毫</th><th>王道席</th><th>谢卫江</th></tr>
+      <tr>
+        <td class="name-cell">毛伟明</td>
+        <td class="strong">搭班</td><td class="medium">前后任</td>
+        <td class="weak">同籍</td><td class="strong">上下级</td>
+        <td class="strong">同班子</td>
+      </tr>
+      <tr><td colspan="6" style="text-align:left; color:#8a8478; font-size:0.65rem; padding:0.3rem 0.5rem;">
+        强(C9A94E) · 中(b09850) · 弱(4a6aff)
+      </td></tr>
+    </table>
+    <div style="font-size:0.7rem; color:#6a6458;">
+      <div style="margin-bottom:0.5rem;"><b>毛伟明 — 沈晓明：</b>正副书记搭档（2023至今）。均为浙江籍（衢州/上虞），形成南北互补的"沈毛配"</div>
+      <div style="margin-bottom:0.5rem;"><b>毛伟明 — 许达哲：</b>毛接替许任省长（2020），后许升任书记（2021），有短暂共事期</div>
+      <div style="margin-bottom:0.5rem;"><b>毛伟明 — 国家电网系：</b>毛2020年曾执掌国网10个月，国家电网湖南公司可视为其"旧部"网络</div>
+    </div>
+  </div>
+
+  <!-- Section 5: Cross-region Path -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 跨省调动路径 <span class="tag">干部分布</span></div>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+      <span style="border:1px solid #1f1e1c; padding:0.3rem 0.6rem; font-size:0.7rem; color:#C9A94E;">江苏 →</span>
+      <span style="border:1px solid #1f1e1c; padding:0.3rem 0.6rem; font-size:0.7rem; color:#8a8478;">工信部 →</span>
+      <span style="border:1px solid #1f1e1c; padding:0.3rem 0.6rem; font-size:0.7rem; color:#4a6aff;">江西 →</span>
+      <span style="border:1px solid #1f1e1c; padding:0.3rem 0.6rem; font-size:0.7rem; color:#6a6458;">国家电网 →</span>
+      <span style="border:1px solid #E03C31; padding:0.3rem 0.6rem; font-size:0.7rem; color:#E03C31;">湖南</span>
+    </div>
+    <div style="font-size:0.7rem; color:#8a8478; margin-bottom:1.5rem;">
+      毛伟明的跨省路径是典型的"东部成长 → 中央锻炼 → 中部主政"模式。<br>
+      与沈晓明的"上海（科教）→ 教育部 → 海南（主政）→ 湖南"形成互补而不重叠的履历结构。
+    </div>
+  </div>
+
+  <!-- Section 6: Key Insights -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 关键洞察 <span class="tag">优先级排序</span></div>
+    <div class="insight">
+      <span class="priority high">高</span>
+      <p><b>1. 企业早期 × 江苏31年根基</b> — 毛伟明在常州绝缘材料总厂11年企业经历是其经济工作能力的起点；在江苏31年积累的人脉网络是理解其决策逻辑的关键线索。</p>
+    </div>
+    <div class="insight">
+      <span class="priority high">高</span>
+      <p><b>2. "国家电网系"湖南干部网络</b> — 毛伟明2020年任国家电网董事长（仅10个月），国网在湖南有省级公司和大量资产，可能存在其前下属或"旧部"。</p>
+    </div>
+    <div class="insight">
+      <span class="priority medium">中</span>
+      <p><b>3. "浙籍"政坛网络</b> — 湖南现任书记（沈晓明·浙江上虞）和省长（毛伟明·浙江衢州）均来自浙江，这一特征在全国省级班子中较为罕见。</p>
+    </div>
+    <div class="insight">
+      <span class="priority medium">中</span>
+      <p><b>4. 江西→湖南跨省接力</b> — 毛伟明在江西任常务副省长5年，对邻省湖南情况熟悉；湖南与江西在产业布局上有大量对接领域。</p>
+    </div>
+    <div class="insight">
+      <span class="priority low">低</span>
+      <p><b>5. 领导班子中多名副职履历待查</b> — 余红胜、刘扬、刘红兵、郭灵计等人公开履历信息有限，需进一步挖掘。</p>
+    </div>
+  </div>
+
+  <!-- Sources -->
+  <div class="section">
+    <div class="section-title"><span class="accent">◆</span> 信息来源</div>
+    <ol class="sources">
+      <li>维基百科 - 毛伟明：<a href="https://zh.wikipedia.org/wiki/毛伟明" target="_blank">https://zh.wikipedia.org/wiki/毛伟明</a></li>
+      <li>维基百科 - 沈晓明：<a href="https://zh.wikipedia.org/wiki/沈晓明" target="_blank">https://zh.wikipedia.org/wiki/沈晓明</a></li>
+      <li>维基百科 - 湖南行政长官列表：<a href="https://zh.wikipedia.org/wiki/湖南省省长" target="_blank">https://zh.wikipedia.org/wiki/湖南省省长</a></li>
+      <li>维基百科 - 湖南省领导人模板：<a href="https://zh.wikipedia.org/wiki/Template:湖南省领导人" target="_blank">https://zh.wikipedia.org/wiki/Template:湖南省领导人</a></li>
+    </ol>
+    <div style="font-size:0.65rem; color:#6a6458; margin-top:0.5rem;">
+      ⚠️ 来源质量：以上主要基于维基百科（二级来源）。湖南省政府官网领导之窗页面目前无法访问（404），后续应尝试从其他官方路径获取第一手简历数据。
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    湖南省省长 · 毛伟明工作关系网络 · 调查报告<br>
+    数据文件：data/database/hunan_gov_network.db | data/graph/hunan_gov_network.gexf<br>
+    报告日期：2026-07-14 | 工具：Government Personnel Network Investigator
+  </div>
+
+</div>
+</body>
+</html>

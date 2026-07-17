@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>娄底市领导班子 · 工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0c;
+    color: #e0d8c8;
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 2rem; }
+
+  /* ═══ HEADER ═══ */
+  .header {
+    border-bottom: 1px solid #1e1e22;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #c41e1e;
+  }
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #e8e0d0;
+  }
+  .header .sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: #7a7260;
+    font-size: 0.85rem;
+  }
+  .header .seal {
+    display: inline-block;
+    border: 1px solid #c41e1e;
+    color: #c41e1e;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  /* ═══ STATS BAR ═══ */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #1e1e22;
+    border: 1px solid #1e1e22;
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    background: #0f0f12;
+    padding: 1rem;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e0d8c0;
+  }
+  .stat-card .label {
+    font-size: 0.7rem;
+    color: #6a6250;
+    letter-spacing: 0.08em;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+  }
+  .stat-card.accent .num { color: #c41e1e; }
+
+  /* ═══ SECTION TITLE ═══ */
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #c9a94e;
+    letter-spacing: 0.12em;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #1e1e22;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-title::before {
+    content: "◆";
+    font-size: 0.5rem;
+    color: #c41e1e;
+  }
+
+  /* ═══ PERSON CARDS ═══ */
+  .person-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: #1e1e22;
+    border: 1px solid #1e1e22;
+  }
+  .person-card {
+    background: #0f0f12;
+    padding: 1rem;
+    position: relative;
+  }
+  .person-card .name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #e8e0d0;
+  }
+  .person-card .badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    margin-left: 0.3rem;
+    border: 1px solid currentColor;
+    vertical-align: middle;
+  }
+  .badge-red { color: #c41e1e; }
+  .badge-blue { color: #6080d0; }
+  .badge-gold { color: #c9a94e; }
+  .badge-green { color: #60a060; }
+  .badge-grey { color: #6a6a60; }
+
+  .person-card .role {
+    color: #7a7260;
+    font-size: 0.75rem;
+    margin-top: 0.1rem;
+  }
+  .person-card .detail {
+    font-size: 0.75rem;
+    color: #9a9280;
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+  .person-card .detail span {
+    color: #6a6250;
+    display: inline-block;
+    width: 3rem;
+  }
+  .person-card .connections {
+    margin-top: 0.4rem;
+    font-size: 0.65rem;
+    color: #6a6a50;
+    border-top: 1px solid #18181c;
+    padding-top: 0.4rem;
+  }
+  .person-card .connections em {
+    color: #c9a94e;
+    font-style: normal;
+  }
+
+  /* ═══ TIMELINE ═══ */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 1rem 0 0;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #1e1e22;
+  }
+  .tl-item {
+    position: relative;
+    padding: 0.3rem 0 0.3rem 1rem;
+    font-size: 0.75rem;
+    color: #8a8270;
+  }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -1.55rem;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1e1e22;
+    border: 1px solid #c41e1e;
+  }
+  .tl-item .year {
+    color: #c9a94e;
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  /* ═══ TABLE ═══ */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    margin: 1rem 0;
+  }
+  .data-table th {
+    text-align: left;
+    padding: 0.5rem;
+    color: #6a6250;
+    font-weight: 500;
+    border-bottom: 1px solid #1e1e22;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .data-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #121216;
+    color: #b0a890;
+  }
+  .data-table tr:hover td {
+    background: #0d0d10;
+  }
+
+  /* ═══ RELATIONSHIP MAP ═══ */
+  .rel-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  .rel-node {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #1e1e22;
+    background: #0f0f12;
+    font-size: 0.75rem;
+  }
+  .rel-node .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot-red { background: #c41e1e; }
+  .dot-blue { background: #6080d0; }
+  .dot-gold { background: #c9a94e; }
+  .dot-green { background: #60a060; }
+  .dot-grey { background: #6a6a60; }
+
+  .rel-arrow {
+    color: #3a3a32;
+    font-size: 0.7rem;
+  }
+
+  /* ═══ INSIGHT PANEL ═══ */
+  .insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #1e1e22;
+    border: 1px solid #1e1e22;
+  }
+  .insight-card {
+    background: #0f0f12;
+    padding: 1rem;
+  }
+  .insight-card h4 {
+    color: #c9a94e;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  .insight-card p {
+    color: #8a8270;
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+
+  /* ═══ FOOTER ═══ */
+  .footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1e1e22;
+    font-size: 0.65rem;
+    color: #4a4230;
+  }
+  .footer a { color: #6a6250; text-decoration: none; }
+  .footer a:hover { color: #c9a94e; }
+
+  @media (max-width: 768px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .insight-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <h1>娄底市领导班子 · 工作关系网络</h1>
+    <div class="sub">
+      <span>湖南省 · 地级市 ｜ 1市辖区·2县·2县级市 ｜ 人口382.7万</span>
+      <span class="seal">◆ 机密 · 情报简报 ◆</span>
+    </div>
+  </div>
+
+  <!-- ═══ STATS ═══ -->
+  <div class="stats">
+    <div class="stat-card accent"><div class="num">28</div><div class="label">人物</div></div>
+    <div class="stat-card"><div class="num">26</div><div class="label">机构</div></div>
+    <div class="stat-card"><div class="num">31</div><div class="label">任职</div></div>
+    <div class="stat-card"><div class="num">23</div><div class="label">关系</div></div>
+  </div>
+
+  <!-- ═══ CITY LEADERS ═══ -->
+  <div class="section-title">娄底市四大机构</div>
+  <div class="person-grid">
+    <div class="person-card">
+      <div><span class="name">曾超群</span><span class="badge badge-red">书记</span></div>
+      <div class="role">中共娄底市委书记</div>
+      <div class="detail"><span>1975</span>湖南邵东<p>北大经济学 / 管理学博士</p></div>
+      <div class="detail"><span>就任</span>2025.04（由市长升任）</div>
+      <div class="connections">前职: 娄底市长(2021-2025) → 张家界常务副市长 → <em>长沙县委书记</em> → <em>天心区委书记</em></div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">何朝晖</span><span class="badge badge-blue">市长</span></div>
+      <div class="role">娄底市人民政府市长</div>
+      <div class="detail"><span>1973</span>湖南攸县</div>
+      <div class="detail"><span>就任</span>2025.11</div>
+      <div class="connections">履历待查 · 接替曾超群任市长</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">李定桥</span><span class="badge badge-gold">人大</span></div>
+      <div class="role">娄底市人大常委会主任</div>
+      <div class="detail"><span>1970</span>湖南安仁</div>
+      <div class="detail"><span>就任</span>2026.01</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">梁立坚</span><span class="badge badge-green">政协</span></div>
+      <div class="role">娄底市政协主席</div>
+      <div class="detail"><span>1972</span>湖南涟源</div>
+      <div class="detail"><span>就任</span>2022.01</div>
+    </div>
+  </div>
+
+  <!-- ═══ DISTRICT / COUNTY LEADERS ═══ -->
+  <div class="section-title">五区县 · 党政主官</div>
+  <div class="person-grid">
+    <!-- 娄星区 -->
+    <div class="person-card">
+      <div><span class="name">李彦文</span><span class="badge badge-red">区委书记</span></div>
+      <div class="role">娄星区委书记</div>
+      <div class="detail"><span>1971</span>湖南涟源 · 就任2018.10</div>
+      <div class="connections">同乡: 梁立坚(政协主席,涟源人)</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">刘志刚</span><span class="badge badge-blue">区长</span></div>
+      <div class="role">娄星区人民政府区长</div>
+      <div class="detail"><span>1979</span>湖南新化 · 就任2021.10</div>
+      <div class="connections">新化帮: 彭韬·陈创业·孙纬辉</div>
+    </div>
+    <!-- 双峰县 -->
+    <div class="person-card">
+      <div><span class="name">彭石清</span><span class="badge badge-red">县委书记</span></div>
+      <div class="role">双峰县委书记</div>
+      <div class="detail"><span>1967</span>娄底娄星区 · 就任2021.07</div>
+      <div class="connections">临近退休年龄</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">李基联</span><span class="badge badge-blue">县长</span></div>
+      <div class="role">双峰县人民政府县长</div>
+      <div class="detail"><span>1975</span>湖南溆浦 · 就任2021.10</div>
+      <div class="connections">跨市干部（怀化→娄底）</div>
+    </div>
+    <!-- 新化县 -->
+    <div class="person-card">
+      <div><span class="name">彭韬</span><span class="badge badge-red">县委书记</span></div>
+      <div class="role">中共新化县委书记</div>
+      <div class="detail"><span>1984</span>湖南新化 · 就任2025.06</div>
+      <div class="connections">🌟 全市最年轻的县委书记 · 此前为县长</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">邹剑锋</span><span class="badge badge-blue">县长</span></div>
+      <div class="role">新化县人民政府县长</div>
+      <div class="detail"><span>1985</span>湖南长沙县 · 就任2025.12</div>
+      <div class="connections">🌟 全市最年轻的县长 · 跨县区交流</div>
+    </div>
+    <!-- 冷水江市 -->
+    <div class="person-card">
+      <div><span class="name">曾伯怡</span><span class="badge badge-red">市委书记</span></div>
+      <div class="role">中共冷水江市委书记</div>
+      <div class="detail"><span>1971</span>湖南双峰 · 就任2021.07</div>
+      <div class="connections">同乡: 邓伟谋(涟源市长,双峰人)</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">陈创业</span><span class="badge badge-blue">市长</span></div>
+      <div class="role">冷水江市人民政府市长</div>
+      <div class="detail"><span>1973</span>湖南新化 · 就任2021.09</div>
+    </div>
+    <!-- 涟源市 -->
+    <div class="person-card">
+      <div><span class="name">段晓赛</span><span class="badge badge-red">市委书记</span></div>
+      <div class="role">中共涟源市委书记</div>
+      <div class="detail"><span>1975</span>湖南耒阳 · 就任2025.03</div>
+      <div class="connections">跨市调任（衡山县长→涟源书记）· 全国脱贫攻坚先进个人</div>
+    </div>
+    <div class="person-card">
+      <div><span class="name">邓伟谋</span><span class="badge badge-blue">市长</span></div>
+      <div class="role">涟源市人民政府市长</div>
+      <div class="detail"><span>1976</span>湖南双峰 · 就任2021.07</div>
+      <div class="connections">同乡: 曾伯怡(冷水江书记,双峰人)</div>
+    </div>
+  </div>
+
+  <!-- ═══ TIMELINE ═══ -->
+  <div class="section-title">曾超群 · 完整晋升路径</div>
+  <div class="timeline">
+    <div class="tl-item"><span class="year">1997</span>北京大学经济学院毕业 → 长沙市委办公厅</div>
+    <div class="tl-item"><span class="year">2001</span>湖南省委办公厅</div>
+    <div class="tl-item"><span class="year">2008</span>长沙县委副书记（首入地方政界）</div>
+    <div class="tl-item"><span class="year">2011</span>长沙市天心区长</div>
+    <div class="tl-item"><span class="year">2013</span>长沙市天心区委书记</div>
+    <div class="tl-item"><span class="year">2016</span>长沙县委书记（兼经开区党工委书记）</div>
+    <div class="tl-item"><span class="year">2019</span>张家界市委常委、常务副市长</div>
+    <div class="tl-item"><span class="year">2021</span>娄底市委副书记、代市长 → 市长</div>
+    <div class="tl-item"><span class="year">2025.04</span><strong>升任娄底市委书记</strong></div>
+  </div>
+
+  <!-- ═══ CEO / CORRUPTION ═══ -->
+  <div class="section-title">腐败案件</div>
+  <div class="person-grid">
+    <div class="person-card" style="border-left: 2px solid #8a0000;">
+      <div><span class="name">李荐国</span><span class="badge badge-grey">已落马</span></div>
+      <div class="role">原娄底市委书记（2016-2019）</div>
+      <div class="detail">受贿2704万 · 判刑13年 · 2020年被查</div>
+      <div class="connections">涵盖职务晋升、医疗销售、工程承包</div>
+    </div>
+    <div class="person-card" style="border-left: 2px solid #8a0000;">
+      <div><span class="name">杨懿文</span><span class="badge badge-grey">已落马</span></div>
+      <div class="role">原娄底市长（2016-2021）</div>
+      <div class="detail">受贿6979万 · 判刑16年6个月 · "家族腐败"案</div>
+      <div class="connections">妻子李湘江同日被查 · 妹妹杨文利次日被查</div>
+    </div>
+  </div>
+
+  <!-- ═══ RELATIONSHIP NETWORK ═══ -->
+  <div class="section-title">关系网络 · 籍贯关联图</div>
+  <div class="rel-flow">
+    <div class="rel-node"><span class="dot dot-red"></span> 新化帮（5人）</div>
+    <span class="rel-arrow">→</span>
+    <div class="rel-node" style="background:#0d0d10;">刘志刚(娄星区长) · 彭韬(新化书记) · 陈创业(冷水江市长) · 孙纬辉(冷水江人大) · 杨韶红(新化人大)</div>
+  </div>
+  <div class="rel-flow">
+    <div class="rel-node"><span class="dot dot-red"></span> 双峰帮（2人）</div>
+    <span class="rel-arrow">→</span>
+    <div class="rel-node" style="background:#0d0d10;">曾伯怡(冷水江书记) · 邓伟谋(涟源市长)</div>
+  </div>
+  <div class="rel-flow">
+    <div class="rel-node"><span class="dot dot-blue"></span> 涟源帮（2人）</div>
+    <span class="rel-arrow">→</span>
+    <div class="rel-node" style="background:#0d0d10;">梁立坚(政协主席) · 李彦文(娄星区委书记)</div>
+  </div>
+  <div class="rel-flow">
+    <div class="rel-node"><span class="dot dot-gold"></span> 新旧交替</div>
+    <span class="rel-arrow">→</span>
+    <div class="rel-node" style="background:#0d0d10;">曾超群 接 邹文辉（书记）</div>
+    <div class="rel-node" style="background:#0d0d10;">何朝晖 接 曾超群（市长）</div>
+    <div class="rel-node" style="background:#0d0d10;">彭韬 → 邹剑锋（新化党政搭档）</div>
+    <div class="rel-node" style="background:#0d0d10;">段晓赛（2025跨市调任涟源书记）</div>
+  </div>
+
+  <!-- ═══ KEY INSIGHTS ═══ -->
+  <div class="section-title">关键洞察</div>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <h4>🔄 2025年大换血</h4>
+      <p>娄底市委、市政府一把手及新化县、涟源市主要领导均在2025年更替。曾超群4月任书记、何朝晖11月任市长、彭韬6月任新化书记、邹剑锋12月任新化县长、段晓赛3月任涟源市委书记——全市领导层在一年内完成重组。</p>
+    </div>
+    <div class="insight-card">
+      <h4>🌱 年轻化趋势</h4>
+      <p>彭韬(1984年)+邹剑锋(1985年)组合成为全市最年轻县级党政主官。新化县领导班子比娄星区(李彦文1971/刘志刚1979)平均年轻约15岁。</p>
+    </div>
+    <div class="insight-card">
+      <h4>🌐 新化帮网络</h4>
+      <p>新化县籍贯干部占据市域约5个关键岗位（娄星区长、新化县委书记、冷水江市长、冷水江人大主任、新化人大主任），是娄底市最大的同乡关系网络。</p>
+    </div>
+    <div class="insight-card">
+      <h4>⚠️ 腐败余波</h4>
+      <p>李荐国(13年/2704万)与杨懿文(16年6个月/6979万)两起连续腐败案对娄底政坛造成深远影响，2021年后的人事大换血与此直接相关。</p>
+    </div>
+  </div>
+
+  <!-- ═══ DATA TABLE ═══ -->
+  <div class="section-title">完整任职表</div>
+  <table class="data-table">
+    <thead>
+      <tr><th>地区</th><th>姓名</th><th>职务</th><th>出生</th><th>籍贯</th><th>就任</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>娄底市</td><td>曾超群</td><td>市委书记</td><td>1975</td><td>邵东</td><td>2025.04</td></tr>
+      <tr><td>娄底市</td><td>何朝晖</td><td>市长</td><td>1973</td><td>攸县</td><td>2025.11</td></tr>
+      <tr><td>娄底市</td><td>李定桥</td><td>人大主任</td><td>1970</td><td>安仁</td><td>2026.01</td></tr>
+      <tr><td>娄底市</td><td>梁立坚</td><td>政协主席</td><td>1972</td><td>涟源</td><td>2022.01</td></tr>
+      <tr><td colspan="6" style="color:#4a4230;text-align:center;font-size:0.6rem;letter-spacing:0.2em;">━━━ 区县 ━━━</td></tr>
+      <tr><td>娄星区</td><td>李彦文</td><td>区委书记</td><td>1971</td><td>涟源</td><td>2018.10</td></tr>
+      <tr><td>娄星区</td><td>刘志刚</td><td>区长</td><td>1979</td><td>新化</td><td>2021.10</td></tr>
+      <tr><td>双峰县</td><td>彭石清</td><td>县委书记</td><td>1967</td><td>娄星区</td><td>2021.07</td></tr>
+      <tr><td>双峰县</td><td>李基联</td><td>县长</td><td>1975</td><td>溆浦</td><td>2021.10</td></tr>
+      <tr><td>新化县</td><td>彭韬</td><td>县委书记</td><td>1984</td><td>新化</td><td>2025.06</td></tr>
+      <tr><td>新化县</td><td>邹剑锋</td><td>县长</td><td>1985</td><td>长沙县</td><td>2025.12</td></tr>
+      <tr><td>冷水江市</td><td>曾伯怡</td><td>市委书记</td><td>1971</td><td>双峰</td><td>2021.07</td></tr>
+      <tr><td>冷水江市</td><td>陈创业</td><td>市长</td><td>1973</td><td>新化</td><td>2021.09</td></tr>
+      <tr><td>涟源市</td><td>段晓赛</td><td>市委书记</td><td>1975</td><td>耒阳</td><td>2025.03</td></tr>
+      <tr><td>涟源市</td><td>邓伟谋</td><td>市长</td><td>1976</td><td>双峰</td><td>2021.07</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <p>调查日期: 2026-07-14 ｜ 数据来源: 中文维基百科 · 娄底市人民政府官网</p>
+    <p>数据文件: <a href="../data/database/loudi_network.db">loudi_network.db</a> (SQLite) · <a href="../data/graph/loudi_network.gexf">loudi_network.gexf</a> (GEXF关系图)</p>
+    <p>报告文件: <a href="20260714-娄底市-领导班子.md">20260714-娄底市-领导班子.md</a></p>
+  </div>
+
+</div>
+</body>
+</html>

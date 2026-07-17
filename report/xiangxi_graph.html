@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湘西州领导班子 · 工作关系网络总图</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0d0d0d; color:#e8e0d0; font-family:'Inter',sans-serif; }
+#mynetwork { width:100%; height:calc(100vh - 130px); border-top:1px solid #2a2a2a; }
+.header {
+  padding:0.8rem 1.5rem; display:flex; justify-content:space-between; align-items:center;
+  border-bottom:1px solid #2a2a2a;
+}
+.header h1 { font-family:'Noto Serif SC',serif; font-size:1.1rem; font-weight:700; }
+.header .sub { font-size:0.7rem; color:#8a8478; margin-top:0.2rem; }
+.header .links a { color:#C9A94E; font-size:0.7rem; text-decoration:none; margin-left:1rem; }
+.header .links a:hover { text-decoration:underline; }
+.legend {
+  display:flex; gap:1.5rem; padding:0.4rem 1.5rem;
+  font-size:0.7rem; color:#8a8478;
+  border-bottom:1px solid #2a2a2a; flex-wrap:wrap;
+}
+.legend-item { display:flex; align-items:center; gap:0.4rem; }
+.legend-color { width:12px; height:12px; border-radius:50%; border:1px solid #2a2a2a; }
+.legend-line { width:20px; height:2px; border-radius:0; }
+.legend-box { width:12px; height:12px; border:1px solid #2a2a2a; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>湘西土家族苗族自治州 · 领导班子工作关系网络</h1>
+    <div class="sub">动态关系图 · 点击节点查看详情 · 2026年7月</div>
+  </div>
+  <div class="links">
+    <a href="20260714-湘西土家族苗族自治州-领导班子.html">📋 情报简报</a>
+    <a href="20260714-湘西土家族苗族自治州-领导班子.md">📄 调查报告</a>
+    <a href="index.html">🏠 返回总索引</a>
+  </div>
+</div>
+<div class="legend">
+  <span style="font-weight:600;color:#C9A94E;">图例</span>
+  <span class="legend-item"><span class="legend-color" style="background:#E03C31;"></span> 党委书记</span>
+  <span class="legend-item"><span class="legend-color" style="background:#2563EB;"></span> 政府正职</span>
+  <span class="legend-item"><span class="legend-color" style="background:#F59E0B;"></span> 人大主任</span>
+  <span class="legend-item"><span class="legend-color" style="background:#8B5CF6;"></span> 政协主席</span>
+  <span class="legend-item"><span class="legend-color" style="background:#6B7280;"></span> 其他</span>
+  <span class="legend-item"><span class="legend-box" style="background:#E03C31;"></span> 党组织</span>
+  <span class="legend-item"><span class="legend-box" style="background:#2563EB;"></span> 政府机构</span>
+  <span class="legend-item"><span class="legend-box" style="background:#F59E0B;"></span> 人大</span>
+  <span class="legend-item"><span class="legend-box" style="background:#8B5CF6;"></span> 政协</span>
+  <span class="legend-item"><span style="display:inline-block;width:20px;height:3px;background:#C9A94E;"></span> 搭班/继任关系</span>
+  <span class="legend-item"><span style="display:inline-block;width:20px;height:1px;background:#888;"></span> 任职关系</span>
+</div>
+<div id="mynetwork"></div>
+
+<script>
+const nodes = new vis.DataSet([
+  // ── People ──
+  { id:'xiangxi_liu_tao', label:'刘涛\n州委书记', title:'刘涛 · 1971.6 · 河南方城\n州委书记（2024.10—）\n前许昌市长·跨省调任', color:{background:'#E03C31',border:'#a01a12'}, size:35, shape:'dot', font:{size:12,face:'Noto Serif SC'}, borderWidth:2 },
+  { id:'xiangxi_shang_shenglong', label:'尚生龙\n代州长', title:'尚生龙 · 1972.5 · 桑植/土家族\n州长（代理）（2026.6—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:30, shape:'dot', font:{size:12,face:'Noto Serif SC'}, borderWidth:2 },
+  { id:'xiangxi_guo_zhenggui', label:'虢正贵\n前任书记', title:'虢正贵 · 1964.9 · 长沙望城\n前任州委书记（2021-2024）\n现任省政协副主席', color:{background:'#F59E0B',border:'#a06a00'}, size:25, shape:'dot', font:{size:11,face:'Noto Serif SC'} },
+  { id:'xiangxi_gong_minghan', label:'龚明汉\n人大主任', title:'龚明汉 · 1964.9 · 张家界/汉族\n州人大常委会主任（2021—）', color:{background:'#F59E0B',border:'#a06a00'}, size:22, shape:'dot', font:{size:11,face:'Noto Serif SC'} },
+  { id:'xiangxi_xiang_bangwei', label:'向邦伟\n政协主席', title:'向邦伟 · 1969.3 · 土家族\n州政协主席（2026.2—）', color:{background:'#8B5CF6',border:'#5a2d9a'}, size:22, shape:'dot', font:{size:11,face:'Noto Serif SC'} },
+  { id:'xiangxi_chen_hua', label:'陈华\n前任州长', title:'陈华（前任州长·另有任用）', color:{background:'#6B7280',border:'#4a4a4a'}, size:18, shape:'dot', font:{size:11,face:'Noto Serif SC'} },
+
+  // ── County/City ──
+  { id:'jishou_zhou_lizhi', label:'周立志\n吉首书记', title:'周立志 · 1978.5 · 永州/汉族\n吉首市委书记（2023.10—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'jishou_fu_jiasheng', label:'符家盛\n吉首市长', title:'符家盛 · 1973.4 · 龙山/苗族\n吉首市长（2020.4—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'luxi_peng_wuxue', label:'彭武学\n泸溪书记', title:'彭武学 · 1971.5 · 永顺/土家族\n泸溪县委书记（2021.6—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'luxi_fu_jiabo', label:'符家波\n泸溪县长', title:'符家波 · 1979.5 · 苗族\n泸溪县长（2023.11—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:18, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'fenghuang_mao_jia', label:'毛家\n凤凰书记', title:'毛家 · 1973.10 · 永顺/土家族\n凤凰县委书记（2022.1—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'fenghuang_fan_zhongqing', label:'樊忠清\n凤凰县长', title:'樊忠清 · 1975.10 · 花垣/苗族\n凤凰县长（2022.3—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:18, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'huayuan_wang_jinghai', label:'王京海\n花垣书记', title:'王京海 · 1975.9 · 慈利/土家族\n花垣县委书记兼县长（2025.2—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'baojing_zhou_jianwu', label:'周建武\n保靖书记', title:'周建武 · 1977.11 · 涟源/汉族\n保靖县委书记（2024.6—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'baojing_guo_yingxiang', label:'郭应湘\n保靖县长', title:'郭应湘 · 1979.6 · 桂东/汉族\n保靖县长（2024.7—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:18, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'guzhang_teng_zhaohui', label:'滕朝辉\n古丈书记', title:'滕朝辉 · 1974.10 · 土家族\n古丈县委书记（2023.12—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'guzhang_chen_jianxin', label:'陈建新\n古丈县长', title:'陈建新 · 1979.6 · 衡东/汉族\n古丈县长（2024.7—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:18, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'yongshun_xiang_jiamao', label:'向加茂\n永顺书记', title:'向加茂 · 1973.2 · 苗族\n永顺县委书记兼县长（2025.2—）\n此前县长（2021.10—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'longshan_shi_rongfen', label:'时荣芬\n龙山书记', title:'时荣芬 · 1976.12 · 花垣/苗族/女\n龙山县县委书记（2022.1—）', color:{background:'#E03C31',border:'#a01a12'}, size:20, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+  { id:'longshan_zhou_shengyi', label:'周胜益\n龙山县长', title:'周胜益 · 1972.9 · 保靖/苗族\n龙山县县长（2022.3—）', color:{background:'#2563EB',border:'#1a3d7a'}, size:18, shape:'dot', font:{size:10,face:'Noto Serif SC'} },
+
+  // ── Organizations ──
+  { id:'org_xiangxi_zhouwei', label:'湘西州委', title:'中共湘西州委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:10, shape:'square', font:{size:9,face:'Noto Serif SC'} },
+  { id:'org_xiangxi_zhouzhengfu', label:'州政府', title:'湘西州人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:10, shape:'square', font:{size:9,face:'Noto Serif SC'} },
+  { id:'org_xiangxi_rd', label:'州人大', title:'州人大常委会', color:{background:'#F59E0B',border:'#a06a00'}, size:10, shape:'square', font:{size:9,face:'Noto Serif SC'} },
+  { id:'org_xiangxi_zx', label:'州政协', title:'州政协', color:{background:'#8B5CF6',border:'#5a2d9a'}, size:10, shape:'square', font:{size:9,face:'Noto Serif SC'} },
+  { id:'org_jishou_shiwei', label:'吉首市委', title:'中共吉首市委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_jishou_shizhengfu', label:'吉首市政府', title:'吉首市人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_luxi_xianwei', label:'泸溪县委', title:'中共泸溪县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_luxi_xianzhengfu', label:'泸溪县政府', title:'泸溪县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_fenghuang_xianwei', label:'凤凰县委', title:'中共凤凰县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_fenghuang_xianzhengfu', label:'凤凰县政府', title:'凤凰县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_huayuan_xianwei', label:'花垣县委', title:'中共花垣县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_huayuan_xianzhengfu', label:'花垣县政府', title:'花垣县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_baojing_xianwei', label:'保靖县委', title:'中共保靖县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_baojing_xianzhengfu', label:'保靖县政府', title:'保靖县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_guzhang_xianwei', label:'古丈县委', title:'中共古丈县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_guzhang_xianzhengfu', label:'古丈县政府', title:'古丈县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_yongshun_xianwei', label:'永顺县委', title:'中共永顺县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_yongshun_xianzhengfu', label:'永顺县政府', title:'永顺县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_longshan_xianwei', label:'龙山县委', title:'中共龙山县委员会', color:{background:'#E03C31',border:'#8a1f18'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+  { id:'org_longshan_xianzhengfu', label:'龙山县政府', title:'龙山县人民政府', color:{background:'#2563EB',border:'#1a3d7a'}, size:8, shape:'square', font:{size:8,face:'Noto Serif SC'} },
+]);
+
+const edges = new vis.DataSet([
+  // ── Person → Organization ──
+  { from:'xiangxi_liu_tao', to:'org_xiangxi_zhouwei', color:{color:'#888'}, width:1, title:'州委书记（2024.10—）' },
+  { from:'xiangxi_shang_shenglong', to:'org_xiangxi_zhouzhengfu', color:{color:'#888'}, width:1, title:'州长（代理）（2026.6—）' },
+  { from:'xiangxi_guo_zhenggui', to:'org_xiangxi_zhouwei', color:{color:'#888'}, width:1, title:'前任州委书记（2021-2024）' },
+  { from:'xiangxi_gong_minghan', to:'org_xiangxi_rd', color:{color:'#888'}, width:1, title:'人大主任（2021—）' },
+  { from:'xiangxi_xiang_bangwei', to:'org_xiangxi_zx', color:{color:'#888'}, width:1, title:'政协主席（2026.2—）' },
+
+  { from:'jishou_zhou_lizhi', to:'org_jishou_shiwei', color:{color:'#888'}, width:1, title:'吉首市委书记（2023.10—）' },
+  { from:'jishou_fu_jiasheng', to:'org_jishou_shizhengfu', color:{color:'#888'}, width:1, title:'吉首市长（2020.4—）' },
+  { from:'luxi_peng_wuxue', to:'org_luxi_xianwei', color:{color:'#888'}, width:1, title:'泸溪县委书记（2021.6—）' },
+  { from:'luxi_fu_jiabo', to:'org_luxi_xianzhengfu', color:{color:'#888'}, width:1, title:'泸溪县长（2023.11—）' },
+  { from:'fenghuang_mao_jia', to:'org_fenghuang_xianwei', color:{color:'#888'}, width:1, title:'凤凰县委书记（2022.1—）' },
+  { from:'fenghuang_fan_zhongqing', to:'org_fenghuang_xianzhengfu', color:{color:'#888'}, width:1, title:'凤凰县长（2022.3—）' },
+  { from:'huayuan_wang_jinghai', to:'org_huayuan_xianwei', color:{color:'#888'}, width:1, title:'花垣县委书记（2025.2—）' },
+  { from:'huayuan_wang_jinghai', to:'org_huayuan_xianzhengfu', color:{color:'#888'}, width:1, title:'花垣县长（兼）' },
+  { from:'baojing_zhou_jianwu', to:'org_baojing_xianwei', color:{color:'#888'}, width:1, title:'保靖县委书记（2024.6—）' },
+  { from:'baojing_guo_yingxiang', to:'org_baojing_xianzhengfu', color:{color:'#888'}, width:1, title:'保靖县长（2024.7—）' },
+  { from:'guzhang_teng_zhaohui', to:'org_guzhang_xianwei', color:{color:'#888'}, width:1, title:'古丈县委书记（2023.12—）' },
+  { from:'guzhang_chen_jianxin', to:'org_guzhang_xianzhengfu', color:{color:'#888'}, width:1, title:'古丈县长（2024.7—）' },
+  { from:'yongshun_xiang_jiamao', to:'org_yongshun_xianwei', color:{color:'#888'}, width:1, title:'永顺县委书记（2025.2—）' },
+  { from:'yongshun_xiang_jiamao', to:'org_yongshun_xianzhengfu', color:{color:'#888'}, width:1, title:'永顺县长（兼）' },
+  { from:'longshan_shi_rongfen', to:'org_longshan_xianwei', color:{color:'#888'}, width:1, title:'龙山县委书记（2022.1—）' },
+  { from:'longshan_zhou_shengyi', to:'org_longshan_xianzhengfu', color:{color:'#888'}, width:1, title:'龙山县县长（2022.3—）' },
+
+  // ── Person ↔ Person (colleague / successor relationships) ──
+  { from:'xiangxi_guo_zhenggui', to:'xiangxi_liu_tao', color:{color:'#C9A94E'}, width:3, title:'继任关系：虢→刘（2024.10）', dashes:false },
+  { from:'xiangxi_liu_tao', to:'xiangxi_shang_shenglong', color:{color:'#C9A94E'}, width:3, title:'搭班：刘涛（书记）+ 尚生龙（代州长）', dashes:false },
+  { from:'jishou_zhou_lizhi', to:'jishou_fu_jiasheng', color:{color:'#C9A94E'}, width:2.5, title:'搭班：周立志+符家盛（2023.10起）' },
+  { from:'luxi_peng_wuxue', to:'luxi_fu_jiabo', color:{color:'#C9A94E'}, width:2.5, title:'搭班：彭武学+符家波（2023.11起）' },
+  { from:'fenghuang_mao_jia', to:'fenghuang_fan_zhongqing', color:{color:'#C9A94E'}, width:2.5, title:'搭班：毛家+樊忠清（2022.3起）' },
+  { from:'baojing_zhou_jianwu', to:'baojing_guo_yingxiang', color:{color:'#C9A94E'}, width:2.5, title:'搭班：周建武+郭应湘（2024.7起）' },
+  { from:'guzhang_teng_zhaohui', to:'guzhang_chen_jianxin', color:{color:'#C9A94E'}, width:2.5, title:'搭班：滕朝辉+陈建新（2024.7起）' },
+  { from:'longshan_shi_rongfen', to:'longshan_zhou_shengyi', color:{color:'#C9A94E'}, width:2.5, title:'搭班：时荣芬+周胜益（2022.3起）' },
+]);
+
+const container = document.getElementById('mynetwork');
+const data = { nodes, edges };
+const options = {
+  physics: {
+    forceAtlas2Based: {
+      gravitationalConstant: -40,
+      centralGravity: 0.005,
+      springLength: 180,
+      springConstant: 0.02,
+      damping: 0.4,
+    },
+    solver: 'forceAtlas2Based',
+    stabilization: { iterations: 200 },
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 100,
+    navigationButtons: true,
+    keyboard: true,
+  },
+  edges: {
+    smooth: { type: 'curvedCW', roundness: 0.15 },
+    font: { size: 9, color: '#888581', face: 'Inter' },
+  },
+  nodes: {
+    font: { color: '#e8e6e1', face: 'Noto Serif SC' },
+  },
+  groups: {
+    person: { shape: 'dot' },
+    org: { shape: 'square' },
+  },
+};
+
+const network = new vis.Network(container, data, options);
+network.on('stabilizationIterationsDone', function() {
+  network.fit({ animation: true });
+});
+</script>
+</body>
+</html>

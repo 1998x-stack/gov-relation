@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="birth" title="Birth" type="string"/>
+      <attribute id="birthplace" title="Birthplace" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="period" title="Period" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="谢卫江">
+        <attvalues>
+          <attvalue for="role" value="其他"/>
+          <attvalue for="birth" value="1973-01"/>
+          <attvalue for="birthplace" value="河南扶沟"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p2" label="李挚">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value="1969-01"/>
+          <attvalue for="birthplace" value="湖南浏阳"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p3" label="曹普华">
+        <attvalues>
+          <attvalue for="role" value="其他"/>
+          <attvalue for="birth" value="1966-09"/>
+          <attvalue for="birthplace" value="湖南衡山"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="马娜">
+        <attvalues>
+          <attvalue for="role" value="其他"/>
+          <attvalue for="birth" value="1969-03"/>
+          <attvalue for="birthplace" value="湖南临澧"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="90" g="122" b="154"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="汪涛">
+        <attvalues>
+          <attvalue for="role" value="其他"/>
+          <attvalue for="birth" value="1968-01"/>
+          <attvalue for="birthplace" value="湖南湘阴"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="122" g="90" b="154"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="曾平原">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1971-09"/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="杨钦涵">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value="1983-02"/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p8" label="蒋春艳">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1980-04"/>
+          <attvalue for="birthplace" value="湖北随州"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="雷欣">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="陈淼">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p11" label="肖湘晖">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1974-05"/>
+          <attvalue for="birthplace" value="湖南洞口"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p12" label="吴光文">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value="1974-01"/>
+          <attvalue for="birthplace" value="湖南汨罗"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p13" label="陶伟军">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1970-10"/>
+          <attvalue for="birthplace" value="湖南宁乡"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p14" label="周鹏">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value="1978-01"/>
+          <attvalue for="birthplace" value="湖南湘阴"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p15" label="刘世奇">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1980-10"/>
+          <attvalue for="birthplace" value="河南郾城"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p16" label="李勇">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1969-03"/>
+          <attvalue for="birthplace" value="湖南汨罗"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="106" g="106" b="106"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p17" label="彭方建">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value="1970-11"/>
+          <attvalue for="birthplace" value="湖南汨罗"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p18" label="王文华">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value="1969-01"/>
+          <attvalue for="birthplace" value="湖南华容"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p19" label="刘琦">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value="1969-10"/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p20" label="朱平波">
+        <attvalues>
+          <attvalue for="role" value="市委/区委书记"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p21" label="林恒求">
+        <attvalues>
+          <attvalue for="role" value="市长/区长/县长"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value="湖南"/>
+          <attvalue for="org_type" value="person"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="15.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="o1" label="中共岳阳市委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="岳阳市人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="岳阳市人大常委会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="人大"/>
+        </attvalues>
+        <viz:color r="90" g="90" b="90"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协岳阳市委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政协"/>
+        </attvalues>
+        <viz:color r="90" g="90" b="90"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共湖南省委办公厅">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共岳阳市岳阳楼区委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="岳阳市岳阳楼区人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共岳阳市云溪区委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="岳阳市云溪区人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共岳阳市君山区委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="岳阳市君山区人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共岳阳县委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="岳阳县人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共华容县委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="华容县人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="中共湘阴县委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="湘阴县人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="中共平江县委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="平江县人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="中共汨罗市委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="汨罗市人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="中共临湘市委员会">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="49"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="临湘市人民政府">
+        <attvalues>
+          <attvalue for="role" value="organization"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="74" g="127" b="199"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2023-12—"/>
+          <attvalue for="context" value="中共湖南省委副书记、岳阳市委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2022-04—"/>
+          <attvalue for="context" value="岳阳市人民政府市长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="p3" target="o1" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2022-01—2023-12"/>
+          <attvalue for="context" value="岳阳市委书记（前任）"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="p3" target="o5" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2024—"/>
+          <attvalue for="context" value="中共湖南省委副秘书长、办公厅主任"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="p4" target="o3" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2022-01—"/>
+          <attvalue for="context" value="岳阳市人大常委会主任"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="p5" target="o4" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2025-11—"/>
+          <attvalue for="context" value="岳阳市政协主席"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="p6" target="o6" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="—"/>
+          <attvalue for="context" value="岳阳楼区委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="p7" target="o7" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2026-03—"/>
+          <attvalue for="context" value="岳阳楼区委副书记、代区长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="p8" target="o8" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2025-06—"/>
+          <attvalue for="context" value="云溪区委书记、区长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="p9" target="o10" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="—"/>
+          <attvalue for="context" value="君山区委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="p10" target="o11" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="—"/>
+          <attvalue for="context" value="君山区人民政府区长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="p11" target="o12" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-07—"/>
+          <attvalue for="context" value="岳阳县委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="p12" target="o13" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-10—"/>
+          <attvalue for="context" value="岳阳县人民政府县长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="p13" target="o14" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2020-06—"/>
+          <attvalue for="context" value="华容县委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="p14" target="o15" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-10—"/>
+          <attvalue for="context" value="华容县人民政府县长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="p15" target="o16" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2024-05—"/>
+          <attvalue for="context" value="湘阴县委书记（兼县长）"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e17" source="p16" target="o18" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-07—"/>
+          <attvalue for="context" value="平江县委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e18" source="p17" target="o19" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-10—"/>
+          <attvalue for="context" value="平江县人民政府县长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e19" source="p18" target="o22" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-07—"/>
+          <attvalue for="context" value="临湘市委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e20" source="p19" target="o23" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="2021-10—"/>
+          <attvalue for="context" value="临湘市人民政府市长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e21" source="p20" target="o20" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="—"/>
+          <attvalue for="context" value="汨罗市委书记"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e22" source="p21" target="o21" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="period" value="—"/>
+          <attvalue for="context" value="汨罗市人民政府市长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e23" source="p1" target="p2" label="党政搭档">
+        <attvalues>
+          <attvalue for="type" value="党政搭档"/>
+          <attvalue for="period" value="2023.12—至今"/>
+          <attvalue for="context" value="岳阳市委书记+市长党政搭档"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e24" source="p3" target="p1" label="职务接替">
+        <attvalues>
+          <attvalue for="type" value="职务接替"/>
+          <attvalue for="period" value="2023.12"/>
+          <attvalue for="context" value="曹普华→谢卫江，前后任岳阳市委书记"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e25" source="p1" target="p4" label="党政搭档">
+        <attvalues>
+          <attvalue for="type" value="党政搭档"/>
+          <attvalue for="period" value="2023.12—至今"/>
+          <attvalue for="context" value="谢卫江（书记）与马娜（人大主任）"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e26" source="p1" target="p5" label="党政搭档">
+        <attvalues>
+          <attvalue for="type" value="党政搭档"/>
+          <attvalue for="period" value="2023.12—至今"/>
+          <attvalue for="context" value="谢卫江（书记）与汪涛（政协主席）"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e27" source="p16" target="p12" label="同乡关系">
+        <attvalues>
+          <attvalue for="type" value="同乡关系"/>
+          <attvalue for="period" value=""/>
+          <attvalue for="context" value="李勇（平江书记）与吴光文（岳阳县县长）同籍汨罗"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="200"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+      <edge id="e28" source="p16" target="p17" label="党政搭档">
+        <attvalues>
+          <attvalue for="type" value="党政搭档"/>
+          <attvalue for="period" value="2021—至今"/>
+          <attvalue for="context" value="李勇（平江书记）与彭方建（平江县长）党政搭档"/>
+        </attvalues>
+        <viz:color r="201" g="169" b="78"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

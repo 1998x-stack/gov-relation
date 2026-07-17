@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>九江市浔阳区领导班子工作关系网络 — 2026年7月</description>
+    <date>2026-07-14</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="rank" title="Rank" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="overlap_org" title="Overlap Org" type="string"/>
+      <attribute id="overlap_period" title="Overlap Period" type="string"/>
+    </attributes>
+    <nodes>
+    <node id="xunyang_zhou_rongqing" label="周荣卿">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委书记"/>
+      </attvalues>
+      <viz:color r="212" g="52" b="46" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_tang_jianyu" label="唐建宇">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委副书记、区长候选人"/>
+      </attvalues>
+      <viz:color r="212" g="52" b="46" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_zha_zhongping" label="查忠平">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委副书记"/>
+      </attvalues>
+      <viz:color r="212" g="52" b="46" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_ding_yonghao" label="丁永豪">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委常委、常务副区长(推测)"/>
+      </attvalues>
+      <viz:color r="51" g="102" b="204" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_li_qifang" label="李奇芳">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委常委、组织部部长(推测)"/>
+      </attvalues>
+      <viz:color r="102" g="102" b="102" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_liu_guodong" label="刘国栋">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委常委(推测)"/>
+      </attvalues>
+      <viz:color r="102" g="102" b="102" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_huang_he" label="黄河">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委常委(推测)"/>
+      </attvalues>
+      <viz:color r="102" g="102" b="102" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_xiong_yan" label="熊燕">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区委常委(推测)"/>
+      </attvalues>
+      <viz:color r="102" g="102" b="102" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_leiting_jun" label="雷霆钧">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="副区长（推测）"/>
+      </attvalues>
+      <viz:color r="51" g="102" b="204" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_wang_jing" label="王静">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="副区长（推测）"/>
+      </attvalues>
+      <viz:color r="51" g="102" b="204" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_hu_hao" label="胡皓">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="副区长（推测）"/>
+      </attvalues>
+      <viz:color r="51" g="102" b="204" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_xu_liwen" label="徐礼文">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区人大常委会主任"/>
+      </attvalues>
+      <viz:color r="51" g="102" b="204" a="1.0"/>
+      <viz:size value="16.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_luo_zejun" label="骆泽君">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区人大常委会副主任（推测）"/>
+      </attvalues>
+      <viz:color r="80" g="130" b="200" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_qin_yonghong" label="秦永红">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区人大常委会副主任（推测）"/>
+      </attvalues>
+      <viz:color r="80" g="130" b="200" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_xu_yanting" label="徐艳婷">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区人大常委会副主任（推测）"/>
+      </attvalues>
+      <viz:color r="80" g="130" b="200" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_pan_junjun" label="潘俊俊">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="区人大常委会副主任（推测）"/>
+      </attvalues>
+      <viz:color r="80" g="130" b="200" a="1.0"/>
+      <viz:size value="14.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_zhang_ning" label="张宁">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="前任区委书记(2024年前)"/>
+      </attvalues>
+      <viz:color r="212" g="52" b="46" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_qian_zhimin" label="钱志敏">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="前任区长（推测）"/>
+      </attvalues>
+      <viz:color r="51" g="102" b="204" a="1.0"/>
+      <viz:size value="20.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_chen_yun" label="陈云">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="九江市委书记"/>
+      </attvalues>
+      <viz:color r="102" g="102" b="102" a="1.0"/>
+      <viz:size value="12.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_deng_yongxiang" label="邓永翔">
+      <attvalues>
+        <attvalue for="type" value="person"/>
+        <attvalue for="role" value="九江市委副书记、市长"/>
+      </attvalues>
+      <viz:color r="102" g="102" b="102" a="1.0"/>
+      <viz:size value="12.0"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_party_committee" label="中共九江市浔阳区委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_gov" label="九江市浔阳区人民政府">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政府"/>
+      </attvalues>
+      <viz:color r="51" g="68" b="85" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_org_department" label="中共九江市浔阳区委组织部">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委部门"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_discipline" label="中共九江市浔阳区纪律检查委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="纪委"/>
+      </attvalues>
+      <viz:color r="68" g="68" b="68" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_propaganda" label="中共九江市浔阳区委宣传部">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委部门"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_political_legal" label="中共九江市浔阳区委政法委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委部门"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_armed_forces" label="九江市浔阳区人民武装部">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="军队"/>
+      </attvalues>
+      <viz:color r="68" g="68" b="68" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_npc" label="九江市浔阳区人民代表大会常务委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="人大"/>
+      </attvalues>
+      <viz:color r="68" g="68" b="68" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_cppcc" label="中国人民政治协商会议九江市浔阳区委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政协"/>
+      </attvalues>
+      <viz:color r="68" g="68" b="68" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="xunyang_public_security" label="九江市公安局浔阳分局">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="公安"/>
+      </attvalues>
+      <viz:color r="51" g="68" b="85" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="jiujiang_party" label="中共九江市委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="jiujiang_gov" label="九江市人民政府">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="政府"/>
+      </attvalues>
+      <viz:color r="51" g="68" b="85" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="lianxi_party" label="中共九江市濂溪区委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    <node id="chaishang_party" label="中共九江市柴桑区委员会">
+      <attvalues>
+        <attvalue for="type" value="org"/>
+        <attvalue for="org_type" value="党委"/>
+      </attvalues>
+      <viz:color r="85" g="51" b="51" a="1.0"/>
+      <viz:size value="8.0"/>
+      <viz:shape value="square"/>
+      <viz:position x="0" y="0" z="0"/>
+    </node>
+    </nodes>
+    <edges>
+    <edge id="e1" source="xunyang_zhou_rongqing" target="xunyang_party_committee" type="directed" label="区委书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e2" source="xunyang_zhou_rongqing" target="xunyang_gov" type="directed" label="区长（推测）">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2021"/>
+        <attvalue for="end" value="~2024"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e3" source="xunyang_zhou_rongqing" target="jiujiang_party" type="directed" label="市委部门任职（推测）">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2016"/>
+        <attvalue for="end" value="~2021"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e4" source="xunyang_tang_jianyu" target="xunyang_party_committee" type="directed" label="区委副书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2026-07"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e5" source="xunyang_tang_jianyu" target="xunyang_gov" type="directed" label="区长候选人">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2026-07"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e6" source="xunyang_tang_jianyu" target="jiujiang_party" type="directed" label="市委部门任职（推测）">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="未知"/>
+        <attvalue for="end" value="2026-07"/>
+        <attvalue for="rank" value="未知"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e7" source="xunyang_zha_zhongping" target="xunyang_party_committee" type="directed" label="区委副书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e8" source="xunyang_ding_yonghao" target="xunyang_gov" type="directed" label="常务副区长(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e9" source="xunyang_li_qifang" target="xunyang_org_department" type="directed" label="组织部部长(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e10" source="xunyang_liu_guodong" target="xunyang_party_committee" type="directed" label="区委常委">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e11" source="xunyang_huang_he" target="xunyang_party_committee" type="directed" label="区委常委">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e12" source="xunyang_xiong_yan" target="xunyang_party_committee" type="directed" label="区委常委">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e13" source="xunyang_leiting_jun" target="xunyang_gov" type="directed" label="副区长(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e14" source="xunyang_wang_jing" target="xunyang_gov" type="directed" label="副区长(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e15" source="xunyang_hu_hao" target="xunyang_gov" type="directed" label="副区长(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e16" source="xunyang_xu_liwen" target="xunyang_npc" type="directed" label="区人大常委会主任">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2021"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e17" source="xunyang_luo_zejun" target="xunyang_npc" type="directed" label="区人大常委会副主任(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e18" source="xunyang_qin_yonghong" target="xunyang_npc" type="directed" label="区人大常委会副主任(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e19" source="xunyang_xu_yanting" target="xunyang_npc" type="directed" label="区人大常委会副主任(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e20" source="xunyang_pan_junjun" target="xunyang_npc" type="directed" label="区人大常委会副主任(推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2024"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="副县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e21" source="xunyang_zhang_ning" target="xunyang_party_committee" type="directed" label="区委书记(前任)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2021"/>
+        <attvalue for="end" value="~2024"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e22" source="xunyang_qian_zhimin" target="xunyang_gov" type="directed" label="区长(前任推测)">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="~2016"/>
+        <attvalue for="end" value="~2021"/>
+        <attvalue for="rank" value="正县级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e23" source="xunyang_chen_yun" target="jiujiang_party" type="directed" label="九江市委书记">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2026-05"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正厅级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e24" source="xunyang_deng_yongxiang" target="jiujiang_gov" type="directed" label="九江市委副书记、市长">
+      <attvalues>
+        <attvalue for="type" value="worked_at"/>
+        <attvalue for="start" value="2026-05"/>
+        <attvalue for="end" value="至今"/>
+        <attvalue for="rank" value="正厅级"/>
+      </attvalues>
+      <viz:color r="80" g="80" b="80" a="0.5"/>
+      <viz:thickness value="1.0"/>
+    </edge>
+    <edge id="e25" source="xunyang_zhou_rongqing" target="xunyang_tang_jianyu" type="undirected" label="党政搭档（书记+区长候选人）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="强关系"/>
+        <attvalue for="context" value="党政搭档（书记+区长候选人）"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="2026-07至今"/>
+      </attvalues>
+      <viz:color r="184" g="149" b="62" a="0.8"/>
+      <viz:thickness value="2.5"/>
+    </edge>
+    <edge id="e26" source="xunyang_zhou_rongqing" target="xunyang_zha_zhongping" type="undirected" label="书记+副书记搭班子">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="强关系"/>
+        <attvalue for="context" value="书记+副书记搭班子"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="184" g="149" b="62" a="0.8"/>
+      <viz:thickness value="2.5"/>
+    </edge>
+    <edge id="e27" source="xunyang_zhou_rongqing" target="xunyang_xu_liwen" type="undirected" label="区委+人大负责人共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="强关系"/>
+        <attvalue for="context" value="区委+人大负责人共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="184" g="149" b="62" a="0.8"/>
+      <viz:thickness value="2.5"/>
+    </edge>
+    <edge id="e28" source="xunyang_zhou_rongqing" target="xunyang_zhang_ning" type="undirected" label="前后任区委书记">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="强关系"/>
+        <attvalue for="context" value="前后任区委书记"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024（交接）"/>
+      </attvalues>
+      <viz:color r="184" g="149" b="62" a="0.8"/>
+      <viz:thickness value="2.5"/>
+    </edge>
+    <edge id="e29" source="xunyang_zhou_rongqing" target="xunyang_ding_yonghao" type="undirected" label="现任班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e30" source="xunyang_zhou_rongqing" target="xunyang_li_qifang" type="undirected" label="现任班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e31" source="xunyang_zhou_rongqing" target="xunyang_liu_guodong" type="undirected" label="现任班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e32" source="xunyang_zhou_rongqing" target="xunyang_huang_he" type="undirected" label="现任班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e33" source="xunyang_zhou_rongqing" target="xunyang_xiong_yan" type="undirected" label="现任班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e34" source="xunyang_tang_jianyu" target="xunyang_zha_zhongping" type="undirected" label="现任班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区"/>
+        <attvalue for="overlap_period" value="2026-07至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e35" source="xunyang_tang_jianyu" target="xunyang_ding_yonghao" type="undirected" label="现任班子共事（政府线）">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="现任班子共事（政府线）"/>
+        <attvalue for="overlap_org" value="浔阳区人民政府"/>
+        <attvalue for="overlap_period" value="2026-07至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e36" source="xunyang_ding_yonghao" target="xunyang_leiting_jun" type="undirected" label="政府班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="政府班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区人民政府"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e37" source="xunyang_ding_yonghao" target="xunyang_wang_jing" type="undirected" label="政府班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="政府班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区人民政府"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e38" source="xunyang_ding_yonghao" target="xunyang_hu_hao" type="undirected" label="政府班子共事">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="政府班子共事"/>
+        <attvalue for="overlap_org" value="浔阳区人民政府"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e39" source="xunyang_zhou_rongqing" target="xunyang_chen_yun" type="undirected" label="区县干部与市委领导上下级">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="区县干部与市委领导上下级"/>
+        <attvalue for="overlap_org" value="九江市"/>
+        <attvalue for="overlap_period" value="~2024至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    <edge id="e40" source="xunyang_tang_jianyu" target="xunyang_chen_yun" type="undirected" label="新任区长候选人与市委领导">
+      <attvalues>
+        <attvalue for="type" value="relationship"/>
+        <attvalue for="strength" value="弱关系"/>
+        <attvalue for="context" value="新任区长候选人与市委领导"/>
+        <attvalue for="overlap_org" value="九江市"/>
+        <attvalue for="overlap_period" value="2026-07至今"/>
+      </attvalues>
+      <viz:color r="91" g="139" b="192" a="0.8"/>
+      <viz:thickness value="1.5"/>
+    </edge>
+    </edges>
+  </graph>
+</gexf>

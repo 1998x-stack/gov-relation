@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-15">
+    <creator>gov-relation research</creator>
+    <description>Guangxi Province Leadership Network - 广西壮族自治区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node" mode="static">
+      <attribute id="role_type" title="角色类型" type="string"/>
+      <attribute id="birthplace" title="籍贯" type="string"/>
+      <attribute id="ethnicity" title="民族" type="string"/>
+      <attribute id="birth" title="出生" type="string"/>
+      <attribute id="source" title="来源" type="string"/>
+    </attributes>
+    <attributes class="edge" mode="static">
+      <attribute id="type" title="关系类型" type="string"/>
+      <attribute id="context" title="关系描述" type="string"/>
+      <attribute id="overlap_period" title="重叠期" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="person_1" label="陈刚\n广西壮族自治区党委书记">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="江苏高邮"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1965-04"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/zh-cn/%E9%99%88%E5%88%9A_(1965%E5%B9%B4)"/>
+        </attvalues>
+        <viz:color r="224" g="60" b="49"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_2" label="韦韬\n广西壮族自治区党委副书记、政府主席">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="广西罗城"/>
+          <attvalue for="ethnicity" value="壮族"/>
+          <attvalue for="birth" value="1970-04"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E9%9F%A6%E9%9F%AC"/>
+        </attvalues>
+        <viz:color r="37" g="99" b="235"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_3" label="房灵敏\n广西壮族自治区纪委书记、自治区监委主任">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="山东郓城"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1964-05"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E6%88%BF%E7%81%B5%E6%95%8F"/>
+        </attvalues>
+        <viz:color r="234" g="88" b="12"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_4" label="庄革\n广西军区司令员">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="source" value="https://zh.wikipedia.org/zh-cn/%E5%BA%84%E9%9D%A9"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_5" label="陈奕君\n广西壮族自治区党委宣传部部长">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="浙江宁波"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1967-03"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E9%99%88%E5%A5%95%E5%90%9B"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_6" label="王心富\n广西壮族自治区党委组织部部长">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="河南商城"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1970-02"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E7%8E%8B%E5%BF%83%E5%AF%8C"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_7" label="许永锞\n广西壮族自治区党委常委、南宁市委书记">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="广东潮州"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1967-11"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E8%AE%B8%E6%B0%B8%E9%94%9E"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_8" label="蔡允革\n广西壮族自治区党委常委、政府常务副主席">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="河北霸州"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1971-12"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E8%94%A1%E5%85%81%E9%9D%A9"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_9" label="卢新宁\n广西壮族自治区党委常委、政府副主席">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="江苏淮安"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1966-12"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%8D%A2%E6%96%B0%E5%AE%81"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_10" label="苗庆旺\n广西壮族自治区党委政法委书记">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="未公开"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1970-02"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E8%8B%97%E5%BA%86%E6%97%BA"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_11" label="谭丕创\n广西壮族自治区党委统战部部长">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="广西贵港"/>
+          <attvalue for="ethnicity" value="汉族"/>
+          <attvalue for="birth" value="1968-10"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E8%B0%AD%E4%B8%95%E5%88%9B"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="person_12" label="周异决\n广西壮族自治区政协副主席">
+        <attvalues>
+          <attvalue for="role_type" value="person"/>
+          <attvalue for="birthplace" value="广西贵港"/>
+          <attvalue for="ethnicity" value="壮族"/>
+          <attvalue for="birth" value="1965-09"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%91%A8%E5%BC%82%E5%86%B3"/>
+        </attvalues>
+        <viz:color r="75" g="85" b="99"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="org_1" label="中共广西壮族自治区委员会">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="124" g="58" b="237"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_2" label="广西壮族自治区人民政府">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="37" g="99" b="235"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_3" label="中共广西壮族自治区纪律检查委员会">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="234" g="88" b="12"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_4" label="中国人民解放军广西军区">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="5" g="150" b="105"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_5" label="中共广西壮族自治区委员会宣传部">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="124" g="58" b="237"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_6" label="中共广西壮族自治区委员会组织部">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="124" g="58" b="237"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_7" label="中共南宁市委员会">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="124" g="58" b="237"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_8" label="中共广西壮族自治区委员会政法委员会">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="124" g="58" b="237"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_9" label="中共广西壮族自治区委员会统战部">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="124" g="58" b="237"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_10" label="广西壮族自治区人大常委会">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="org_11" label="广西壮族自治区政协">
+        <attvalues>
+          <attvalue for="role_type" value="organization"/>
+        </attvalues>
+        <viz:color r="107" g="114" b="128"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="person_1" target="org_1" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区党委书记 (2024-12-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="person_1" target="org_10" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区人大常委会主任 (2025-01-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="person_2" target="org_2" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区党委副书记、政府主席 (2025-07-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="person_3" target="org_3" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区纪委书记、监委主任 (2017-09-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="person_4" target="org_4" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西军区司令员 (2024-01-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="person_5" target="org_5" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区党委宣传部部长 (2023-05-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="person_6" target="org_6" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区党委组织部部长 (2025-05-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="person_7" target="org_7" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="南宁市委书记 (2025-12-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="person_8" target="org_2" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区常务副主席 (2026-01-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="person_9" target="org_2" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区副主席 (2024-08-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="person_10" target="org_8" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区党委政法委书记 (2024-07-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="person_11" target="org_9" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区党委统战部部长 (2025-09-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="person_12" target="org_11" type="directed" weight="2.0" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="广西壮族自治区政协副主席 (2026-02-至今)"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="person_1" target="person_2" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="党政搭档: 自治区党委书记与政府主席"/>
+          <attvalue for="overlap_period" value="2025-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="person_1" target="person_3" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="党政关系: 党委书记与纪委书记"/>
+          <attvalue for="overlap_period" value="2024-12至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="person_1" target="person_5" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="上下级: 党委书记与宣传部部长"/>
+          <attvalue for="overlap_period" value="2024-12至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="person_2" target="person_7" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="党政关系: 政府主席与南宁市委书记"/>
+          <attvalue for="overlap_period" value="2025-12至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="person_7" target="person_8" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="前后任: 许永锞此前为常务副主席，蔡允革继任"/>
+          <attvalue for="overlap_period" value="2026-01"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="person_5" target="person_9" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="同级: 同为自治区党委女性常委"/>
+          <attvalue for="overlap_period" value="2024-08至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="person_6" target="person_11" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="前后任: 王心富曾任统战部长，谭丕创继任"/>
+          <attvalue for="overlap_period" value="2025-05"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="person_2" target="person_11" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="同乡: 韦韬(罗城/河池)、谭丕创(贵港)，均为广西籍常委"/>
+          <attvalue for="overlap_period" value="2025-09至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="person_10" target="person_3" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="党政关系: 政法委书记与纪委书记，同属党纪政法系统"/>
+          <attvalue for="overlap_period" value="2024-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="person_1" target="person_8" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="上下级: 党委书记与常务副主席"/>
+          <attvalue for="overlap_period" value="2026-01至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="person_12" target="person_7" type="undirected" weight="3.0" label="relationship">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="context" value="同级: 周异决(此前常委/秘书长)与许永锞(南宁书记)"/>
+          <attvalue for="overlap_period" value="2025-12至2026-02"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>平和县领导班子 · vis.js 关系图</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d0d0d; color: #e8e0d0; font-family: 'Inter', sans-serif; }
+#mynetwork { width: 100%; height: calc(100vh - 120px); border-top: 1px solid #2a2a2a; }
+.header {
+  padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid #2a2a2a;
+}
+.header h1 { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 700; }
+.header .sub { font-size: 0.7rem; color: #8a8478; margin-top: 0.2rem; }
+.header .links { display: flex; gap: 1rem; }
+.header .links a { color: #C9A94E; font-size: 0.75rem; text-decoration: none; }
+.header .links a:hover { text-decoration: underline; }
+.legend {
+  display: flex; gap: 1.5rem; padding: 0.5rem 1.5rem;
+  font-size: 0.7rem; color: #8a8478;
+  border-bottom: 1px solid #2a2a2a;
+  flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 0.4rem; }
+.legend-color { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #2a2a2a; }
+.legend-line { width: 20px; height: 2px; border-radius: 0; }
+.legend-line.thick { height: 3px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>平和县领导班子工作关系网络 · 平和县 · 漳州市 · 福建省</h1>
+    <div class="sub">动态关系图 · 点击节点查看详情 · 2026-07-17</div>
+  </div>
+  <div class="links">
+    <a href="20260717-平和县-领导班子工作关系网络调查报告.md">📄 调查报告</a>
+    <a href="20260717-平和县-领导班子工作关系网络.html">📊 情报简报</a>
+    <a href="graph.html">🗺 总图</a>
+  </div>
+</div>
+<div class="legend">
+  <span class="legend-item"><span class="legend-color" style="background:#dc3232;"></span> 县委书记</span>
+  <span class="legend-item"><span class="legend-color" style="background:#3264c8;"></span> 政府正职</span>
+  <span class="legend-item"><span class="legend-color" style="background:#8e44ad;"></span> 县委常委</span>
+  <span class="legend-item"><span class="legend-color" style="background:#329632;"></span> 副县长</span>
+  <span class="legend-item"><span class="legend-color" style="background:#969696;"></span> 其他领导</span>
+  <span class="legend-item"><span class="legend-color" style="background:#6464b4; border-radius:2px;"></span> 机构</span>
+  <span class="legend-item"><span class="legend-line thick" style="background:#C9A94E;"></span> 工作关系</span>
+  <span class="legend-item"><span class="legend-line" style="background:#555;"></span> 隶属关系</span>
+</div>
+<div id="mynetwork"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<script>
+const nodes = [
+  // Persons
+  { id: '沈义勇', label: '沈义勇\n县委书记', shape: 'ellipse', color: { background: '#dc3232', border: '#fff' }, size: 25, title: '县委书记\n简历: 完全未知\n需进一步调查' },
+  { id: '周绍斌', label: '周绍斌\n代县长', shape: 'ellipse', color: { background: '#3264c8', border: '#fff' }, size: 25, title: '代县长\n1977年12月生\n大学学历\n此前在漳州市直任职' },
+  { id: '戴永福', label: '戴永福\n常务副县长', shape: 'ellipse', color: { background: '#8e44ad', border: '#fff' }, size: 20, title: '县委常委、常务副县长\n1976年04月生\n大学学历' },
+  { id: '庞健安', label: '庞健安\n副县长', shape: 'ellipse', color: { background: '#8e44ad', border: '#fff' }, size: 18, title: '县委常委、副县长（女）\n1978年08月生\n大学学历' },
+  { id: '林清山', label: '林清山\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#fff' }, size: 16, title: '副县长\n1971年12月生\n在职研究生·理学博士' },
+  { id: '吴映红', label: '吴映红\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#fff' }, size: 16, title: '副县长（女）\n1973年05月生\n大学学历' },
+  { id: '林贵良', label: '林贵良\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#666' }, size: 14 },
+  { id: '吴朝东', label: '吴朝东\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#666' }, size: 14 },
+  { id: '黄建鑫', label: '黄建鑫\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#666' }, size: 14 },
+  { id: '黄淳杰', label: '黄淳杰\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#666' }, size: 14 },
+  { id: '邱炳晖', label: '邱炳晖\n副县长', shape: 'ellipse', color: { background: '#329632', border: '#666' }, size: 14 },
+  { id: '卢文深', label: '卢文深\n党组成员', shape: 'ellipse', color: { background: '#969696', border: '#666' }, size: 12 },
+  { id: '蔡立保', label: '蔡立保\n(推测常委)', shape: 'ellipse', color: { background: '#8e44ad', border: '#666' }, size: 14, title: '出现在新闻报道中\n具体职务待确认' },
+  { id: '马长健', label: '马长健\n县领导', shape: 'ellipse', color: { background: '#969696', border: '#666' }, size: 12 },
+  { id: '吴宇嫔', label: '吴宇嫔\n县领导', shape: 'ellipse', color: { background: '#969696', border: '#666' }, size: 12 },
+  { id: '赖文尧', label: '赖文尧\n县领导', shape: 'ellipse', color: { background: '#969696', border: '#666' }, size: 12 },
+  { id: '汪冕', label: '汪冕\n县领导', shape: 'ellipse', color: { background: '#969696', border: '#666' }, size: 12 },
+  // Organizations
+  { id: '平_县委', label: '平和县委', shape: 'box', color: { background: '#4a2a2a', border: '#dc3232' }, size: 10, title: '中共平和县委员会' },
+  { id: '平_政府', label: '平和县政府', shape: 'box', color: { background: '#2a2a4a', border: '#3264c8' }, size: 10, title: '平和县人民政府' },
+  { id: '平_县', label: '平和县', shape: 'box', color: { background: '#2a2a2a', border: '#666' }, size: 8, title: '福建省漳州市平和县' },
+];
+
+const edges = [
+  // Person ↔ Person relationships
+  { from: '沈义勇', to: '周绍斌', color: '#C9A94E', width: 3, title: '书记-县长搭档' },
+  { from: '沈义勇', to: '戴永福', color: '#C9A94E', width: 2, title: '书记-常务副县长' },
+  { from: '沈义勇', to: '庞健安', color: '#C9A94E', width: 2, title: '书记-县委常委' },
+  { from: '沈义勇', to: '蔡立保', color: '#888', width: 1, title: '推测共事' },
+  { from: '周绍斌', to: '戴永福', color: '#C9A94E', width: 2, title: '县长-常务副县长' },
+  { from: '周绍斌', to: '庞健安', color: '#C9A94E', width: 2, title: '县长-副县长' },
+  { from: '周绍斌', to: '林清山', color: '#C9A94E', width: 1.5, title: '县长-副县长' },
+  { from: '周绍斌', to: '吴映红', color: '#C9A94E', width: 1.5, title: '县长-副县长' },
+  { from: '周绍斌', to: '林贵良', color: '#888', width: 1, title: '县长-副县长' },
+  { from: '周绍斌', to: '吴朝东', color: '#888', width: 1, title: '县长-副县长' },
+  { from: '周绍斌', to: '黄建鑫', color: '#888', width: 1, title: '县长-副县长' },
+  { from: '周绍斌', to: '黄淳杰', color: '#888', width: 1, title: '县长-副县长' },
+  { from: '周绍斌', to: '邱炳晖', color: '#888', width: 1, title: '县长-副县长' },
+  { from: '周绍斌', to: '卢文深', color: '#888', width: 1, title: '县长-党组成员' },
+  // Person → Organization worked_at
+  { from: '沈义勇', to: '平_县委', color: '#555', width: 0.5, dashes: true },
+  { from: '周绍斌', to: '平_县委', color: '#555', width: 0.5, dashes: true },
+  { from: '周绍斌', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '戴永福', to: '平_县委', color: '#555', width: 0.5, dashes: true },
+  { from: '戴永福', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '庞健安', to: '平_县委', color: '#555', width: 0.5, dashes: true },
+  { from: '庞健安', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '林清山', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '吴映红', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '林贵良', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '吴朝东', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '黄建鑫', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '黄淳杰', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '邱炳晖', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '卢文深', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '马长健', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '吴宇嫔', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '赖文尧', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  { from: '汪冕', to: '平_政府', color: '#555', width: 0.5, dashes: true },
+  // Org hierarchy
+  { from: '平_县委', to: '平_县', color: '#555', width: 0.5 },
+  { from: '平_政府', to: '平_县', color: '#555', width: 0.5 },
+];
+
+const container = document.getElementById('mynetwork');
+const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+const options = {
+  physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -40, centralGravity: 0.005, springLength: 160, springConstant: 0.02 }, stabilization: { iterations: 200 } },
+  interaction: { hover: true, tooltipDelay: 100 },
+  edges: { smooth: { type: 'continuous' } },
+};
+new vis.Network(container, data, options);
+</script>
+</body>
+</html>

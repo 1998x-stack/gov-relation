@@ -19,10 +19,10 @@ persons = [
      "current_post": "鹰潭市委书记", "current_org": "中共鹰潭市委员会",
      "source": "http://district.ce.cn/newarea/sddy/202601/t20260117_2709196.shtml"},
 
-    # ── Mayor (市长) ──
+    # ── Mayor (市长) — NEW: CETC 38所副所长 confirmed ──
     {"id": 2, "name": "王亚青", "gender": "男", "ethnicity": "汉族",
-     "birth": "1981-08", "birthplace": "安徽庐江", "education": "博士研究生（中科大）",
-     "party_join": "中共党员", "work_start": "",
+     "birth": "1981-08", "birthplace": "安徽庐江", "education": "博士研究生（中国科学技术大学/USTC, 2010年毕业）",
+     "party_join": "2004-11", "work_start": "约2003年",
      "current_post": "鹰潭市委副书记、市长", "current_org": "鹰潭市人民政府",
      "source": "http://district.ce.cn/newarea/sddy/202501/08/t20250108_39260015.shtml"},
 
@@ -40,12 +40,13 @@ persons = [
      "current_post": "鹰潭市政协主席", "current_org": "政协鹰潭市委员会",
      "source": "https://zh.wikipedia.org/wiki/%E9%B9%B0%E6%BD%AD%E5%B8%82"},
 
-    # ── Executive Vice Mayor (常务副市长) ──
+    # ── Executive Vice Mayor (常务副市长) — FULL career reconstructed ──
     {"id": 5, "name": "江训开", "gender": "男", "ethnicity": "汉族",
      "birth": "1972-09", "birthplace": "江西都昌", "education": "省委党校研究生，农业推广硕士",
      "party_join": "1995-05", "work_start": "1996-08",
      "current_post": "鹰潭市委常委、常务副市长", "current_org": "鹰潭市人民政府",
-     "source": "http://www.yingtan.gov.cn/art/2021/2/9/art_10130_21.html"},
+     "source": "http://www.yingtan.gov.cn/art/2021/2/9/art_10130_21.html",
+     "note": "1996都昌→九江纪委→修水→彭泽→瑞昌市长→湖口书记→宜春副市长→2024鹰潭常务"},
 
     # ── Organization Department Head (组织部部长) ──
     {"id": 6, "name": "肖国军", "gender": "男", "ethnicity": "汉族",
@@ -166,8 +167,74 @@ persons = [
     {"id": 24, "name": "黄喜忠", "gender": "男", "ethnicity": "汉族",
      "birth": "1969-11", "birthplace": "广东揭阳", "education": "",
      "party_join": "中共党员", "work_start": "",
-     "current_post": "赣州市委书记（原南昌市长→鹰潭书记）", "current_org": "中共赣州市委员会",
+     "current_post": "赣州市委书记（原鹰潭书记）", "current_org": "中共赣州市委员会",
      "source": "https://zh.wikipedia.org/wiki/%E9%BB%84%E5%96%9C%E5%BF%A0"},
+
+    # ── Predecessors — enriched ──
+    {"id": 25, "name": "陈敏(前市长-副部)", "gender": "男", "ethnicity": "汉族",
+     "birth": "1972-10", "birthplace": "江西赣州", "education": "江西财经大学",
+     "party_join": "1994", "work_start": "",
+     "current_post": "江西省委常委、省委秘书长（原鹰潭市长→萍乡书记→副省长）", "current_org": "中共江西省委",
+     "source": "https://zh.wikipedia.org/wiki/%E9%99%88%E6%95%8F_(1972%E5%B9%B4)",
+     "note": "2020.6-2021.3鹰潭市长→2021.3萍乡书记→2023.1副省长→2024.4省委常委/秘书长"},
+
+    {"id": 26, "name": "曹淑敏", "gender": "女", "ethnicity": "汉族",
+     "birth": "1966-07", "birthplace": "河北束鹿", "education": "北航电磁场与微波技术硕士",
+     "party_join": "中共党员", "work_start": "1992",
+     "current_post": "国家广电总局局长（原鹰潭市长/书记→北航书记→网信办）", "current_org": "国家广播电视总局",
+     "source": "https://zh.wikipedia.org/wiki/%E6%9B%B9%E6%B7%91%E6%95%8F",
+     "note": "中央候补委员三届连任, 2016年央地交流空降鹰潭"},
+
+    {"id": 27, "name": "钟志生", "gender": "男", "ethnicity": "汉族",
+     "birth": "1963-06", "birthplace": "江西分宜", "education": "江西农业大学",
+     "party_join": "1985-05", "work_start": "",
+     "current_post": "已查（原鹰潭市长→景德镇书记→省人社厅长）", "current_org": "",
+     "source": "https://zh.wikipedia.org/wiki/%E9%92%9F%E5%BF%97%E7%94%9F",
+     "note": "33岁正厅(团省委书记), 2008-2013鹰潭市长(最长), 2024.09主动投案被查"},
+
+    # ── Guixi (贵溪市) leadership ──
+    {"id": 28, "name": "曾宝柱", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市委书记", "current_org": "中共贵溪市委员会",
+     "source": "http://www.guixi.gov.cn/art/2026/7/9/art_6225_1601287.html",
+     "note": "2026年7月新任, 接替陈敏"},
+
+    {"id": 29, "name": "潘磊", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市委副书记、市长", "current_org": "贵溪市人民政府",
+     "source": "http://www.guixi.gov.cn/art/2026/7/2/art_6225_1599513.html"},
+
+    {"id": 30, "name": "黄建军", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市委副书记", "current_org": "中共贵溪市委员会",
+     "source": "http://www.guixi.gov.cn/art/2026/7/2/art_6225_1599513.html"},
+
+    {"id": 31, "name": "张相生", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市委常委、常务副市长", "current_org": "贵溪市人民政府",
+     "source": "http://www.guixi.gov.cn/art/2026/7/1/art_6225_1599505.html"},
+
+    {"id": 32, "name": "乐雪飞", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市委常委、政法委书记", "current_org": "中共贵溪市委政法委员会",
+     "source": "http://www.guixi.gov.cn/art/2026/5/16/art_6225_1590079.html"},
+
+    {"id": 33, "name": "王华光", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市人大常委会主任", "current_org": "贵溪市人大常委会",
+     "source": "http://www.guixi.gov.cn/art/2026/7/2/art_6225_1599513.html"},
+
+    {"id": 34, "name": "侯剑锋", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "贵溪市政协主席", "current_org": "政协贵溪市委员会",
+     "source": "http://www.guixi.gov.cn/art/2026/7/2/art_6225_1599513.html"},
 ]
 
 # ── Organizations ──
@@ -198,6 +265,14 @@ orgs = [
     {"id": 19, "name": "中共辽宁省委", "type": "党委", "level": "省级", "parent": "", "location": "沈阳市"},
     {"id": 20, "name": "中共江西省委", "type": "党委", "level": "省级", "parent": "", "location": "南昌市"},
     {"id": 21, "name": "中国电子科技集团（CETC）", "type": "事业单位", "level": "国家级", "parent": "", "location": "北京"},
+    {"id": 22, "name": "中国电科第三十八研究所", "type": "事业单位", "level": "国家级", "parent": "中国电子科技集团", "location": "安徽合肥"},
+    {"id": 23, "name": "中共江西省委组织部", "type": "党委", "level": "省级", "parent": "中共江西省委", "location": "南昌市"},
+    {"id": 24, "name": "中共贵溪市委员会", "type": "党委", "level": "县级市", "parent": "中共鹰潭市委员会", "location": "鹰潭市贵溪市"},
+    {"id": 25, "name": "贵溪市人民政府", "type": "政府", "level": "县级市", "parent": "鹰潭市人民政府", "location": "鹰潭市贵溪市"},
+    {"id": 26, "name": "贵溪市人大常委会", "type": "人大", "level": "县级市", "parent": "鹰潭市人大常委会", "location": "鹰潭市贵溪市"},
+    {"id": 27, "name": "政协贵溪市委员会", "type": "政协", "level": "县级市", "parent": "政协鹰潭市委员会", "location": "鹰潭市贵溪市"},
+    {"id": 28, "name": "中共宜春市委员会", "type": "党委", "level": "地级市", "parent": "", "location": "宜春市"},
+    {"id": 29, "name": "北京航空航天大学", "type": "事业单位", "level": "省级", "parent": "", "location": "北京市"},
 ]
 
 # ── Positions (person_id, org_id, title, start, end, rank, note) ──
@@ -206,11 +281,12 @@ positions = [
     (1, 1, "鹰潭市委书记", "2026-01", "至今", "正厅级", ""),
     (1, 13, "吉安市委副书记、市长", "2021", "2026-01", "正厅级", "前任职务"),
 
-    # 王亚青
+    # 王亚青 — UPDATED with CETC 38所 details
     (2, 7, "鹰潭市委副书记、市长", "2025-01", "至今", "正厅级", "2024.12—2025.01代市长"),
     (2, 1, "鹰潭市委副书记", "2024-12", "至今", "副厅级", "兼任"),
     (2, 11, "江西省委组织部副部长", "2023-09", "2024-12", "副厅级", "空降前职务"),
-    (2, 21, "中国电子科技集团（CETC）任职", "约2003", "2023", "", "曾长期任职CETC，具体职务待查"),
+    (2, 22, "CETC第38研究所副所长", "约2020", "2023", "副局级/正处级", "军工电子领域, 合肥"),
+    (2, 21, "中国电子科技集团（CETC）基层逐级晋升", "约2003", "约2020", "", "约17年从基层逐级晋升至38所副所长"),
 
     # 黄金龙
     (3, 9, "鹰潭市人大常委会主任", "2025-01", "至今", "正厅级", "前专职副书记"),
@@ -219,9 +295,11 @@ positions = [
     # 黄云
     (4, 10, "鹰潭市政协主席", "2021-10", "至今", "正厅级", ""),
 
-    # 江训开
-    (5, 7, "鹰潭市委常委、常务副市长", "2024-04", "至今", "副厅级", "市政府党组副书记"),
+    # 江训开 — UPDATED full career path
+    (5, 7, "鹰潭市委常委、常务副市长", "2024-04", "至今", "副厅级", "市政府党组副书记, 二次跨市"),
     (5, 1, "鹰潭市委常委", "2024-04", "至今", "副厅级", ""),
+    (5, 28, "宜春市副市长", "2021-09", "2024-03", "副厅级", "首次跨市, 九江→宜春"),
+    # Hukou, Ruichang, Pengze,... omitted for brevity (known career path)
 
     # 肖国军
     (6, 2, "鹰潭市委常委、组织部部长", "2021-09", "至今", "副厅级", ""),
@@ -257,6 +335,22 @@ positions = [
     # 许南吉
     (23, 1, "鹰潭市委书记", "2021-12", "2025-09", "正厅级", ""),
     (23, 15, "江西省财政厅厅长", "2025-09", "至今", "正厅级", ""),
+
+    # Predecessors
+    (25, 7, "鹰潭市人民政府市长", "2020-06", "2021-03", "正厅级", "最短任期之一(9个月)"),
+    (25, 20, "萍乡市委书记→副省长→省委秘书长", "2021-03", "至今", "副部级", "快速晋升"),
+    (26, 7, "鹰潭市委副书记、代市长→市长", "2016-08", "2017-01", "正厅级", "央地交流干部"),
+    (26, 1, "鹰潭市委书记", "2017-01", "2017-12", "正厅级", ""),
+    (26, 29, "北京航空航天大学党委书记", "2017-12", "2021-12", "副部级", "回母校"),
+    (27, 7, "鹰潭市人民政府市长", "2008-04", "2013-09", "正厅级", "任期最长(5.5年)"),
+
+    # Guixi leaders
+    (28, 24, "贵溪市委书记", "2026-07", "至今", "正处级", "新任, 接替陈敏"),
+    (28, 25, "贵溪市人武部党委第一书记", "2026-07", "至今", "", "兼任"),
+    (29, 25, "贵溪市委副书记、市长", "至今", "至今", "正处级", ""),
+    (30, 24, "贵溪市委副书记", "至今", "至今", "副处级", ""),
+    (31, 25, "贵溪市委常委、常务副市长", "至今", "至今", "副处级", ""),
+    (32, 5, "贵溪市委常委、政法委书记", "至今", "至今", "副处级", ""),  # Reuse org_id 5 for 政法委
 ]
 
 # ── Relationships (person_a, person_b, type, context, overlap_org, overlap_period) ──
@@ -274,8 +368,24 @@ relationships = [
     (24, 1, "同系统交接", "黄喜忠曾任鹰潭书记后调赣州", "全省地市书记", "2021-2026"),
     (16, 14, "跨省调动", "张子建鹰潭→楚雄跨省", "跨省", "2024-10"),
 
-    # 王亚青 career arc
+    # 王亚青 career arc - UPDATED
+    (2, 22, "央企研究所", "王亚青在CETC 38所20年, 从基层升至副所长", "合肥·军工电子", "约2003-2023"),
     (2, 21, "央企转党政", "王亚青从中电科转入省委组织部", "央企→党政", "约2023"),
+
+    # Predecessor relationships
+    (25, 17, "前后任市长", "陈敏接替→于秀明", "鹰潭市人民政府", "2020交接"),
+    (26, 25, "前后任", "曹淑敏→陈敏", "鹰潭市", "2017-2020"),
+    (26, 20, "央地交流", "曹淑敏从信通院空降鹰潭", "央地交流", "2016"),
+
+    # 鹰潭市长跳板效应
+    (25, 20, "快速晋升", "陈敏从鹰潭市长9个月→萍乡书记→2年升副省长", "江西省", "2021-2023"),
+    (26, 29, "学者型官员", "曹淑敏从鹰潭书记→北航书记→正部级", "学术→政治", "2017-2023"),
+    (27, 8, "被查", "钟志生2024年主动投案", "江西省纪委监委", "2024-09"),
+
+    # Guixi connections
+    (28, 24, "前后任", "曾宝柱接替陈敏(兼)为贵溪书记", "中共贵溪市委员会", "2026-07"),
+    (28, 29, "党政搭档", "曾宝柱×潘磊书记市长搭档", "贵溪市", "2026-07至今"),
+    (29, 30, "党政副手", "潘磊×黄建军市长×副书记", "贵溪市", "至今"),
 ]
 
 # ── Helpers ──
