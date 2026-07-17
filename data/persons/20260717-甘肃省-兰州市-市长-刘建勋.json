@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "兰州市",
+    "region": "兰州市",
+    "job": "市长",
+    "task_id": "gansu_兰州市",
+    "time_focus": "2023-"
+  },
+  "identity": {
+    "person_id": "gansu_lanzhou_liujianxun_1970",
+    "name": "刘建勋",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1970-03",
+    "birthplace": "甘肃省武威市",
+    "native_place": "甘肃省武威市",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘建勋_1970",
+      "name_birthplace": "刘建勋_甘肃武威",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "兰州市人民政府市长",
+    "current_org": "兰州市人民政府",
+    "administrative_rank": "副部级",
+    "as_of": "2023-03",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到刘建勋的详细出生年月之外的完整履历。已知其为甘肃武威人，1970年3月出生，自甘肃省交通运输系统出身。2023年3月任兰州市市长。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2023-03",
+      "end": "present",
+      "org": "兰州市人民政府",
+      "title": "市长",
+      "level": "副部",
+      "location": "甘肃省兰州市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "同时担任政协甘肃省委员会人口资源环境委员会副主任",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {"org_name": "兰州市人民政府", "role": "市长", "period": "2023-"}
+  ],
+  "relationships": [
+    {
+      "person": "张晓强",
+      "person_id": "gansu_lanzhou_zhangxiaoqiang_1975",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "张晓强（市委书记）与刘建勋（市长）自2023年起在兰州市党政班子搭档",
+      "overlap_org": "兰州市",
+      "overlap_period": "2023-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张伟文",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "张伟文为前任兰州市市长（2021-2023），刘建勋接任",
+      "overlap_org": "兰州市人民政府",
+      "overlap_period": "2023-03",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["交通运输管理"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["甘肃省"],
+    "promotion_velocity": {
+      "summary": "信息不足，无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，尚无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "公开资料中未发现任何纪律处分或负面信息",
+      "date": "",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "兰州市 - 维基百科",
+      "url": "https://zh.wikipedia.org/wiki/%E5%85%B0%E5%B7%9E%E5%B8%82",
+      "publisher": "维基百科",
+      "published_at": "2026",
+      "accessed_at": "2026-07-17",
+      "source_type": "encyclopedia",
+      "reliability": "high",
+      "notes": "现任领导表格确认刘建勋为兰州市市长，籍贯武威，1970年3月生"
+    },
+    {
+      "id": "S002",
+      "title": "Lanzhou - English Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lanzhou",
+      "publisher": "维基百科",
+      "published_at": "2026",
+      "accessed_at": "2026-07-17",
+      "source_type": "encyclopedia",
+      "reliability": "high",
+      "notes": "确认刘建勋为现任兰州市市长（Mayor）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "完整履历——刘建勋在担任兰州市长前的详细任职经历（特别是甘肃省交通运输系统的职务）无法通过当前可用来源获取"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘建勋任兰州市长前的完整履历是什么？曾任哪些职务？",
+      "why_it_matters": "需要了解其专业背景和晋升路径以评估其能力和网络",
+      "suggested_queries": ["刘建勋 简历 甘肃 交通厅", "刘建勋 甘肃省交通运输厅"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "high",
+      "question": "刘建勋的学历和专业背景？",
+      "why_it_matters": "评估其专业能力",
+      "suggested_queries": ["刘建勋 1970 甘肃 武威 学历"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "medium",
+      "question": "刘建勋在任兰州市长期间的施政重点和经济成绩？",
+      "why_it_matters": "评估其执政能力",
+      "suggested_queries": ["刘建勋 兰州 市长 工作 报告"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}
