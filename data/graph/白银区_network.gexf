@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>gov-relation Research Agent</creator>
+    <description>白银区领导班子工作关系网络 - 甘肃省白银市白银区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="韩继国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="白银市白银区委书记"/>
+          <attvalue for="2" value="中共白银市白银区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="潘虎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="白银市白银区委副书记、区长"/>
+          <attvalue for="2" value="白银市白银区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="冯树川">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="白银区人大常委会主任"/>
+          <attvalue for="2" value="白银区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="郝文军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="白银区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议白银区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共白银市白银区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共白银市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="白银市白银区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="白银市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="白银区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="白银市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议白银区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="白银市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="白银区纪委监委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="白银市纪委监委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="白银区大数据中心">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="白银区人民政府"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="白银区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年11月前已任区委书记；2026年7月在任"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="白银区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月任区政府党组书记、区长"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="白银区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o3" label="白银区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Baidu Baike 2025-11记载"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o4" label="白银区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Baidu Baike 2025-11记载"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="韩继国作为区委书记，潘虎作为区长，为党政正职搭档"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="韩继国与冯树川在区四套班子共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="韩继国与郝文军在区四套班子共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘虎与冯树川在区共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘虎与郝文军在区共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
