@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Claude Code Research Agent / github.com/gov-relation</creator>
+    <description>天祝藏族自治县（甘肃省武威市）领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="birthplace" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="崔振华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="天祝藏族自治县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王海青">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="天祝藏族自治县人民政府县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="李鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原天祝县委书记（去向待查）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="沈忠道">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原天祝县长（去向待查）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共天祝藏族自治县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="天祝藏族自治县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="天祝藏族自治县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="天祝藏族自治县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共天祝藏族自治县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共武威市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="武威市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="天祝藏族自治县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天祝藏族自治县委书记"/>
+          <attvalue for="2" value=" - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o6" label="前任职务（待查）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任职务（待查）"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="天祝藏族自治县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天祝藏族自治县人民政府县长"/>
+          <attvalue for="2" value=" - present"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o6" label="前任职务（待查）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任职务（待查）"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o1" label="天祝藏族自治县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天祝藏族自治县委书记"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o2" label="天祝藏族自治县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天祝藏族自治县人民政府县长"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="崔振华（书记）与王海青（县长）为党政一把手搭档"/>
+          <attvalue for="2" value="2026年至今（具体起始时间待确认）"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="李鹏→崔振华: 崔振华接任天祝县委书记，前任为李鹏"/>
+          <attvalue for="2" value="交接（具体时间待确认）"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="沈忠道→王海青: 王海青接任天祝县长，前任为沈忠道"/>
+          <attvalue for="2" value="交接（具体时间待确认）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
