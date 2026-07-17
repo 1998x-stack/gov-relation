@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>gov-relation research agent</creator>
+    <description>寿宁县领导班子工作关系网络 — 中共寿宁县委员会、寿宁县人民政府</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="org_type" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="title" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="shouning_zhang_yongsen" label="张永森">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寿宁县委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="shouning_lin_xiaoxi" label="林晓晞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="寿宁县委副书记、代县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="cpc_shouning" label="中共寿宁县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="gov_shouning" label="寿宁县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="shouning_zhang_yongsen" target="cpc_shouning" label="寿宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="shouning_lin_xiaoxi" target="cpc_shouning" label="寿宁县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="shouning_lin_xiaoxi" target="gov_shouning" label="寿宁县代县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="shouning_zhang_yongsen" target="shouning_lin_xiaoxi" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="党政一把手搭档，张永森主持县委全面工作，林晓晞主持县政府全面工作"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
