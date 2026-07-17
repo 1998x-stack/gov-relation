@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>gov-relation research agent</creator>
+    <description>周宁县领导班子工作关系网络 — 中共周宁县委员会、周宁县人民政府</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="org_type" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="title" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="zhouning_lei_chunxiong" label="雷春雄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="1977-09"/>
+          <attvalue for="3" value="周宁县委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="zhouning_chen_dongyue" label="陈东越">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="1988-01"/>
+          <attvalue for="3" value="周宁县委副书记、代县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="zhouning_yuan_huajun" label="袁华军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="未知（已离任）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="zhouning_chen_wenqing" label="陈文卿">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="1969-09"/>
+          <attvalue for="3" value="已辞去周宁县县长职务"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="zhouning_he_xiaojian" label="何晓建">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="1979-10"/>
+          <attvalue for="3" value="宁德市交通投资集团有限公司董事长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cpc_zhouning" label="中共周宁县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="gov_zhouning" label="周宁县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ningde_jiaotou" label="宁德市交通投资集团有限公司">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="zhouning_lei_chunxiong" target="cpc_zhouning" label="周宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="zhouning_lei_chunxiong" target="cpc_zhouning" label="周宁县人武部党委第一书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="zhouning_chen_dongyue" target="cpc_zhouning" label="周宁县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="zhouning_chen_dongyue" target="gov_zhouning" label="周宁县代县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="zhouning_yuan_huajun" target="cpc_zhouning" label="周宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="zhouning_chen_wenqing" target="gov_zhouning" label="周宁县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="zhouning_he_xiaojian" target="gov_zhouning" label="周宁县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="zhouning_he_xiaojian" target="gov_zhouning" label="周宁县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="zhouning_he_xiaojian" target="ningde_jiaotou" label="宁德市交通投资集团有限公司董事长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="zhouning_lei_chunxiong" target="zhouning_chen_dongyue" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="党政一把手搭档，雷春雄主持县委全面工作，陈东越主持县政府全面工作"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="zhouning_lei_chunxiong" target="zhouning_chen_wenqing" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="党政一把手搭档，2023年12月雷春雄到任后与陈文卿搭班子至2026年7月"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="zhouning_yuan_huajun" target="zhouning_chen_wenqing" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="党政一把手搭档，袁华军任县委书记期间陈文卿任县长"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="zhouning_lei_chunxiong" target="zhouning_he_xiaojian" label="superior_subordinate" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委书记与常务副县长工作关系"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="zhouning_lei_chunxiong" target="zhouning_he_xiaojian" label="same_system" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同在宁德市党政系统工作多年，雷春雄在宁德市委办、市民政局等市直机关，何晓建在周宁县"/>
+          <attvalue for="2" value="weak"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
