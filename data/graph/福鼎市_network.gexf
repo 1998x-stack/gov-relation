@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>gov-relation research agent</creator>
+    <description>福鼎市领导班子工作关系网络 — 中共福鼎市委员会、福鼎市人民政府</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="org_type" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+      <attribute id="3" title="title" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="strength" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="fuding_liu_yue" label="柳岳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="1979年8月"/>
+          <attvalue for="3" value="福鼎市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_ye_haowen" label="叶浩文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="1978年8月"/>
+          <attvalue for="3" value="福鼎市委副书记、市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_miao_lianhua" label="缪联华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福鼎市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_li_xiuyi" label="李修意">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福鼎市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_chen_bin" label="陈斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="福鼎市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_lin_qing" label="林青">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="已卸任福鼎市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_zhuang_chaohe" label="庄超和">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="已卸任福鼎市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="fuding_yuan_huajun" label="袁华军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="已卸任"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cpc_fuding" label="中共福鼎市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="gov_fuding" label="福鼎市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="npc_fuding" label="福鼎市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cppcc_fuding" label="福鼎市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="dis_fuding" label="中共福鼎市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_fuding" label="中共福鼎市委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="prop_fuding" label="中共福鼎市委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="polit_fuding" label="中共福鼎市委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="psb_fuding" label="福鼎市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="ts_fuding" label="桐山街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="tc_fuding" label="桐城街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="sq_fuding" label="山前街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="la_fuding" label="龙安街道">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="fuding_liu_yue" target="cpc_fuding" label="福鼎市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="fuding_ye_haowen" target="cpc_fuding" label="福鼎市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="fuding_ye_haowen" target="gov_fuding" label="福鼎市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="fuding_miao_lianhua" target="gov_fuding" label="福鼎市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="fuding_li_xiuyi" target="gov_fuding" label="福鼎市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="fuding_chen_bin" target="gov_fuding" label="福鼎市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="fuding_lin_qing" target="cpc_fuding" label="福鼎市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="fuding_zhuang_chaohe" target="gov_fuding" label="福鼎市副市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="fuding_yuan_huajun" target="gov_fuding" label="福鼎市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="fuding_liu_yue" target="fuding_ye_haowen" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="党政一把手搭档，柳岳主持市委全面工作，叶浩文主持市政府全面工作"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="fuding_ye_haowen" target="fuding_miao_lianhua" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与副市长的领导关系"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="fuding_ye_haowen" target="fuding_li_xiuyi" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与副市长的领导关系"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="fuding_ye_haowen" target="fuding_chen_bin" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与副市长的领导关系"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="fuding_lin_qing" target="fuding_liu_yue" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林青卸任福鼎市委书记后，由柳岳接任"/>
+          <attvalue for="2" value="strong"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="fuding_yuan_huajun" target="fuding_ye_haowen" label="predecessor_successor" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="袁华军曾任福鼎市长，后由叶浩文接任市长"/>
+          <attvalue for="2" value="medium"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
