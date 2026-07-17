@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>Gansu Gov Relation Investigator</creator>
+    <description>兰州市城关区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="cg_liu_fengheng" label="刘凤恒 (兰州市城关区委书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委书记"/>
+          <attvalue for="2" value="中共兰州市城关区委"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="cg_li_changjiang" label="李长江 (兰州市城关区区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区区长"/>
+          <attvalue for="2" value="城关区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="220"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="cg_deputy_secretary" label="（区委副书记） (兰州市城关区委副书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委副书记"/>
+          <attvalue for="2" value="中共兰州市城关区委"/>
+        </attvalues>
+        <viz:color r="136" g="136" b="136"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_executive_deputy" label="（常务副区长） (兰州市城关区委常委、常务副区长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委常委、常务副区长"/>
+          <attvalue for="2" value="城关区人民政府"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_discipline_secretary" label="（纪委书记） (兰州市城关区委常委、纪委书记、监委主任)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共兰州市城关区纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="200" g="136" b="15"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_org_head" label="（组织部部长） (兰州市城关区委常委、组织部部长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委常委、组织部部长"/>
+          <attvalue for="2" value="中共兰州市城关区委组织部"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_propaganda_head" label="（宣传部部长） (兰州市城关区委常委、宣传部部长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共兰州市城关区委宣传部"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_political_legal" label="（政法委书记） (兰州市城关区委常委、政法委书记)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委常委、政法委书记"/>
+          <attvalue for="2" value="中共兰州市城关区委政法委员会"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_united_front" label="（统战部部长） (兰州市城关区委常委、统战部部长)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区委常委、统战部部长"/>
+          <attvalue for="2" value="中共兰州市城关区委统一战线工作部"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_people_congress" label="（区人大常委会主任） (兰州市城关区人大常委会主任)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区人大常委会主任"/>
+          <attvalue for="2" value="兰州市城关区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_cppcc_chair" label="（区政协主席） (兰州市城关区政协主席)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市城关区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议兰州市城关区委员会"/>
+        </attvalues>
+        <viz:color r="220" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="cg_party_committee" label="中共兰州市城关区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_gov" label="城关区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_discipline" label="中共兰州市城关区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="150" b="20"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_org_department" label="中共兰州市城关区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="80" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_propaganda" label="中共兰州市城关区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="80" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_political_legal" label="中共兰州市城关区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="80" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_united_front" label="中共兰州市城关区委统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="80" b="80"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_peoples_congress" label="兰州市城关区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="90" g="122" b="154"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="cg_cppcc" label="中国人民政治协商会议兰州市城关区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="122" g="90" b="154"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="cg_liu_fengheng" target="cg_party_committee" label="刘凤恒 → 中共兰州市城关区委 (城关区委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="城关区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="cg_liu_fengheng" target="cg_gov" label="刘凤恒 → 城关区人民政府 (城关区区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="城关区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="cg_li_changjiang" target="cg_gov" label="李长江 → 城关区人民政府 (城关区区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="城关区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="cg_deputy_secretary" target="cg_party_committee" label="（区委副书记） → 中共兰州市城关区委 (区委副书记（专职）)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记（专职）"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="cg_executive_deputy" target="cg_gov" label="（常务副区长） → 城关区人民政府 (区委常委、常务副区长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="cg_discipline_secretary" target="cg_discipline" label="（纪委书记） → 中共兰州市城关区纪律检查委员会 (区委常委、纪委书记、监委主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="cg_org_head" target="cg_org_department" label="（组织部部长） → 中共兰州市城关区委组织部 (区委常委、组织部部长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="cg_propaganda_head" target="cg_propaganda" label="（宣传部部长） → 中共兰州市城关区委宣传部 (区委常委、宣传部部长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="cg_political_legal" target="cg_political_legal" label="（政法委书记） → 中共兰州市城关区委政法委员会 (区委常委、政法委书记)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="cg_united_front" target="cg_united_front" label="（统战部部长） → 中共兰州市城关区委统一战线工作部 (区委常委、统战部部长)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="cg_people_congress" target="cg_peoples_congress" label="（区人大常委会主任） → 兰州市城关区人民代表大会常务委员会 (区人大常委会主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="cg_cppcc_chair" target="cg_cppcc" label="（区政协主席） → 中国人民政治协商会议兰州市城关区委员会 (区政协主席)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="cg_liu_fengheng" target="cg_li_changjiang" label="城关区委书记与区长党政正职搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="城关区委书记与区长党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="cg_liu_fengheng" target="cg_deputy_secretary" label="区委书记与专职副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与专职副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="cg_liu_fengheng" target="cg_executive_deputy" label="区委书记与常务副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="cg_liu_fengheng" target="cg_discipline_secretary" label="区委书记与纪委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="cg_liu_fengheng" target="cg_org_head" label="区委书记与组织部部长（干部管理）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与组织部部长（干部管理）"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="cg_li_changjiang" target="cg_executive_deputy" label="区长与常务副区长（区政府日常运作）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长与常务副区长（区政府日常运作）"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="cg_li_changjiang" target="cg_political_legal" label="区长与政法委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区长与政法委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
