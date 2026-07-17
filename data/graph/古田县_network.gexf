@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-17">
+    <creator>china-gov-network skill</creator>
+    <description>古田县领导班子工作关系网络 - 2026-07-17</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="category" title="Category" type="string"/>
+      <attribute id="birth" title="Birth" type="string"/>
+      <attribute id="birthplace" title="Birthplace" type="string"/>
+      <attribute id="education" title="Education" type="string"/>
+      <attribute id="current_post" title="Current Post" type="string"/>
+      <attribute id="source" title="Source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Type" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+      <attribute id="period" title="Period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="许锋">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value="1974-05"/>
+          <attvalue for="birthplace" value="福建霞浦"/>
+          <attvalue for="education" value="省委党校研究生"/>
+          <attvalue for="current_post" value="中共古田县委书记"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%8F%A4%E7%94%B0%E5%8E%BF"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="吴新情">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value="1979-11"/>
+          <attvalue for="birthplace" value="福建寿宁"/>
+          <attvalue for="education" value="在职大学"/>
+          <attvalue for="current_post" value="古田县人民政府县长"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%8F%A4%E7%94%B0%E5%8E%BF"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="郑国淑">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县人大常委会主任"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%8F%A4%E7%94%B0%E5%8E%BF"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p4" label="林纪建">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县政协主席"/>
+          <attvalue for="source" value="https://zh.wikipedia.org/wiki/%E5%8F%A4%E7%94%B0%E5%8E%BF"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="p5" label="俞仰林">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、常务副县长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p6" label="叶斯颖">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、组织部部长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p7" label="林晓晞">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、纪委书记、县监委主任"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p8" label="黄建">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、政法委书记"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p9" label="张明生">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、宣传部部长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p10" label="李黄灼">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、统战部部长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p11" label="刘荣">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县委常委、县人武部政委"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p12" label="张沂">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县人民政府副县长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="黄忠钦">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县人民政府副县长、公安局局长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="雷毅">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县人民政府副县长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="陈锐杰">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县人民政府副县长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="李晓霞">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value=""/>
+          <attvalue for="birthplace" value=""/>
+          <attvalue for="education" value=""/>
+          <attvalue for="current_post" value="古田县人民政府科技副县长"/>
+          <attvalue for="source" value="https://www.gutian.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="张成慧">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value="1972-04"/>
+          <attvalue for="birthplace" value="福建福安"/>
+          <attvalue for="education" value="在职大学"/>
+          <attvalue for="current_post" value="宁德市人民政府副市长"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/%E5%BC%A0%E6%88%90%E6%85%A7"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="党帅">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="category" value="person"/>
+          <attvalue for="birth" value="1983-07"/>
+          <attvalue for="birthplace" value="山东济南"/>
+          <attvalue for="education" value="博士研究生（清华大学）"/>
+          <attvalue for="current_post" value="屏南县委书记"/>
+          <attvalue for="source" value="https://baike.baidu.com/item/%E5%85%9A%E5%B8%85"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1001" label="中共古田县委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1002" label="古田县人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1003" label="古田县人大常委会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1004" label="古田县政协">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1005" label="中共古田县纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1006" label="古田县委组织部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1007" label="古田县委宣传部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1008" label="古田县委政法委">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1009" label="古田县委统战部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1010" label="古田县人民武装部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="其他"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1011" label="古田县公安局">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1012" label="古田县人民检察院">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="其他"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1013" label="古田县人民法院">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="其他"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1014" label="宁德市人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o1015" label="中共屏南县委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="category" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共古田县委书记"/>
+          <attvalue for="period" value="2025-04 → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府县长（原任）"/>
+          <attvalue for="period" value="? → 2025-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府县长"/>
+          <attvalue for="period" value="2025-04 → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1003" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人大常委会主任"/>
+          <attvalue for="period" value="2021-12 → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o1004" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县政协主席"/>
+          <attvalue for="period" value="2021-12 → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、常务副县长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o1006" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、组织部部长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o1005" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、纪委书记、县监委主任"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o1008" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、政法委书记"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p8" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p9" target="o1007" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、宣传部部长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p9" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p10" target="o1009" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、统战部部长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p10" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p11" target="o1010" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委、县人武部政委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p11" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县委常委"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p12" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府副县长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p13" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府副县长、公安局局长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p13" target="o1011" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县公安局局长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p14" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府副县长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p15" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府副县长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p16" target="o1002" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="古田县人民政府科技副县长"/>
+          <attvalue for="period" value="? → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p17" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共古田县委书记（原任）"/>
+          <attvalue for="period" value="2021-06 → 2025-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p17" target="o1014" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="宁德市人民政府副市长"/>
+          <attvalue for="period" value="2025-04 → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p18" target="o1001" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="中共古田县委书记（原任）"/>
+          <attvalue for="period" value="2020-12 → 2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p18" target="o1015" label="worked_at">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="context" value="屏南县委书记"/>
+          <attvalue for="period" value="2021-06 → 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p17" label="predecessor_successor">
+        <attvalues>
+          <attvalue for="type" value="predecessor_successor"/>
+          <attvalue for="context" value="许锋接替张成慧任古田县委书记"/>
+          <attvalue for="period" value="2025-04"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p17" target="p18" label="predecessor_successor">
+        <attvalues>
+          <attvalue for="type" value="predecessor_successor"/>
+          <attvalue for="context" value="张成慧接替党帅任古田县委书记"/>
+          <attvalue for="period" value="2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p1" target="p2" label="superior_subordinate">
+        <attvalues>
+          <attvalue for="type" value="superior_subordinate"/>
+          <attvalue for="context" value="许锋作为县委书记领导县长吴新情"/>
+          <attvalue for="period" value="2025-04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p5" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p6" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p7" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p8" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p9" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p10" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p11" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县委常委班子共事"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p5" target="p2" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县政府班子成员"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p12" target="p2" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县政府班子成员"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p13" target="p2" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县政府班子成员"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p14" target="p2" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县政府班子成员"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p15" target="p2" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县政府班子成员"/>
+          <attvalue for="period" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p3" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县四套班子领导"/>
+          <attvalue for="period" value="2025-04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p4" target="p1" label="overlap">
+        <attvalues>
+          <attvalue for="type" value="overlap"/>
+          <attvalue for="context" value="县四套班子领导"/>
+          <attvalue for="period" value="2025-04至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
