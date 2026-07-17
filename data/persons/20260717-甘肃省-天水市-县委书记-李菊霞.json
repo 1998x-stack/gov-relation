@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "天水市",
+    "region": "清水县",
+    "job": "县委书记（前任）",
+    "task_id": "gansu_清水县",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "qingshui_li_juxia",
+    "name": "李菊霞",
+    "aliases": [],
+    "gender": "女",
+    "ethnicity": "汉族",
+    "birth": "1975-03",
+    "birthplace": "甘肃省西和县",
+    "native_place": "甘肃西和",
+    "education": [
+      {
+        "period": "",
+        "institution": "省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      },
+      {
+        "period": "",
+        "institution": "",
+        "major": "经济学",
+        "degree": "学士",
+        "study_type": "full_time",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1996-08",
+    "dedupe_keys": {
+      "name_birth": "李菊霞_1975",
+      "name_birthplace": "李菊霞_甘肃西和",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "庆阳市委常委",
+    "current_org": "中共庆阳市委员会",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "1996-08",
+      "end": "unknown",
+      "org": "",
+      "title": "早期职业生涯",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1996年8月参加工作, 具体单位待查",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-04",
+      "end": "2021-06",
+      "org": "清水县人民政府",
+      "title": "清水县委副书记、副县长、代县长",
+      "level": "县处级正职",
+      "location": "甘肃省天水市清水县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2021年4月任代县长",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "2021-06",
+      "end": "2024-01",
+      "org": "清水县人民政府",
+      "title": "清水县委副书记、县长",
+      "level": "县处级正职",
+      "location": "甘肃省天水市清水县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "2021年6月当选县长",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "2024-01",
+      "end": "2026-06",
+      "org": "中共清水县委员会",
+      "title": "清水县委书记",
+      "level": "县处级正职",
+      "location": "甘肃省天水市清水县",
+      "system": "party",
+      "rank": "正处级（高配副厅级）",
+      "is_key_promotion": true,
+      "notes": "2024年1月5日任县委书记, 接替马越垠",
+      "confidence": "confirmed",
+      "source_ids": ["S003", "S004"]
+    },
+    {
+      "start": "2026-06",
+      "end": "present",
+      "org": "中共庆阳市委员会",
+      "title": "庆阳市委常委",
+      "level": "地厅级副职",
+      "location": "甘肃省庆阳市",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "2026年6月提名为市州党委常委, 调任庆阳市; 属于从县到市的提拔",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中共庆阳市委员会",
+      "org_type": "党委",
+      "level": "地厅级",
+      "role": "市委常委",
+      "period": "2026-06~present"
+    },
+    {
+      "org_name": "中共清水县委员会",
+      "org_type": "党委",
+      "level": "县处级",
+      "role": "县委书记",
+      "period": "2024-01~2026-06"
+    },
+    {
+      "org_name": "清水县人民政府",
+      "org_type": "政府",
+      "level": "县处级",
+      "role": "县长",
+      "period": "2021-04~2024-01"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "肖玉川",
+      "person_id": "qingshui_xiao_yuchuan",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "肖玉川接替李菊霞任清水县委书记",
+      "overlap_org": "中共清水县委员会",
+      "overlap_period": "2026-06",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "王涛",
+      "person_id": "qingshui_wang_tao",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "王涛接替李菊霞任清水县长（李菊霞升任书记）",
+      "overlap_org": "清水县人民政府",
+      "overlap_period": "2024-01",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003", "S004"]
+    },
+    {
+      "person": "马越垠",
+      "person_id": "qingshui_ma_yueyin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "李菊霞接替马越垠先后任县长和县委书记",
+      "overlap_org": "清水县人民政府/中共清水县委员会",
+      "overlap_period": "2021-2024",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-2026",
+      "domain": "other",
+      "achievement_or_event": "先后任清水县长、县委书记, 具体政绩待查",
+      "role_in_event": "党政一把手",
+      "measurable_outcome": "",
+      "location": "清水县",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["政府", "党委"],
+    "geographic_pattern": ["天水市清水县", "庆阳市"],
+    "promotion_velocity": {
+      "summary": "1996年参加工作, 2021年正处级（县长）, 2024年县委书记, 2026年副厅级（市委常委）; 呈稳步晋升态势",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限, 工作风格待查",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "total_relationships": 3,
+    "strong_connections": 3,
+    "medium_connections": 0,
+    "notable_connections": ["肖玉川（接任书记）", "王涛（接任县长）", "马越垠（前任书记）"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月, 未发现李菊霞有关纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "李菊霞 Baidu Baike",
+      "url": "https://baike.baidu.com/item/%E6%9D%8E%E8%8F%8A%E9%9C%9E",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-17",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "含出生年月、教育背景等基本信息"
+    },
+    {
+      "id": "S002",
+      "title": "甘肃省委组织部任前公示（2026-06-14）",
+      "url": "微信公众号",
+      "publisher": "甘肃省委组织部",
+      "published_at": "2026-06-14",
+      "accessed_at": "2026-07-17",
+      "source_type": "appointment_notice",
+      "reliability": "high",
+      "notes": "公示李菊霞拟提名为市州党委常委"
+    },
+    {
+      "id": "S003",
+      "title": "每日甘肃: 清水县委主要负责同志职务调整",
+      "url": "",
+      "publisher": "每日甘肃",
+      "published_at": "2024-01-04",
+      "accessed_at": "2026-07-17",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "李菊霞任清水县委书记, 马越垠不再担任"
+    },
+    {
+      "id": "S004",
+      "title": "澎湃新闻/天水市政府: 马越垠卸任 李菊霞提名县长",
+      "url": "https://www.thepaper.cn",
+      "publisher": "澎湃新闻",
+      "published_at": "2021-04-19",
+      "accessed_at": "2026-07-17",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "马越垠任县委书记, 李菊霞提名县长候选人"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "李菊霞1996-2021年约25年间的履历仅有零星信息, 早中期职业路径大量缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李菊霞1996年参加工作后在哪些部门任职？",
+      "why_it_matters": "25年的职业经历完全空白, 无法构建完整的职业网络",
+      "suggested_queries": ["李菊霞 简历 1996", "李菊霞 任职经历"],
+      "last_attempted": "2026-07-17"
+    },
+    {
+      "priority": "high",
+      "question": "李菊霞在庆阳市委常委中分管什么？",
+      "why_it_matters": "了解其新岗位的职权范围",
+      "suggested_queries": ["李菊霞 庆阳市委常委 分工"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}

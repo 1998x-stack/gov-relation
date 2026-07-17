@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-17",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "天水市",
+    "region": "清水县",
+    "job": "县委书记（前任）",
+    "task_id": "gansu_清水县",
+    "time_focus": "2011-2024"
+  },
+  "identity": {
+    "person_id": "qingshui_ma_yueyin",
+    "name": "马越垠",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1970-11",
+    "birthplace": "甘肃省甘谷县",
+    "native_place": "甘肃甘谷",
+    "education": [
+      {
+        "period": "",
+        "institution": "省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "马越垠_1970",
+      "name_birthplace": "马越垠_甘肃甘谷",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "甘肃省小陇山林业保护中心党委书记、主任",
+    "current_org": "甘肃省小陇山林业保护中心",
+    "administrative_rank": "正县级/副厅级",
+    "as_of": "2026-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2011-09",
+      "org": "",
+      "title": "早期职业生涯",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "2011年9月前履历待查",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2011-09",
+      "end": "2021-04",
+      "org": "清水县人民政府",
+      "title": "清水县委副书记、县长",
+      "level": "县处级正职",
+      "location": "甘肃省天水市清水县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "任清水县长近10年, 接替刘天波",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    },
+    {
+      "start": "2021-04",
+      "end": "2024-01",
+      "org": "中共清水县委员会",
+      "title": "清水县委书记",
+      "level": "县处级正职",
+      "location": "甘肃省天水市清水县",
+      "system": "party",
+      "rank": "正处级（高配副厅级）",
+      "is_key_promotion": true,
+      "notes": "2021年4月接替刘天波任县委书记, 2022年被提名天水市政协副主席候选人",
+      "confidence": "confirmed",
+      "source_ids": ["S003", "S004"]
+    },
+    {
+      "start": "2024-01",
+      "end": "present",
+      "org": "甘肃省小陇山林业保护中心",
+      "title": "党委书记、主任",
+      "level": "县处级",
+      "location": "甘肃省天水市",
+      "system": "other",
+      "rank": "正县级",
+      "is_key_promotion": false,
+      "notes": "2024年1月卸任县委书记后调任该职, 属于从党政领导岗位转到事业单位",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "甘肃省小陇山林业保护中心",
+      "org_type": "事业单位",
+      "level": "正县级",
+      "role": "党委书记、主任",
+      "period": "2024-01~present"
+    },
+    {
+      "org_name": "中共清水县委员会",
+      "org_type": "党委",
+      "level": "县处级",
+      "role": "县委书记",
+      "period": "2021-04~2024-01"
+    },
+    {
+      "org_name": "清水县人民政府",
+      "org_type": "政府",
+      "level": "县处级",
+      "role": "县长",
+      "period": "2011-09~2021-04"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "李菊霞",
+      "person_id": "qingshui_li_juxia",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "李菊霞接替马越垠先后任县长、县委书记",
+      "overlap_org": "清水县人民政府/中共清水县委员会",
+      "overlap_period": "2021-2024",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "刘天波",
+      "person_id": "qingshui_liu_tianbo",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "马越垠任县长期间, 刘天波任县委书记, 共事约10年（2011-2021）",
+      "overlap_org": "清水县人民政府/中共清水县委员会",
+      "overlap_period": "2011-2021",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "刘天波",
+      "person_id": "qingshui_liu_tianbo",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "马越垠先后接替刘天波任县长和县委书记",
+      "overlap_org": "清水县人民政府",
+      "overlap_period": "2011-09",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2011-2021",
+      "domain": "other",
+      "achievement_or_event": "任清水县长近10年, 具体政绩待查",
+      "role_in_event": "县长",
+      "measurable_outcome": "",
+      "location": "清水县",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "period": "2021-2024",
+      "domain": "other",
+      "achievement_or_event": "任清水县委书记, 2022年被提名市政协副主席候选人",
+      "role_in_event": "县委书记",
+      "measurable_outcome": "",
+      "location": "清水县",
+      "confidence": "plausible",
+      "source_ids": ["S004"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["政府", "党委"],
+    "geographic_pattern": ["天水市清水县"],
+    "promotion_velocity": {
+      "summary": "从县长到县委书记在清水县内晋升, 属于典型的基层成长路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，工作风格待查",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "total_relationships": 3,
+    "strong_connections": 3,
+    "medium_connections": 0,
+    "notable_connections": ["刘天波（前书记, 10年搭档）", "李菊霞（接任者）"]
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月, 未发现马越垠有关纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "马越垠 Baidu Baike",
+      "url": "https://baike.baidu.com/item/%E9%A9%AC%E8%B6%8A%E5%9E%A0",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-17",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "含基本履历信息"
+    },
+    {
+      "id": "S002",
+      "title": "知政堂: 卸任清水县委书记后马越垠新职明确",
+      "url": "",
+      "publisher": "知政堂",
+      "published_at": "2024-01-06",
+      "accessed_at": "2026-07-17",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "马越垠调任小陇山林业保护中心"
+    },
+    {
+      "id": "S003",
+      "title": "网易新闻: 甘肃2位县委书记拟提名为候选人",
+      "url": "",
+      "publisher": "网易新闻",
+      "published_at": "2022-11-23",
+      "accessed_at": "2026-07-17",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "马越垠被提名为天水市政协副主席候选人"
+    },
+    {
+      "id": "S004",
+      "title": "澎湃新闻/天水市政府: 天水市委主要领导职务调整",
+      "url": "https://www.thepaper.cn",
+      "publisher": "澎湃新闻",
+      "published_at": "2021-04-19",
+      "accessed_at": "2026-07-17",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "马越垠任县委书记, 李菊霞提名县长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "马越垠2011年之前的早期履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "马越垠2011年9月前的职业生涯是什么？早期在哪些部门任职？",
+      "why_it_matters": "理解其职业起点、系统经验和培养路径",
+      "suggested_queries": ["马越垠 简历 1970", "马越垠 甘谷 任职"],
+      "last_attempted": "2026-07-17"
+    }
+  ]
+}
