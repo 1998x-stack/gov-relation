@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>庆阳市领导班子工作关系网络 - 数据来源: Wikipedia及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="周继军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="庆阳市委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="胡志勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="庆阳市委副书记、市政府党组书记、市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="王之臣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="庆阳市人大常委会主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp04" label="李隆基">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="庆阳市政协主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp05" label="黄泽元">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省政协党组成员、秘书长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp06" label="贠建民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省政协副主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp07" label="栾克军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（服刑中—因受贿罪被判11年）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp08" label="夏红民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="山东省委常委、省纪委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp09" label="卢小亨">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="甘肃省交通运输厅党组书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp10" label="白振海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="兰州市委常委、兰州新区党工委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp11" label="李菊霞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="庆阳市委常委（原清水县委书记）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp12" label="贾志升">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委副书记、市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="oo01" label="中共庆阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="庆阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="庆阳市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="中国人民政治协商会议庆阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="甘肃省政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="甘肃省交通运输厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="中共山东省纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo08" label="中共兰州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo09" label="兰州新区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo10" label="酒泉市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo11" label="庆阳市人民政府（贾志升前职）">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="庆阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="庆阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp01" target="oo02" label="庆阳市人民政府市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人民政府市长（前任）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp01" target="oo01" label="庆阳市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp01" target="oo01" label="甘肃省财政厅副厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省财政厅副厅长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp01" target="oo01" label="甘肃省审计厅副厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省审计厅副厅长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp01" target="oo02" label="庆阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp01" target="oo01" label="天水市秦州区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天水市秦州区委副书记、区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp01" target="oo01" label="甘肃省审计厅处长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省审计厅处长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp01" target="oo01" label="甘肃省审计厅工作" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省审计厅工作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp02" target="oo02" label="庆阳市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp02" target="oo02" label="庆阳市人民政府代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人民政府代市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp02" target="oo01" label="庆阳市委副书记、市政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委副书记、市政府党组书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp02" target="oo01" label="天水市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天水市委常委、组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp02" target="oo02" label="天水市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="天水市人民政府副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp02" target="oo01" label="玉门市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="玉门市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp02" target="oo02" label="酒泉市工业和信息化局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市工业和信息化局局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp02" target="oo01" label="酒泉市工作（早期）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市工作（早期）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pp03" target="oo03" label="庆阳市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pp04" target="oo04" label="庆阳市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pp05" target="oo05" label="甘肃省政协秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省政协秘书长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pp05" target="oo01" label="庆阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pp05" target="oo01" label="甘肃省应急管理厅党委书记、厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省应急管理厅党委书记、厅长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pp05" target="oo02" label="张掖市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pp05" target="oo01" label="中共陇南市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共陇南市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pp05" target="oo01" label="共青团甘肃省委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团甘肃省委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pp06" target="oo05" label="甘肃省政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省政协副主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pp06" target="oo01" label="庆阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pp06" target="oo02" label="庆阳市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pp07" target="oo02" label="兰州市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兰州市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pp07" target="oo01" label="庆阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pp07" target="oo02" label="庆阳市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="pp07" target="oo02" label="张掖市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="pp08" target="oo07" label="山东省委常委、省纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="山东省委常委、省纪委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="pp08" target="oo01" label="庆阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="pp08" target="oo02" label="甘肃省副省长/省长助理" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省副省长/省长助理"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="pp09" target="oo06" label="甘肃省交通运输厅党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省交通运输厅党组书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="pp09" target="oo01" label="张掖市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="pp09" target="oo02" label="庆阳市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="pp10" target="oo08" label="兰州市委常委、兰州新区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兰州市委常委、兰州新区党工委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="pp10" target="oo02" label="平凉市人民政府市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平凉市人民政府市长（前任）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="pp10" target="oo02" label="庆阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="pp11" target="oo01" label="庆阳市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="pp11" target="oo01" label="清水县委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="清水县委书记（前任）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="pp11" target="oo02" label="清水县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="清水县人民政府县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="pp12" target="oo10" label="酒泉市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委副书记、市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="pp12" target="oo11" label="正宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="正宁县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="pp12" target="oo11" label="庆阳市农业农村局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市农业农村局局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="pp01" target="pp02" label="周继军(书记)与胡志勇(市长): 党政一把手配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="周继军(书记)与胡志勇(市长): 党政一把手配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="pp01" target="pp03" label="周继军(书记)与王之臣(人大主任): 市领导班子配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="周继军(书记)与王之臣(人大主任): 市领导班子配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="pp02" target="pp04" label="胡志勇(市长)与李隆基(政协主席): 政-政协配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="胡志勇(市长)与李隆基(政协主席): 政-政协配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="pp01" target="pp05" label="周继军接替黄泽元任庆阳市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="周继军接替黄泽元任庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="pp01" target="pp06" label="周继军接替贠建民前市长; 贠为书记时周为下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="周继军接替贠建民前市长; 贠为书记时周为下级"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e53" source="pp05" target="pp06" label="黄泽元接替贠建民任庆阳市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="黄泽元接替贠建民任庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e54" source="pp06" target="pp07" label="贠建民接替栾克军先后任市长和书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="贠建民接替栾克军先后任市长和书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e55" source="pp07" target="pp08" label="栾克军接替夏红民任庆阳市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="栾克军接替夏红民任庆阳市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e56" source="pp02" target="pp01" label="胡志勇接替周继军任庆阳市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="胡志勇接替周继军任庆阳市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e57" source="pp09" target="pp01" label="卢小亨前手→周继军接任庆阳市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="卢小亨前手→周继军接任庆阳市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e58" source="pp05" target="pp07" label="黄泽元(张掖市长)→栾克军(张掖市长前)→庆阳书记链" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="黄泽元(张掖市长)→栾克军(张掖市长前)→庆阳书记链"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e59" source="pp09" target="pp05" label="卢小亨(庆阳市长→张掖书记)与黄泽元(张掖市长→庆阳书记): 双向交流" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="卢小亨(庆阳市长→张掖书记)与黄泽元(张掖市长→庆阳书记): 双向交流"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e60" source="pp10" target="pp01" label="白振海(庆阳人,庆阳副市长2011-2016)与周继军(庆阳副市长2012-2015): 同期在庆阳任职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="白振海(庆阳人,庆阳副市长2011-2016)与周继军(庆阳副市长2012-2015): 同期在庆阳任职"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e61" source="pp11" target="pp01" label="李菊霞(新调任庆阳市委常委)与周继军(书记): 上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李菊霞(新调任庆阳市委常委)与周继军(书记): 上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e62" source="pp12" target="pp10" label="贾志升(庆阳市农业农村局/正宁县委书记)与白振海(庆阳副市长): 同源庆阳政坛" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="贾志升(庆阳市农业农村局/正宁县委书记)与白振海(庆阳副市长): 同源庆阳政坛"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e63" source="pp02" target="pp08" label="胡志勇(天水工作过)与夏红民(曾任甘肃省长助理): 同在天水-庆阳系统" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="胡志勇(天水工作过)与夏红民(曾任甘肃省长助理): 同在天水-庆阳系统"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
