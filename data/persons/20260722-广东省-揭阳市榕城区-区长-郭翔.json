@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "揭阳市",
+    "region": "榕城区",
+    "job": "区长",
+    "task_id": "guangdong_榕城区",
+    "time_focus": "2016-2026"
+  },
+  "identity": {
+    "person_id": "guangdong_jieyang_rongcheng_guoxiang",
+    "name": "郭翔",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "榕城区区长（推测，需核实）",
+    "current_org": "榕城区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2024-01",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "~2021",
+      "end": "present",
+      "org": "榕城区人民政府",
+      "title": "榕城区区长",
+      "level": "县处级正职",
+      "location": "广东省揭阳市榕城区",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "推测，需核实是否仍在任",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "榕城区人民政府",
+      "org_type": "政府",
+      "role": "区长",
+      "period": "~2021-至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "韦子庆",
+      "person_id": "guangdong_jieyang_rongcheng_weiziqing",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "区长与区委书记的党政搭档关系",
+      "overlap_org": "榕城区",
+      "overlap_period": "~2021-",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陈宏文",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "weak",
+      "evidence": "推测郭翔接替陈宏文任榕城区长",
+      "overlap_org": "榕城区人民政府",
+      "overlap_period": "~2020-2021",
+      "direction": "other_to_person",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "无从判断——缺少任何履历数据",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "无公开数据支撑性格/工作风格判断"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未检索到公开的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "训练数据推断",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "inferred",
+      "reliability": "low",
+      "notes": "基于AI训练数据中2021-2023年间的信息，未经任何外部来源验证。'郭翔'姓名的正确性本身需要确认。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "姓名的正确性不确定；所有个人基本信息（出生、教育、入党、工作起始）全部缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "郭翔是否仍是榕城区现任区长？其姓名是否正确？",
+      "why_it_matters": "当前任务的核心目标——确认现任二把手身份",
+      "suggested_queries": ["郭翔 榕城区 区长", "榕城区 区长 2025 2026"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "郭翔的所有个人基本信息（出生年月、籍贯、教育背景、入党时间、工作起始时间）",
+      "why_it_matters": "身份识别所需的全部基础信息均缺失",
+      "suggested_queries": ["郭翔 简历 揭阳"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "郭翔此前的完整履历（任区长前的工作经历）",
+      "why_it_matters": "构建完整职业图谱和关系网络",
+      "suggested_queries": ["郭翔 揭阳 任职 履历"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
