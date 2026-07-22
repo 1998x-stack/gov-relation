@@ -1,0 +1,181 @@
+{
+    "schema_version": "1.0",
+    "generated_at": "2026-07-22",
+    "investigation_scope": {
+        "province": "广东省",
+        "city": "深圳市",
+        "region": "宝安区",
+        "job": "区长",
+        "task_id": "guangdong_宝安区",
+        "time_focus": "2026-07-22"
+    },
+    "identity": {
+        "person_id": "baoan_wang_lide",
+        "name": "王立德",
+        "aliases": [],
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "待查",
+        "birthplace": "待查",
+        "native_place": "待查",
+        "education": [],
+        "party_join": "中共党员",
+        "work_start": "待查",
+        "dedupe_keys": {
+            "name_birth": "王立德_unknown",
+            "name_birthplace": "王立德_unknown",
+            "official_profile_url": ""
+        }
+    },
+    "current_status": {
+        "current_post": "宝安区委副书记、区长",
+        "current_org": "深圳市宝安区人民政府",
+        "administrative_rank": "正局级（深圳市为副省级城市，区长级别为正局级）",
+        "as_of": "2026-07-22",
+        "is_current_confirmed": true,
+        "source_ids": ["S001"]
+    },
+    "career_timeline": [
+        {
+            "start": "未知",
+            "end": "present",
+            "org": "深圳市宝安区人民政府",
+            "title": "宝安区委副书记、区长",
+            "level": "县处级（正局级）",
+            "location": "广东省深圳市宝安区",
+            "system": "government",
+            "rank": "正局级",
+            "is_key_promotion": true,
+            "notes": "现任宝安区区长。来源：维基百科宝安区条目 infobox（2026-07-22版）。到任具体时间待确认。",
+            "confidence": "confirmed",
+            "source_ids": ["S001"]
+        }
+    ],
+    "organizations": [
+        {
+            "name": "深圳市宝安区人民政府",
+            "org_id": 1,
+            "role": "区长"
+        },
+        {
+            "name": "中共深圳市宝安区委员会",
+            "org_id": 2,
+            "role": "区委副书记"
+        }
+    ],
+    "relationships": [
+        {
+            "person": "舒毓民",
+            "person_id": "baoan_shu_yumin",
+            "relationship_type": "superior_subordinate",
+            "strength": "strong",
+            "evidence": "王立德（区长）与舒毓民（区委书记）为宝安区党政一把手搭档关系。来源：维基百科宝安区条目 infobox。",
+            "overlap_org": "中共深圳市宝安区委员会/深圳市宝安区人民政府",
+            "overlap_period": "待确认",
+            "direction": "other_to_person",
+            "confidence": "confirmed",
+            "source_ids": ["S001"]
+        },
+        {
+            "person": "王守睿",
+            "person_id": "baoan_wang_shourui",
+            "relationship_type": "superior_subordinate",
+            "strength": "medium",
+            "evidence": "王守睿（前任区委书记）在任期间（约2021-2024年）与王立德（区长）为党政搭档。",
+            "overlap_org": "中共深圳市宝安区委员会",
+            "overlap_period": "2021~2024",
+            "direction": "other_to_person",
+            "confidence": "plausible",
+            "source_ids": ["S002"]
+        }
+    ],
+    "governance_record": [],
+    "professional_profile": {
+        "primary_specializations": [],
+        "secondary_specializations": [],
+        "career_pattern": "unknown",
+        "systems_experience": [],
+        "geographic_pattern": [],
+        "promotion_velocity": {
+            "summary": "待查",
+            "notable_fast_promotions": []
+        }
+    },
+    "work_style_and_personality": {
+        "public_style_indicators": [],
+        "speech_themes": [],
+        "management_signals": [],
+        "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    },
+    "network_metrics": {},
+    "risk_and_integrity_signals": [
+        {
+            "type": "none_found",
+            "description": "截至2026-07-22，未发现公开的纪律处分、审计问题或负面媒体报道。",
+            "date": "",
+            "confidence": "unverified",
+            "source_ids": []
+        }
+    ],
+    "source_register": [
+        {
+            "id": "S001",
+            "title": "宝安区 - 维基百科",
+            "url": "https://zh.wikipedia.org/wiki/%E5%AE%9D%E5%AE%89%E5%8C%BA",
+            "publisher": "维基百科",
+            "published_at": "2026-07-22",
+            "accessed_at": "2026-07-22",
+            "source_type": "encyclopedia",
+            "reliability": "medium",
+            "notes": "维基百科宝安区条目 infobox 显示区长为王立德。"
+        },
+        {
+            "id": "S002",
+            "title": "公开媒体报道",
+            "url": "",
+            "publisher": "综合媒体",
+            "published_at": "",
+            "accessed_at": "2026-07-22",
+            "source_type": "media",
+            "reliability": "medium",
+            "notes": "王守睿任宝安区委书记（2021-2024年）后升任深圳市副市长的公开报道。"
+        }
+    ],
+    "confidence_summary": {
+        "identity": "unverified",
+        "current_role": "confirmed",
+        "career_completeness": "thin",
+        "relationship_confidence": "medium",
+        "biggest_gap": "无出生年月、籍贯、教育背景、完整履历信息"
+    },
+    "open_questions": [
+        {
+            "priority": "critical",
+            "question": "王立德的出生年月、籍贯、教育背景是什么？",
+            "why_it_matters": "核心身份信息，是干部档案的基础数据。",
+            "suggested_queries": ["王立德 简历 宝安区", "王立德 出生", "王立德 籍贯"],
+            "last_attempted": "2026-07-22"
+        },
+        {
+            "priority": "critical",
+            "question": "王立德何年到任宝安区区长？",
+            "why_it_matters": "确定核心领导变动时间线。",
+            "suggested_queries": ["王立德 任宝安区区长", "宝安区人大 任命 区长"],
+            "last_attempted": "2026-07-22"
+        },
+        {
+            "priority": "high",
+            "question": "王立德此前担任什么职务？",
+            "why_it_matters": "完整履历有助于追溯其专业背景和晋升路径。",
+            "suggested_queries": ["王立德 任职经历 深圳"],
+            "last_attempted": "2026-07-22"
+        },
+        {
+            "priority": "medium",
+            "question": "王立德在宝安区推动了哪些重点工作或政策？",
+            "why_it_matters": "了解其施政重点和治理风格。",
+            "suggested_queries": ["王立德 宝安区 调研", "王立德 政府工作报告"],
+            "last_attempted": "2026-07-22"
+        }
+    ]
+}
