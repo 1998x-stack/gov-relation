@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "广州市",
+    "region": "越秀区",
+    "job": "区委书记",
+    "task_id": "guangdong_越秀区",
+    "time_focus": "当前"
+  },
+  "identity": {
+    "person_id": "guangdong_guangzhou_yuexiu_wanghuanqing_1973",
+    "name": "王焕清",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1973-01",
+    "birthplace": "广东丰顺",
+    "native_place": "广东丰顺",
+    "education": [
+      {
+        "period": "",
+        "institution": "广东省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      },
+      {
+        "period": "",
+        "institution": "",
+        "major": "管理学",
+        "degree": "博士",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "1992-06",
+    "work_start": "1992-07",
+    "dedupe_keys": {
+      "name_birth": "王焕清_1973",
+      "name_birthplace": "王焕清_广东丰顺",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "越秀区委书记",
+    "current_org": "中共广州市越秀区委员会",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "共青团系统",
+      "title": "共青团广州市委书记",
+      "level": "",
+      "location": "广东省广州市",
+      "system": "群团",
+      "rank": "正县级",
+      "is_key_promotion": false,
+      "notes": "早期团系统工作经历",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "广州市发展和改革委员会",
+      "title": "主任",
+      "level": "",
+      "location": "广东省广州市",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2011",
+      "end": "2015",
+      "org": "中共广州市越秀区委员会",
+      "title": "越秀区委常委、常务副区长",
+      "level": "副县级",
+      "location": "广东省广州市越秀区",
+      "system": "government",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2015",
+      "end": "2019",
+      "org": "广州市越秀区人民政府",
+      "title": "越秀区委副书记、区长",
+      "level": "正县级",
+      "location": "广东省广州市越秀区",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2019",
+      "end": "present",
+      "org": "中共广州市越秀区委员会",
+      "title": "越秀区委书记",
+      "level": "副厅级",
+      "location": "广东省广州市越秀区",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "约2019年起任区委书记",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "o1",
+      "name": "中共广州市越秀区委员会",
+      "type": "党委",
+      "role": "区委书记",
+      "period": "2019至今"
+    },
+    {
+      "org_id": "o2",
+      "name": "广州市越秀区人民政府",
+      "type": "政府",
+      "role": "区长/常务副区长",
+      "period": "2011-2019"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "罗光华",
+      "person_id": "guangdong_guangzhou_yuexiu_luoguanghua_1973",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "王焕清作为区委书记，罗光华为区长，为党政一把手搭档关系",
+      "overlap_org": "中共广州市越秀区委员会/广州市越秀区人民政府",
+      "overlap_period": "2022至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "颜强",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "同在区委常委会共事，颜强为区委常委",
+      "overlap_org": "中共广州市越秀区委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "陈烯",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "同在区委常委会共事，陈烯为区委常委、区委办公室主任、副区长",
+      "overlap_org": "中共广州市越秀区委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["党政管理", "城市治理", "经济发展"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party", "government", "群团"],
+    "geographic_pattern": ["广东省广州市"],
+    "promotion_velocity": {
+      "summary": "从常务副区长到区长到区委书记，在越秀区逐步晋升",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "缺乏公开风格分析材料",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "越秀区 Wikipedia",
+      "url": "https://zh.wikipedia.org/wiki/%E8%B6%8A%E7%A7%80%E5%8C%BA",
+      "publisher": "Wikipedia",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "Wikipedia列示王焕清为越秀区委书记，但可能未及时更新"
+    },
+    {
+      "id": "S002",
+      "title": "越秀区领导之窗 - 罗光华",
+      "url": "https://www.yuexiu.gov.cn/zwgk/ldzc/qzf/lgh/",
+      "publisher": "越秀区人民政府",
+      "published_at": "2022-08-11",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区长官方公示信息"
+    },
+    {
+      "id": "S003",
+      "title": "越秀区领导之窗 - 颜强",
+      "url": "https://www.yuexiu.gov.cn/zwgk/ldzc/qzf/yq/",
+      "publisher": "越秀区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区委常委、常务副区长"
+    },
+    {
+      "id": "S004",
+      "title": "越秀区领导之窗 - 陈烯",
+      "url": "https://www.yuexiu.gov.cn/zwgk/ldzc/qzf/cx/",
+      "publisher": "越秀区人民政府",
+      "published_at": "2020-11-02",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区委常委、副区长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "需要确认王焕清是否仍为现任区委书记。Wikipedia可能未及时更新。需从官方来源确认2024-2026年的实际任职情况。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王焕清目前是否仍担任越秀区委书记？是否有变更？",
+      "why_it_matters": "核心人物身份确认是完整网络的基础",
+      "suggested_queries": ["王焕清 越秀区委书记 2025 2026", "越秀区委书记 现任", "王焕清 广州市副市长"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "王焕清的完整履历细节（具体教育背景和每段任职精确时间）",
+      "why_it_matters": "精确履历可提升关系推断的准确性",
+      "suggested_queries": ["王焕清 简历", "王焕清 百度百科"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "medium",
+      "question": "王焕清的工作风格和治理记录",
+      "why_it_matters": "评估其在越秀区的主要政绩和治理模式",
+      "suggested_queries": ["王焕清 越秀 调研", "王焕清 讲话"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
