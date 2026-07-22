@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "湛江市",
+    "region": "麻章区",
+    "job": "区长",
+    "task_id": "guangdong_麻章区",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "guangdong_mazhang_linhong",
+    "name": "林洪",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "林洪_",
+      "name_birthplace": "林洪_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "麻章区委副书记、区长",
+    "current_org": "湛江市麻章区人民政府",
+    "administrative_rank": "县处级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未能找到林洪的完整职业履历，仅从Wikipedia确认当前职务",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "guangdong_mazhang_gov",
+      "org_name": "湛江市麻章区人民政府",
+      "role": "区委副书记、区长",
+      "period": "在职",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "待查（现任麻章区委书记）",
+      "person_id": "guangdong_mazhang_partsec_unknown",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "现任党政搭档，在麻章区共事",
+      "overlap_org": "湛江市麻章区",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "杨杰东",
+      "person_id": "guangdong_mazhang_yangjiedong",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "前后任区长",
+      "overlap_org": "湛江市麻章区人民政府",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "未知",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "Wikipedia: 麻章区",
+      "url": "https://zh.wikipedia.org/wiki/麻章区",
+      "publisher": "Wikipedia",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "Wikipedia确认林洪为现任麻章区区长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "林洪的全部履历（出生年份、教育背景、工作经历、任职起始时间）均为未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "林洪的出生年份和出生地是什么？",
+      "why_it_matters": "缺少基本身份信息",
+      "suggested_queries": [
+        "林洪 湛江 麻章 简历",
+        "林洪 任前公示",
+        "林洪 出生"
+      ],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "林洪何时开始担任麻章区区长？",
+      "why_it_matters": "无法确定任职起始时间",
+      "suggested_queries": [
+        "林洪 任麻章区区长",
+        "麻章区 人大 任命 林洪 区长"
+      ],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "林洪此前担任什么职务？",
+      "why_it_matters": "缺少职业轨迹和晋升路径信息",
+      "suggested_queries": [
+        "林洪 此前担任",
+        "林洪 简历 任职经历"
+      ],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
