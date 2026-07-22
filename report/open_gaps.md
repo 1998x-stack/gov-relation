@@ -1,6 +1,26 @@
 # Open Gaps Registry
 > Last updated: 2026-07-22
 
+## 🆕 遂溪县 (2026-07-22)
+### ⭐⭐⭐⭐⭐ Critical — 县委书记身份完全未知
+**Web Access Status (2026-07-22):** Exa rate-limited, Baidu 403, suixi.gov.cn unreachable (timeout), Jina Reader timeout, Google/Bing search blocked.
+**Confirmed source:** 湛江市人民政府网站 (zhanjiang.gov.cn) — official news accessible.
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| **待查** | **遂溪县委书记** | **姓名、出生、履历全部未知，是当前遂溪县最大的信息缺口** | **2026-07-22** | **Wikipedia列出余庆创（2018年来源），但2026年6-7月的全部官方新闻中均由县长张洋主持县委重要会议，未见县委书记出席或提及。可能已调离或职位空缺。** |
+| **张洋** | **遂溪县委副书记、县长** | **完整履历（出生年月、籍贯、教育、全部工作经历、到任时间）** | **2026-07-22** | **身份已通过官方新闻确认，但到遂溪前的履历完全空白。Confirmed as of 2026-07-22。** |
+| 余庆创 | Wikipedia记载的县委书记 | 当前是否在任、去向（如已离任） | 2026-07-22 | Wikipedia条目注明为2018年来源，极可能已过时 |
+| 温观寿等县委领导 | 县委副书记、各县委常委 | 出生日期、教育、完整履历、具体分工 | 2026-07-22 | 已从官方新闻中确认部分常委姓名，但职务分工未知 |
+| 遂溪县 | 县委常委会完整名单 | 纪委书记、组织部长、宣传部长、政法委书记等具体职务分工 | 2026-07-22 | 已知常委会成员：温观寿、朱帝池、豆萍英、陈光提、伍华武、朱凌静 |
+
+**Suggested Queries for Next Attempt:**
+- `遂溪县委书记 2026 任命` — 找到现任县委书记
+- `余庆创 离任 遂溪 书记` — 确认余庆创去向
+- `张洋 遂溪 县长 任命 2024 2025` — 找到张洋到任时间
+- `site:thepaper.cn 遂溪县` — 澎湃新闻的遂溪报道
+- `湛江市 任前公示 遂溪县` — 市委干部任前公示
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
