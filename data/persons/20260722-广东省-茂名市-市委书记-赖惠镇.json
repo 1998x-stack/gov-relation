@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "茂名市",
+    "region": "化州市",
+    "job": "市委书记",
+    "task_id": "guangdong_化州市",
+    "time_focus": "2026年"
+  },
+  "identity": {
+    "person_id": "huazhou_lai_huizhen_unknown",
+    "name": "赖惠镇",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "赖惠镇_unknown",
+      "name_birthplace": "赖惠镇_未知",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中共化州市委书记",
+    "current_org": "中共化州市委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到赖惠镇完整早期履历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "待查",
+      "end": "2025-07",
+      "org": "恩平市人民政府",
+      "title": "恩平市委副书记、市长",
+      "level": "县处级正职",
+      "location": "广东省江门市恩平市",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2025-07",
+      "end": "present",
+      "org": "中共化州市委员会",
+      "title": "中共化州市委书记",
+      "level": "县处级正职",
+      "location": "广东省茂名市化州市",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "跨市调任，从江门恩平调任茂名化州",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"org_id": 100001, "name": "中共化州市委员会", "role": "现任"},
+    {"org_id": 100002, "name": "化州市人民政府", "role": "前任"},
+    {"org_id": 100003, "name": "恩平市人民政府", "role": "前任"}
+  ],
+  "relationships": [
+    {
+      "person": "梁金福",
+      "person_id": "huazhou_liang_jinfu_1971",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "赖惠镇（市委书记）与梁金福（市长）为化州市党政正职搭档",
+      "overlap_org": "化州市",
+      "overlap_period": "2025-07至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "邓泽友",
+      "person_id": "huazhou_deng_zeyou_1972",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "赖惠镇接替邓泽友任化州市委书记",
+      "overlap_org": "中共化州市委员会",
+      "overlap_period": "2025-07",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["江门恩平", "茂名化州"],
+    "promotion_velocity": {
+      "summary": "从恩平市长平级调任化州市委书记，属跨市干部交流",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 2,
+    "total_connections": 2,
+    "centrality_notes": "担任化州市委书记，为该地区权力核心"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开渠道未发现赖惠镇相关的纪律处分、审计问题或负面报道",
+      "date": "2026-07-22",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "恩平市构建脚本 — 赖惠镇条目",
+      "url": "build_恩平市_data.py",
+      "publisher": "gov-relation repo",
+      "published_at": "2026-07-22",
+      "accessed_at": "2026-07-22",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "来自恩平市构建脚本中赖惠镇的条目，标注为 confirmed"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "赖惠镇的完整履历（出生、籍贯、教育、早期工作经历）均未找到公开来源"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "赖惠镇的出生日期、籍贯、教育背景是什么？",
+      "why_it_matters": "核心人物的基本身份信息缺失，影响去重和身份确认",
+      "suggested_queries": ["赖惠镇 简历", "赖惠镇 出生", "赖惠镇 百度百科"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "赖惠镇在恩平市长之前的完整职业生涯是什么？",
+      "why_it_matters": "了解其晋升路径和专业背景，判断与化州的关系网络",
+      "suggested_queries": ["赖惠镇 恩平 任职", "赖惠镇 江门 组织部", "赖惠镇 任前公示"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "medium",
+      "question": "赖惠镇在化州是否有恩平之外的工作关联人？",
+      "why_it_matters": "了解跨市调任后与本地干部的融合程度",
+      "suggested_queries": ["赖惠镇 化州 调研", "赖惠镇 陪同 茂名"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}

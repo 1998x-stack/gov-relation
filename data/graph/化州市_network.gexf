@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>gov-relation Research Agent</creator>
+    <description>化州市领导班子工作关系网络 — 包含市委领导、市政府领导、前任领导及其相互关系</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+      <attribute id="3" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="赖惠镇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共化州市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="梁金福">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委副书记、市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="邓泽友">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任化州市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="周太强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市人大常委会主任"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="陈晓山">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市政协主席"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="傅婕丹">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委副书记"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="黄勇文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委常委、常务副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="林文泽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委常委、组织部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="杨营">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委常委、纪委书记、监委主任"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="张婷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委常委、宣传部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="梁国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委常委、政法委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共化州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="化州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政府"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="化州市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="人大"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议化州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政协"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="化州市纪委监委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="纪律检查"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共茂名市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="地厅级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="茂名市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政府"/>
+          <attvalue for="3" value="地厅级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共恩平市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="恩平市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政府"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="中共化州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o9" label="恩平市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="化州市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o1" label="中共化州市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p4" target="o3" label="化州市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p5" target="o4" label="化州市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p6" target="o1" label="化州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p7" target="o2" label="化州市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p8" target="o1" label="化州市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p9" target="o5" label="化州市委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p10" target="o1" label="化州市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p11" target="o1" label="化州市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="p3" label="前任继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="p6" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p1" target="p8" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="p9" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p2" target="p7" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p2" target="p4" label="共事" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p3" target="p2" label="前任搭档" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p8" target="p10" label="同僚" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p11" target="p9" label="工作关联" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p5" label="跨市关联" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="weak"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "茂名市",
+    "region": "化州市",
+    "job": "市长",
+    "task_id": "guangdong_化州市",
+    "time_focus": "2026年"
+  },
+  "identity": {
+    "person_id": "huazhou_liang_jinfu_1971",
+    "name": "梁金福",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1971年（待确认具体月份）",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "梁金福_1971",
+      "name_birthplace": "梁金福_未知",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "化州市委副书记、市长",
+    "current_org": "化州市人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": []
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到梁金福完整早期履历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "待查",
+      "end": "约2023",
+      "org": "化州市人民政府",
+      "title": "化州市副市长（或相关职务）",
+      "level": "县处级副职",
+      "location": "广东省茂名市化州市",
+      "system": "government",
+      "rank": "县处级副职",
+      "is_key_promotion": false,
+      "notes": "梁金福在任市长前在化州市工作多年",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2023",
+      "end": "present",
+      "org": "化州市人民政府",
+      "title": "化州市委副书记、市长",
+      "level": "县处级正职",
+      "location": "广东省茂名市化州市",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "具体任职月份待确认",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_id": 100001, "name": "化州市人民政府", "role": "现任"},
+    {"org_id": 100002, "name": "中共化州市委员会", "role": "现任"}
+  ],
+  "relationships": [
+    {
+      "person": "赖惠镇",
+      "person_id": "huazhou_lai_huizhen_unknown",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "赖惠镇（市委书记）与梁金福（市长）为化州市党政正职搭档",
+      "overlap_org": "化州市",
+      "overlap_period": "2025-07至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "邓泽友",
+      "person_id": "huazhou_deng_zeyou_1972",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "邓泽友（前任书记）与梁金福（市长）曾搭班约2年",
+      "overlap_org": "化州市",
+      "overlap_period": "2023-2025",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["local_governance"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["茂名化州"],
+    "promotion_velocity": {
+      "summary": "从副市长晋升市长，体现本地培养特征",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "direct_connections": 2,
+    "total_connections": 2,
+    "centrality_notes": "担任化州市长，为地区政府一把手"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开渠道未发现梁金福相关的纪律处分、审计问题或负面报道",
+      "date": "2026-07-22",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "恩平市构建脚本 — 化州市相关条目",
+      "url": "build_恩平市_data.py",
+      "publisher": "gov-relation repo",
+      "published_at": "2026-07-22",
+      "accessed_at": "2026-07-22",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "确认了赖惠镇化州市委书记身份，梁金福作为搭班市长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "梁金福的完整履历基本缺失，包括出生地、教育、早期工作经历和具体任职月份"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "梁金福的出生日期和籍贯是什么？",
+      "why_it_matters": "核心人物身份确认的基础信息",
+      "suggested_queries": ["梁金福 化州 简历", "梁金福 出生", "梁金福 百度百科"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "梁金福在任市长前的完整职业生涯是什么？他是否在化州其他岗位工作过？",
+      "why_it_matters": "了解是否本地成长干部，以及与其他常委的共事历史",
+      "suggested_queries": ["梁金福 化州 副市长", "梁金福 任职经历", "梁金福 茂名"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "medium",
+      "question": "梁金福的具体任职月份（市人大常委会任命时间）是什么？",
+      "why_it_matters": "精确化时间线以便分析与其他人员的时序重叠",
+      "suggested_queries": ["化州市人大常委会 梁金福 任命 代理市长"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
