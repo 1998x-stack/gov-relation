@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "平凉市",
+    "region": "静宁县 / 庄浪县",
+    "job": "静宁县县长（前任）/ 庄浪县委书记（现任）",
+    "task_id": "gansu_静宁县",
+    "time_focus": "前任-继任链"
+  },
+  "identity": {
+    "person_id": "zhuanglang_chen_jingchun",
+    "name": "陈景春",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1973-11",
+    "birthplace": "甘肃省泾川县",
+    "native_place": "甘肃泾川",
+    "education": [
+      {
+        "period": "",
+        "institution": "甘肃省委党校",
+        "major": "",
+        "degree": "大学学历",
+        "study_type": "part_time",
+        "source_ids": ["S001", "S002"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "陈景春_1973-11",
+      "name_birthplace": "陈景春_泾川",
+      "official_profile_url": "http://district.ce.cn/newarea/sddy/202003/16/t20200316_34497512.shtml"
+    }
+  },
+  "current_status": {
+    "current_post": "庄浪县委书记",
+    "current_org": "中共庄浪县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07",
+    "is_current_confirmed": true,
+    "notes": "2026年仍以庄浪县委书记身份公开活动（主持县委常委会、接受媒体专访）",
+    "source_ids": ["S003", "S004"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "静宁县（职务待查）",
+      "title": "早期在静宁县的基层/部门职务",
+      "level": "",
+      "location": "甘肃省平凉市静宁县",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "陈景春职业生涯早期信息缺失，具体起始工作时间未找到",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "",
+      "end": "2020-03",
+      "org": "静宁县人民政府",
+      "title": "静宁县委常委、县人民政府副县长（常务）、三级调研员",
+      "level": "",
+      "location": "甘肃省平凉市静宁县",
+      "system": "government",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "2020年3月任前公示时已任县委常委、常务副县长、三级调研员。具体到任时间待查",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2020-03",
+      "end": "2020",
+      "org": "中共静宁县委员会",
+      "title": "静宁县委副书记（拟任）",
+      "level": "",
+      "location": "甘肃省平凉市静宁县",
+      "system": "party",
+      "rank": "副处级",
+      "is_key_promotion": true,
+      "notes": "2020年3月16日~17日甘肃省委组织部任前公示：拟任静宁县委副书记，拟提名为县长候选人",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2020",
+      "end": "2022",
+      "org": "静宁县人民政府",
+      "title": "静宁县委副书记、县长",
+      "level": "",
+      "location": "甘肃省平凉市静宁县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2020年任静宁县长。精确到任月份待查。王蕾约2022年接替其县长职务",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S999"]
+    },
+    {
+      "start": "2022",
+      "end": "至今",
+      "org": "中共庄浪县委员会",
+      "title": "庄浪县委书记",
+      "level": "",
+      "location": "甘肃省平凉市庄浪县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "约2022年起任庄浪县委书记至今（2026年仍任职）。精确到任月份待查",
+      "confidence": "confirmed",
+      "source_ids": ["S003", "S004"]
+    }
+  ],
+  "organizations": [
+    {"org": "静宁县（前期）", "role": "基层/部门职务", "period": "早期"},
+    {"org": "静宁县人民政府", "role": "常务副县长/县长", "period": "~2020.03~2022"},
+    {"org": "中共静宁县委员会", "role": "副书记、县长", "period": "2020~2022"},
+    {"org": "中共庄浪县委员会", "role": "县委书记", "period": "2022~至今"}
+  ],
+  "relationships": [
+    {
+      "person": "何鹏峰",
+      "person_id": "jingning_he_pengfeng",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "何鹏峰2021年10月任静宁县委书记时，陈景春在任静宁县长，两人为党政搭档",
+      "overlap_org": "静宁县",
+      "overlap_period": "2021.10~2022",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "王蕾",
+      "person_id": "jingning_wang_lei",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "陈景春调任庄浪后，王蕾接任静宁县县长",
+      "overlap_org": "静宁县人民政府",
+      "overlap_period": "2022",
+      "direction": "predecessor",
+      "confidence": "confirmed",
+      "source_ids": ["S999"]
+    },
+    {
+      "person": "靳智德",
+      "person_id": "jingning_jin_zhi_de",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "陈景春任静宁县长期间与常务副县长靳智德可能有共事期",
+      "overlap_org": "静宁县人民政府",
+      "overlap_period": "2020~2022",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S999"]
+    },
+    {
+      "person": "张兴荣",
+      "person_id": "jingning_zhang_xingrong",
+      "relationship_type": "predecessor_successor",
+      "strength": "weak",
+      "evidence": "张兴荣曾任静宁县长，陈景春其后接任（待确认时间关系）",
+      "overlap_org": "静宁县人民政府",
+      "overlap_period": "",
+      "direction": "successor",
+      "confidence": "unverified",
+      "source_ids": ["S999"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2023",
+      "domain": "economic_development",
+      "achievement_or_event": "提出庄浪县'农业优先型、工业主导型'县域经济定位",
+      "role_in_event": "庄浪县委书记（领衔制定）",
+      "measurable_outcome": "庄浪县地区生产总值等多项指标位居平凉市前列",
+      "location": "庄浪县",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "period": "2022",
+      "domain": "rural_revitalization",
+      "achievement_or_event": "推进'三抓三促'行动，聚焦乡村振兴",
+      "role_in_event": "县委书记",
+      "measurable_outcome": "庄浪县获评多项省级荣誉",
+      "location": "庄浪县",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["县级党政领导", "财政经济"],
+    "secondary_specializations": ["乡村振兴"],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["静宁", "庄浪"],
+    "promotion_velocity": {
+      "summary": "职业生涯主要在静宁县深耕，从常务副县长到县长（2020年），后调任庄浪县委书记（约2022年），从县长到县委书记为平级重用",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "reform_oriented",
+        "evidence": "提出'全面加快全国梯田高效开发示范县'等五大目标",
+        "confidence": "confirmed",
+        "source_ids": ["S003"]
+      }
+    ],
+    "speech_themes": ["三抓三促", "县域经济", "产业链发展", "乡村振兴"],
+    "management_signals": ["强调链长制、项目化推进"],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "公开来源未发现任何负面风险信号",
+      "date": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "甘肃对王度林、陈景春进行任前公示(图|简历)",
+      "url": "http://district.ce.cn/newarea/sddy/202003/16/t20200316_34497512.shtml",
+      "publisher": "中国经济网",
+      "published_at": "2020-03-16",
+      "accessed_at": "2026-07-22",
+      "source_type": "appointment_notice",
+      "reliability": "high",
+      "notes": "确认陈景春1973年11月生、甘肃泾川人、省委党校大学学历、静宁县委常委/常务副县长/三级调研员、拟任静宁县委副书记提名为县长候选人"
+    },
+    {
+      "id": "S002",
+      "title": "中共甘肃省委组织部关于王度林等同志任前公示的公告",
+      "url": "http://gansu.gscn.com.cn/system/2020/03/17/012344201.shtml",
+      "publisher": "中国甘肃网（转载甘肃组工网）",
+      "published_at": "2020-03-17",
+      "accessed_at": "2026-07-22",
+      "source_type": "appointment_notice",
+      "reliability": "high",
+      "notes": "与S001同源，确认陈景春简历信息"
+    },
+    {
+      "id": "S003",
+      "title": "【党组织书记谈落实】'三抓三促'增动能 真抓实干强县域——访庄浪县委书记陈景春",
+      "url": "http://gansu.gscn.com.cn/system/2023/06/14/012974883.shtml",
+      "publisher": "中国甘肃网",
+      "published_at": "2023-06-14",
+      "accessed_at": "2026-07-22",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "确认2023年陈景春已任庄浪县委书记"
+    },
+    {
+      "id": "S004",
+      "title": "县委常委会召开会议 县委书记陈景春主持",
+      "url": "https://www.pingliang.gov.cn/xwzx/xqkx/zl/art/2024/art_fcca6142b18841fbb10eb2e5e723ca17.html",
+      "publisher": "平凉市人民政府",
+      "published_at": "2024-12-18",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认2024年12月陈景春仍任庄浪县委书记"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "早期职业生涯（2020年任常务副县长之前的全部经历）完全缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "陈景春的早期职业生涯（2020年之前的全部职务）",
+      "why_it_matters": "核心人物完整履历是建立关系网络的基础",
+      "suggested_queries": ["陈景春 静宁县 副县长 任职 时间 履历"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "陈景春何时开始担任静宁县长？精确到年月",
+      "why_it_matters": "精确化时间线和与何鹏峰的重叠期",
+      "suggested_queries": ["陈景春 静宁县长 任命 2020"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "陈景春何时调任庄浪县委书记？精确到年月",
+      "why_it_matters": "确认庄浪县委书记任职起始时间",
+      "suggested_queries": ["庄浪县 领导干部大会 陈景春 任职"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
