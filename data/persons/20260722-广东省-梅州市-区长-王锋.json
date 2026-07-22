@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "梅州市",
+    "region": "梅县区",
+    "job": "区长",
+    "task_id": "guangdong_梅县区",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "guangdong_meizhou_meixian_wang_feng",
+    "name": "王锋",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "不详",
+    "birthplace": "不详",
+    "native_place": "不详",
+    "education": [
+      {
+        "period": "不详",
+        "institution": "不详",
+        "major": "不详",
+        "degree": "不详",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "不详",
+    "dedupe_keys": {
+      "name_birth": "王锋_不详",
+      "name_birthplace": "王锋_不详",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "梅县区区长",
+    "current_org": "梅县区人民政府",
+    "administrative_rank": "县处级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "~2021",
+      "end": "present",
+      "org": "梅县区人民政府",
+      "title": "梅县区区长",
+      "level": "县处级",
+      "location": "广东省梅州市梅县区",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "接替温助民任梅县区区长（温助民升任区委书记）。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料在当前网络受限环境下未找到王锋担任梅县区区长前的完整履历。可能此前在梅县区或梅州市担任副职或其他职务。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 2,
+      "name": "梅县区人民政府",
+      "type": "政府",
+      "level": "县处级",
+      "role": "区长"
+    },
+    {
+      "org_id": 1,
+      "name": "中共梅州市梅县区委员会",
+      "type": "党委",
+      "level": "县处级",
+      "role": "区委副书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "温助民",
+      "person_id": "guangdong_meizhou_meixian_wen_zhumin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "王锋接替温助民担任梅县区区长（温助民升任区委书记）",
+      "overlap_org": "梅县区人民政府",
+      "overlap_period": "~2021",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "温助民",
+      "person_id": "guangdong_meizhou_meixian_wen_zhumin",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与区委书记党政搭档",
+      "overlap_org": "中共梅州市梅县区委员会/梅县区人民政府",
+      "overlap_period": "~2021-至今（待确认）",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["地方行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["广东省梅州市"],
+    "promotion_velocity": {
+      "summary": "未知；需进一步研究王锋完整职业履历以评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "因网络访问受限，缺乏足够的公开报道来评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "在现有搜索范围内未发现关于王锋的纪律处分、审计问题或负面报道。但搜索范围受限（网络访问受限），此结论具有局限性。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "训练数据知识（cutoff pre-2025）",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "inferred",
+      "reliability": "low",
+      "notes": "因meizhou.gov.cn返回Cloudflare 521错误、meixian.gov.cn超时、百度百科403、Exa API限流、Wikipedia被阻断、Google/Bing/DuckDuckGo均无法访问，无法通过当前网络环境验证。信息基于训练数据（pre-2025 cutoff），需在恢复网络访问后核实。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "王锋的出生日期、出生地、教育背景、入党时间、工作起始时间及2021年任区长前的完整职业履历完全未知。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王锋任梅县区区长之前的完整职业时间线如何？此前任何职？",
+      "why_it_matters": "知晓此前任职有助于评估其经验领域、专业背景以及与其他领导可能存在的早期关联。",
+      "suggested_queries": ["王锋 梅县区 区长 简历", "王锋 梅州 任职", "王锋 百度百科"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "王锋的出生年份、出生地、教育背景、入党时间和工作起始时间？",
+      "why_it_matters": "这些身份字段对于去重和建立完整个人档案至关重要。",
+      "suggested_queries": ["王锋 梅县 出生 籍贯", "王锋 学历"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "王锋是否仍在梅县区区长任上（截至2026年7月）？",
+      "why_it_matters": "确认当前任职状态以确定数据时效性。",
+      "suggested_queries": ["梅县区区长 王锋", "site:meizhou.gov.cn 王锋", "梅县区 区长 现任"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "medium",
+      "question": "王锋的专业背景是什么？分管过哪些领域？",
+      "why_it_matters": "了解其专业方向有助于识别治理风格。",
+      "suggested_queries": ["王锋 梅县区 分工", "王锋 分管"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}

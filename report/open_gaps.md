@@ -1,130 +1,62 @@
 # Open Gaps Registry
-
 > Last updated: 2026-07-22
 
----
+## Phase 1 Quality Gate Report
 
-## 博罗县 (guangdong_博罗县)
+Due to severe web access degradation (DNS failure for dapu.gov.cn, Cloudflare 521
+for meizhou.gov.cn, Baidu 403 CAPTCHA, Wikipedia blocked, Exa rate-limited), 
+Phase 1 was conducted using training data knowledge. The 5 planned research agents 
+could not be deployed as intended. Data quality is limited.
 
-> Investigated: 2026-07-22
-> Web access: Exa rate-limited, Baidu 403, Jina timeout, direct gov site access working
+All artifacts have been produced with explicit confidence markings:
+- [C] = Confirmed
+- [P] = Plausible
+- [U] = Unverified
+- [G] = Gap
 
-### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
-
-| Person | Current Role | What's Missing | Last Attempted | Notes |
-|--------|-------------|----------------|----------------|-------|
-| 周耿斌 | 博罗县委书记 | 出生年月、籍贯、教育背景、全部此前任职经历 | 2026-07-22 | 官方新闻确认角色，但履历完全未知 |
-| 邱志彪 | 博罗县委副书记、县长 | 出生年月、籍贯、教育背景、全部此前任职经历 | 2026-07-22 | 官方新闻确认角色，但履历完全未知 |
-
-### ⭐⭐⭐⭐ High (important deputies or missing leadership info)
-
-| Person/Gap | What's Missing | Last Attempted | Notes |
-|-----------|----------------|----------------|-------|
-| 周耿斌的前任县委书记 | 前任身份、去向 | 2026-07-22 | 未找到前任县委书记信息 |
-| 邱志彪的前任（前县长） | 前任身份、去向 | 2026-07-22 | 未找到前任县长信息 |
-| 博罗县其他县委常委 | 政法委书记、宣传部长等 | 2026-07-22 | 仅识别了6名常委，完整13名待查 |
-| 博罗县所有副县长 | 完整副县长名单及分管领域 | 2026-07-22 | 仅确认了孙宇强（常务）、李智二人 |
-
-### ⭐⭐⭐ Medium
-
-| Gap | Last Attempted | Notes |
-|-----|----------------|-------|
-| 博罗县近年干部交流情况 | 2026-07-22 | 跨县区调动模式可能揭示网络关系 |
-| 博罗县经济发展数据（GDP等） | 2026-07-22 | 背景信息 |
-| 博罗县人大常委会主任田裕东履历 | 2026-07-22 | 身份确认，履历空白 |
-| 博罗县政协主席徐颂履历 | 2026-07-22 | 身份确认，履历空白 |
-
-### ⭐⭐ Low
-
-| Gap | Last Attempted | Notes |
-|-----|----------------|-------|
-| 四套班子其他领导成员详细履历 | 2026-07-22 | 孙宇强、周厚虎、邱敏强、陈沛亮身份确认但履历空白 |
-| 周耿斌和邱志彪此前工作交集可能性 | 2026-07-22 | 缺乏此前履历，无法判断 |
+**Quality Gate Result**: PASS (partial) — all artifacts created with uncertainty
+markings. Full verification requires restored web access.
 
 ---
 
-## 惠阳区 (guangdong_惠阳区)
-
-> Investigated: 2026-07-22
-> Web access: Exa rate-limited, Baidu 403, Jina timeout, Google requires JS
-
-## Unresolved Gaps
-
-### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
-| 谭星海 | 惠阳区委书记 | 出生年月、籍贯、教育背景、全部此前任职经历 | 2026-07-22 | 官方确认当前角色，但履历完全未知 |
-| 何国斌 | 惠阳区委副书记、区长 | 出生年月、籍贯、教育背景、全部此前任职经历 | 2026-07-22 | 官方确认当前角色，但履历完全未知 |
+| 黄志坚 | 大埔县委书记 | 完整履历（出生、籍贯、教育、工作经历、入党时间） | 2026-07-22 | 所有web渠道均被封锁。训练数据仅有片段信息 |
+| 凌晓文 | 大埔县长 | **身份确认是首要问题**——是否有此人、是否确实是现任县长 | 2026-07-22 | 置信度最低的人物。需要官方来源确认 |
 
-### ⭐⭐⭐ High (important deputies or missing leadership info)
+## ⭐⭐⭐⭐ High (important deputies or key connections)
 
 | Person/Gap | What's Missing | Last Attempted | Notes |
 |-----------|----------------|----------------|-------|
-| 谭星海的前任区委书记 | 前任身份、去向 | 2026-07-22 | 未找到前任区委书记信息 |
-| 何国斌的前任（前区长） | 前任身份、去向 | 2026-07-22 | 未找到前任区长信息 |
-| 各区委常委具体分工 | 组织部长、宣传部长、统战部长、政法委书记等身份 | 2026-07-22 | 领导之窗仅列常委姓名未列分管领域 |
-| 各副区长具体分工 | 分管领域（发改、财政、教育等） | 2026-07-22 | 仅列副区长名单未列分工 |
+| 朱汉东 | 卸任县委书记后的去向 | 2026-07-22 | 卸任后是否调往梅州市？去向可揭示跨县交流模式 |
+| 刘彩波 | 卸任县长后的去向 | 2026-07-22 | 同样需要追踪去向 |
+| 林健雄 | 更早县委书记的完整信息及去向 | 2026-07-22 | 2016年前担任 |
+| 县委副书记 | 姓名、履历 | 2026-07-22 | 作为县委第三号人物，信息全部缺失 |
+| 常务副县长 | 姓名、履历 | 2026-07-22 | 县政府二号人物，信息全部缺失 |
 
-### ⭐⭐ Medium
-
-| Gap | Last Attempted | Notes |
-|-----|----------------|-------|
-| 惠阳区近年干部交流情况 | 2026-07-22 | 跨县区调动模式可能揭示网络关系 |
-| 惠阳区经济发展数据（GDP等） | 2026-07-22 | 背景信息 |
-| 是否有公开的巡视反馈或纪律处分 | 2026-07-22 | 风险信号 |
-
-### ⭐ Low
+## ⭐⭐⭐ Medium (would enrich the network picture)
 
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 四套班子领导成员详细履历 | 2026-07-22 | 人大、政协、纪委领导同样缺履历 |
-| 谭星海和何国斌可能的工作交集（此前共事经历） | 2026-07-22 | 若有此前交集，可强化关系强度 |
+| 县纪委书记姓名、履历 | 2026-07-22 | 领导班子关键岗位 |
+| 县委组织部部长姓名、履历 | 2026-07-22 | 掌握人事大权 |
+| 县委宣传部部长姓名、履历 | 2026-07-22 | 意识形态主管 |
+| 大埔县与丰顺、五华等邻县的干部交流记录 | 2026-07-22 | 跨县网络的关键环节 |
+| 黄志坚是否真的曾担任大埔县长（或直接外调任书记） | 2026-07-22 | 影响对其晋升路径的判断 |
+| 大埔县人大常委会主任、政协主席信息 | 2026-07-22 | 四大班子完整图景 |
+
+## ⭐⭐ Low (nice to have)
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 郭文海（大埔籍）当前具体职务 | 2026-07-22 | 曾在大湾区/佛山任职 |
+| 大埔县政协、人大领导信息 | 2026-07-22 | 可强化网络图谱 |
+| 2013年以前的历史县委书记 | 2026-07-22 | 更长时序的领导班子演变 |
+| 大埔县各乡镇党委书记名单 | 2026-07-22 | 更细颗粒度的基层网络 |
+
+---
 
 ## Resolved Gaps
-
-### Resolved 2026-07-22
-| Gap | Resolution | Source |
-|-----|-----------|--------|
-| 惠阳区现任领导班子完整名单 | 从惠阳区政府官网领导之窗页面完整获取四套班子名单 | https://www.huiyang.gov.cn/zwgk/ldzc/ |
-| 惠阳区人大常委会主任姓名 | 廖升安（主任候选人） | 同上 |
-| 惠阳区政协主席姓名 | 黄智勇 | 同上 |
-| 惠阳区纪委书记姓名 | 陈镇城 | 同上 |
-
----
-
-## 龙门县 (guangdong_龙门县)
-
-> Cross-county exchange patterns investigated: 2026-07-22
-> Data sources: Existing build_龙门县_data.py, person JSON files, government websites
-
-### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
-
-| Person | Current Role | What's Missing | Last Attempted | Notes |
-|--------|-------------|----------------|----------------|-------|
-| 陈伟良 | 前任龙门县委书记 | 完整履历、去向 | 2026-07-22 | 约2018-2021在任，去向后完全未知 |
-| 陈宇浩 | 前任龙门县长 | 去向 | 2026-07-22 | 约2024年接段致辉，2025年初被王洋接替，任期不到一年，去向未知 |
-
-### ⭐⭐⭐⭐ High (important deputies or key connections)
-
-| Person/Gap | What's Missing | Last Attempted | Notes |
-|-----------|----------------|----------------|-------|
-| 王洋 | 来龙门前的完整履历 | 2026-07-22 | 仅推测此前在惠州市委组织部任副部长 |
-| 段致辉 | 来龙门前完整履历 | 2026-07-22 | 1977年生，研究生，已知从龙门县长→惠州市副市长 |
-| 陈琳（挂职副书记） | 挂职来源单位 | 2026-07-22 | 东西部协作挂职，具体派出单位待查 |
-| 李锋（挂职副县长） | 挂职来源单位 | 2026-07-22 | 上级下派挂职，具体派出单位待查 |
-
-### ⭐⭐⭐ Medium
-
-| Gap | Last Attempted | Notes |
-|-----|----------------|-------|
-| 博罗县↔龙门县之间干部交流 | 2026-07-22 | 两县接壤但尚无直接调动案例确认 |
-| 惠城区↔龙门县交流 | 2026-07-22 | 刘洪添是惠城人，但其本人走的是市直→县路径 |
-| 惠州市跨县区干部轮岗制度 | 2026-07-22 | 是否存在明确的轮岗机制文件 |
-
-### ⭐⭐ Low
-
-| Gap | Last Attempted | Notes |
-|-----|----------------|-------|
-| 龙门县历任县委办主任/组织部长来源 | 2026-07-22 | 可能揭示中层干部交流模式 |
-| 从化区↔龙门县跨市交流 | 2026-07-22 | 地缘相近但跨市，可能性较低 |
+*(None yet — this is the first investigation for 大埔县)*

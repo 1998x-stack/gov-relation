@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "梅州市",
+    "region": "大埔县",
+    "job": "大埔县委书记",
+    "task_id": "guangdong_大埔县",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "dapu_huang_zhijian",
+    "name": "黄志坚",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查（似为广东梅州籍）",
+    "native_place": "待查",
+    "education": "待查",
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name": "黄志坚",
+      "name_birthplace": "黄志坚_广东"
+    }
+  },
+  "current_status": {
+    "current_post": "中共大埔县委书记",
+    "current_org": "中共大埔县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07（待确认）",
+    "is_current_confirmed": false,
+    "confidence": "plausible"
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "待查",
+      "org": "中共梅州市委",
+      "title": "梅州市委副秘书长",
+      "level": "正处级/副处级",
+      "location": "广东省梅州市",
+      "system": "党委",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "[U] 推测曾任此职",
+      "confidence": "unverified",
+      "source": "Training data knowledge"
+    },
+    {
+      "start": "~2016",
+      "end": "~2021",
+      "org": "大埔县人民政府",
+      "title": "大埔县人民政府县长",
+      "level": "正处级",
+      "location": "广东省梅州市大埔县",
+      "system": "政府",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "[U] 推测在大埔县担任县长，后升任县委书记",
+      "confidence": "unverified",
+      "source": "Training data knowledge"
+    },
+    {
+      "start": "~2021-2022",
+      "end": "现在",
+      "org": "中共大埔县委员会",
+      "title": "中共大埔县委书记",
+      "level": "正处级",
+      "location": "广东省梅州市大埔县",
+      "system": "党委",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "[P] 现任大埔县委书记，接替朱汉东",
+      "confidence": "plausible",
+      "source": "Training data knowledge"
+    }
+  ],
+  "known_connections": [
+    {
+      "person": "朱汉东",
+      "relation": "predecessor_successor",
+      "context": "朱汉东卸任大埔县委书记，黄志坚接任",
+      "confidence": "plausible"
+    },
+    {
+      "person": "凌晓文",
+      "relation": "superior_subordinate",
+      "context": "黄志坚（县委书记）与凌晓文（县长）党政搭档（推测）",
+      "confidence": "unverified"
+    }
+  ],
+  "open_questions": [
+    "完整出生年月和籍贯待查",
+    "教育背景（学历、毕业院校）待查",
+    "入党时间和参加工作时间的完整履历待查",
+    "从梅州市委副秘书长到大埔县长的具体任职时间节点待确认",
+    "是否真的曾担任大埔县长（或直接从梅州市调任县委书记）待确认",
+    "完整职业生涯早期经历（可能此前在梅州市其他岗位）待查"
+  ],
+  "sources": [
+    {
+      "id": "S001",
+      "url": "Training data knowledge (pre-2025)",
+      "type": "training_data",
+      "retrieval_date": "2026-07-22",
+      "notes": "All web access channels blocked. Data requires verification."
+    }
+  ],
+  "source_register": [],
+  "organizations": [],
+  "relationships": [],
+  "governance_record": [],
+  "professional_profile": {},
+  "work_style_and_personality": {},
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "confidence_summary": {
+    "overall": "low_web_degraded",
+    "identity": "unverified",
+    "career_timeline": "unverified",
+    "connections": "unverified"
+  }
+}
