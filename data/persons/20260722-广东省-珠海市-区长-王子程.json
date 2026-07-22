@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "珠海市",
+    "region": "斗门区",
+    "job": "区长",
+    "task_id": "guangdong_斗门区",
+    "time_focus": "截至2026-07-22"
+  },
+  "identity": {
+    "person_id": "doumen_wang_zicheng",
+    "name": "王子程",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员（根据现任区长身份推断）",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "王子程_待查",
+      "name_birthplace": "王子程_待查",
+      "official_profile_url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/qw/content/post_2859956.html"
+    }
+  },
+  "current_status": {
+    "current_post": "区委副书记，区政府党组书记、区长，兼任斗门生态农业园党委副书记、管委会主任",
+    "current_org": "斗门区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "中共珠海市斗门区委员会",
+      "title": "区委副书记",
+      "level": "县处级副职",
+      "location": "广东省珠海市斗门区",
+      "system": "party",
+      "rank": "副职",
+      "is_key_promotion": true,
+      "notes": "区委副书记，区委常委会成员",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "最晚2021-05",
+      "end": "present",
+      "org": "斗门区人民政府",
+      "title": "区政府党组书记、区长",
+      "level": "县处级正职",
+      "location": "广东省珠海市斗门区",
+      "system": "government",
+      "rank": "正职",
+      "is_key_promotion": true,
+      "notes": "官方页面首次发布时间2021-05-11，说明最晚此时已任区长。主持区政府全面工作，负责审计工作。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "最晚2021-05",
+      "end": "present",
+      "org": "斗门生态农业园",
+      "title": "兼任斗门生态农业园党委副书记、管委会主任",
+      "level": "县处级正职",
+      "location": "广东省珠海市斗门区",
+      "system": "development_zone",
+      "rank": "正职",
+      "is_key_promotion": false,
+      "notes": "兼任园区职务",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "王子程任斗门区长前的全部履历——出生年份、籍贯、教育背景、此前职务——均待查。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 1,
+      "name": "中共珠海市斗门区委员会",
+      "role": "区委副书记",
+      "period": "至少自2021-05至今"
+    },
+    {
+      "org_id": 7,
+      "name": "斗门区人民政府",
+      "role": "区长",
+      "period": "至少自2021-05至今"
+    },
+    {
+      "org_id": 10,
+      "name": "斗门生态农业园",
+      "role": "管委会主任（兼任）",
+      "period": "至少自2021-05至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "刘宏",
+      "person_id": "doumen_liu_hong",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与区委书记的党政一把手搭档关系",
+      "overlap_org": "中共珠海市斗门区委员会",
+      "overlap_period": "至少自2025-06",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "杨富邦",
+      "person_id": "doumen_yang_fubang",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与常务副区长的日常行政搭档关系",
+      "overlap_org": "斗门区人民政府",
+      "overlap_period": "至少自2022-07",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    },
+    {
+      "person": "谭胜",
+      "person_id": "doumen_tan_sheng",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "区长与区委副书记同属区委常委会",
+      "overlap_org": "中共珠海市斗门区委员会",
+      "overlap_period": "至少自2025-07",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S004"]
+    },
+    {
+      "person": "陈彬",
+      "person_id": "doumen_chen_bin",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与副区长（公安局长）的直接上下级关系",
+      "overlap_org": "斗门区人民政府",
+      "overlap_period": "至少自2021-05",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "郭丽云",
+      "person_id": "doumen_guo_liyun",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与副区长的上下级关系",
+      "overlap_org": "斗门区人民政府",
+      "overlap_period": "至少自2026-01",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "韦昕宇",
+      "person_id": "doumen_wei_xinyu",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区长与副区长，区生态农业园共同任职",
+      "overlap_org": "斗门区人民政府 / 斗门生态农业园",
+      "overlap_period": "至少自2025-01",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "王子超",
+      "person_id": "doumen_wang_zichao",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "区长与区委办主任（同姓王子，但无证据证明家族关系）",
+      "overlap_org": "中共珠海市斗门区委员会",
+      "overlap_period": "至少自2021-08",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-05至今",
+      "domain": "economic_development",
+      "achievement_or_event": "主持区政府全面工作，负责审计工作",
+      "role_in_event": "区长、党组书记",
+      "measurable_outcome": "官方分工描述",
+      "location": "广东省珠海市斗门区",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "economic_development",
+      "achievement_or_event": "以区长身份参与多项区政府日常决策和管理",
+      "role_in_event": "区长",
+      "measurable_outcome": "区政府网站报道",
+      "location": "广东省珠海市斗门区",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["待查"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government", "development_zone"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "公开资料不足，无法评估晋升速度。已知至少自2021-05起任斗门区长（4年以上）。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "缺乏充足的公开报道来判断其工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-22，未发现王子程相关的纪律处分、审计问题或负面媒体报道。搜索范围：斗门区政府网站、官方领导页面。",
+      "date": "2026-07-22",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "区委领导信息 - 王子程",
+      "url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/qw/content/post_2859956.html",
+      "publisher": "珠海市斗门区人民政府",
+      "published_at": "2021-05-11（首次），2025-07-30（更新）",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方领导之窗页面，个人简介仅'男，汉族'三字。首次发布时间2021-05-11说明最晚此时已任区长。"
+    },
+    {
+      "id": "S002",
+      "title": "区政府领导信息 - 王子程",
+      "url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/zf/content/post_2859955.html",
+      "publisher": "珠海市斗门区人民政府",
+      "published_at": "2021-05-11（首次），2025-07-30（更新）",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区政府领导之窗页面"
+    },
+    {
+      "id": "S003",
+      "title": "区政府领导信息 - 杨富邦",
+      "url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/zf/content/post_3776604.html",
+      "publisher": "珠海市斗门区人民政府",
+      "published_at": "2022-07-18（首次）",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "常务副区长杨富邦的官方页面"
+    },
+    {
+      "id": "S004",
+      "title": "区委领导信息 - 谭胜",
+      "url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/qw/content/post_3814804.html",
+      "publisher": "珠海市斗门区人民政府",
+      "published_at": "2025-07-11",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区委副书记谭胜的官方页面"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "王子程的出生年份、籍贯、教育背景以及任斗门区长前的全部履历均待查。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王子程的出生年份、籍贯和教育背景是什么？",
+      "why_it_matters": "核心身份信息缺失，影响跨库去重和职业生涯评估。",
+      "suggested_queries": ["王子程 简历 珠海", "王子程 出生", "王子程 斗门"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "王子程任斗门区长前担任什么职务？来自哪个地区/部门？",
+      "why_it_matters": "无法判断其晋升路径和是否有跨区交流经历。",
+      "suggested_queries": ["王子程 此前 担任 珠海", "王子程 任前公示 斗门"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "王子程是否曾任职于珠海市其他区或市直部门？",
+      "why_it_matters": "直接影响其关系网络中跨部门连接的识别。",
+      "suggested_queries": ["王子程 香洲 任职", "王子程 珠海市 工作"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}

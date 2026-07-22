@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "珠海市",
+    "region": "斗门区",
+    "job": "区委副书记",
+    "task_id": "guangdong_斗门区",
+    "time_focus": "截至2026-07-22"
+  },
+  "identity": {
+    "person_id": "doumen_tan_sheng",
+    "name": "谭胜",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [{"period": "待查", "institution": "待查", "major": "待查", "degree": "待查", "study_type": "unknown", "source_ids": []}],
+    "party_join": "中共党员（根据现任职务推断）",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "谭胜_待查",
+      "name_birthplace": "谭胜_待查",
+      "official_profile_url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/qw/content/post_3814804.html"
+    }
+  },
+  "current_status": {
+    "current_post": "区委副书记，兼任区委政法委书记，一级调研员",
+    "current_org": "中共珠海市斗门区委员会",
+    "administrative_rank": "县处级副职（一级调研员为职级）",
+    "as_of": "2026-03-30",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "最晚2025-07",
+      "end": "present",
+      "org": "中共珠海市斗门区委员会",
+      "title": "区委副书记，兼任区委政法委书记",
+      "level": "县处级副职",
+      "location": "广东省珠海市斗门区",
+      "system": "party",
+      "rank": "副职",
+      "is_key_promotion": true,
+      "notes": "协助刘宏同志抓党的建设。官方页面首次创建于2025-07-11，最后更新于2026-03-30",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "谭胜任斗门区委副书记前的全部履历均待查",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_id": 1, "name": "中共珠海市斗门区委员会", "role": "区委副书记", "period": "至少自2025-07至今"},
+    {"org_id": 6, "name": "中共珠海市斗门区委政法委员会", "role": "政法委书记（兼任）", "period": "至少自2025-07至今"}
+  ],
+  "relationships": [
+    {"person": "刘宏", "person_id": "doumen_liu_hong", "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "协助区委书记抓党的建设", "overlap_org": "中共珠海市斗门区委员会", "overlap_period": "至少自2025-07", "direction": "other_to_person", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"person": "王子程", "person_id": "doumen_wang_zicheng", "relationship_type": "overlap", "strength": "strong", "evidence": "同属区委常委会", "overlap_org": "中共珠海市斗门区委员会", "overlap_period": "至少自2025-07", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"person": "陈彬", "person_id": "doumen_chen_bin", "relationship_type": "overlap", "strength": "medium", "evidence": "政法委书记与公安局长的政法系统协作", "overlap_org": "斗门区政法系统", "overlap_period": "至少自2025-07", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]}
+  ],
+  "governance_record": [],
+  "professional_profile": {"primary_specializations": ["政法"], "secondary_specializations": [], "career_pattern": "unknown", "systems_experience": ["party"], "geographic_pattern": [], "promotion_velocity": {"summary": "公开资料不足", "notable_fast_promotions": []}},
+  "work_style_and_personality": {"public_style_indicators": [{"trait": "unknown", "evidence": "无足够公开资料", "confidence": "unverified", "source_ids": []}], "speech_themes": [], "management_signals": [], "caveat": "Work style is inferred from public records, not private psychological assessment."},
+  "network_metrics": {},
+  "risk_and_integrity_signals": [{"type": "none_found", "description": "截至2026-07-22未发现负面信号", "date": "2026-07-22", "confidence": "unverified", "source_ids": []}],
+  "source_register": [{"id": "S001", "title": "区委领导信息 - 谭胜", "url": "https://www.doumen.gov.cn/zhsdmqrmzfmhwz/zwgk/ldzc/qldcy/qw/content/post_3814804.html", "publisher": "珠海市斗门区人民政府", "published_at": "2025-07-11", "accessed_at": "2026-07-22", "source_type": "official", "reliability": "high", "notes": "官方领导之窗页面"}],
+  "confidence_summary": {"identity": "thin", "current_role": "confirmed", "career_completeness": "thin", "relationship_confidence": "low", "biggest_gap": "谭胜的全部履历待查"},
+  "open_questions": [{"priority": "critical", "question": "谭胜的出生年份、籍贯、教育背景和任斗门区委副书记前的全部履历", "why_it_matters": "核心身份和职业轨迹信息缺失", "suggested_queries": ["谭胜 简历 珠海", "谭胜 斗门 任职"], "last_attempted": "2026-07-22"}]
+}
