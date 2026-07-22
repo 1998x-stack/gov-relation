@@ -4,13 +4,13 @@
   "investigation_scope": {
     "province": "广西壮族自治区",
     "city": "南宁市",
-    "region": "隆安县",
+    "region": "马山县",
     "job": "县委书记",
-    "task_id": "guangxi_隆安县",
-    "time_focus": "2024-2026"
+    "task_id": "guangxi_马山县",
+    "time_focus": "2025-2026 current"
   },
   "identity": {
-    "person_id": "longan_party_secretary_unconfirmed",
+    "person_id": "mashan_party_sec",
     "name": "",
     "aliases": [],
     "gender": "",
@@ -28,8 +28,8 @@
     }
   },
   "current_status": {
-    "current_post": "隆安县委书记",
-    "current_org": "中国共产党隆安县委员会",
+    "current_post": "县委书记",
+    "current_org": "中国共产党马山县委员会",
     "administrative_rank": "正处级",
     "as_of": "2026-07-22",
     "is_current_confirmed": false,
@@ -39,19 +39,27 @@
     {
       "start": "unknown",
       "end": "present",
-      "org": "中国共产党隆安县委员会",
+      "org": "中国共产党马山县委员会",
       "title": "县委书记",
-      "level": "正处级",
-      "location": "南宁市隆安县",
+      "level": "县级",
+      "location": "南宁市马山县",
       "system": "party",
-      "rank": "",
-      "is_key_promotion": true,
-      "notes": "现任隆安县委书记，任期起始日期待确认",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "完整姓名待确认；任职起始时间待查",
       "confidence": "unverified",
       "source_ids": []
     }
   ],
-  "organizations": [],
+  "organizations": [
+    {
+      "org_name": "中国共产党马山县委员会",
+      "org_type": "党委",
+      "level": "县级",
+      "role": "县委书记",
+      "period": "unknown–present"
+    }
+  ],
   "relationships": [],
   "governance_record": [],
   "professional_profile": {
@@ -61,7 +69,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "履历待查",
+      "summary": "无法评估 — 缺少姓名和履历信息",
       "notable_fast_promotions": []
     }
   },
@@ -69,17 +77,13 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    "caveat": "缺少姓名等基本信息，无法推断工作风格"
   },
-  "network_metrics": {
-    "confirmed_connections": 0,
-    "total_connections": 0,
-    "centrality": "highest (theoretical — county party secretary is top leader)"
-  },
+  "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "未搜索到负面信息或纪律处分记录（搜索范围：公开网络）",
+      "description": "因无法访问马山县政府网站和中文搜索引擎，未发现任何风险信号",
       "date": "2026-07-22",
       "confidence": "unverified",
       "source_ids": []
@@ -91,37 +95,51 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "姓名、出生年月、教育背景、完整履历全部缺失 — 因网络搜索受限（Exa rate limit、Baidu 403、政府网站无法解析）"
+    "biggest_gap": "县委书记姓名完全未知 — 需要从官方渠道确认"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "隆安县县委书记姓名是谁？",
-      "why_it_matters": "核心调查目标，所有后续分析依赖于身份确认",
+      "question": "马山县县委书记姓名是谁？",
+      "why_it_matters": "核心人物不明确则无法开展任何关系网络研究",
       "suggested_queries": [
-        "隆安县 县委书记",
-        "隆安县 领导之窗",
-        "南宁市 隆安县 县委书记 任免"
+        "马山县 县委书记",
+        "马山县 领导之窗",
+        "site:mashan.gov.cn 县委书记",
+        "马山县 县委 书记 简历",
+        "南宁 马山县 县委书记 任免"
       ],
       "last_attempted": "2026-07-22"
     },
     {
-      "priority": "critical",
-      "question": "隆安县委书记出生年份、籍贯、教育背景是什么？",
-      "why_it_matters": "用于去重识别和干部画像",
+      "priority": "high",
+      "question": "县委书记出生年份、籍贯、教育背景是什么？",
+      "why_it_matters": "人员去重和职业背景分析所需核心信息",
       "suggested_queries": [
-        "隆安县委书记 简历",
-        "隆安县委书记 百度百科"
+        "马山县 县委书记 简历",
+        "马山县 县委书记 出生",
+        "马山县 县委书记 baike"
       ],
       "last_attempted": "2026-07-22"
     },
     {
-      "priority": "critical",
-      "question": "隆安县委书记此前任何职？晋升路径是什么？",
-      "why_it_matters": "理解其权力基础和可能的横向网络",
+      "priority": "high",
+      "question": "县委书记此前任何职？晋升路径是什么？",
+      "why_it_matters": "干部流动模式分析所需",
       "suggested_queries": [
-        "隆安县委书记 此前担任",
-        "隆安县委书记 任职经历"
+        "马山县 县委书记 任职",
+        "马山县 前任县委书记",
+        "马山县委 书记 任命"
+      ],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "medium",
+      "question": "前一任县委书记是谁？目前任何职？",
+      "why_it_matters": "判断干部交流方向和晋升路径",
+      "suggested_queries": [
+        "马山县 前任县委书记",
+        "马山县 原县委书记 去向"
       ],
       "last_attempted": "2026-07-22"
     }
