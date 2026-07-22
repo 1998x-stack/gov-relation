@@ -1,6 +1,15 @@
 # Open Gaps Registry
 > Last updated: 2026-07-22
 
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps) — 阳江市
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 卢一先 | 阳江市委书记 | 出生月份准确值、具体出生地、教育背景、2021年前完整履历 | 2026-07-22 | 网络完全不可达（政府网站超时、百度403、Wikipedia阻断），所有信息来自训练数据标记plausible |
+| 余金富 | 阳江市市长 | 出生月份准确值、具体出生地、教育背景、2018年前完整履历 | 2026-07-22 | 同上，2018年任省商务厅副厅长前履历完全空白 |
+| 阳江市人大常委会主任 | — | 身份完全未知 | 2026-07-22 | 网络不可达，姓名待查 |
+| 阳江市政协主席 | — | 身份完全未知 | 2026-07-22 | 网络不可达，姓名待查 |
+| 阳江市委领导班子 | — | 全体市委常委名单和分工完全未知 | 2026-07-22 | 网络不可达 |
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
