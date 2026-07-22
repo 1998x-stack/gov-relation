@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>酒泉市领导班子工作关系网络 - 数据来源: 酒泉市人民政府官网及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="王立奇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="贾志升">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委副书记、市政府党组书记、市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="赵峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、市政府党组副书记、常务副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp04" label="崔福祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市人大常委会主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp05" label="王海明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市政协党组书记、主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp06" label="义战鹰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、宣传部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp07" label="徐志强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、政法委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp08" label="何正军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市人大常委会副主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp09" label="李生潜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、市政府党组成员、肃州区委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp10" label="石峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、市政府党组成员、副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp11" label="庞柒">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、副市长(挂职)"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp12" label="张跃峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市人民政府副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp13" label="陶涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市人民政府副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp14" label="王立扬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市人民政府副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp15" label="张力">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市监察委员会主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp16" label="唐培宏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="平凉市委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp17" label="吴仰东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="另有任用(原酒泉市委书记)"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp18" label="张安疆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原酒泉市市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp19" label="石琳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="酒泉市委常委、敦煌市委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="oo01" label="中共酒泉市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="酒泉市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="酒泉市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="中国人民政治协商会议酒泉市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="中共酒泉市委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="中共酒泉市委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="中共肃州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo08" label="中共敦煌市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo09" label="酒泉市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo10" label="中共平凉市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo11" label="甘肃省交通运输厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo12" label="庆阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo13" label="白银市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo14" label="中共白银市委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo15" label="张掖市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo16" label="中共张掖市委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo17" label="甘肃省委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo18" label="中共酒泉市委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo19" label="酒泉军分区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="酒泉市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="酒泉市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp01" target="oo02" label="酒泉市人民政府市长(前任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市人民政府市长(前任)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp01" target="oo01" label="酒泉市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp02" target="oo01" label="酒泉市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp02" target="oo02" label="酒泉市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市人民政府市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp02" target="oo14" label="白银市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="白银市委常委、政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp02" target="oo13" label="白银市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="白银市人民政府副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp02" target="oo12" label="庆阳市农业农村局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="庆阳市农业农村局局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp02" target="oo12" label="正宁县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="正宁县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp03" target="oo02" label="酒泉市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委常委、常务副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp04" target="oo03" label="酒泉市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp04" target="oo01" label="酒泉市委常委、市纪委书记、市监委主任(前任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委常委、市纪委书记、市监委主任(前任)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp05" target="oo04" label="酒泉市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp06" target="oo05" label="酒泉市委宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委宣传部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp07" target="oo06" label="酒泉市委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp08" target="oo03" label="酒泉市人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市人大常委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp08" target="oo01" label="酒泉市委常委、肃州区委书记(前任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委常委、肃州区委书记(前任)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pp09" target="oo07" label="肃州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="肃州区委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pp10" target="oo02" label="酒泉市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pp11" target="oo02" label="酒泉市副市长(挂职)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市副市长(挂职)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pp12" target="oo02" label="酒泉市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pp13" target="oo02" label="酒泉市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pp14" target="oo02" label="酒泉市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pp15" target="oo09" label="酒泉市监察委员会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市监察委员会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pp16" target="oo10" label="平凉市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="平凉市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pp16" target="oo02" label="酒泉市人民政府市长(前任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市人民政府市长(前任)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pp16" target="oo01" label="酒泉市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pp16" target="oo16" label="张掖市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张掖市委常委、组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pp16" target="oo17" label="甘肃省委组织部办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="甘肃省委组织部办公室主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pp17" target="oo01" label="酒泉市委书记(前任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市委书记(前任)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pp18" target="oo02" label="酒泉市人民政府市长(前任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="酒泉市人民政府市长(前任)"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="pp19" target="oo08" label="敦煌市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="敦煌市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="pp01" target="pp02" label="王立奇(书记)与贾志升(市长): 党政一把手配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王立奇(书记)与贾志升(市长): 党政一把手配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="pp01" target="pp03" label="王立奇(书记)与赵峰(常务副市长): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王立奇(书记)与赵峰(常务副市长): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="pp02" target="pp03" label="贾志升(市长)与赵峰(常务副市长): 正副手关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="贾志升(市长)与赵峰(常务副市长): 正副手关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="pp01" target="pp06" label="王立奇(书记)与义战鹰(宣传部长): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王立奇(书记)与义战鹰(宣传部长): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="pp01" target="pp07" label="王立奇(书记)与徐志强(政法委书记): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王立奇(书记)与徐志强(政法委书记): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="pp01" target="pp19" label="王立奇(书记)与石琳(敦煌市委书记): 上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王立奇(书记)与石琳(敦煌市委书记): 上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="pp01" target="pp17" label="王立奇接替吴仰东任酒泉市委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="王立奇接替吴仰东任酒泉市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="pp02" target="pp16" label="贾志升接替唐培宏任酒泉市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="贾志升接替唐培宏任酒泉市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="pp16" target="pp18" label="唐培宏接替张安疆任酒泉市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="唐培宏接替张安疆任酒泉市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="pp01" target="pp18" label="王立奇接替张安疆任酒泉市市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="王立奇接替张安疆任酒泉市市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="pp17" target="pp18" label="吴仰东(书记)与张安疆(市长): 原党政一把手配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="吴仰东(书记)与张安疆(市长): 原党政一把手配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="pp16" target="pp02" label="唐培宏(平凉书记)与贾志升(酒泉市长): 白银-酒泉-平凉干部流动线" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="唐培宏(平凉书记)与贾志升(酒泉市长): 白银-酒泉-平凉干部流动线"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="pp16" target="pp17" label="唐培宏任平凉市委书记, 吴仰东曾任酒泉市委书记: 酒泉-平凉干部轮换" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="唐培宏任平凉市委书记, 吴仰东曾任酒泉市委书记: 酒泉-平凉干部轮换"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="pp02" target="pp16" label="贾志升从白银到酒泉任市长, 唐培宏从酒泉到平凉任书记: 交叉调动" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="same_system"/>
+          <attvalue for="1" value="贾志升从白银到酒泉任市长, 唐培宏从酒泉到平凉任书记: 交叉调动"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="pp04" target="pp08" label="崔福祥(人大主任)与何正军(人大副主任): 人大班子配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="崔福祥(人大主任)与何正军(人大副主任): 人大班子配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="pp01" target="pp04" label="王立奇(书记)与崔福祥(原纪委书记、现人大主任): 长期配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王立奇(书记)与崔福祥(原纪委书记、现人大主任): 长期配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="pp15" target="pp02" label="张力(监委主任)与贾志升(市长): 新任监察-政府配合作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="张力(监委主任)与贾志升(市长): 新任监察-政府配合作"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="pp13" target="pp12" label="陶涛(副市长)与张跃峰(副市长): 同期新任副市长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="陶涛(副市长)与张跃峰(副市长): 同期新任副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
