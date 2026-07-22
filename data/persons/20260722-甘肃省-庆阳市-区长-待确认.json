@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "庆阳市",
+    "region": "西峰区",
+    "job": "区长",
+    "task_id": "gansu_西峰区",
+    "time_focus": "2026年现任"
+  },
+  "identity": {
+    "person_id": "xifeng_mayor_unknown",
+    "name": "（姓名待确认）",
+    "aliases": [],
+    "gender": "待查",
+    "ethnicity": "待查",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": "http://www.gsxf.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "西峰区委副书记、区长",
+    "current_org": "西峰区人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "西峰区人民政府",
+      "title": "西峰区委副书记、区长",
+      "level": "正处级",
+      "location": "甘肃省庆阳市西峰区",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "当前西峰区长姓名及完整履历均待确认",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "og_01",
+      "name": "西峰区人民政府",
+      "type": "政府",
+      "level": "县级",
+      "role": "区长"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "西峰区委书记（姓名待查）",
+      "person_id": "xifeng_secretary_unknown",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "党政主要领导协作关系",
+      "overlap_org": "西峰区",
+      "overlap_period": "2026年",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "胡志勇",
+      "person_id": "qingyang_hu_zhiyong",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "庆阳市政府对西峰区政府的领导关系",
+      "overlap_org": "庆阳市",
+      "overlap_period": "2026年",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历待查",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "姓名和公开信息均待确认",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "因姓名未知，无法进行风险排查",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "庆阳市西峰区人民政府官方网站",
+      "url": "http://www.gsxf.gov.cn/",
+      "publisher": "西峰区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "当前无法访问。需确认区长姓名"
+    },
+    {
+      "id": "S002",
+      "title": "维基百科 — 西峰区",
+      "url": "https://zh.wikipedia.org/wiki/西峰区",
+      "publisher": "维基百科",
+      "published_at": "2023-01",
+      "accessed_at": "2026-07-22",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "仅提供行政区划信息（下辖3街道5镇2乡），未列领导信息"
+    },
+    {
+      "id": "S003",
+      "title": "庆阳市领导班子数据（已有数据库）",
+      "url": "",
+      "publisher": "本项目",
+      "published_at": "2026-07-22",
+      "accessed_at": "2026-07-22",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "庆阳市长胡志勇确认信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "核心人物姓名完全未知，所有履历信息均缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "2026年现任西峰区区长姓名",
+      "why_it_matters": "这是本次调研的核心目标，缺少姓名则无法构建完整人物画像",
+      "suggested_queries": ["西峰区 区长 现任 2025", "西峰区 区长 任前公示", "庆阳市西峰区 领导分工"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "西峰区区长的完整个人简历（出生、籍贯、教育、工作经历）",
+      "why_it_matters": "区长是核心人物",
+      "suggested_queries": ["西峰区 区长 简历", "西峰区 区长 任职经历"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "西峰区区长何时调任现职",
+      "why_it_matters": "需要确认到任时间和前任信息",
+      "suggested_queries": ["西峰区 区长 任免 2024 2025"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
