@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梧州市万秀区 — 区长欧广明调查报告</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0f0f12;
+  --surface: #1a1a22;
+  --surface2: #23232e;
+  --border: #2a2a3a;
+  --text: #e8e6e3;
+  --text-muted: #8b8a91;
+  --accent: #e03c31;
+  --accent-dim: rgba(224,60,49,0.12);
+  --gold: #c9a94e;
+  --gold-dim: rgba(201,169,78,0.15);
+  --blue: #4a7cf7;
+  --green: #3ab795;
+  --radius: 4px;
+}
+html { font-size: 15px; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; line-height: 1.7; min-height: 100vh; }
+h1, h2, h3, h4 { font-family: 'Noto Serif SC', serif; font-weight: 700; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+.header { padding: 48px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+.header-badge { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; padding: 4px 12px; border-radius: var(--radius); text-transform: uppercase; margin-bottom: 16px; }
+.header h1 { font-size: 2.2rem; font-weight: 900; letter-spacing: 0.02em; line-height: 1.25; margin-bottom: 8px; }
+.header .subtitle { color: var(--text-muted); font-size: 0.95rem; }
+.header .date { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
+
+/* STATS ROW */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+.stat-num { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Noto Serif SC', serif; }
+.stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.04em; }
+
+/* SECTIONS */
+.section { margin-bottom: 40px; }
+.section-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: flex; align-items: center; gap: 10px; }
+.section-title .seal { width: 6px; height: 20px; background: var(--accent); display: inline-block; border-radius: 1px; }
+
+/* PERSON CARD */
+.person-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 20px; }
+.person-card.featured { border-color: var(--gold); }
+.person-card-header { display: flex; gap: 24px; align-items: flex-start; }
+.person-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--surface2); border: 2px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--accent); font-family: 'Noto Serif SC', serif; font-weight: 700; }
+.person-info { flex: 1; }
+.person-name { font-size: 1.4rem; font-weight: 700; font-family: 'Noto Serif SC', serif; }
+.person-name .badge { display: inline-block; font-size: 11px; padding: 2px 10px; border-radius: 10px; font-weight: 600; vertical-align: middle; margin-left: 10px; font-family: 'Inter', sans-serif; }
+.badge-confirmed { background: var(--green); color: #fff; }
+.badge-gap { background: var(--gold-dim); color: var(--gold); }
+.badge-completed { background: var(--accent-dim); color: var(--accent); }
+.person-title { color: var(--gold); font-size: 0.9rem; margin-top: 4px; }
+.person-meta { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 12px; }
+.person-meta-item { font-size: 0.85rem; }
+.person-meta-item strong { color: var(--text-muted); font-weight: 500; }
+.person-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+.person-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 1px; background: var(--border); }
+.timeline-item { position: relative; padding-bottom: 20px; }
+.timeline-item::before { content: ''; position: absolute; left: -20px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+.timeline-item.gap::before { background: var(--gold); }
+.timeline-item .date { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+.timeline-item .event { font-size: 0.9rem; margin-top: 2px; }
+.timeline-item .source { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.data-table th { text-align: left; padding: 10px 12px; background: var(--surface2); color: var(--text-muted); font-weight: 500; font-size: 0.8rem; border-bottom: 1px solid var(--border); }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* GAPS */
+.gap-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 12px; display: flex; gap: 16px; align-items: flex-start; }
+.gap-priority { flex-shrink: 0; font-size: 0.75rem; font-weight: 700; color: var(--accent); background: var(--accent-dim); padding: 2px 10px; border-radius: var(--radius); }
+.gap-content { flex: 1; }
+.gap-title { font-weight: 600; }
+.gap-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+/* SOURCES */
+.source-list { list-style: none; }
+.source-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; display: flex; gap: 12px; align-items: center; }
+.source-type { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: var(--radius); background: var(--surface2); color: var(--text-muted); flex-shrink: 0; }
+.source-type.primary { background: var(--accent-dim); color: var(--accent); }
+.source-url { color: var(--blue); word-break: break-all; }
+.source-url:hover { text-decoration: underline; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .person-card-header { flex-direction: column; align-items: center; text-align: center; }
+  .person-meta { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.6rem; }
+}
+
+/* PRINT */
+@media print {
+  body { background: #fff; color: #000; }
+  .stat-card, .person-card, .gap-item { background: #f5f5f5; border-color: #ddd; }
+  .header { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-badge">人事调查 · 2026-07-23</div>
+  <h1>梧州市万秀区<br>区长欧广明 调查报告</h1>
+  <div class="subtitle">Wanxiu District, Wuzhou City, Guangxi Zhuang Autonomous Region</div>
+  <div class="date">调查日期: 2026-07-23 · 来源: 万秀区人民政府官网</div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-card"><div class="stat-num">9</div><div class="stat-label">人物</div></div>
+  <div class="stat-card"><div class="stat-num">8</div><div class="stat-label">机构</div></div>
+  <div class="stat-card"><div class="stat-num">12</div><div class="stat-label">任职信息</div></div>
+  <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">关系</div></div>
+</div>
+
+<!-- SECTION 1: CURRENT MAYOR -->
+<div class="section">
+  <h2 class="section-title"><span class="seal"></span> 现任区长：欧广明</h2>
+
+  <div class="person-card featured">
+    <div class="person-card-header">
+      <div class="person-avatar">欧</div>
+      <div class="person-info">
+        <div class="person-name">欧广明 <span class="badge badge-confirmed">CONFIRMED</span></div>
+        <div class="person-title">广西梧州市万秀区委副书记、区政府党组书记、区长</div>
+        <div class="person-meta">
+          <div class="person-meta-item"><strong>性别</strong> 男</div>
+          <div class="person-meta-item"><strong>民族</strong> 壮族</div>
+          <div class="person-meta-item"><strong>出生</strong> 1983年6月</div>
+          <div class="person-meta-item"><strong>学历</strong> 在职研究生</div>
+          <div class="person-meta-item"><strong>政治面貌</strong> 中共党员</div>
+          <div class="person-meta-item"><strong>分工</strong> 主持区政府全面工作</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:1rem;margin-bottom:12px;color:var(--gold);font-weight:600;">任职时间线</h3>
+  <div class="timeline">
+    <div class="timeline-item gap">
+      <div class="date">? — 2025.10</div>
+      <div class="event">履历未知（1983年生，此前职业生涯无公开信息）<span style="color:var(--gold);margin-left:8px;">⚠ 信息缺口</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025.11</div>
+      <div class="event">任万秀区委副书记</div>
+      <div class="source">来源: 万秀区政府新闻</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026.01.14</div>
+      <div class="event">任区委副书记、区政府党组书记</div>
+      <div class="source">来源: 政府新闻</div>
+    </div>
+    <div class="timeline-item" style="--accent:var(--gold)">
+      <div class="date" style="color:var(--gold);">★ 2026.01.26</div>
+      <div class="event"><strong>万秀区第三届人大常委会第三十三次会议决定任命为副区长、代理区长</strong></div>
+      <div class="source">来源: 政府新闻</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026.01.26 — 2026.02.05</div>
+      <div class="event">以代区长身份出席各类活动</div>
+      <div class="source">来源: 政府新闻</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026.03.03</div>
+      <div class="event">领导照片上传官网，职务显示为"区长"（确认转正）</div>
+      <div class="source">来源: 官网领导页</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026.03 — 至今</div>
+      <div class="event">万秀区委副书记、区长（在任）</div>
+      <div class="source">来源: 官网持续更新</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: PREDECESSOR -->
+<div class="section">
+  <h2 class="section-title"><span class="seal"></span> 前任区长：易洁</h2>
+
+  <div class="person-card">
+    <div class="person-card-header">
+      <div class="person-avatar">易</div>
+      <div class="person-info">
+        <div class="person-name">易洁 <span class="badge badge-completed">离职</span></div>
+        <div class="person-title">前万秀区委副书记、区长（至2026年1月）</div>
+        <div class="person-meta">
+          <div class="person-meta-item"><strong>任职期间</strong> 至少2024年6月 — 2026年1月</div>
+          <div class="person-meta-item"><strong>最后亮相</strong> 2026年1月14日</div>
+        </div>
+      </div>
+    </div>
+    <hr class="person-divider">
+    <div class="person-desc">
+      <strong>去向：<span style="color:var(--gold);">待查</span></strong><br>
+      2026年1月14日后未再以万秀区区长的身份出现在政府新闻中。
+      2026年1月26日欧广明被任命为代区长。
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: LEADERSHIP TEAM -->
+<div class="section">
+  <h2 class="section-title"><span class="seal"></span> 现任领导班子</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>姓名</th><th>职务</th><th>出生</th><th>民族</th><th>学历</th><th>置信度</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>易铭良</td><td>区委书记</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
+      <tr><td><strong>欧广明</strong></td><td><strong>区长</strong></td><td>1983.06</td><td>壮族</td><td>在职研究生</td><td>✅</td></tr>
+      <tr><td>唐志云</td><td>常务副区长</td><td>1984.01</td><td>汉族</td><td>大学/工学学士</td><td>✅</td></tr>
+      <tr><td>梁汉樱</td><td>副区长</td><td>1972.12</td><td>汉族</td><td>大学/新闻学</td><td>✅</td></tr>
+      <tr><td>黄沛森</td><td>副区长</td><td>1980.08</td><td>—</td><td>在职大学</td><td>✅</td></tr>
+      <tr><td>唐海涛</td><td>副区长</td><td>1984.11</td><td>—</td><td>在职大学</td><td>✅</td></tr>
+      <tr><td>黄有志</td><td>副区长/公安局长</td><td>1977.03</td><td>汉族</td><td>在职大学</td><td>✅</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 4: PERSONNEL CHANGES -->
+<div class="section">
+  <h2 class="section-title"><span class="seal"></span> 近期人事变动</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>时间</th><th>事件</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>~2024.06</td><td>易洁担任万秀区长（可追溯最早记录）</td></tr>
+      <tr><td>2025.11</td><td>欧广明调任万秀区委副书记</td></tr>
+      <tr><td>2026.01.14</td><td>易洁最后一次以区长身份公开出席</td></tr>
+      <tr><td>2026.01.26</td><td>↑ 欧广明被任命为代区长</td></tr>
+      <tr><td>2026.03.03</td><td>欧广明正式就任区长</td></tr>
+      <tr><td>2026.06</td><td>黄来焕仍为区委书记</td></tr>
+      <tr><td>2026.07</td><td>↑ 易铭良任区委书记（黄来焕卸任）</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 5: KEY GAPS -->
+<div class="section">
+  <h2 class="section-title"><span class="seal"></span> 关键信息缺口</h2>
+
+  <div class="gap-item">
+    <div class="gap-priority">P0 关键</div>
+    <div class="gap-content">
+      <div class="gap-title">欧广明早期履历</div>
+      <div class="gap-desc">1983年6月出生，2025年前约42年的全部职业生涯完全未知</div>
+    </div>
+  </div>
+  <div class="gap-item">
+    <div class="gap-priority">P0 关键</div>
+    <div class="gap-content">
+      <div class="gap-title">易洁去向</div>
+      <div class="gap-desc">2026年1月卸任区长后去向不明</div>
+    </div>
+  </div>
+  <div class="gap-item">
+    <div class="gap-priority">P1 高</div>
+    <div class="gap-content">
+      <div class="gap-title">易铭良背景 &amp; 黄来焕去向</div>
+      <div class="gap-desc">新任/前任区委书记完整履历及去向</div>
+    </div>
+  </div>
+  <div class="gap-item">
+    <div class="gap-priority">P2 中</div>
+    <div class="gap-content">
+      <div class="gap-title">欧广明出生地/教育院校</div>
+      <div class="gap-desc">具体教育背景、出生地、民族地区等信息</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: SOURCES -->
+<div class="section">
+  <h2 class="section-title"><span class="seal"></span> 信息来源</h2>
+  <ul class="source-list">
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/" target="_blank">万秀区政府领导简介页面</a></li>
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/ldjj_43414/" target="_blank">欧广明个人简介页面</a></li>
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/fqz/t18945409.shtml" target="_blank">唐志云个人简介</a></li>
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/fqz/t11788906.shtml" target="_blank">梁汉樱个人简介</a></li>
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/fqz/t11788902.shtml" target="_blank">黄沛森个人简介</a></li>
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/fqz/t18406638.shtml" target="_blank">唐海涛个人简介</a></li>
+    <li><span class="source-type primary">官方</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/ldjj/fqz/t27527926.shtml" target="_blank">黄有志个人简介</a></li>
+    <li><span class="source-type primary">新闻</span> <a class="source-url" href="http://www.wzwxq.gov.cn/xxgk/jcxx/wxdt/zwyw/" target="_blank">万秀区政务要闻</a></li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<div style="margin: 48px 0 32px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; font-size: 0.8rem; color: var(--text-muted);">
+  Generated by China-Gov-Network Research Agent · 2026-07-23<br>
+  Data files: <code>data/tmp/wanxiu/万秀区_network.db</code> · <code>data/tmp/wanxiu/万秀区_network.gexf</code>
+</div>
+
+</div>
+
+</body>
+</html>
