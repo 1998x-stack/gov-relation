@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "韶关市",
+    "region": "新丰县",
+    "job": "县长",
+    "task_id": "guangdong_新丰县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "xinfeng_hou_xinxiang",
+    "name": "侯新祥",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "待查",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "侯新祥_待查",
+      "name_birthplace": "侯新祥_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "新丰县委副书记、县长",
+    "current_org": "新丰县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "新丰县人民政府",
+      "title": "新丰县县长",
+      "level": "正处级",
+      "location": "广东省韶关市新丰县",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "至少从2026年7月起以县长身份公开活动。主持县政府常务会议。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "中共新丰县委员会",
+      "title": "新丰县委副书记",
+      "level": "正处级",
+      "location": "广东省韶关市新丰县",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "多篇报道称其为县委副书记、县长",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "xinfeng_county_government",
+      "org_name": "新丰县人民政府",
+      "type": "政府",
+      "role": "县长",
+      "period": "至 present"
+    },
+    {
+      "org_id": "xinfeng_county_party_committee",
+      "org_name": "中共新丰县委员会",
+      "type": "党委",
+      "role": "县委副书记",
+      "period": "至 present"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "郑伟平",
+      "person_id": "xinfeng_zheng_weiping",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "党政搭档：郑伟平为县委书记，侯新祥为县委副书记、县长",
+      "overlap_org": "新丰县",
+      "overlap_period": "2026年",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "区毅明",
+      "person_id": "xinfeng_ou_yiming",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "区毅明为维基百科列出的前任县长，侯新祥为现任县长，前后任关系",
+      "overlap_org": "新丰县人民政府",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-07",
+      "domain": "education",
+      "achievement_or_event": "调研新丰县青少年'校家社'协同育人工作",
+      "role_in_event": "带队调研",
+      "measurable_outcome": "提出强化统筹协调、建强专业队伍等要求",
+      "location": "新丰县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "other",
+      "achievement_or_event": "主持十六届县政府第108次常务会议",
+      "role_in_event": "主持会议",
+      "measurable_outcome": "部署防汛、安全生产、经济稳增长工作",
+      "location": "新丰县",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "亲自到青少年协同育人中心实地调研、了解基层情况",
+        "confidence": "plausible",
+        "source_ids": ["S002"]
+      }
+    ],
+    "speech_themes": ["教育协同", "安全发展", "五育并举"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "十六届县政府第108次常务会议召开",
+      "url": "https://www.xinfeng.gov.cn/zwgk/dtyw/zwyw/content/post_2862396.html",
+      "publisher": "新丰县人民政府",
+      "published_at": "2026-07-09",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认侯新祥为县委副书记、县长，主持县政府常务会议"
+    },
+    {
+      "id": "S002",
+      "title": "县委副书记、县长侯新祥调研新丰县'校家社'协同育人工作",
+      "url": "https://www.xinfeng.gov.cn/zwgk/dtyw/zwyw/content/post_2863594.html",
+      "publisher": "新丰县人民政府",
+      "published_at": "2026-07-16",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认侯新祥为县委副书记、县长，确认钟卫苏为县委常委、宣传部部长"
+    },
+    {
+      "id": "S003",
+      "title": "维基百科—新丰县词条",
+      "url": "https://zh.wikipedia.org/wiki/%E6%96%B0%E4%B8%B0%E5%8E%BF",
+      "publisher": "维基百科",
+      "published_at": "2026（最新版本）",
+      "accessed_at": "2026-07-22",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "县长字段列区毅明（可能已过时）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "侯新祥的完整履历（出生、教育、此前任职、何时任县长）完全缺失。维基百科仍列区毅明为县长，说明侯新祥可能2025-2026年间接任。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "侯新祥的出生年份和籍贯？",
+      "why_it_matters": "身份确认、年龄评估职业发展阶段",
+      "suggested_queries": ["侯新祥 简历", "侯新祥 出生", "侯新祥 新丰 县长 任命"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "侯新祥何时、从何职务调任新丰县县长？",
+      "why_it_matters": "建立晋升路径，评估与前任县长区毅明的关系",
+      "suggested_queries": ["侯新祥 任新丰县长", "侯新祥 此前 担任", "韶关 侯新祥 任职"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "区毅明何时离任？去向何处？",
+      "why_it_matters": "了解前任去向和可能的晋升/轮换路径",
+      "suggested_queries": ["区毅明 新丰 县长 卸任", "区毅明 现任"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
