@@ -40,6 +40,7 @@ def load_todo(path: Path = TODO_PATH) -> TodoData:
 
 
 def save_todo(todo: TodoData, path: Path = TODO_PATH) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         json.dump(todo, f, ensure_ascii=False, indent=2)
 

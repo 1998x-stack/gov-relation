@@ -48,8 +48,18 @@ def collect_inventory(root: Path = REPO_ROOT) -> Inventory:
     build_dir = root / "scripts" / "build"
     if build_dir.exists():
         scripts.extend(sorted(build_dir.glob("*_data.py")))
-    dbs = sorted(DATABASE_DIR.glob("*.db"))
-    graphs = sorted(GRAPH_DIR.glob("*.gexf"))
+
+    data_dir = root / "data"
+    db_dir = data_dir / "database"
+    graph_dir = data_dir / "graph"
+    json_dir = data_dir / "json"
+    persons_dir = data_dir / "persons"
+    tmp_dir = data_dir / "tmp"
+    report_dir = root / "report"
+    docs_dir = root / "docs"
+
+    dbs = sorted(db_dir.glob("*.db"))
+    graphs = sorted(graph_dir.glob("*.gexf"))
     db_stems = {_network_stem(path) for path in dbs}
     graph_stems = {_network_stem(path) for path in graphs}
 
@@ -57,12 +67,12 @@ def collect_inventory(root: Path = REPO_ROOT) -> Inventory:
         build_scripts=len(scripts),
         databases=len(dbs),
         graphs=len(graphs),
-        json_files=_count_files(JSON_DIR, "*.json"),
-        person_profiles=_count_files(PERSONS_DIR, "*.json"),
-        reports=_count_files(REPORT_DIR),
-        docs=_count_files(DOCS_DIR),
+        json_files=_count_files(json_dir, "*.json"),
+        person_profiles=_count_files(persons_dir, "*.json"),
+        reports=_count_files(report_dir),
+        docs=_count_files(docs_dir),
         logs=_count_files(root / "logs"),
-        tmp_files=_count_visible_files(TMP_DIR),
+        tmp_files=_count_visible_files(tmp_dir),
         orphan_databases=sorted(db_stems - graph_stems),
         orphan_graphs=sorted(graph_stems - db_stems),
     )
