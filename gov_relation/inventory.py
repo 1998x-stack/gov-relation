@@ -42,6 +42,9 @@ def _network_stem(path: Path) -> str:
 
 def collect_inventory(root: Path = REPO_ROOT) -> Inventory:
     scripts = sorted(root.glob("build_*_data.py"))
+    build_dir = root / "scripts" / "build"
+    if build_dir.exists():
+        scripts.extend(sorted(build_dir.glob("*_data.py")))
     dbs = sorted(DATABASE_DIR.glob("*.db"))
     graphs = sorted(GRAPH_DIR.glob("*.gexf"))
     db_stems = {_network_stem(path) for path in dbs}
