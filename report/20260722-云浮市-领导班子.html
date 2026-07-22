@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>云浮市领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0A0B0D;
+  --surface-raised: #121316;
+  --border: #1E1F23;
+  --border-light: #2A2B2F;
+  --ink: #E3DFD8;
+  --ink-dim: #8A8680;
+  --ink-muted: #53504D;
+  --cinnabar: #D4342E;
+  --cinnabar-dim: #8A221E;
+  --gold: #B8953E;
+  --gold-dim: #6B5724;
+  --party: #C0392B;
+  --gov: #2C7BB6;
+  --nonparty: #8B5CF6;
+  --discipline: #E67E22;
+  --successor: #6C757D;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--surface); color: var(--ink);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--cinnabar); color: #fff; }
+
+/* ─── Layout ─── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+.section:last-of-type { border-bottom: none; }
+
+/* ─── Header / Hero ─── */
+.header {
+  padding: 4rem 0 3rem;
+  position: relative;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 3px;
+  height: 6rem;
+  background: var(--cinnabar);
+}
+.header-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--cinnabar);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.header .sub {
+  font-size: 0.85rem;
+  color: var(--ink-dim);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+.stats-row {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  border-right: none;
+}
+.stat-item {
+  flex: 1;
+  min-width: 100px;
+  padding: 1rem 1.2rem;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.stat-item b {
+  display: block;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.stat-item span {
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+}
+.stat-item:nth-child(4n+1) b { color: var(--cinnabar); }
+
+/* ─── Section Headers ─── */
+h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+h2 .num {
+  font-size: 0.7rem;
+  color: var(--cinnabar);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 1rem;
+  background: var(--cinnabar);
+  margin-right: 0.3rem;
+}
+.section-desc {
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* ─── Person Grid ─── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.person-card {
+  background: var(--surface-raised);
+  padding: 1.2rem 1.3rem;
+  position: relative;
+}
+.person-card .role-tag {
+  display: inline-block;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border-light);
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+.person-card .role-tag.party { border-color: var(--cinnabar-dim); color: var(--cinnabar); }
+.person-card .role-tag.gov { border-color: #1a4a6e; color: var(--gov); }
+.person-card .role-tag.nonparty { border-color: #4a2d7a; color: var(--nonparty); }
+.person-card .role-tag.predecessor { border-color: #3a3d42; color: var(--successor); }
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.person-card .title {
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.person-card .meta {
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+.person-card .meta span { margin-right: 0.8rem; }
+.person-card .work-div {
+  font-size: 0.68rem;
+  color: var(--ink-dim);
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border);
+}
+.person-card .work-div strong { color: var(--gold); font-weight: 500; }
+.card-empty {
+  background: var(--surface-raised);
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* ─── Timeline ─── */
+.timeline-section { margin-top: 2rem; }
+.timeline-figure {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.timeline-figure .person-tl {
+  flex: 1;
+  padding: 1.2rem;
+  background: var(--surface-raised);
+  border-right: 1px solid var(--border);
+}
+.timeline-figure .person-tl:last-child { border-right: none; }
+.timeline-figure .person-tl .tl-name {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.timeline-figure .person-tl .tl-name small {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 400;
+  color: var(--ink-muted);
+  font-size: 0.65rem;
+  margin-left: 0.3rem;
+}
+.tl-step {
+  position: relative;
+  padding-left: 1rem;
+  padding-bottom: 0.8rem;
+  border-left: 1px solid var(--border-light);
+  margin-left: 0.3rem;
+}
+.tl-step:last-child { border-left-color: transparent; }
+.tl-step::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0.35rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--border-light);
+}
+.tl-step.active::before { background: var(--cinnabar); }
+.tl-step.unverified::before { background: var(--gold-dim); }
+.tl-step .tl-date {
+  font-size: 0.6rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+}
+.tl-step .tl-desc {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  line-height: 1.3;
+}
+.tl-step .tl-desc .tag {
+  display: inline-block;
+  font-size: 0.5rem;
+  padding: 0.05rem 0.3rem;
+  border: 1px solid var(--border-light);
+  color: var(--ink-muted);
+  margin-left: 0.3rem;
+}
+.tl-step .tl-desc .tag.gap { border-color: var(--gold-dim); color: var(--gold-dim); }
+
+/* ─── Matrix Table ─── */
+.matrix-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+.matrix-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.7rem;
+}
+.matrix-wrap th, .matrix-wrap td {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  text-align: center;
+  white-space: nowrap;
+}
+.matrix-wrap th {
+  background: var(--surface-raised);
+  color: var(--ink-dim);
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+}
+.matrix-wrap td { color: var(--ink-dim); }
+.matrix-wrap .has-rel { color: var(--gold); font-weight: 700; }
+.matrix-wrap .has-rel.strong { color: var(--cinnabar); }
+.matrix-wrap .row-label {
+  text-align: left;
+  font-weight: 500;
+  color: var(--ink);
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.72rem;
+}
+
+/* ─── Cross-City Map ─── */
+.region-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.region-card {
+  background: var(--surface-raised);
+  padding: 1rem 1.2rem;
+}
+.region-card h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.region-card h4 small {
+  font-weight: 400;
+  color: var(--ink-muted);
+  font-size: 0.6rem;
+  margin-left: 0.4rem;
+}
+.region-card p {
+  font-size: 0.68rem;
+  color: var(--ink-dim);
+  line-height: 1.5;
+}
+.region-card .dir {
+  display: inline-block;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--border-light);
+  color: var(--ink-muted);
+  margin-bottom: 0.3rem;
+}
+.region-card.focus {
+  border-left: 2px solid var(--cinnabar);
+}
+.region-card.connection { border-left: 2px solid var(--gold); }
+.region-card.partner { border-left: 2px solid var(--gov); }
+
+/* ─── Insights ─── */
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.insight-card {
+  background: var(--surface-raised);
+  padding: 1.3rem;
+}
+.insight-card .insight-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--cinnabar);
+  margin-bottom: 0.3rem;
+}
+.insight-card h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.insight-card p {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+.insight-card.highlight {
+  border-left: 2px solid var(--gold);
+}
+.insight-card.highlight .insight-label { color: var(--gold); }
+
+/* ─── Footer ─── */
+.footer {
+  padding: 2rem 0 3rem;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+}
+.footer a { color: var(--gold); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer .dot { margin: 0 0.5rem; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .header h1 { font-size: 1.5rem; }
+  .stats-row .stat-item { min-width: 80px; padding: 0.8rem; }
+  .person-grid { grid-template-columns: 1fr; }
+  .timeline-figure { flex-direction: column; }
+  .timeline-figure .person-tl { border-right: none; border-bottom: 1px solid var(--border); }
+  .region-grid { grid-template-columns: 1fr; }
+  .insight-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .header { padding: 2rem 0 1.5rem; }
+  h2 { font-size: 1.1rem; }
+  .stats-row { border-right: 1px solid var(--border); }
+  .stat-item { min-width: 50%; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ═══ HEADER ═══ -->
+<header class="header">
+  <div class="header-eyebrow">Guangdong · 广东省</div>
+  <h1>云浮市领导班子<br>工作关系网络</h1>
+  <div class="sub">情报简报 · 2026年7月22日 · 数据来源: yunfu.gov.cn</div>
+  <div class="stats-row">
+    <div class="stat-item"><b>12</b><span>人物</span></div>
+    <div class="stat-item"><b>5</b><span>机构</span></div>
+    <div class="stat-item"><b>13</b><span>任职</span></div>
+    <div class="stat-item"><b>20</b><span>关系</span></div>
+  </div>
+</header>
+
+<!-- ═══ 1. PERSONNEL ROSTER ═══ -->
+<section class="section">
+  <h2><span class="num">01</span> 领导班子成员名录</h2>
+  <p class="section-desc">云浮市人民政府官网确认 · 共10名现任领导 + 2名前任</p>
+
+  <div class="person-grid">
+
+    <div class="person-card">
+      <div class="role-tag party">市委 · 书记</div>
+      <div class="name">卢荣春</div>
+      <div class="title">中共云浮市委书记</div>
+      <div class="meta">
+        <span>𫫇籍贯待查</span>
+        <span>𫫇年龄待查</span>
+      </div>
+      <div class="work-div">2021年至今 · 正厅级</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">市委常委 · 市长</div>
+      <div class="name">李庆新</div>
+      <div class="title">云浮市委副书记、市政府党组书记、市长</div>
+      <div class="meta">
+        <span>1967年8月</span>
+        <span>省委党校在职研究生</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>主持市政府全面工作</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">市委常委 · 常务副市长</div>
+      <div class="name">刘旺先</div>
+      <div class="title">云浮市委常委、市政府党组副书记、常务副市长</div>
+      <div class="meta">
+        <span>1975年6月</span>
+        <span>在职研究生 · 法学硕士</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>发改、财政、税务、应急、国资、金融</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag party">市委常委 · 副市长</div>
+      <div class="name">邱泽军</div>
+      <div class="title">云浮市委常委、市政府党组成员、副市长</div>
+      <div class="meta">
+        <span>1968年12月</span>
+        <span>省社科院在职研究生</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>生态环境、住建、城管、交通</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag gov">副市长</div>
+      <div class="name">梁东海</div>
+      <div class="title">云浮市政府党组成员、副市长</div>
+      <div class="meta">
+        <span>1976年12月</span>
+        <span>中山大学岭南学院在职研究生</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>科技、工信、商务、市场监管</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag nonparty">副市长 · 民进</div>
+      <div class="name">徐贤荣</div>
+      <div class="title">云浮市副市长</div>
+      <div class="meta">
+        <span>女</span>
+        <span>1972年5月</span>
+        <span>在职大学 · 民进会员</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>教育、文旅、卫健、医保、妇女儿童</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag gov">副市长 · 公安局长</div>
+      <div class="name">王诗军</div>
+      <div class="title">云浮市政府党组成员、副市长兼市公安局局长</div>
+      <div class="meta">
+        <span>1973年11月</span>
+        <span>大学 · 工程硕士</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>公安、司法、人民武装</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag gov">副市长</div>
+      <div class="name">梁世军</div>
+      <div class="title">云浮市政府党组成员、副市长</div>
+      <div class="meta">
+        <span>1972年9月</span>
+        <span>省委党校经济管理</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>农业农村、乡村振兴、水务、林业</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag gov">副市长</div>
+      <div class="name">许翠丽</div>
+      <div class="title">云浮市政府党组成员、副市长</div>
+      <div class="meta">
+        <span>女</span>
+        <span>1972年1月</span>
+        <span>省社科院在职研究生</span>
+      </div>
+      <div class="work-div"><strong>分工：</strong>民政、人社、自然资源</div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag gov">秘书长</div>
+      <div class="name">陈新仪</div>
+      <div class="title">云浮市政府党组成员、秘书长、市政府办公室党组书记</div>
+      <div class="meta">
+        <span>1977年7月</span>
+        <span>研究生</span>
+      </div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag predecessor">前任</div>
+      <div class="name">黄汉标</div>
+      <div class="title">前任云浮市委书记 → 广东省人大</div>
+      <div class="meta"><span>2018–2021年任职</span></div>
+    </div>
+
+    <div class="person-card">
+      <div class="role-tag predecessor">前任</div>
+      <div class="name">郭汉标</div>
+      <div class="title">前任云浮市长</div>
+      <div class="meta"><span>去向待查</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ 2. CAREER TIMELINES ═══ -->
+<section class="section">
+  <h2><span class="num">02</span> 核心领导履历</h2>
+  <p class="section-desc">卢荣春 · 李庆新 · 刘旺先 — 云浮市权力核心三角</p>
+
+  <div class="timeline-figure">
+
+    <div class="person-tl">
+      <div class="tl-name">卢荣春 <small>市委书记</small></div>
+      <div class="tl-step active">
+        <div class="tl-date">2021 — 至今</div>
+        <div class="tl-desc">中共云浮市委书记 <span class="tag">正厅级</span></div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-date">此前</div>
+        <div class="tl-desc">履历待查 <span class="tag gap">信息缺口 ⭐⭐⭐⭐⭐</span></div>
+      </div>
+    </div>
+
+    <div class="person-tl">
+      <div class="tl-name">李庆新 <small>市长</small></div>
+      <div class="tl-step active">
+        <div class="tl-date">2021 — 至今</div>
+        <div class="tl-desc">云浮市委副书记、市长、市政府党组书记</div>
+      </div>
+      <div class="tl-step unverified">
+        <div class="tl-date">此前</div>
+        <div class="tl-desc">履历待查 <span class="tag gap">信息缺口 ⭐⭐⭐⭐⭐</span></div>
+      </div>
+    </div>
+
+    <div class="person-tl">
+      <div class="tl-name">刘旺先 <small>常务副市长</small></div>
+      <div class="tl-step active">
+        <div class="tl-date">现任</div>
+        <div class="tl-desc">云浮市委常委、市政府党组副书记、常务副市长</div>
+      </div>
+      <div class="tl-step unverified">
+        <div class="tl-date">此前</div>
+        <div class="tl-desc">法学硕士背景 · 此前任职待查 <span class="tag gap">信息缺口 ⭐⭐⭐⭐</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ 3. RELATIONSHIP MATRIX ═══ -->
+<section class="section">
+  <h2><span class="num">03</span> 关系矩阵</h2>
+  <p class="section-desc">党政搭档 · 上下级 · 同事关系 — 交叉任职网络</p>
+
+  <div class="matrix-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>卢荣春</th>
+        <th>李庆新</th>
+        <th>刘旺先</th>
+        <th>邱泽军</th>
+        <th>梁东海</th>
+        <th>徐贤荣</th>
+        <th>王诗军</th>
+        <th>梁世军</th>
+        <th>许翠丽</th>
+        <th>陈新仪</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">卢荣春</td>
+        <td>—</td>
+        <td class="has-rel strong">搭档</td>
+        <td class="has-rel">上下级</td>
+        <td class="has-rel">上下级</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">李庆新</td>
+        <td class="has-rel strong">搭档</td>
+        <td>—</td>
+        <td class="has-rel strong">下属</td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">上下级</td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel strong">下属</td>
+      </tr>
+      <tr>
+        <td class="row-label">刘旺先</td>
+        <td class="has-rel">上下级</td>
+        <td class="has-rel strong">下属</td>
+        <td>—</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+      </tr>
+      <tr>
+        <td class="row-label">邱泽军</td>
+        <td class="has-rel">上下级</td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">同事</td>
+        <td>—</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">梁东海</td>
+        <td></td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td>—</td>
+        <td></td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">徐贤荣</td>
+        <td></td>
+        <td class="has-rel">上下级</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>—</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">王诗军</td>
+        <td></td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td>—</td>
+        <td class="has-rel">同事</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">梁世军</td>
+        <td></td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td class="has-rel">同事</td>
+        <td>—</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">许翠丽</td>
+        <td></td>
+        <td class="has-rel">下属</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td>—</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="row-label">陈新仪</td>
+        <td></td>
+        <td class="has-rel strong">下属</td>
+        <td class="has-rel">同事</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:0.65rem;color:var(--ink-muted);margin-top:0.5rem;">
+    红色 <span style="color:var(--cinnabar);font-weight:700;">强关系</span> ·
+    金色 <span style="color:var(--gold);font-weight:700;">确认关系</span> ·
+    空白 = 无直接隶属或未确认
+  </p>
+
+  <div class="timeline-section" style="margin-top:2rem;">
+    <h3 style="font-family:'Noto Serif SC',serif;font-size:0.85rem;font-weight:700;margin-bottom:0.8rem;">关键关系链</h3>
+    <div style="display:flex;flex-direction:column;gap:0.5rem;">
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:var(--ink-dim);">
+        <span style="display:inline-block;width:6px;height:6px;background:var(--cinnabar);border-radius:0;"></span>
+        <strong style="color:var(--ink);">党政核心链：</strong>
+        卢荣春（书记）↔ 李庆新（市长）— 2021年至今搭档
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:var(--ink-dim);">
+        <span style="display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:0;"></span>
+        <strong style="color:var(--ink);">市委常委会：</strong>
+        卢荣春（书记）— 李庆新（副书记）— 刘旺先（常委）— 邱泽军（常委）
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:var(--ink-dim);">
+        <span style="display:inline-block;width:6px;height:6px;background:var(--gov);border-radius:0;"></span>
+        <strong style="color:var(--ink);">市政府党组：</strong>
+        李庆新（书记）— 刘旺先（副书记）— 6名党组成员副市长 + 秘书长
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:var(--ink-dim);">
+        <span style="display:inline-block;width:6px;height:6px;background:var(--nonparty);border-radius:0;"></span>
+        <strong style="color:var(--ink);">党派分界：</strong>
+        徐贤荣（民进）列席党组会议而非成员 — 8中共 + 1民进
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. CROSS-CITY NETWORK ═══ -->
+<section class="section">
+  <h2><span class="num">04</span> 跨市交流与地缘网络</h2>
+  <p class="section-desc">云浮位于粤西北 · 与5地级市接壤 · 佛山对口帮扶</p>
+
+  <div class="region-grid">
+
+    <div class="region-card focus">
+      <h4>云浮市 <small>粤西北 · 总面积7,786km²</small></h4>
+      <p>下辖2区（云城区、云安区）、2县（新兴县、郁南县）、1县级市（罗定市）。省内GDP总量排名靠后，属粤北生态发展区。与珠三角存在发展梯度差，是省内干部交流体系中的"接收方"城市。</p>
+    </div>
+
+    <div class="region-card partner">
+      <h4>佛山市 <small>东邻 · 对口帮扶方</small></h4>
+      <p>广东省"珠三角—粤东西北"对口帮扶机制指定佛山对口帮扶云浮。佛山向云浮派出挂职干部，参与产业转移园区建设。两地在农业、旅游、产业转移领域有密切合作。</p>
+    </div>
+
+    <div class="region-card connection">
+      <h4>肇庆市 <small>北/东邻</small></h4>
+      <p>云浮与其山水相连，历史上同属肇庆地区。两地干部交流存在历史地缘便利。肇庆近年发展加速，部分干部有向肇庆流动的趋势。</p>
+    </div>
+
+    <div class="region-card connection">
+      <h4>阳江市 <small>南邻</small></h4>
+      <p>同为粤西城市，在省级会议、区域性干部调研中存在交集。两市交界处有新兴县、阳春市等县级区域，县级干部跨市调动存在可能。</p>
+    </div>
+
+    <div class="region-card connection">
+      <h4>茂名市 <small>西/西南邻</small></h4>
+      <p>粤西另一重要地级市。与云浮主要通过罗定市接壤，在农业、石化、南药（云浮主打产业）领域有交流合作可能。</p>
+    </div>
+
+    <div class="region-card connection">
+      <h4>江门市 <small>东南邻</small></h4>
+      <p>珠三角西翼城市，与云浮的接壤相对间接。但在干部交流渠道上可通过省直机关进行联系。</p>
+    </div>
+
+  </div>
+
+  <div style="margin-top:1.5rem;padding:1rem;background:var(--surface-raised);border:1px solid var(--border);">
+    <h3 style="font-family:'Noto Serif SC',serif;font-size:0.8rem;font-weight:700;margin-bottom:0.5rem;">已知跨市流动</h3>
+    <div style="font-size:0.7rem;color:var(--ink-dim);line-height:1.6;">
+      <div>• 黄汉标（前任云浮市委书记）→ 广东省人大常委会（2021年调离）</div>
+      <div>• 佛山对口帮扶云浮 → 挂职干部机制运作中（具体人员待查）</div>
+      <div style="margin-top:0.3rem;color:var(--ink-muted);font-style:italic;">注：具体跨市干部交流案例因网络环境限制未能获取详细信息。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. KEY INSIGHTS ═══ -->
+<section class="section" style="border-bottom:none;">
+  <h2><span class="num">05</span> 关键洞察</h2>
+  <p class="section-desc">基于网络分析的核心发现与突破线索</p>
+
+  <div class="insight-grid">
+
+    <div class="insight-card highlight">
+      <div class="insight-label">INSIGHT · 01</div>
+      <h3>党政搭档长期稳定</h3>
+      <p>卢荣春与李庆新自2021年起搭档，形成连续三年以上稳定配合，在近年地方党政频繁调整中较为少见。稳定的党政配置意味着政策连续性强，但同时也意味着核心圈层高度集中，突破难度大。</p>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-label">INSIGHT · 02</div>
+      <h3>年龄结构偏成熟</h3>
+      <p>班子成员平均年龄约53岁，其中市长李庆新59岁、副市长邱泽军58岁。年龄结构偏高意味着未来2-3年内可能出现较大规模换届调整，是观察人事变动的关键窗口期。</p>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-label">INSIGHT · 03</div>
+      <h3>"接收型"干部流动格局</h3>
+      <p>云浮作为粤北生态发展区城市，在省内干部交流体系中属于"接收方"：外来干部（对口帮扶、省直下派）多于向外输送干部。佛山对口帮扶机制是珠三角向云浮输送干部的重要通道。</p>
+    </div>
+
+    <div class="insight-card highlight">
+      <div class="insight-label">INSIGHT · 04</div>
+      <h3>关键人物：刘旺先</h3>
+      <p>法学硕士、1975年生、常务副市长——刘旺先的年龄和学历在班子中具有优势。作为市政府党组副书记，他同时是市委常委和市政府二把手，是连接市委与政府两个系统的核心枢纽人物。</p>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-label">INSIGHT · 05</div>
+      <h3>徐贤荣的独特位置</h3>
+      <p>作为班子中唯一的民主党派（民进）成员，徐贤荣在政府决策中以列席而非表决身份参与。她的分管领域（教育、文旅、卫健、医保、妇女儿童）也是典型的"民主党派副市长主导领域"。</p>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-label">INSIGHT · 06</div>
+      <h3>中山大学岭南学院网络</h3>
+      <p>梁东海的中山大学岭南学院在职研究生背景值得关注。中大岭南学院是广东政商界重要校友网络节点，这一教育背景可能关联到珠三角城市群的政商人脉。</p>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<footer class="footer">
+  <p>云浮市领导班子工作关系网络 · 情报简报</p>
+  <p>数据来源：云浮市人民政府官方网站 yunfu.gov.cn · 公开新闻报道</p>
+  <p>调查日期：2026年7月22日 · 开放缺口登记见 <a href="open_gaps.md">open_gaps.md</a></p>
+  <p>
+    <a href="20260722-云浮市-领导班子工作关系网络调查报告.md">Markdown报告</a>
+    <span class="dot">·</span>
+    <a href="../data/database/云浮市_network.db">SQLite数据库</a>
+    <span class="dot">·</span>
+    <a href="../data/graph/云浮市_network.gexf">GEXF图文件</a>
+    <span class="dot">·</span>
+    <a href="index.html">主索引</a>
+  </p>
+</footer>
+
+</body>
+</html>
