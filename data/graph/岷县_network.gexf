@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Claude Code Research Agent</creator>
+    <description>岷县 (定西市, 甘肃省) 领导班子工作关系网络 — 陈新民 程兆祥</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="mx_chen_xinmin" label="陈新民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="岷县委书记"/>
+          <attvalue for="2" value="中共岷县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="mx_cheng_zhaoxiang" label="程兆祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="岷县委副书记、县长"/>
+          <attvalue for="2" value="中共岷县委员会/岷县人民政府"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="mx_wang_weidong" label="王伟东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="岷县领导（副县长/党组成员）"/>
+          <attvalue for="2" value="岷县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="mx_shan_xiaoli" label="闪晓丽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="岷县领导（副县长/党组成员）"/>
+          <attvalue for="2" value="岷县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="mx_he_yuanzhong" label="何元忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="岷县领导（县领导/部门负责人）"/>
+          <attvalue for="2" value="岷县人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o1" label="中共岷县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省定西市岷县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="岷县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省定西市岷县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共定西市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="定西市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="十里镇">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇"/>
+          <attvalue for="2" value="甘肃省定西市岷县"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="刘家浪水电站">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="甘肃省定西市岷县"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="mx_chen_xinmin" target="o1" label="岷县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="岷县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="mx_cheng_zhaoxiang" target="o1" label="岷县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="岷县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="mx_cheng_zhaoxiang" target="o2" label="岷县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="岷县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="mx_wang_weidong" target="o2" label="岷县领导（副县长/党组成员）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="岷县领导（副县长/党组成员）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="mx_shan_xiaoli" target="o2" label="岷县领导（副县长/党组成员）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="岷县领导（副县长/党组成员）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="mx_he_yuanzhong" target="o2" label="岷县领导（部门负责人）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="岷县领导（部门负责人）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="mx_chen_xinmin" target="mx_cheng_zhaoxiang" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="{esc(r["type"])}"/>
+          <attvalue for="1" value="县委书记-县长搭班工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="mx_chen_xinmin" target="mx_he_yuanzhong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="{esc(r["type"])}"/>
+          <attvalue for="1" value="县委书记调研十里镇、刘家浪水电站，何元忠陪同参加"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="mx_cheng_zhaoxiang" target="mx_wang_weidong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="{esc(r["type"])}"/>
+          <attvalue for="1" value="县长程兆祥调研安全生产等工作，王伟东陪同参加"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="mx_cheng_zhaoxiang" target="mx_shan_xiaoli" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="{esc(r["type"])}"/>
+          <attvalue for="1" value="县长程兆祥调研安全生产等工作，闪晓丽陪同参加"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
