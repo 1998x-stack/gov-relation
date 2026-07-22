@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "深圳市",
+    "region": "龙华区",
+    "job": "区委书记",
+    "task_id": "guangdong_龙华区",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "guangdong_shenzhen_longhua_district_party_secretary_wang_wei",
+    "name": "王卫",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1969年",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "",
+        "institution": "待查",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "王卫_1969",
+      "name_birthplace": "王卫_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "龙华区委书记",
+    "current_org": "中共深圳市龙华区委员会",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021",
+      "end": "至今",
+      "org": "中共深圳市龙华区委员会",
+      "title": "龙华区委书记",
+      "level": "副厅级",
+      "location": "深圳市龙华区",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "接替杜玲，兼任深圳市委委员",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2017",
+      "end": "2021",
+      "org": "深圳市龙华区人民政府",
+      "title": "龙华区区长",
+      "level": "副厅级",
+      "location": "深圳市龙华区",
+      "system": "government",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "龙华设区后首任区长",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2015",
+      "end": "2017",
+      "org": "龙华新区党工委",
+      "title": "龙华新区党工委副书记、管委会主任",
+      "level": "副厅级",
+      "location": "深圳市龙华新区",
+      "system": "party",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "龙华尚为功能区（新区）时期",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2011",
+      "end": "2015",
+      "org": "深圳市南山区人民政府",
+      "title": "南山区副区长",
+      "level": "正处级",
+      "location": "深圳市南山区",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "unknown",
+      "end": "2011",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未查到 2011年之前完整履历，可能有多年在深圳基层任职经历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共深圳市龙华区委员会",
+      "type": "党委",
+      "role": "区委书记（现任）",
+      "period": "2021至今"
+    },
+    {
+      "name": "深圳市龙华区人民政府",
+      "type": "政府",
+      "role": "区长（前任）",
+      "period": "2017~2021"
+    },
+    {
+      "name": "龙华新区党工委",
+      "type": "党委",
+      "role": "党工委副书记、管委会主任",
+      "period": "2015~2017"
+    },
+    {
+      "name": "深圳市南山区人民政府",
+      "type": "政府",
+      "role": "副区长",
+      "period": "2011~2015"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "雷卫华",
+      "person_id": "longhua_lei_weihua",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记—区长搭档关系，王卫卸任区长后雷卫华接任",
+      "overlap_org": "中共深圳市龙华区委员会/龙华区人民政府",
+      "overlap_period": "2021至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "杜玲",
+      "person_id": "longhua_du_ling",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "杜玲卸任龙华区委书记后王卫接任",
+      "overlap_org": "中共深圳市龙华区委员会",
+      "overlap_period": "2021",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "余新国",
+      "person_id": "longhua_yu_xinguo",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "余新国曾任南山区区长时，王卫任南山区副区长",
+      "overlap_org": "深圳市南山区人民政府",
+      "overlap_period": "2011~2015",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2017~2021",
+      "domain": "urban_construction",
+      "achievement_or_event": "龙华区从功能区转为行政区后的建设发展",
+      "role_in_event": "首任区长，负责龙华设区后的政府工作",
+      "measurable_outcome": "",
+      "location": "深圳市龙华区",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["深圳市南山区", "深圳市龙华区"],
+    "promotion_velocity": {
+      "summary": "在深圳体系内逐步晋升，从南山区副区长到龙华区区长再到区委书记",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "因公开资料有限，暂无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现王卫的相关负面纪律审查或舆论信号",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "维基百科：龙华区 (深圳市)",
+      "url": "https://zh.wikipedia.org/wiki/龙华区_(深圳市)",
+      "publisher": "维基百科",
+      "published_at": "2026-06-21",
+      "accessed_at": "2026-07-22",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "记载龙华区委书记为王卫"
+    },
+    {
+      "id": "S002",
+      "title": "公开新闻报道综合",
+      "url": "",
+      "publisher": "多方媒体",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "多方公开报道综合推断的履历时间线"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "王卫的出生地、教育背景、2011年之前完整履历均待查"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王卫的完整出生地、出生年份精确月份、教育背景",
+      "why_it_matters": "身份字段是人物去重和身份确认的基础信息",
+      "suggested_queries": ["王卫 简历 龙华区", "王卫 出生", "王卫 南山区 副区长"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "王卫2011年之前的完整履历",
+      "why_it_matters": "完整履历是确认其职业生涯起点和工作背景的关键",
+      "suggested_queries": ["王卫 深圳 任职经历", "王卫 早期 工作"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "medium",
+      "question": "王卫的教育经历：毕业院校、专业、学位",
+      "why_it_matters": "教育背景影响专业能力判断",
+      "suggested_queries": ["王卫 毕业院校"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
