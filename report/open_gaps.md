@@ -1,6 +1,23 @@
 # Open Gaps Registry
 > Last updated: 2026-07-22
 
+## 🆕 高要区 (2026-07-22)
+### ⭐⭐⭐⭐⭐ Critical — 两位核心领导履历完全空白
+**Web Access Status (2026-07-22):** Exa rate-limited, Baidu 403, gaoyao.gov.cn accessible (official leadership page and news readable), Jina Reader timeout.
+**Confirmed sources:** 高要区人民政府网站 (www.gaoyao.gov.cn) — leadership page and news articles confirmed both core leaders.
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| **陈德培** | **高要区委书记** | **出生年月、出生地、教育背景、入党时间、全部工作经历；到任时间；前任是谁** | **2026-07-22** | **身份已通过区人民政府官网新闻确认（区委全会、常委会等报道）。Confirmed as of 2026-07-22。** |
+| **韦贤康** | **高要区委副书记、区长** | **出生年月、出生地、教育背景、入党时间、全部工作经历；到任时间；前任是谁** | **2026-07-22** | **身份已通过区人民政府官网领导之窗页面确认。Confirmed as of 2026-07-22（官网领导页面2024-10-14更新）。** |
+
+**Suggested Queries for Next Attempt:**
+- `陈德培 简历` — 找到陈德培完整履历
+- `韦贤康 简历` — 找到韦贤康完整履历
+- `陈德培 任前公示` — 肇庆市委组织部关于陈德培的干部任前公示
+- `高要区 人大常委会 任命` — 区人大关于区长的任命公告
+- `高要区委书记 前任` — 确认前任书记及去向
+
 ## 🆕 雷州市 (2026-07-22)
 ### ⭐⭐⭐⭐⭐ Critical — 两位核心领导履历完全空白
 **Web Access Status (2026-07-22):** Exa rate-limited, Baidu 403, leizhou.gov.cn HTTPS timeout (HTTP works), Jina Reader timeout, Google/Bing search blocked.
