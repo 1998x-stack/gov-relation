@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>柳州市领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="张壮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳州市委书记"/>
+          <attvalue for="2" value="中共柳州市委员会"/>
+          <attvalue for="3" value="1970年5月"/>
+          <attvalue for="4" value="https://www.163.com/dy/article/KBRTIBEV0514CQIE.html"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="待查（现任市长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳州市市长（待确认）"/>
+          <attvalue for="2" value="柳州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p3" label="谭丕创">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广西壮族自治区党委常委、统战部部长"/>
+          <attvalue for="2" value="广西壮族自治区委员会"/>
+          <attvalue for="3" value="1968年10月"/>
+          <attvalue for="4" value="https://www.163.com/dy/article/JD4G6QB0055040N3.html"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="张晓钦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广西壮族自治区人大常委会副主任"/>
+          <attvalue for="2" value="广西壮族自治区人大常委会"/>
+          <attvalue for="3" value="1968年1月"/>
+          <attvalue for="4" value="https://www.163.com/dy/article/JD4G6QB0055040N3.html"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="吴炜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原柳州市委书记（已落马判死缓）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.163.com/dy/article/JJQ15A110530WJIN.html"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="o100001" label="中共柳州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="柳州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="广西壮族自治区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="广西壮族自治区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共广西壮族自治区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="柳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年10月任柳州市委书记，此前为柳州市市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100002" label="柳州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年起任柳州市市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o100002" label="柳州市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o100002" label="柳州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张壮升任书记后，现任市长姓名待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o100005" label="广西壮族自治区党委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o100001" label="柳州市委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任柳州市委书记，同时为自治区副主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o100003" label="广西壮族自治区副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p3" target="o100005" label="防城港市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p3" target="o100002" label="钦州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p4" target="o100004" label="广西壮族自治区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p4" target="o100001" label="柳州市委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任柳州市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p4" target="o100003" label="广西壮族自治区政府副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p5" target="o100001" label="柳州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="被查落马，2024年12月一审被判死缓"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p5" target="o100002" label="柳州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张壮接替谭丕创任柳州市委书记"/>
+          <attvalue for="2" value="中共柳州市委员会"/>
+          <attvalue for="3" value="2024-09/2025-10"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p3" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="谭丕创接替张晓钦任柳州市委书记"/>
+          <attvalue for="2" value="中共柳州市委员会"/>
+          <attvalue for="3" value="2023-11/2024-09"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p4" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张晓钦接替吴炜（吴炜被查后）任柳州市委书记"/>
+          <attvalue for="2" value="中共柳州市委员会"/>
+          <attvalue for="3" value="2023-11"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张壮任市长期间与吴炜（时任书记）党政搭档"/>
+          <attvalue for="2" value="柳州市党政班子"/>
+          <attvalue for="3" value="2021-2024"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
