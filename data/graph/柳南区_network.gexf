@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>柳州市柳南区领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="肖源">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委书记、区人武部党委第一书记"/>
+          <attvalue for="2" value="中共柳南区委员会"/>
+          <attvalue for="3" value="1982-03"/>
+          <attvalue for="4" value="百度百科-肖源; 鲁网2024.8.7; 汲古新知2024.8.5"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p2" label="黄立平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳城县委书记（原柳南区长）"/>
+          <attvalue for="2" value="中共柳城县委员会"/>
+          <attvalue for="3" value="1977-12"/>
+          <attvalue for="4" value="百度百科-黄立平; 柳州人大2024.11.4"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="贾红玉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长、代理区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value="1983-05"/>
+          <attvalue for="4" value="广西头条NEWS/闽南网2026.7.21; 百度百科-贾红玉"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p4" label="王融莉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委副书记（原宣传部长）"/>
+          <attvalue for="2" value="中共柳南区委员会"/>
+          <attvalue for="3" value="1977-08"/>
+          <attvalue for="4" value="任前公示2023.7.28(澎湃新闻); 柳州党建2025.3.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="谭海平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、常务副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p6" label="杨纪南">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、政法委书记"/>
+          <attvalue for="2" value="中共柳南区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳州人大2025.1.22; 柳南区人民政府官网"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="闫伟丽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共柳南区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳州党建2025.3.13; 柳州人大2025.1.22"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="叶青">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共柳南区纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网2025.4.30"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="李青">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、组织部部长"/>
+          <attvalue for="2" value="中共柳南区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳州党建2025.3.13"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="李玉辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、统战部部长、柳石街道党工委书记"/>
+          <attvalue for="2" value="中共柳南区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳州市纪委监委网站2023.1.20"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="雷求贤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区委常委、区人武部部长"/>
+          <attvalue for="2" value="柳南区人民武装部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网2022.1.29"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="肖郭婷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p13" label="孔柳宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长、公安分局局长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p14" label="玉宇飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p15" label="荣城">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p16" label="陈关全">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p17" label="莫畅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p18" label="邱百军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p19" label="王洪权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p20" label="肖盛华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区副区长"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="柳南区人民政府官网-领导分工2024.12.13"/>
+        </attvalues>
+        <viz:color r="80" g="130" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p21" label="龙庆革">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区人大常委会主任"/>
+          <attvalue for="2" value="柳南区人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="百度百科-柳南区条目"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p22" label="韦寒">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="柳南区政协主席"/>
+          <attvalue for="2" value="政协柳南区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="百度百科-柳南区条目"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共柳南区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="柳南区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="中共柳南区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="柳南区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="政协柳南区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="柳南区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="柳南公安分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="柳石街道办事处">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="城中区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100010" label="柳北区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100011" label="融水县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100012" label="中共鹿寨县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100013" label="鹿寨县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100014" label="中共柳城县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="柳南区委书记、区人武部党委第一书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年8月由区长转任区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100002" label="柳南区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年任常务副区长，2023年升任区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o100001" label="柳南区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o100010" label="柳北区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o100009" label="城中区征地拆迁办公室主任、法制办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2016年5月任前公示：拟任副处级领导职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="o100014" label="柳城县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="从柳南区区长调任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p2" target="o100002" label="柳南区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年11月4日当选，2025年1月22日仍在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p2" target="o100001" label="柳南区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年9月任区委副书记、代区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p3" target="o100002" label="柳南区副区长、代理区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月3日区人大常委会任命为副区长、代理区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p3" target="o100013" label="鹿寨县委常委、副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="从融水县调任至鹿寨县"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p3" target="o100011" label="融水县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="早期在融水县任职"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p4" target="o100001" label="柳南区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="原宣传部长进一步使用"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p4" target="o100001" label="柳南区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p5" target="o100001" label="柳南区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p5" target="o100002" label="柳南区常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p6" target="o100001" label="柳南区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p7" target="o100001" label="柳南区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="接替晋升的王融莉"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p8" target="o100003" label="柳南区委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p9" target="o100001" label="柳南区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p10" target="o100001" label="柳南区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p10" target="o100008" label="柳石街道党工委书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委兼任街道党工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p11" target="o100001" label="柳南区委常委、区人武部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p11" target="o100006" label="柳南区人民武装部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p12" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管教育、文旅、农业农村、乡村振兴"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p13" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管公安、禁毒、维稳、综治"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p13" target="o100007" label="柳南公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p14" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管自然资源、住建、交通、市容卫生"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p15" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管工信、投资促进、市场监管、生态环境、民政、卫健、医保"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p16" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管科技、高新区企业服务"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p17" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管民兵预备役、机关后勤、政务公开、外事"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p18" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="协助国防动员；分管残联、老体协"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p19" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="协助重大项目、征地拆迁、民政"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p20" target="o100002" label="柳南区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管地志、政务信息、重点工作督查"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p21" target="o100004" label="柳南区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p22" target="o100005" label="柳南区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p1" target="p3" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源（区委书记）与贾红玉（代理区长）组成柳南区党政正职搭档"/>
+          <attvalue for="2" value="柳南区党政班子"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p1" target="p2" label="前任继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源接替黄立平（？）——实际肖源先为区委书记，黄立平后来任区长，后黄立平调柳城县委"/>
+          <attvalue for="2" value="柳南区党政班子"/>
+          <attvalue for="3" value="未直接重叠"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p1" target="p4" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源（区委书记）与王融莉（区委副书记）为上下级"/>
+          <attvalue for="2" value="柳南区委常委会"/>
+          <attvalue for="3" value="2023至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p1" target="p5" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源曾任常务副区长（2021-2023），谭海平接任常务副区长"/>
+          <attvalue for="2" value="柳南区政府"/>
+          <attvalue for="3" value="间接"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p4" target="p7" label="前任继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王融莉原为宣传部长，闫伟丽接任宣传部部长"/>
+          <attvalue for="2" value="柳南区委宣传部"/>
+          <attvalue for="3" value="2023"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p3" target="p5" label="同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="贾红玉（代理区长）与谭海平（常务副区长）为政府班子搭档"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p3" target="p12" label="同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同在柳南区政府班子"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p3" target="p13" label="同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同在柳南区政府班子"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p3" target="p14" label="同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同在柳南区政府班子"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p3" target="p15" label="同事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="同在柳南区政府班子"/>
+          <attvalue for="2" value="柳南区人民政府"/>
+          <attvalue for="3" value="2026-07至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p1" target="p21" label="同届领导" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源（区委书记）与龙庆革（人大主任）为四套班子成员"/>
+          <attvalue for="2" value="柳南区"/>
+          <attvalue for="3" value="2024-08至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p1" target="p22" label="同届领导" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源（区委书记）与韦寒（政协主席）为四套班子成员"/>
+          <attvalue for="2" value="柳南区"/>
+          <attvalue for="3" value="2024-08至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="p1" target="p4" label="跨区调动" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖源曾在城中区任职（2016年前），后调柳北区副区长（2017-2021），再到柳南区"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2010-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="p3" target="p4" label="跨区调动" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="贾红玉从融水县→鹿寨县→柳南区，跨两县调任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="p2" target="p1" label="跨区调动" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄立平从柳南区区长调任柳城县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
