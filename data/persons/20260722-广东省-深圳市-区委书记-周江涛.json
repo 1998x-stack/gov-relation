@@ -1,0 +1,179 @@
+{
+    "schema_version": "1.0",
+    "generated_at": "2026-07-22",
+    "investigation_scope": {
+        "province": "广东省",
+        "city": "深圳市",
+        "region": "福田区",
+        "job": "区委书记",
+        "task_id": "guangdong_福田区",
+        "time_focus": "2026-07-22"
+    },
+    "identity": {
+        "person_id": "futian_zhou_jiangtao",
+        "name": "周江涛",
+        "aliases": [],
+        "gender": "",
+        "ethnicity": "",
+        "birth": "",
+        "birthplace": "",
+        "native_place": "",
+        "education": [],
+        "party_join": "",
+        "work_start": "",
+        "dedupe_keys": {
+            "name_birth": "周江涛_unknown",
+            "name_birthplace": "周江涛_unknown",
+            "official_profile_url": ""
+        }
+    },
+    "current_status": {
+        "current_post": "深圳市福田区委书记",
+        "current_org": "中共深圳市福田区委员会",
+        "administrative_rank": "副厅级",
+        "as_of": "2026-07-20",
+        "is_current_confirmed": true,
+        "source_ids": ["S001"]
+    },
+    "career_timeline": [
+        {
+            "start": "未知",
+            "end": "未知",
+            "org": "深圳市福田区人民政府",
+            "title": "福田区委副书记、区长",
+            "level": "",
+            "location": "深圳",
+            "system": "government",
+            "rank": "正局级",
+            "is_key_promotion": true,
+            "notes": "周江涛此前担任福田区长。具体到任时间、完整履历待补充。",
+            "confidence": "plausible",
+            "source_ids": ["S001"]
+        },
+        {
+            "start": "未知",
+            "end": "present",
+            "org": "中共深圳市福田区委员会",
+            "title": "福田区委书记",
+            "level": "",
+            "location": "深圳",
+            "system": "party",
+            "rank": "副厅级",
+            "is_key_promotion": true,
+            "notes": "现任福田区委书记（来源：中文维基百科福田区条目2026-07-20版）。到任具体时间待确认。",
+            "confidence": "confirmed",
+            "source_ids": ["S001"]
+        }
+    ],
+    "organizations": [
+        {
+            "name": "中共深圳市福田区委员会",
+            "org_id": 1,
+            "role": "区委书记"
+        },
+        {
+            "name": "深圳市福田区人民政府",
+            "org_id": 2,
+            "role": "原区长"
+        }
+    ],
+    "relationships": [
+        {
+            "person": "黄伟",
+            "person_id": "futian_huang_wei",
+            "relationship_type": "predecessor_successor",
+            "strength": "strong",
+            "evidence": "周江涛与黄伟在福田区党政班子搭档，或存在角色互换关系。黄伟此前任福田区委书记，周江涛此前任福田区长。证据来自维基百科福田区条目的 officer 和 officer2 参数（确认二人为现任正职）。",
+            "overlap_org": "中共深圳市福田区委员会/深圳市福田区人民政府",
+            "overlap_period": "待确认",
+            "direction": "undirected",
+            "confidence": "plausible",
+            "source_ids": ["S001"]
+        }
+    ],
+    "governance_record": [],
+    "professional_profile": {
+        "primary_specializations": [],
+        "secondary_specializations": [],
+        "career_pattern": "unknown",
+        "systems_experience": ["government", "party"],
+        "geographic_pattern": ["深圳"],
+        "promotion_velocity": {
+            "summary": "信息不足，无法评估晋升速度。已知曾在福田区任职区长后晋升区委书记。",
+            "notable_fast_promotions": []
+        }
+    },
+    "work_style_and_personality": {
+        "public_style_indicators": [
+            {
+                "trait": "unknown",
+                "evidence": "公开信息不足",
+                "confidence": "unverified",
+                "source_ids": []
+            }
+        ],
+        "speech_themes": [],
+        "management_signals": [],
+        "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    },
+    "network_metrics": {},
+    "risk_and_integrity_signals": [
+        {
+            "type": "none_found",
+            "description": "本次调研未发现周江涛的纪律审查、审计问题或负面媒体报道。审核范围受限于网络访问限制。",
+            "date": "2026-07-22",
+            "confidence": "unverified",
+            "source_ids": []
+        }
+    ],
+    "source_register": [
+        {
+            "id": "S001",
+            "title": "福田区 - 维基百科",
+            "url": "https://zh.wikipedia.org/zh-cn/%E7%A6%8F%E7%94%B0%E5%8C%BA",
+            "publisher": "维基百科",
+            "published_at": "2026-07-20",
+            "accessed_at": "2026-07-22",
+            "source_type": "encyclopedia",
+            "reliability": "medium",
+            "notes": "Infobox显示周江涛为区委书记（officer参数）。页面上次编辑于2026-07-20，信息时效性高。"
+        }
+    ],
+    "confidence_summary": {
+        "identity": "unverified",
+        "current_role": "confirmed",
+        "career_completeness": "thin",
+        "relationship_confidence": "low",
+        "biggest_gap": "周江涛的完整履历（出生、教育、历任职务）完全缺失。网络搜索对中文来源严重受限。"
+    },
+    "open_questions": [
+        {
+            "priority": "critical",
+            "question": "周江涛的出生年份、籍贯、教育背景是什么？",
+            "why_it_matters": "基础身份信息缺失，影响去重和人物画像",
+            "suggested_queries": ["周江涛 简历 福田", "周江涛 出生", "周江涛 教育"],
+            "last_attempted": "2026-07-22"
+        },
+        {
+            "priority": "critical",
+            "question": "周江涛何时从区长升任区委书记？",
+            "why_it_matters": "确定区委书记到任时间，建立职位更替时间线",
+            "suggested_queries": ["周江涛 任福田区委书记 任命", "周江涛 福田区委书记 到任"],
+            "last_attempted": "2026-07-22"
+        },
+        {
+            "priority": "critical",
+            "question": "周江涛的前任区委书记是谁？",
+            "why_it_matters": "建立完整的predecessor_successor关系",
+            "suggested_queries": ["福田区 前任区委书记", "福田区委书记 历任"],
+            "last_attempted": "2026-07-22"
+        },
+        {
+            "priority": "high",
+            "question": "周江涛此前在何处任职？",
+            "why_it_matters": "完整履历是人物画像的核心组成部分",
+            "suggested_queries": ["周江涛 任前公示", "周江涛 工作经历"],
+            "last_attempted": "2026-07-22"
+        }
+    ]
+}
