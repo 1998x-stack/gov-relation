@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "深圳市",
+    "region": "龙岗区",
+    "job": "区长",
+    "task_id": "guangdong_龙岗区",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "longgang_wang_cefei",
+    "name": "王策飞",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族（推断）",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "王策飞_未知",
+      "name_birthplace": "王策飞_未知"
+    }
+  },
+  "current_status": {
+    "current_post": "龙岗区区长（百度百科标注为现任）",
+    "current_org": "深圳市龙岗区人民政府",
+    "administrative_rank": "副厅级（推断）",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S002"]
+  },
+  "career_timeline": [
+    {"start": "", "end": "", "org": "深圳市规划和自然资源局", "title": "副局长", "level": "正局级", "location": "深圳", "system": "government", "rank": "正局级", "is_key_promotion": false, "notes": "王策飞从该职调任龙岗区长", "confidence": "medium", "source_ids": ["S003"]},
+    {"start": "约2021年", "end": "至今", "org": "深圳市龙岗区人民政府", "title": "龙岗区长", "level": "副厅级", "location": "深圳龙岗区", "system": "government", "rank": "副厅级", "is_key_promotion": true, "notes": "接替代金涛任龙岗区长", "confidence": "medium", "source_ids": ["S002", "S003"]}
+  ],
+  "organizations": [
+    {"org": "深圳市龙岗区人民政府", "role": "区长", "period": "约2021-至今"},
+    {"org": "深圳市规划和自然资源局", "role": "副局长", "period": "之前"}
+  ],
+  "relationships": [
+    {"person": "余锡权", "person_id": "longgang_yu_xiquan", "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "王策飞作为区长与区委书记余锡权党政搭档", "overlap_org": "龙岗区", "overlap_period": "至今", "direction": "undirected", "confidence": "medium", "source_ids": ["S001", "S002"]},
+    {"person": "张礼卫", "person_id": "longgang_zhang_liwei", "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "张礼卫为龙岗区委书记时王策飞为区长", "overlap_org": "龙岗区", "overlap_period": "约2021-2024", "direction": "undirected", "confidence": "medium", "source_ids": ["S003"]},
+    {"person": "代金涛", "person_id": "longgang_dai_jintao", "relationship_type": "predecessor_successor", "strength": "medium", "evidence": "王策飞接替代金涛任龙岗区长", "overlap_org": "龙岗区政府", "overlap_period": "约2021年", "direction": "undirected", "confidence": "low", "source_ids": ["S003"]}
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["城市规划", "自然资源管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["深圳"],
+    "promotion_velocity": {
+      "summary": "信息不足，无法详细评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "信息来自百度百科和公开报道，部分细节待核实"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "未发现公开的纪律处分或负面报道", "date": "2026-07-22", "confidence": "confirmed", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "龙岗区 维基百科", "url": "https://zh.wikipedia.org/wiki/%E9%BE%99%E5%B2%97%E5%8C%BA", "publisher": "维基百科", "published_at": "", "accessed_at": "2026-07-22", "source_type": "encyclopedia", "reliability": "medium", "notes": "确认余锡权为现任龙岗区委书记"},
+    {"id": "S002", "title": "深圳市龙岗区人民政府 百度百科", "url": "https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3%E5%B8%82%E9%BE%99%E5%B2%97%E5%8C%BA%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C", "publisher": "百度百科", "published_at": "", "accessed_at": "2026-07-22", "source_type": "encyclopedia", "reliability": "medium", "notes": "标注王策飞为龙岗区长"},
+    {"id": "S003", "title": "公开新闻报道", "url": "", "publisher": "", "published_at": "", "accessed_at": "2026-07-22", "source_type": "news", "reliability": "low", "notes": "王策飞曾任深圳市规划和自然资源局副局长，约2021年调任龙岗区长"}
+  ],
+  "confidence_summary": {
+    "identity": "low",
+    "current_role": "medium",
+    "career_completeness": "minimal",
+    "relationship_confidence": "low",
+    "biggest_gap": "王策飞出生年、籍贯、教育背景等基础信息缺失"
+  },
+  "open_questions": [
+    {"priority": "critical", "question": "王策飞的出生年份和籍贯", "why_it_matters": "基础身份信息", "suggested_queries": ["王策飞 简历", "王策飞 出生"], "last_attempted": "2026-07-22"},
+    {"priority": "high", "question": "王策飞是否为现任龙岗区长？余锡权任区委书记后区长是否有变动", "why_it_matters": "确认最核心的党政搭档关系", "suggested_queries": ["王策飞 2026", "龙岗区 区长 任免"], "last_attempted": "2026-07-22"},
+    {"priority": "high", "question": "王策飞在深圳市规划和自然资源局的完整工作经历", "why_it_matters": "了解其专业背景和关系网络", "suggested_queries": ["王策飞 规划和自然资源局"], "last_attempted": "2026-07-22"}
+  ]
+}

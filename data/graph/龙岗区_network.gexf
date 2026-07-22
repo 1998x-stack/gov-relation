@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>深圳市龙岗区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="余锡权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙岗区委书记"/>
+          <attvalue for="2" value="中共深圳市龙岗区委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+          <attvalue for="6" value="维基百科-龙岗区(zh.wikipedia.org); 龙岗区政府官网(lg.gov.cn)"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王策飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="龙岗区区长"/>
+          <attvalue for="2" value="深圳市龙岗区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+          <attvalue for="6" value="百度百科-深圳市龙岗区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="张礼卫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市副市长（曾任龙岗区委书记）"/>
+          <attvalue for="2" value="深圳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+          <attvalue for="6" value="公开新闻报道"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共深圳市龙岗区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="深圳市龙岗区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="深圳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共深圳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="龙岗区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙岗区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="龙岗区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙岗区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="约2021年-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p10" target="o1" label="龙岗区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙岗区委书记"/>
+          <attvalue for="2" value="后调任深圳市副市长"/>
+          <attvalue for="3" value="2021年-2024年"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p10" target="o3" label="深圳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2024年-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p11" target="o2" label="龙岗区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙岗区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查-待查"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="余锡权（区委书记）与王策飞（区长）党政搭档"/>
+          <attvalue for="2" value="龙岗区"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p1" target="p10" label="继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="继任"/>
+          <attvalue for="1" value="余锡权接替张礼卫任龙岗区委书记"/>
+          <attvalue for="2" value="龙岗区委"/>
+          <attvalue for="3" value="2024年"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p10" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="张礼卫（区委书记）与王策飞（区长）党政搭档"/>
+          <attvalue for="2" value="龙岗区"/>
+          <attvalue for="3" value="约2021-2024"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p10" target="p1" label="继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="继任"/>
+          <attvalue for="1" value="张礼卫升任深圳市副市长后由余锡权接替"/>
+          <attvalue for="2" value="龙岗区-深圳市"/>
+          <attvalue for="3" value="2024"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
