@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>gov-relation Research Agent</creator>
+    <description>云城区领导班子工作关系网络 — 包含区委领导、区政府领导、区人大、区政协及其相互关系</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+      <attribute id="3" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="叶伟光">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共云城区委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="陈晓周">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="云城区委副书记、区长"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="邓世民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、政法委书记"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="利学时">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="林燕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="朱必波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="宋正伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="陈作宏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="甘树兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="陈友泉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="彭庆林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="尹章生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="邓腾芳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="冯桂聪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="谭捷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="祝传伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="王木强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="李润">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共云城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="云城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政府"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="云城区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="人大"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="云城区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政协"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="云城区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="乡科级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="云城区委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="乡科级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="云城区纪委监委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="纪律检查"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="云城街道办事处">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="乡镇/街道"/>
+          <attvalue for="3" value="乡科级"/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="中共云城区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="云城区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o1" label="云城区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o6" label="区委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p3" target="o8" label="云城街道党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p4" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p5" target="o5" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p6" target="o2" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p7" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p8" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p9" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p10" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p11" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p12" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p13" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p14" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p15" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p16" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p17" target="o3" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p18" target="o4" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p3" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p1" target="p4" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p1" target="p5" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p1" target="p6" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p1" target="p7" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p1" target="p8" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p1" target="p9" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p1" target="p10" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p1" target="p11" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p1" target="p12" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p2" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p2" target="p13" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p2" target="p14" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p2" target="p15" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p2" target="p16" label="上下级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p3" target="p4" label="同级" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p1" target="p17" label="协同" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p1" target="p18" label="协同" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
