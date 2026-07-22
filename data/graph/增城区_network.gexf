@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>gov-relation Research Agent</creator>
+    <description>增城区领导班子工作关系网络 - 广东省广州市增城区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+      <attribute id="3" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="赵国生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广州市副市长、增城区委书记、增城经济技术开发区党工委书记"/>
+          <attvalue for="2" value="中共广州市增城区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="林怡辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="增城区委副书记、区长"/>
+          <attvalue for="2" value="广州市增城区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="祁森林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="增城区人大常委会主任"/>
+          <attvalue for="2" value="增城区人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="丘岳峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="增城区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议广州市增城区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共广州市增城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共广州市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="广州市增城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="广州市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="增城经济技术开发区党工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共广州市增城区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="增城区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="广州市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中国人民政治协商会议广州市增城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="广州市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="增城区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月以增城区委书记身份出席区领导干部警示教育会"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o3" label="增城经济技术开发区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="增城区委副书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月以区长身份主持区领导干部警示教育会"/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o4" label="增城区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o5" label="增城区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="~present"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵国生作为区委书记，林怡辉作为区长，是党政一把手搭档关系"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="p3" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵国生（区委书记）与祁森林（区人大常委会主任）在增城区委常委会同班共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p4" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵国生（区委书记）与丘岳峰（区政协主席）在增城区合作共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="p3" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林怡辉（区长）与祁森林（区人大常委会主任）在增城区合作共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="p4" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林怡辉（区长）与丘岳峰（区政协主席）在增城区合作共事"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
