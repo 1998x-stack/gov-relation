@@ -42,8 +42,8 @@ per-person graph JSON, and queue-driven investigation dispatch.
 Before launching research agents, inspect local state:
 
 1. Read `report/open_gaps.md` if present.
-2. Run or inspect `python3 run_todo_loop.py --status` when the task maps to `data/TODO.json`.
-3. Use `python3 generate_build_template.py <task_id>` when a task id is known.
+2. Run or inspect `python3 scripts/tools/run_todo_loop.py --status` when the task maps to `data/TODO.json`.
+3. Use `python3 scripts/tools/generate_build_template.py <task_id>` when a task id is known.
 4. Run `python3 scripts/inventory.py` for artifact coverage when useful.
 5. Check for existing:
    - `build_<slug>_data.py`
