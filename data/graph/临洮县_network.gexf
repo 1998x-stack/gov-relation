@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>临洮县领导班子工作关系网络 - 数据来源: 定西市人民政府官网, Wikipedia及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="（现任县委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临洮县委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="（现任县长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临洮县委副书记、县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="石琳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（曾任临洮县委书记，后任定西市委常委等）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp04" label="张智全">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（曾任临洮县委书记2000-2003，后任庆阳市委书记、白银市委书记，2018年被查处）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp05" label="张智全">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（曾任临洮县县长1997-2000）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp10" label="汪尚学">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="定西市委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pp11" label="黄欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="定西市委副书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp12" label="何英禅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="定西市委常委、副市长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp20" label="（县委副书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临洮县委副书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp21" label="（常务副县长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临洮县委常委、常务副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp22" label="（纪委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临洮县委常委、纪委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp23" label="（组织部长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="临洮县委常委、组织部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="oo01" label="中共临洮县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="临洮县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="临洮县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="中国人民政治协商会议临洮县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="中共临洮县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="中共临洮县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="中共定西市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo08" label="定西市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="临洮县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp02" target="oo01" label="临洮县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp02" target="oo02" label="临洮县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp03" target="oo01" label="临洮县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp04" target="oo01" label="临洮县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp05" target="oo02" label="临洮县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp10" target="oo07" label="定西市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="定西市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp11" target="oo07" label="定西市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="定西市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp12" target="oo07" label="定西市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="定西市委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp12" target="oo08" label="定西市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="定西市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp20" target="oo01" label="临洮县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp21" target="oo01" label="临洮县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp21" target="oo02" label="临洮县常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县常务副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp22" target="oo01" label="临洮县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp22" target="oo05" label="临洮县纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县纪委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp23" target="oo01" label="临洮县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp23" target="oo06" label="临洮县委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="临洮县委组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pp01" target="pp10" label="临洮县委书记受定西市委书记领导" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="临洮县委书记受定西市委书记领导"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pp02" target="pp10" label="临洮县长受定西市委书记领导" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="临洮县长受定西市委书记领导"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pp01" target="pp02" label="临洮县委书记与县长: 党政一把手配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="临洮县委书记与县长: 党政一把手配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pp01" target="pp20" label="县委书记与县委副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县委书记与县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pp01" target="pp21" label="县委书记与常务副县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县委书记与常务副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pp01" target="pp22" label="县委书记与纪委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县委书记与纪委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pp01" target="pp03" label="（现任）接替石琳任临洮县委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="（现任）接替石琳任临洮县委书记"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pp03" target="pp04" label="石琳接替张智全任临洮县委书记（推测）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="石琳接替张智全任临洮县委书记（推测）"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pp02" target="pp05" label="（现任）接替张智全等任临洮县长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="（现任）接替张智全等任临洮县长"/>
+          <attvalue for="2" value="unverified"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pp04" target="pp05" label="张智全从临洮县长升任临洮县委书记（同人不同角色）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="promotion_chain"/>
+          <attvalue for="1" value="张智全从临洮县长升任临洮县委书记（同人不同角色）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
