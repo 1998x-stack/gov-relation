@@ -1,6 +1,25 @@
 # Open Gaps Registry
 > Last updated: 2026-07-22
 
+## 🆕 雷州市 (2026-07-22)
+### ⭐⭐⭐⭐⭐ Critical — 两位核心领导履历完全空白
+**Web Access Status (2026-07-22):** Exa rate-limited, Baidu 403, leizhou.gov.cn HTTPS timeout (HTTP works), Jina Reader timeout, Google/Bing search blocked.
+**Confirmed sources:** 雷州市人民政府网站 (www.leizhou.gov.cn via HTTP) — official site accessible, leadership names confirmed from news reports.
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| **吴松江** | **雷州市委书记** | **出生年月、出生地、教育背景、入党时间、全部工作经历；到任时间；前任是谁** | **2026-07-22** | **身份已通过官方新闻"吴松江率队到白沙镇开展平安夜访活动"确认。confirmed as of 2026-07-22。** |
+| **闫嘉伟** | **雷州市委副书记、市长** | **出生年月、出生地、教育背景、入党时间、全部工作经历；到任时间；前任是谁** | **2026-07-22** | **身份已通过多篇常务会议报道确认（"闫嘉伟市长主持召开市政府第XXX次常务会议"）。confirmed as of 2026-07-22。** |
+| 雷州市 | 市委常委会完整名单 | 专职副书记、各常委姓名及具体职务分工 | 2026-07-22 | 领导之窗页面JS动态渲染，text模式无法获取完整列表 |
+| 雷州市 | 副市长名单及分工 | 非常委副市长的姓名和分工 | 2026-07-22 | 未从公开渠道确认 |
+
+**Suggested Queries for Next Attempt:**
+- `吴松江 雷州 书记 简历` — 找到吴松江完整履历
+- `闫嘉伟 雷州 市长 任命` — 找到闫嘉伟到任时间和履历
+- `雷州市 任前公示 组织部` — 湛江市委组织部关于雷州的干部任前公示
+- `site:thepaper.cn 雷州` — 澎湃新闻的雷州报道
+- `雷州市 人大 任命 市长` — 市人大常委会的市长任命公告
+
 ## 🆕 遂溪县 (2026-07-22)
 ### ⭐⭐⭐⭐⭐ Critical — 县委书记身份完全未知
 **Web Access Status (2026-07-22):** Exa rate-limited, Baidu 403, suixi.gov.cn unreachable (timeout), Jina Reader timeout, Google/Bing search blocked.
