@@ -10,7 +10,10 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 from .inventory import collect_inventory
+from .log import get_logger
 from .paths import DATABASE_DIR, DOCS_DIR, GRAPH_DIR, PERSONS_DIR, REPORT_DIR, REPO_ROOT
+
+logger = get_logger(__name__)
 
 
 def list_databases() -> list[dict]:

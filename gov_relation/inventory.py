@@ -5,7 +5,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from .log import get_logger
 from .paths import DATABASE_DIR, DOCS_DIR, GRAPH_DIR, JSON_DIR, PERSONS_DIR, REPORT_DIR, REPO_ROOT, TMP_DIR
+
+logger = get_logger(__name__)
 
 
 @dataclass(frozen=True)
@@ -42,6 +45,9 @@ def _network_stem(path: Path) -> str:
 
 def collect_inventory(root: Path = REPO_ROOT) -> Inventory:
     scripts = sorted(root.glob("build_*_data.py"))
+    build_dir = root / "scripts" / "build"
+    if build_dir.exists():
+        scripts.extend(sorted(build_dir.glob("*_data.py")))
     dbs = sorted(DATABASE_DIR.glob("*.db"))
     graphs = sorted(GRAPH_DIR.glob("*.gexf"))
     db_stems = {_network_stem(path) for path in dbs}

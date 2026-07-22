@@ -12,9 +12,12 @@ from pathlib import Path
 from typing import Any
 
 from .dispatch import build_dispatch_plan
+from .log import get_logger
 from .paths import DISPATCH_LOCK_DIR, DISPATCH_STATE_PATH, REPO_ROOT
 from .slugs import artifact_paths
 from .todo import TodoItem, find_item_by_id, iter_items, item_summary, load_todo, mark_done, save_todo
+
+logger = get_logger(__name__)
 
 
 LOCK_STALE_SECONDS = 10 * 60

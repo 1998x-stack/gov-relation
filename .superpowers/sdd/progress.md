@@ -1,0 +1,17 @@
+# gov-relation refactor progress ledger
+
+Task 1: complete (commits 836fc94..836fc94, schema.py)
+Task 2: complete (commits 6cbf7c3..6cbf7c3, colors.py)
+Task 3: complete (commits fbc5b3e..fbc5b3e, gexf.py)
+Task 4: complete (commits 4979f97..4979f97, log.py)
+Task 5: complete (commits 61579b0..61579b0, runner.py + __init__.py)
+Task 6: complete (commits 558cc1c..558cc1c, scripts migrated to scripts/tools/)
+Task 7: complete (commits 1f49958..1f49958, 380 completed tmp dirs removed)
+Task 8: complete (commits c77c452..c77c452, database filenames normalized)
+Task 9: complete (commits 6ac51d1..6ac51d1, inventory scan paths updated)
+Task 10: complete (commits 1ca7c9c..1ca7c9c, unified logging enabled in gov_relation modules + worker_loop)
+Task 11: complete (commits 4c8580e..4c8580e, log files organized into batch/ and tasks/ subdirectories)
+Task 12: complete (SKILL.md paths updated, .gitignored)
+Task 13: complete (commits 179ede4..179ede4, 20 build scripts migrated to scripts/build/)
+Task 14: complete (commits 90163d5..90163d5, README updated)
+Task 15: complete (final verification: inventory OK, queue OK, demo build PASSED, log file created, git status clean)
