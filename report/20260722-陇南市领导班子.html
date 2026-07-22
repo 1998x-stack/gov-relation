@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陇南市领导班子 · 工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface-2: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e8e0d4;
+  --text-muted: #8a8478;
+  --accent: #E03C31;
+  --accent-dim: rgba(224,60,49,0.15);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201,169,78,0.12);
+  --blue: #4a7bb5;
+  --red: #c0392b;
+  --orange: #d4742a;
+  --radius: 4px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+.header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+.header-badge {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.header .subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.header .date {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+.stat-item {
+  background: var(--surface);
+  padding: 28px 20px;
+  text-align: center;
+}
+.stat-number {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: 'Noto Serif SC', serif;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* Section */
+.section {
+  margin-bottom: 56px;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title::before {
+  content: '';
+  width: 3px;
+  height: 20px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* Person Card Grid */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  position: relative;
+  transition: border-color 0.2s;
+}
+.person-card:hover { border-color: var(--accent); }
+.person-card .role-tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.role-secretary { background: var(--accent-dim); color: #ff6b5a; border: 1px solid rgba(224,60,49,0.3); }
+.role-mayor { background: rgba(74,123,181,0.15); color: #6a9fd8; border: 1px solid rgba(74,123,181,0.3); }
+.role-deputy { background: rgba(100,100,100,0.15); color: #b0a898; border: 1px solid rgba(100,100,100,0.3); }
+.role-discipline { background: rgba(212,116,42,0.15); color: #e8944a; border: 1px solid rgba(212,116,42,0.3); }
+.role-other { background: rgba(150,150,150,0.1); color: #999488; border: 1px solid rgba(150,150,150,0.2); }
+
+.person-card h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.person-card .post {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.person-card .meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.person-card .connection-badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  margin-top: 8px;
+  background: var(--gold-dim);
+  color: var(--gold);
+  border: 1px solid rgba(201,169,78,0.25);
+}
+
+/* Timeline */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 24px 20px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.timeline-item .tl-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.timeline-item .tl-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 2px 0;
+}
+.timeline-item .tl-org {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Relationship Table */
+.rel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.rel-table th {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.rel-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.rel-table tr:hover td { background: var(--surface-2); }
+.conf-strong { color: var(--gold); }
+.conf-medium { color: var(--text-muted); }
+
+/* Insight Panel */
+.insight-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.insight-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+.insight-card .insight-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.insight-card h4 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.insight-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Gap section */
+.gap-list { list-style: none; }
+.gap-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gap-list li::before { content: '△'; color: var(--accent); font-size: 10px; }
+.gap-priority-high { border-left: 2px solid var(--accent); padding-left: 12px; }
+.gap-priority-high::before { content: '▲'; color: var(--accent); }
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  margin-top: 48px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .insight-panel { grid-template-columns: 1fr; }
+  .person-grid { grid-template-columns: 1fr; }
+  .header h1 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-badge">机密 · 调查简报</div>
+    <h1>陇南市领导班子<br>工作关系网络</h1>
+    <div class="subtitle">甘肃省 · 地级市 · 陇南市</div>
+    <div class="date">调查日期：2026-07-22 &nbsp;|&nbsp; 来源：longnan.gov.cn</div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-number">18</div>
+      <div class="stat-label">人物</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">8</div>
+      <div class="stat-label">组织</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">27</div>
+      <div class="stat-label">任职</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">22</div>
+      <div class="stat-label">关系</div>
+    </div>
+  </div>
+
+  <!-- Core Leaders -->
+  <div class="section">
+    <div class="section-title">核心人物</div>
+    <div class="person-grid">
+      <div class="person-card">
+        <div class="role-tag role-secretary">市委书记</div>
+        <h3>刘永革</h3>
+        <div class="post">中共陇南市委员会 · 主持市委全面工作</div>
+        <div class="meta">
+          男 · 汉族 · 1971年12月生<br>
+          大学学历 · 中共党员
+        </div>
+        <div class="connection-badge">⟐ 书记-市长搭班</div>
+      </div>
+      <div class="person-card">
+        <div class="role-tag role-mayor">市长</div>
+        <h3>张强</h3>
+        <div class="post">陇南市人民政府 · 主持市政府全面工作</div>
+        <div class="meta">
+          男 · 汉族 · 中共党员<br>
+          兼任市委副书记
+        </div>
+        <div class="connection-badge">⟐ 书记-市长搭班</div>
+      </div>
+      <div class="person-card">
+        <div class="role-tag role-deputy">市委副书记</div>
+        <h3>朱锋涛</h3>
+        <div class="post">中共陇南市委员会</div>
+      </div>
+      <div class="person-card">
+        <div class="role-tag role-discipline">纪委书记</div>
+        <h3>王立军</h3>
+        <div class="post">市纪委 · 市监委</div>
+        <div class="connection-badge">⟐ 纪委-组织衔接</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Roster -->
+  <div class="section">
+    <div class="section-title">领导班子全员名录</div>
+
+    <h4 style="font-family:'Noto Serif SC',serif;font-weight:600;margin-bottom:12px;font-size:15px;">市委常委会</h4>
+    <div class="person-grid">
+      <div class="person-card"><div class="role-tag role-secretary">书记</div><h3>刘永革</h3><div class="post">市委书记</div></div>
+      <div class="person-card"><div class="role-tag role-mayor">副书记/市长</div><h3>张强</h3><div class="post">市委副书记、市长</div></div>
+      <div class="person-card"><div class="role-tag role-deputy">副书记</div><h3>朱锋涛</h3><div class="post">市委副书记</div></div>
+      <div class="person-card"><div class="role-tag role-discipline">纪委书记</div><h3>王立军</h3><div class="post">市委常委、市纪委书记、市监委主任</div></div>
+      <div class="person-card"><div class="role-tag role-other">秘书长</div><h3>唐进军</h3><div class="post">市委常委、秘书长</div></div>
+      <div class="person-card"><div class="role-tag role-other">区委书记</div><h3>李辉</h3><div class="post">市委常委、武都区委书记</div></div>
+      <div class="person-card"><div class="role-tag role-other">常务副市长</div><h3>马国开</h3><div class="post">市委常委、常务副市长</div></div>
+      <div class="person-card"><div class="role-tag role-other">宣传部部长</div><h3>王凡</h3><div class="post">市委常委、宣传部部长</div></div>
+      <div class="person-card"><div class="role-tag role-other">组织/统战</div><h3>魏世东</h3><div class="post">市委常委、组织部部长、统战部部长</div></div>
+      <div class="person-card"><div class="role-tag role-other">政法委书记</div><h3>陈军</h3><div class="post">市委常委、政法委书记</div></div>
+      <div class="person-card"><div class="role-tag role-other">军分区</div><h3>徐光耀</h3><div class="post">市委常委、军分区政委</div></div>
+      <div class="person-card"><div class="role-tag role-other">副市长</div><h3>闫和浩</h3><div class="post">市委常委、副市长</div></div>
+    </div>
+
+    <h4 style="font-family:'Noto Serif SC',serif;font-weight:600;margin:24px 0 12px;font-size:15px;">市政府领导</h4>
+    <div class="person-grid">
+      <div class="person-card"><div class="role-tag role-deputy">副市长</div><h3>汪精海</h3><div class="post">陇南市副市长</div></div>
+      <div class="person-card"><div class="role-tag role-deputy">副市长</div><h3>张波</h3><div class="post">陇南市副市长</div></div>
+      <div class="person-card"><div class="role-tag role-deputy">副市长</div><h3>周济</h3><div class="post">陇南市副市长</div></div>
+      <div class="person-card"><div class="role-tag role-deputy">副市长</div><h3>王英菊</h3><div class="post">陇南市副市长</div></div>
+      <div class="person-card"><div class="role-tag role-deputy">副市长</div><h3>刘东晓</h3><div class="post">陇南市副市长</div></div>
+      <div class="person-card"><div class="role-tag role-other">秘书长</div><h3>周定堂</h3><div class="post">陇南市政府秘书长</div></div>
+    </div>
+  </div>
+
+  <!-- Relationship Matrix -->
+  <div class="section">
+    <div class="section-title">关系矩阵</div>
+    <table class="rel-table">
+      <thead>
+        <tr><th>人物A</th><th>人物B</th><th>关系类型</th><th>上下文</th><th>置信度</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>刘永革</td><td>张强</td><td>上下级/搭档</td><td>书记-市长搭班</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>朱锋涛</td><td>班子配合</td><td>书记-副书记</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>马国开</td><td>上下级</td><td>市长-常务副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>闫和浩</td><td>班子配合</td><td>市长-副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>汪精海</td><td>班子配合</td><td>市长-副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>张波</td><td>班子配合</td><td>市长-副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>周济</td><td>班子配合</td><td>市长-副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>王英菊</td><td>班子配合</td><td>市长-副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>张强</td><td>刘东晓</td><td>班子配合</td><td>市长-副市长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>王立军</td><td>班子配合</td><td>书记-纪委书记</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>唐进军</td><td>工作配合</td><td>书记-秘书长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>李辉</td><td>领导配合</td><td>书记-区委书记</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>王凡</td><td>班子配合</td><td>书记-宣传部部长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>魏世东</td><td>班子配合</td><td>书记-组织统战部长</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>刘永革</td><td>陈军</td><td>班子配合</td><td>书记-政法委书记</td><td class="conf-strong">● 已确认</td></tr>
+        <tr><td>王立军</td><td>魏世东</td><td>工作衔接</td><td>纪委-组织部</td><td class="conf-medium">○ 中</td></tr>
+        <tr><td>陈军</td><td>魏世东</td><td>工作衔接</td><td>政法委-组织部</td><td class="conf-medium">○ 中</td></tr>
+        <tr><td>唐进军</td><td>王凡</td><td>工作配合</td><td>秘书长-宣传部</td><td class="conf-medium">○ 中</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Timeline -->
+  <div class="section">
+    <div class="section-title">近期活动时间线</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-date">2026-07-21</div>
+        <div class="tl-title">刘永革在徽县和陇南经济开发区调研</div>
+        <div class="tl-org">陇南市委</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">2026-07-20</div>
+        <div class="tl-title">张强调研数字政府建设工作</div>
+        <div class="tl-org">陇南市人民政府</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">2026-07-17</div>
+        <div class="tl-title">张强会见中国黄金、山东黄金、紫金矿业、金川集团、招金矿业负责人</div>
+        <div class="tl-org">陇南市人民政府</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">2026-07-17</div>
+        <div class="tl-title">刘永革主持召开市委常委会会议</div>
+        <div class="tl-org">中共陇南市委员会</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-date">2026-07-15</div>
+        <div class="tl-title">刘永革在武都区调研</div>
+        <div class="tl-org">陇南市委</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Insights -->
+  <div class="section">
+    <div class="section-title">关键洞察</div>
+    <div class="insight-panel">
+      <div class="insight-card">
+        <div class="insight-label">🔴 产业动向</div>
+        <h4>矿业经济主导地位</h4>
+        <p>张强2026年7月密集会见多家头部矿业企业（黄金、有色），显示陇南市以矿业（特别是黄金）为核心发展引擎。这一产业定位是理解地方权力格局和资源配置的关键视角。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">🔴 权力结构</div>
+        <h4>市区一体化格局</h4>
+        <p>李辉以市委常委身份兼任武都区委书记，是典型的市区一体化干部安排。武都区作为陇南市唯一市辖区，其重要性在领导配置中得到体现。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">🔴 人事权集中</div>
+        <h4>组织统战合一</h4>
+        <p>魏世东同时兼任组织部部长和统战部部长，在干部选拔、党外人士联系领域拥有较大权力范围，是了解陇南人事变动的关键联系人。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">🔴 履历空白</div>
+        <h4>核心人物履历待查</h4>
+        <p>刘永革、张强及全体常委、副市长的完整职业履历均为待查状态。这是当前调查最大信息缺口，直接制约关系网络的深度分析。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Open Gaps -->
+  <div class="section">
+    <div class="section-title">信息缺口</div>
+    <ul class="gap-list">
+      <li class="gap-priority-high"><strong>高优先</strong> —— 刘永革到陇南前的完整职业履历（出生地、入党时间、历任岗位）</li>
+      <li class="gap-priority-high"><strong>高优先</strong> —— 张强的出生年月、籍贯、学历及到陇南前的完整职业履历</li>
+      <li class="gap-priority-high"><strong>高优先</strong> —— 上一任陇南市委书记去向（现任职务/退休）</li>
+      <li class="gap-priority-high"><strong>高优先</strong> —— 刘永革何时接任陇南市委书记</li>
+      <li class="gap-priority-high"><strong>高优先</strong> —— 张强何时接任陇南市市长</li>
+      <li><strong>中优先</strong> —— 12名市委常委中其他人的籍贯、出生年月、学历</li>
+      <li><strong>中优先</strong> —— 副市长和秘书长的完整履历</li>
+      <li><strong>中优先</strong> —— 领导成员之间是否有历史上共同工作过（横向关联）</li>
+      <li><strong>低优先</strong> —— 陇南市各县区领导班子的详细构成</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    陇南市领导班子工作关系网络 · 2026-07-22 · 数据来源: longnan.gov.cn<br>
+    本报告为初步调查产物，空缺信息标注为"待查"
+  </div>
+
+</div>
+
+</body>
+</html>
