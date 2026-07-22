@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>OpenCode Research Agent (Sisyphus)</creator>
+    <description>中山市领导关系网络 (Zhongshan Leadership Network) - 广东省</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+      <attribute id="8" title="level" type="string"/>
+      <attribute id="9" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="郭文海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共中山市委"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1968年11月"/>
+          <attvalue for="6" value="公开媒体报道; 广东省政府网站"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="肖展欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="中山市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1975年1月"/>
+          <attvalue for="6" value="公开媒体报道; 广东省政府网站"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="林锐熙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记"/>
+          <attvalue for="2" value="中共中山市委"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1973年12月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="叶红光">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、常务副市长"/>
+          <attvalue for="2" value="中山市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1971年9月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="杨文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、组织部部长"/>
+          <attvalue for="2" value="中共中山市委组织部"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1972年5月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="李长春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、市纪委书记"/>
+          <attvalue for="2" value="中共中山市纪律检查委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1970年3月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="曾奕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、宣传部部长"/>
+          <attvalue for="2" value="中共中山市委宣传部"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974年8月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="0" g="180" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="赖泽华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1965年9月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="危伟汉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1965年7月"/>
+          <attvalue for="6" value="公开媒体报道"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共中山市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="中山市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中山市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="人大"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议中山市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政协"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共中山市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="纪律检查"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="255" g="180" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共中山市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="230" g="200" b="230"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共中山市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="中山市"/>
+        </attvalues>
+        <viz:color r="230" g="200" b="230"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="佛山市政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="佛山市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共佛山市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="佛山市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="广东省交通运输厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="副省级"/>
+          <attvalue for="9" value="广州市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="广东省生态环境厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="副省级"/>
+          <attvalue for="9" value="广州市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="广东省退役军人事务厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="副省级"/>
+          <attvalue for="9" value="广州市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="广东省发展和改革委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="副省级"/>
+          <attvalue for="9" value="广州市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共肇庆市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级"/>
+          <attvalue for="9" value="肇庆市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2022年12月 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o8" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="佛山市委副书记、市长"/>
+          <attvalue for="2" value="2014年6月 - 2022年12月"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o9" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="佛山市委常委"/>
+          <attvalue for="2" value="2014年6月 - 2022年12月"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o9" label="市委秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="佛山市委秘书长"/>
+          <attvalue for="2" value="2011年10月 - 2014年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o8" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="佛山市副市长"/>
+          <attvalue for="2" value="2009年 - 2011年10月"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2022年1月 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任（市委副书记、市长）"/>
+          <attvalue for="2" value="2022年1月 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p2" target="o10" label="副厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省交通运输厅副厅长"/>
+          <attvalue for="2" value="2018年 - 2022年1月"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p2" target="o10" label="铁路投资集团总经理" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省铁路建设投资集团"/>
+          <attvalue for="2" value="2016年 - 2018年"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p3" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2023年 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p3" target="o7" label="宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中山市委常委、宣传部部长"/>
+          <attvalue for="2" value="2019年 - 2023年"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p4" target="o2" label="常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中山市委常委、常务副市长"/>
+          <attvalue for="2" value="2021年 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p4" target="o13" label="副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省发改委副主任"/>
+          <attvalue for="2" value="2018年 - 2021年"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p5" target="o6" label="组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中山市委常委、组织部部长"/>
+          <attvalue for="2" value="2022年 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p6" target="o5" label="市纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中山市委常委、市纪委书记"/>
+          <attvalue for="2" value="2021年 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p7" target="o7" label="宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中山市委常委、宣传部部长"/>
+          <attvalue for="2" value="2022年 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p8" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任市委书记"/>
+          <attvalue for="2" value="2019年10月 - 2021年11月"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p8" target="o14" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="肇庆市委书记"/>
+          <attvalue for="2" value="2016年3月 - 2019年10月"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p8" target="o11" label="厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省生态环境厅厅长"/>
+          <attvalue for="2" value="2021年11月 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p9" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任市长"/>
+          <attvalue for="2" value="2018年10月 - 2021年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p9" target="o12" label="厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省退役军人事务厅厅长"/>
+          <attvalue for="2" value="2021年8月 - 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记与市长搭班子"/>
+          <attvalue for="2" value="中共中山市委／中山市政府"/>
+          <attvalue for="3" value="2022至今"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p8" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="前后任中山市委书记"/>
+          <attvalue for="2" value="中共中山市委"/>
+          <attvalue for="3" value="2019-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p2" target="p9" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="前后任中山市市长"/>
+          <attvalue for="2" value="中山市政府"/>
+          <attvalue for="3" value="2018-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p1" target="p4" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记与常务副市长"/>
+          <attvalue for="2" value="中山市"/>
+          <attvalue for="3" value="2022至今"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p3" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委宣传系统前后任/协作"/>
+          <attvalue for="2" value="中共中山市委宣传部"/>
+          <attvalue for="3" value="2022-2023"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p1" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记与副书记"/>
+          <attvalue for="2" value="中共中山市委"/>
+          <attvalue for="3" value="2023至今"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与常务副市长搭班子"/>
+          <attvalue for="2" value="中山市政府"/>
+          <attvalue for="3" value="2021至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
