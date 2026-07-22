@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>华池县领导班子工作关系网络 - 数据来源: 华池县人民政府官网 www.hcx.gov.cn 及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="魏凯选">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="华池县县长（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县委副书记、县政府党组书记、县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="乔兴武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府党组副书记、常务副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp04" label="翟玉泽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp05" label="白东怀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp06" label="黄超">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp07" label="邵维虎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp08" label="郑新春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pp09" label="赫春杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会党组书记、主任候选人"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp10" label="赵怀博">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="政协华池县委员会党组书记、主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="oo01" label="中共华池县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="华池县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="华池县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="中国人民政治协商会议华池县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="华池县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="中共庆阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="庆阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="华池县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="华池县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp02" target="oo02" label="华池县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县人民政府县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp02" target="oo01" label="华池县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp03" target="oo02" label="华池县常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县常务副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp03" target="oo01" label="华池县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp04" target="oo02" label="华池县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp05" target="oo02" label="华池县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp06" target="oo02" label="华池县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp07" target="oo02" label="华池县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp08" target="oo02" label="华池县副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp09" target="oo03" label="华池县人大常委会主任候选人" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县人大常委会主任候选人"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp10" target="oo04" label="华池县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="华池县政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp01" target="pp02" label="魏凯选(书记)与县长(待查): 华池县党政一把手配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="魏凯选(书记)与县长(待查): 华池县党政一把手配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp01" target="pp03" label="魏凯选(书记)与乔兴武(常务副县长): 县委常委班子日常工作配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="魏凯选(书记)与乔兴武(常务副县长): 县委常委班子日常工作配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp03" target="pp02" label="乔兴武(常务副县长)辅助县长(待查)主持县政府日常事务" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="乔兴武(常务副县长)辅助县长(待查)主持县政府日常事务"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp01" target="pp09" label="魏凯选与赫春杰: 县委与人大的工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="魏凯选与赫春杰: 县委与人大的工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp01" target="pp10" label="魏凯选与赵怀博: 县委与政协的工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="魏凯选与赵怀博: 县委与政协的工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
