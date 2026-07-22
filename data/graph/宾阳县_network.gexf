@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>宾阳县领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="梁展凡">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委书记、宾阳县人民武装部党委第一书记"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="1973-11"/>
+          <attvalue for="4" value="https://baike.baidu.com/item/%E6%A2%81%E5%B1%95%E5%87%A1"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="廖伟行">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委副书记、县长、县政府党组书记"/>
+          <attvalue for="2" value="宾阳县人民政府/中共宾阳县委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="罗宏周">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县人大常委会主任"/>
+          <attvalue for="2" value="宾阳县人民代表大会常务委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p4" label="麦阳明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议宾阳县委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p5" label="潘荫文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委副书记"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p6" label="谢欢">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委常委、常务副县长"/>
+          <attvalue for="2" value="中共宾阳县委员会/宾阳县人民政府"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="凌光宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委常委、纪委书记、县监委主任"/>
+          <attvalue for="2" value="中共宾阳县纪律检查委员会/宾阳县监察委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p8" label="徐飞雨">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委常委、组织部部长"/>
+          <attvalue for="2" value="中共宾阳县委员会组织部"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p9" label="吕子瑞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委常委、政法委书记"/>
+          <attvalue for="2" value="中共宾阳县委员会政法委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p10" label="陈强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共宾阳县委员会宣传部"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p11" label="韦定杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宾阳县委常委、县委办公室主任"/>
+          <attvalue for="2" value="中共宾阳县委员会办公室"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.binyang.gov.cn/zwgk/ldzc/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="o100001" label="中共宾阳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="宾阳县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="宾阳县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="中国人民政治协商会议宾阳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共宾阳县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="宾阳县监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="宾阳县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="中共宾阳县委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="中共宾阳县委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100010" label="中共宾阳县委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100011" label="中共宾阳县委员会办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100012" label="中共南宁市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100013" label="南宁市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100014" label="宾阳县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="宾阳县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任县人武部党委第一书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100007" label="宾阳县人民武装部党委第一书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o100014" label="曾任南宁市下辖区县领导职务" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="推测有南宁市辖区或市直部门工作经历，后任宾阳县委副书记、县长后晋升书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o100001" label="宾阳县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2" target="o100002" label="宾阳县县长、县政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="o100002" label="宾阳县副县长、代县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="宾阳县人大常委会任命为副县长、代县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o100003" label="宾阳县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p4" target="o100004" label="宾阳县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o100001" label="宾阳县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o100001" label="宾阳县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p6" target="o100002" label="宾阳县常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="o100001" label="宾阳县委常委、纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p7" target="o100006" label="宾阳县监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p8" target="o100001" label="宾阳县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p9" target="o100001" label="宾阳县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p10" target="o100001" label="宾阳县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p11" target="o100001" label="宾阳县委常委、县委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="梁展凡（县委书记）与廖伟行（县长）为宾阳县党政一把手搭档"/>
+          <attvalue for="2" value="中共宾阳县委员会/宾阳县人民政府"/>
+          <attvalue for="3" value="2024-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p5" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委副书记协助县委书记工作"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p6" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委常委班子共事"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p7" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委常委班子共事"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p8" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委常委班子共事"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p9" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委常委班子共事"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p10" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委常委班子共事"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p11" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委常委班子共事"/>
+          <attvalue for="2" value="中共宾阳县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p2" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县长与常务副县长政府班子共事"/>
+          <attvalue for="2" value="宾阳县人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="梁展凡此前曾任宾阳县县长，后接任县委书记；廖伟行接任县长"/>
+          <attvalue for="2" value="宾阳县人民政府"/>
+          <attvalue for="3" value="2022-2024"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
