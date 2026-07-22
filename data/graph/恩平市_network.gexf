@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>gov-relation Research Agent</creator>
+    <description>恩平市领导班子工作关系网络 — 包含市委领导、市政府领导、前任领导及其相互关系</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+      <attribute id="3" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="strength" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="黎沛荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共恩平市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="陈小平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委副书记、市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="吴彩堂">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委副书记、政法委书记"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="黄海见">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="刘迪雄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="李金元">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="黄建辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="劳沈川">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="邓永信">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="何坚培">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="许坚武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="吴炳琼">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市委常委、宣传部部长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="赵超儿">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="梁健海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="董德顺">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="白建斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="黄金明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市副市长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="岑荣欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市领导"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p19" label="侯惠琴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市领导"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p20" label="董广胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="恩平市领导"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p21" label="谢超武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="江门市人大常委会党组成员"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p22" label="赖惠镇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="化州市委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共恩平市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="恩平市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政府"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="恩平市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="人大"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议恩平市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政协"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="恩平市纪委监委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="纪律检查"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共江门市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="地厅级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="江门市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="政府"/>
+          <attvalue for="3" value="地厅级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="江门市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="人大"/>
+          <attvalue for="3" value="地厅级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共化州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="2" value="党委"/>
+          <attvalue for="3" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="中共恩平市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="恩平市委书记、一级调研员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o1" label="肇庆市文化广电旅游体育局党组书记、局长、一级调研员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o1" label="肇庆市文化广电旅游体育局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o1" label="肇庆市端州区委副书记、区长、区政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="o1" label="肇庆市端州区委副书记、区长候选人" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p1" target="o1" label="肇庆市人民政府副秘书长、市政府办公室党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p1" target="o1" label="肇庆市委宣传部副部长、市文明办主任，市文化产业管理服务中心主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p1" target="o1" label="肇庆市委宣传部副部长、市文明办主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p1" target="o1" label="肇庆市委宣传部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p1" target="o1" label="肇庆市端州区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p1" target="o1" label="肇庆市端州区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="o1" label="肇庆市端州区委常委，城西街道党委副书记、办事处主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="o1" label="肇庆市端州区城西街道党委副书记、办事处主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="o1" label="共青团肇庆市端州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p1" target="o1" label="共青团肇庆市端州区委常务副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="o1" label="肇庆市端州区公安分局团委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p1" target="o1" label="肇庆市端州区公安分局团委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p1" target="o1" label="肇庆市端州区公安分局政工办干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p1" target="o1" label="肇庆市端州区公安分局古塔派出所干警" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p2" target="o2" label="恩平市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p2" target="o2" label="江海区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p3" target="o1" label="恩平市委副书记、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p4" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p5" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p6" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p7" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p8" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p9" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p10" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p11" target="o1" label="恩平市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p12" target="o1" label="恩平市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p13" target="o2" label="恩平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p14" target="o2" label="恩平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p15" target="o2" label="恩平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p16" target="o2" label="恩平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p17" target="o2" label="恩平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p18" target="o2" label="恩平市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p19" target="o2" label="恩平市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p20" target="o2" label="恩平市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p21" target="o6" label="江门市人大常委会党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p21" target="o6" label="云浮市人民政府副市长、市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p21" target="o6" label="韶关市政府党组成员、副市长，市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p21" target="o1" label="恩平市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p21" target="o2" label="恩平市委副书记、代市长→市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="p21" target="o6" label="江门市林业和园林局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="p22" target="o9" label="化州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="p22" target="o2" label="恩平市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="1.0"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="p1" target="p21" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="p2" target="p22" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="strong"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="p21" target="p22" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="p1" target="p3" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="p1" target="p12" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="p2" target="p13" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="p2" target="p14" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="p2" target="p15" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="58" source="p2" target="p16" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="59" source="p2" target="p17" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="medium"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
