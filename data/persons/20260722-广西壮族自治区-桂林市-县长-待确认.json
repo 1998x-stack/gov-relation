@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广西壮族自治区",
+    "city": "桂林市",
+    "region": "永福县",
+    "job": "县长",
+    "task_id": "guangxi_永福县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "yongfu_county_mayor_unknown",
+    "name": "待确认",
+    "aliases": [],
+    "gender": "未知",
+    "ethnicity": "未知（推测为汉族或壮族）",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": "http://www.glyf.gov.cn/zwgk/ldzc/"
+    }
+  },
+  "current_status": {
+    "current_post": "永福县长",
+    "current_org": "永福县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "永福县人民政府",
+      "title": "永福县长",
+      "level": "县处级",
+      "location": "桂林市永福县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "当前永福县长，姓名和具体信息因网络搜索不可用而未能确认",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "永福县人民政府",
+      "type": "政府",
+      "role": "县长",
+      "period": "至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "待确认—永福县委书记",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县长与县委书记为县政府、县委主要负责人，共同主持永福县工作",
+      "overlap_org": "永福县",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "person": "蒋玲荣",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "蒋玲荣曾任永福县委常委、组织部部长，与县长为县委领导班子成员",
+      "overlap_org": "中国共产党永福县委员会",
+      "overlap_period": "~2024前",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "因姓名未知，无法分析",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "因姓名未知，无法搜索纪律处分或负面报道记录",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "永福县人民政府领导之窗",
+      "url": "http://www.glyf.gov.cn/zwgk/ldzc/",
+      "publisher": "永福县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "网站无法访问（超时）"
+    },
+    {
+      "id": "S002",
+      "title": "蒋玲荣百度百科",
+      "url": "https://baike.baidu.com/item/%E8%92%8B%E7%8E%B2%E8%8D%A3",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "同日无法访问，引用象山区调查时的记录"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "县长姓名完全未知——所有调查的前提信息缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "永福县现任县长是谁？",
+      "why_it_matters": "核心调查目标，所有关系和网络分析的前提",
+      "suggested_queries": ["永福县 县长 现任", "永福县 领导之窗 政府", "桂林市委 永福县 县长 任命"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "永福县长的完整履历是什么？（姓名确认后）",
+      "why_it_matters": "履历是分析晋升路径、工作交集和职业模式的基础",
+      "suggested_queries": ["{name} 简历 永福县", "{name} 任前公示"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "永福县长的出生年份、籍贯、学历是什么？",
+      "why_it_matters": "识别身份的基准信息",
+      "suggested_queries": ["{name} 出生 籍贯 学历"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "谁在永福县长之前担任该职务？前任的去向是什么？",
+      "why_it_matters": "前任链是理解领导交替和人事网络的关键",
+      "suggested_queries": ["前任永福县长 去向"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
