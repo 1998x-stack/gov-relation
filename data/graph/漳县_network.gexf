@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>漳县领导班子工作关系网络 - 数据来源: 漳县人民政府官网</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pzhangxian_wang_yawei" label="王亚伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳县县委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pzhangxian_li_qingpeng" label="李青鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="漳县县委副书记、县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_wang_xiaojun" label="王小军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县纪委书记、县监委主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_zhang_jiang" label="张江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_wang_jianfu" label="王建府">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pzhangxian_zhang_kuan" label="张宽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县人武部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_xu_yagang" label="徐亚纲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府副县长（挂职）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_yang_hui" label="杨慧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府副县长（挂职）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_li_ying" label="李颖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_xie_jiangchao" label="解江超">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府副县长候选人（挂职）"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_li_zhengwen" label="李正文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_zhu_jichang" label="朱继昌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_guo_yuanhong" label="郭元红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_wei_junmin" label="魏军民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、县政府副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pzhangxian_xu_bin" label="徐斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pzhangxian_zhang_pengfei" label="张鹏飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政府副县长、县公安局局长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pzhangxian_gou_ruibin" label="苟睿斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pzhangxian_zhang_jianxin" label="张建新">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="pzhangxian_pei_kongrong" label="裴孔荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_zhang_xiaojun" label="张小军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_wang_xiaofang" label="王小芳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_jiang_jinxi" label="蒋金喜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_zhao_yongjun" label="赵永军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_liu_zhilan" label="刘芝兰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_luo_hongming" label="骆宏明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_xu_ming" label="徐明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_zhao_xiaozhuo" label="赵小卓">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pzhangxian_tian_ainong" label="田爱农">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="o1" label="中共漳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="漳县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共漳县纪律检查委员会/漳县监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共漳县委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共漳县委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="漳县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共漳县委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共漳县委员会统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="漳县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="政协漳县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="漳县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="定西市商务局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共定西市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="定西市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="定西市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pzhangxian_wang_yawei" target="o1" label="漳县县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳县县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pzhangxian_li_qingpeng" target="o1" label="漳县县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳县县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pzhangxian_li_qingpeng" target="o2" label="漳县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="漳县县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pzhangxian_li_qingpeng" target="o12" label="定西市商务局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="定西市商务局党组书记、局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pzhangxian_wang_xiaojun" target="o3" label="县委常委、县纪委书记、县监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县纪委书记、县监委主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pzhangxian_zhang_jiang" target="o4" label="县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pzhangxian_wang_jianfu" target="o5" label="县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pzhangxian_zhang_kuan" target="o6" label="县委常委、县人武部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县人武部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pzhangxian_xu_yagang" target="o2" label="县委常委、县政府副县长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县政府副县长（挂职）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pzhangxian_yang_hui" target="o2" label="县委常委、县政府副县长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县政府副县长（挂职）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pzhangxian_li_ying" target="o7" label="县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pzhangxian_xie_jiangchao" target="o2" label="县委常委、县政府副县长候选人（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县政府副县长候选人（挂职）"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pzhangxian_li_zhengwen" target="o8" label="县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pzhangxian_zhu_jichang" target="o2" label="县委常委、县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pzhangxian_guo_yuanhong" target="o2" label="县委常委、县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pzhangxian_wei_junmin" target="o2" label="县委常委、县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pzhangxian_xu_bin" target="o2" label="县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pzhangxian_zhang_pengfei" target="o2" label="县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pzhangxian_zhang_pengfei" target="o11" label="县公安局党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县公安局党委书记、局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pzhangxian_gou_ruibin" target="o2" label="县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="pzhangxian_zhang_jianxin" target="o2" label="县政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政府副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="pzhangxian_pei_kongrong" target="o9" label="县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="pzhangxian_zhang_xiaojun" target="o9" label="县人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="pzhangxian_wang_xiaofang" target="o9" label="县人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="pzhangxian_jiang_jinxi" target="o9" label="县人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="pzhangxian_zhao_yongjun" target="o9" label="县人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县人大常委会副主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="pzhangxian_liu_zhilan" target="o10" label="县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="pzhangxian_luo_hongming" target="o10" label="县政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="pzhangxian_xu_ming" target="o10" label="县政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="pzhangxian_zhao_xiaozhuo" target="o10" label="县政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="pzhangxian_tian_ainong" target="o10" label="县政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政协副主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="pzhangxian_wang_yawei" target="pzhangxian_li_qingpeng" label="县委书记-县长搭班工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记-县长搭班工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="pzhangxian_wang_yawei" target="pzhangxian_wang_xiaojun" label="县委书记-纪委书记监督与被监督关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记-纪委书记监督与被监督关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="pzhangxian_wang_yawei" target="pzhangxian_zhang_jiang" label="县委书记-组织部长干部选拔任用关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记-组织部长干部选拔任用关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="pzhangxian_wang_yawei" target="pzhangxian_li_ying" label="县委书记-宣传部长意识形态工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记-宣传部长意识形态工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="pzhangxian_wang_yawei" target="pzhangxian_wang_jianfu" label="县委书记-政法委书记政法工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记-政法委书记政法工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="pzhangxian_wang_yawei" target="pzhangxian_li_zhengwen" label="县委书记-统战部长统战工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记-统战部长统战工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="pzhangxian_li_qingpeng" target="pzhangxian_zhu_jichang" label="县长-分管农业副县长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县长-分管农业副县长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="pzhangxian_li_qingpeng" target="pzhangxian_zhang_pengfei" label="县长-分管公安副县长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县长-分管公安副县长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="pzhangxian_li_qingpeng" target="pzhangxian_pei_kongrong" label="县政府-县人大监督与协作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县政府-县人大监督与协作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="pzhangxian_li_qingpeng" target="pzhangxian_liu_zhilan" label="县政府-县政协协商民主关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县政府-县政协协商民主关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="pzhangxian_wang_yawei" target="pzhangxian_pei_kongrong" label="县委-县人大领导协作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县委-县人大领导协作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="pzhangxian_wang_yawei" target="pzhangxian_liu_zhilan" label="县委-县政协领导协作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县委-县政协领导协作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="pzhangxian_li_qingpeng" target="pzhangxian_guo_yuanhong" label="县长-县委常委副县长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县长-县委常委副县长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="pzhangxian_li_qingpeng" target="pzhangxian_wei_junmin" label="县长-县委常委副县长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县长-县委常委副县长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="pzhangxian_wang_xiaojun" target="pzhangxian_wang_yawei" label="纪委书记受县委和上级纪委双重领导" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="纪委书记受县委和上级纪委双重领导"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="pzhangxian_wang_jianfu" target="pzhangxian_zhang_pengfei" label="政法委书记-公安局长政法系统协作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="政法委书记-公安局长政法系统协作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
