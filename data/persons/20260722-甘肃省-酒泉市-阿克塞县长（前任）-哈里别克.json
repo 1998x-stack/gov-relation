@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "酒泉市",
+    "region": "阿克塞哈萨克族自治县",
+    "job": "阿克塞县长（前任）",
+    "task_id": "gansu_阿克塞哈萨克族自治县",
+    "time_focus": "2026-07-22"
+  },
+  "identity": {
+    "person_id": "aksai_halibieke",
+    "name": "哈里别克",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "哈萨克族",
+    "birth": "",
+    "birthplace": "甘肃阿克塞（推测）",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "哈里别克_",
+      "name_birthplace": "哈里别克_甘肃",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "酒泉市人民政府副市长（推测）",
+    "current_org": "酒泉市人民政府",
+    "administrative_rank": "地厅级副职（推测）",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "present",
+      "org": "酒泉市人民政府",
+      "title": "酒泉市人民政府副市长",
+      "level": "地厅级副职",
+      "notes": "从阿克塞县长升任后，曾以副市长身份调研阿克塞县。具体任职时间待确认",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2016",
+      "end": "2021",
+      "org": "阿克塞哈萨克族自治县人民政府",
+      "title": "阿克塞哈萨克族自治县长",
+      "level": "县处级正职",
+      "notes": "接替银雁；与县委书记陶涛搭班",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "陶涛",
+      "person_id": "aksai_tao_tao",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "2021年陶涛任县委书记初期与县长哈里别克有短暂搭班",
+      "overlap_org": "阿克塞县",
+      "overlap_period": "2021",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "库美斯剑",
+      "person_id": "aksai_kumeisijian",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "哈里别克离任县长后由库美斯剑接任",
+      "overlap_org": "阿克塞县人民政府",
+      "overlap_period": "2021",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": []
+    },
+    {
+      "person": "银雁",
+      "person_id": "aksai_yin_yan",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "银雁离任后由哈里别克接任阿克塞县长",
+      "overlap_org": "阿克塞县人民政府",
+      "overlap_period": "2016",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_insider",
+    "systems_experience": ["政府"],
+    "geographic_pattern": ["阿克塞县→酒泉市"],
+    "promotion_velocity": {
+      "summary": "从县长升任副市长，与陶涛的晋升路径相同",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "酒泉市政府官网/新闻",
+      "url": "",
+      "publisher": "酒泉市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "government",
+      "reliability": "medium",
+      "notes": "'副市长哈里别克调研督导阿克塞县'等相关报道"
+    },
+    {
+      "id": "S002",
+      "title": "搜狐新闻 - 阿克塞县领导出席活动（2021-05）",
+      "url": "",
+      "publisher": "搜狐",
+      "published_at": "2021-05",
+      "accessed_at": "2026-07-22",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "'县委书记陶涛，县委副书记、县长哈里别克'"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "plausible",
+    "career_completeness": "minimal",
+    "relationship_confidence": "low",
+    "biggest_gap": "哈里别克的出生年份、学历、早期职业生涯、完整任职时间和当前确切职位均未确认"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "哈里别克的完整身份信息和履历",
+      "why_it_matters": "基本信息（出生、学历、完整任职时间）几乎完全缺失",
+      "suggested_queries": [
+        "哈里别克 阿克塞 简历",
+        "哈里别克 百度百科",
+        "哈里别克 酒泉市副市长"
+      ],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
