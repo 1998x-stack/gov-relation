@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>China Gov Network Research Agent</creator>
+    <description>广东省珠海市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="birth" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="zhuhai_chen_yong" label="陈勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="1974年1月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="zhuhai_wu_zetong" label="吴泽桐">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+          <attvalue for="2" value="1980年1月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="zhuhai_pan_jiang" label="潘江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会主任"/>
+          <attvalue for="2" value="1965年1月"/>
+        </attvalues>
+        <viz:color r="0" g="150" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="zhuhai_wang_kaizhou" label="王开洲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="1969年9月"/>
+        </attvalues>
+        <viz:color r="0" g="150" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="zhuhai_lv_yuyin" label="吕玉印">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市委书记（2021.11-2023.06）"/>
+          <attvalue for="2" value="1970年11月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="zhuhai_huang_zhihao" label="黄志豪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市长（2021.05-2024.12）"/>
+          <attvalue for="2" value="1971年9月"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共珠海市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="珠海市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="珠海市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协珠海市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共珠海市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="165" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共广州市黄埔区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="广州市黄埔区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="广州市增城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共广州市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="广州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="广东省发展和改革委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="梅州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共梅州市梅县区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共云浮市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="云浮市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="zhuhai_chen_yong" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陈勇未任珠海市长，直接由广州调任珠海市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="zhuhai_chen_yong" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023年9月任珠海市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="zhuhai_chen_yong" target="o10" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任广州市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="zhuhai_chen_yong" target="o9" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任广州市委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="zhuhai_chen_yong" target="o6" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任黄埔区委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="zhuhai_chen_yong" target="o7" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任黄埔区区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="zhuhai_chen_yong" target="o8" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任增城区区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="zhuhai_wu_zetong" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年12月任代市长，2025年2月当选市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="zhuhai_wu_zetong" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任市长同时兼任市委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="zhuhai_wu_zetong" target="o15" label="常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任云浮市委常委、常务副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="zhuhai_wu_zetong" target="o14" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任云浮市委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="zhuhai_wu_zetong" target="o13" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任梅县区委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="zhuhai_wu_zetong" target="o12" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任梅州市副市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="zhuhai_wu_zetong" target="o11" label="处长/副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾任广东省发改委综合处处长、办公室副主任等职"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="zhuhai_pan_jiang" target="o3" label="主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="珠海市人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="zhuhai_wang_kaizhou" target="o4" label="主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="珠海市政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="zhuhai_lv_yuyin" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任珠海市委书记，后任中央人民政府驻澳门特别行政区联络办公室副主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="zhuhai_huang_zhihao" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任珠海市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="zhuhai_chen_yong" target="zhuhai_wu_zetong" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="陈勇任市委书记、吴泽桐任市长，共同组成珠海市党政一把手"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="zhuhai_chen_yong" target="zhuhai_lv_yuyin" label="前任继任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="前任继任"/>
+          <attvalue for="1" value="陈勇接替吕玉印任珠海市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="zhuhai_wu_zetong" target="zhuhai_huang_zhihao" label="前任继任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="前任继任"/>
+          <attvalue for="1" value="吴泽桐接替黄志豪任珠海市长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="zhuhai_pan_jiang" target="zhuhai_chen_yong" label="同城共事" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="同城共事"/>
+          <attvalue for="1" value="潘江作为市人大常委会主任与市委书记陈勇同在珠海市领导班子"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="zhuhai_wang_kaizhou" target="zhuhai_chen_yong" label="同城共事" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="同城共事"/>
+          <attvalue for="1" value="王开洲作为市政协主席与市委书记陈勇同在珠海市领导班子"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="zhuhai_pan_jiang" target="zhuhai_wu_zetong" label="同城共事" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="同城共事"/>
+          <attvalue for="1" value="潘江作为市人大常委会主任与市长吴泽桐同在珠海市领导班子"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="zhuhai_wang_kaizhou" target="zhuhai_wu_zetong" label="同城共事" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="同城共事"/>
+          <attvalue for="1" value="王开洲作为市政协主席与市长吴泽桐同在珠海市领导班子"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
