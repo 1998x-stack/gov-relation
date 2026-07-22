@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "阳江市",
+    "region": "阳东区",
+    "job": "区长",
+    "task_id": "guangdong_阳东区",
+    "time_focus": "2021至今"
+  },
+  "identity": {
+    "person_id": "guangdong_yangjiang_yangdong_胡志方",
+    "name": "胡志方",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "阳东胡志方_",
+      "name_birthplace": "阳东胡志方_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "阳东区区长",
+    "current_org": "阳东区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021-09",
+      "end": "present",
+      "org": "阳东区人民政府",
+      "title": "阳东区区长",
+      "level": "县处级正职",
+      "location": "阳江市阳东区",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替李坤任区长",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "2021年任阳东区长前的完整履历完全缺失，包括出生年月、籍贯、教育背景、首次参加工作时间、此前任职经历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "阳东区人民政府",
+      "type": "政府",
+      "level": "县处级",
+      "role": "区长"
+    },
+    {
+      "name": "中共阳东区委员会",
+      "type": "党委",
+      "level": "县处级",
+      "role": "副书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "李坤",
+      "person_id": "guangdong_yangjiang_yangdong_李坤",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "现任区长与区委书记党政搭档",
+      "overlap_org": "中共阳东区委员会/阳东区人民政府",
+      "overlap_period": "2021-09至今",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["阳江市阳东区"],
+    "promotion_velocity": {
+      "summary": "履历不足，无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "公开报道/阳东区政府网站（网络不可达）",
+      "url": "http://www.yangdong.gov.cn/",
+      "publisher": "阳东区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "low",
+      "notes": "网站超时不可达，信息来自预训练知识"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "2021年任区长前的全部履历（出生年月、籍贯、教育背景、全部早期经历）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "胡志方的出生年月和出生地",
+      "why_it_matters": "身份识别和去重必需",
+      "suggested_queries": ["胡志方 阳东 简历", "胡志方 出生"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "胡志方的教育背景",
+      "why_it_matters": "专业背景评估",
+      "suggested_queries": ["胡志方 学历", "胡志方 毕业"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "胡志方2021年以前的完整履历",
+      "why_it_matters": "了解此前任职领域和晋升路径",
+      "suggested_queries": ["胡志方 履历", "胡志方 阳东区 任职"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "胡志方任阳东区长的确切时间",
+      "why_it_matters": "精确定位任职时间线",
+      "suggested_queries": ["胡志方 任 阳东区长 时间"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
