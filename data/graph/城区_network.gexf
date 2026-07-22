@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>汕尾市城区领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+      <attribute id="8" title="level" type="string"/>
+      <attribute id="9" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="肖苏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委书记"/>
+          <attvalue for="2" value="中共汕尾市城区委员会"/>
+          <attvalue for="6" value="http://www.shanwei.gov.cn/shanwei/zwgk/jcxx/zwdt/qxxwa/content/post_1253862.html"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="詹响锑">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委副书记、区长"/>
+          <attvalue for="2" value="汕尾市城区人民政府"/>
+          <attvalue for="6" value="https://www.shanwei.gov.cn/shanwei/zwgk/jcxx/zwdt/qxxwa/content/post_1260423.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="李小燕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区人民政府副区长"/>
+          <attvalue for="2" value="汕尾市城区人民政府"/>
+          <attvalue for="6" value="https://www.shanwei.gov.cn — 政民互动·在线访谈栏目"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="(区人大常委会主任待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区人大常委会主任"/>
+          <attvalue for="2" value="汕尾市城区人民代表大会常务委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="(区政协主席待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议汕尾市城区委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="(区纪委书记待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区纪委书记、监委主任"/>
+          <attvalue for="2" value="中共汕尾市城区纪律检查委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="(常务副区长待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、常务副区长"/>
+          <attvalue for="2" value="汕尾市城区人民政府"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="(组织部部长待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、组织部部长"/>
+          <attvalue for="2" value="中共汕尾市城区委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="(宣传部部长待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共汕尾市城区委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="(政法委书记待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、政法委书记"/>
+          <attvalue for="2" value="中共汕尾市城区委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p11" label="(统战部部长待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、统战部部长"/>
+          <attvalue for="2" value="中共汕尾市城区委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="(区委办公室主任待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、区委办公室主任"/>
+          <attvalue for="2" value="中共汕尾市城区委员会"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="(人武部主官待查)">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="城区委常委、人武部主官"/>
+          <attvalue for="2" value="汕尾市城区人民武装部"/>
+          <attvalue for="6" value="公开资料待查"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共汕尾市城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="汕尾市城区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="汕尾市城区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="人大"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议汕尾市城区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政协"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共汕尾市城区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="纪委"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共汕尾市城区委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="乡科级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="240" g="220" b="240" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共汕尾市城区委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="乡科级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="240" g="220" b="240" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共汕尾市城区委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="乡科级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="240" g="220" b="240" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共汕尾市城区委员会统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="乡科级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="240" g="220" b="240" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共汕尾市城区委员会办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委部门"/>
+          <attvalue for="8" value="乡科级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="240" g="220" b="240" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="汕尾市城区人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="军队"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="广东省汕尾市城区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="城区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="城区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p3" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p4" target="o3" label="主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主任"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p5" target="o4" label="主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主席"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p6" target="o5" label="书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="书记"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p7" target="o2" label="常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p8" target="o6" label="部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="部长"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p9" target="o7" label="部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="部长"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p10" target="o8" label="书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="书记"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p11" target="o9" label="部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="部长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p12" target="o10" label="主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主任"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p13" target="o11" label="主官" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主官"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区委书记—区长搭档"/>
+          <attvalue for="2" value="中共汕尾市城区委员会/汕尾市城区人民政府"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="p3" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="区委书记—副区长"/>
+          <attvalue for="2" value="中共汕尾市城区委员会/汕尾市城区人民政府"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p2" target="p3" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="区长—副区长"/>
+          <attvalue for="2" value="汕尾市城区人民政府"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
