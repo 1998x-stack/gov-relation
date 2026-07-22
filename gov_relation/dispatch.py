@@ -4,8 +4,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .log import get_logger
 from .slugs import artifact_paths
 from .todo import TodoItem, item_summary
+
+logger = get_logger(__name__)
 
 
 @dataclass(frozen=True)

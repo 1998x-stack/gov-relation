@@ -7,7 +7,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .log import get_logger
 from .paths import TODO_PATH
+
+logger = get_logger(__name__)
 
 TodoData = dict[str, Any]
 Task = dict[str, Any]

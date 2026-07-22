@@ -12,13 +12,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from gov_relation.log import get_logger, init_logging
 from gov_relation.queue import canonical_artifacts_ready, claim_next, set_claim_status
 from gov_relation.slugs import artifact_paths
 
-
-def log(message: str) -> None:
-    ts = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    print(f"[{ts}] {message}", flush=True)
+logger = get_logger(__name__)
 
 
 def task_commit_paths(task: dict, claimed_at: str = "") -> list[str]:
@@ -60,29 +58,30 @@ def git_commit_task(task: dict, claimed_at: str = "") -> bool:
     task_id = task["task_id"]
     paths = task_commit_paths(task, claimed_at=claimed_at)
     if not paths:
-        log(f"GIT no task paths exist to commit for {task_id}")
+        logger.info("GIT no task paths exist to commit for %s", task_id)
         return True
 
     add = subprocess.run(["git", "add", *paths], text=True, capture_output=True, check=False)
     if add.returncode != 0:
-        log(f"GIT add failed: {add.stderr.strip()}")
+        logger.info("GIT add failed: %s", add.stderr.strip())
         return False
 
     status = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
     if status.returncode == 0:
-        log(f"GIT no staged changes to commit for {task_id}")
+        logger.info("GIT no staged changes to commit for %s", task_id)
         return True
 
     message = f"Complete gov relation task {task_id}"
     commit = subprocess.run(["git", "commit", "-m", message], text=True, capture_output=True, check=False)
     if commit.returncode != 0:
-        log(f"GIT commit failed: {commit.stderr.strip() or commit.stdout.strip()}")
+        logger.info("GIT commit failed: %s", commit.stderr.strip() or commit.stdout.strip())
         return False
-    log(f"GIT committed task={task_id}: {message}")
+    logger.info("GIT committed task=%s: %s", task_id, message)
     return True
 
 
 def main() -> int:
+    init_logging()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--worker-id", required=True)
     parser.add_argument("--model-intent", default="standard", choices=["standard", "iagent"], help="queue label: standard or iagent")
@@ -108,18 +107,18 @@ def main() -> int:
             opencode_model=args.opencode_model,
         )
         if claim is None:
-            log("NO_TASKS_AVAILABLE")
+            logger.info("NO_TASKS_AVAILABLE")
             return 0
         task_id = claim["task"]["task_id"]
         prompt_path = claim["prompt_path"]
-        log(f"CLAIMED {task_id} prompt={prompt_path}")
+        logger.info("CLAIMED %s prompt=%s", task_id, prompt_path)
 
         if not args.execute:
             agent_arg = f" --agent {args.opencode_agent}" if args.opencode_agent else ""
-            log(f"Run: {args.opencode_bin} run{agent_arg} --model {args.opencode_model} '<prompt from {prompt_path}>'")
+            logger.info("Run: %s run%s --model %s '<prompt from %s>'", args.opencode_bin, agent_arg, args.opencode_model, prompt_path)
             return 0
 
-        log(f"START opencode task={task_id}")
+        logger.info("START opencode task=%s", task_id)
         prompt_text = Path(prompt_path).read_text(encoding="utf-8")
         command = [args.opencode_bin, "run", "--model", args.opencode_model]
         if args.opencode_agent:
@@ -128,18 +127,18 @@ def main() -> int:
             command.append("--auto")
         command.append(prompt_text)
         result = subprocess.run(command, check=False)
-        log(f"END opencode task={task_id} exit={result.returncode}")
+        logger.info("END opencode task=%s exit=%s", task_id, result.returncode)
         if result.returncode == 0 and args.auto_done:
             ready, missing = canonical_artifacts_ready(claim["task"])
             if not ready:
                 set_claim_status(task_id, args.worker_id, "failed", f"missing canonical artifacts: {', '.join(missing)}")
-                log(f"FAILED {task_id} missing canonical artifacts: {', '.join(missing)}")
+                logger.info("FAILED %s missing canonical artifacts: %s", task_id, ', '.join(missing))
                 completed += 1
                 if args.sleep_seconds > 0:
                     time.sleep(args.sleep_seconds)
                 continue
             set_claim_status(task_id, args.worker_id, "done")
-            log(f"DONE {task_id}")
+            logger.info("DONE %s", task_id)
             if args.git_commit and not git_commit_task(claim["task"], claimed_at=claim.get("claimed_at", "")):
                 return 1
             completed += 1
@@ -147,11 +146,11 @@ def main() -> int:
                 time.sleep(args.sleep_seconds)
             continue
         if result.returncode == 0 and not args.auto_done:
-            log(f"COMPLETED {task_id}; waiting for manual done/release because --auto-done is disabled")
+            logger.info("COMPLETED %s; waiting for manual done/release because --auto-done is disabled", task_id)
             return 0
         if result.returncode != 0:
             set_claim_status(task_id, args.worker_id, "failed", f"opencode exit {result.returncode}")
-            log(f"FAILED {task_id} opencode exit {result.returncode}")
+            logger.info("FAILED %s opencode exit %s", task_id, result.returncode)
             completed += 1
             if args.sleep_seconds > 0:
                 time.sleep(args.sleep_seconds)

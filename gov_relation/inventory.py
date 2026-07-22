@@ -5,7 +5,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from .log import get_logger
 from .paths import DATABASE_DIR, DOCS_DIR, GRAPH_DIR, JSON_DIR, PERSONS_DIR, REPORT_DIR, REPO_ROOT, TMP_DIR
+
+logger = get_logger(__name__)
 
 
 @dataclass(frozen=True)
