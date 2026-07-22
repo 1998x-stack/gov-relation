@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>成县领导班子工作关系网络 - 数据来源: 公开媒体报道及网络检索</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pp01" label="王文全">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp02" label="赵彦凯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委副书记、县政府党组书记、县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pp03" label="成县常务副县长（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委常委、常务副县长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp04" label="成县纪委书记（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp05" label="成县委组织部长（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委常委、组织部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp06" label="成县委宣传部长（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委常委、宣传部部长"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="pp07" label="成县委政法委书记（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="成县委常委、政法委书记"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="oo01" label="中共成县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo02" label="成县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo03" label="成县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo04" label="中国人民政治协商会议成县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo05" label="中共成县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo06" label="中共成县委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo07" label="中共成县委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo08" label="中共成县委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo09" label="中共陇南市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="oo10" label="陇南市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="甘肃省"/>
+          <attvalue for="3" value="成县"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="pp01" target="oo01" label="成县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="pp02" target="oo02" label="成县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县人民政府县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="pp02" target="oo01" label="成县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="pp03" target="oo02" label="成县常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县常务副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="pp03" target="oo01" label="成县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="pp04" target="oo05" label="成县纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县纪委书记、监委主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="pp04" target="oo01" label="成县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="pp05" target="oo06" label="成县委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="pp05" target="oo01" label="成县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="pp06" target="oo07" label="成县委宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委宣传部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="pp06" target="oo01" label="成县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="pp07" target="oo08" label="成县委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="pp07" target="oo01" label="成县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="成县委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="pp01" target="pp02" label="王文全(书记)与赵彦凯(县长): 成县党政一把手搭班配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王文全(书记)与赵彦凯(县长): 成县党政一把手搭班配合"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="pp01" target="pp03" label="王文全(书记)与常务副县长(待查): 县委常委班子日常工作配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王文全(书记)与常务副县长(待查): 县委常委班子日常工作配合"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="pp02" target="pp03" label="赵彦凯(县长)与常务副县长(待查): 县政府日常事务配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="赵彦凯(县长)与常务副县长(待查): 县政府日常事务配合"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="pp01" target="pp04" label="王文全(书记)与纪委书记(待查): 县委与纪委工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王文全(书记)与纪委书记(待查): 县委与纪委工作关系"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="pp01" target="pp05" label="王文全(书记)与组织部长(待查): 干部任用工作配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王文全(书记)与组织部长(待查): 干部任用工作配合"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="pp01" target="pp07" label="王文全(书记)与政法委书记(待查): 维稳工作配合" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="王文全(书记)与政法委书记(待查): 维稳工作配合"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="pp02" target="pp03" label="赵彦凯(县长)与常务副县长(待查): 县政府一、二把手工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="赵彦凯(县长)与常务副县长(待查): 县政府一、二把手工作关系"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
