@@ -1,8 +1,52 @@
-# Open Gaps — 惠阳区
+# Open Gaps Registry
 
 > Last updated: 2026-07-22
-> Task: guangdong_惠阳区
-> Web access status during investigation: Exa rate-limited, Baidu 403, Jina timeout, Google requires JS
+
+---
+
+## 博罗县 (guangdong_博罗县)
+
+> Investigated: 2026-07-22
+> Web access: Exa rate-limited, Baidu 403, Jina timeout, direct gov site access working
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 周耿斌 | 博罗县委书记 | 出生年月、籍贯、教育背景、全部此前任职经历 | 2026-07-22 | 官方新闻确认角色，但履历完全未知 |
+| 邱志彪 | 博罗县委副书记、县长 | 出生年月、籍贯、教育背景、全部此前任职经历 | 2026-07-22 | 官方新闻确认角色，但履历完全未知 |
+
+### ⭐⭐⭐⭐ High (important deputies or missing leadership info)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 周耿斌的前任县委书记 | 前任身份、去向 | 2026-07-22 | 未找到前任县委书记信息 |
+| 邱志彪的前任（前县长） | 前任身份、去向 | 2026-07-22 | 未找到前任县长信息 |
+| 博罗县其他县委常委 | 政法委书记、宣传部长等 | 2026-07-22 | 仅识别了6名常委，完整13名待查 |
+| 博罗县所有副县长 | 完整副县长名单及分管领域 | 2026-07-22 | 仅确认了孙宇强（常务）、李智二人 |
+
+### ⭐⭐⭐ Medium
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 博罗县近年干部交流情况 | 2026-07-22 | 跨县区调动模式可能揭示网络关系 |
+| 博罗县经济发展数据（GDP等） | 2026-07-22 | 背景信息 |
+| 博罗县人大常委会主任田裕东履历 | 2026-07-22 | 身份确认，履历空白 |
+| 博罗县政协主席徐颂履历 | 2026-07-22 | 身份确认，履历空白 |
+
+### ⭐⭐ Low
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 四套班子其他领导成员详细履历 | 2026-07-22 | 孙宇强、周厚虎、邱敏强、陈沛亮身份确认但履历空白 |
+| 周耿斌和邱志彪此前工作交集可能性 | 2026-07-22 | 缺乏此前履历，无法判断 |
+
+---
+
+## 惠阳区 (guangdong_惠阳区)
+
+> Investigated: 2026-07-22
+> Web access: Exa rate-limited, Baidu 403, Jina timeout, Google requires JS
 
 ## Unresolved Gaps
 
