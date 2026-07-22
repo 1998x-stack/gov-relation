@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov Relation Research Agent</creator>
+    <description>南宁市邕宁区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="梁国禄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区委书记"/>
+          <attvalue for="2" value="中共南宁市邕宁区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="陈国栋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区区长"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="李东平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区委常委、常务副区长"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="潘海英">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区副区长"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="谢晴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区委常委、副区长（挂职）"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="周俊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区副区长"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="胡万成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区副区长"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="覃苏舜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区副区长"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="陶岳彬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（前任）邕宁区原区长"/>
+          <attvalue for="2" value="已离任"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="黄壮章">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="邕宁区人大常委会主任"/>
+          <attvalue for="2" value="南宁市邕宁区人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="o1" label="中共南宁市邕宁区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="中共南宁市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="南宁市邕宁区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="南宁市人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="南宁市邕宁区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="南宁市人大常委会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="邕宁新兴产业园区管理委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="南宁市邕宁区人民政府"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="广西驻村工作队邕宁区工作队">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="自治区党委编委办"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="南宁市邕宁区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="南宁市政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="邕宁区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="邕宁区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="邕宁区区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="邕宁区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="区委副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o4" label="邕宁新兴产业园区管委会主任(兼)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="邕宁新兴产业园区管委会主任(兼)"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o2" label="常务副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p4" target="o2" label="副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o2" label="副区长(挂职)" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长(挂职)"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o1" label="区委常委(挂职)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委(挂职)"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p5" target="o5" label="广西驻村工作队邕宁区工作队队长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广西驻村工作队邕宁区工作队队长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p6" target="o2" label="副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="o2" label="副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p8" target="o2" label="副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p9" target="o2" label="原区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="原区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p10" target="o3" label="人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p2" label="区委书记与区长党政搭档" weight="3.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与区长党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p2" target="p9" label="陈国栋接替陶岳彬担任邕宁区区长" weight="3.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈国栋接替陶岳彬担任邕宁区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p3" target="p2" label="李东平为陈国栋的常务副手" weight="3.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李东平为陈国栋的常务副手"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p5" target="p1" label="谢晴挂任区委常委" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="谢晴挂任区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p7" target="p1" label="胡万成（民建会员）为党外副区长，与区委书记党政关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="胡万成（民建会员）为党外副区长，与区委书记党政关系"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p8" target="p2" label="覃苏舜（1990年生）为最年轻的副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="覃苏舜（1990年生）为最年轻的副区长"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
