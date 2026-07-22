@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "甘肃省",
+    "city": "陇南市",
+    "region": "文县",
+    "job": "常务副县长",
+    "task_id": "gansu_文县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "wenxian_li_yuan",
+    "name": "李缘",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李缘_",
+      "name_birthplace": "",
+      "official_profile_url": "https://www.lnwx.gov.cn/ldzc/"
+    }
+  },
+  "current_status": {
+    "current_post": "县委常委、常务副县长",
+    "current_org": "中共文县委员会/文县人民政府",
+    "administrative_rank": "副县级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到任何早期履历信息",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共文县委员会/文县人民政府",
+      "title": "县委常委、常务副县长",
+      "level": "县级",
+      "location": "甘肃省陇南市文县",
+      "system": "government",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "县长职位空缺期间主持县政府日常工作",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 1,
+      "name": "中共文县委员会",
+      "type": "党委",
+      "level": "县级",
+      "role": "县委常委"
+    },
+    {
+      "org_id": 5,
+      "name": "文县人民政府",
+      "type": "政府",
+      "level": "县级",
+      "role": "常务副县长"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "贾爱会",
+      "person_id": "wenxian_jia_aihui",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "常务副县长在县委书记领导下工作，同时为县委常委班子成员",
+      "overlap_org": "中共文县委员会",
+      "overlap_period": "2026—",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "杨明亮",
+      "person_id": "wenxian_yang_mingliang",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "同为文县人民政府副县长",
+      "overlap_org": "文县人民政府",
+      "overlap_period": "2026—",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "王俊学",
+      "person_id": "wenxian_wang_junxue",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "同为文县人民政府副县长",
+      "overlap_org": "文县人民政府",
+      "overlap_period": "2026—",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["政府管理"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现公开的纪律处分、审计问题或负面报道",
+      "date": "2026-07-22",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "文县人民政府领导之窗",
+      "url": "https://www.lnwx.gov.cn/ldzc/",
+      "publisher": "文县人民政府",
+      "published_at": "2026",
+      "accessed_at": "2026-07-22",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方领导页面"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "high",
+    "biggest_gap": "李缘的出生年份、出生地、教育背景和完整履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李缘的出生年份、出生地、教育背景",
+      "why_it_matters": "常务副县长实际主持县政府日常工作，身份信息是基础",
+      "suggested_queries": ["李缘 文县 简历", "李缘 陇南", "李缘 常务副县长"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "李缘的完整晋升履历",
+      "why_it_matters": "了解其专业领域和可能的上级支持网络",
+      "suggested_queries": ["李缘 文县 任职", "李缘 任前公示"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
