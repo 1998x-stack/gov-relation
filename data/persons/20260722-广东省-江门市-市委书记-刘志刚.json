@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "江门市",
+    "region": "鹤山市",
+    "job": "市委书记",
+    "task_id": "guangdong_鹤山市",
+    "time_focus": "2016年至今"
+  },
+  "identity": {
+    "person_id": "heshan_liu_zhigang",
+    "name": "刘志刚",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1972年9月（约）",
+    "birthplace": "未知",
+    "native_place": "未知",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "未知",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员（未知年份）",
+    "work_start": "未知",
+    "dedupe_keys": {
+      "name_birth": "刘志刚_1972",
+      "name_birthplace": "刘志刚_广东",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中共鹤山市委书记",
+    "current_org": "中共鹤山市委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2016-11",
+      "org": "未知（鹤山市以外）",
+      "title": "未知",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到2016年以前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2016-11",
+      "end": "2021-09",
+      "org": "鹤山市人民政府",
+      "title": "鹤山市市长",
+      "level": "正处级",
+      "location": "鹤山市",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替聂加伟任市长；与林贤进搭档",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-09",
+      "end": "present",
+      "org": "中共鹤山市委员会",
+      "title": "中共鹤山市委书记",
+      "level": "正处级",
+      "location": "鹤山市",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替林贤进",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "heshan_cpc",
+      "name": "中共鹤山市委员会",
+      "role": "市委书记",
+      "period": "2021-09至今"
+    },
+    {
+      "org_id": "heshan_gov",
+      "name": "鹤山市人民政府",
+      "role": "市长",
+      "period": "2016-11至2021-09"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "林贤进",
+      "person_id": "heshan_lin_xianjin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "林贤进任市委书记（2016-2021），刘志刚接替其任书记",
+      "overlap_org": "中共鹤山市委员会",
+      "overlap_period": "2021-09",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张华景",
+      "person_id": "heshan_zhang_huajing",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "刘志刚任市委书记、张华景任市长",
+      "overlap_org": "中共鹤山市委员会 / 鹤山市人民政府",
+      "overlap_period": "2021-11至今",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["鹤山市"],
+    "promotion_velocity": {
+      "summary": "从市长升任市委书记，路径典型",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现公开的违纪或其他负面信号",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "训练数据 / 公开知识",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-22",
+      "source_type": "inferred",
+      "reliability": "low",
+      "notes": "由于Exa搜索限流、百度百科403、Jina Reader超时，核心信息来自训练数据，置信度低"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "2016年之前全部履历未知，包括出生地、教育背景、入党时间、工作起始"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘志刚的出生地/籍贯是哪里？",
+      "why_it_matters": "核心身份信息，用于人物图谱去重",
+      "suggested_queries": ["刘志刚 鹤山 简历 出生"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "刘志刚2016年之前的职业生涯是什么？",
+      "why_it_matters": "了解其晋升路径和专业背景",
+      "suggested_queries": ["刘志刚 鹤山 教育 经历 任职"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "critical",
+      "question": "刘志刚的教育背景是什么？",
+      "why_it_matters": "评估其专业领域",
+      "suggested_queries": ["刘志刚 学历 毕业 院校"],
+      "last_attempted": "2026-07-22"
+    },
+    {
+      "priority": "high",
+      "question": "刘志刚具体何时加入中国共产党？",
+      "why_it_matters": "完善身份信息",
+      "suggested_queries": ["刘志刚 中共党员 入党时间"],
+      "last_attempted": "2026-07-22"
+    }
+  ]
+}
