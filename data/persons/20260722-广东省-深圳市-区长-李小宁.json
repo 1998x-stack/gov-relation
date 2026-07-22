@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-22",
+  "investigation_scope": {
+    "province": "广东省",
+    "city": "深圳市",
+    "region": "南山区",
+    "job": "区长",
+    "task_id": "guangdong_南山区",
+    "time_focus": "当前角色"
+  },
+  "identity": {
+    "person_id": "nanshan_li_xiaoning",
+    "name": "李小宁",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1976年9月",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {"period": "未知", "institution": "未知", "major": "法律", "degree": "大学学历、法律硕士", "study_type": "unknown", "source_ids": ["S002"]}
+    ],
+    "party_join": "中共党员",
+    "work_start": "未知",
+    "dedupe_keys": {
+      "name_birth": "李小宁_1976",
+      "name_birthplace": "李小宁_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "南山区区长",
+    "current_org": "深圳市南山区人民政府",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-22",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {"start": "2024年1月", "end": "至今", "org": "深圳市南山区人民政府", "title": "南山区区长(代理)", "level": "副厅级", "location": "深圳南山区", "system": "government", "rank": "副厅级", "is_key_promotion": true, "notes": "2024年1月代理区长至今", "confidence": "confirmed", "source_ids": ["S001"]}
+  ],
+  "organizations": [
+    {"org": "深圳市南山区人民政府", "role": "区长(代理)", "period": "2024.01-至今"}
+  ],
+  "relationships": [
+    {"person": "黄湘岳", "person_id": "nanshan_huang_xiangyue", "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "区长与区委书记的党政搭档关系", "overlap_org": "南山区", "overlap_period": "2024.01-至今", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001", "S002"]}
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["待查"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "缺乏早期履历数据",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "公开资料严重不足，无法评估"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "未发现负面信息，但信息量本身非常有限", "date": "2026-07-22", "confidence": "plausible", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "南方杂志 2024-01-27 李小宁代理区长报道", "url": "", "publisher": "南方杂志", "published_at": "2024-01-27", "accessed_at": "2026-07-22", "source_type": "media", "reliability": "high", "notes": "参考文献来源于黄湘岳百度百科页面"},
+    {"id": "S002", "title": "深圳市南山区人民政府官网", "url": "https://www.szns.gov.cn/xxgk/", "publisher": "南山区政府", "published_at": "", "accessed_at": "2026-07-22", "source_type": "official", "reliability": "high", "notes": "区政府领导成员页，确认李小宁简历"}
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "来南山前的完整履历完全未知（出生地、教育、历任职务全部空白）"
+  },
+  "open_questions": [
+    {"priority": "critical", "question": "李小宁来南山区前的完整履历是什么？", "why_it_matters": "作为区长，缺乏其职业生涯的任何信息是重大缺口", "suggested_queries": ["李小宁 深圳 南山区 简历", "李小宁 任前公示 南山区 区长", "李小宁 南山区委副书记", "李小宁 南山区 组织部"], "last_attempted": "2026-07-22"},
+    {"priority": "high", "question": "李小宁的出生地和籍贯在哪里？", "why_it_matters": "影响身份确认和网络分析", "suggested_queries": ["李小宁 南山区 出生", "李小宁 籍贯"], "last_attempted": "2026-07-22"},
+    {"priority": "high", "question": "李小宁的教育背景详情如何？", "why_it_matters": "法律硕士背景表明可能的专业方向", "suggested_queries": ["李小宁 法律硕士"], "last_attempted": "2026-07-22"}
+  ]
+}

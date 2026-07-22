@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>深圳市南山区领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="黄湘岳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区委书记"/>
+          <attvalue for="2" value="中共深圳市南山区委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1969年3月"/>
+          <attvalue for="6" value="百度百科-黄湘岳; 深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="李小宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区区长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1976年9月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网(szns.gov.cn/xxgk/); 南方杂志(李小宁代理区长报道)"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="夏雷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区委常委、副区长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1977年4月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="周睿">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区委常委、区委(区政府)办公室主任、招商街道党工委书记"/>
+          <attvalue for="2" value="中共深圳市南山区委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1982年9月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="叶春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974年1月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="于红军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区副区长、市公安局南山分局局长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1972年4月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="蔡淡宏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1980年2月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="郭晓宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974年11月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="李志娜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="深圳市南山区人民政府"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1979年6月"/>
+          <attvalue for="6" value="深圳市南山区人民政府官网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="曾湃">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前海管理局局长(曾任)"/>
+          <attvalue for="2" value="深圳市前海管理局"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1971年"/>
+          <attvalue for="6" value="Wikipedia-曾湃"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="王强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市委常委、宣传部部长"/>
+          <attvalue for="2" value="中共深圳市委宣传部"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1965年"/>
+          <attvalue for="6" value="Wikipedia"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="姜建军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湛江市市长(曾任)/深圳市政协副主席(现任)"/>
+          <attvalue for="2" value="深圳市政协"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1964年"/>
+          <attvalue for="6" value="Wikipedia-姜建军"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="余新国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市委副书记(曾任)/深圳市委常委、政法委书记(曾任)"/>
+          <attvalue for="2" value="中共深圳市委"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1964年"/>
+          <attvalue for="6" value="Wikipedia-余新国"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="梁道行">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市副市长(曾任)"/>
+          <attvalue for="2" value="深圳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1949年"/>
+          <attvalue for="6" value="Wikipedia-梁道行"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共深圳市南山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="深圳市南山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共深圳市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共深圳市委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="深圳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="深圳市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="深圳市前海深港现代服务业合作区管理局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="龙华新区党工委/龙华区委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="深圳市公安局南山分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="南头街道党工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="南山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委书记"/>
+          <attvalue for="2" value="2023.06-2024.01兼任区长"/>
+          <attvalue for="3" value="2023年6月-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o2" label="南山区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2019年9月-2024年1月"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o1" label="南山区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委副书记"/>
+          <attvalue for="2" value="2018.01-2019.08兼任政法委书记"/>
+          <attvalue for="3" value="2018年1月-2023年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o4" label="深圳市委政法委专职委员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委政法委专职委员"/>
+          <attvalue for="2" value="期间2018年起任南山区委副书记"/>
+          <attvalue for="3" value="2016年9月-2019年8月"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o4" label="深圳市委政法委维稳办专职副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委政法委维稳办专职副主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2013年7月-2016年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o2" label="南山区区长(代理)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区区长(代理)"/>
+          <attvalue for="2" value="代理区长"/>
+          <attvalue for="3" value="2024年1月-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p3" target="o2" label="南山区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委常委、副区长"/>
+          <attvalue for="2" value="负责教育、科技、民政等"/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p4" target="o1" label="南山区委常委、区委(区政府)办公室主任、招商街道党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委常委、区委(区政府)办公室主任、招商街道党工委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p5" target="o2" label="南山区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="致公党"/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p6" target="o2" label="南山区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="兼公安分局局长"/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p6" target="o9" label="南山公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山公安分局局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p7" target="o2" label="南山区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="负责城市更新、金融等"/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p8" target="o2" label="南山区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="负责住建、城管等"/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p9" target="o2" label="南山区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区副区长"/>
+          <attvalue for="2" value="负责工业、商务等"/>
+          <attvalue for="3" value="未知-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p10" target="o1" label="南山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2020年9月-2023年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p10" target="o2" label="南山区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2017年10月-2019年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p10" target="o7" label="前海管理局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前海管理局局长"/>
+          <attvalue for="2" value="深圳市委常委兼任"/>
+          <attvalue for="3" value="2021年11月-2023年"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p11" target="o1" label="南山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2017年-2020年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p11" target="o2" label="南山区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2015年-2017年"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p11" target="o3" label="深圳市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委常委、宣传部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021年-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p12" target="o1" label="南山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2015年7月-2017年4月"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p12" target="o8" label="龙华新区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙华新区党工委书记"/>
+          <attvalue for="2" value="后龙华升格为行政区"/>
+          <attvalue for="3" value="2013年-2015年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p12" target="o6" label="深圳市政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市政协副主席"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2020年-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p13" target="o2" label="南山区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2011年11月-2015年8月"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p13" target="o8" label="龙华新区党工委书记/龙华区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="龙华新区党工委书记/龙华区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2015年8月-2018年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p13" target="o4" label="深圳市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委常委、政法委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2018年6月-2022年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p14" target="o1" label="南山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南山区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1997年12月-2002年2月"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p14" target="o5" label="深圳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市副市长"/>
+          <attvalue for="2" value="2012年落马"/>
+          <attvalue for="3" value="2002年2月-2012年"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p1" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区委书记—区长党政搭档"/>
+          <attvalue for="2" value="南山区"/>
+          <attvalue for="3" value="2024.01-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p1" target="p3" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区委书记—区委常委/副区长"/>
+          <attvalue for="2" value="南山区委"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p1" target="p4" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区委书记—区委常委/办公室主任"/>
+          <attvalue for="2" value="南山区委"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p2" target="p3" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区长—副区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p2" target="p7" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区长—副区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p2" target="p8" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区长—副区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p2" target="p9" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="区长—副区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p1" target="p10" label="继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="继任"/>
+          <attvalue for="1" value="黄湘岳接替曾湃任南山区委书记"/>
+          <attvalue for="2" value="南山区委"/>
+          <attvalue for="3" value="2023.06"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p1" target="p11" label="继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="继任"/>
+          <attvalue for="1" value="黄湘岳接替王强任南山区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="2019.09"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p10" target="p11" label="继任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="继任"/>
+          <attvalue for="1" value="曾湃接替王强任南山区委书记"/>
+          <attvalue for="2" value="南山区委"/>
+          <attvalue for="3" value="2020.09"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p13" target="p12" label="跨区" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="跨区"/>
+          <attvalue for="1" value="余新国(南山区长)→龙华; 姜建军(龙华书记)→南山; 双向交换"/>
+          <attvalue for="2" value="南山区-龙华区"/>
+          <attvalue for="3" value="2015"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p10" target="p1" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="曾湃任南山区长时黄湘岳任区委副书记"/>
+          <attvalue for="2" value="南山区"/>
+          <attvalue for="3" value="2018-2019"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p13" target="p12" label="跨区" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="跨区"/>
+          <attvalue for="1" value="南山-龙华双向干部交流"/>
+          <attvalue for="2" value="南山-龙华"/>
+          <attvalue for="3" value="2015"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p12" target="p13" label="跨区" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="跨区"/>
+          <attvalue for="1" value="姜建军(龙华→南山) 余新国(南山→龙华)"/>
+          <attvalue for="2" value="南山-龙华"/>
+          <attvalue for="3" value="2015"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p3" target="p4" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="同为南山区委常委"/>
+          <attvalue for="2" value="南山区委"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p3" target="p7" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="南山区政府副区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p5" target="p8" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="南山区政府副区长"/>
+          <attvalue for="2" value="南山区政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
