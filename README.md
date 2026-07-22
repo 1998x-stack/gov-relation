@@ -4,9 +4,10 @@
 
 本仓库的核心产出是按地区构建的关系网络数据：
 
-- `build_*_data.py`：地区或省级网络生成脚本。
-- `gov_relation/`：公共 Python 工具包，集中路径、任务队列、slug 和资产盘点逻辑。
-- `scripts/`：只读盘点等辅助命令入口。
+- `scripts/build/build_*_data.py`：地区或省级网络生成脚本（旧脚本仍在根目录，新脚本统一放在此处）。
+- `gov_relation/`：公共 Python 工具包，集中路径、任务队列、slug、数据库 schema、GEXF 生成、统一日志和资产盘点逻辑。
+- `scripts/tools/`：任务队列、模板生成、批处理工具。
+- `scripts/`：只读盘点、本地后端等辅助命令入口。
 - `data/database/*.db`：SQLite 结构化关系数据库。
 - `data/graph/*.gexf`：可导入 Gephi、Cytoscape 等工具的关系图。
 - `data/persons/*.json`：单个人物的深度图谱档案，包含履历、关系、政绩、专业背景、公开性格/工作风格线索和来源置信度。
@@ -21,19 +22,19 @@
 查看任务进度：
 
 ```bash
-python3 run_todo_loop.py --status
+python3 scripts/tools/run_todo_loop.py --status
 ```
 
 查看下一个待处理任务：
 
 ```bash
-python3 run_todo_loop.py
+python3 scripts/tools/run_todo_loop.py
 ```
 
 生成某个任务的脚本与产物路径提示：
 
 ```bash
-python3 generate_build_template.py <task_id>
+python3 scripts/tools/generate_build_template.py <task_id>
 ```
 
 盘点当前脚本、数据库、图文件和缺失配对：
@@ -139,14 +140,41 @@ python3 scripts/serve_app.py --port 8000
 运行某个地区网络生成脚本：
 
 ```bash
-python3 build_anyi_data.py
+python3 scripts/build/build_anyi_data.py
 ```
+
+## 新脚本快速入门
+
+使用公共库编写新构建脚本（从 400 行降到 ~50 行）：
+
+```python
+from gov_relation.runner import run_build
+from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
+
+run_build(
+    slug="七里河区",
+    persons=[...],           # 人员列表
+    organizations=[...],     # 组织列表
+    positions=[...],         # 任职列表
+    relationships=[...],     # 关系列表
+    db_path=DATABASE_DIR / "七里河区_network.db",
+    gexf_path=GRAPH_DIR / "七里河区_network.gexf",
+)
+```
+
+详情见 [docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md) 和 `gov_relation/runner.py`。
 
 ## 当前系统边界
 
 代码主体仍是“一个地区一个生成脚本”的结构。每个脚本通常内置 `persons`、`organizations`、`positions`、`relationships` 四类数据，运行后写出 SQLite 数据库和 GEXF 图文件。
 
-基础工具已开始收敛到 `gov_relation/`：`run_todo_loop.py`、`generate_build_template.py` 和 `scripts/inventory.py` 复用同一套路径、任务队列和命名逻辑。
+基础工具已开始收敛到 `gov_relation/`：`scripts/tools/run_todo_loop.py`、`scripts/tools/generate_build_template.py` 和 `scripts/inventory.py` 复用同一套路径、任务队列和命名逻辑。新增的公共模块包括：
+
+- `gov_relation/schema.py`：统一 SQLite 建表和批量插入
+- `gov_relation/gexf.py`：GEXF 图文件生成器
+- `gov_relation/colors.py`：节点颜色/大小/形状规则
+- `gov_relation/runner.py`：顶层编排（建表→插数据→写 GEXF）
+- `gov_relation/log.py`：统一日志配置（轮转、格式化）
 
 调查队列可通过 `scripts/dispatch_todo.py` 逐项生成 Opencode prompt；新产物先写入 `data/tmp/<task_id>/`，再由 `scripts/process_tmp.py` dry-run 校验并归档。本地浏览通过 `scripts/serve_app.py` 提供只读 SQLite API；GitHub Pages 发布通过 `.github/workflows/pages.yml` 构建 `docs/assets/data/*.json` 并部署 `docs/`。
 
