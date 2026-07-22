@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>深圳市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+      <attribute id="5" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="靳磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广东省委常委、深圳市委书记"/>
+          <attvalue for="2" value="中共深圳市委员会"/>
+          <attvalue for="3" value="1970年2月"/>
+          <attvalue for="4" value="Wikipedia: 靳磊; 新华网: 任深圳市委书记报道; 人民网: 靳磊简历"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="覃伟中">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市委副书记、市长"/>
+          <attvalue for="2" value="深圳市人民政府"/>
+          <attvalue for="3" value="1971年7月"/>
+          <attvalue for="4" value="Wikipedia: 覃伟中; 深圳新闻网; 中国经济网"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="戴运龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市人大常委会主任"/>
+          <attvalue for="2" value="深圳市人民代表大会常务委员会"/>
+          <attvalue for="3" value="1965年"/>
+          <attvalue for="4" value="Wikipedia: 戴运龙"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="林洁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="深圳市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议深圳市委员会"/>
+          <attvalue for="3" value="1964年"/>
+          <attvalue for="4" value="Wikipedia: 林洁"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="孟凡利">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广东省委副书记、省长"/>
+          <attvalue for="2" value="广东省人民政府"/>
+          <attvalue for="3" value="1965年9月"/>
+          <attvalue for="4" value="Wikipedia: 孟凡利; 南方日报"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="王伟中">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中央组织部副部长"/>
+          <attvalue for="2" value="中共中央组织部"/>
+          <attvalue for="3" value="1962年3月"/>
+          <attvalue for="4" value="Wikipedia: 王伟中"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p7" label="陈如桂">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="被调查(原深圳市市长、广东省人大常委会副主任)"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1962年9月"/>
+          <attvalue for="4" value="Wikipedia: 陈如桂; 中央纪委国家监委网站"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共深圳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="深圳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="深圳市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议深圳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="广东省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共广东省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共四川省委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共德阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="安阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="山东省鲁信投资控股集团有限公司">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="烟台市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="青岛市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共包头市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中国石油天然气集团公司">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="中国石化九江石油化工总厂">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="中共郑州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="中共周口市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="5" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="广东省委常委、深圳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省委常委、深圳市委书记"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="2026-03～至今"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o7" label="四川省委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="四川省委组织部部长"/>
+          <attvalue for="2" value="2026-03"/>
+          <attvalue for="3" value="2025-01～2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o8" label="德阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="德阳市委书记"/>
+          <attvalue for="2" value="2022-07"/>
+          <attvalue for="3" value="2019-12～2022-07"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o9" label="安阳市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安阳市市长"/>
+          <attvalue for="2" value="2019-12"/>
+          <attvalue for="3" value="2018-09～2019-12"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o16" label="郑州市委副书记、秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="郑州市委副书记、秘书长"/>
+          <attvalue for="2" value="2018-09"/>
+          <attvalue for="3" value="2016-09～2018-09"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="o17" label="周口市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="周口市委常委、组织部部长"/>
+          <attvalue for="2" value="2016-09"/>
+          <attvalue for="3" value="2015-04～2016-09"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p2" target="o2" label="深圳市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委副书记、市长"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="2021-04～至今"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p2" target="o5" label="广东省副省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省副省长"/>
+          <attvalue for="2" value="2021-04"/>
+          <attvalue for="3" value="2019-03～2021-04"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p2" target="o14" label="中国石油天然气集团公司副总经理" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中国石油天然气集团公司副总经理"/>
+          <attvalue for="2" value="2019-03"/>
+          <attvalue for="3" value="2017-03～2019-03"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p2" target="o15" label="九江石化总厂厂长、党委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="九江石化总厂厂长、党委副书记"/>
+          <attvalue for="2" value="2017-03"/>
+          <attvalue for="3" value="2010-07～2017-03"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p3" target="o3" label="深圳市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市人大常委会主任"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="2024～至今"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p4" target="o4" label="深圳市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市政协主席"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="2021～至今"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p5" target="o5" label="广东省委副书记、省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省委副书记、省长"/>
+          <attvalue for="2" value="至今"/>
+          <attvalue for="3" value="2025-10～至今"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p5" target="o6" label="广东省委副书记、深圳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省委副书记、深圳市委书记"/>
+          <attvalue for="2" value="2026-03"/>
+          <attvalue for="3" value="2022-04～2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p5" target="o1" label="深圳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委书记"/>
+          <attvalue for="2" value="2026-03"/>
+          <attvalue for="3" value="2022-04～2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p5" target="o13" label="包头市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="包头市委书记"/>
+          <attvalue for="2" value="2022-04"/>
+          <attvalue for="3" value="2020-09～2022-04"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p5" target="o12" label="青岛市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="青岛市市长"/>
+          <attvalue for="2" value="2020-09"/>
+          <attvalue for="3" value="2017-03～2020-09"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p5" target="o11" label="烟台市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="烟台市市长"/>
+          <attvalue for="2" value="2015-05"/>
+          <attvalue for="3" value="2013-08～2015-05"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p6" target="o1" label="深圳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市委书记"/>
+          <attvalue for="2" value="2022-04"/>
+          <attvalue for="3" value="2017～2022-04"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p6" target="o5" label="广东省省长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广东省省长"/>
+          <attvalue for="2" value="2025-10"/>
+          <attvalue for="3" value="2022～2025-10"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p7" target="o2" label="深圳市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="深圳市市长"/>
+          <attvalue for="2" value="2021-04"/>
+          <attvalue for="3" value="2017-08～2021-04"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委书记—市长搭档"/>
+          <attvalue for="2" value="中共深圳市委员会/深圳市人民政府"/>
+          <attvalue for="3" value="2026-03至今"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p5" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="前任市委书记—市长搭档"/>
+          <attvalue for="2" value="中共深圳市委员会/深圳市人民政府"/>
+          <attvalue for="3" value="2022-04~2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p6" target="p2" label="前继" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王伟中曾任深圳市委书记，覃伟中继任市长"/>
+          <attvalue for="2" value="中共深圳市委员会"/>
+          <attvalue for="3" value="2017~2021"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p7" target="p2" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈如桂卸任市长，覃伟中接任"/>
+          <attvalue for="2" value="深圳市人民政府"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p5" target="p6" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王伟中调任广东省长，孟凡利接任深圳市委书记"/>
+          <attvalue for="2" value="中共深圳市委员会"/>
+          <attvalue for="3" value="2022"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p1" target="p5" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孟凡利不再兼任深圳市委书记，靳磊接任"/>
+          <attvalue for="2" value="中共深圳市委员会"/>
+          <attvalue for="3" value="2026-03"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p6" target="p5" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王伟中卸任广东省长，孟凡利接任"/>
+          <attvalue for="2" value="广东省人民政府"/>
+          <attvalue for="3" value="2025-10"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p2" target="p7" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="覃伟中接替被调查的陈如桂"/>
+          <attvalue for="2" value="深圳市人民政府"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p3" target="p4" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="人大主任—政协主席"/>
+          <attvalue for="2" value="深圳市"/>
+          <attvalue for="3" value="2024至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
