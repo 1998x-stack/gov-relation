@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-22">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>端州区领导班子工作关系网络 - 数据来源: 端州区政府网站及公开报道</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="province" type="string"/>
+      <attribute id="3" title="city" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="张浩龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共肇庆市端州区委书记"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="贺丹">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委副书记、区政府党组书记、区长"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="赵国材">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委副书记（兼任区&quot;百千万工程&quot;指挥部办公室主任）"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p4" label="黎汉强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委常委、宣传部部长"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p5" label="黎泽初">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委常委、区政府党组副书记、副区长"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="50" b="50"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p6" label="黄海平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委常委、组织部部长、党校校长"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p7" label="张林泉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委常委"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p8" label="李逸文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区委常委、统战部部长、区政协党组副书记"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="p9" label="张国安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区领导"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="p10" label="植嘉升">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区政府党组成员、副区长"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="张艺">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区政府党组成员、副区长、区委卫健工委书记"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="郭盟开">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区政府党组成员、副区长、市公安局端州分局局长"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="伍东成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区政府党组成员、副区长、区双龙经开区党工委书记、管委会主任"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="潘敏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="端州区政府党组成员、副区长、区委教育工委书记"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共肇庆市端州区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="肇庆市端州区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共肇庆市端州区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共肇庆市端州区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共肇庆市端州区委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="肇庆市公安局端州分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="肇庆市端州区双龙省级经济开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="广东省"/>
+          <attvalue for="3" value="肇庆市端州区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="中共肇庆市端州区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共肇庆市端州区委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o1" label="端州区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="端州区委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="区政府党组书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组书记、区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o3" label="宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="宣传部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o2" label="区政府党组副书记、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组副书记、副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o4" label="组织部部长、党校校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="组织部部长、党校校长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p8" target="o5" label="统战部部长、区政协党组副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="统战部部长、区政协党组副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p10" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p11" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p12" target="o6" label="局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="局长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p12" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p13" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p13" target="o7" label="双龙经开区党工委书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="双龙经开区党工委书记、管委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p14" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p2" label="区委书记—区长党政正职搭档关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—区长党政正职搭档关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p3" label="区委书记—区委副书记上下级关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—区委副书记上下级关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p2" target="p5" label="区长—常务副区长工作搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长—常务副区长工作搭档"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p4" label="区委书记—宣传部长上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—宣传部长上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p6" label="区委书记—组织部长上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—组织部长上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p7" label="区委书记—区委常委" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—区委常委"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p8" label="区委书记—统战部长上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—统战部长上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p9" label="区委书记—区领导共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记—区领导共事"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p2" target="p10" label="区长—副区长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长—副区长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p2" target="p11" label="区长—副区长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长—副区长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p2" target="p12" label="区长—副区长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长—副区长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p2" target="p13" label="区长—副区长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长—副区长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p2" target="p14" label="区长—副区长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长—副区长工作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
