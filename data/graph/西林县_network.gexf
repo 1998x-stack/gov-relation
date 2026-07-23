@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>西林县领导班子关系网络（基于西林县政府官网、广西人事公示、媒体报道）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="兰田宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共西林县委书记"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="1976-08"/>
+          <attvalue for="4" value="S001"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="黄卓远">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共凌云县委书记（此前为西林县长）"/>
+          <attvalue for="2" value="中共凌云县委员会"/>
+          <attvalue for="3" value="1972-11"/>
+          <attvalue for="4" value="S004"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="付小文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委副书记"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="1978-12"/>
+          <attvalue for="4" value="S009"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="农珍艳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="方剑">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委常委、纪委书记"/>
+          <attvalue for="2" value="中共西林县纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p6" label="谌宏明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委常委、组织部部长、副县长"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="1985-10"/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="农静海">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委常委、统战部部长"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="韦文君">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委常委、县委办公室主任、副县长"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="黎兴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县委常委、政法委书记"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p10" label="李正荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县人大常委会主任"/>
+          <attvalue for="2" value="西林县人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="韦荣黎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="西林县政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议西林县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="180" g="160" b="80" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="欧阳可爽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（此前为田东县委书记，2025年9月被查）"/>
+          <attvalue for="2" value="中共田东县委员会"/>
+          <attvalue for="3" value="1974-03"/>
+          <attvalue for="4" value="S007"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p13" label="姚瑞明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="（此前为西林县委副书记，2025年10月前已离任）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共西林县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="西林县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="西林县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="中国人民政治协商会议西林县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共西林县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="中共西林县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100001" label="西林县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100001" label="西林县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="担任县长期间"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o100002" label="西林县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021-07代县长，2021-09当选"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o100001" label="西林县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o100001" label="西林县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o100005" label="西林县委常委、纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o100001" label="西林县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o100002" label="西林县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o100001" label="西林县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p8" target="o100001" label="西林县委常委、县委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o100002" label="西林县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p9" target="o100001" label="西林县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p10" target="o100003" label="西林县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p11" target="o100004" label="西林县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p12" target="o100001" label="西林县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="后调任田东"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p12" target="o100002" label="西林县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="晋升书记前职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p13" target="o100001" label="西林县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年10月前已离任"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁（县委书记）与黄卓远（县委副书记、县长）在西林县委常委会和党政班子共事约4年"/>
+          <attvalue for="2" value="中共西林县委员会/西林县人民政府"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁（县委书记）与付小文（县委副书记）在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p12" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="欧阳可爽调任田东县委书记后，兰田宁（百色市商务局局长）接任西林县委书记"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2022-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁与农珍艳在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁与方剑在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁与谌宏明在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁与农静海在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁与韦文君在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="兰田宁与黎兴在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄卓远（副书记、县长）与付小文在县委常委会共事（约4个月）"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至2026-02"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄卓远与农珍艳在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p2" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄卓远与方剑在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p2" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄卓远（县长）与李正荣（人大常委会主任）在县四套班子共事"/>
+          <attvalue for="2" value="西林县"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="付小文与农珍艳在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p3" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="付小文与方剑在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p3" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="付小文与谌宏明在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p3" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="付小文与农静海在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p3" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="付小文与韦文君在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p3" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="付小文与黎兴在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value="2025-10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p12" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="欧阳可爽（书记）与黄卓远在2021年构成书记-县长搭档"/>
+          <attvalue for="2" value="中共西林县委员会/西林县人民政府"/>
+          <attvalue for="3" value="2021-06至2022-08"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p12" target="p13" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="欧阳可爽（书记）与姚瑞明（副书记）在县委常委会共事"/>
+          <attvalue for="2" value="中共西林县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
