@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>盘州市领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="陈石">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="六盘水市委副书记、盘州市委书记"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p2" label="肖明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委副书记、市人民政府市长"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p3" label="黎永胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委常委、常务副市长"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="姚斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委副书记"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="赵冰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="中共盘州市纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p6" label="孙勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委常委、市委组织部部长"/>
+          <attvalue for="2" value="中共盘州市委员会组织部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="杜琼">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委常委、市委宣传部部长"/>
+          <attvalue for="2" value="中共盘州市委员会宣传部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="韩文杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委常委、市委政法委书记"/>
+          <attvalue for="2" value="中共盘州市委员会政法委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p9" label="金良武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市委常委、市委办公室主任"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="高赫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市人民政府副市长"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="朱家应">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市人民政府副市长"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="张劲超">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市人民政府副市长"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p13" label="余华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市人大常委会主任"/>
+          <attvalue for="2" value="盘州市人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p14" label="金良武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="盘州市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议盘州市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.panzhou.gov.cn/"/>
+        </attvalues>
+        <viz:color r="180" g="160" b="80" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共盘州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="盘州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="中共盘州市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="中共盘州市委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共盘州市委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="中共盘州市委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="盘州市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="中国人民政治协商会议盘州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="盘州市委办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="盘州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任；同时任六盘水市委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100002" label="盘州市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100001" label="盘州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100002" label="盘州市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100001" label="盘州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o100003" label="盘州市委常委、市纪委书记、市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o100004" label="盘州市委常委、市委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p7" target="o100005" label="盘州市委常委、市委宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p8" target="o100006" label="盘州市委常委、市委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p9" target="o100009" label="盘州市委常委、市委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p10" target="o100002" label="盘州市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p11" target="o100002" label="盘州市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p12" target="o100002" label="盘州市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p13" target="o100007" label="盘州市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p14" target="o100008" label="盘州市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石（市委书记）与肖明（市长）为市委常委会和政府班子搭档"/>
+          <attvalue for="2" value="中共盘州市委员会/盘州市人民政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石（市委书记）与姚斌（市委副书记）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖明（市长）与黎永胜（常务副市长）在市政府班子共事"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖明（市长、市委副书记）与姚斌（市委副书记）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石与赵冰（纪委书记）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石与孙勇（组织部部长）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石与杜琼（宣传部部长）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石与韩文杰（政法委书记）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈石与金良武（市委办主任）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p2" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖明（市长）与高赫（副市长）在市政府班子共事"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p2" target="p11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖明（市长）与朱家应（副市长）在市政府班子共事"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p2" target="p12" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="肖明（市长）与张劲超（副市长）在市政府班子共事"/>
+          <attvalue for="2" value="盘州市人民政府"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p5" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵冰（纪委书记）与孙勇（组织部部长）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p5" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵冰（纪委书记）与杜琼（宣传部部长）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p6" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孙勇（组织部部长）与杜琼（宣传部部长）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p6" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="孙勇（组织部部长）与韩文杰（政法委书记）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p8" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="韩文杰（政法委书记）与金良武（市委办主任）在市委常委会共事"/>
+          <attvalue for="2" value="中共盘州市委员会"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
