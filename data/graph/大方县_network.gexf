@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>大方县领导班子关系网络（基于大方县政府官网、联系电话公示、新闻报道）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="杨滨">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委书记"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S002"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="任劲飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委副书记、县人民政府县长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1975年9月"/>
+          <attvalue for="4" value="S003"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p3" label="徐田">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、县委组织部部长"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S015"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="严红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、县委宣传部部长"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S015"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="段习义">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、县纪委书记、监委副主任(代理主任)"/>
+          <attvalue for="2" value="中共大方县纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S015"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p6" label="张祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、县委政法委书记"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S015"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p7" label="邱林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、县委办主任、县委统战部部长"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S015"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="高朝宁">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、县人武部部长"/>
+          <attvalue for="2" value="大方县人民武装部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S015"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="李萍">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方经济开发区党工委副书记、管委会主任，县政府党组副书记，县委教育工委副书记"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1979年10月"/>
+          <attvalue for="4" value="S004"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="王瑜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、副县长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1980年8月"/>
+          <attvalue for="4" value="S005"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="张世达">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、副县长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1986年3月"/>
+          <attvalue for="4" value="S006"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="赖吉珂">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县委常委、副县长（挂职）"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1987年7月"/>
+          <attvalue for="4" value="S007"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p13" label="杨丽娟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府副县长、县公安局党委书记、局长、督察长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1973年9月"/>
+          <attvalue for="4" value="S008"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p14" label="向阳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府副县长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1985年11月"/>
+          <attvalue for="4" value="S009"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p15" label="朱军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府副县长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1988年1月"/>
+          <attvalue for="4" value="S010"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p16" label="胡荣华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府副县长、县教育局党组书记、局长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1983年10月"/>
+          <attvalue for="4" value="S011"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p17" label="罗兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府副县长"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1983年11月"/>
+          <attvalue for="4" value="S012"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p18" label="丁灿辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府副县长（挂职）"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value="1983年9月"/>
+          <attvalue for="4" value="S013"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p19" label="张波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人民政府党组成员、政府办党组书记、主任"/>
+          <attvalue for="2" value="大方县人民政府办公室"/>
+          <attvalue for="3" value="1983年11月"/>
+          <attvalue for="4" value="S014"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p20" label="张锦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县人大常委会主任"/>
+          <attvalue for="2" value="大方县人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S016"/>
+        </attvalues>
+        <viz:color r="200" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p21" label="杨忠强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="大方县政协主席"/>
+          <attvalue for="2" value="政协大方县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="S016"/>
+        </attvalues>
+        <viz:color r="180" g="120" b="80" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共大方县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="大方县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="中共大方县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="大方县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="大方县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="政协大方县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="大方县人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="大方经济开发区管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="大方县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100010" label="大方县教育局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="大方县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任，此前曾任大方县县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100002" label="大方县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100001" label="大方县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100001" label="大方县委常委、县委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100001" label="大方县委常委、县委宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o100003" label="大方县委常委、县纪委书记、监委副主任(代理主任)" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o100001" label="大方县委常委、县委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p7" target="o100001" label="大方县委常委、县委办主任、县委统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p8" target="o100004" label="大方县委常委、县人武部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p9" target="o100002" label="大方经济开发区党工委副书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任，县政府党组副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p9" target="o100008" label="大方经济开发区党工委副书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p10" target="o100002" label="大方县委常委、副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p10" target="o100001" label="大方县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p11" target="o100002" label="大方县委常委、副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年4月更新"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p11" target="o100001" label="大方县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p12" target="o100002" label="大方县委常委、副县长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职，天河区对口帮扶"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p13" target="o100002" label="大方县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p13" target="o100009" label="大方县公安局党委书记、局长、督察长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任，二级高级警长"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p14" target="o100002" label="大方县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p15" target="o100002" label="大方县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p16" target="o100002" label="大方县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p16" target="o100010" label="大方县教育局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p17" target="o100002" label="大方县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p18" target="o100002" label="大方县人民政府副县长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p19" target="o100002" label="大方县人民政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p19" target="o100007" label="大方县人民政府办公室党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p20" target="o100005" label="大方县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p21" target="o100006" label="大方县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与任劲飞（县长）构成县委-政府核心搭档"/>
+          <attvalue for="2" value="中共大方县委员会/大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与徐田（县委组织部部长）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与严红（县委宣传部部长）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与段习义（县纪委书记）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与张祥（县委政法委书记）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与邱林（县委办主任、统战部部长）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p2" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与李萍（县政府党组副书记）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p2" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与王瑜（县委常委、副县长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p2" target="p11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与张世达（县委常委、副县长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p2" target="p13" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与杨丽娟（副县长、县公安局长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p2" target="p14" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与向阳（副县长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p2" target="p15" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与朱军（副县长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p2" target="p16" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与胡荣华（副县长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p2" target="p17" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与罗兵（副县长）在县政府班子共事"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p10" target="p11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王瑜与张世达同为县委常委、副县长"/>
+          <attvalue for="2" value="中共大方县委员会/大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p10" target="p12" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王瑜与赖吉珂（挂职）在县政府班子共事，赖吉珂协助王瑜工作"/>
+          <attvalue for="2" value="大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p11" target="p12" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张世达与赖吉珂（挂职）同为县委常委、副县长"/>
+          <attvalue for="2" value="中共大方县委员会/大方县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p3" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="徐田（组织部部长）与邱林（县委办主任）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e47" source="p4" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="严红（宣传部部长）与邱林（统战部部长）在县委常委会共事"/>
+          <attvalue for="2" value="中共大方县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e48" source="p6" target="p13" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张祥（政法委书记）与杨丽娟（公安局长）在政法系统有工作联系"/>
+          <attvalue for="2" value="大方县政法系统"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e49" source="p1" target="p20" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与张锦（县人大常委会主任）在县领导班子的制度性联系"/>
+          <attvalue for="2" value="大方县领导班子"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e50" source="p1" target="p21" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨滨（县委书记）与杨忠强（县政协主席）在县领导班子的制度性联系"/>
+          <attvalue for="2" value="大方县领导班子"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e51" source="p2" target="p20" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与张锦（人大主任）在县领导班子的制度性联系"/>
+          <attvalue for="2" value="大方县领导班子"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e52" source="p2" target="p21" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任劲飞（县长）与杨忠强（政协主席）在县领导班子的制度性联系"/>
+          <attvalue for="2" value="大方县领导班子"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
