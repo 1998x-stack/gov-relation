@@ -1,4 +1,4 @@
-# Open Gaps Registry — 综合（柏乡县 + 莲池区 + 满城区）
+# Open Gaps Registry — 综合（柏乡县 + 莲池区 + 满城区 + 涞水县）
 > Last updated: 2026-07-23
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
@@ -120,11 +120,42 @@
 | 满城区↔保定其他县区人事交流 | 2026-07-23 | 未查到跨县调动信息 |
 | 刘玉辉↔田松此前是否共事 | 2026-07-23 | 因履历缺失无法判断 |
 
+---
+
+## 涞水县调研开放问题 (Open Gaps — 2026-07-23)
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 安熠辉 | 涞水县委书记 | 完整履历：出生年月、籍贯、教育背景、入党时间、此前所有任职 | 2026-07-23 | 2024年10月首次以书记身份见诸报道，此前履历完全空白 |
+| 秘杰鹏 | 涞水县委副书记、代理县长 | 完整履历：出生年月、籍贯、教育背景、入党时间、此前所有任职 | 2026-07-23 | 2026年1月时为常务副县长，此前履历完全空白 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 黄伟（前任书记） | 完整履历及调任去向 | 2026-07-23 | 2024年9月仍为县委书记 |
+| 吴磊（前任县长） | 完整履历及调任去向 | 2026-07-23 | 2026年4月后离任 |
+| 吴四军（县委副书记） | 出生年月、籍贯、教育、此前任职 | 2026-07-23 | 仅知现职为县委副书记 |
+| 县委常委完整名单 | 除安熠辉、秘杰鹏、吴四军3人外，其余常委姓名和分工 | 2026-07-23 | 应有7-9名常委 |
+| 县纪委书记 | 姓名完全未知 | 2026-07-23 | |
+| 靖冬菊等5位副县长 | 各人简历、出生年月、分管的准确领域 | 2026-07-23 | 仅从领导之窗知道分管范围 |
+
+### ⭐⭐⭐ Medium
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 涞水县↔保定其他县区/北京房山区干部交流 | 2026-07-23 | 涞水县毗邻北京市房山区，有地缘优势 |
+| 安熠辉↔秘杰鹏此前是否在其他单位共事过 | 2026-07-23 | 因履历缺失无法判断 |
+| 刘帅、康田、沈飞、张婵、张志鹏5人的具体职务 | 2026-07-23 | 从会议报道中仅有姓名 |
+
 ### 搜索环境说明
 
 - Exa search: rate-limited for entire task
 - Baidu Baike: 403 forbidden
 - Google: blocked
 - Jina Reader: transport errors
-- **Official site (mancheng.gov.cn): accessible via HTTP** — primary evidence from news pages, userful for leadership confirmation but bio pages are limited
-- Leadership bio pages (ldml/): accessible as listing but individual detail pages have JSP-dynamic routing
+- **Official site (laishui.gov.cn): accessible via HTTP** — primary evidence from news pages and leadership page
+- Leadership bio page: catid=9 accessible and contains full government leadership division of work
+- News listing accessible up to 53 pages of archives
