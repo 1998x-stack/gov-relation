@@ -35,3 +35,42 @@
 |-----|----------------|-------|
 | 经济数据（GDP、人均收入等） | 2026-07-23 | |
 | 历史沿革详细信息 | 2026-07-23 | |
+
+---
+
+## 清河县调研开放问题 (Open Gaps — 2026-07-23)
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 樊振宇 | 清河县委书记 | 出生年月、籍贯、教育背景、入党时间、工作起始时间、此前所有任职 | 2026-07-23 | 仅有2026-07新闻报道确认在任；县委书记接替链断裂 |
+| 刘志诚 | 清河县长 | 出生年月、籍贯、教育背景、入党时间、工作起始时间、任县长前职务 | 2026-07-23 | 2026-01-27以县长身份作政府工作报告 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 清河县前任县委书记 | 姓名和去向完全未知 | 2026-07-23 | 樊振宇前任无法通过公开渠道查到 |
+| 闫恒卓（前县长） | 离任后去向 | 2026-07-23 | ~2021~约2025任清河县长 |
+| 郭卫欣（前县长） | 离任后去向 | 2026-07-23 | 约2021年任清河县长 |
+| 韩恺（前县长） | 离任后去向 | 2026-07-23 | 2018代~约2021任清河县长 |
+| 清河县委常委班子 | 除书记、县长、常务副县长外，其他常委姓名和分工 | 2026-07-23 | 组织部长、纪委书记、政法委书记、宣传部长、统战部长等全部未知 |
+| 鞠占稳（常务副县长） | 2021-07前完整履历 | 2026-07-23 | 仅知1976-09出生、研究生学历，此前任职完全空白 |
+| 5位副县长（安铭、郭兵、王晓磊、王其良、尚瑞） | 各人简历、分管领域、来源 | 2026-07-23 | 官网ldml页面有列名但无个人详情页面 |
+
+### ⭐⭐⭐ Medium
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 清河县与邢台其他县区干部交流 | 2026-07-23 | 未查到跨县调动信息 |
+| 清河县近期领导班子调整时间线 | 2026-07-23 | 仅确认县长2025末/2026初交接 |
+
+### 搜索环境说明
+
+- Exa search: rate-limited for entire task
+- Baidu Baike: 403 forbidden
+- Google: blocked
+- Jina Reader: transport errors
+- **Official site (qinghexian.gov.cn): accessible** — primary evidence from news pages and government work reports
+- Leadership bio pages (ldml/): accessible as listing but individual detail pages have JSP-dynamic routing
