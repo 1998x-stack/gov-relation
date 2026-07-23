@@ -1,6 +1,30 @@
 # Open Gaps Registry
 > Last updated: 2026-07-23
 
+> 福泉市 gaps added: 2026-07-23
+
+## 福泉市 — Core Gaps
+
+### ⭐⭐⭐⭐⭐ Critical
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 吴义宁 | 福泉市委书记 | 完整任职履历 | 2026-07-23 | 官方简历仅记载出生年月、学历和现任职务 |
+| 夏世飞 | 福泉市长 | 完整任职履历 | 2026-07-23 | 理学博士，但历任职务完全缺失 |
+| 福泉市前任书记 | 未知 | 姓名及去向 | 2026-07-23 | 未找到任何信息 |
+| 福泉市前任市长 | 未知 | 姓名及去向 | 2026-07-23 | 未找到任何信息 |
+
+### ⭐⭐⭐⭐ High
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 吴义宁出生地/籍贯 | 出生地和籍贯 | 2026-07-23 | 同乡关系推断 |
+| 夏世飞出生地/籍贯 | 出生地和籍贯 | 2026-07-23 | 同乡关系推断 |
+| 王程远完整履历 | 曾任职务、教育背景 | 2026-07-23 | 1983年生年轻副书记 |
+| 各常委分工 | 具体分管领域 | 2026-07-23 | 多位常委分工待确认 |
+
+---
+
 ## 🚨 CRITICAL BLOCKER — Research environment constraints
 
 All gaps below stem from a single root cause: **complete web access block to Chinese government
