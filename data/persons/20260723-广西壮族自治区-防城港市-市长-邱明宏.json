@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-23",
+  "investigation_scope": {
+    "province": "广西壮族自治区",
+    "city": "",
+    "region": "防城港市",
+    "job": "市长",
+    "task_id": "guangxi_防城港市",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "guangxi_fangchenggang_qiu_minghong",
+    "name": "邱明宏",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1970-08",
+    "birthplace": "陕西宁强",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "陕西省委党校",
+        "major": "",
+        "degree": "研究生学历",
+        "study_type": "party_school",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "邱明宏_1970-08",
+      "name_birthplace": "邱明宏_陕西宁强",
+      "official_profile_url": "https://www.fcgs.gov.cn/zfxxgk/zdzdgknr/ldjj/sz/"
+    }
+  },
+  "current_status": {
+    "current_post": "梧州市委书记",
+    "current_org": "中共梧州市委员会",
+    "administrative_rank": "正厅级",
+    "as_of": "2026-07-23",
+    "is_current_confirmed": true,
+    "source_ids": ["S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2024-09",
+      "org": "广西壮族自治区信访局",
+      "title": "局长（广西壮族自治区人民政府副秘书长兼）",
+      "level": "正厅级",
+      "location": "广西南宁",
+      "system": "government",
+      "rank": "正厅级",
+      "is_key_promotion": false,
+      "notes": "此前长期在政法/信访系统工作",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2024-09",
+      "end": "2024-10",
+      "org": "防城港市人民政府",
+      "title": "防城港市代市长",
+      "level": "正厅级",
+      "location": "广西防城港",
+      "system": "government",
+      "rank": "正厅级",
+      "is_key_promotion": true,
+      "notes": "由自治区信访局调任",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2024-10",
+      "end": "2026-06",
+      "org": "防城港市人民政府",
+      "title": "防城港市市长",
+      "level": "正厅级",
+      "location": "广西防城港",
+      "system": "government",
+      "rank": "正厅级",
+      "is_key_promotion": true,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2026-06",
+      "end": "present",
+      "org": "中共梧州市委员会",
+      "title": "梧州市委书记",
+      "level": "正厅级",
+      "location": "广西梧州",
+      "system": "party",
+      "rank": "正厅级",
+      "is_key_promotion": true,
+      "notes": "由防城港市长调任梧州市委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "organizations": [
+    {"id": "ORG001", "name": "防城港市人民政府", "type": "政府", "role": "former"},
+    {"id": "ORG002", "name": "广西壮族自治区信访局", "type": "政府", "role": "former"},
+    {"id": "ORG003", "name": "中共梧州市委员会", "type": "党委", "role": "current"}
+  ],
+  "relationships": [
+    {
+      "person": "黄江",
+      "person_id": "guangxi_fangchenggang_huang_jiang",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "邱明宏接替黄江（转书记）出任市长，搭班约2年",
+      "overlap_org": "防城港市人民政府",
+      "overlap_period": "2024-09~2026-06",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陆辉",
+      "person_id": "guangxi_fangchenggang_lu_hui",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "市长任期内，陆辉为市委副书记",
+      "overlap_org": "防城港市",
+      "overlap_period": "2025~2026-06",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["信访工作", "地方行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["陕西宁强(原籍)", "广西南宁", "广西防城港", "广西梧州"],
+    "promotion_velocity": {
+      "summary": "从自治区信访局局长调任防城港市长，约1年9个月后调任梧州市委书记，晋升速度较快",
+      "notable_fast_promotions": ["2024-09任防城港市长，2026-06升梧州市委书记"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开可查的工作风格信息较少",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现邱明宏涉及任何纪律处分、调查或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "防城港市政府领导简介 - 邱明宏",
+      "url": "https://www.fcgs.gov.cn/zfxxgk/zdzdgknr/ldjj/sz/",
+      "publisher": "防城港市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认邱明宏在防城港市长任上的官方简介"
+    },
+    {
+      "id": "S002",
+      "title": "子任务1/4/5代理研究",
+      "url": "",
+      "publisher": "背景研究代理",
+      "published_at": "2026-07-23",
+      "accessed_at": "2026-07-23",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "确认邱明宏2026年6月调任梧州市委书记"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "2024年之前的完整履历（尤其是信访局及政法系统任职的具体时间线）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "邱明宏在广西信访局之前的早期任职经历",
+      "why_it_matters": "完整理解其职业起点和晋升路径",
+      "suggested_queries": ["邱明宏 简历 陕西", "邱明宏 广西信访局 任职"],
+      "last_attempted": "2026-07-23"
+    }
+  ]
+}
