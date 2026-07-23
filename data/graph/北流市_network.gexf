@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>北流市领导班子关系网络（基于北流市人民政府官网确认数据）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="周印章">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委书记"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月多篇报道确认市委书记身份: 市委常委会会议、经开区调研等"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="黄政强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委副书记、市长"/>
+          <attvalue for="2" value="中共北流市委员会/北流市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn/ldfg/sz/"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="陈法祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委、副市长"/>
+          <attvalue for="2" value="中共北流市委员会/北流市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn/ldfg/fsz/t25963648.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="周慧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市副市长"/>
+          <attvalue for="2" value="北流市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn/ldfg/fsz/t27918358.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="刘松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市副市长"/>
+          <attvalue for="2" value="北流市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn/ldfg/fsz/t19667540.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p6" label="陈小军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市副市长、市公安局局长"/>
+          <attvalue for="2" value="北流市人民政府/北流市公安局"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn/ldfg/fsz/t23364018.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="林长聪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委副书记、办公室主任"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p8" label="李剑锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="王慧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="林咏红">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="李红飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="赵逢哲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p13" label="李团源">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委常委"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会会议报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p14" label="吕智能">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市领导（人大方向）"/>
+          <attvalue for="2" value="北流市人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会列席报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p15" label="陈素贞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市领导（政协方向）"/>
+          <attvalue for="2" value="中国人民政治协商会议北流市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会列席报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p16" label="张进强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市领导"/>
+          <attvalue for="2" value="北流市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年7月市委常委会列席报道(S006)"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p17" label="刘启">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北流市委原书记（已调离）"/>
+          <attvalue for="2" value="（调离）"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.beiliu.gov.cn — 2026年6月23日市委常委会由刘启主持(S012)，2026年7月已由周印章接任"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="o100001" label="中共北流市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="北流市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="北流市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="中国人民政治协商会议北流市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共北流市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="北流市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="北流经济技术开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="北流市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月多篇报道以市委书记身份出席活动；前任为刘启"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100001" label="北流市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="官方简历：北流市委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100002" label="北流市人民政府市长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="领导市政府全面工作，负责财政、审计工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="负责经贸科技、市场监管、大数据、招商引资、经开区等工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o100002" label="北流市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管市经济贸易和科学技术局、市场监督管理局、大数据局等"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o100002" label="北流市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管教育、人社、文体广电旅游、卫健、医保、民政、退役军人事务等"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o100002" label="北流市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管农业农村、林业、水利、乡村振兴、交通、征地拆迁等"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o100002" label="北流市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="分管公安、司法、信访、维稳等工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o100006" label="北流市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任市公安局党委书记、局长"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o100001" label="北流市委副书记、办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任市委办公室主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p8" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p9" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p10" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p11" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p12" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p13" target="o100001" label="北流市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p14" target="o100003" label="北流市领导（人大方向）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列席市委常委会"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p15" target="o100004" label="北流市领导（政协方向）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列席市委常委会"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p16" target="o100002" label="北流市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列席市委常委会，具体职务待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p17" target="o100001" label="北流市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年6月23日仍以市委书记身份主持常委会，2026年7月由周印章接任"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="周印章（市委书记）与黄政强（市长）为北流市党政主要领导人"/>
+          <attvalue for="2" value="北流市党政班子"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p3" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="周印章（市委书记）与陈法祥（市委常委、副市长）在市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p2" target="p3" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄政强（市长）与陈法祥（副市长）在市政府班子中共事"/>
+          <attvalue for="2" value="北流市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p17" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="周印章接替刘启任北流市委书记（2026年）"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年交接"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p2" target="p4" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="周慧（副市长）在黄政强（市长）领导下工作"/>
+          <attvalue for="2" value="北流市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p2" target="p5" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘松（副市长）在黄政强（市长）领导下工作"/>
+          <attvalue for="2" value="北流市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p2" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈小军（副市长、公安局长）在黄政强（市长）领导下工作"/>
+          <attvalue for="2" value="北流市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p7" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p8" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p9" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p1" target="p10" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p1" target="p11" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p1" target="p12" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p1" target="p13" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共北流市委员会"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
