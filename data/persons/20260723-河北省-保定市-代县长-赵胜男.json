@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-23",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "保定市",
+    "region": "高阳县",
+    "job": "代县长",
+    "task_id": "hebei_高阳县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "gaoyang_zhaoshengnan",
+    "name": "赵胜男",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "待查",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "赵胜男_待查",
+      "name_birthplace": "赵胜男_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "高阳县委副书记、代县长",
+    "current_org": "高阳县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-23",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "约2026-02",
+      "end": "至今",
+      "org": "高阳县人民政府",
+      "title": "高阳县委副书记、代县长",
+      "level": "正处级",
+      "location": "河北省保定市高阳县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替齐志国任代县长；高阳县政府官网领导之窗第一位",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到赵胜男任高阳代县长前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"id": "org_gaoyang_gov", "name": "高阳县人民政府", "type": "政府", "level": "县", "location": "河北省保定市高阳县"}
+  ],
+  "relationships": [
+    {
+      "person": "齐志国",
+      "person_id": "gaoyang_qizhiguo",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "赵胜男接替齐志国任代县长（齐志国升任县委书记）",
+      "overlap_org": "高阳县人民政府",
+      "overlap_period": "约2026-02",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "黄明",
+      "person_id": "gaoyang_huangming",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "赵胜男与黄明共同参加2026年春节慰问活动",
+      "overlap_org": "高阳县党政领导班子",
+      "overlap_period": "2026-02",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足，无法判断",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "仅有春节慰问一篇文章提及",
+        "confidence": "unverified",
+        "source_ids": ["S001"]
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月未发现纪律处分或负面报道",
+      "date": "2026-07-23",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "齐志国、赵胜男等县领导春节前夕看望慰问一线工作人员",
+      "url": "http://www.gaoyang.gov.cn/info_show.asp?infoid=11648",
+      "publisher": "高阳县人民政府",
+      "published_at": "2026-02-14",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认赵胜男为县委副书记、代县长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "赵胜男全部基础信息和任职前履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "赵胜男的出生年月、籍贯、教育背景、入党时间、工作起始时间",
+      "why_it_matters": "代县长的核心身份信息完全缺失",
+      "suggested_queries": ["赵胜男 简历", "赵胜男 任前公示", "赵胜男 保定"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "critical",
+      "question": "赵胜男2026年任高阳代县长之前的全部任职履历",
+      "why_it_matters": "无法判断其专业背景和此前任职单位",
+      "suggested_queries": ["赵胜男 此前担任", "赵胜男 任职经历"],
+      "last_attempted": "2026-07-23"
+    }
+  ]
+}
