@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兴宾区领导班子工作关系网络 — 情报简报</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #161618;
+    --border: #2a2a2d;
+    --text: #e8e6e3;
+    --text-dim: #8b8b8d;
+    --accent: #E03C31;
+    --accent-dim: #8a2018;
+    --gold: #C9A94E;
+    --gold-dim: #7a6a30;
+    --blue: #4a7fc7;
+    --blue-dim: #2a4a7a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Noto Serif SC", "Source Han Serif SC", serif;
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) { body { padding: 1rem; } }
+
+  /* Header */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .header::before {
+    content: "★";
+    color: var(--accent);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+  }
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+    font-family: -apple-system, "Noto Sans SC", sans-serif;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 1.5rem;
+    border: 1px solid var(--border);
+  }
+  .stat {
+    background: var(--surface);
+    padding: 1rem;
+    text-align: center;
+  }
+  .stat-value { font-size: 1.6rem; font-weight: 600; color: var(--accent); }
+  .stat-label { font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* Person Cards Grid */
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .card {
+    background: var(--surface);
+    padding: 1.2rem;
+    position: relative;
+  }
+  .card-role-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  .card-role-tag.secretary { color: var(--accent); border-color: var(--accent-dim); }
+  .card-role-tag.mayor { color: var(--blue); border-color: var(--blue-dim); }
+  .card-role-tag.deputy { color: var(--text-dim); border-color: var(--border); }
+  .card-name { font-size: 1.1rem; font-weight: 500; }
+  .card-role { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.3rem; }
+  .card-detail { font-size: 0.75rem; color: var(--text-dim); margin-top: 0.3rem; }
+  .card-badges { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .badge {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-dim);
+  }
+  .badge.confirmed { color: var(--gold); border-color: var(--gold-dim); }
+
+  /* Timeline */
+  .timeline { position: relative; }
+  .timeline-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
+  .timeline-date {
+    min-width: 90px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-family: -apple-system, "Noto Sans SC", sans-serif;
+  }
+  .timeline-dot {
+    position: relative;
+    width: 12px;
+    flex-shrink: 0;
+  }
+  .timeline-dot::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .timeline-dot::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 1px;
+    height: calc(100% + 0.5rem);
+    background: var(--border);
+  }
+  .timeline-item:last-child .timeline-dot::after { display: none; }
+  .timeline-content { flex: 1; }
+  .timeline-title { font-size: 0.9rem; }
+  .timeline-desc { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.2rem; }
+
+  /* Relationship Matrix */
+  .matrix-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  .matrix-table th, .matrix-table td {
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    text-align: left;
+  }
+  .matrix-table th {
+    background: var(--surface);
+    color: var(--text-dim);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .matrix-table td { background: var(--bg); }
+  .conn-strong { color: var(--gold); }
+  .conn-medium { color: #d4a847; }
+  .conn-weak { color: var(--text-dim); }
+
+  /* Insights Panel */
+  .insights-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .insight {
+    background: var(--surface);
+    padding: 1.2rem;
+  }
+  .insight-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+  .insight-text { font-size: 0.85rem; line-height: 1.6; }
+  .gap-critical { color: var(--accent); }
+  .gap-high { color: var(--gold); }
+
+  /* Footer */
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="title">兴宾区领导班子工作关系网络</div>
+  <div class="subtitle">广西壮族自治区 · 来宾市 · 兴宾区 &nbsp;|&nbsp; 情报简报 &nbsp;|&nbsp; 2026-07-23</div>
+  <div class="stats">
+    <div class="stat"><div class="stat-value">20</div><div class="stat-label">人物</div></div>
+    <div class="stat"><div class="stat-value">10</div><div class="stat-label">机构</div></div>
+    <div class="stat"><div class="stat-value">30</div><div class="stat-label">任职记录</div></div>
+    <div class="stat"><div class="stat-value">22</div><div class="stat-label">关系边</div></div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 核心领导</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="card-role-tag secretary">区委书记</div>
+    <div class="card-name">王轶</div>
+    <div class="card-role">来宾市人大常委会副主任、兴宾区委书记</div>
+    <div class="card-detail">男 · 民族待查 · 2024年至今 · 副厅级</div>
+    <div class="card-badges">
+      <span class="badge">履历严重缺失</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag mayor">区长</div>
+    <div class="card-name">管志斌</div>
+    <div class="card-role">兴宾区委副书记、政府区长</div>
+    <div class="card-detail">男 · 汉族 · 1982年5月 · 文学博士 · 正处级</div>
+    <div class="card-badges">
+      <span class="badge">文学博士</span>
+      <span class="badge">2026年上任</span>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 区委常委会</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="card-role-tag secretary">书记</div>
+    <div class="card-name">王轶</div>
+    <div class="card-role">区委书记</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">副书记</div>
+    <div class="card-name">管志斌</div>
+    <div class="card-role">区委副书记、区长</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">副书记</div>
+    <div class="card-name">唐彦乐</div>
+    <div class="card-role">区委副书记</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">黄大乘</div>
+    <div class="card-role">区委常委、副区长</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委（挂职）</div>
+    <div class="card-name">仇兴华</div>
+    <div class="card-role">区委常委、副区长</div>
+    <div class="card-detail">汉族 · 1983年10月 · 自治区园区服务中心</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委（挂职）</div>
+    <div class="card-name">梁济谞</div>
+    <div class="card-role">区委常委、副区长</div>
+    <div class="card-detail">汉族 · 1986年12月 · 团市委副书记</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">潘锦辉</div>
+    <div class="card-role">区委常委、统战部长</div>
+    <div class="card-detail">壮族 · 1987年12月 · 哲学学士</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">梁修田</div>
+    <div class="card-role">区委常委、办公室主任</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">蓝文钰</div>
+    <div class="card-role">区委常委</div>
+    <div class="card-detail">分工待查</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">蒙函</div>
+    <div class="card-role">区委常委</div>
+    <div class="card-detail">分工待查</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">陆彦毓</div>
+    <div class="card-role">区委常委</div>
+    <div class="card-detail">分工待查</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">韦建红</div>
+    <div class="card-role">区委常委</div>
+    <div class="card-detail">分工待查</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">常委</div>
+    <div class="card-name">邓建宇</div>
+    <div class="card-role">区委常委</div>
+    <div class="card-detail">分工待查</div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 区政府领导班子</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="card-role-tag mayor">区长</div>
+    <div class="card-name">管志斌</div>
+    <div class="card-role">区长（区委副书记）</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">副区长</div>
+    <div class="card-name">黄大乘</div>
+    <div class="card-role">副区长（常委）</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">副区长</div>
+    <div class="card-name">黄宁</div>
+    <div class="card-role">副区长、公安分局局长</div>
+    <div class="card-detail">壮族 · 1979年10月</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">副区长</div>
+    <div class="card-name">覃泽毅</div>
+    <div class="card-role">副区长</div>
+    <div class="card-detail">壮族 · 1976年8月 · 在职研究生</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">政府办主任</div>
+    <div class="card-name">袁海斌</div>
+    <div class="card-role">政府办主任、党组成员</div>
+    <div class="card-detail">瑶族 · 1982年4月 · 文学学士</div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 人大·政协</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="card-role-tag deputy">人大</div>
+    <div class="card-name">方革</div>
+    <div class="card-role">人大常委会主任</div>
+    <div class="card-detail">2024年2月当选</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">政协</div>
+    <div class="card-name">冉纪贵</div>
+    <div class="card-role">政协主席</div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 前任领导</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <div class="card-role-tag deputy">前任区委书记</div>
+    <div class="card-name">周灵</div>
+    <div class="card-role">原来宾市人大常委会副主任、兴宾区委书记</div>
+    <div class="card-detail">2024年离任 · 去向待查</div>
+  </div>
+  <div class="card">
+    <div class="card-role-tag deputy">前任区长</div>
+    <div class="card-name">蓝海鹏</div>
+    <div class="card-role">原兴宾区区长</div>
+    <div class="card-detail">2026年初离任 · 去向待查</div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 王轶治理足迹（时间线）</h2>
+
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">2024-09</div>
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-title">涉重金属环境安全隐患排查整治</div>
+      <div class="timeline-desc">率队到城厢镇涉重企业调研，推进环境安全问题整改</div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">2025-02</div>
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-title">春节慰问武警支队</div>
+      <div class="timeline-desc">以市人大常委会副主任、兴宾区委书记身份率团慰问</div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">2026-06</div>
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-title">糖业高质量发展大会</div>
+      <div class="timeline-desc">提出打造"全国糖业创新发展引领区"，成立工作专班</div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">2026-07</div>
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-title">正确政绩观专题党课</div>
+      <div class="timeline-desc">讲授学习教育专题党课，区长主持，四套班子参加</div>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title">✦ 关系矩阵</h2>
+
+<table class="matrix-table">
+  <thead>
+    <tr>
+      <th>人物A</th><th>人物B</th><th>关系类型</th><th>背景</th><th>强度</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>王轶</td><td>管志斌</td><td>党政搭档</td><td>区委书记—区长</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>王轶</td><td>唐彦乐</td><td>上下级</td><td>区委书记—副书记</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>王轶</td><td>黄大乘</td><td>上下级</td><td>区委书记—常委副区长</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>王轶</td><td>梁修田</td><td>上下级</td><td>区委书记—办公室主任</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>王轶</td><td>潘锦辉</td><td>上下级</td><td>区委书记—统战部长</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>王轶</td><td>方革</td><td>四套班子</td><td>区委书记—人大主任</td><td class="conn-medium">◇ 中</td></tr>
+    <tr><td>王轶</td><td>冉纪贵</td><td>四套班子</td><td>区委书记—政协主席</td><td class="conn-medium">◇ 中</td></tr>
+    <tr><td>管志斌</td><td>黄宁</td><td>上下级</td><td>区长—副区长（公安）</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>管志斌</td><td>覃泽毅</td><td>上下级</td><td>区长—副区长</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>周灵</td><td>王轶</td><td>前任—继任</td><td>区委书记交接</td><td class="conn-strong">◆ 强</td></tr>
+    <tr><td>蓝海鹏</td><td>管志斌</td><td>前任—继任</td><td>区长交接</td><td class="conn-strong">◆ 强</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-title">✦ 关键洞察</h2>
+
+<div class="insights-grid">
+  <div class="insight">
+    <div class="insight-label">⚠ 严重信息缺口</div>
+    <div class="insight-text">
+      <strong class="gap-critical">区委书记王轶的完整履历全部缺失</strong> — 出生年月、籍贯、学历、早期任职均未公开。作为兴宾区一把手兼副厅级市人大副主任，这一信息缺失严重影响关系网络分析的基础。
+    </div>
+  </div>
+  <div class="insight">
+    <div class="insight-label">⚠ 重要信息缺口</div>
+    <div class="insight-text">
+      <strong class="gap-high">区长管志斌的职业路径不完整</strong> — 已知1982年生、文学博士，但来兴宾区前的任职经历完全未知。博士学历在县级政府一把手中较稀缺。
+    </div>
+  </div>
+  <div class="insight">
+    <div class="insight-label">💡 值得关注的信号</div>
+    <div class="insight-text">
+      区委班子中有<strong>2名挂职干部</strong>（仇兴华来自自治区园区服务中心，梁济谞来自团市委），说明兴宾区有自治区和市级的定点支持安排。这些挂职干部可能带来上级资源和人脉网络。
+    </div>
+  </div>
+  <div class="insight">
+    <div class="insight-label">💡 人事格局</div>
+    <div class="insight-text">
+      2024-2026年兴宾区经历了完整的党政一把手更替（周灵→王轶，蓝海鹏→管志斌）。新班子以"糖业高质量发展"为经济工作重心，区委书记王轶亲自抓这个产业方向。
+    </div>
+  </div>
+  <div class="insight">
+    <div class="insight-label">💡 年轻化趋势</div>
+    <div class="insight-text">
+      班子整体较年轻：管志斌（1982年生）、仇兴华（1983年生）、梁济谞（1986年生）、潘锦辉（1987年生）均为80后，其中潘锦辉为最年轻常委。班子构成呈现知识化、年轻化特征。
+    </div>
+  </div>
+  <div class="insight">
+    <div class="insight-label">🔎 待查线索</div>
+    <div class="insight-text">
+      <span class="gap-critical">周灵去向</span>、<span class="gap-high">蓝海鹏去向</span>均不明确。5名常委（蓝文钰、蒙函、陆彦毓、韦建红、邓建宇）的具体分工待查。这些信息对完整理解兴宾区权力结构至关重要。
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2 class="section-title">✦ 数据文件</h2>
+
+<p style="font-size:0.85rem; color:var(--text-dim); margin-bottom:1.5rem; line-height:2;">
+<strong>构建脚本</strong>：<code>build_兴宾区_data.py</code><br>
+<strong>SQLite数据库</strong>：<code>data/database/兴宾区_network.db</code>（20人、10机构、30任职、22关系）<br>
+<strong>GEXF图文件</strong>：<code>data/graph/兴宾区_network.gexf</code><br>
+<strong>人物档案</strong>：<code>data/persons/20260723-广西壮族自治区-来宾市-区委书记-王轶.json</code><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;<code>data/persons/20260723-广西壮族自治区-来宾市-区长-管志斌.json</code><br>
+<strong>调查报告</strong>：<code>report/20260723-兴宾区-领导班子.md</code>
+</p>
+
+<div class="footer">
+  兴宾区人民政府门户网站为数据来源 · 情报简报2026-07-23 · 持续更新
+</div>
+
+</body>
+</html>
