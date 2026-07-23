@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>gov-relation build script</creator>
+    <description>合浦县领导班子工作关系网络 (as of 2026-07-23)</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王川">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="合浦县委书记"/>
+          <attvalue for="2" value="中共合浦县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="GAP — 需通过官方领导之窗或百度百科核实当前县委书记"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="白银冰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="合浦县委副书记、县长"/>
+          <attvalue for="2" value="合浦县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="GAP — 需通过官方领导之窗或百度百科核实当前县长"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="周水祥">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原合浦县委常委、常务副县长、县委办主任（已调柳州）"/>
+          <attvalue for="2" value="中共合浦县委员会/合浦县人民政府"/>
+          <attvalue for="3" value="1984年10月"/>
+          <attvalue for="4" value="data/persons/广西壮族自治区-柳州市-区委书记-周水祥.json (本仓库已有数据)"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="合浦县委常委、纪委书记"/>
+          <attvalue for="2" value="中共合浦县纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="GAP — 需通过合浦县领导分工页面核实"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="合浦县委常委、组织部部长"/>
+          <attvalue for="2" value="中共合浦县委组织部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="GAP — 需通过合浦县领导分工页面核实"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p7" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="合浦县委常委、政法委书记"/>
+          <attvalue for="2" value="中共合浦县委政法委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="GAP — 需通过合浦县领导分工页面核实"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="合浦县副县长"/>
+          <attvalue for="2" value="合浦县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="GAP — 需通过合浦县政府领导之窗核实"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="蔡锦军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广西壮族自治区园区办党组书记、主任"/>
+          <attvalue for="2" value="广西壮族自治区产业园区改革发展办公室"/>
+          <attvalue for="3" value="1968年11月"/>
+          <attvalue for="4" value="data/persons/广西壮族自治区-北海市-前市委书记-蔡锦军.json (本仓库已有数据); 北海市报告"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="覃燕妮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市海城区人民政府副区长、代理区长"/>
+          <attvalue for="2" value="北海市海城区人民政府"/>
+          <attvalue for="3" value="1982年10月"/>
+          <attvalue for="4" value="data/persons/广西壮族自治区-北海市-区长-覃燕妮.json (本仓库已有数据)"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共合浦县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="合浦县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共合浦县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="副处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="合浦县监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="副处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共合浦县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共合浦县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="合浦县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中国人民政治协商会议合浦县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="合浦县发展和改革局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="共青团合浦县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="群团"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="合浦县星岛湖乡人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value="乡科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共合浦县星岛湖乡委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="乡镇/街道"/>
+          <attvalue for="2" value="乡科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="合浦县财政局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="合浦县教育局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="合浦县卫生健康局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="合浦县自然资源局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="正科级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="合浦工业园区管理委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="副处级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="中共北海市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="厅级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="北海市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="厅级"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="p1" target="o1" label="合浦县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=" - present"/>
+        </attvalues>
+      </edge>
+      <edge id="1" source="p2" target="o2" label="合浦县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县委副书记、县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=" - present"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p4" target="o1" label="合浦县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县委常委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p4" target="o2" label="合浦县委常委、常务副县长、县委办主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县委常委、常务副县长、县委办主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p9" target="o2" label="合浦县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县人民政府副县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2001-12 - 2003-02"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p10" target="o9" label="合浦县发展和改革局副局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县发展和改革局副局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2009.08 - 2010.01"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p10" target="o9" label="合浦县发展和改革局副局长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县发展和改革局副局长、党组成员"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2010.01 - 2011.07"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p10" target="o10" label="共青团合浦县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团合浦县委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2011.07 - 2011.11"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p10" target="o10" label="共青团合浦县委员会书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团合浦县委员会书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2011.11 - 2013.04"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p10" target="o11" label="星岛湖乡党委副书记、乡长（候选人）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="星岛湖乡党委副书记、乡长（候选人）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2013.04 - 2015.06"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p10" target="o12" label="中共合浦县星岛湖乡党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共合浦县星岛湖乡党委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2015.06 - 2016.05"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p10" target="o1" label="合浦县委办公室副主任（正科长级）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县委办公室副主任（正科长级）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016.05 - 2016.07"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="合浦县委书记与县长搭档"/>
+          <attvalue for="2" value="合浦县四套班子"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p4" target="p1" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="周水祥任合浦县委常委期间为县委书记下属"/>
+          <attvalue for="2" value="中共合浦县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p4" target="p2" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="周水祥任常务副县长期间为县长下属"/>
+          <attvalue for="2" value="合浦县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p9" target="p1" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="蔡锦军曾任合浦县副县长（2001-2003），后升任北海市委书记"/>
+          <attvalue for="2" value="合浦县人民政府"/>
+          <attvalue for="3" value="2001-2003"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p10" target="p1" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="覃燕妮在合浦县发改局、共青团、星岛湖乡等工作（2009-2016），与县委书记可能有工作交集"/>
+          <attvalue for="2" value="合浦县"/>
+          <attvalue for="3" value="2009-2016"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
