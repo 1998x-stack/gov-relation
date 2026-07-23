@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>贺州市领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="李国忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市委书记"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/ywzx/ldhd_37591/t27930094.shtml"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="彭代元">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市委副书记、市长、党组书记"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="1969年3月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/sz/index.shtml"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="陆海平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市人大常委会主任"/>
+          <attvalue for="2" value="贺州市人民代表大会常务委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/ywzx/ldhd_37591/t27930108.shtml"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p4" label="蓝树东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议贺州市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/ywzx/ldhd_37591/t27930108.shtml"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p5" label="钟洪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市委副书记"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/sylbt/t27857838.shtml"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p6" label="何翔">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市委常委、副市长（常务）"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="1981年2月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t4157809.shtml"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="蒋晓军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市委常委、统战部部长、副市长"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="1972年9月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t4160750.shtml"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="李丽">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市委常委、副市长（挂职），中央港澳办五局副局长"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="1979年12月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t5669648.shtml"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="罗剑">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市副市长"/>
+          <attvalue for="2" value="贺州市人民政府"/>
+          <attvalue for="3" value="1975年12月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t10454792.shtml"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="程钊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市副市长、党组成员，钟山县委书记"/>
+          <attvalue for="2" value="贺州市人民政府/中共钟山县委员会"/>
+          <attvalue for="3" value="1984年12月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t10454843.shtml"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p11" label="冯旭波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市副市长、党组成员"/>
+          <attvalue for="2" value="贺州市人民政府"/>
+          <attvalue for="3" value="1986年4月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t4159934.shtml"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="陈耀超">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市副市长、党组成员，市公安局局长、党委书记"/>
+          <attvalue for="2" value="贺州市人民政府/贺州市公安局"/>
+          <attvalue for="3" value="1973年3月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/fsz/t17500153.shtml"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p13" label="陈展维">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="贺州市人民政府秘书长、党组成员，办公室党组书记、主任"/>
+          <attvalue for="2" value="贺州市人民政府办公室"/>
+          <attvalue for="3" value="1975年12月"/>
+          <attvalue for="4" value="http://www.gxhz.gov.cn/zfxxgk/fdzdgknr/ldxx/msz/t10380578.shtml"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p14" label="李宏庆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广西壮族自治区农业农村厅原厅长"/>
+          <attvalue for="2" value="广西壮族自治区农业农村厅"/>
+          <attvalue for="3" value="1963年10月"/>
+          <attvalue for="4" value="公开资料"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p15" label="林冠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="广西投资集团有限公司原党委书记、董事长"/>
+          <attvalue for="2" value="广西投资集团有限公司"/>
+          <attvalue for="3" value="1966年11月"/>
+          <attvalue for="4" value="公开资料"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="o100001" label="中共贺州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="贺州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="贺州市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="中国人民政治协商会议贺州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="贺州市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="贺州市人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="中共钟山县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="广西壮族自治区农业农村厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="广西投资集团有限公司">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100010" label="中央港澳工作办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="贺州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="当前在任，2026年7月已确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100002" label="贺州市市长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="贺州市人民政府市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100001" label="贺州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100003" label="贺州市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100004" label="贺州市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o100001" label="贺州市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o100001" label="贺州市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o100002" label="贺州市副市长（常务）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="协助市长负责市政府常务工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p7" target="o100001" label="贺州市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o100001" label="贺州市委统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼市政协党组副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o100002" label="贺州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o100001" label="贺州市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职二年"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p8" target="o100002" label="贺州市副市长（挂职）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中央港澳办五局副局长挂职"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p8" target="o100010" label="中央港澳办五局副局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职贺州副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p9" target="o100002" label="贺州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="无党派"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p10" target="o100002" label="贺州市副市长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p10" target="o100007" label="钟山县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p11" target="o100002" label="贺州市副市长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p12" target="o100002" label="贺州市副市长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p12" target="o100005" label="贺州市公安局局长、党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼市委政法委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p13" target="o100006" label="贺州市人民政府秘书长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="办公室党组书记、主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p14" target="o100001" label="贺州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p14" target="o100008" label="广西壮族自治区农业农村厅厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p15" target="o100002" label="贺州市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p15" target="o100001" label="贺州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="接替李宏庆"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p15" target="o100009" label="广西投资集团有限公司董事长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李国忠任贺州市委书记期间，彭代元任贺州市市长，为当前党政搭档"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="2024?-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李国忠任市委书记期间，陆海平任市人大常委会主任，同属四家班子"/>
+          <attvalue for="2" value="贺州市四家班子"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李国忠任市委书记期间，蓝树东任市政协主席，同属四家班子"/>
+          <attvalue for="2" value="贺州市四家班子"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李国忠任市委书记期间，钟洪任市委副书记"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="何翔任市委常委，协助书记工作"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p2" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="何翔任常务副市长，协助彭代元负责市政府常务工作"/>
+          <attvalue for="2" value="贺州市人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p2" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="彭代元任市长、市委副书记，钟洪任市委副书记"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p6" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="何翔与蒋晓军同为贺州市委常委"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p6" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="何翔与李丽同为贺州市委常委"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p7" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="蒋晓军与李丽同为贺州市委常委"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p14" target="p15" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李宏庆调离后林冠接任贺州市委书记"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="2021年"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p15" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林冠升任市委书记后彭代元接任贺州市市长"/>
+          <attvalue for="2" value="贺州市人民政府"/>
+          <attvalue for="3" value="2021年"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p15" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林冠调离后李国忠接任贺州市委书记"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="2023?-2024?"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p14" target="p15" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李宏庆任市委书记期间，林冠任贺州市市长"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="2017-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p15" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林冠任贺州市委书记期间，彭代元任贺州市市长"/>
+          <attvalue for="2" value="中共贺州市委员会/贺州市人民政府"/>
+          <attvalue for="3" value="2021-2023"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p10" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="程钊为副市长兼钟山县委书记，钟洪为市委副书记，有工作交集"/>
+          <attvalue for="2" value="中共贺州市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
