@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>石家庄市鹿泉区领导班子工作关系网络</description>
+    <date>2026-07-23</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="rank" title="Rank" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="鹿泉区_p01" label="李为军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="石家庄市鹿泉区委书记"/>
+          <attvalue for="birth" value="待查"/>
+          <attvalue for="birthplace" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="鹿泉区_p02" label="李争">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹿泉区委副书记、区长"/>
+          <attvalue for="birth" value="待查"/>
+          <attvalue for="birthplace" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="鹿泉区_party" label="中共石家庄市鹿泉区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="鹿泉区_gov" label="鹿泉区人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="鹿泉区_org_1" label="中共石家庄市鹿泉区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="鹿泉区_org_2" label="鹿泉区人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="鹿泉区_p01" target="鹿泉区_org_1" type="directed" label="石家庄市鹿泉区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="鹿泉区_p01" target="鹿泉区_party" type="directed" label="石家庄市鹿泉区委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="鹿泉区_p02" target="鹿泉区_org_2" type="directed" label="鹿泉区委副书记、区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="鹿泉区_p02" target="鹿泉区_party" type="directed" label="鹿泉区委副书记、区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="至今"/>
+          <attvalue for="rank" value=""/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="鹿泉区_p01" target="鹿泉区_p02" type="undirected" label="区委书记—区长党政主要领导搭班">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="上下级关系"/>
+          <attvalue for="context" value="区委书记—区长党政主要领导搭班"/>
+        </attvalues>
+        <viz:color r="91" g="139" b="192" a="0.8"/>
+        <viz:thickness value="1.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
