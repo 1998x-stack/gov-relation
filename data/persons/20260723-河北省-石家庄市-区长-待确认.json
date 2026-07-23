@@ -5,13 +5,13 @@
     "province": "河北省",
     "city": "石家庄市",
     "region": "桥西区",
-    "job": "区委书记",
+    "job": "区长",
     "task_id": "hebei_桥西区",
     "time_focus": "2025-2026"
   },
   "identity": {
-    "person_id": "hebei_shijiazhuang_qiaoxi_party_secretary_unknown",
-    "name": "【待确认】桥西区委书记",
+    "person_id": "hebei_shijiazhuang_qiaoxi_mayor_unknown",
+    "name": "【待确认】桥西区长",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
@@ -28,8 +28,8 @@
     }
   },
   "current_status": {
-    "current_post": "桥西区委书记",
-    "current_org": "中共石家庄市桥西区委员会",
+    "current_post": "桥西区委副书记、区长",
+    "current_org": "桥西区人民政府",
     "administrative_rank": "正处级",
     "as_of": "2026-07-23",
     "is_current_confirmed": false,
@@ -38,10 +38,16 @@
   "career_timeline": [],
   "organizations": [
     {
+      "org_id": "qiaoxi_gov",
+      "name": "桥西区人民政府",
+      "type": "政府",
+      "role": "领导机关"
+    },
+    {
       "org_id": "qiaoxi_party",
       "name": "中共石家庄市桥西区委员会",
       "type": "党委",
-      "role": "主要负责人"
+      "role": "副书记"
     }
   ],
   "relationships": [],
@@ -67,7 +73,7 @@
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "由于无法确认区委书记姓名且搜索渠道全部受限，无法搜索其廉政风险信息",
+      "description": "由于无法确认区长姓名且搜索渠道全部受限，无法搜索其廉政风险信息",
       "date": "",
       "confidence": "unverified",
       "source_ids": []
@@ -79,52 +85,54 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "当前区委书记姓名完全未知——政府网站超时、所有搜索引擎均受限，这是最关键的缺口"
+    "biggest_gap": "当前区长姓名完全未知——政府网站超时、所有搜索引擎均受限，这是最关键的缺口"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "石家庄市桥西区现任区委书记是谁？",
-      "why_it_matters": "区委书记是区级最高领导，是所有关系网络的起点",
+      "question": "石家庄市桥西区现任区长是谁？",
+      "why_it_matters": "区长是区政府最高领导，是所有政府关系网络的起点",
       "suggested_queries": [
-        "石家庄桥西区 区委书记 2026",
-        "桥西区委书记 2025",
-        "桥西区 领导之窗",
-        "石家庄市桥西区 区委领导分工",
-        "桥西区 区委书记 任命",
-        "site:www.sjzqiaoxiqu.gov.cn 区委书记"
+        "石家庄桥西区 区长 2026",
+        "桥西区长 2025",
+        "桥西区 区政府 领导分工",
+        "石家庄市桥西区 区长 任命",
+        "桥西区 区长 简历",
+        "site:www.sjzqiaoxiqu.gov.cn 区长"
       ],
       "last_attempted": "2026-07-23"
     },
     {
       "priority": "critical",
-      "question": "桥西区委书记的出生年月、教育背景、完整履历是什么？",
-      "why_it_matters": "确定基本信息后需要补充完整履历",
-      "suggested_queries": [],
-      "last_attempted": "2026-07-23"
-    },
-    {
-      "priority": "high",
-      "question": "桥西区委书记的前任是谁？调往何处？",
-      "why_it_matters": "了解区内主要领导更替和干部流动方向",
-      "suggested_queries": [],
-      "last_attempted": "2026-07-23"
-    },
-    {
-      "priority": "high",
-      "question": "桥西区委书记和区长之间有何种工作关系或共事经历？",
-      "why_it_matters": "党政一把手之间的互动关系是地区政治网络核心",
+      "question": "桥西区长的出生年月、籍贯、教育背景、入党时间、工作起始时间？",
+      "why_it_matters": "基本身份信息，关系识别和去重的基础",
       "suggested_queries": [],
       "last_attempted": "2026-07-23"
     },
     {
       "priority": "critical",
-      "question": "桥西区政府网站 (www.sjzqiaoxiqu.gov.cn) 是否可访问？其领导之窗页面路径是什么？",
-      "why_it_matters": "官方领导信息页面是最高可靠性来源",
+      "question": "桥西区长何时任职？从何处调任？",
+      "why_it_matters": "确定任职起始时间和前任/继任关系",
       "suggested_queries": [
-        "www.sjzqiaoxiqu.gov.cn 领导之窗",
-        "桥西区人民政府 领导信息",
-        "桥西区 ldzc"
+        "桥西区 区长 任免 2024",
+        "桥西区 人大 任命 区长"
+      ],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "high",
+      "question": "桥西区长的完整职业生涯履历是什么？",
+      "why_it_matters": "了解工作经历、系统经验和晋升路径",
+      "suggested_queries": [],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "critical",
+      "question": "桥西区政府网站 (www.sjzqiaoxiqu.gov.cn) 是否可访问？",
+      "why_it_matters": "官方领导分工页面是区政府领导信息最高可靠性来源",
+      "suggested_queries": [
+        "www.sjzqiaoxiqu.gov.cn 区长",
+        "桥西区 政府信息公开 领导"
       ],
       "last_attempted": "2026-07-23"
     }
