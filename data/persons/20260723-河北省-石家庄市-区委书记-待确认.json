@@ -4,14 +4,14 @@
   "investigation_scope": {
     "province": "河北省",
     "city": "石家庄市",
-    "region": "长安区",
+    "region": "裕华区",
     "job": "区委书记",
-    "task_id": "hebei_长安区",
-    "time_focus": "2025-2026"
+    "task_id": "hebei_裕华区",
+    "time_focus": "current as of 2026-07"
   },
   "identity": {
-    "person_id": "hebei_shijiazhuang_party_secretary_unknown",
-    "name": "【待确认】长安区委书记",
+    "person_id": "hebei_shijiazhuang_yuhua_partsec_unconfirmed",
+    "name": "（待确认-裕华区委书记）",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
@@ -22,28 +22,21 @@
     "party_join": "",
     "work_start": "",
     "dedupe_keys": {
-      "name_birth": "unknown",
-      "name_birthplace": "unknown",
+      "name_birth": "",
+      "name_birthplace": "",
       "official_profile_url": ""
     }
   },
   "current_status": {
-    "current_post": "长安区委书记",
-    "current_org": "中共石家庄市长安区委员会",
+    "current_post": "裕华区委书记（待确认）",
+    "current_org": "中共石家庄市裕华区委员会",
     "administrative_rank": "正处级",
     "as_of": "2026-07-23",
     "is_current_confirmed": false,
     "source_ids": []
   },
   "career_timeline": [],
-  "organizations": [
-    {
-      "org_id": "changan_party",
-      "name": "中共石家庄市长安区委员会",
-      "type": "党委",
-      "role": "主要负责人"
-    }
-  ],
+  "organizations": [],
   "relationships": [],
   "governance_record": [],
   "professional_profile": {
@@ -53,7 +46,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "完全未知",
+      "summary": "",
       "notable_fast_promotions": []
     }
   },
@@ -61,58 +54,51 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    "caveat": "No data available - personality cannot be inferred"
   },
   "network_metrics": {},
-  "risk_and_integrity_signals": [
-    {
-      "type": "none_found",
-      "description": "由于无法确认区委书记姓名，无法搜索其廉政风险信息",
-      "date": "",
-      "confidence": "unverified",
-      "source_ids": []
-    }
-  ],
+  "risk_and_integrity_signals": [],
   "source_register": [],
   "confidence_summary": {
     "identity": "unverified",
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "当前区委书记姓名完全未知——这是最关键的缺口"
+    "biggest_gap": "区委书记姓名完全未知——裕华区官网领导简介页面（政府信息公开-法定主动公开内容-领导简介）仅展示了区政府领导分工（白玉春等），未包含区委常委/区委书记信息"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "石家庄市长安区现任区委书记是谁？",
-      "why_it_matters": "区委书记是区级最高领导，是所有关系网络的起点",
+      "question": "裕华区现任区委书记是谁？",
+      "why_it_matters": "这是本任务的两个核心目标人物之一",
       "suggested_queries": [
-        "石家庄长安区 区委书记 2026",
-        "长安区委书记 2025",
-        "长安区 领导之窗",
-        "石家庄市长安区 区委领导分工"
+        "裕华区 区委书记 2026",
+        "石家庄市裕华区 区委书记 现任",
+        "裕华区 区委 领导 分工",
+        "site:yuhuaqu.gov.cn 区委书记"
       ],
       "last_attempted": "2026-07-23"
     },
     {
       "priority": "critical",
-      "question": "长安区委书记的出生年月、教育背景、完整履历是什么？",
-      "why_it_matters": "确定基本信息后需要补充完整履历",
-      "suggested_queries": [],
+      "question": "区委书记的出生年月、籍贯、教育背景、历任职务？",
+      "why_it_matters": "全面的履历信息是关系图谱分析的基础",
+      "suggested_queries": [
+        "{name} 简历",
+        "{name} 石家庄市",
+        "{name} 任职"
+      ],
       "last_attempted": "2026-07-23"
     },
     {
       "priority": "high",
-      "question": "长安区委书记的前任是谁？调往何处？",
-      "why_it_matters": "了解区内主要领导更替和干部流动方向",
-      "suggested_queries": [],
-      "last_attempted": "2026-07-23"
-    },
-    {
-      "priority": "high",
-      "question": "长安区委书记和区长孙海涛之间有何种工作关系或共事经历？",
-      "why_it_matters": "党政一把手之间的互动关系是地区政治网络核心",
-      "suggested_queries": [],
+      "question": "前任裕华区区委书记是谁？何时离任？去向如何？",
+      "why_it_matters": "领导班子换届脉络分析",
+      "suggested_queries": [
+        "裕华区 前任 区委书记",
+        "裕华区 区委书记 任命",
+        "裕华区 区委书记 调任"
+      ],
       "last_attempted": "2026-07-23"
     }
   ]
