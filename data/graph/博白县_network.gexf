@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>博白县领导班子关系网络（部分证据模式 — 仅覃挺现任县委书记已由bobai.gov.cn确认）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="覃挺">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="博白县委书记"/>
+          <attvalue for="2" value="中共博白县委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.bobai.gov.cn/（2026-07-23确认——多篇新闻提及覃挺为县委书记）"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="覃挺（推测兼任或已任命）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="博白县委副书记、县长（推测）"/>
+          <attvalue for="2" value="博白县人民政府/中共博白县委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="待核实——博白县人民政府网站领导之窗暂无法访问"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="孙国梁（推测前任）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开网络资料（推测）——前博白县委书记，覃挺的前任"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p4" label="周印章（推测前任县长）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开网络资料（推测）——2021年左右曾任博白县代县长/县长"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p5" label="李晶">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="博白县委常委、县人武部领导"/>
+          <attvalue for="2" value="中共博白县委员会/博白县人民武装部"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.bobai.gov.cn/（2026-07-22 博白县'八一'军政座谈会新闻提及）"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p6" label="陈浩富">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="博白县政府党组成员、县公安局党委书记"/>
+          <attvalue for="2" value="博白县人民政府/博白县公安局"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.bobai.gov.cn/（2026-07-22 博白县'八一'军政座谈会新闻提及）"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p7" label="王琛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委书记（推测）"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开网络资料（推测）"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p8" label="张惠强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委副书记、市长"/>
+          <attvalue for="2" value="玉林市人民政府/中共玉林市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.yulin.gov.cn/（据已有资料确认在任）"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="o100001" label="中共博白县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="博白县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="博白县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="政协博白县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="博白县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="博白县监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="博白县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="博白县公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="中共玉林市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100010" label="玉林市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="博白县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持县委全面工作。2026年7月多次新闻确认为现任县委书记。"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100001" label="博白县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="推测"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100002" label="博白县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="推测——县长姓名待核实。覃挺升任县委书记后，县长人选存疑。"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100001" label="博白县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任县委书记，推测覃挺的前任"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100002" label="博白县代县长/县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="推测曾任博白县代县长/县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o100001" label="博白县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月新闻确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o100007" label="博白县人武部领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月新闻确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o100002" label="博白县政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月新闻确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o100008" label="博白县公安局党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月新闻确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o100009" label="玉林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="根据已有玉州区资料推测在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p8" target="o100009" label="玉林市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o100010" label="玉林市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="据已有玉州区资料确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="博白县现任县委书记与县长党政搭档关系（推测）"/>
+          <attvalue for="2" value="中共博白县委员会/博白县人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p3" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="覃挺接替孙国梁为博白县委书记（推测）"/>
+          <attvalue for="2" value="中共博白县委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p4" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="推测覃挺曾任博白县县长，后升任县委书记；周印章可能为前后任关系"/>
+          <attvalue for="2" value="博白县人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p5" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委书记与县委常委/人武部领导"/>
+          <attvalue for="2" value="中共博白县委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="县委书记与县政府党组成员/公安局党委书记"/>
+          <attvalue for="2" value="中共博白县委员会/博白县人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p7" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="博白县委书记受玉林市委书记领导"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p8" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="博白县委书记与玉林市长党政关系"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p2" target="p8" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="博白县县长（推测）受玉林市长领导"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
