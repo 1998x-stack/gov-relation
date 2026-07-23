@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>sisyphus-junior</creator>
+    <description>晋州市领导班子工作关系网络 - 2026-07-23</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="birth" type="string"/>
+      <attribute id="2" title="birthplace" type="string"/>
+      <attribute id="3" title="current_post" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="start" type="string"/>
+      <attribute id="2" title="end" type="string"/>
+      <attribute id="3" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="1980-01"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市委副书记、市长，开发区党工委副书记、管委会主任"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市委常委、常务副市长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3" label="刘峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市副市长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="冀涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市副市长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="吉占芳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市副市长、公安局局长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="陈建民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市副市长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="曹晔">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市副市长"/>
+        </attvalues>
+        <viz:color r="80" g="140" b="230"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="待查"/>
+          <attvalue for="2" value="待查"/>
+          <attvalue for="3" value="晋州市委书记（待确认）"/>
+        </attvalues>
+        <viz:color r="230" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o1" label="中共晋州市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="河北省石家庄市晋州市"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="晋州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="河北省石家庄市晋州市"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="晋州经济开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="河北省石家庄市晋州市"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o2" label="晋州市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="（最迟2021年任市长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="现任晋州市委副书记、市长，开发区党工委副书记、管委会主任。1980年1月生，全日制大学学历。2026年2月9日在晋州市第八届人大第六次会议上作政府工作报告。"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="晋州市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="（最迟2023年任此职）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="负责市政府常务工作。分管发改、财政、环保、人社、自然资源、应急、统计、数据和政务服务等。"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p3" target="o2" label="晋州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="负责科技和工信、市场监管、商务、投资促进、项目建设。"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p4" target="o2" label="晋州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="负责教育、卫生健康、文化旅游、体育、医疗保障。"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p5" target="o2" label="晋州市副市长、公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="负责公安、民政、司法、退役军人、民族宗教。"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p6" target="o2" label="晋州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="负责住建、城市管理、交通运输、征收拆迁。"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p7" target="o2" label="晋州市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="负责农业农村、乡村振兴、水利、供销。"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p8" target="o1" label="晋州市委书记（待确认）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="⚠️ 待确认：公开资料尚未确认现任晋州市委书记的姓名。2026年7月15日石家庄市委书记张超超到晋州调研检查，晋州市负责同志陪同但报道未点名。"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="王林（市长）与王涛（常务副市长）为晋州市政府正副职搭档关系"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p1" target="p8" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="王林（市委副书记、市长）与市委书记为晋州市党政正职搭档关系（市委书记待确认）"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
