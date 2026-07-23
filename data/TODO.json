@@ -14932,7 +14932,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "guizhou_黄平县",
@@ -14950,7 +14950,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: build_黄平县_data.py, data/database/黄平县_network.db, data/graph/黄平县_network.gexf"
             },
             {
               "id": "guizhou_施秉县",
