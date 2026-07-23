@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>gov-relation research agent</creator>
+    <description>宁晋县（河北省邢台市）领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共宁晋县委书记"/>
+          <attvalue for="2" value="中共宁晋县委员会"/>
+          <attvalue for="3" value="https://baike.baidu.com/item/%E5%AE%81%E6%99%8B%E5%8E%BF"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="孔军峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宁晋县人民政府县长"/>
+          <attvalue for="2" value="宁晋县人民政府"/>
+          <attvalue for="3" value="https://www.ningjin.gov.cn/channel/list/22.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="申立强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宁晋县常务副县长"/>
+          <attvalue for="2" value="宁晋县人民政府"/>
+          <attvalue for="3" value="https://www.ningjin.gov.cn/channel/list/22.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="宁岩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宁晋县人民政府副县长"/>
+          <attvalue for="2" value="宁晋县人民政府"/>
+          <attvalue for="3" value="https://www.ningjin.gov.cn/single/11/81660.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p5" label="陈荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宁晋县政协副主席"/>
+          <attvalue for="2" value="宁晋县政协"/>
+          <attvalue for="3" value="https://www.ningjin.gov.cn/single/11/83104.html"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="贾锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宁晋县人民政府办公室主任"/>
+          <attvalue for="2" value="宁晋县人民政府办公室"/>
+          <attvalue for="3" value="https://www.ningjin.gov.cn/single/21/53119.html"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共宁晋县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="宁晋县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="宁晋县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="宁晋县人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="中共宁晋县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Current county party secretary"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="宁晋县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Current county mayor"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p3" target="o2" label="宁晋县常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Executive deputy county mayor"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p4" target="o2" label="宁晋县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Deputy county mayor"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p5" target="o3" label="宁晋县政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="CPPCC vice chair"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p6" target="o4" label="宁晋县人民政府办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="Government office director"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="县委书记与县长在宁晋县搭班子"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p2" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="申立强协助孔军峰县长负责审计工作（县政府领导分工确认）"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="同在宁晋县政府领导班子"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
