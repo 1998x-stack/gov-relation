@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>OpenCode Research Agent</creator>
+    <description>北海市领导班子工作关系网络 (as of 2026-07-23)</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="birthplace" type="string"/>
+      <attribute id="7" title="source" type="string"/>
+      <attribute id="8" title="org_type" type="string"/>
+      <attribute id="9" title="level" type="string"/>
+      <attribute id="10" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="李楚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委书记、北海军分区党委第一书记"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974年1月"/>
+          <attvalue for="6" value="广西桂平"/>
+          <attvalue for="7" value="https://baike.baidu.com/item/%E6%9D%8E%E6%A5%9A/13681350"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="李刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委副书记、市政府市长、党组书记"/>
+          <attvalue for="2" value="北海市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1975年7月"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="https://baike.baidu.com/item/%E6%9D%8E%E5%88%9A/22884963"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="蔡锦军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="自治区园区办主任（党组书记）"/>
+          <attvalue for="2" value="广西壮族自治区产业园区改革发展办公室"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1968年11月"/>
+          <attvalue for="6" value="江西九江"/>
+          <attvalue for="7" value="https://baike.baidu.com/item/%E8%94%A1%E9%94%A6%E5%86%9B/3878047"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="陆海生">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市人大常委会主任"/>
+          <attvalue for="2" value="北海市人民代表大会常务委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1970年9月"/>
+          <attvalue for="6" value="广西灌阳"/>
+          <attvalue for="7" value="https://zh.wikipedia.org/zh-hans/%E5%8C%97%E6%B5%B7%E5%B8%82"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="蔡可辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议北海市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1968年9月"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="https://zh.wikipedia.org/zh-hans/%E5%8C%97%E6%B5%B7%E5%B8%82"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="吕勇江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委副书记、组织部部长，市委党校校长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1976年9月"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="http://m.ce.cn/bwzg/202109/01/t20210901_36869833.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="黄毅">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="中共北海市纪律检查委员会/北海市监察委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%8C%97%E6%B5%B7%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A/60050924"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="黄宏瞻">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、常务副市长"/>
+          <attvalue for="2" value="北海市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%8C%97%E6%B5%B7%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A/60050924"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="郑定雄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、宣传部部长"/>
+          <attvalue for="2" value="中共北海市委员会宣传部"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1968年9月"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="http://m.ce.cn/bwzg/202109/01/t20210901_36869833.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="龙起云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、统战部部长，市政府副市长、党组成员"/>
+          <attvalue for="2" value="中共北海市委员会统战部/北海市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974年10月"/>
+          <attvalue for="6" value="广西北海"/>
+          <attvalue for="7" value="https://www.163.com/dy/article/J395PE2M05563WHO.html"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p11" label="麦成柱">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、秘书长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="壮族"/>
+          <attvalue for="5" value="1974年2月"/>
+          <attvalue for="6" value="广西横县"/>
+          <attvalue for="7" value="https://www.163.com/dy/article/J395PE2M05563WHO.html"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="杨斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、政法委书记"/>
+          <attvalue for="2" value="中共北海市委员会政法委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1969年10月"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="http://m.ce.cn/bwzg/202109/01/t20210901_36869833.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="沙卫良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="北海市委常委、北海军分区司令员"/>
+          <attvalue for="2" value="北海军分区"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%8C%97%E6%B5%B7%E5%B8%82%E5%A7%94%E5%91%98%E4%BC%9A/60050924"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="李莉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="自治区党委组织部分管日常工作的副部长"/>
+          <attvalue for="2" value="广西壮族自治区党委组织部"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1973年7月"/>
+          <attvalue for="6" value="待查"/>
+          <attvalue for="7" value="https://www.jfdaily.com/news/detail?id=1014303"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o100001" label="中共北海市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100002" label="北海市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="政府"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100003" label="北海市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="人大"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100004" label="中国人民政治协商会议北海市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="政协"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100005" label="中共北海市纪律检查委员会/北海市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100006" label="中共北海市委员会组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100007" label="中共北海市委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100008" label="中共北海市委员会统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100009" label="中共北海市委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市海城区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100010" label="北海军分区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="北海市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100011" label="广西壮族自治区产业园区改革发展办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="政府"/>
+          <attvalue for="9" value="省级"/>
+          <attvalue for="10" value="南宁市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100012" label="广西壮族自治区党委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="省级"/>
+          <attvalue for="10" value="南宁市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100013" label="共青团广西壮族自治区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="群团"/>
+          <attvalue for="9" value="省级"/>
+          <attvalue for="10" value="南宁市"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100014" label="中华人民共和国商务部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="政府"/>
+          <attvalue for="9" value="中央"/>
+          <attvalue for="10" value="北京市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100015" label="中共桂林市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="党委"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="桂林市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100016" label="桂林市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="8" value="政府"/>
+          <attvalue for="9" value="地级市"/>
+          <attvalue for="10" value="桂林市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o100001" label="北海市委书记、北海军分区党委第一书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委书记、北海军分区党委第一书记"/>
+          <attvalue for="2" value="2026-05~present"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o100015" label="桂林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桂林市委书记"/>
+          <attvalue for="2" value="2024-12~2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o100016" label="桂林市委副书记、市政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桂林市委副书记、市政府市长"/>
+          <attvalue for="2" value="2021-06~2025-04"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o100013" label="共青团广西区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团广西区委书记"/>
+          <attvalue for="2" value="2017-05~2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o100002" label="河池市委常委、市政府党组副书记、副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="河池市委常委、市政府党组副书记、副市长"/>
+          <attvalue for="2" value="2016-02~2017-05"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="o100002" label="河池市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="河池市委常委、组织部部长"/>
+          <attvalue for="2" value="2013-09~2016-02"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p1" target="o100002" label="柳州市委常委、三江侗族自治县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="柳州市委常委、三江侗族自治县委书记"/>
+          <attvalue for="2" value="2009-11~2013-08"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p1" target="o100002" label="北流市委副书记、市政府党组书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北流市委副书记、市政府党组书记、市长"/>
+          <attvalue for="2" value="2009-01~2009-11"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p1" target="o100001" label="玉林市委副秘书长、办公室副主任（正处级）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="玉林市委副秘书长、办公室副主任（正处级）"/>
+          <attvalue for="2" value="2008-09~2009-01"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p1" target="o100013" label="共青团玉林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团玉林市委书记"/>
+          <attvalue for="2" value="2004-07~2008-09"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p1" target="o100001" label="北流市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北流市委常委、组织部部长"/>
+          <attvalue for="2" value="2002-09~2004-07"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p1" target="o100001" label="玉林市委组织部党政干部科科长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="玉林市委组织部党政干部科科长"/>
+          <attvalue for="2" value="2000-05~2002-09"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="o100001" label="玉林市委组织部干部一科副科长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="玉林市委组织部干部一科副科长"/>
+          <attvalue for="2" value="1998-03~2000-05"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="o100002" label="玉林地区外事办（行署旅游局）干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="玉林地区外事办（行署旅游局）干部"/>
+          <attvalue for="2" value="1995-07~1998-03"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p2" target="o100002" label="北海市委副书记、市政府市长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委副书记、市政府市长、党组书记"/>
+          <attvalue for="2" value="2025-10~present"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p2" target="o100002" label="北海市委副书记、代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委副书记、代市长"/>
+          <attvalue for="2" value="2025-10~2025-10"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p2" target="o100001" label="北海市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委副书记"/>
+          <attvalue for="2" value="2025-09~2025-10"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p2" target="o100014" label="商务部市场运行和消费促进司司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="商务部市场运行和消费促进司司长"/>
+          <attvalue for="2" value="2024~2025-09"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p2" target="o100014" label="商务部流通业发展司司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="商务部流通业发展司司长"/>
+          <attvalue for="2" value="2023~2024"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p2" target="o100014" label="商务部流通业发展司副司长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="商务部流通业发展司副司长"/>
+          <attvalue for="2" value="待查~2023"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p2" target="o100014" label="商务部市场体系建设司副巡视员/二级巡视员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="商务部市场体系建设司副巡视员/二级巡视员"/>
+          <attvalue for="2" value="待查~待查"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p3" target="o100011" label="自治区园区办党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="自治区园区办党组书记、主任"/>
+          <attvalue for="2" value="2026-05~present"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p3" target="o100001" label="北海市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委书记"/>
+          <attvalue for="2" value="2021-01~2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p3" target="o100002" label="北海市委副书记、市政府市长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委副书记、市政府市长、党组书记"/>
+          <attvalue for="2" value="2018-02~2021-01"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p3" target="o100001" label="广西自治区党委副秘书长、办公厅副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="广西自治区党委副秘书长、办公厅副主任"/>
+          <attvalue for="2" value="2013-10~2018-01"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p3" target="o100002" label="贵港市委常委、副市长、党组副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="贵港市委常委、副市长、党组副书记"/>
+          <attvalue for="2" value="2011-08~2013-10"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p3" target="o100009" label="贵港市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="贵港市委常委、政法委书记"/>
+          <attvalue for="2" value="2008-11~2011-08"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p3" target="o100008" label="贵港市委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="贵港市委常委、统战部部长"/>
+          <attvalue for="2" value="2006-08~2008-11"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p3" target="o100002" label="北海市科学技术局局长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市科学技术局局长、党组书记"/>
+          <attvalue for="2" value="2003-02~2006-08"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p3" target="o100002" label="合浦县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="合浦县人民政府副县长"/>
+          <attvalue for="2" value="2001-12~2003-02"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p3" target="o100001" label="北海市委办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委办公室副主任"/>
+          <attvalue for="2" value="1998-11~2001-12"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p3" target="o100001" label="北海市委办公室综合科科长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委办公室综合科科长"/>
+          <attvalue for="2" value="1996-04~1998-11"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p3" target="o100002" label="《北海日报》社记者、新闻部副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="《北海日报》社记者、新闻部副主任"/>
+          <attvalue for="2" value="1993-07~1996-01"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p4" target="o100003" label="北海市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市人大常委会主任"/>
+          <attvalue for="2" value="2024-02~present"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p4" target="o100008" label="北海市委常委、统战部部长，市政协党组副书记（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、统战部部长，市政协党组副书记（兼）"/>
+          <attvalue for="2" value="2021~2024-02"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p5" target="o100004" label="北海市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市政协主席"/>
+          <attvalue for="2" value="2026-02~present"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p5" target="o100009" label="北海市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、政法委书记"/>
+          <attvalue for="2" value="待查~2026-02"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p6" target="o100001" label="北海市委副书记、组织部部长，市委党校校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委副书记、组织部部长，市委党校校长"/>
+          <attvalue for="2" value="2021-09~present"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p6" target="o100006" label="北海市委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委组织部部长"/>
+          <attvalue for="2" value="2021-09~present"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p7" target="o100005" label="北海市委常委、市纪委书记、市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p8" target="o100002" label="北海市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、常务副市长"/>
+          <attvalue for="2" value="2025-03~present"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p9" target="o100007" label="北海市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、宣传部部长"/>
+          <attvalue for="2" value="2021-09~present"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p10" target="o100008" label="北海市委常委、统战部部长，市政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、统战部部长，市政府副市长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p11" target="o100001" label="北海市委常委、秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、秘书长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p12" target="o100009" label="北海市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、政法委书记"/>
+          <attvalue for="2" value="2021-09~present"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="p13" target="o100010" label="北海市委常委、北海军分区司令员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委常委、北海军分区司令员"/>
+          <attvalue for="2" value="2021-09~present"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="p14" target="o100002" label="北海市委副书记、市政府市长、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="北海市委副书记、市政府市长、党组书记"/>
+          <attvalue for="2" value="2022-01~2025-10"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="p14" target="o100012" label="自治区党委组织部分管日常工作的副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="自治区党委组织部分管日常工作的副部长"/>
+          <attvalue for="2" value="2025-10~present"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="现任市委书记与市长搭档关系"/>
+          <attvalue for="2" value="中共北海市委员会/北海市人民政府"/>
+          <attvalue for="3" value="2026.05-"/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="李楚接替蔡锦军任北海市委书记"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2026.05"/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="p2" target="p14" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="李刚接替李莉任北海市长"/>
+          <attvalue for="2" value="北海市人民政府"/>
+          <attvalue for="3" value="2025.10"/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="p3" target="p14" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="蔡锦军任市委书记期间，李莉任市长"/>
+          <attvalue for="2" value="中共北海市委员会/北海市人民政府"/>
+          <attvalue for="3" value="2022.01-2025.10"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="p3" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="蔡锦军卸任书记与李刚接任市长有短暂工作交集"/>
+          <attvalue for="2" value="北海市人民政府/中共北海市委员会"/>
+          <attvalue for="3" value="2025.09-2025.10"/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="蔡锦军任市委书记期间陆海生任市委常委"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2021-2024"/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="p3" target="p6" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="蔡锦军任书记期间吕勇江任组织部部长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="p3" target="p8" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="蔡锦军任书记期间黄宏瞻任副市长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2025.03-2026.05"/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="p3" target="p9" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="蔡锦军任书记期间郑定雄先后任秘书长、宣传部部长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="58" source="p3" target="p10" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="蔡锦军任书记期间龙起云任市委常委、副市长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="59" source="p3" target="p12" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="蔡锦军任书记期间杨斌任政法委书记"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="60" source="p3" target="p11" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="蔡锦军任书记期间麦成柱先后任副市长、秘书长"/>
+          <attvalue for="2" value="中共北海市委员会/北海市人民政府"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="61" source="p1" target="p10" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="李楚任书记后龙起云继续任市委常委、副市长"/>
+          <attvalue for="2" value="中共北海市委员会/北海市人民政府"/>
+          <attvalue for="3" value="2026.05-"/>
+        </attvalues>
+      </edge>
+      <edge id="62" source="p1" target="p11" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="李楚任书记后麦成柱继续任市委常委、秘书长"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2026.05-"/>
+        </attvalues>
+      </edge>
+      <edge id="63" source="p2" target="p8" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="李刚任市长后黄宏瞻任常务副市长"/>
+          <attvalue for="2" value="北海市人民政府"/>
+          <attvalue for="3" value="2025.10-"/>
+        </attvalues>
+      </edge>
+      <edge id="64" source="p7" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="纪委监督工作关系"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="65" source="p6" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="同为市委常委班子成员"/>
+          <attvalue for="2" value="中共北海市委员会"/>
+          <attvalue for="3" value="2025.03-"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
