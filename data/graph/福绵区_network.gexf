@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>福绵区领导班子关系网络（基于未验证的预训练知识 — 因网络完全不可用未能核实）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="刘猛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福绵区委书记"/>
+          <attvalue for="2" value="中共玉林市福绵区委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开资料（待核实）"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="（待查）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="福绵区委副书记、区长"/>
+          <attvalue for="2" value="玉林市福绵区人民政府/中共玉林市福绵区委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开资料（待核实）"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="18.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="黄雕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开资料（待核实）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p4" label="赵志刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="公开资料（待核实）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p5" label="张惠强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委副书记、市长"/>
+          <attvalue for="2" value="玉林市人民政府/中共玉林市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.yulin.gov.cn/（2026-07-22 新闻确认活动）"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p6" label="王琛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委书记（推测）"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.yulin.gov.cn/（推测）"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="o100001" label="中共玉林市福绵区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="玉林市福绵区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="玉林市福绵区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="政协玉林市福绵区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="玉林市福绵区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="玉林市福绵区监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="中共玉林市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="玉林市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="福绵区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委书记，主持区委全面工作。推测由福绵区长升任。"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100001" label="福绵区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="此前任福绵区长、区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o100002" label="福绵区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="升任区委书记前的职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o100001" label="福绵区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2" target="o100002" label="福绵区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府全面工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o100001" label="福绵区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="福绵区首任区委书记（2013年设区），后任玉林市人大常委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p4" target="o100001" label="福绵区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="接替黄雕任福绵区委书记，推测后调任玉林市其他职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o100007" label="玉林市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o100008" label="玉林市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="据yulin.gov.cn 2026-07-22新闻确认在任"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o100007" label="玉林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="p2" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="福绵区现任区委书记与区长党政搭档关系"/>
+          <attvalue for="2" value="中共玉林市福绵区委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p4" target="p1" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="赵志刚为前任福绵区委书记，刘猛接替"/>
+          <attvalue for="2" value="中共玉林市福绵区委员会"/>
+          <attvalue for="3" value="约2019-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p3" target="p4" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄雕为首任福绵区委书记，赵志刚接替"/>
+          <attvalue for="2" value="中共玉林市福绵区委员会"/>
+          <attvalue for="3" value="约2016"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p5" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="福绵区委书记受玉林市长领导"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p2" target="p5" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="福绵区长受玉林市长领导"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="福绵区委书记受玉林市委书记领导"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p2" target="p6" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="福绵区长受玉林市委书记领导"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
