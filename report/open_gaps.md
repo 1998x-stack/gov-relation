@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-23
+> Last updated: 2026-07-23 (updated with 播州区 gaps)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
