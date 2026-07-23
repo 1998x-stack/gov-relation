@@ -182,6 +182,17 @@ def main() -> int:
             return 1
         promote(actions, move=args.move, overwrite=args.overwrite)
         print("\nApplied valid staged artifacts.")
+        if args.move:
+            for a in (a for a in actions if a.valid):
+                if not a.source.exists():
+                    parent = a.source.parent
+                    while parent != staging_dir:
+                        if parent.exists() and not any(parent.iterdir()):
+                            parent.rmdir()
+                            parent = parent.parent
+                        else:
+                            break
+            print(f"Cleaned up promoted files in: {staging_dir}")
     else:
         print("\nDry run only. Re-run with --apply to copy valid artifacts.")
     return 0

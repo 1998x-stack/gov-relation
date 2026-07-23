@@ -21,6 +21,7 @@ logger = get_logger(__name__)
 
 
 LOCK_STALE_SECONDS = 10 * 60
+MAX_RETRIES = 3  # tasks exceeding this many failed attempts are auto-blocked
 
 
 def now_iso() -> str:
@@ -135,7 +136,11 @@ def find_next_claimable(todo: dict, state: dict[str, Any]) -> TodoItem | None:
     active = active_claim_ids(state)
     for item in iter_items(todo):
         task_id = item.item.get("id")
-        if not task_id or item.item.get("done") or task_id in active:
+        if not task_id:
+            continue
+        if item.item.get("done") or task_id in active:
+            continue
+        if item.item.get("blocked"):
             continue
         return item
     return None
@@ -189,7 +194,7 @@ def claim_next(
 
 
 def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = "") -> dict[str, Any]:
-    if status not in {"active", "done", "failed", "released"}:
+    if status not in {"active", "done", "failed", "released", "blocked"}:
         raise ValueError(f"invalid claim status: {status}")
     with queue_lock():
         state = load_state()
@@ -198,13 +203,26 @@ def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = ""
             raise KeyError(f"task is not claimed: {task_id}")
         if worker_id and claim.get("worker_id") != worker_id:
             raise PermissionError(f"task {task_id} is claimed by {claim.get('worker_id')}, not {worker_id}")
-        if claim.get("status") != "active" and status in {"done", "failed", "released"}:
+        if claim.get("status") != "active" and status in {"done", "failed", "released", "blocked"}:
             raise ValueError(f"task {task_id} is not active; current status is {claim.get('status')}")
         claim["status"] = status
         claim["updated_at"] = now_iso()
         if reason:
             claim["reason"] = reason
         state["claims"][task_id] = claim
+        if status == "failed":
+            attempts = claim.get("attempts", 0)
+            if attempts >= MAX_RETRIES:
+                # Auto-block the task in TODO.json and mark claim as blocked
+                todo = load_todo()
+                _, task = find_task(todo, task_id)
+                if task is not None:
+                    task["blocked"] = True
+                    task["blocked_reason"] = reason or f"exceeded {MAX_RETRIES} retries"
+                    save_todo(todo)
+                claim["status"] = "blocked"
+                claim["updated_at"] = now_iso()
+                logger.info("BLOCKED %s after %d failed attempts", task_id, attempts)
         if status == "done":
             todo = load_todo()
             if not mark_done(todo, task_id):
