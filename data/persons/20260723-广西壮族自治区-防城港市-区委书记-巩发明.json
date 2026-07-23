@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-23",
+  "investigation_scope": {
+    "province": "广西壮族自治区",
+    "city": "防城港市",
+    "region": "防城区",
+    "job": "区委书记",
+    "task_id": "guangxi_防城区",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "fangchengqu_gong_faming",
+    "name": "巩发明",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "巩发明__",
+      "name_birthplace": "巩发明_",
+      "official_profile_url": "http://www.fcq.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "防城区委书记",
+    "current_org": "中共防城港市防城区委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-23",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到巩发明2024年以前履历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2024-10",
+      "end": "约2025年",
+      "org": "防城区人民政府",
+      "title": "防城区区长、区委副书记",
+      "level": "县处级正职",
+      "location": "广西防城港市防城区",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": false,
+      "notes": "报道显示2024年10月、12月以区长身份活动",
+      "confidence": "confirmed",
+      "source_ids": ["S002", "S003", "S004"]
+    },
+    {
+      "start": "约2025年",
+      "end": "至今",
+      "org": "中共防城港市防城区委员会",
+      "title": "防城区委书记",
+      "level": "县处级正职",
+      "location": "广西防城港市防城区",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "由区长升任区委书记。2026年2月区人大会议上以前排首位身份讲话，2026年3月报道明确为区委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S005"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "fangchengqu_gov", "name": "防城区人民政府", "type": "government", "role": "曾任区长"},
+    {"org_id": "fangchengqu_party", "name": "中共防城港市防城区委员会", "type": "party", "role": "现任区委书记"}
+  ],
+  "relationships": [
+    {
+      "person": "陈天富",
+      "person_id": "fangchengqu_chen_tianfu",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "巩发明由区长升书记后，陈天富接任区长",
+      "overlap_org": "防城区人民政府",
+      "overlap_period": "约2025年",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "陆海滨",
+      "person_id": "fangchengqu_lu_haibin",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "陆海滨被调查后巩发明接任书记",
+      "overlap_org": "中共防城港市防城区委员会",
+      "overlap_period": "约2025年",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S006"]
+    },
+    {
+      "person": "杨振强",
+      "person_id": "fangchengqu_yang_zhenqiang",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记与常务副区长关系",
+      "overlap_org": "防城区委",
+      "overlap_period": "2026年至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2024-2025（区长任内）",
+      "domain": "economic_development",
+      "achievement_or_event": "到大菉镇调研实体经济发展，推动人大代表履职活动",
+      "role_in_event": "区长",
+      "measurable_outcome": "",
+      "location": "防城区大菉镇",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "period": "2025-2026（书记任内）",
+      "domain": "public_security",
+      "achievement_or_event": "指导那良镇党委民主生活会和强边固防工作",
+      "role_in_event": "区委书记",
+      "measurable_outcome": "",
+      "location": "防城区那良镇",
+      "confidence": "confirmed",
+      "source_ids": ["S005"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["防城港市防城区"],
+    "promotion_velocity": {
+      "summary": "从区长升任区委书记（时间线待精确化），晋升路径为县区级党政正职标准路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "多次深入乡镇调研（江山镇、大菉镇、那良镇等），参加人大代表进站履职活动",
+        "confidence": "confirmed",
+        "source_ids": ["S002", "S003"]
+      },
+      {
+        "trait": "low_profile",
+        "evidence": "公开报道多为工作活动，较少个人风格内容",
+        "confidence": "plausible",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": ["着重强调实干为要、担当作为"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月未发现巩发明存在纪律审查或负面媒体报道",
+      "date": "2026-07-23",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "防城港市防城区第七届人民代表大会第七次会议胜利闭幕",
+      "url": "http://www.fcq.gov.cn/yw/fcqyw/t27234408.shtml",
+      "publisher": "金色防城（微信公众号）/ 防城区人民政府",
+      "published_at": "2026-02-06",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认巩发明为大会主席台前排就座和讲话人"
+    },
+    {
+      "id": "S002",
+      "title": "巩发明到大菉镇开展人大代表进站履职活动",
+      "url": "http://www.fcq.gov.cn/yw/fcqyw/t19467795.shtml",
+      "publisher": "金色防城（微信公众号）/ 防城区人民政府",
+      "published_at": "2025-01-02",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认巩发明2024年12月以区长身份活动"
+    },
+    {
+      "id": "S003",
+      "title": "巩发明到江山镇开展调研检查工作",
+      "url": "http://www.fcq.gov.cn/yw/fcqyw/t19406927.shtml",
+      "publisher": "防城区人民政府",
+      "published_at": "2024-12-13",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认2024年12月巩发明到江山镇调研"
+    },
+    {
+      "id": "S004",
+      "title": "巩发明率队调研2024年环广西世巡赛防城港赛段防城区筹备工作",
+      "url": "http://www.fcq.gov.cn/yw/fcqyw/t19093852.shtml",
+      "publisher": "防城区融媒体中心",
+      "published_at": "2024-10-14",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认2024年10月巩发明以区长身份带队活动"
+    },
+    {
+      "id": "S005",
+      "title": "巩发明参加指导那良镇党委班子2025年度民主生活会",
+      "url": "http://www.fcq.gov.cn/yw/fcqyw/t27320325.shtml",
+      "publisher": "金色防城（微信公众号）/ 防城区人民政府",
+      "published_at": "2026-03-05",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "首次在公开报道中明确以'区委书记巩发明'身份出现"
+    },
+    {
+      "id": "S006",
+      "title": "防城区原区委书记陆海滨被调查",
+      "url": "https://www.thepaper.cn/newsDetail_forward_22887743",
+      "publisher": "澎湃新闻",
+      "published_at": "2023",
+      "accessed_at": "2026-07-23",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "陆海滨被调查后防城区委书记职位变更，巩发明接任"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "巩发明出生年份、籍贯、教育背景、完整履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "巩发明的出生年份、籍贯、教育背景？",
+      "why_it_matters": "核心人物基础身份信息缺失，影响核实和去重",
+      "suggested_queries": ["巩发明 简历", "巩发明 出生", "巩发明 百度百科"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "critical",
+      "question": "巩发明2024年以前的完整职业履历？",
+      "why_it_matters": "无法分析其晋升路径和关系网络",
+      "suggested_queries": ["巩发明 历任", "巩发明 防城港", "巩发明 任职经历"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "high",
+      "question": "巩发明由区长升任区委书记的具体时间？",
+      "why_it_matters": "精确化权力交接时间线",
+      "suggested_queries": ["防城区 区委书记 任命 2025", "防城区 干部任免 巩发明"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "medium",
+      "question": "巩发明在此之前的岗位经历（防城港市或其他地区）",
+      "why_it_matters": "判断其系统经验和关系广度",
+      "suggested_queries": ["巩发明 防城港", "巩发明 工作经历"],
+      "last_attempted": "2026-07-23"
+    }
+  ]
+}
