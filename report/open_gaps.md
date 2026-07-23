@@ -1,4 +1,4 @@
-# Open Gaps Registry — 综合（柏乡县 + 莲池区 + 满城区 + 涞水县）
+# Open Gaps Registry — 综合（柏乡县 + 莲池区 + 满城区 + 涞水县 + 定兴县）
 > Last updated: 2026-07-23
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
@@ -159,3 +159,45 @@
 - **Official site (laishui.gov.cn): accessible via HTTP** — primary evidence from news pages and leadership page
 - Leadership bio page: catid=9 accessible and contains full government leadership division of work
 - News listing accessible up to 53 pages of archives
+
+---
+
+## 定兴县调研开放问题 (Open Gaps — 2026-07-23)
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 白建军 | 定兴县委书记 | 出生年月、籍贯、教育背景、入党时间、工作起始时间、此前所有任职（从何地调入定兴） | 2026-07-23 | 最早可查以县委书记身份公开报道为2025年10月 |
+| 王坤 | 定兴县委副书记、县长 | 出生年月、籍贯、教育背景、入党时间、工作起始时间、任县长前职务 | 2026-07-23 | 最早可查以县长身份公开报道为2025年8月 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 孟庆飞 | 完整履历 | 2026-07-23 | 县委副书记，仅2026年1月政协会议列名 |
+| 王敏 | 具体职务、完整履历 | 2026-07-23 | 党代会大会执行主席，疑似县委副书记或常委；项目调度会列名 |
+| 侯毅 | 具体分工、完整履历 | 2026-07-23 | 县委常委，主持巡察会议 |
+| 申庆征 | 具体职务、完整履历 | 2026-07-23 | 县领导，项目调度会列名；全会上就报告作说明 |
+| 郭大伟、任才 | 具体职务、完整履历 | 2026-07-23 | 项目调度会列名 |
+| 县委常委班子 | 除书记、县长、刘宁外其他常委的完整名单和分工 | 2026-07-23 | 至少包括组织部长、纪委书记、政法委书记、宣传部长、统战部长等 |
+| 秦振国、常伟、李红娜、郑长海、史艳武 | 具体职务 | 2026-07-23 | 人大会议主席台就座，仅知姓名 |
+| 前县委书记 | 白建军前任的姓名和去向 | 2026-07-23 | 定兴县委书记接替链完全断裂 |
+| 纪委书记 | 定兴县纪委书记姓名 | 2026-07-23 | 全会议及党代会提及纪委工作报告但未署名 |
+
+### ⭐⭐⭐ Medium (would enrich the network picture)
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 定兴县与保定市其他县区（如莲池区、竞秀区、徐水区）的干部交流 | 2026-07-23 | |
+| 定兴金台经济开发区领导班子 | 2026-07-23 | 省级开发区，非省级领导分工提及 |
+| 定兴县下属乡镇领导班子 | 2026-07-23 | 固城镇、高里镇、李郁庄乡、小朱庄镇、柳卓乡、肖村乡 |
+
+### 搜索环境说明
+
+- **Official site (dingxing.gov.cn): accessible** — primary evidence from news pages
+- Leadership bio pages contain individual deputy bio pages with full division of work (刘宁、刘晓涛、殷淼)
+- 县长之窗首页（王坤）无单独简历页
+- Baidu Baike: 403 forbidden
+- Exa search: rate-limited
+- All web search tools degraded: no Baidu, no Google, no Bing
