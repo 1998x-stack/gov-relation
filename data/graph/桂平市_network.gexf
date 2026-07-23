@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>桂平市领导班子关系网络 — Sources: Official government website, news reports</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="杨燕忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市委书记"/>
+          <attvalue for="2" value="中共桂平市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="卜凡">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市委副书记、市长、市政府党组书记"/>
+          <attvalue for="2" value="桂平市人民政府/中共桂平市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="黄创优">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p4" label="蒙鑫淼">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市委副书记、常务副市长"/>
+          <attvalue for="2" value="桂平市人民政府/中共桂平市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="1.0"/>
+        <viz:size value="15.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p5" label="蒙爱杏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市人大常委会主任"/>
+          <attvalue for="2" value="桂平市人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p6" label="梁东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议桂平市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p7" label="陆建军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市副市长"/>
+          <attvalue for="2" value="桂平市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="黄健文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市副市长"/>
+          <attvalue for="2" value="桂平市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="陈庆勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市副市长"/>
+          <attvalue for="2" value="桂平市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="郑具清">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市人大常委会副主任"/>
+          <attvalue for="2" value="桂平市人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p11" label="陈雪峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市政协副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议桂平市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p12" label="陆献玲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p13" label="陈家羡">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p14" label="覃桂深">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p15" label="黄平壮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p16" label="潘振成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p17" label="李凌明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p18" label="陈丕钊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p19" label="廖恬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p20" label="杨锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p21" label="冼济江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桂平市领导"/>
+          <attvalue for="2" value="桂平市"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.guiping.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="10.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="o100001" label="中共桂平市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="桂平市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="桂平市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="中国人民政治协商会议桂平市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共桂平市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="中共桂平市委员会宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="中共桂平市委员会统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="中共桂平市委员会政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100009" label="桂平市人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100010" label="桂平市人民法院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100011" label="桂平市人民检察院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="桂平市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月15日首次以桂平市委书记身份主持召开市委常委会。此前任港北区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100001" label="港北区委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年6月5日仍以港北区委书记身份开展调研，6月26日检查中考备考工作"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100002" label="桂平市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年10月24日以市长身份主持召开市政府第73次常务会议。2026年2月12日在市人大会议上作政府工作报告"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2" target="o100001" label="桂平市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="担任桂平市委副书记，市政府党组书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o100001" label="桂平市委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年2月12日主持市人大会议，2026年6月10日仍以市委书记身份主持化解历史矛盾推进会。此后由杨燕忠接任"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o100002" label="桂平市领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="曾同时担任桂平市党政领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p4" target="o100001" label="桂平市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p4" target="o100002" label="桂平市常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o100003" label="桂平市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年2月12日在市人大会议上作人大常委会工作报告"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o100004" label="桂平市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o100002" label="桂平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年10月24日市政府常务会议列名副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o100002" label="桂平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年10月24日市政府常务会议列名副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p9" target="o100002" label="桂平市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025-2026年多次市政府常务会议列名副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p10" target="o100003" label="桂平市人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年人大会议执行主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p11" target="o100004" label="桂平市政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年10月24日市政府常务会议列名"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨燕忠（市委书记）与卜凡（市长）为桂平市当前党政一把手搭档"/>
+          <attvalue for="2" value="中共桂平市委员会/桂平市人民政府"/>
+          <attvalue for="3" value="2026-07-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="杨燕忠接替黄创优任桂平市委书记"/>
+          <attvalue for="2" value="中共桂平市委员会"/>
+          <attvalue for="3" value="2026-07"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p3" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄创优任桂平市委书记期间，卜凡任市长，党政搭档关系"/>
+          <attvalue for="2" value="中共桂平市委员会/桂平市人民政府"/>
+          <attvalue for="3" value="至2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="卜凡（市长）与蒙鑫淼（常务副市长）在市政府班子中搭档"/>
+          <attvalue for="2" value="桂平市人民政府"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p3" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄创优任市委书记期间蒙爱杏任人大主任"/>
+          <attvalue for="2" value="桂平市四家班子"/>
+          <attvalue for="3" value="至2026-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p3" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="黄创优任市委书记期间梁东任政协主席"/>
+          <attvalue for="2" value="桂平市四家班子"/>
+          <attvalue for="3" value="to 2026-06"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
