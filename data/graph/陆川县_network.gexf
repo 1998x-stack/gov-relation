@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>陆川县领导班子关系网络（基于官网确认数据）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="李唐明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共陆川县委书记"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="梁伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任陆川县委书记（2026年初离任）"/>
+          <attvalue for="2" value="（已离任）"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p3" label="庞邦津">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县人民政府县长"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p4" label="刘小琴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县委副书记、县人民政府党组书记"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p5" label="万宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县人民政府副县长"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p6" label="林雯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县人民政府副县长"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="崔小喆">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县人民政府副县长"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="温文冕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县人民政府副县长"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="黎福章">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="陆川县人大常委会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="李红伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="陆川县政协"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="符征旭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="陈德勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p13" label="黎文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p14" label="王清萍">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p15" label="李华强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p16" label="龙世喜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="陆川县人民检察院"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p17" label="梁栋荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p18" label="陈炬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县领导（县四家班子）"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p19" label="庞俊臣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="陆川县委常委、县人武部上校政委"/>
+          <attvalue for="2" value="陆川县人民武装部"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="http://www.luchuan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共陆川县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="陆川县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="陆川县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="陆川县政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="陆川县人民武装部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="陆川县人民检察院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="中共玉林市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="玉林市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="中共陆川县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任县人武部党委第一书记（2026年6月正式任命，S004）"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100005" label="陆川县人民武装部党委第一书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年6月4日玉林军分区宣布任命（S004）"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100001" label="中共陆川县委书记（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年2月仍有活动报道（S008），后由李唐明接任"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100002" label="陆川县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年5月仍有以县长身份的活动（S007）"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100001" label="陆川县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月15日以县委副书记身份主持会议（S005）"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o100002" label="陆川县人民政府党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月15日以县人民政府党组书记身份亮相（S005），预计接任县长"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p5" target="o100002" label="陆川县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列副县长名单首位（S002），出席2026年7月会议（S005）"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o100002" label="陆川县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列副县长名单（S002），出席2026年7月会议（S005）"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p7" target="o100002" label="陆川县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列副县长名单（S002）"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p8" target="o100002" label="陆川县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列副县长名单（S002）"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p9" target="o100003" label="陆川县人大常委会主任/副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p10" target="o100004" label="陆川县政协主席/副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p11" target="o100001" label="陆川县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p12" target="o100001" label="陆川县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p13" target="o100001" label="陆川县委常委/副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p14" target="o100001" label="陆川县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p15" target="o100002" label="陆川县人民政府副县长/党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="随李唐明参加调研活动（S006）"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p16" target="o100006" label="陆川县人民检察院检察长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p17" target="o100001" label="陆川县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县四家班子领导"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p18" target="o100001" label="陆川县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="通报全县命案防治工作形势（S005）"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p19" target="o100005" label="陆川县委常委、县人武部上校政委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="主持县人武部党委第一书记任职大会（S004）"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p1" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李唐明接替梁伟任陆川县委书记"/>
+          <attvalue for="2" value="中共陆川县委员会"/>
+          <attvalue for="3" value="2026年初交接"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李唐明（县委书记）与庞邦津（县长）为党政搭档"/>
+          <attvalue for="2" value="陆川县党政班子"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李唐明（县委书记）与刘小琴（县委副书记/县政府党组书记）为党政搭档"/>
+          <attvalue for="2" value="陆川县党政班子"/>
+          <attvalue for="3" value="2026年7月起"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p3" target="p4" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="庞邦津（县长）与刘小琴（县委副书记/政府党组书记）可能是交接关系"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value="2026年中"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p19" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="庞俊臣（县委常委/人武部政委）与李唐明（县委书记/人武部第一书记）为人武部军政搭档"/>
+          <attvalue for="2" value="陆川县人民武装部"/>
+          <attvalue for="3" value="2026年6月起"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="万宇（副县长）在李唐明（县委书记）主持的会议上出席"/>
+          <attvalue for="2" value="陆川县党政班子"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="林雯（副县长）在李唐明（县委书记）主持的会议上出席"/>
+          <attvalue for="2" value="陆川县党政班子"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p15" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李华强陪同李唐明参加调研活动"/>
+          <attvalue for="2" value="陆川县人民政府"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p18" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="陈炬在李唐明主持的'两降两升'会议上通报工作"/>
+          <attvalue for="2" value="陆川县党政班子"/>
+          <attvalue for="3" value="2026年7月"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
