@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-23",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "邢台市",
+    "region": "信都区",
+    "job": "区长",
+    "task_id": "hebei_信都区",
+    "time_focus": "2020-2026"
+  },
+  "identity": {
+    "person_id": "hebei_liu_guoqiang",
+    "name": "刘国强",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘国强_",
+      "name_birthplace": "刘国强_",
+      "official_profile_url": "https://www.xindu.gov.cn/ldzc/"
+    }
+  },
+  "current_status": {
+    "current_post": "邢台市信都区委副书记、区长",
+    "current_org": "信都区人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-23",
+    "is_current_confirmed": false,
+    "source_ids": ["S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到刘国强在担任信都区长前的完整任职经历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "至今",
+      "org": "信都区人民政府",
+      "title": "信都区委副书记、区长",
+      "level": "正处级",
+      "location": "河北省邢台市信都区",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "现任信都区长。可能此前在信都区或邢台市其他区县任职，部分公开报道提及刘国强以信都区长身份出席活动",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 1,
+      "name": "信都区人民政府",
+      "type": "政府",
+      "role": "current_leader"
+    },
+    {
+      "org_id": 2,
+      "name": "中共邢台市信都区委员会",
+      "type": "党委",
+      "role": "deputy_secretary"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "郭和平",
+      "person_id": "hebei_guo_heping",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长在区委书记领导下工作，为信都区党政核心搭档",
+      "overlap_org": "中共邢台市信都区委员会/信都区人民政府",
+      "overlap_period": "2020-2026",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "李振军",
+      "person_id": "hebei_li_zhenjun",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "李振军曾任桥西区长（末任），刘国强为信都区长（首任或继任）",
+      "overlap_org": "邢台市桥西区/信都区人民政府",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2020-2025",
+      "domain": "other",
+      "achievement_or_event": "主持信都区政府全面工作",
+      "role_in_event": "区长",
+      "measurable_outcome": "",
+      "location": "信都区",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["河北省"],
+    "promotion_velocity": {
+      "summary": "履历信息不完整，难以评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "因网络搜索受限，未获得足够公开信息评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现刘国强相关的纪律处分、审计问题或负面报道。搜索范围受限（中文网络不可达），不能排除存在未发现的信号。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "维基百科：信都区",
+      "url": "https://zh.wikipedia.org/wiki/信都区",
+      "publisher": "维基百科",
+      "published_at": "2025-10-14",
+      "accessed_at": "2026-07-23",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "未登记区长信息"
+    },
+    {
+      "id": "S003",
+      "title": "公开报道综合分析",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-23",
+      "source_type": "inferred",
+      "reliability": "low",
+      "notes": "基于公开媒体报道中刘国强以信都区长身份出现的记录。直接源页面因网络阻断未获取。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "出生年月、教育背景、全部履历完全缺失；区长身份未通过官方网站直接确认；到任时间未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘国强的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "身份确认和去重的基础信息",
+      "suggested_queries": ["刘国强 简历 信都区", "刘国强 出生 邢台"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "critical",
+      "question": "刘国强在担任信都区长前的完整履历是什么？",
+      "why_it_matters": "完整履历是网络分析和关系发现的基础",
+      "suggested_queries": ["刘国强 信都区 任职", "刘国强 前任 职务"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "critical",
+      "question": "刘国强何时开始担任信都区长？是否为信都区首任区长？",
+      "why_it_matters": "确定任职时间线和区域调整衔接",
+      "suggested_queries": ["信都区 区长 任命", "信都区人大 区长"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "medium",
+      "question": "刘国强的专业背景和治理领域偏好",
+      "why_it_matters": "评估领导风格和治理领域偏好",
+      "suggested_queries": ["刘国强 调研 信都区", "刘国强 讲话 信都区"],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "medium",
+      "question": "刘国强与邢台市原桥西区/信都区的历史渊源",
+      "why_it_matters": "理解跨区域调动模式和关系网络",
+      "suggested_queries": ["刘国强 桥西区", "刘国强 邢台市 组织部"],
+      "last_attempted": "2026-07-23"
+    }
+  ]
+}
