@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-23">
+    <creator>gov-relation research agent</creator>
+    <description>玉林市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="张惠强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委书记"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1969年11月"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p2" label="待确认（市长空缺）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市市长（空缺中，张惠强升任书记后待补）"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+          <attvalue for="5" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p3" label="王琛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="不再担任玉林市委书记（已调离）"/>
+          <attvalue for="2" value="（调离）"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p4" label="莫桦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原玉林市委书记（被双开/判无期徒刑）"/>
+          <attvalue for="2" value="（原中共玉林市委员会）"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p5" label="白松涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原玉林市市长（已调离）"/>
+          <attvalue for="2" value="（调离）"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="55.0"/>
+      </node>
+      <node id="p6" label="韦庆强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委、常务副市长、市政府党组副书记"/>
+          <attvalue for="2" value="玉林市人民政府/中共玉林市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="壮族"/>
+          <attvalue for="5" value="1970年10月"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="0.9"/>
+        <viz:size value="45.0"/>
+      </node>
+      <node id="p7" label="邓国忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委副书记"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="0.9"/>
+        <viz:size value="45.0"/>
+      </node>
+      <node id="p8" label="韦义">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委、市纪委书记、市监委主任"/>
+          <attvalue for="2" value="中共玉林市纪律检查委员会/玉林市监察委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="壮族"/>
+          <attvalue for="5" value="1970年5月"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p9" label="马克兵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委、组织部部长、市委党校校长（兼）"/>
+          <attvalue for="2" value="中共玉林市委员会/中共玉林市委组织部"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="壮族"/>
+          <attvalue for="5" value="1972年8月"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="0.85"/>
+        <viz:size value="30.0"/>
+      </node>
+      <node id="p10" label="范小花">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委、统战部部长、副市长、市政协党组副书记（兼）"/>
+          <attvalue for="2" value="中共玉林市委员会/玉林市人民政府"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="0.9"/>
+        <viz:size value="45.0"/>
+      </node>
+      <node id="p11" label="何中奎">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委、宣传部部长"/>
+          <attvalue for="2" value="中共玉林市委员会/中共玉林市委宣传部"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="苗族"/>
+          <attvalue for="5" value="1975年4月"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="0.85"/>
+        <viz:size value="30.0"/>
+      </node>
+      <node id="p12" label="甘文波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1971年10月"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="0.85"/>
+        <viz:size value="30.0"/>
+      </node>
+      <node id="p13" label="张海鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委、副市长"/>
+          <attvalue for="2" value="中共玉林市委员会/玉林市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p14" label="陈磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市委常委（原北部湾大学副校长）"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="1980年代（'80后'）"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p15" label="党万坚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市副市长"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p16" label="马少华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市副市长"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p17" label="王淮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市副市长"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p18" label="冯克森">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市副市长、龙潭产业园区工委书记"/>
+          <attvalue for="2" value="玉林市人民政府/龙潭产业园区"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p19" label="刘启">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市副市长（2026年2月任）"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p20" label="仵建民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="玉林市副市长（2026年2月任）"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="待查"/>
+          <attvalue for="5" value="待查"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="0.85"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="o100001" label="中共玉林市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100002" label="玉林市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100003" label="中共玉林市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100004" label="玉林市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100005" label="中共玉林市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100006" label="中共玉林市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100007" label="中共玉林市委统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100008" label="玉林市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100009" label="中国人民政治协商会议玉林市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100010" label="龙潭产业园区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100011" label="广西壮族自治区应急管理厅">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100012" label="北部湾大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100013" label="贺州学院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="省级"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="o100014" label="中共玉林市委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="地级市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="15.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="玉林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="2026年4月由市长升任"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o100002" label="玉林市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="升任市委书记前担任玉林市市长"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o100011" label="广西应急管理厅党委书记、厅长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="调任玉林市长前任职"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100001" label="玉林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="接替莫桦，后由张惠强接任"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100001" label="玉林市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="被查落马，后被双开/判无期徒刑"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o100002" label="玉林市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="已调离玉林"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o100001" label="玉林市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p6" target="o100002" label="常务副市长、市政府党组副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p7" target="o100001" label="玉林市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p8" target="o100001" label="玉林市委常委、市纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="2024年6月任代主任，2025年2月正式当选"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p8" target="o100004" label="玉林市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p9" target="o100001" label="玉林市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="兼任市委党校校长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p9" target="o100014" label="市委党校校长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p10" target="o100001" label="玉林市委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="2025年5月任"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p10" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p11" target="o100001" label="玉林市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="接替调任贺州学院的李勇齐"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p12" target="o100001" label="玉林市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="由容县县委书记晋升"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p13" target="o100001" label="玉林市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p13" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p14" target="o100001" label="玉林市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="原北部湾大学副校长挂职返还后任职"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p15" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p16" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p17" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p18" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value="兼任龙潭产业园区工委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p18" target="o100010" label="龙潭产业园区工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p19" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p20" target="o100002" label="玉林市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p6" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市长与常务副市长工作搭档（2024-2026）"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p7" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市长与市委副书记工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p1" target="p8" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与纪委书记工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p1" target="p9" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与组织部长工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p1" target="p10" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与统战部长工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2025-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p1" target="p11" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与宣传部长工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2026-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p1" target="p12" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与市委常委工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p1" target="p13" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与市委常委/副市长工作搭档"/>
+          <attvalue for="2" value="玉林市人民政府/中共玉林市委员会"/>
+          <attvalue for="3" value="2024-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p1" target="p14" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记与市委常委工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2025-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p1" target="p3" label="前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="张惠强接替王琛任玉林市委书记"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p3" target="p4" label="前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="王琛接替莫桦任玉林市委书记"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2023"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p1" target="p5" label="前后任" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="张惠强接替白松涛任玉林市市长"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value="2024"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p6" target="p15" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="常务副市长与副市长工作搭档"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p6" target="p16" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="常务副市长与副市长工作搭档"/>
+          <attvalue for="2" value="玉林市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p9" target="p11" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="组织部长与宣传部长同为市委常委工作搭档"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p8" target="p9" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="纪委书记与组织部长同为市委常委"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p10" target="p11" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="统战部长与宣传部长同为市委常委"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2026"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p12" target="p13" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="同为市委常委"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2024"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p14" target="p12" label="共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="同为市委常委"/>
+          <attvalue for="2" value="中共玉林市委员会"/>
+          <attvalue for="3" value="2025"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
