@@ -1,4 +1,4 @@
-# Open Gaps Registry — 综合（柏乡县 + 莲池区）
+# Open Gaps Registry — 综合（柏乡县 + 莲池区 + 满城区）
 > Last updated: 2026-07-23
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
@@ -93,11 +93,38 @@
 | 莲池区↔竞秀区↔高新区干部交流 | 2026-07-23 | 保定市主城区之间干部调任模式 |
 | 莲池区委副书记高建坤、卢志刚的分工与来源 | 2026-07-23 | 两名副书记的分工模式 |
 
+---
+
+## 满城区调研开放问题 (Open Gaps — 2026-07-23)
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 刘玉辉 | 满城区委书记 | 完整履历（出生、籍贯、教育、历任职务） | 2026-07-23 | 政府官网新闻确认现任区委书记但无简历 |
+| 田松 | 满城区区长 | 完整履历（出生、籍贯、教育、历任职务） | 2026-07-23 | 区人大会议确认区长但无简历 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 刘永胜（前任书记） | 去向和完整任期 | 2026-07-23 | 维基百科记载为前任 |
+| 屈会东 | 区委副书记完整履历 | 2026-07-23 | |
+| 吕振 | 常务副区长完整履历 | 2026-07-23 | 仅知分管领域 |
+| 全体11名常委 | 出生年月、籍贯、教育、此前任职 | 2026-07-23 | 仅吕振有公开简介 |
+
+### ⭐⭐⭐ Medium
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 满城区↔保定其他县区人事交流 | 2026-07-23 | 未查到跨县调动信息 |
+| 刘玉辉↔田松此前是否共事 | 2026-07-23 | 因履历缺失无法判断 |
+
 ### 搜索环境说明
 
 - Exa search: rate-limited for entire task
 - Baidu Baike: 403 forbidden
 - Google: blocked
 - Jina Reader: transport errors
-- **Official site (qinghexian.gov.cn): accessible** — primary evidence from news pages and government work reports
+- **Official site (mancheng.gov.cn): accessible via HTTP** — primary evidence from news pages, userful for leadership confirmation but bio pages are limited
 - Leadership bio pages (ldml/): accessible as listing but individual detail pages have JSP-dynamic routing

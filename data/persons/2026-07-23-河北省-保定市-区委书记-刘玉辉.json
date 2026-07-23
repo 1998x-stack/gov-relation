@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-23",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "保定市",
+    "region": "满城区",
+    "job": "区委书记",
+    "task_id": "hebei_满城区",
+    "time_focus": "当前任职"
+  },
+  "identity": {
+    "person_id": "hebei_baoding_mancheng_刘玉辉_1",
+    "name": "刘玉辉",
+    "aliases": [],
+    "gender": "待查",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": "http://www.mancheng.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "保定市满城区委书记",
+    "current_org": "中共保定市满城区委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-23",
+    "is_current_confirmed": true,
+    "source_ids": [
+      "S001"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "present",
+      "org": "中共保定市满城区委员会",
+      "title": "保定市满城区委书记",
+      "level": "县处级",
+      "location": "保定市满城区",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "当前任职（满城区第四次党代会后），确认来源：满城区政府官网新闻",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001",
+        "S002"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 1,
+      "name": "中共保定市满城区委员会",
+      "type": "党委",
+      "level": "县处级"
+    },
+    {
+      "org_id": 2,
+      "name": "保定市满城区人民政府",
+      "type": "政府",
+      "level": "县处级"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "田松",
+      "person_id": "hebei_baoding_mancheng_田松_2",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区委书记与区长，党委和政府主要领导工作关系",
+      "overlap_org": "中共保定市满城区委员会",
+      "overlap_period": "共同任职期间",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "公开资料不足，无法判断",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "当前公开资料不足，无法推断工作风格和个性特征。"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "目前未发现公开的纪律处分、审计问题或负面媒体报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "保定市满城区人民政府门户网站-领导之窗",
+      "url": "http://www.mancheng.gov.cn/list-ldzc.html",
+      "publisher": "保定市满城区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "政府官网新闻和大会报道确认区委书记和区长姓名"
+    },
+    {
+      "id": "S002",
+      "title": "中国共产党保定市满城区第四次代表大会闭幕",
+      "url": "http://www.mancheng.gov.cn/show-13860.html",
+      "publisher": "满城区融媒体中心",
+      "published_at": "2026-07-21",
+      "accessed_at": "2026-07-23",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "区第四次党代会选举产生新一届区委领导班子"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "缺乏详细履历：刘玉辉的出生年月、籍贯、教育背景、工作经历、任现职时间均不详"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘玉辉的完整履历（出生年月、籍贯、教育背景、工作经历）",
+      "why_it_matters": "关系网络分析的核心信息",
+      "suggested_queries": [
+        "刘玉辉 简历 保定 满城区",
+        "刘玉辉 任前公示 保定",
+        "刘玉辉 百度百科"
+      ],
+      "last_attempted": "2026-07-23"
+    },
+    {
+      "priority": "high",
+      "question": "刘玉辉的任现职时间",
+      "why_it_matters": "确定领导班子的共同工作时间起点",
+      "suggested_queries": [
+        "保定市委 任命 刘玉辉 区委书记",
+        "刘玉辉 任职 满城区"
+      ],
+      "last_attempted": "2026-07-23"
+    }
+  ]
+}
