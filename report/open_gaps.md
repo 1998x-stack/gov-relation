@@ -3,6 +3,36 @@
 
 > 中沙群岛的岛礁及其海域 gaps added: 2026-07-23
 
+> 井陉矿区 gaps added: 2026-07-23
+
+## 井陉矿区 Gaps
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 刘杰 | 井陉矿区委书记 | 出生年月、籍贯、教育背景、任书记前完整履历 | 2026-07-23 | 官方新闻确认职务，但无个人简历页面 |
+| 郭贺伟 | 井陉矿区长 | 出生年月、籍贯、教育背景、任区长前完整履历 | 2026-07-23 | 官方新闻确认职务，但无个人简历页面 |
+| 殷蓓 | 井陉矿区委副书记 | 出生年月、性别、完整履历 | 2026-07-23 | 仅知职务名称 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 井陉矿区区委常委 | 纪委书记、组织部长、宣传部长等姓名和分工 | 2026-07-23 | 区委常委会完整名单未在公开报道中出现 |
+| 井陉矿区前任区委书记 | 姓名及去向 | 2026-07-23 | 刘杰的前任未知 |
+| 井陉矿区前任区长 | 姓名及去向 | 2026-07-23 | 郭贺伟的前任未知 |
+| 井陉矿区与井陉县干部交流 | 两区县间干部交叉任职记录 | 2026-07-23 | 历史渊源深，但无直接证据 |
+
+### ⭐⭐⭐ Medium (would enrich the network picture)
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 井陉矿区区政府副区长分工 | 2026-07-23 | 区政府领导分工页面不可访问（JS渲染） |
+| 正丰矿工业遗产保护利用相关人员 | 2026-07-23 | 巡视整改提及，但具体负责领导不明 |
+
+---
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
 | Person | Current Role | What's Missing | Last Attempted | Notes |
