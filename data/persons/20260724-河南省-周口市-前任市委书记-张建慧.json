@@ -1,48 +1,165 @@
 {
+  "schema_version": "1.0",
+  "generated_at": "20260724",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "周口市",
+    "region": "周口市",
+    "job": "前任市委书记",
+    "task_id": "henan_周口市",
+    "time_focus": "2026年7月"
+  },
   "identity": {
-    "id": "zhoukou_张建慧",
+    "person_id": "zhoukou_张建慧",
     "name": "张建慧",
+    "aliases": [],
     "gender": "男",
-    "ethnicity": "",
+    "ethnicity": "汉族",
     "birth": "",
     "birthplace": "",
-    "education": "",
+    "native_place": "",
+    "education": [],
     "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张建慧_",
+      "name_birthplace": "张建慧_",
+      "official_profile_url": "公开报道"
+    }
+  },
+  "current_status": {
     "current_post": "前任市委书记",
-    "current_org": "中共周口市委员会"
+    "current_org": "中共周口市委员会",
+    "administrative_rank": "",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": false,
+    "source_ids": [
+      "S001"
+    ]
   },
   "career_timeline": [
     {
-      "date": "",
-      "title": "市委书记",
+      "start": "",
+      "end": "",
       "org": "中共周口市委员会",
-      "note": "前任市委书记，去向待查"
-    }
-  ],
-  "relationship_network": [
+      "title": "市委书记",
+      "level": "正厅级",
+      "rank": "正厅级",
+      "notes": "前任市委书记，去向待查",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    },
     {
-      "target_name": "黄玉国",
-      "type": "交接",
-      "context": "前任市委书记—现任市委书记",
-      "overlap_org": "中共周口市委员会",
-      "overlap_period": ""
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料不足，完整履历待查。百度百科403禁止访问，搜索引擎超时。",
+      "confidence": "unverified",
+      "source_ids": []
     }
   ],
-  "governance_profile": {
-    "governance_approach": "",
-    "policy_focus_areas": [],
-    "open_questions": []
-  },
-  "source_register": [
-    "公开报道"
+  "organizations": [
+    {
+      "id": 1,
+      "name": "中共周口市委员会",
+      "type": "党委"
+    },
+    {
+      "id": 2,
+      "name": "周口市人民政府",
+      "type": "政府"
+    },
+    {
+      "id": 3,
+      "name": "中国人民政治协商会议周口市委员会",
+      "type": "政协"
+    },
+    {
+      "id": 4,
+      "name": "周口市人民代表大会常务委员会",
+      "type": "人大"
+    }
   ],
-  "confidence": "confirmed",
-  "investigation_date": "2026-07-24",
+  "relationships": [
+    {
+      "person": "黄玉国",
+      "person_id": "zhoukou_黄玉国",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "前任市委书记—现任市委书记",
+      "overlap_org": "中共周口市委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "周口市人民政府官方网站",
+      "url": "公开报道",
+      "publisher": "周口市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "2026年7月新闻和会议报道确认领导职务"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "出生年月、籍贯、完整履历（百度百科403，搜索引擎超时）"
+  },
   "open_questions": [
-    "出生年月未确认",
-    "籍贯未确认",
-    "民族未确认",
-    "学历教育背景未确认",
-    "参加工作年份未确认"
+    {
+      "priority": "critical",
+      "question": "张建慧的出生年月、籍贯、学历教育背景",
+      "why_it_matters": "核心身份信息，用于去重和跨区域关联分析",
+      "suggested_queries": [
+        "张建慧 简历",
+        "张建慧 任前公示",
+        "张建慧 百度百科"
+      ],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "张建慧的完整任职履历（每段职务的起止时间）",
+      "why_it_matters": "关系网络分析需要精确的时间线",
+      "suggested_queries": [
+        "张建慧 此前担任",
+        "张建慧 任职经历"
+      ],
+      "last_attempted": "2026-07-24"
+    }
   ]
 }
