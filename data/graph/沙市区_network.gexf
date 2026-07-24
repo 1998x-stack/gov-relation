@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Gov Relation Research Agent</creator>
+    <description>沙市区 领导班子关系网络 - 2026-07-25</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="卢永桢">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委书记"/>
+          <attvalue for="2" value="中共沙市区委员会"/>
+          <attvalue for="3" value="1982年9月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="郭熙胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委副书记、区长"/>
+          <attvalue for="2" value="沙湾区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="150" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p3" label="刘艳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委副书记、政法委书记"/>
+          <attvalue for="2" value="中共沙市区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="150" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p4" label="李炜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委常委、组织部部长"/>
+          <attvalue for="2" value="中共沙市区委员会组织部"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="余松柏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委领导"/>
+          <attvalue for="2" value="中共沙市区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="唐华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委领导"/>
+          <attvalue for="2" value="中共沙市区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="冯亮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沙市区委领导"/>
+          <attvalue for="2" value="中共沙市区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="黄勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已离任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="10.0"/>
+      </node>
+      <node id="o1" label="中共沙市区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="沙湾区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共沙市区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中共沙市区委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="沙市区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年8月12日沙市区领导干部会议宣布省委决定"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o0" label="武汉市东西湖区副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼开发区管委会副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o0" label="武汉市东西湖区慈惠街工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o0" label="武汉市东山街道党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="早期职务"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2" target="o2" label="沙市区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p3" target="o1" label="沙市区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3" target="o4" label="沙市区委政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="由区委副书记兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p4" target="o3" label="沙市区委组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p4" target="o1" label="沙市区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p5" target="o1" label="沙市区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委或副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p6" target="o1" label="沙市区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委或副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p7" target="o1" label="沙市区领导" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委常委或副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p8" target="o1" label="沙市区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任，由卢永桢接替"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p2" label="党政主官搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="党政主官搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p3" label="区委书记与副书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p4" label="区委书记与组织部部长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p8" label="前后任区委书记" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="前后任区委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
