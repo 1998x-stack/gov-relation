@@ -1,9 +1,13 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (沧州市新华区 — all external search blocked, artifacts produced with government-site-confirmed roster only)
+> Last updated: 2026-07-24 (安次区 — all search tools blocked: Exa rate-limit, Baidu 403, Jina timeout)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
+| 王永威 | 廊坊市安次区委书记 | 出生年月、籍贯、教育背景、2020年前全部履历、由区长升书记的具体时间 | 2026-07-24 | 所有搜索渠道受限（Exa限流/Baidu403/Jina超时）。区级政府网站(anci.gov.cn)无法访问。Person JSON已创建。|
+| 刘杰 | 廊坊市安次区委副书记、区长 | 性别、出生年月、籍贯、教育背景、任区长前全部履历、具体上任时间 | 2026-07-24 | 同上。所有信息为间接推测(confidence=unverified)。Person JSON已创建。|
+| 王永威（前职区长） | 安次区原区长 | 任区长前全部履历、具体任职开始时间 | 2026-07-24 | 王永威从区长升书记的过程需要时间证据支撑 |
+| 赵振华 | 原安次区委书记 | 出生年月、籍贯、教育背景、去向 | 2026-07-24 | 前任书记去向不明 |
 | 穆春江 | 肃宁县委书记 | 出生年月、籍贯、教育背景、入党时间、工作起始时间、沧县县长具体任期、任沧县县长前全部履历 | 2026-07-24 | 身份信息来自官方网站（肃宁县人民政府新闻稿），但无个人简历页；此前为沧县县长（plausible）|
 | 高沛烜 | 肃宁县委副书记、县长 | 出生年月、籍贯、教育背景、入党时间、工作起始时间、任县长前全部履历 | 2026-07-24 | 身份信息来自官方网站（肃宁县人民政府新闻稿），但无个人简历页；此前履历完全未知 |
 | 金培元 | 沧州市新华区委书记 | 出生年月、籍贯、教育背景、任区长前全部履历 | 2026-07-24 | 所有搜索渠道受限（Exa限流/Baidu403/政府网站超时/Jina超时/Google被屏蔽）。Person JSON已升级为v1.0 schema。政府网站（czxh.gov.cn）可访问但无简历页。 |
