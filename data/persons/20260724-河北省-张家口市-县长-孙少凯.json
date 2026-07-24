@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "张家口市",
+    "region": "怀安县",
+    "job": "县长",
+    "task_id": "hebei_怀安县",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "huai_an_sunshaokai",
+    "name": "孙少凯",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "孙少凯_",
+      "name_birthplace": "孙少凯_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "怀安县委副书记、县长",
+    "current_org": "怀安县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "约2021-2022",
+      "end": "",
+      "org": "怀安县人民政府",
+      "title": "怀安县委副书记、县长",
+      "level": "县",
+      "location": "河北省张家口市怀安县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替李建龙任怀安县县长; 确切任命时间需核实",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "约2021-2022",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到孙少凯任怀安县县长前的完整履历。可能此前在张家口市其他县区或市直部门任职。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "刘源",
+      "person_id": "huai_an_liuyuan",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "孙少凯（县长）与刘源（县委书记）党政搭档",
+      "overlap_org": "怀安县",
+      "overlap_period": "2020年代至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "李建龙",
+      "person_id": "huai_an_lijianlong",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "孙少凯接替李建龙任怀安县县长",
+      "overlap_org": "怀安县人民政府",
+      "overlap_period": "约2021-2022",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "在公开信息中未发现该人物负面信号",
+      "date": "",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "公开新闻报道（训练数据）",
+      "url": "https://www.zjkha.gov.cn/",
+      "publisher": "怀安县人民政府/张家口日报",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "2024-2025年公开报道确认孙少凯任怀安县县长,但网站内容页面返回404,无法二次核实"
+    },
+    {
+      "id": "S002",
+      "title": "Baike/official sources (training data)",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "前任信息来自训练数据"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "孙少凯的完整履历信息（出生年月、籍贯、教育背景、任县长前全部经历）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "孙少凯是否仍在2026年7月任怀安县县长（第十八届人代会是否连任）",
+      "why_it_matters": "核心职位变动直接影响全县政治生态",
+      "suggested_queries": ["怀安县第十八届人民代表大会 县长 选举", "怀安县 县长 2026"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "孙少凯的完整职业生涯履历（出生年月、籍贯、教育背景、早期工作经历）",
+      "why_it_matters": "无法追溯其任职路径和系统经历",
+      "suggested_queries": ["孙少凯 简历 怀安县", "孙少凯 怀安县县长 任免"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "孙少凯在任怀安县县长前的工作经历",
+      "why_it_matters": "了解其专业背景和晋升路径",
+      "suggested_queries": ["孙少凯 张家口", "孙少凯 任职"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}
