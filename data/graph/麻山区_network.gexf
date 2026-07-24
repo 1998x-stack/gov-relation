@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Gov Relation Research Agent</creator>
+    <description>麻山区（黑龙江省鸡西市）领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="heilongjiang_mashan_song_xuedong" label="宋学东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区委书记"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="heilongjiang_mashan_chen_changfa" label="陈长发">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区委副书记、政府区长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="heilongjiang_mashan_mu_xu" label="慕旭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区委常委、政府副区长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_mashan_sun_yeping" label="孙业清">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区委常委、政府副区长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_mashan_bian_shenglei" label="边胜磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_mashan_zhao_lianyou" label="赵连友">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区政府副区长、公安分局局长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_mashan_xing_anyu" label="邢安宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_mashan_du_yu" label="杜玉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="org_mashan_party_committee" label="中共鸡西市麻山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_mashan_gov" label="麻山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_mashan_public_security" label="麻山公安分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="乡科级"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="heilongjiang_mashan_song_xuedong" target="org_mashan_party_committee" label="麻山区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区委书记"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="heilongjiang_mashan_chen_changfa" target="org_mashan_gov" label="麻山区政府区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区政府区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="heilongjiang_mashan_chen_changfa" target="org_mashan_party_committee" label="麻山区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区委副书记"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="heilongjiang_mashan_mu_xu" target="org_mashan_gov" label="麻山区委常委、政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区委常委、政府副区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="heilongjiang_mashan_mu_xu" target="org_mashan_party_committee" label="麻山区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区委常委"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="heilongjiang_mashan_sun_yeping" target="org_mashan_gov" label="麻山区委常委、政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区委常委、政府副区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="heilongjiang_mashan_sun_yeping" target="org_mashan_party_committee" label="麻山区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区委常委"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="heilongjiang_mashan_bian_shenglei" target="org_mashan_gov" label="麻山区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="heilongjiang_mashan_zhao_lianyou" target="org_mashan_gov" label="麻山区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="heilongjiang_mashan_zhao_lianyou" target="org_mashan_public_security" label="麻山公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山公安分局局长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="heilongjiang_mashan_xing_anyu" target="org_mashan_gov" label="麻山区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="heilongjiang_mashan_du_yu" target="org_mashan_gov" label="麻山区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="麻山区政府副区长"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="heilongjiang_mashan_song_xuedong" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与区长党政搭档"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="heilongjiang_mashan_mu_xu" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="常委副区长协助区长分管常务工作"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="heilongjiang_mashan_sun_yeping" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="常委副区长协助区长工作"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="heilongjiang_mashan_zhao_lianyou" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长兼公安分局局长，协助区长"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="heilongjiang_mashan_bian_shenglei" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长分管住建城管"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="heilongjiang_mashan_xing_anyu" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长分管农业农村"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="heilongjiang_mashan_du_yu" target="heilongjiang_mashan_chen_changfa" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="副区长协助区长分管教育卫生文旅"/>
+          <attvalue for="2" value="待查-present"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
