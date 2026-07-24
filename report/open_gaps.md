@@ -1,6 +1,31 @@
 # Open Gaps Registry
 > Last updated: 2026-07-24
 
+## New — 宜阳县 (henan_宜阳县) — All searches blocked
+
+### All fields unverified for the following core figures:
+
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 付涛 | 宜阳县委书记 | 姓名确认、全部履历（出生年份、籍贯、教育、历任职务、到任时间） | 2026-07-24 | 所有搜索渠道（Exa、百度、Bing、Google、Jina Reader）均受限/超时/拦截 |
+| 张丽娟 | 宜阳县长 | 姓名确认、全部履历（出生年份、籍贯、教育、历任职务、到任时间） | 2026-07-24 | 同上 — 仅基于预置知识，完全未验证 |
+
+## ⭐⭐⭐⭐ High (important deputies or key connections)
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 付涛前任 | 前任宜阳县委书记姓名及去向 | 2026-07-24 | 所有搜索渠道均不可用 |
+| 张丽娟前任 | 前任宜阳县长姓名及去向 | 2026-07-24 | 所有搜索渠道均不可用 |
+| 宜阳县委领导班子 | 全体县委常委姓名（目前仅占位符） | 2026-07-24 | 包括副书记、纪委书记、组织部长、政法委书记等 |
+| 宜阳县政府领导班子 | 全体副县长姓名及分工 | 2026-07-24 | 包括常务副县长在内全部待查 |
+
+## ⭐⭐⭐ Medium (would enrich the network picture)
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 宜阳县领导之窗页面数据 | 2026-07-24 | yiyang.gov.cn 超时/乱码 |
+| 付涛与张丽娟此前任职交集 | 2026-07-24 | 需双方履历对比 |
+| 宜阳县与周边县区干部交流历史 | 2026-07-24 | 需多地区数据对比 |
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
