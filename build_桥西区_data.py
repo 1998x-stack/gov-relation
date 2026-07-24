@@ -22,11 +22,10 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# When run from data/tmp/hebei_桥西区/, resolve repo root two levels up
+# When run from data/tmp/hebei_桥西区/, resolve repo root three levels up
 _SCRIPT_DIR = Path(__file__).resolve().parent
-# The canonical build script lives at scripts/build/build_桥西区_data.py
-# and will be run from the repo root. For staging we keep the paths consistent.
-_REPO_ROOT = _SCRIPT_DIR.parent.parent  # data/tmp/hebei_桥西区/ -> repo root
+# data/tmp/hebei_桥西区/ -> data/tmp/ -> data/ -> repo root
+_REPO_ROOT = _SCRIPT_DIR.parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
@@ -461,6 +460,7 @@ if __name__ == "__main__":
         relationships=relationships,
         db_path=DB_PATH,
         gexf_path=GEXF_PATH,
+        overwrite=True,
     )
     print(f"\n✅ 桥西区数据构建完成。")
     print(f"  DB: {DB_PATH}")
