@@ -1,0 +1,5088 @@
+{
+  "version": 1,
+  "updated_at": "2026-07-24T09:41:47+00:00",
+  "claims": {
+    "guangxi_平果市": {
+      "status": "released",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T04:19:55+00:00",
+      "updated_at": "2026-07-23T04:20:50+00:00",
+      "attempts": 8,
+      "prompt_path": "logs/dispatch/guangxi_平果市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guangxi_平果市",
+        "province": "广西壮族自治区",
+        "parent_city": "百色市",
+        "region": "平果市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "restart-for-failsafe-upgrade"
+    },
+    "guangxi_八步区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:00:44+00:00",
+      "updated_at": "2026-07-23T07:08:04+00:00",
+      "attempts": 4,
+      "prompt_path": "logs/dispatch/guangxi_八步区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guangxi_八步区",
+        "province": "广西壮族自治区",
+        "parent_city": "贺州市",
+        "region": "八步区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_八步区_data.py, data/database/八步区_network.db, data/graph/八步区_network.gexf"
+    },
+    "guangxi_昭平县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:00:44+00:00",
+      "updated_at": "2026-07-23T07:06:20+00:00",
+      "attempts": 4,
+      "prompt_path": "logs/dispatch/guangxi_昭平县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guangxi_昭平县",
+        "province": "广西壮族自治区",
+        "parent_city": "贺州市",
+        "region": "昭平县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_昭平县_data.py, data/database/昭平县_network.db, data/graph/昭平县_network.gexf"
+    },
+    "guangxi_钟山县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:00:44+00:00",
+      "updated_at": "2026-07-23T07:06:22+00:00",
+      "attempts": 4,
+      "prompt_path": "logs/dispatch/guangxi_钟山县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guangxi_钟山县",
+        "province": "广西壮族自治区",
+        "parent_city": "贺州市",
+        "region": "钟山县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_钟山县_data.py, data/database/钟山县_network.db, data/graph/钟山县_network.gexf"
+    },
+    "guangxi_富川瑶族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:00:44+00:00",
+      "updated_at": "2026-07-23T07:14:32+00:00",
+      "attempts": 4,
+      "prompt_path": "logs/dispatch/guangxi_富川瑶族自治县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_富川瑶族自治县",
+        "province": "广西壮族自治区",
+        "parent_city": "贺州市",
+        "region": "富川瑶族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_富川瑶族自治县_data.py, data/database/富川瑶族自治县_network.db, data/graph/富川瑶族自治县_network.gexf"
+    },
+    "guangxi_河池市": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:16:29+00:00",
+      "updated_at": "2026-07-23T07:19:17+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_河池市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guangxi_河池市",
+        "province": "广西壮族自治区",
+        "parent_city": "",
+        "region": "河池市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_河池市_data.py, data/database/河池市_network.db, data/graph/河池市_network.gexf"
+    },
+    "guangxi_金城江区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:15:02+00:00",
+      "updated_at": "2026-07-23T07:19:09+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_金城江区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_金城江区",
+        "province": "广西壮族自治区",
+        "parent_city": "河池市",
+        "region": "金城江区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_金城江区_data.py, data/database/金城江区_network.db, data/graph/金城江区_network.gexf"
+    },
+    "guangxi_南丹县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:20:41+00:00",
+      "updated_at": "2026-07-23T07:22:47+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_南丹县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guangxi_南丹县",
+        "province": "广西壮族自治区",
+        "parent_city": "河池市",
+        "region": "南丹县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_南丹县_data.py, data/database/南丹县_network.db, data/graph/南丹县_network.gexf"
+    },
+    "guangxi_凤山县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:25:38+00:00",
+      "updated_at": "2026-07-23T07:29:22+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_凤山县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guangxi_凤山县",
+        "province": "广西壮族自治区",
+        "parent_city": "河池市",
+        "region": "凤山县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_凤山县_data.py, data/database/凤山县_network.db, data/graph/凤山县_network.gexf"
+    },
+    "guangxi_巴马瑶族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:49:02+00:00",
+      "updated_at": "2026-07-23T07:52:12+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_巴马瑶族自治县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_巴马瑶族自治县",
+        "province": "广西壮族自治区",
+        "parent_city": "河池市",
+        "region": "巴马瑶族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_巴马瑶族自治县_data.py, data/database/巴马瑶族自治县_network.db, data/graph/巴马瑶族自治县_network.gexf"
+    },
+    "guangxi_都安瑶族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:57:19+00:00",
+      "updated_at": "2026-07-23T07:59:27+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_都安瑶族自治县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guangxi_都安瑶族自治县",
+        "province": "广西壮族自治区",
+        "parent_city": "河池市",
+        "region": "都安瑶族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_都安瑶族自治县_data.py, data/database/都安瑶族自治县_network.db, data/graph/都安瑶族自治县_network.gexf"
+    },
+    "guangxi_大化瑶族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T07:59:57+00:00",
+      "updated_at": "2026-07-23T08:02:41+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_大化瑶族自治县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guangxi_大化瑶族自治县",
+        "province": "广西壮族自治区",
+        "parent_city": "河池市",
+        "region": "大化瑶族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_大化瑶族自治县_data.py, data/database/大化瑶族自治县_network.db, data/graph/大化瑶族自治县_network.gexf"
+    },
+    "guangxi_来宾市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:01:17+00:00",
+      "updated_at": "2026-07-23T08:04:39+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_来宾市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_来宾市",
+        "province": "广西壮族自治区",
+        "parent_city": "",
+        "region": "来宾市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_来宾市_data.py, data/database/来宾市_network.db, data/graph/来宾市_network.gexf"
+    },
+    "guangxi_忻城县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:07:14+00:00",
+      "updated_at": "2026-07-23T08:13:05+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_忻城县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guangxi_忻城县",
+        "province": "广西壮族自治区",
+        "parent_city": "来宾市",
+        "region": "忻城县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_忻城县_data.py, data/database/忻城县_network.db, data/graph/忻城县_network.gexf"
+    },
+    "guangxi_象州县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:10:38+00:00",
+      "updated_at": "2026-07-23T08:16:07+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_象州县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guangxi_象州县",
+        "province": "广西壮族自治区",
+        "parent_city": "来宾市",
+        "region": "象州县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_象州县_data.py, data/database/象州县_network.db, data/graph/象州县_network.gexf"
+    },
+    "guangxi_武宣县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:14:50+00:00",
+      "updated_at": "2026-07-23T08:17:49+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_武宣县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_武宣县",
+        "province": "广西壮族自治区",
+        "parent_city": "来宾市",
+        "region": "武宣县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_武宣县_data.py, data/database/武宣县_network.db, data/graph/武宣县_network.gexf"
+    },
+    "guangxi_金秀瑶族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:19:14+00:00",
+      "updated_at": "2026-07-23T08:21:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_金秀瑶族自治县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guangxi_金秀瑶族自治县",
+        "province": "广西壮族自治区",
+        "parent_city": "来宾市",
+        "region": "金秀瑶族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_金秀瑶族自治县_data.py, data/database/金秀瑶族自治县_network.db, data/graph/金秀瑶族自治县_network.gexf"
+    },
+    "guangxi_崇左市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:25:58+00:00",
+      "updated_at": "2026-07-23T08:29:54+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_崇左市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guangxi_崇左市",
+        "province": "广西壮族自治区",
+        "parent_city": "",
+        "region": "崇左市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_崇左市_data.py, data/database/崇左市_network.db, data/graph/崇左市_network.gexf"
+    },
+    "guangxi_江州区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:29:12+00:00",
+      "updated_at": "2026-07-23T08:37:21+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_江州区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_江州区",
+        "province": "广西壮族自治区",
+        "parent_city": "崇左市",
+        "region": "江州区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_江州区_data.py, data/database/江州区_network.db, data/graph/江州区_network.gexf"
+    },
+    "guangxi_龙州县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:52:59+00:00",
+      "updated_at": "2026-07-23T08:57:23+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_龙州县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guangxi_龙州县",
+        "province": "广西壮族自治区",
+        "parent_city": "崇左市",
+        "region": "龙州县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_龙州县_data.py, data/database/龙州县_network.db, data/graph/龙州县_network.gexf"
+    },
+    "guangxi_大新县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T08:55:10+00:00",
+      "updated_at": "2026-07-23T09:00:30+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_大新县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_大新县",
+        "province": "广西壮族自治区",
+        "parent_city": "崇左市",
+        "region": "大新县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_大新县_data.py, data/database/大新县_network.db, data/graph/大新县_network.gexf"
+    },
+    "guangxi_天等县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:11:09+00:00",
+      "updated_at": "2026-07-23T09:15:50+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_天等县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guangxi_天等县",
+        "province": "广西壮族自治区",
+        "parent_city": "崇左市",
+        "region": "天等县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_天等县_data.py, data/database/天等县_network.db, data/graph/天等县_network.gexf"
+    },
+    "guangxi_凭祥市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:10:40+00:00",
+      "updated_at": "2026-07-23T09:16:01+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guangxi_凭祥市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guangxi_凭祥市",
+        "province": "广西壮族自治区",
+        "parent_city": "崇左市",
+        "region": "凭祥市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_凭祥市_data.py, data/database/凭祥市_network.db, data/graph/凭祥市_network.gexf"
+    },
+    "guizhou_province": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:11:27+00:00",
+      "updated_at": "2026-07-23T09:18:32+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_province.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_province",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "贵州省",
+        "level": "省",
+        "targets": [
+          {
+            "role": "省委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "省长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "省委书记",
+          "省长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_贵州省_data.py, data/database/贵州省_network.db, data/graph/贵州省_network.gexf"
+    },
+    "guizhou_贵阳市": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:11:53+00:00",
+      "updated_at": "2026-07-23T09:19:48+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_贵阳市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_贵阳市",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "贵阳市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_贵阳市_data.py, data/database/贵阳市_network.db, data/graph/贵阳市_network.gexf"
+    },
+    "guizhou_南明区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:30:41+00:00",
+      "updated_at": "2026-07-23T09:36:18+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_南明区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_南明区",
+        "province": "贵州省",
+        "parent_city": "贵阳市",
+        "region": "南明区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_南明区_data.py, data/database/南明区_network.db, data/graph/南明区_network.gexf"
+    },
+    "guizhou_云岩区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:29:35+00:00",
+      "updated_at": "2026-07-23T09:34:32+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_云岩区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_云岩区",
+        "province": "贵州省",
+        "parent_city": "贵阳市",
+        "region": "云岩区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_云岩区_data.py, data/database/云岩区_network.db, data/graph/云岩区_network.gexf"
+    },
+    "guizhou_乌当区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T09:36:48+00:00",
+      "updated_at": "2026-07-23T09:40:39+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_乌当区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_乌当区",
+        "province": "贵州省",
+        "parent_city": "贵阳市",
+        "region": "乌当区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_乌当区_data.py, data/database/乌当区_network.db, data/graph/乌当区_network.gexf"
+    },
+    "guizhou_修文县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:03:25+00:00",
+      "updated_at": "2026-07-23T10:06:53+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_修文县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_修文县",
+        "province": "贵州省",
+        "parent_city": "贵阳市",
+        "region": "修文县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_修文县_data.py, data/database/修文县_network.db, data/graph/修文县_network.gexf"
+    },
+    "guizhou_清镇市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:13:23+00:00",
+      "updated_at": "2026-07-23T10:20:53+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_清镇市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_清镇市",
+        "province": "贵州省",
+        "parent_city": "贵阳市",
+        "region": "清镇市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_清镇市_data.py, data/database/清镇市_network.db, data/graph/清镇市_network.gexf"
+    },
+    "guizhou_六盘水市": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:04:51+00:00",
+      "updated_at": "2026-07-23T10:08:59+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_六盘水市.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_六盘水市",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "六盘水市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_六盘水市_data.py, data/database/六盘水市_network.db, data/graph/六盘水市_network.gexf"
+    },
+    "guizhou_钟山区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:10:39+00:00",
+      "updated_at": "2026-07-23T10:11:35+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_钟山区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_钟山区",
+        "province": "贵州省",
+        "parent_city": "六盘水市",
+        "region": "钟山区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_钟山区_data.py, data/database/钟山区_network.db, data/graph/钟山区_network.gexf"
+    },
+    "guizhou_水城区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:10:58+00:00",
+      "updated_at": "2026-07-23T10:11:58+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_水城区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_水城区",
+        "province": "贵州省",
+        "parent_city": "六盘水市",
+        "region": "水城区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_水城区_data.py, data/database/水城区_network.db, data/graph/水城区_network.gexf"
+    },
+    "guizhou_遵义市": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:15:38+00:00",
+      "updated_at": "2026-07-23T10:16:29+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_遵义市.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_遵义市",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "遵义市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_遵义市_data.py, data/database/遵义市_network.db, data/graph/遵义市_network.gexf"
+    },
+    "guizhou_正安县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:36:43+00:00",
+      "updated_at": "2026-07-23T10:38:29+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_正安县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_正安县",
+        "province": "贵州省",
+        "parent_city": "遵义市",
+        "region": "正安县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_正安县_data.py, data/database/正安县_network.db, data/graph/正安县_network.gexf"
+    },
+    "guizhou_务川仡佬族苗族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:38:40+00:00",
+      "updated_at": "2026-07-23T10:40:29+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_务川仡佬族苗族自治县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_务川仡佬族苗族自治县",
+        "province": "贵州省",
+        "parent_city": "遵义市",
+        "region": "务川仡佬族苗族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_务川仡佬族苗族自治县_data.py, data/database/务川仡佬族苗族自治县_network.db, data/graph/务川仡佬族苗族自治县_network.gexf"
+    },
+    "guizhou_习水县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:48:09+00:00",
+      "updated_at": "2026-07-23T10:49:14+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_习水县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_习水县",
+        "province": "贵州省",
+        "parent_city": "遵义市",
+        "region": "习水县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_习水县_data.py, data/database/习水县_network.db, data/graph/习水县_network.gexf"
+    },
+    "guizhou_赤水市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:49:44+00:00",
+      "updated_at": "2026-07-23T10:51:42+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_赤水市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_赤水市",
+        "province": "贵州省",
+        "parent_city": "遵义市",
+        "region": "赤水市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_赤水市_data.py, data/database/赤水市_network.db, data/graph/赤水市_network.gexf"
+    },
+    "guizhou_安顺市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T10:54:39+00:00",
+      "updated_at": "2026-07-23T10:55:47+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_安顺市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_安顺市",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "安顺市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_安顺市_data.py, data/database/安顺市_network.db, data/graph/安顺市_network.gexf"
+    },
+    "guizhou_镇宁布依族苗族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:03:37+00:00",
+      "updated_at": "2026-07-23T11:06:58+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_镇宁布依族苗族自治县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_镇宁布依族苗族自治县",
+        "province": "贵州省",
+        "parent_city": "安顺市",
+        "region": "镇宁布依族苗族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_镇宁布依族苗族自治县_data.py, data/database/镇宁布依族苗族自治县_network.db, data/graph/镇宁布依族苗族自治县_network.gexf"
+    },
+    "guizhou_金沙县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:24:12+00:00",
+      "updated_at": "2026-07-23T11:24:55+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_金沙县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_金沙县",
+        "province": "贵州省",
+        "parent_city": "毕节市",
+        "region": "金沙县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_金沙县_data.py, data/database/金沙县_network.db, data/graph/金沙县_network.gexf"
+    },
+    "guizhou_织金县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:23:26+00:00",
+      "updated_at": "2026-07-23T11:24:11+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_织金县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_织金县",
+        "province": "贵州省",
+        "parent_city": "毕节市",
+        "region": "织金县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_织金县_data.py, data/database/织金县_network.db, data/graph/织金县_network.gexf"
+    },
+    "guizhou_纳雍县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:26:57+00:00",
+      "updated_at": "2026-07-23T11:28:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_纳雍县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_纳雍县",
+        "province": "贵州省",
+        "parent_city": "毕节市",
+        "region": "纳雍县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_纳雍县_data.py, data/database/纳雍县_network.db, data/graph/纳雍县_network.gexf"
+    },
+    "guizhou_威宁彝族回族苗族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:31:02+00:00",
+      "updated_at": "2026-07-23T11:32:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_威宁彝族回族苗族自治县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_威宁彝族回族苗族自治县",
+        "province": "贵州省",
+        "parent_city": "毕节市",
+        "region": "威宁彝族回族苗族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_威宁彝族回族苗族自治县_data.py, data/database/威宁彝族回族苗族自治县_network.db, data/graph/威宁彝族回族苗族自治县_network.gexf"
+    },
+    "guizhou_赫章县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:32:02+00:00",
+      "updated_at": "2026-07-23T11:33:23+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_赫章县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_赫章县",
+        "province": "贵州省",
+        "parent_city": "毕节市",
+        "region": "赫章县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_赫章县_data.py, data/database/赫章县_network.db, data/graph/赫章县_network.gexf"
+    },
+    "guizhou_黔西市": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:37:13+00:00",
+      "updated_at": "2026-07-23T11:45:18+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_黔西市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_黔西市",
+        "province": "贵州省",
+        "parent_city": "毕节市",
+        "region": "黔西市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_黔西市_data.py, data/database/黔西市_network.db, data/graph/黔西市_network.gexf"
+    },
+    "guizhou_铜仁市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:35:05+00:00",
+      "updated_at": "2026-07-23T11:36:53+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_铜仁市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_铜仁市",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "铜仁市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_铜仁市_data.py, data/database/铜仁市_network.db, data/graph/铜仁市_network.gexf"
+    },
+    "guizhou_思南县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:55:09+00:00",
+      "updated_at": "2026-07-23T11:58:01+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_思南县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_思南县",
+        "province": "贵州省",
+        "parent_city": "铜仁市",
+        "region": "思南县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_思南县_data.py, data/database/思南县_network.db, data/graph/思南县_network.gexf"
+    },
+    "guizhou_沿河土家族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T11:57:10+00:00",
+      "updated_at": "2026-07-23T11:59:54+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_沿河土家族自治县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_沿河土家族自治县",
+        "province": "贵州省",
+        "parent_city": "铜仁市",
+        "region": "沿河土家族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_沿河土家族自治县_data.py, data/database/沿河土家族自治县_network.db, data/graph/沿河土家族自治县_network.gexf"
+    },
+    "guizhou_黔西南布依族苗族自治州": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:00:24+00:00",
+      "updated_at": "2026-07-23T12:01:17+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_黔西南布依族苗族自治州.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_黔西南布依族苗族自治州",
+        "province": "贵州省",
+        "parent_city": "",
+        "region": "黔西南布依族苗族自治州",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_黔西南布依族苗族自治州_data.py, data/database/黔西南布依族苗族自治州_network.db, data/graph/黔西南布依族苗族自治州_network.gexf"
+    },
+    "guizhou_贞丰县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:04:38+00:00",
+      "updated_at": "2026-07-23T12:05:34+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_贞丰县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_贞丰县",
+        "province": "贵州省",
+        "parent_city": "黔西南布依族苗族自治州",
+        "region": "贞丰县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_贞丰县_data.py, data/database/贞丰县_network.db, data/graph/贞丰县_network.gexf"
+    },
+    "guizhou_黄平县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:25:28+00:00",
+      "updated_at": "2026-07-23T12:26:32+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_黄平县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_黄平县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "黄平县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_黄平县_data.py, data/database/黄平县_network.db, data/graph/黄平县_network.gexf"
+    },
+    "guizhou_施秉县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:31:41+00:00",
+      "updated_at": "2026-07-23T12:32:51+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_施秉县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_施秉县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "施秉县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_施秉县_data.py, data/database/施秉县_network.db, data/graph/施秉县_network.gexf"
+    },
+    "guizhou_三穗县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:29:04+00:00",
+      "updated_at": "2026-07-23T12:29:37+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_三穗县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_三穗县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "三穗县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_三穗县_data.py, data/database/三穗县_network.db, data/graph/三穗县_network.gexf"
+    },
+    "guizhou_镇远县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:31:11+00:00",
+      "updated_at": "2026-07-23T12:31:59+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_镇远县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_镇远县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "镇远县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_镇远县_data.py, data/database/镇远县_network.db, data/graph/镇远县_network.gexf"
+    },
+    "guizhou_天柱县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T12:36:08+00:00",
+      "updated_at": "2026-07-23T12:36:57+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_天柱县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_天柱县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "天柱县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_天柱县_data.py, data/database/天柱县_network.db, data/graph/天柱县_network.gexf"
+    },
+    "guizhou_榕江县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T19:41:15+00:00",
+      "updated_at": "2026-07-23T19:41:52+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_榕江县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_榕江县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "榕江县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_榕江县_data.py, data/database/榕江县_network.db, data/graph/榕江县_network.gexf"
+    },
+    "guizhou_雷山县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T19:45:28+00:00",
+      "updated_at": "2026-07-23T19:45:50+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_雷山县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_雷山县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "雷山县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_雷山县_data.py, data/database/雷山县_network.db, data/graph/雷山县_network.gexf"
+    },
+    "guizhou_丹寨县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T19:49:25+00:00",
+      "updated_at": "2026-07-23T19:52:49+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_丹寨县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "guizhou_丹寨县",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "丹寨县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_丹寨县_data.py, data/database/丹寨县_network.db, data/graph/丹寨县_network.gexf"
+    },
+    "guizhou_凯里市": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T19:52:20+00:00",
+      "updated_at": "2026-07-23T19:52:51+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_凯里市.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_凯里市",
+        "province": "贵州省",
+        "parent_city": "黔东南苗族侗族自治州",
+        "region": "凯里市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_凯里市_data.py, data/database/凯里市_network.db, data/graph/凯里市_network.gexf"
+    },
+    "guizhou_贵定县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T19:55:37+00:00",
+      "updated_at": "2026-07-23T19:56:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_贵定县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "guizhou_贵定县",
+        "province": "贵州省",
+        "parent_city": "黔南布依族苗族自治州",
+        "region": "贵定县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_贵定县_data.py, data/database/贵定县_network.db, data/graph/贵定县_network.gexf"
+    },
+    "guizhou_三都水族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:23:39+00:00",
+      "updated_at": "2026-07-23T20:24:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_三都水族自治县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "guizhou_三都水族自治县",
+        "province": "贵州省",
+        "parent_city": "黔南布依族苗族自治州",
+        "region": "三都水族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_三都水族自治县_data.py, data/database/三都水族自治县_network.db, data/graph/三都水族自治县_network.gexf"
+    },
+    "guizhou_都匀市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:26:28+00:00",
+      "updated_at": "2026-07-23T20:27:02+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/guizhou_都匀市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "guizhou_都匀市",
+        "province": "贵州省",
+        "parent_city": "黔南布依族苗族自治州",
+        "region": "都匀市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_都匀市_data.py, data/database/都匀市_network.db, data/graph/都匀市_network.gexf"
+    },
+    "hainan_海口市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:27:32+00:00",
+      "updated_at": "2026-07-23T20:27:59+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_海口市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hainan_海口市",
+        "province": "海南省",
+        "parent_city": "",
+        "region": "海口市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_海口市_data.py, data/database/海口市_network.db, data/graph/海口市_network.gexf"
+    },
+    "hainan_秀英区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:30:08+00:00",
+      "updated_at": "2026-07-23T20:30:39+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_秀英区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hainan_秀英区",
+        "province": "海南省",
+        "parent_city": "海口市",
+        "region": "秀英区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_秀英区_data.py, data/database/秀英区_network.db, data/graph/秀英区_network.gexf"
+    },
+    "hainan_琼山区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:31:09+00:00",
+      "updated_at": "2026-07-23T20:31:37+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_琼山区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hainan_琼山区",
+        "province": "海南省",
+        "parent_city": "海口市",
+        "region": "琼山区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_琼山区_data.py, data/database/琼山区_network.db, data/graph/琼山区_network.gexf"
+    },
+    "hainan_美兰区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:31:16+00:00",
+      "updated_at": "2026-07-23T20:31:43+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_美兰区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hainan_美兰区",
+        "province": "海南省",
+        "parent_city": "海口市",
+        "region": "美兰区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_美兰区_data.py, data/database/美兰区_network.db, data/graph/美兰区_network.gexf"
+    },
+    "hainan_天涯区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:34:23+00:00",
+      "updated_at": "2026-07-23T20:38:14+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_天涯区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hainan_天涯区",
+        "province": "海南省",
+        "parent_city": "三亚市",
+        "region": "天涯区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_天涯区_data.py, data/database/天涯区_network.db, data/graph/天涯区_network.gexf"
+    },
+    "hainan_崖州区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:38:41+00:00",
+      "updated_at": "2026-07-23T20:40:37+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_崖州区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hainan_崖州区",
+        "province": "海南省",
+        "parent_city": "三亚市",
+        "region": "崖州区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_崖州区_data.py, data/database/崖州区_network.db, data/graph/崖州区_network.gexf"
+    },
+    "hainan_南沙群岛": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:42:55+00:00",
+      "updated_at": "2026-07-23T20:50:28+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_南沙群岛.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hainan_南沙群岛",
+        "province": "海南省",
+        "parent_city": "三沙市",
+        "region": "南沙群岛",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_南沙群岛_data.py, data/database/南沙群岛_network.db, data/graph/南沙群岛_network.gexf"
+    },
+    "hainan_儋州市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:45:38+00:00",
+      "updated_at": "2026-07-23T20:46:16+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hainan_儋州市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hainan_儋州市",
+        "province": "海南省",
+        "parent_city": "",
+        "region": "儋州市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_儋州市_data.py, data/database/儋州市_network.db, data/graph/儋州市_network.gexf"
+    },
+    "hebei_栾城区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:59:07+00:00",
+      "updated_at": "2026-07-23T20:59:43+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_栾城区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_栾城区",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "栾城区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_栾城区_data.py, data/database/栾城区_network.db, data/graph/栾城区_network.gexf"
+    },
+    "hebei_井陉县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T20:59:07+00:00",
+      "updated_at": "2026-07-23T20:59:42+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_井陉县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_井陉县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "井陉县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_井陉县_data.py, data/database/井陉县_network.db, data/graph/井陉县_network.gexf"
+    },
+    "hebei_灵寿县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:03:41+00:00",
+      "updated_at": "2026-07-23T21:05:10+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_灵寿县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_灵寿县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "灵寿县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_灵寿县_data.py, data/database/灵寿县_network.db, data/graph/灵寿县_network.gexf"
+    },
+    "hebei_高邑县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:02:47+00:00",
+      "updated_at": "2026-07-23T21:06:59+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_高邑县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_高邑县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "高邑县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_高邑县_data.py, data/database/高邑县_network.db, data/graph/高邑县_network.gexf"
+    },
+    "hebei_深泽县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:07:29+00:00",
+      "updated_at": "2026-07-23T21:08:12+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_深泽县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_深泽县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "深泽县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_深泽县_data.py, data/database/深泽县_network.db, data/graph/深泽县_network.gexf"
+    },
+    "hebei_无极县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:10:04+00:00",
+      "updated_at": "2026-07-23T21:10:30+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_无极县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_无极县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "无极县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_无极县_data.py, data/database/无极县_network.db, data/graph/无极县_network.gexf"
+    },
+    "hebei_平山县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:11:00+00:00",
+      "updated_at": "2026-07-23T21:11:33+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_平山县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_平山县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "平山县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_平山县_data.py, data/database/平山县_network.db, data/graph/平山县_network.gexf"
+    },
+    "hebei_元氏县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:11:23+00:00",
+      "updated_at": "2026-07-23T21:11:50+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_元氏县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_元氏县",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "元氏县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_元氏县_data.py, data/database/元氏县_network.db, data/graph/元氏县_network.gexf"
+    },
+    "hebei_辛集市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:15:31+00:00",
+      "updated_at": "2026-07-23T21:16:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_辛集市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_辛集市",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "辛集市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_辛集市_data.py, data/database/辛集市_network.db, data/graph/辛集市_network.gexf"
+    },
+    "hebei_新乐市": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:18:42+00:00",
+      "updated_at": "2026-07-23T21:20:40+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_新乐市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_新乐市",
+        "province": "河北省",
+        "parent_city": "石家庄市",
+        "region": "新乐市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_新乐市_data.py, data/database/新乐市_network.db, data/graph/新乐市_network.gexf"
+    },
+    "hebei_开平区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:30:29+00:00",
+      "updated_at": "2026-07-23T21:31:04+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_开平区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_开平区",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "开平区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_开平区_data.py, data/database/开平区_network.db, data/graph/开平区_network.gexf"
+    },
+    "hebei_丰润区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:36:55+00:00",
+      "updated_at": "2026-07-23T21:37:36+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_丰润区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_丰润区",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "丰润区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_丰润区_data.py, data/database/丰润区_network.db, data/graph/丰润区_network.gexf"
+    },
+    "hebei_曹妃甸区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:39:08+00:00",
+      "updated_at": "2026-07-23T21:39:56+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_曹妃甸区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_曹妃甸区",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "曹妃甸区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_曹妃甸区_data.py, data/database/曹妃甸区_network.db, data/graph/曹妃甸区_network.gexf"
+    },
+    "hebei_迁西县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:43:01+00:00",
+      "updated_at": "2026-07-23T21:43:40+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_迁西县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_迁西县",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "迁西县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_迁西县_data.py, data/database/迁西县_network.db, data/graph/迁西县_network.gexf"
+    },
+    "hebei_玉田县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:44:40+00:00",
+      "updated_at": "2026-07-23T21:45:05+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_玉田县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_玉田县",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "玉田县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_玉田县_data.py, data/database/玉田县_network.db, data/graph/玉田县_network.gexf"
+    },
+    "hebei_遵化市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:45:02+00:00",
+      "updated_at": "2026-07-23T21:45:34+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_遵化市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_遵化市",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "遵化市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_遵化市_data.py, data/database/遵化市_network.db, data/graph/遵化市_network.gexf"
+    },
+    "hebei_滦州市": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:49:05+00:00",
+      "updated_at": "2026-07-23T21:50:33+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_滦州市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_滦州市",
+        "province": "河北省",
+        "parent_city": "唐山市",
+        "region": "滦州市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_滦州市_data.py, data/database/滦州市_network.db, data/graph/滦州市_network.gexf"
+    },
+    "hebei_山海关区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:52:02+00:00",
+      "updated_at": "2026-07-23T21:52:35+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_山海关区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_山海关区",
+        "province": "河北省",
+        "parent_city": "秦皇岛市",
+        "region": "山海关区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_山海关区_data.py, data/database/山海关区_network.db, data/graph/山海关区_network.gexf"
+    },
+    "hebei_北戴河区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:53:05+00:00",
+      "updated_at": "2026-07-23T21:54:30+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_北戴河区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_北戴河区",
+        "province": "河北省",
+        "parent_city": "秦皇岛市",
+        "region": "北戴河区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_北戴河区_data.py, data/database/北戴河区_network.db, data/graph/北戴河区_network.gexf"
+    },
+    "hebei_昌黎县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T21:57:14+00:00",
+      "updated_at": "2026-07-23T22:00:44+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_昌黎县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_昌黎县",
+        "province": "河北省",
+        "parent_city": "秦皇岛市",
+        "region": "昌黎县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_昌黎县_data.py, data/database/昌黎县_network.db, data/graph/昌黎县_network.gexf"
+    },
+    "hebei_复兴区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:16:23+00:00",
+      "updated_at": "2026-07-23T22:16:55+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_复兴区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_复兴区",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "复兴区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_复兴区_data.py, data/database/复兴区_network.db, data/graph/复兴区_network.gexf"
+    },
+    "hebei_峰峰矿区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:21:35+00:00",
+      "updated_at": "2026-07-23T22:22:00+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_峰峰矿区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_峰峰矿区",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "峰峰矿区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_峰峰矿区_data.py, data/database/峰峰矿区_network.db, data/graph/峰峰矿区_network.gexf"
+    },
+    "hebei_永年区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:19:44+00:00",
+      "updated_at": "2026-07-23T22:21:16+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_永年区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_永年区",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "永年区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_永年区_data.py, data/database/永年区_network.db, data/graph/永年区_network.gexf"
+    },
+    "hebei_临漳县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:23:37+00:00",
+      "updated_at": "2026-07-23T22:24:15+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_临漳县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_临漳县",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "临漳县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_临漳县_data.py, data/database/临漳县_network.db, data/graph/临漳县_network.gexf"
+    },
+    "hebei_涉县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:40:57+00:00",
+      "updated_at": "2026-07-23T22:41:24+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_涉县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_涉县",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "涉县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_涉县_data.py, data/database/涉县_network.db, data/graph/涉县_network.gexf"
+    },
+    "hebei_邱县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:34:46+00:00",
+      "updated_at": "2026-07-23T22:35:15+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_邱县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_邱县",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "邱县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_邱县_data.py, data/database/邱县_network.db, data/graph/邱县_network.gexf"
+    },
+    "hebei_魏县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:46:02+00:00",
+      "updated_at": "2026-07-23T22:46:33+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_魏县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_魏县",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "魏县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_魏县_data.py, data/database/魏县_network.db, data/graph/魏县_network.gexf"
+    },
+    "hebei_武安市": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:53:07+00:00",
+      "updated_at": "2026-07-23T22:53:42+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_武安市.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_武安市",
+        "province": "河北省",
+        "parent_city": "邯郸市",
+        "region": "武安市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_武安市_data.py, data/database/武安市_network.db, data/graph/武安市_network.gexf"
+    },
+    "hebei_襄都区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:55:32+00:00",
+      "updated_at": "2026-07-23T22:56:13+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_襄都区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_襄都区",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "襄都区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_襄都区_data.py, data/database/襄都区_network.db, data/graph/襄都区_network.gexf"
+    },
+    "hebei_任泽区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T22:57:49+00:00",
+      "updated_at": "2026-07-23T22:58:22+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_任泽区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_任泽区",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "任泽区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_任泽区_data.py, data/database/任泽区_network.db, data/graph/任泽区_network.gexf"
+    },
+    "hebei_南和区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:01:29+00:00",
+      "updated_at": "2026-07-23T23:01:51+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_南和区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_南和区",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "南和区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_南和区_data.py, data/database/南和区_network.db, data/graph/南和区_network.gexf"
+    },
+    "hebei_隆尧县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:08:22+00:00",
+      "updated_at": "2026-07-23T23:08:50+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_隆尧县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_隆尧县",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "隆尧县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_隆尧县_data.py, data/database/隆尧县_network.db, data/graph/隆尧县_network.gexf"
+    },
+    "hebei_新河县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:15:50+00:00",
+      "updated_at": "2026-07-23T23:17:27+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_新河县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_新河县",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "新河县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_新河县_data.py, data/database/新河县_network.db, data/graph/新河县_network.gexf"
+    },
+    "hebei_临西县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:29:23+00:00",
+      "updated_at": "2026-07-23T23:30:59+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_临西县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_临西县",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "临西县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_临西县_data.py, data/database/临西县_network.db, data/graph/临西县_network.gexf"
+    },
+    "hebei_沙河市": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:33:04+00:00",
+      "updated_at": "2026-07-23T23:33:41+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_沙河市.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_沙河市",
+        "province": "河北省",
+        "parent_city": "邢台市",
+        "region": "沙河市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_沙河市_data.py, data/database/沙河市_network.db, data/graph/沙河市_network.gexf"
+    },
+    "hebei_清苑区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:37:34+00:00",
+      "updated_at": "2026-07-23T23:38:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_清苑区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_清苑区",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "清苑区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_清苑区_data.py, data/database/清苑区_network.db, data/graph/清苑区_network.gexf"
+    },
+    "hebei_徐水区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:38:38+00:00",
+      "updated_at": "2026-07-23T23:39:05+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_徐水区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_徐水区",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "徐水区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_徐水区_data.py, data/database/徐水区_network.db, data/graph/徐水区_network.gexf"
+    },
+    "hebei_涞源县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:50:45+00:00",
+      "updated_at": "2026-07-23T23:51:13+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_涞源县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_涞源县",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "涞源县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_涞源县_data.py, data/database/涞源县_network.db, data/graph/涞源县_network.gexf"
+    },
+    "hebei_望都县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:52:41+00:00",
+      "updated_at": "2026-07-23T23:53:10+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_望都县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_望都县",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "望都县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_望都县_data.py, data/database/望都县_network.db, data/graph/望都县_network.gexf"
+    },
+    "hebei_易县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-23T23:55:25+00:00",
+      "updated_at": "2026-07-24T00:00:31+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_易县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_易县",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "易县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_易县_data.py, data/database/易县_network.db, data/graph/易县_network.gexf"
+    },
+    "hebei_博野县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:02:55+00:00",
+      "updated_at": "2026-07-24T00:04:25+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_博野县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_博野县",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "博野县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_博野县_data.py, data/database/博野县_network.db, data/graph/博野县_network.gexf"
+    },
+    "hebei_雄县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:05:56+00:00",
+      "updated_at": "2026-07-24T00:06:22+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_雄县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_雄县",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "雄县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_雄县_data.py, data/database/雄县_network.db, data/graph/雄县_network.gexf"
+    },
+    "hebei_定州市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:07:29+00:00",
+      "updated_at": "2026-07-24T00:08:32+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_定州市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_定州市",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "定州市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_定州市_data.py, data/database/定州市_network.db, data/graph/定州市_network.gexf"
+    },
+    "hebei_安国市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:09:02+00:00",
+      "updated_at": "2026-07-24T00:10:35+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_安国市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_安国市",
+        "province": "河北省",
+        "parent_city": "保定市",
+        "region": "安国市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_安国市_data.py, data/database/安国市_network.db, data/graph/安国市_network.gexf"
+    },
+    "hebei_下花园区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:14:36+00:00",
+      "updated_at": "2026-07-24T00:15:14+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_下花园区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_下花园区",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "下花园区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_下花园区_data.py, data/database/下花园区_network.db, data/graph/下花园区_network.gexf"
+    },
+    "hebei_万全区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:17:51+00:00",
+      "updated_at": "2026-07-24T00:18:30+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_万全区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_万全区",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "万全区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_万全区_data.py, data/database/万全区_network.db, data/graph/万全区_network.gexf"
+    },
+    "hebei_崇礼区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:21:37+00:00",
+      "updated_at": "2026-07-24T00:23:12+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_崇礼区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_崇礼区",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "崇礼区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_崇礼区_data.py, data/database/崇礼区_network.db, data/graph/崇礼区_network.gexf"
+    },
+    "hebei_阳原县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:35:28+00:00",
+      "updated_at": "2026-07-24T00:36:04+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_阳原县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_阳原县",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "阳原县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_阳原县_data.py, data/database/阳原县_network.db, data/graph/阳原县_network.gexf"
+    },
+    "hebei_怀来县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:39:01+00:00",
+      "updated_at": "2026-07-24T00:39:32+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_怀来县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_怀来县",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "怀来县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_怀来县_data.py, data/database/怀来县_network.db, data/graph/怀来县_network.gexf"
+    },
+    "hebei_涿鹿县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:40:02+00:00",
+      "updated_at": "2026-07-24T00:43:31+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_涿鹿县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_涿鹿县",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "涿鹿县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_涿鹿县_data.py, data/database/涿鹿县_network.db, data/graph/涿鹿县_network.gexf"
+    },
+    "hebei_赤城县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:41:37+00:00",
+      "updated_at": "2026-07-24T01:04:21+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_赤城县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_赤城县",
+        "province": "河北省",
+        "parent_city": "张家口市",
+        "region": "赤城县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: data/database/赤城县_network.db, data/graph/赤城县_network.gexf"
+    },
+    "hebei_双桥区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:42:37+00:00",
+      "updated_at": "2026-07-24T00:43:07+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_双桥区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_双桥区",
+        "province": "河北省",
+        "parent_city": "承德市",
+        "region": "双桥区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_双桥区_data.py, data/database/双桥区_network.db, data/graph/双桥区_network.gexf"
+    },
+    "hebei_双滦区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:45:38+00:00",
+      "updated_at": "2026-07-24T00:46:08+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_双滦区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_双滦区",
+        "province": "河北省",
+        "parent_city": "承德市",
+        "region": "双滦区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_双滦区_data.py, data/database/双滦区_network.db, data/graph/双滦区_network.gexf"
+    },
+    "hebei_鹰手营子矿区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:46:03+00:00",
+      "updated_at": "2026-07-24T00:49:24+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_鹰手营子矿区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_鹰手营子矿区",
+        "province": "河北省",
+        "parent_city": "承德市",
+        "region": "鹰手营子矿区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_鹰手营子矿区_data.py, data/database/鹰手营子矿区_network.db, data/graph/鹰手营子矿区_network.gexf"
+    },
+    "hebei_兴隆县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T00:53:11+00:00",
+      "updated_at": "2026-07-24T00:53:40+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_兴隆县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_兴隆县",
+        "province": "河北省",
+        "parent_city": "承德市",
+        "region": "兴隆县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_兴隆县_data.py, data/database/兴隆县_network.db, data/graph/兴隆县_network.gexf"
+    },
+    "hebei_宽城满族自治县": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:08:08+00:00",
+      "updated_at": "2026-07-24T01:08:40+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_宽城满族自治县.worker-2.prompt.txt",
+      "task": {
+        "task_id": "hebei_宽城满族自治县",
+        "province": "河北省",
+        "parent_city": "承德市",
+        "region": "宽城满族自治县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_宽城满族自治县_data.py, data/database/宽城满族自治县_network.db, data/graph/宽城满族自治县_network.gexf"
+    },
+    "hebei_平泉市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:13:03+00:00",
+      "updated_at": "2026-07-24T01:13:35+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_平泉市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "hebei_平泉市",
+        "province": "河北省",
+        "parent_city": "承德市",
+        "region": "平泉市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_平泉市_data.py, data/database/平泉市_network.db, data/graph/平泉市_network.gexf"
+    },
+    "hebei_青县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:23:12+00:00",
+      "updated_at": "2026-07-24T01:23:40+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_青县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_青县",
+        "province": "河北省",
+        "parent_city": "沧州市",
+        "region": "青县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_青县_data.py, data/database/青县_network.db, data/graph/青县_network.gexf"
+    },
+    "hebei_海兴县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:29:37+00:00",
+      "updated_at": "2026-07-24T01:30:47+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_海兴县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_海兴县",
+        "province": "河北省",
+        "parent_city": "沧州市",
+        "region": "海兴县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_海兴县_data.py, data/database/海兴县_network.db, data/graph/海兴县_network.gexf"
+    },
+    "hebei_盐山县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:34:12+00:00",
+      "updated_at": "2026-07-24T01:34:55+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_盐山县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_盐山县",
+        "province": "河北省",
+        "parent_city": "沧州市",
+        "region": "盐山县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_盐山县_data.py, data/database/盐山县_network.db, data/graph/盐山县_network.gexf"
+    },
+    "hebei_南皮县": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:37:42+00:00",
+      "updated_at": "2026-07-24T01:38:22+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_南皮县.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_南皮县",
+        "province": "河北省",
+        "parent_city": "沧州市",
+        "region": "南皮县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_南皮县_data.py, data/database/南皮县_network.db, data/graph/南皮县_network.gexf"
+    },
+    "hebei_吴桥县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T01:41:06+00:00",
+      "updated_at": "2026-07-24T01:41:38+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_吴桥县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_吴桥县",
+        "province": "河北省",
+        "parent_city": "沧州市",
+        "region": "吴桥县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_吴桥县_data.py, data/database/吴桥县_network.db, data/graph/吴桥县_network.gexf"
+    },
+    "hebei_广阳区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T02:32:06+00:00",
+      "updated_at": "2026-07-24T02:34:04+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_广阳区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_广阳区",
+        "province": "河北省",
+        "parent_city": "廊坊市",
+        "region": "广阳区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_广阳区_data.py, data/database/广阳区_network.db, data/graph/广阳区_network.gexf"
+    },
+    "hebei_文安县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T03:28:48+00:00",
+      "updated_at": "2026-07-24T03:42:23+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_文安县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_文安县",
+        "province": "河北省",
+        "parent_city": "廊坊市",
+        "region": "文安县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_文安县_data.py, data/database/文安县_network.db, data/graph/文安县_network.gexf"
+    },
+    "hebei_桃城区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T04:33:51+00:00",
+      "updated_at": "2026-07-24T04:35:23+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_桃城区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_桃城区",
+        "province": "河北省",
+        "parent_city": "衡水市",
+        "region": "桃城区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_桃城区_data.py, data/database/桃城区_network.db, data/graph/桃城区_network.gexf"
+    },
+    "hebei_景县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T05:01:40+00:00",
+      "updated_at": "2026-07-24T05:02:18+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_景县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "hebei_景县",
+        "province": "河北省",
+        "parent_city": "衡水市",
+        "region": "景县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_景县_data.py, data/database/景县_network.db, data/graph/景县_network.gexf"
+    },
+    "hebei_深州市": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T05:06:02+00:00",
+      "updated_at": "2026-07-24T05:06:33+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/hebei_深州市.worker-1.prompt.txt",
+      "task": {
+        "task_id": "hebei_深州市",
+        "province": "河北省",
+        "parent_city": "衡水市",
+        "region": "深州市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_深州市_data.py, data/database/深州市_network.db, data/graph/深州市_network.gexf"
+    },
+    "heilongjiang_province": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T05:09:28+00:00",
+      "updated_at": "2026-07-24T05:10:12+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_province.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_province",
+        "province": "黑龙江省",
+        "parent_city": "",
+        "region": "黑龙江省",
+        "level": "省",
+        "targets": [
+          {
+            "role": "省委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "省长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "省委书记",
+          "省长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_黑龙江省_data.py, data/database/黑龙江省_network.db, data/graph/黑龙江省_network.gexf"
+    },
+    "heilongjiang_哈尔滨市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T05:12:01+00:00",
+      "updated_at": "2026-07-24T05:12:27+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_哈尔滨市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_哈尔滨市",
+        "province": "黑龙江省",
+        "parent_city": "",
+        "region": "哈尔滨市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_哈尔滨市_data.py, data/database/哈尔滨市_network.db, data/graph/哈尔滨市_network.gexf"
+    },
+    "heilongjiang_双城区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T05:33:21+00:00",
+      "updated_at": "2026-07-24T05:34:32+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_双城区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_双城区",
+        "province": "黑龙江省",
+        "parent_city": "哈尔滨市",
+        "region": "双城区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_双城区_data.py, data/database/双城区_network.db, data/graph/双城区_network.gexf"
+    },
+    "heilongjiang_巴彦县": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:09:22+00:00",
+      "updated_at": "2026-07-24T06:24:05+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_巴彦县.worker-4.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_巴彦县",
+        "province": "黑龙江省",
+        "parent_city": "哈尔滨市",
+        "region": "巴彦县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_巴彦县_data.py, data/database/巴彦县_network.db, data/graph/巴彦县_network.gexf"
+    },
+    "heilongjiang_木兰县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:26:02+00:00",
+      "updated_at": "2026-07-24T06:28:25+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_木兰县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_木兰县",
+        "province": "黑龙江省",
+        "parent_city": "哈尔滨市",
+        "region": "木兰县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_木兰县_data.py, data/database/木兰县_network.db, data/graph/木兰县_network.gexf"
+    },
+    "heilongjiang_延寿县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:32:39+00:00",
+      "updated_at": "2026-07-24T06:36:17+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_延寿县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_延寿县",
+        "province": "黑龙江省",
+        "parent_city": "哈尔滨市",
+        "region": "延寿县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_延寿县_data.py, data/database/延寿县_network.db, data/graph/延寿县_network.gexf"
+    },
+    "heilongjiang_五常市": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:45:15+00:00",
+      "updated_at": "2026-07-24T06:47:09+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_五常市.worker-4.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_五常市",
+        "province": "黑龙江省",
+        "parent_city": "哈尔滨市",
+        "region": "五常市",
+        "level": "县级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_五常市_data.py, data/database/五常市_network.db, data/graph/五常市_network.gexf"
+    },
+    "heilongjiang_齐齐哈尔市": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:47:16+00:00",
+      "updated_at": "2026-07-24T06:49:05+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_齐齐哈尔市.worker-1.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_齐齐哈尔市",
+        "province": "黑龙江省",
+        "parent_city": "",
+        "region": "齐齐哈尔市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_齐齐哈尔市_data.py, data/database/齐齐哈尔市_network.db, data/graph/齐齐哈尔市_network.gexf"
+    },
+    "heilongjiang_龙沙区": {
+      "status": "blocked",
+      "worker_id": "worker-1",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:51:59+00:00",
+      "updated_at": "2026-07-24T06:53:30+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_龙沙区.worker-1.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_龙沙区",
+        "province": "黑龙江省",
+        "parent_city": "齐齐哈尔市",
+        "region": "龙沙区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_龙沙区_data.py, data/database/龙沙区_network.db, data/graph/龙沙区_network.gexf"
+    },
+    "heilongjiang_铁锋区": {
+      "status": "blocked",
+      "worker_id": "worker-2",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T06:54:15+00:00",
+      "updated_at": "2026-07-24T06:55:28+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_铁锋区.worker-2.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_铁锋区",
+        "province": "黑龙江省",
+        "parent_city": "齐齐哈尔市",
+        "region": "铁锋区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_铁锋区_data.py, data/database/铁锋区_network.db, data/graph/铁锋区_network.gexf"
+    },
+    "heilongjiang_碾子山区": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T07:02:59+00:00",
+      "updated_at": "2026-07-24T07:06:24+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_碾子山区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_碾子山区",
+        "province": "黑龙江省",
+        "parent_city": "齐齐哈尔市",
+        "region": "碾子山区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_碾子山区_data.py, data/database/碾子山区_network.db, data/graph/碾子山区_network.gexf"
+    },
+    "heilongjiang_甘南县": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T07:41:50+00:00",
+      "updated_at": "2026-07-24T07:43:19+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_甘南县.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_甘南县",
+        "province": "黑龙江省",
+        "parent_city": "齐齐哈尔市",
+        "region": "甘南县",
+        "level": "县",
+        "targets": [
+          {
+            "role": "县委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "县长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "县委书记",
+          "县长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_甘南县_data.py, data/database/甘南县_network.db, data/graph/甘南县_network.gexf"
+    },
+    "heilongjiang_鸡西市": {
+      "status": "blocked",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T09:31:43+00:00",
+      "updated_at": "2026-07-24T09:41:09+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_鸡西市.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_鸡西市",
+        "province": "黑龙江省",
+        "parent_city": "",
+        "region": "鸡西市",
+        "level": "地级市",
+        "targets": [
+          {
+            "role": "市委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "市长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "市委书记",
+          "市长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_鸡西市_data.py"
+    },
+    "heilongjiang_鸡冠区": {
+      "status": "blocked",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T09:15:39+00:00",
+      "updated_at": "2026-07-24T09:20:43+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_鸡冠区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_鸡冠区",
+        "province": "黑龙江省",
+        "parent_city": "鸡西市",
+        "region": "鸡冠区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "missing canonical artifacts: build_鸡冠区_data.py, data/graph/鸡冠区_network.gexf"
+    },
+    "heilongjiang_恒山区": {
+      "status": "released",
+      "worker_id": "worker-3",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T09:41:39+00:00",
+      "updated_at": "2026-07-24T09:53:59+00:00",
+      "attempts": 3,
+      "prompt_path": "logs/dispatch/heilongjiang_恒山区.worker-3.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_恒山区",
+        "province": "黑龙江省",
+        "parent_city": "鸡西市",
+        "region": "恒山区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "auto-released after system fix"
+    },
+    "heilongjiang_滴道区": {
+      "status": "released",
+      "worker_id": "worker-4",
+      "model_intent": "iagent",
+      "opencode_agent": "",
+      "opencode_model": "iagent/standard",
+      "claimed_at": "2026-07-24T09:41:47+00:00",
+      "updated_at": "2026-07-24T09:53:59+00:00",
+      "attempts": 1,
+      "prompt_path": "logs/dispatch/heilongjiang_滴道区.worker-4.prompt.txt",
+      "task": {
+        "task_id": "heilongjiang_滴道区",
+        "province": "黑龙江省",
+        "parent_city": "鸡西市",
+        "region": "滴道区",
+        "level": "市辖区",
+        "targets": [
+          {
+            "role": "区委书记",
+            "label": "一把手"
+          },
+          {
+            "role": "区长",
+            "label": "二把手"
+          }
+        ],
+        "target_roles": [
+          "区委书记",
+          "区长"
+        ]
+      },
+      "reason": "auto-released after system fix"
+    }
+  }
+}

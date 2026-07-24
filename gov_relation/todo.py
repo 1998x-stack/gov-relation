@@ -34,6 +34,16 @@ class TodoItem:
         return self.item.get("parent_city", "")
 
 
+def _task_done_task_id(task: Task) -> str:
+    """Return a unique-ish key for matching done/set_claim_status calls."""
+    return task.get("id", "")
+
+
+def _task_done_context(task: Task, province_name: str, parent_city: str) -> tuple[str, str, str]:
+    """Return (task_id, province, parent_city) for disambiguation."""
+    return (task.get("id", ""), province_name, parent_city)
+
+
 def load_todo(path: Path = TODO_PATH) -> TodoData:
     with path.open(encoding="utf-8") as f:
         return json.load(f)
@@ -96,19 +106,35 @@ def province_stats(todo: TodoData) -> list[tuple[str, int, int]]:
     return rows
 
 
-def find_task(todo: TodoData, task_id: str) -> tuple[Province | None, Task | None]:
+def find_task(todo: TodoData, task_id: str, province: str = "", parent_city: str = "") -> tuple[Province | None, Task | None]:
+    """Find a task by id, optionally disambiguating by province + parent_city.
+
+    When multiple tasks share the same id (e.g. 石家庄市桥西区 vs 张家口市桥西区),
+    pass province and parent_city to find the correct one. Without disambiguation,
+    the *first* match is returned (backward-compatible).
+    """
     for prov in todo["provinces"]:
         for task in prov.get("tasks", []):
             if task.get("id") == task_id:
+                if province and prov["province"] != province:
+                    continue
+                if parent_city:
+                    task_parent = task.get("parent_city", "")
+                    if task_parent != parent_city:
+                        continue
                 return prov, task
             for subtask in task.get("sub_tasks", []):
                 if subtask.get("id") == task_id:
+                    if province and prov["province"] != province:
+                        continue
+                    if parent_city and task.get("region") != parent_city:
+                        continue
                     return prov, subtask
     return None, None
 
 
-def mark_done(todo: TodoData, task_id: str) -> bool:
-    _, task = find_task(todo, task_id)
+def mark_done(todo: TodoData, task_id: str, province: str = "", parent_city: str = "") -> bool:
+    _, task = find_task(todo, task_id, province=province, parent_city=parent_city)
     if task is None:
         return False
     task["done"] = True
@@ -128,8 +154,12 @@ def item_summary(item: TodoItem) -> dict[str, Any]:
     }
 
 
-def find_item_by_id(todo: TodoData, task_id: str) -> TodoItem | None:
+def find_item_by_id(todo: TodoData, task_id: str, province: str = "", parent_city: str = "") -> TodoItem | None:
     for item in iter_items(todo):
         if item.item.get("id") == task_id:
+            if province and item.province_name != province:
+                continue
+            if parent_city and item.parent_city != parent_city:
+                continue
             return item
     return None

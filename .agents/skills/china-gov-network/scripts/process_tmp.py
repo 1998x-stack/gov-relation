@@ -16,7 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 TMP_ROOT = REPO_ROOT / "data" / "tmp"
 
 DESTINATIONS = {
-    "build_script": REPO_ROOT,
+    "build_script": REPO_ROOT / "scripts" / "build",
     "database": REPO_ROOT / "data" / "database",
     "graph": REPO_ROOT / "data" / "graph",
     "person_json": REPO_ROOT / "data" / "persons",

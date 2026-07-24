@@ -220,7 +220,8 @@ class TestCanonicalArtifactsReady:
     def test_all_artifacts_present(self, mock_all: Path) -> None:
         from gov_relation.paths import REPO_ROOT
         paths = artifact_paths("A市")
-        script = REPO_ROOT / paths["build_script"]
+        # Build scripts live under scripts/build/, other artifacts at default paths
+        script = REPO_ROOT / "scripts" / "build" / paths["build_script"]
         db = REPO_ROOT / paths["db_output"]
         gexf = REPO_ROOT / paths["gexf_output"]
         script.parent.mkdir(parents=True, exist_ok=True)

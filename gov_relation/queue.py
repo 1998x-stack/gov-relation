@@ -15,13 +15,14 @@ from .dispatch import build_dispatch_plan
 from .log import get_logger
 from .paths import DISPATCH_LOCK_DIR, DISPATCH_STATE_PATH, REPO_ROOT
 from .slugs import artifact_paths
-from .todo import TodoItem, find_item_by_id, iter_items, item_summary, load_todo, mark_done, save_todo
+from .todo import TodoItem, find_item_by_id, find_task, iter_items, item_summary, load_todo, mark_done, save_todo
 
 logger = get_logger(__name__)
 
 
 LOCK_STALE_SECONDS = 10 * 60
 MAX_RETRIES = 3  # tasks exceeding this many failed attempts are auto-blocked
+MAX_RECLAIM_ATTEMPTS = 10  # tasks reclaimed this many times (even across diff workers) are skipped
 
 
 def now_iso() -> str:
@@ -95,8 +96,10 @@ def claim_sort_key(claim: dict[str, Any]) -> datetime:
 
 def _canonical_artifacts_ready_unlocked(task: dict[str, Any]) -> tuple[bool, list[str]]:
     paths = artifact_paths(task["region"])
+    # Build scripts live under scripts/build/, other artifacts at their default paths
+    build_script = REPO_ROOT / "scripts" / "build" / paths["build_script"]
     required = [
-        REPO_ROOT / paths["build_script"],
+        build_script,
         REPO_ROOT / paths["db_output"],
         REPO_ROOT / paths["gexf_output"],
     ]
@@ -105,12 +108,15 @@ def _canonical_artifacts_ready_unlocked(task: dict[str, Any]) -> tuple[bool, lis
 
 
 def _mark_claim_done_unlocked(todo: dict, claim: dict[str, Any], reason: str = "") -> None:
-    task_id = claim["task"]["task_id"]
+    task = claim["task"]
+    task_id = task["task_id"]
     claim["status"] = "done"
     claim["updated_at"] = now_iso()
     if reason:
         claim["reason"] = reason
-    if not mark_done(todo, task_id):
+    province = task.get("province", "")
+    parent_city = task.get("parent_city", "")
+    if not mark_done(todo, task_id, province=province, parent_city=parent_city):
         raise KeyError(f"task not found in TODO.json: {task_id}")
 
 
@@ -134,6 +140,7 @@ def cleanup_worker_active_claims_unlocked(todo: dict, state: dict[str, Any], wor
 
 def find_next_claimable(todo: dict, state: dict[str, Any]) -> TodoItem | None:
     active = active_claim_ids(state)
+    claims = state.get("claims", {})
     for item in iter_items(todo):
         task_id = item.item.get("id")
         if not task_id:
@@ -141,6 +148,10 @@ def find_next_claimable(todo: dict, state: dict[str, Any]) -> TodoItem | None:
         if item.item.get("done") or task_id in active:
             continue
         if item.item.get("blocked"):
+            continue
+        # Skip if total claim attempts across all workers exceeds threshold
+        total_attempts = claims.get(task_id, {}).get("attempts", 0)
+        if total_attempts >= MAX_RECLAIM_ATTEMPTS:
             continue
         return item
     return None
@@ -193,7 +204,8 @@ def claim_next(
         return claim
 
 
-def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = "") -> dict[str, Any]:
+def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = "",
+                     province: str = "", parent_city: str = "") -> dict[str, Any]:
     if status not in {"active", "done", "failed", "released", "blocked"}:
         raise ValueError(f"invalid claim status: {status}")
     with queue_lock():
@@ -215,7 +227,7 @@ def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = ""
             if attempts >= MAX_RETRIES:
                 # Auto-block the task in TODO.json and mark claim as blocked
                 todo = load_todo()
-                _, task = find_task(todo, task_id)
+                _, task = find_task(todo, task_id, province=province, parent_city=parent_city)
                 if task is not None:
                     task["blocked"] = True
                     task["blocked_reason"] = reason or f"exceeded {MAX_RETRIES} retries"
@@ -225,7 +237,7 @@ def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = ""
                 logger.info("BLOCKED %s after %d failed attempts", task_id, attempts)
         if status == "done":
             todo = load_todo()
-            if not mark_done(todo, task_id):
+            if not mark_done(todo, task_id, province=province, parent_city=parent_city):
                 raise KeyError(f"task not found in TODO.json: {task_id}")
             save_todo(todo)
         save_state(state)

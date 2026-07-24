@@ -99,17 +99,29 @@ def main() -> int:
                 print(f"  - {path}", file=sys.stderr)
             print("Use --skip-artifact-check only for intentional exceptions.", file=sys.stderr)
             return 1
-        set_claim_status(args.task_id, args.worker_id, "done")
+        set_claim_status(args.task_id, args.worker_id, "done",
+                         province=claim["task"].get("province", ""),
+                         parent_city=claim["task"].get("parent_city", ""))
         print(f"DONE {args.task_id}")
         return 0
 
     if args.cmd == "fail":
-        set_claim_status(args.task_id, args.worker_id, "failed", args.reason)
+        set_claim_status(args.task_id, args.worker_id, "failed", args.reason,
+                         province=claim.get("task", {}).get("province", ""),
+                         parent_city=claim.get("task", {}).get("parent_city", ""))
         print(f"FAILED {args.task_id}")
         return 0
 
     if args.cmd == "release":
-        set_claim_status(args.task_id, args.worker_id, "released", args.reason)
+        # Load claim context for disambiguation
+        status_data = queue_status()
+        claim = next((item for item in status_data["active"] if item["task"]["task_id"] == args.task_id), None)
+        if claim is None:
+            print(f"Task is not actively claimed: {args.task_id}", file=sys.stderr)
+            return 1
+        prov = claim["task"].get("province", "")
+        parent = claim["task"].get("parent_city", "")
+        set_claim_status(args.task_id, args.worker_id, "released", args.reason, province=prov, parent_city=parent)
         print(f"RELEASED {args.task_id}")
         return 0
 

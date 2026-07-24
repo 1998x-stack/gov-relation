@@ -22,7 +22,7 @@ logger = get_logger(__name__)
 def task_commit_paths(task: dict, claimed_at: str = "") -> list[str]:
     paths = artifact_paths(task["region"])
     result = [
-        paths["build_script"],
+        f"scripts/build/{paths['build_script']}",
         paths["db_output"],
         paths["gexf_output"],
         "data/TODO.json",
@@ -131,13 +131,18 @@ def main() -> int:
         if result.returncode == 0 and args.auto_done:
             ready, missing = canonical_artifacts_ready(claim["task"])
             if not ready:
-                set_claim_status(task_id, args.worker_id, "failed", f"missing canonical artifacts: {', '.join(missing)}")
+                set_claim_status(task_id, args.worker_id, "failed",
+                                 f"missing canonical artifacts: {', '.join(missing)}",
+                                 province=claim["task"].get("province", ""),
+                                 parent_city=claim["task"].get("parent_city", ""))
                 logger.info("FAILED %s missing canonical artifacts: %s", task_id, ', '.join(missing))
                 completed += 1
                 if args.sleep_seconds > 0:
                     time.sleep(args.sleep_seconds)
                 continue
-            set_claim_status(task_id, args.worker_id, "done")
+            set_claim_status(task_id, args.worker_id, "done",
+                             province=claim["task"].get("province", ""),
+                             parent_city=claim["task"].get("parent_city", ""))
             logger.info("DONE %s", task_id)
             if args.git_commit and not git_commit_task(claim["task"], claimed_at=claim.get("claimed_at", "")):
                 return 1
@@ -149,7 +154,9 @@ def main() -> int:
             logger.info("COMPLETED %s; waiting for manual done/release because --auto-done is disabled", task_id)
             return 0
         if result.returncode != 0:
-            set_claim_status(task_id, args.worker_id, "failed", f"opencode exit {result.returncode}")
+            set_claim_status(task_id, args.worker_id, "failed", f"opencode exit {result.returncode}",
+                             province=claim["task"].get("province", ""),
+                             parent_city=claim["task"].get("parent_city", ""))
             logger.info("FAILED %s opencode exit %s", task_id, result.returncode)
             completed += 1
             if args.sleep_seconds > 0:
