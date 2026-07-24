@@ -22,18 +22,16 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-_REPO_ROOT = Path(__file__).resolve().parents[3]
+_REPO_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
 from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 SLUG = "桥西区"
-TASK_ID = "hebei_桥西区"
-TMP_DIR = _REPO_ROOT / "data" / "tmp" / TASK_ID
 
-DB_PATH = TMP_DIR / f"{SLUG}_network.db"
-GEXF_PATH = TMP_DIR / f"{SLUG}_network.gexf"
+DB_PATH = DATABASE_DIR / f"{SLUG}_network.db"
+GEXF_PATH = GRAPH_DIR / f"{SLUG}_network.gexf"
 
 import sqlite3  # noqa: F811 — required by process_tmp.py validation
 
