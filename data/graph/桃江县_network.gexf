@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>gov-relation research agent</creator>
+    <description>桃江县领导班子工作关系网络 — 含党政正职、副书记、前后任及关联组织</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="向荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共桃江县委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p2" label="周登高">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桃江县人民政府县长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p3" label="冷亮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共澧县县委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p4" label="汤跃武">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前桃江县委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="o1" label="中共桃江县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o2" label="桃江县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o3" label="桃江县经济合作局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o4" label="中共安化县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o5" label="安化县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o6" label="中共益阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o7" label="益阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o8" label="中共赫山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o9" label="赫山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o10" label="赫山区委办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o11" label="益阳市龙岭工业园管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o12" label="沧水铺镇循环经济工业园管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="开发区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o13" label="益阳市委办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o14" label="道林镇中心学校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o15" label="湘潭大学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o16" label="中共澧县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="中共桃江县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共桃江县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021-07—"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o14" label="道林镇中心学校教师" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="道林镇中心学校教师"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2000—2005"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o15" label="湘潭大学行政管理专业硕士研究生" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湘潭大学行政管理专业硕士研究生"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2005—2008"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o11" label="益阳市龙岭工业园管委会党政综合办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市龙岭工业园管委会党政综合办公室主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2008—2009"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p2" target="o12" label="沧水铺镇循环经济工业园管委会办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="沧水铺镇循环经济工业园管委会办公室主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2009—2010-03"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o10" label="赫山区委办公室调研室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赫山区委办公室调研室主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2010-03—2010-10"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p2" target="o3" label="桃江县经济合作局党组副书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桃江县经济合作局党组副书记、局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2010-10—2012-09"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p2" target="o5" label="安化县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安化县人民政府副县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2012-11—2016-08"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p2" target="o13" label="益阳市委办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市委办公室副主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016-08—2017-05"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p2" target="o13" label="益阳市委副秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市委副秘书长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2017-05—2020-04"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p2" target="o4" label="中共安化县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共安化县委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2020-04—2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p2" target="o2" label="桃江县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桃江县人民政府县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021-07—"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p3" target="o8" label="赫山区委办公室干部/副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赫山区委办公室干部/副主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p3" target="o1" label="桃江县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桃江县委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—2024"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p3" target="o16" label="澧县县长→县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="澧县县长→县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2024—"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p4" target="o1" label="中共桃江县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共桃江县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016—2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="p2" label="搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="搭档"/>
+          <attvalue for="1" value="向荣(书记)+周登高(县长)为桃江县党政正职搭档，自2021年7月起共事"/>
+          <attvalue for="2" value="桃江县"/>
+          <attvalue for="3" value="2021-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p4" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="汤跃武2016-2021任桃江县委书记，向荣2021年7月接任"/>
+          <attvalue for="2" value="中共桃江县委员会"/>
+          <attvalue for="3" value="2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="周登高2012-2016任安化副县长，2020-2021任安化县委副书记，在安化累计任职约5年"/>
+          <attvalue for="2" value="安化县"/>
+          <attvalue for="3" value="2012-2016, 2020-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p1" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="冷亮任桃江县委副书记期间，向荣为县委书记"/>
+          <attvalue for="2" value="中共桃江县委员会"/>
+          <attvalue for="3" value="2021-2024"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="冷亮(副书记)与周登高(县长)在桃江县党政班子共事"/>
+          <attvalue for="2" value="桃江县"/>
+          <attvalue for="3" value="2021-2024"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p3" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="冷亮早期在赫山区委办公室工作，后调桃江、澧县"/>
+          <attvalue for="2" value="赫山区"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p2" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="周登高2010年曾任赫山区委办公室调研室主任"/>
+          <attvalue for="2" value="赫山区"/>
+          <attvalue for="3" value="2010-03—2010-10"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
