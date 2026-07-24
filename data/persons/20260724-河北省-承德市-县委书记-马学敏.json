@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "承德市",
+    "region": "滦平县",
+    "job": "县委书记",
+    "task_id": "hebei_滦平县",
+    "time_focus": "2018至今"
+  },
+  "identity": {
+    "person_id": "hebei_chengde_luanping_ma_xuemin",
+    "name": "马学敏",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "马学敏_",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中共滦平县委书记（推测）",
+    "current_org": "中共滦平县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2024",
+    "is_current_confirmed": false,
+    "source_ids": []
+  },
+  "career_timeline": [
+    {
+      "start": "2018",
+      "end": "2021",
+      "org": "滦平县人民政府",
+      "title": "滦平县人民政府县长",
+      "level": "县处级正职",
+      "location": "河北省承德市滦平县",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "马学敏在升任县委书记前担任滦平县县长",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "中共滦平县委员会",
+      "title": "中共滦平县委书记",
+      "level": "县处级正职",
+      "location": "河北省承德市滦平县",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "接替赵振清任县委书记",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_name": "滦平县人民政府", "role": "县长", "period": "2018-2021"},
+    {"org_name": "中共滦平县委员会", "role": "县委书记", "period": "2021-present"}
+  ],
+  "relationships": [
+    {
+      "person": "赵振清",
+      "person_id": "hebei_chengde_luanping_zhao_zhenqing",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "马学敏接替赵振清任县委书记（2021年）",
+      "overlap_org": "中共滦平县委员会",
+      "overlap_period": "2021",
+      "direction": "other_to_person",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "朱轶",
+      "person_id": "hebei_chengde_luanping_zhu_yi",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "马学敏（县委书记）与朱轶（县长）搭班子",
+      "overlap_org": "滦平县人民政府",
+      "overlap_period": "2021至今",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足，无法判断晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "信息不足，未进行工作风格分析。需补充公开讲话和媒体报道。"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现马学敏的违纪、审计问题或负面报道。但不排除搜索不完整的因素。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "缺少任何官方来源确认其现任职务和履历。姓名、出生、教育等基本信息均未核实。"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "马学敏是否仍是滦平县委书记？是否有2023-2026年间的任免信息？",
+      "why_it_matters": "核心调查目标，是判断当前班子构成的基础",
+      "suggested_queries": ["马学敏 滦平 县委书记 任命", "河北省 滦平县 领导任免"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "马学敏的出生年份、出生地、教育背景和入党时间？",
+      "why_it_matters": "身份基本信息缺失，影响图谱节点完整性",
+      "suggested_queries": ["马学敏 简历", "马学敏 滦平 出生"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "马学敏在2018年之前的履历（此前职务、晋升路径）？",
+      "why_it_matters": "无法判断其职业背景和系统经验",
+      "suggested_queries": ["马学敏 滦平 任职经历"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}
