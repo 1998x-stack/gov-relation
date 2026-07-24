@@ -39,7 +39,9 @@ import json
 import os
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
+# Point to repo root so gov_relation module can be found
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
+sys.path.insert(0, REPO_ROOT)
 
 import sqlite3  # noqa: F401 — required for process_tmp.py token check
 
@@ -48,9 +50,11 @@ from gov_relation.paths import DATABASE_DIR, GRAPH_DIR, PERSONS_DIR
 
 SLUG = "桥西区"
 
-DB_PATH = DATABASE_DIR / f"{SLUG}_network.db"
-GEXF_PATH = GRAPH_DIR / f"{SLUG}_network.gexf"
-PERSONS_OUT = PERSONS_DIR
+# Staging paths — all output goes to the staging directory
+STAGING_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(STAGING_DIR, f"{SLUG}_network.db")
+GEXF_PATH = os.path.join(STAGING_DIR, f"{SLUG}_network.gexf")
+PERSONS_OUT = STAGING_DIR
 
 AS_OF = "2026-07-24"
 TODAY = "20260724"
@@ -677,10 +681,10 @@ def build():
         {"person":"杨巍洁","person_id":"qiaoxiqu_杨巍洁","relationship_type":"overlap","strength":"strong","evidence":"区委书记与常务副区长工作搭档","overlap_org":"中共桥西区委/区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
     ]
     zuo_json = make_person_json(zuo_person, zuo_timeline, zuo_relationships)
-    zuo_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-区委书记-左克平.json"
+    zuo_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-区委书记-左克平.json")
     with open(zuo_path, "w", encoding="utf-8") as f:
         json.dump(zuo_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {zuo_path.name}")
+    print(f"  ✓ {os.path.basename(zuo_path)}")
 
     # 2. 戈录伟 (区长)
     ge_person = persons[1]
@@ -695,10 +699,10 @@ def build():
         {"person":"杨巍洁","person_id":"qiaoxiqu_杨巍洁","relationship_type":"overlap","strength":"medium","evidence":"区长与常务副区长工作搭档","overlap_org":"桥西区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
     ]
     ge_json = make_person_json(ge_person, ge_timeline, ge_relationships)
-    ge_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-区长-戈录伟.json"
+    ge_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-区长-戈录伟.json")
     with open(ge_path, "w", encoding="utf-8") as f:
         json.dump(ge_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {ge_path.name}")
+    print(f"  ✓ {os.path.basename(ge_path)}")
 
     # 3. 尚秀伟 (前任区委书记)
     shang_person = persons[17]
@@ -711,10 +715,10 @@ def build():
         {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"superior_subordinate","strength":"strong","evidence":"尚秀伟为区委书记时左克平为区长","overlap_org":"中共桥西区委/区政府","overlap_period":"2025-03至2026-06","direction":"person_to_other","confidence":"confirmed","source_ids":["S001","S007"]},
     ]
     shang_json = make_person_json(shang_person, shang_timeline, shang_relationships)
-    shang_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-前任区委书记-尚秀伟.json"
+    shang_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-前任区委书记-尚秀伟.json")
     with open(shang_path, "w", encoding="utf-8") as f:
         json.dump(shang_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {shang_path.name}")
+    print(f"  ✓ {os.path.basename(shang_path)}")
 
     # 4. 黄向义 (原副区长，已调任)
     huang_person = persons[12]
@@ -732,10 +736,10 @@ def build():
         {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"medium","evidence":"区长与副区长工作搭档","overlap_org":"桥西区政府","overlap_period":"至2026-06","direction":"undirected","confidence":"confirmed","source_ids":["S014"]},
     ]
     huang_json = make_person_json(huang_person, huang_timeline, huang_relationships)
-    huang_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-副区长-黄向义.json"
+    huang_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-副区长-黄向义.json")
     with open(huang_path, "w", encoding="utf-8") as f:
         json.dump(huang_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {huang_path.name}")
+    print(f"  ✓ {os.path.basename(huang_path)}")
 
     # 5. 杨巍洁 (常务副区长)
     yang_person = persons[11]
@@ -749,10 +753,10 @@ def build():
         {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"medium","evidence":"常务副区长与区长工作搭档","overlap_org":"桥西区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
     ]
     yang_json = make_person_json(yang_person, yang_timeline, yang_relationships)
-    yang_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-常务副区长-杨巍洁.json"
+    yang_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-常务副区长-杨巍洁.json")
     with open(yang_path, "w", encoding="utf-8") as f:
         json.dump(yang_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {yang_path.name}")
+    print(f"  ✓ {os.path.basename(yang_path)}")
 
     # 6. 孙丹峰 (纪委书记)
     sun_person = persons[6]
@@ -763,10 +767,10 @@ def build():
         {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"overlap","strength":"strong","evidence":"纪委书记与区委书记工作搭档","overlap_org":"中共桥西区委","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S004"]},
     ]
     sun_json = make_person_json(sun_person, sun_timeline, sun_relationships)
-    sun_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-纪委书记-孙丹峰.json"
+    sun_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-纪委书记-孙丹峰.json")
     with open(sun_path, "w", encoding="utf-8") as f:
         json.dump(sun_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {sun_path.name}")
+    print(f"  ✓ {os.path.basename(sun_path)}")
 
     # 7. 高军 (政协主席)
     gao_person = persons[18]
@@ -775,10 +779,10 @@ def build():
     ]
     gao_relationships = []
     gao_json = make_person_json(gao_person, gao_timeline, gao_relationships)
-    gao_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-政协主席-高军.json"
+    gao_path = os.path.join(PERSONS_OUT, f"{TODAY}-河北省-张家口市-政协主席-高军.json")
     with open(gao_path, "w", encoding="utf-8") as f:
         json.dump(gao_json, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ {gao_path.name}")
+    print(f"  ✓ {os.path.basename(gao_path)}")
 
     print(f"\n✅ 所有 Person Graph JSONs 已生成到: {PERSONS_OUT}")
 
