@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build 张家口市桥西区 (Zhangjiakou Qiaoxi District) leadership network data.
+Staging build — outputs go to data/tmp/hebei_桥西区/ for validation before promotion.
 
 Level: 市辖区
 Province: 河北省
