@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>黑龙江省鹤岗市领导班子工作关系网络</description>
+    <date>2026-07-24</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="rank" title="Rank" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="heilongjiang_hegang_wang_xingzhu" label="王兴柱">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市委书记"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="heilongjiang_hegang_deng_weiyuan" label="邓维元">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市委副书记、市长、党组书记"/>
+          <attvalue for="birth" value="1975年4月"/>
+        </attvalues>
+        <viz:color r="180" g="60" b="180" a="1.0"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="heilongjiang_hegang_qi_dongliang" label="齐东亮">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_wang_shuling" label="王书玲">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_liu_xin" label="刘鑫">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_zhang_jian" label="张剑">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_zhao_yunpeng" label="赵运鹏">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_song_hongzhu" label="宋洪柱">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长人选"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_chen_xuguang" label="陈旭光">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="鹤岗市副市长人选"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_fan_jitao" label="范吉涛">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市政府秘书长"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="heilongjiang_hegang_zhou_maolin" label="周茂林">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市领导/市委常委"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="heilongjiang_hegang_gao_jian" label="高健">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="市领导/市委常委"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="160" g="160" b="160" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="heilongjiang_hegang_li_hongguo" label="李洪国">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="（原鹤岗市委书记，王兴柱前任）"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="heilongjiang_hegang_wang_gang_qian" label="王钢（推测）">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="（原鹤岗市长，邓维元前任，推测）"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="40" g="100" b="220" a="1.0"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="heilongjiang_hegang_party_committee" label="中共鹤岗市委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="heilongjiang_hegang_gov" label="鹤岗市人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="heilongjiang_hegang_gov_office" label="鹤岗市人民政府办公室">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="heilongjiang_hegang_people_congress" label="鹤岗市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="heilongjiang_hegang_cppcc" label="中国人民政治协商会议鹤岗市委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政协"/>
+        </attvalues>
+        <viz:color r="180" g="130" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="heilongjiang_hegang_discipline" label="中共鹤岗市纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="160" g="120" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="heilongjiang_hegang_wang_xingzhu" target="heilongjiang_hegang_party_committee" type="directed" label="鹤岗市委书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市市长、党组书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_party_committee" type="directed" label="鹤岗市委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="heilongjiang_hegang_qi_dongliang" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="heilongjiang_hegang_wang_shuling" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="heilongjiang_hegang_liu_xin" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="heilongjiang_hegang_zhang_jian" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="heilongjiang_hegang_zhao_yunpeng" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="heilongjiang_hegang_song_hongzhu" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长人选">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="heilongjiang_hegang_chen_xuguang" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市副市长人选">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="heilongjiang_hegang_fan_jitao" target="heilongjiang_hegang_gov_office" type="directed" label="市政府秘书长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="正处级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="heilongjiang_hegang_zhou_maolin" target="heilongjiang_hegang_party_committee" type="directed" label="市委常委/市领导">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="heilongjiang_hegang_gao_jian" target="heilongjiang_hegang_party_committee" type="directed" label="市委常委/市领导">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+          <attvalue for="rank" value="副厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="heilongjiang_hegang_li_hongguo" target="heilongjiang_hegang_party_committee" type="directed" label="鹤岗市委书记（原）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="待查"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="heilongjiang_hegang_wang_gang_qian" target="heilongjiang_hegang_gov" type="directed" label="鹤岗市市长（原）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="待查"/>
+          <attvalue for="rank" value="正厅级"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="heilongjiang_hegang_wang_xingzhu" target="heilongjiang_hegang_deng_weiyuan" type="undirected" label="市委书记与市长党政正职搭档">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市委书记与市长党政正职搭档"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e17" source="heilongjiang_hegang_wang_xingzhu" target="heilongjiang_hegang_zhou_maolin" type="undirected" label="市委书记与市委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市委书记与市委常委"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e18" source="heilongjiang_hegang_wang_xingzhu" target="heilongjiang_hegang_gao_jian" type="undirected" label="市委书记与市委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市委书记与市委常委"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e19" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_qi_dongliang" type="undirected" label="市长与副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e20" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_wang_shuling" type="undirected" label="市长与副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e21" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_liu_xin" type="undirected" label="市长与副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e22" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_zhang_jian" type="undirected" label="市长与副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e23" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_zhao_yunpeng" type="undirected" label="市长与副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e24" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_song_hongzhu" type="undirected" label="市长与副市长人选">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长人选"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e25" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_chen_xuguang" type="undirected" label="市长与副市长人选">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与副市长人选"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e26" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_fan_jitao" type="undirected" label="市长与市政府秘书长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="市长与市政府秘书长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e27" source="heilongjiang_hegang_qi_dongliang" target="heilongjiang_hegang_liu_xin" type="undirected" label="同为市政府副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为市政府副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e28" source="heilongjiang_hegang_wang_shuling" target="heilongjiang_hegang_liu_xin" type="undirected" label="同为市政府副市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为市政府副市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e29" source="heilongjiang_hegang_zhou_maolin" target="heilongjiang_hegang_gao_jian" type="undirected" label="同为市委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为市委常委"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e30" source="heilongjiang_hegang_wang_xingzhu" target="heilongjiang_hegang_li_hongguo" type="undirected" label="王兴柱接替李洪国任鹤岗市委书记（推测）">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="王兴柱接替李洪国任鹤岗市委书记（推测）"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+      <edge id="e31" source="heilongjiang_hegang_deng_weiyuan" target="heilongjiang_hegang_wang_gang_qian" type="undirected" label="邓维元接替王钢（推测）任鹤岗市市长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="邓维元接替王钢（推测）任鹤岗市市长"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
