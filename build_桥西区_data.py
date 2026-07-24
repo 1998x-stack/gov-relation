@@ -42,8 +42,9 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+_STAGING_DIR = Path(__file__).resolve().parent
 _SCRIPT_DIR = Path(__file__).resolve().parent
-_REPO_ROOT = _SCRIPT_DIR.parent.parent.parent
+_REPO_ROOT = (_SCRIPT_DIR / "../../..").resolve()
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
