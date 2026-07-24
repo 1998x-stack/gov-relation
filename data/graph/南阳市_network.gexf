@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Gov Relation Research Agent</creator>
+    <description>南阳市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="王智慧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共南阳市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="刘冰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="南阳市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="张生起">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会主任"/>
+          <attvalue for="2" value="南阳市人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="张富治">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议南阳市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="200" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="路红卫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前市长（被调查）"/>
+          <attvalue for="2" value="南阳市人民政府（原）"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="朱是西">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前市委书记（被双开）"/>
+          <attvalue for="2" value="中共南阳市委员会（原）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共南阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="南阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="南阳市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议南阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="河南省委政策研究室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共焦作市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="焦作市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共濮阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="濮阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="中共南乐县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="南乐县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共驻马店市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="中共登封市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="郑州市上街区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o15" label="中共郑州市二七区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o16" label="郑州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o17" label="中共河南省委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o18" label="中共中牟县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o19" label="中牟县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o20" label="中共西峡县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o21" label="西峡县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o22" label="中共息县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o23" label="确山县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o24" label="信阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o5" label="省委政策研究室干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="省委政策研究室干部"/>
+          <attvalue for="2" value="1990年 — 2011年8月"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p1" target="o1" label="市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、政法委书记"/>
+          <attvalue for="2" value="2011年8月 — 2015年11月"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p1" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记"/>
+          <attvalue for="2" value="2015年11月 — 2021年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="2021年7月 — 2024年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="2024年7月 — 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p2" target="o11" label="县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县长"/>
+          <attvalue for="2" value="2016年4月 — 2018年11月"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p2" target="o10" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委书记"/>
+          <attvalue for="2" value="2018年11月 — 2021年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p2" target="o8" label="市委常委、南乐县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、南乐县委书记"/>
+          <attvalue for="2" value="2021年9月 — 2022年8月"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="o9" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="2022年8月 — 2023年5月"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2" target="o6" label="市委副书记、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记、政法委书记"/>
+          <attvalue for="2" value="2023年5月 — 2024年1月"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p2" target="o7" label="代市长/市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="代市长/市长"/>
+          <attvalue for="2" value="2024年1月 — 2026年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="2026年6月 — 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p3" target="o20" label="西峡县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="西峡县委书记"/>
+          <attvalue for="2" value="未知 — 2011年4月"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p3" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="2011年4月 — 2016年2月"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p3" target="o1" label="市委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、政法委书记"/>
+          <attvalue for="2" value="2016年2月 — 2018年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p3" target="o4" label="市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="2018年9月 — 2022年2月"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="o3" label="市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市人大常委会主任"/>
+          <attvalue for="2" value="2022年2月 — 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p4" target="o23" label="确山县县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="确山县县长"/>
+          <attvalue for="2" value="2004年4月 — 2006年5月"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p4" target="o22" label="息县县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="息县县委书记"/>
+          <attvalue for="2" value="2006年5月 — 2012年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p4" target="o24" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="2012年7月 — 2016年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p4" target="o1" label="市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、宣传部部长"/>
+          <attvalue for="2" value="2016年9月 — 2022年2月"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p4" target="o4" label="市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="2022年2月 — 至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p5" target="o18" label="中牟县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中牟县委书记"/>
+          <attvalue for="2" value="未知 — 2018年1月"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p5" target="o6" label="市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、组织部部长"/>
+          <attvalue for="2" value="2018年1月 — 2022年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p5" target="o7" label="常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="常务副市长"/>
+          <attvalue for="2" value="2022年6月 — 2024年3月"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p5" target="o6" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记"/>
+          <attvalue for="2" value="2024年3月 — 2024年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p5" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="2024年7月 — 2026年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p6" target="o13" label="登封市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="登封市委副书记"/>
+          <attvalue for="2" value="2004年6月 — 2006年5月"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p6" target="o14" label="上街区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="上街区区长"/>
+          <attvalue for="2" value="2007年1月 — 2009年1月"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p6" target="o15" label="二七区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="二七区委书记"/>
+          <attvalue for="2" value="2009年3月 — 2011年12月"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p6" target="o16" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="2011年12月 — 2012年9月"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p6" target="o17" label="省委组织部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="省委组织部副部长"/>
+          <attvalue for="2" value="2012年9月 — 2018年1月"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p6" target="o12" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="2018年1月 — 2021年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p6" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="2021年7月 — 2024年5月"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p1" target="p6" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王智慧接替被调查的朱是西任南阳市委书记"/>
+          <attvalue for="2" value="2021-2024（王智慧任市长期间与朱是西搭档担任市委书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p1" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王智慧升任市委书记后，路红卫接任市长"/>
+          <attvalue for="2" value="2024年7月"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王智慧为市委书记，刘冰为市长，为党政一把手搭档关系"/>
+          <attvalue for="2" value="2026年6月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p2" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘冰接替被调查的路红卫任南阳市长"/>
+          <attvalue for="2" value="2026年6月"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张生起任人大主任、张富治任政协主席，均为正厅级，在南阳四套班子中搭档"/>
+          <attvalue for="2" value="2022年2月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p2" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="路红卫曾任焦作市委副书记，刘冰曾任焦作市长，两人在焦作共事过"/>
+          <attvalue for="2" value="2024年"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王智慧任市委书记期间张生起任人大主任"/>
+          <attvalue for="2" value="2024年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王智慧任市长期间张富治任市委宣传部长，后任市委书记期间张富治任政协主席"/>
+          <attvalue for="2" value="2016年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p6" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="朱是西任市委书记期间张生起任人大主任"/>
+          <attvalue for="2" value="2022-2024"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
