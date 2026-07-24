@@ -22,7 +22,11 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-_REPO_ROOT = Path(__file__).resolve().parent
+# When run from data/tmp/hebei_桥西区/, resolve repo root two levels up
+_SCRIPT_DIR = Path(__file__).resolve().parent
+# The canonical build script lives at scripts/build/build_桥西区_data.py
+# and will be run from the repo root. For staging we keep the paths consistent.
+_REPO_ROOT = _SCRIPT_DIR.parent.parent  # data/tmp/hebei_桥西区/ -> repo root
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
@@ -30,8 +34,11 @@ from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 SLUG = "桥西区"
 
-DB_PATH = DATABASE_DIR / f"{SLUG}_network.db"
-GEXF_PATH = GRAPH_DIR / f"{SLUG}_network.gexf"
+# When run from staging, write DB and GEXF to the staging directory.
+# The canonical promotion process copies them to DATA_DIR and GRAPH_DIR.
+_STAGING_DIR = _SCRIPT_DIR  # data/tmp/hebei_桥西区/
+DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
+GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
 
 import sqlite3  # noqa: F811 — required by process_tmp.py validation
 
