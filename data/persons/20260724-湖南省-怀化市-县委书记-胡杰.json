@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "湖南省",
+    "city": "怀化市",
+    "region": "中方县",
+    "job": "县委书记",
+    "task_id": "hunan_中方县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "hunan_zhongfangxian_hu_jie",
+    "name": "胡杰",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "胡杰_",
+      "name_birthplace": "胡杰_",
+      "official_profile_url": "http://www.zhongfang.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "中共中方县委书记",
+    "current_org": "中共中方县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共中方县委员会",
+      "title": "中共中方县委书记",
+      "level": "正处级",
+      "location": "湖南省怀化市中方县",
+      "system": "party",
+      "is_key_promotion": true,
+      "notes": "2026年7月主持县委常委会会议（见官方新闻报道）",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到胡杰任中方县委书记之前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org": "中共中方县委员会", "role": "县委书记", "period": "至今", "confidence": "confirmed", "source_ids": ["S001"]}
+  ],
+  "relationships": [
+    {
+      "person": "周华特",
+      "person_id": "hunan_zhongfangxian_zhou_huate",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "书记—县长搭档共事",
+      "overlap_org": "中方县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张家铣",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "张家铣前任县委书记，后升任怀化市政协主席",
+      "overlap_org": "中共中方县委员会",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历信息不足，无法判断晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现胡杰的纪律处分、审计问题或负面报道",
+      "date": "2026-07-24",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "中方县人民政府门户网站",
+      "url": "http://www.zhongfang.gov.cn",
+      "publisher": "中方县人民政府办公室",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "首页新闻报道中提及'胡杰主持召开县委常委会会议'（2026-07-19, 2026-07-23）"
+    },
+    {
+      "id": "S002",
+      "title": "中方县人民政府—领导之窗",
+      "url": "http://www.zhongfang.gov.cn",
+      "publisher": "中方县人民政府办公室",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "显示现任县长周华特，张家铣前任书记升任市政协主席"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "胡杰的出生年月、籍贯、教育背景、入党时间、工作起始时间、完整履历均缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "胡杰的出生年月、籍贯、民族、教育背景",
+      "why_it_matters": "核心身份信息缺失，影响人物去重和履历分析",
+      "suggested_queries": ["胡杰 中方县 简历", "胡杰 怀化 任职经历", "胡杰 任前公示"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "胡杰任中方县委书记前的工作履历",
+      "why_it_matters": "无法判断其职业路径、晋升速度和跨系统经验",
+      "suggested_queries": ["胡杰 曾任", "胡杰 此前 担任", "胡杰 怀化 调动"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "胡杰何时开始担任中方县委书记",
+      "why_it_matters": "无法确定其到任时间和前任交接节点",
+      "suggested_queries": ["胡杰 任中方县委书记", "胡杰 任命"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}
