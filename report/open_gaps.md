@@ -1,6 +1,13 @@
 # Open Gaps Registry
 > Last updated: 2026-07-24
 
+## ⭐⭐⭐⭐⭐ Critical — 临武县 (core figures completely unknown)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 临武县委书记 | 中共临武县委书记 | 姓名、性别、出生、籍贯、教育、整部履历 | 2026-07-24 | 所有外网搜索（Exa、Jina、Baidu、linwu.gov.cn）均不可用 |
+| 临武县县长 | 临武县人民政府县长 | 姓名、性别、出生、籍贯、教育、整部履历 | 2026-07-24 | 所有外网搜索（Exa、Jina、Baidu、linwu.gov.cn）均不可用 |
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
 | Person | Current Role | What's Missing | Notes |
