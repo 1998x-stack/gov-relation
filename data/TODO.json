@@ -22483,7 +22483,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             }
           ],
           "blocked": true,
@@ -22540,7 +22540,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_卫东区_data.py"
             },
             {
               "id": "henan_石龙区",
@@ -22558,7 +22560,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_石龙区_data.py, data/database/石龙区_network.db, data/graph/石龙区_network.gexf"
             },
             {
               "id": "henan_湛河区",
@@ -22594,7 +22598,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_宝丰县_data.py, data/database/宝丰县_network.db, data/graph/宝丰县_network.gexf"
             },
             {
               "id": "henan_叶县",
@@ -22686,7 +22692,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_平顶山市_data.py, data/database/平顶山市_network.db, data/graph/平顶山市_network.gexf"
         },
         {
           "id": "henan_安阳市",
