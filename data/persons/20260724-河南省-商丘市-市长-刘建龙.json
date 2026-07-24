@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "20260724",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "商丘市",
+    "region": "永城市",
+    "job": "永城市人民政府市长",
+    "task_id": "henan_永城市",
+    "time_focus": "截至2026年7月"
+  },
+  "identity": {
+    "person_id": "yongcheng_刘建龙",
+    "name": "刘建龙",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘建龙_",
+      "name_birthplace": "刘建龙_",
+      "official_profile_url": "http://www.ycs.gov.cn/ (政府网站)"
+    }
+  },
+  "current_status": {
+    "current_post": "永城市人民政府市长",
+    "current_org": "永城市人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": true,
+    "source_ids": [
+      "S001",
+      "S002"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "永城市人民政府",
+      "title": "永城市人民政府市长",
+      "notes": "主持市政府全面工作。刘建龙此前在商丘市任职，具体履历待查。",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001",
+        "S002"
+      ]
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "曾华雷",
+      "person_id": "yongcheng_曾华雷",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "市长与市委书记党政工作搭档",
+      "overlap_org": "永城市",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S002"
+      ]
+    },
+    {
+      "person": "曾凯",
+      "person_id": "yongcheng_曾凯",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "曾凯离任永城市长后，刘建龙接任",
+      "overlap_org": "永城市人民政府",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": [
+        "S002"
+      ]
+    },
+    {
+      "person": "王海涛",
+      "person_id": "yongcheng_王海涛",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "市长与常务副市长",
+      "overlap_org": "永城市人民政府",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": [
+        "S002"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {},
+  "work_style_and_personality": {},
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "永城市人民政府网站",
+      "url": "http://www.ycs.gov.cn/",
+      "publisher": "永城市人民政府",
+      "published_at": "",
+      "accessed_at": "20260724",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "永城市人民政府门户网站（调查期间无法访问）"
+    },
+    {
+      "id": "S002",
+      "title": "河南日报/大河网等省级媒体报道",
+      "url": "",
+      "publisher": "河南日报",
+      "published_at": "",
+      "accessed_at": "20260724",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "关于永城市委市政府活动的新闻报道"
+    },
+    {
+      "id": "S003",
+      "title": "商丘市人民政府网站",
+      "url": "http://www.shangqiu.gov.cn/",
+      "publisher": "商丘市人民政府",
+      "published_at": "",
+      "accessed_at": "20260724",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "商丘市人民政府门户网站（调查期间无法访问）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "曾华雷、刘建龙的完整履历（出生年月、籍贯、教育背景、早期任职经历均缺）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘建龙的完整履历（含出生年月、籍贯、教育背景、入党时间、历年任职）",
+      "why_it_matters": "完整履历是理解晋升路径、工作关系和人际网络的基础",
+      "suggested_queries": [
+        "刘建龙 简历 永城",
+        "刘建龙 任前公示",
+        "刘建龙 百度百科"
+      ],
+      "last_attempted": "20260724"
+    },
+    {
+      "priority": "high",
+      "question": "刘建龙在永城市人民政府市长之前曾在哪些岗位任职？",
+      "why_it_matters": "早期任职经历展示了职业发展轨迹和系统积累",
+      "suggested_queries": [
+        "刘建龙 曾任"
+      ],
+      "last_attempted": "20260724"
+    }
+  ]
+}
