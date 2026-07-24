@@ -21673,7 +21673,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "heilongjiang_呼玛县",
@@ -21691,7 +21691,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_呼玛县_data.py, data/database/呼玛县_network.db, data/graph/呼玛县_network.gexf"
             },
             {
               "id": "heilongjiang_塔河县",

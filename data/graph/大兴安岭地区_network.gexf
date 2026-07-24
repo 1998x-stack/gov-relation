@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="20260724">
+    <creator>OpenCode Research Agent</creator>
+    <description>大兴安岭地区领导班子工作关系网络 - 大兴安岭地区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="范庆华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="地委书记"/>
+          <attvalue for="2" value="中国共产党大兴安岭地区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="王青伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="行署专员"/>
+          <attvalue for="2" value="大兴安岭地区行政公署"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="蒋迎娟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="地区人大工委主任"/>
+          <attvalue for="2" value="黑龙江省人大常委会大兴安岭地区工作委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="王洪斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="地区政协工委主任"/>
+          <attvalue for="2" value="黑龙江省政协大兴安岭地区工作委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="徐向国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任地委书记"/>
+          <attvalue for="2" value="中国共产党大兴安岭地区委员会"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="张宝伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任地委书记"/>
+          <attvalue for="2" value="中国共产党大兴安岭地区委员会"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="李大义">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任地委书记/行署专员"/>
+          <attvalue for="2" value="中国共产党大兴安岭地区委员会"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中国共产党大兴安岭地区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="大兴安岭地区行政公署">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="黑龙江省人大常委会大兴安岭地区工作委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="黑龙江省政协大兴安岭地区工作委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="黑龙江省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中国共产党黑龙江省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="大兴安岭地委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2023年10月任大兴安岭地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o2" label="大兴安岭地区行署专员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2022年3月至2024年1月任行署专员"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o1" label="大兴安岭地委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任专员期间同时任地委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o2" label="大兴安岭地区行署专员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年1月任行署专员"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p2" target="o1" label="大兴安岭地委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="地委副书记、行署专员"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p3" target="o3" label="地区人大工委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年6月任现职"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p4" target="o4" label="地区政协工委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年12月当选"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p5" target="o1" label="大兴安岭地委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2022年3月至2023年10月任地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p5" target="o2" label="大兴安岭地区行署专员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年4月至2022年3月任行署专员"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p6" target="o1" label="大兴安岭地委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年4月至2021年12月任地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p6" target="o2" label="大兴安岭地区行署专员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2020年1月至2021年4月任行署专员"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p7" target="o1" label="大兴安岭地委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2019年10月至2021年4月任地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p7" target="o2" label="大兴安岭地区行署专员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2017年10月至2020年1月任行署专员"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="范庆华作为地委书记，王青伟作为行署专员，党政主要领导搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="范庆华与蒋迎娟在大兴安岭地区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="范庆华与王洪斌在大兴安岭地区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="范庆华接替徐向国任大兴安岭地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p1" target="p6" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="范庆华接替张宝伟（间接）走地委书记任职链"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p2" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王青伟接替范庆华任行署专员（范庆华转任书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王青伟与蒋迎娟在大兴安岭地区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="王青伟与王洪斌在大兴安岭地区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="蒋迎娟与王洪斌在大兴安岭地区共事"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p5" target="p7" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="徐向国接替李大义任地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p6" target="p7" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张宝伟接替李大义任地委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p5" target="p6" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="徐向国接替张宝伟任地委书记"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
