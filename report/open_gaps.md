@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (张家口市桥西区 — artifacts validated & promoted)
+> Last updated: 2026-07-24 (张家口市桥西区 — all artifacts validated & promoted via process_tmp.py; build script re-executed clean)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
