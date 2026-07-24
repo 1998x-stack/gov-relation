@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (霸州市 — artifacts validated & promoted)
+> Last updated: 2026-07-24 (沧州市新华区 — artifacts validated & promoted)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
