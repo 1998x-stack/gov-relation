@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "沧州市",
+    "region": "孟村回族自治县",
+    "job": "县委书记",
+    "task_id": "hebei_孟村回族自治县",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "hebei_cangzhou_mazhanfang_unknown",
+    "name": "马占芳",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "待查",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [
+      {
+        "period": "待查",
+        "institution": "待查",
+        "major": "待查",
+        "degree": "待查",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "待查",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "马占芳_未知",
+      "name_birthplace": "马占芳_待查",
+      "official_profile_url": "https://www.mengcun.gov.cn/mengcun/c101156/202512/24d38595df7e487e979433b0458ed993.shtml"
+    }
+  },
+  "current_status": {
+    "current_post": "孟村回族自治县委书记",
+    "current_org": "中共孟村回族自治县委",
+    "administrative_rank": "正处级",
+    "as_of": "2026-04-08",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "待查",
+      "end": "约2023",
+      "org": "待查",
+      "title": "（此前履历待查）",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到马占芳在担任东光县长前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "约2023",
+      "end": "约2025",
+      "org": "东光县人民政府",
+      "title": "东光县委副书记、县长",
+      "level": "县级",
+      "location": "河北省沧州市东光县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "据build_东光县_data.py记载，马占芳于约2023年接替宋吉利任东光县长，约2025年离任由唐景越接替",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "约2025/2026",
+      "end": "present",
+      "org": "中共孟村回族自治县委",
+      "title": "孟村回族自治县委书记",
+      "level": "县级",
+      "location": "河北省沧州市孟村回族自治县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "从东光县长跨县晋升为孟村县委书记。2026-04-08在全县领导干部读书班上作辅导报告。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"org_name": "东光县人民政府", "role": "原县长", "period": "约2023-约2025"},
+    {"org_name": "中共孟村回族自治县委", "role": "县委书记", "period": "约2025/2026-present"}
+  ],
+  "relationships": [
+    {
+      "person": "李国德",
+      "person_id": "hebei_cangzhou_liguode_unknown",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "马占芳(县委书记)与李国德(县长)在孟村搭班子，共同出席2026年全县领导干部读书班",
+      "overlap_org": "孟村回族自治县",
+      "overlap_period": "约2026-present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "宋吉利",
+      "person_id": "dongguang_songjili_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "马占芳接替宋吉利任东光县长（约2023）",
+      "overlap_org": "东光县人民政府",
+      "overlap_period": "2023",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "王健",
+      "person_id": "dongguang_wangjian_unknown",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "马占芳(东光县长)与王健(常务副县长)搭班子2023-约2025",
+      "overlap_org": "东光县人民政府",
+      "overlap_period": "2023-约2025",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "唐景越",
+      "person_id": "dongguang_tangjingyue_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "马占芳离任东光县长后由唐景越接替（约2025）",
+      "overlap_org": "东光县人民政府",
+      "overlap_period": "约2025",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-04",
+      "domain": "other",
+      "achievement_or_event": "在全县领导干部树立和践行正确政绩观学习教育读书班上作辅导报告，提出孟村作为管道装备产业基地要深入实施产业集群升级进位行动，服务雄安建设、对接京津产业转移",
+      "role_in_event": "作辅导报告",
+      "measurable_outcome": "",
+      "location": "孟村回族自治县",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方治理", "产业发展"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["东光县", "孟村回族自治县"],
+    "promotion_velocity": {
+      "summary": "从东光县长（约2023）跨县晋升至孟村县委书记（约2025/2026），属于典型跨县提拔模式",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "在辅导报告中强调产业发展、招商引资、民生工程等具体工作方向",
+        "confidence": "plausible",
+        "source_ids": ["S001"]
+      }
+    ],
+    "speech_themes": ["正确政绩观", "产业集群升级", "民生保障"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-24，未发现马占芳有纪律处分、负面舆情或其他风险信号",
+      "date": "2026-07-24",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "全县领导干部树立和践行正确政绩观学习教育读书班开班",
+      "url": "https://www.mengcun.gov.cn/mengcun/c109581/202604/8b8536c9728c4a889c2cf7d909dc50b8.shtml",
+      "publisher": "孟村回族自治县人民政府",
+      "published_at": "2026-04-08",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认马占芳为县委书记"
+    },
+    {
+      "id": "S002",
+      "title": "孟村回族自治县人民政府领导简介",
+      "url": "https://www.mengcun.gov.cn/mengcun/c101156/202512/24d38595df7e487e979433b0458ed993.shtml",
+      "publisher": "孟村回族自治县人民政府",
+      "published_at": "2025-12-23",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认李国德为县长及政府班子成员"
+    },
+    {
+      "id": "S003",
+      "title": "build_东光县_data.py",
+      "url": "https://github.com/xieming/gov-relation/blob/main/build_东光县_data.py",
+      "publisher": "gov-relation仓库",
+      "published_at": "2026-07-24",
+      "accessed_at": "2026-07-24",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "记录马占芳曾任东光县长（约2023-约2025）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "马占芳2023年任东光县长前的完整履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "马占芳2023年之前的全部职业生涯？出生年月、籍贯、教育背景？",
+      "why_it_matters": "缺少早期职业生涯，无法评估其专业背景和晋升模式",
+      "suggested_queries": ["马占芳 简历", "马占芳 任前公示", "马占芳 东光 任职 沧州"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "马占芳之前孟村县委书记是谁？去向哪里？",
+      "why_it_matters": "县委书记交接是理解县级政治网络的关键节点",
+      "suggested_queries": ["孟村回族自治县 原县委书记", "孟村 县委 书记 前任 调任"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "medium",
+      "question": "马占芳何时从东光县长调任孟村县委书记？具体日期？",
+      "why_it_matters": "精确时间线有助于分析晋升速度和人事安排背景",
+      "suggested_queries": ["马占芳 孟村 县委书记 任职", "沧州市委 孟村 县委书记 任免"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

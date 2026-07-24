@@ -140,3 +140,10 @@
 | 新华区徐晋身份部分确认 | 政府新闻确认徐晋为区领导参与调研，具体职务待查 | 2026-07-24 | czxh.gov.cn 新闻 |
 | 新华区person JSON升级 | 金培元、哈增瑞、陈国帮person JSON升级为v1.0 schema | 2026-07-24 | 本次investigation |
 | 新华区新增霍刚person JSON | 为区委副书记霍刚创建v1.0 schema person JSON | 2026-07-24 | 本次investigation |
+
+
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps) — Added 2026-07-24 for 献县
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| （待查） | 献县县委书记 | 姓名、出生年月、籍贯、教育背景、全部履历 | 2026-07-24 | 新调查任务。所有搜索渠道（Exa/Baidu/Jina/Bing/Google）均受限。xianxian.gov.cn可访问但领导介绍页为JS动态加载。 |
+| （待查） | 献县县长 | 姓名、出生年月、籍贯、教育背景、全部履历 | 2026-07-24 | 同上。新调查任务。 |
