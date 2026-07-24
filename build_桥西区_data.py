@@ -49,28 +49,18 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-_SCRIPT_DIR = Path(__file__).resolve().parent
-
-SLUG = "桥西区"
-
-# Detect environment: if script lives in data/tmp/<task_id>/, use staging mode;
-# otherwise assume canonical location (repo root or scripts/build/).
-_IS_STAGING = "data/tmp" in str(_SCRIPT_DIR)
-if _IS_STAGING:
-    _REPO_ROOT = (_SCRIPT_DIR / "../../..").resolve()
-    DB_PATH = _SCRIPT_DIR / f"{SLUG}_network.db"
-    GEXF_PATH = _SCRIPT_DIR / f"{SLUG}_network.gexf"
-    PERSONS_DIR = _SCRIPT_DIR
-else:
-    _REPO_ROOT = _SCRIPT_DIR  # script is at repo root
-    DB_PATH = _REPO_ROOT / f"{SLUG}_network.db"
-    GEXF_PATH = _REPO_ROOT / f"{SLUG}_network.gexf"
-    PERSONS_DIR = _REPO_ROOT
-
+_STAGING_DIR = Path(__file__).resolve().parent
+_REPO_ROOT = (_STAGING_DIR / "../../..").resolve()
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
 from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
+
+SLUG = "桥西区"
+
+DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
+GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
+PERSONS_DIR = _STAGING_DIR
 
 AS_OF = datetime.now().strftime("%Y-%m-%d")
 TODAY = datetime.now().strftime("%Y%m%d")
@@ -777,28 +767,6 @@ def build():
     print(f"  Person JSON: {sun_path.name}")
 
     print(f"\n所有 Person Graph JSONs 已生成到: {PERSONS_DIR}")
-
-    # When running from canonical location, move DB, GEXF, and person JSONs to canonical paths
-    if not _IS_STAGING:
-        import shutil
-        canon_db = DATABASE_DIR / f"{SLUG}_network.db"
-        canon_gexf = GRAPH_DIR / f"{SLUG}_network.gexf"
-        canon_persons_dir = _REPO_ROOT / "data" / "persons"
-        canon_persons_dir.mkdir(parents=True, exist_ok=True)
-
-        # Copy DB and GEXF
-        if DB_PATH.exists():
-            shutil.copy2(DB_PATH, canon_db)
-            print(f"  ✅ DB -> {canon_db}")
-        if GEXF_PATH.exists():
-            shutil.copy2(GEXF_PATH, canon_gexf)
-            print(f"  ✅ GEXF -> {canon_gexf}")
-
-        # Copy person JSONs
-        for pj in PERSONS_DIR.glob(f"{TODAY}-河北省-张家口市-*.json"):
-            dest = canon_persons_dir / pj.name
-            shutil.copy2(pj, dest)
-            print(f"  ✅ Person JSON -> {dest}")
 
 if __name__ == "__main__":
     build()
