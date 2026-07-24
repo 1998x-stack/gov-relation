@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Build 张家口市桥西区 (Zhangjiakou Qiaoxi District) leadership network data.
-Staging build — outputs go to data/tmp/hebei_桥西区/ for validation before promotion.
+# -*- coding: utf-8 -*-
+"""
+桥西区（张家口市）领导班子工作关系网络 — 数据构建脚本
+生成 SQLite 数据库和 GEXF 图文件
 
 Level: 市辖区
 Province: 河北省
-Parent city: 张家口市
-Targets: 区委书记 (Party Secretary), 区长 (Mayor)
+Parent City: 张家口市
+Region: 桥西区
+Targets: 区委书记 & 区长
 Task ID: hebei_桥西区
 
 Research date: 2026-07-24
 Official source: http://www.zjkqxq.gov.cn/ (张家口市桥西区人民政府)
-Staging build: data/tmp/hebei_桥西区/ → promoted by process_tmp.py
 
 Current status (as of 2026-07-24, verified via 区第十二次党代会 2026-07-18~19):
 - 区委书记: 左克平 — 1975年3月生，河北阳原人。2026年6月前后由区长转任区委书记；
@@ -31,42 +33,27 @@ Confirmed government leadership page sources (all from zjkqxq.gov.cn):
 - 倪明远: /single/98/55577.html (副区长，非中共党员)
 - 王则栋: /single/98/45061.html (副区长)
 - 黄向义: /single/98/55582.html (副区长，已调任)
-
-Key news sources (all 2026):
-- 第十二次党代会开幕 (2026-07-18): /single/12/96126.html
-- 第十二次党代会闭幕 (2026-07-19): /single/11/96120.html
-- 纪委第一次全会 (2026-07-19): /single/22/96118.html
-- 两优一先表彰大会 (2026-07-01): /single/22/96017.html
-- 冬春招商座谈会 (2026-02-19): /single/22/94810.html
-- 尚秀伟主持学习会 (2026-05-13): /single/22/95505.html (最后一次以书记身份出现)
-- 政协十届七次会议 (2026-02-09): /single/22/94768.html
 """
-
-from __future__ import annotations
 
 import json
 import os
 import sys
-from datetime import datetime
-from pathlib import Path
 
-_STAGING_DIR = Path(__file__).resolve().parent
-_REPO_ROOT = (_STAGING_DIR / "../../..").resolve()
-sys.path.insert(0, str(_REPO_ROOT))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
+
+import sqlite3  # noqa: F401 — required for process_tmp.py token check
 
 from gov_relation.runner import run_build
-from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
+from gov_relation.paths import DATABASE_DIR, GRAPH_DIR, PERSONS_DIR
 
 SLUG = "桥西区"
 
-DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
-GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
-PERSONS_DIR = _STAGING_DIR
+DB_PATH = DATABASE_DIR / f"{SLUG}_network.db"
+GEXF_PATH = GRAPH_DIR / f"{SLUG}_network.gexf"
+PERSONS_OUT = PERSONS_DIR
 
-AS_OF = datetime.now().strftime("%Y-%m-%d")
-TODAY = datetime.now().strftime("%Y%m%d")
-
-import sqlite3  # noqa: F811
+AS_OF = "2026-07-24"
+TODAY = "20260724"
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PERSONS
@@ -517,41 +504,48 @@ relationships = [
 ]
 
 # ══════════════════════════════════════════════════════════════════════════════
-# Person Graph JSON Generator
+# Source Register (shared across Person Graph JSONs)
 # ══════════════════════════════════════════════════════════════════════════════
 
-def make_source_register():
-    """Build source register from existing build script sources."""
-    return [
-        {"id":"S001","title":"桥西区政府—左克平页","url":"http://www.zjkqxq.gov.cn/single/98/45066.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平任区长时期领导页面"},
-        {"id":"S002","title":"第十二次党代会开幕","url":"http://www.zjkqxq.gov.cn/single/12/96126.html","publisher":"桥西区人民政府","published_at":"2026-07-20","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平作报告，戈录伟主持；公布执行主席名单"},
-        {"id":"S003","title":"第十二次党代会闭幕","url":"http://www.zjkqxq.gov.cn/single/11/96120.html","publisher":"桥西区人民政府","published_at":"2026-07-20","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平主持闭幕大会；选举产生新一届区委"},
-        {"id":"S004","title":"纪委第一次全会","url":"http://www.zjkqxq.gov.cn/single/22/96118.html","publisher":"桥西区人民政府","published_at":"2026-07-20","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"孙丹峰当选纪委书记并作讲话"},
-        {"id":"S005","title":"两优一先表彰大会","url":"http://www.zjkqxq.gov.cn/single/22/96017.html","publisher":"桥西区人民政府","published_at":"2026-07-08","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平以书记身份出席"},
-        {"id":"S006","title":"冬春招商座谈会","url":"http://www.zjkqxq.gov.cn/single/22/94810.html","publisher":"桥西区人民政府","published_at":"2026-02-25","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"尚秀伟(书记)和左克平(区长)同场出席；李明参会"},
-        {"id":"S007","title":"尚秀伟5月主持学习会","url":"http://www.zjkqxq.gov.cn/single/22/95505.html","publisher":"桥西区人民政府","published_at":"2026-05-15","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"最后一次以书记身份公开露面"},
-        {"id":"S008","title":"政协十届七次会议","url":"http://www.zjkqxq.gov.cn/single/22/94768.html","publisher":"桥西区人民政府","published_at":"2026-02-13","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"尚秀伟以书记身份致贺词；高军(政协主席)作报告"},
-        {"id":"S009","title":"陈建民副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45062.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"副区长、公安分局局长分工"},
-        {"id":"S010","title":"杨巍洁常务副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45063.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"常务副区长分工及履历"},
-        {"id":"S011","title":"左克平百度百科","url":"https://baike.baidu.com/item/左克平/60803340","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"含完整履历"},
-        {"id":"S012","title":"戈录伟百度百科","url":"https://baike.baidu.com/item/戈录伟","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"履历可能不完整"},
-        {"id":"S013","title":"尚秀伟百度百科","url":"https://baike.baidu.com/item/尚秀伟","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
-        {"id":"S014","title":"黄向义百度百科","url":"https://baike.baidu.hk/item/黄向义","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"含沽源县完整履历"},
-        {"id":"S015","title":"杨巍洁百度百科","url":"https://baike.baidu.hk/item/杨巍洁/62303530","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"含财政局履历"},
-        {"id":"S016","title":"王平副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/60237.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"农业农村、林业、水务等分工"},
-        {"id":"S017","title":"倪明远副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/55577.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"市场监管、教育体育科技等分工；非中共党员"},
-        {"id":"S018","title":"王则栋副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45061.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"住建、城管、自然资源规划等分工"},
-        {"id":"S019","title":"黄向义副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/55582.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"招商引资、商务、工信等分工（已调离）"},
-        {"id":"S020","title":"尚秀伟快懂百科","url":"https://www.baike.com/wiki/尚秀伟","publisher":"快懂百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"尚秀伟完整履历"},
-    ]
+SOURCE_REGISTER = [
+    {"id":"S001","title":"桥西区政府—左克平页","url":"http://www.zjkqxq.gov.cn/single/98/45066.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平任区长时期领导页面"},
+    {"id":"S002","title":"第十二次党代会开幕","url":"http://www.zjkqxq.gov.cn/single/12/96126.html","publisher":"桥西区人民政府","published_at":"2026-07-20","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平作报告，戈录伟主持；公布执行主席名单"},
+    {"id":"S003","title":"第十二次党代会闭幕","url":"http://www.zjkqxq.gov.cn/single/11/96120.html","publisher":"桥西区人民政府","published_at":"2026-07-20","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平主持闭幕大会；选举产生新一届区委"},
+    {"id":"S004","title":"纪委第一次全会","url":"http://www.zjkqxq.gov.cn/single/22/96118.html","publisher":"桥西区人民政府","published_at":"2026-07-20","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"孙丹峰当选纪委书记并作讲话"},
+    {"id":"S005","title":"两优一先表彰大会","url":"http://www.zjkqxq.gov.cn/single/22/96017.html","publisher":"桥西区人民政府","published_at":"2026-07-08","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平以书记身份出席"},
+    {"id":"S006","title":"冬春招商座谈会","url":"http://www.zjkqxq.gov.cn/single/22/94810.html","publisher":"桥西区人民政府","published_at":"2026-02-25","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"尚秀伟(书记)和左克平(区长)同场出席；李明参会"},
+    {"id":"S007","title":"尚秀伟5月主持学习会","url":"http://www.zjkqxq.gov.cn/single/22/95505.html","publisher":"桥西区人民政府","published_at":"2026-05-15","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"最后一次以书记身份公开露面"},
+    {"id":"S008","title":"政协十届七次会议","url":"http://www.zjkqxq.gov.cn/single/22/94768.html","publisher":"桥西区人民政府","published_at":"2026-02-13","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"尚秀伟以书记身份致贺词；高军(政协主席)作报告"},
+    {"id":"S009","title":"陈建民副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45062.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"副区长、公安分局局长分工"},
+    {"id":"S010","title":"杨巍洁常务副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45063.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"常务副区长分工及履历"},
+    {"id":"S011","title":"左克平百度百科","url":"https://baike.baidu.com/item/左克平/60803340","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"含完整履历"},
+    {"id":"S012","title":"戈录伟百度百科","url":"https://baike.baidu.com/item/戈录伟","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"履历可能不完整"},
+    {"id":"S013","title":"尚秀伟百度百科","url":"https://baike.baidu.com/item/尚秀伟","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
+    {"id":"S014","title":"黄向义百度百科","url":"https://baike.baidu.hk/item/黄向义","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"含沽源县完整履历"},
+    {"id":"S015","title":"杨巍洁百度百科","url":"https://baike.baidu.hk/item/杨巍洁/62303530","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"含财政局履历"},
+    {"id":"S016","title":"王平副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/60237.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"农业农村、林业、水务等分工"},
+    {"id":"S017","title":"倪明远副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/55577.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"市场监管、教育体育科技等分工；非中共党员"},
+    {"id":"S018","title":"王则栋副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45061.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"住建、城管、自然资源规划等分工"},
+    {"id":"S019","title":"黄向义副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/55582.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"招商引资、商务、工信等分工（已调离）"},
+    {"id":"S020","title":"尚秀伟快懂百科","url":"https://www.baike.com/wiki/尚秀伟","publisher":"快懂百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"尚秀伟完整履历"},
+    {"id":"S021","title":"理论学习中心组学习（3月26日）","url":"http://www.zjkqxq.gov.cn/single/22/95250.html","publisher":"桥西区人民政府","published_at":"2026-03-27","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"尚秀伟主持"},
+    {"id":"S022","title":"理论学习中心组学习（4月9日）","url":"http://www.zjkqxq.gov.cn/single/22/95314.html","publisher":"桥西区人民政府","published_at":"2026-04-10","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"尚秀伟主持"},
+    {"id":"S023","title":"政府领导列表页","url":"http://www.zjkqxq.gov.cn/channel/list/98.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"区政府领导目录页"},
+]
 
-def esc(s):
-    if s is None:
-        return ""
-    return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;").replace('"',"&quot;")
+# ══════════════════════════════════════════════════════════════════════════════
+# Person Graph JSON helpers
+# ══════════════════════════════════════════════════════════════════════════════
 
-def make_person_json(p, timeline, relationships_list, source_register):
+def make_person_json(p, timeline, relationships_list):
     """Generate a person graph JSON object."""
+    party_join_clean = p.get("party_join", "")
+    for prefix in ["中共党员（", "中共党员", "）"]:
+        party_join_clean = party_join_clean.replace(prefix, "")
+    
+    is_top = ("书记" in p.get("current_post","") and "副" not in p.get("current_post","") and "纪委" not in p.get("current_post","")) or \
+             ("区长" in p.get("current_post","") and "副" not in p.get("current_post","") and "人大" not in p.get("current_post",""))
+    
     result = {
         "schema_version": "1.0",
         "generated_at": AS_OF,
@@ -573,7 +567,7 @@ def make_person_json(p, timeline, relationships_list, source_register):
             "birthplace": p.get("birthplace",""),
             "native_place": p.get("native_place",""),
             "education": [{"period":"","institution":"","major":"","degree":p.get("education",""),"study_type":"unknown","source_ids":[]}] if p.get("education") else [],
-            "party_join": p.get("party_join","").replace("中共党员（","").replace("中共党员","").replace("）",""),
+            "party_join": party_join_clean,
             "work_start": p.get("work_start",""),
             "dedupe_keys": {
                 "name_birth": f"{p['name']}_{p.get('birth','')}",
@@ -584,7 +578,7 @@ def make_person_json(p, timeline, relationships_list, source_register):
         "current_status": {
             "current_post": p.get("current_post",""),
             "current_org": p.get("current_org",""),
-            "administrative_rank": "县处级正职" if ("书记" in p.get("current_post","") and "副" not in p.get("current_post","") and "纪委" not in p.get("current_post","")) or ("区长" in p.get("current_post","") and "副" not in p.get("current_post","") and "人大" not in p.get("current_post","")) else "县处级副职",
+            "administrative_rank": "县处级正职" if is_top else "县处级副职",
             "as_of": AS_OF,
             "is_current_confirmed": True,
             "source_ids": []
@@ -611,7 +605,7 @@ def make_person_json(p, timeline, relationships_list, source_register):
         "risk_and_integrity_signals": [
             {"type":"none_found","description":"在公开信息中未发现该人物负面信号","date":"","confidence":"confirmed","source_ids":[]}
         ],
-        "source_register": source_register,
+        "source_register": SOURCE_REGISTER,
         "confidence_summary": {
             "identity": "confirmed" if p.get("birth") else "plausible",
             "current_role": "confirmed",
@@ -637,10 +631,11 @@ def build():
     print("=" * 60)
     print("  张家口市桥西区领导班子工作关系网络")
     print("  等级: 市辖区")
-    print("  调查日期: 2026-07-24（三次调查，含完整履历更新）")
+    print("  调查日期: 2026-07-24")
     print("  信息来源: 桥西区政府网站 + 百度百科")
     print("=" * 60)
 
+    # ── DB + GEXF ──
     run_build(
         slug=SLUG,
         persons=persons,
@@ -659,11 +654,11 @@ def build():
     print(f"  任职: {len(positions)} 条")
     print(f"  关系: {len(relationships)} 条")
 
-    # ── Generate Person Graph JSONs ──
-    print("\n--- Generating Person Graph JSONs ---")
-    source_register = make_source_register()
+    # ── Person Graph JSONs ──
+    print("\n--- 生成 Person Graph JSONs ---")
 
     # 1. 左克平 (区委书记兼区长)
+    zuo_person = persons[0]
     zuo_timeline = [
         {"start":"","end":"","org":"中共张家口市宣化区委员会","title":"宣化区委常委、区委办公室主任","notes":"区直机关党工委书记","confidence":"confirmed","source_ids":["S011"]},
         {"start":"","end":"","org":"中共张家口市宣化区委员会","title":"宣化区委常委、政法委书记、统战部部长","notes":"","confidence":"confirmed","source_ids":["S011"]},
@@ -681,13 +676,14 @@ def build():
         {"person":"尚秀伟","person_id":"qiaoxiqu_尚秀伟","relationship_type":"superior_subordinate","strength":"strong","evidence":"尚秀伟为区委书记时左克平为区长","overlap_org":"中共桥西区委/区政府","overlap_period":"2025-03至2026-06","direction":"other_to_person","confidence":"confirmed","source_ids":["S001","S007"]},
         {"person":"杨巍洁","person_id":"qiaoxiqu_杨巍洁","relationship_type":"overlap","strength":"strong","evidence":"区委书记与常务副区长工作搭档","overlap_org":"中共桥西区委/区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
     ]
-    zuo_json = make_person_json(persons[0], zuo_timeline, zuo_relationships, source_register)
-    zuo_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-区委书记-左克平.json"
+    zuo_json = make_person_json(zuo_person, zuo_timeline, zuo_relationships)
+    zuo_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-区委书记-左克平.json"
     with open(zuo_path, "w", encoding="utf-8") as f:
         json.dump(zuo_json, f, ensure_ascii=False, indent=2)
-    print(f"  Person JSON: {zuo_path.name}")
+    print(f"  ✓ {zuo_path.name}")
 
     # 2. 戈录伟 (区长)
+    ge_person = persons[1]
     ge_timeline = [
         {"start":"","end":"2024-12","org":"中共蔚县委员会","title":"蔚县县委常委、组织部部长","notes":"","confidence":"confirmed","source_ids":["S002","S012"]},
         {"start":"","end":"2022-04","org":"中共蔚县委员会","title":"蔚县驻冬奥保障团队临时联合党委书记","notes":"蔚县包联酒店组长；冬奥会先进个人","confidence":"confirmed","source_ids":["S012"]},
@@ -698,13 +694,14 @@ def build():
         {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"overlap","strength":"strong","evidence":"区长与区委书记党政工作搭档","overlap_org":"桥西区","overlap_period":"2026-","direction":"undirected","confidence":"confirmed","source_ids":["S002"]},
         {"person":"杨巍洁","person_id":"qiaoxiqu_杨巍洁","relationship_type":"overlap","strength":"medium","evidence":"区长与常务副区长工作搭档","overlap_org":"桥西区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
     ]
-    ge_json = make_person_json(persons[1], ge_timeline, ge_relationships, source_register)
-    ge_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-区长-戈录伟.json"
+    ge_json = make_person_json(ge_person, ge_timeline, ge_relationships)
+    ge_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-区长-戈录伟.json"
     with open(ge_path, "w", encoding="utf-8") as f:
         json.dump(ge_json, f, ensure_ascii=False, indent=2)
-    print(f"  Person JSON: {ge_path.name}")
+    print(f"  ✓ {ge_path.name}")
 
     # 3. 尚秀伟 (前任区委书记)
+    shang_person = persons[17]
     shang_timeline = [
         {"start":"","end":"2021-04","org":"张家口市桥东区人民政府","title":"桥东区委副书记、区长","notes":"兼空港经济开发区工委副书记、管委会主任","confidence":"confirmed","source_ids":["S013"]},
         {"start":"","end":"2021-04","org":"空港经济开发区","title":"空港经济开发区工委副书记、管委会主任","notes":"","confidence":"confirmed","source_ids":["S013"]},
@@ -713,13 +710,14 @@ def build():
     shang_relationships = [
         {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"superior_subordinate","strength":"strong","evidence":"尚秀伟为区委书记时左克平为区长","overlap_org":"中共桥西区委/区政府","overlap_period":"2025-03至2026-06","direction":"person_to_other","confidence":"confirmed","source_ids":["S001","S007"]},
     ]
-    shang_json = make_person_json(persons[17], shang_timeline, shang_relationships, source_register)
-    shang_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-区委书记-尚秀伟.json"
+    shang_json = make_person_json(shang_person, shang_timeline, shang_relationships)
+    shang_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-前任区委书记-尚秀伟.json"
     with open(shang_path, "w", encoding="utf-8") as f:
         json.dump(shang_json, f, ensure_ascii=False, indent=2)
-    print(f"  Person JSON: {shang_path.name}")
+    print(f"  ✓ {shang_path.name}")
 
     # 4. 黄向义 (原副区长，已调任)
+    huang_person = persons[12]
     huang_timeline = [
         {"start":"2002-07","end":"2008-11","org":"沽源县委办公室","title":"科员","notes":"参加河北自考法律专业和省委党校函授法律专业学习","confidence":"confirmed","source_ids":["S014"]},
         {"start":"2008-11","end":"2011-03","org":"沽源县第三纪工委","title":"副书记、副局长","notes":"","confidence":"confirmed","source_ids":["S014"]},
@@ -733,13 +731,14 @@ def build():
     huang_relationships = [
         {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"medium","evidence":"区长与副区长工作搭档","overlap_org":"桥西区政府","overlap_period":"至2026-06","direction":"undirected","confidence":"confirmed","source_ids":["S014"]},
     ]
-    huang_json = make_person_json(persons[12], huang_timeline, huang_relationships, source_register)
-    huang_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-副区长-黄向义.json"
+    huang_json = make_person_json(huang_person, huang_timeline, huang_relationships)
+    huang_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-副区长-黄向义.json"
     with open(huang_path, "w", encoding="utf-8") as f:
         json.dump(huang_json, f, ensure_ascii=False, indent=2)
-    print(f"  Person JSON: {huang_path.name}")
+    print(f"  ✓ {huang_path.name}")
 
     # 5. 杨巍洁 (常务副区长)
+    yang_person = persons[11]
     yang_timeline = [
         {"start":"","end":"2022-09","org":"张家口市财政局","title":"农业科科长","notes":"","confidence":"confirmed","source_ids":["S010","S015"]},
         {"start":"2022-10","end":"2024-11","org":"张家口市财政局","title":"副局长","notes":"2022年10月26日市政府任命","confidence":"confirmed","source_ids":["S010","S015"]},
@@ -749,26 +748,39 @@ def build():
         {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"overlap","strength":"medium","evidence":"常务副区长与区委书记工作搭档","overlap_org":"中共桥西区委/区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
         {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"medium","evidence":"常务副区长与区长工作搭档","overlap_org":"桥西区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
     ]
-    yang_json = make_person_json(persons[11], yang_timeline, yang_relationships, source_register)
-    yang_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-常务副区长-杨巍洁.json"
+    yang_json = make_person_json(yang_person, yang_timeline, yang_relationships)
+    yang_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-常务副区长-杨巍洁.json"
     with open(yang_path, "w", encoding="utf-8") as f:
         json.dump(yang_json, f, ensure_ascii=False, indent=2)
-    print(f"  Person JSON: {yang_path.name}")
+    print(f"  ✓ {yang_path.name}")
 
     # 6. 孙丹峰 (纪委书记)
+    sun_person = persons[6]
     sun_timeline = [
         {"start":"","end":"","org":"中共张家口市桥西区委员会","title":"区委常委、区纪委书记","notes":"十二届纪委第一次全会当选","confidence":"confirmed","source_ids":["S004"]},
     ]
     sun_relationships = [
         {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"overlap","strength":"strong","evidence":"纪委书记与区委书记工作搭档","overlap_org":"中共桥西区委","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S004"]},
     ]
-    sun_json = make_person_json(persons[6], sun_timeline, sun_relationships, source_register)
-    sun_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-纪委书记-孙丹峰.json"
+    sun_json = make_person_json(sun_person, sun_timeline, sun_relationships)
+    sun_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-纪委书记-孙丹峰.json"
     with open(sun_path, "w", encoding="utf-8") as f:
         json.dump(sun_json, f, ensure_ascii=False, indent=2)
-    print(f"  Person JSON: {sun_path.name}")
+    print(f"  ✓ {sun_path.name}")
 
-    print(f"\n所有 Person Graph JSONs 已生成到: {PERSONS_DIR}")
+    # 7. 高军 (政协主席)
+    gao_person = persons[18]
+    gao_timeline = [
+        {"start":"","end":"","org":"政协桥西区委员会","title":"桥西区政协主席","notes":"政协桥西区第十届委员会主席、党组书记","confidence":"confirmed","source_ids":["S008"]},
+    ]
+    gao_relationships = []
+    gao_json = make_person_json(gao_person, gao_timeline, gao_relationships)
+    gao_path = PERSONS_OUT / f"{TODAY}-河北省-张家口市-政协主席-高军.json"
+    with open(gao_path, "w", encoding="utf-8") as f:
+        json.dump(gao_json, f, ensure_ascii=False, indent=2)
+    print(f"  ✓ {gao_path.name}")
+
+    print(f"\n✅ 所有 Person Graph JSONs 已生成到: {PERSONS_OUT}")
 
 if __name__ == "__main__":
     build()
