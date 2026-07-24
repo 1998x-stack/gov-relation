@@ -25313,7 +25313,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_江夏区_data.py, data/graph/江夏区_network.gexf"
             },
             {
               "id": "hubei_黄陂区",
@@ -25331,7 +25333,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             },
             {
               "id": "hubei_新洲区",
@@ -25349,7 +25351,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_新洲区_data.py, data/database/新洲区_network.db, data/graph/新洲区_network.gexf"
             }
           ],
           "blocked": true,
@@ -25480,7 +25484,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_黄石市_data.py, data/database/黄石市_network.db, data/graph/黄石市_network.gexf"
         },
         {
           "id": "hubei_十堰市",
