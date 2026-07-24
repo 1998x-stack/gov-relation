@@ -49,20 +49,18 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-_SCRIPT_DIR = Path(__file__).resolve().parent
-_REPO_ROOT = _SCRIPT_DIR
-# When script is run from repo root, _SCRIPT_DIR == _REPO_ROOT
+_STAGING_DIR = Path(__file__).resolve().parent
+_REPO_ROOT = (_STAGING_DIR / "../../..").resolve()
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
 from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
-from gov_relation.paths import PERSONS_DIR as CANON_PERSONS_DIR
 
 SLUG = "桥西区"
 
-DB_PATH = DATABASE_DIR / f"{SLUG}_network.db"
-GEXF_PATH = GRAPH_DIR / f"{SLUG}_network.gexf"
-PERSONS_DIR = CANON_PERSONS_DIR
+DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
+GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
+PERSONS_DIR = _STAGING_DIR
 
 AS_OF = datetime.now().strftime("%Y-%m-%d")
 TODAY = datetime.now().strftime("%Y%m%d")
