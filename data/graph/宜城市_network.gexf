@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Gov Relation Research Agent</creator>
+    <description>宜城市领导班子工作关系网络 - 2024-11</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="武义泉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宜城市委书记"/>
+          <attvalue for="2" value="中共宜城市委员会"/>
+          <attvalue for="3" value="1983年3月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="肖平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宜城市市长"/>
+          <attvalue for="2" value="宜城市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="陈进雷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宜城市人大常委会主任"/>
+          <attvalue for="2" value="宜城市人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p4" label="李源">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="宜城市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议宜城市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p5" label="郭静">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已离任（原宜城市委书记）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1975年11月"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p6" label="严广超">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="已离任（原宜城市市长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共宜城市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="宜城市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="宜城市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议宜城市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共宜城市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共襄阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="襄阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="宜城市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年6月任中共宜城市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="宜城市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="任职起始时间待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o3" label="宜城市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o4" label="宜城市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o1" label="宜城市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="武义泉前任"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p6" target="o2" label="宜城市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="肖平前任"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p1" target="p2" label="宜城市委书记与市长党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="宜城市委书记与市长党政搭档"/>
+          <attvalue for="2" value="宜城市"/>
+          <attvalue for="3" value="2021-06至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p1" target="p3" label="市委与市人大常委会协同工作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市委与市人大常委会协同工作"/>
+          <attvalue for="2" value="宜城市"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1" target="p4" label="市委与市政协协同工作" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市委与市政协协同工作"/>
+          <attvalue for="2" value="宜城市"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p5" target="p1" label="宜城市委书记前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="宜城市委书记前后任"/>
+          <attvalue for="2" value="中共宜城市委员会"/>
+          <attvalue for="3" value="2021-06"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p6" target="p2" label="宜城市市长前后任（推断）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="宜城市市长前后任（推断）"/>
+          <attvalue for="2" value="宜城市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
