@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "黑龙江省",
+    "city": "哈尔滨市",
+    "region": "通河县",
+    "job": "县长",
+    "task_id": "heilongjiang_tonghe",
+    "time_focus": "1999-present"
+  },
+  "identity": {
+    "person_id": "tonghe_meng_xiangwei",
+    "name": "孟祥伟",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "满族",
+    "birth": "1978年9月",
+    "birthplace": "黑龙江省哈尔滨市",
+    "native_place": "黑龙江省哈尔滨市",
+    "education": [
+      {
+        "period": "~1999.09",
+        "institution": "（待查）",
+        "major": "",
+        "degree": "大专/本科",
+        "study_type": "full_time",
+        "source_ids": ["S001"],
+        "notes": "1999年9月参加工作，初始学历未公开"
+      },
+      {
+        "period": "在职",
+        "institution": "哈尔滨工业大学",
+        "major": "公共管理专业",
+        "degree": "在职研究生",
+        "study_type": "part_time",
+        "source_ids": ["S001"]
+      }
+    ]
+  },
+  "current_status": {
+    "position": "通河县委副书记、政府县长",
+    "organization": "通河县人民政府 / 中共通河县委员会",
+    "start_date": "至少2021年1月起",
+    "level": "正处级",
+    "jurisdiction": "通河县",
+    "is_acting": false,
+    "additional_roles": ["通河县经济开发区党工委书记", "通河县经济开发区管委会主任"],
+    "responsibilities": "主持县政府全面工作；兼任县经济开发区党工委书记、管委会主任；分管县审计局；县委书记外出期间主持县委工作",
+    "source_ids": ["S001", "S004"]
+  },
+  "career_timeline": [
+    {
+      "start": "1998.12",
+      "end": "至今",
+      "org": "中国共产党",
+      "title": "加入中国共产党",
+      "level": "",
+      "location": "",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "参加工作前已入党",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "1999.09",
+      "end": "未知",
+      "org": "（待查）",
+      "title": "参加工作，具体单位待查",
+      "level": "",
+      "location": "黑龙江省哈尔滨市",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1999年9月参加工作。1999-2021年间具体履历待查。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "~2021.01",
+      "end": "至今",
+      "org": "通河县人民政府",
+      "title": "通河县委副书记、政府县长",
+      "level": "正处级",
+      "location": "黑龙江省哈尔滨市通河县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "政府领导页面URL显示2021年1月已为县长。兼任县经济开发区党工委书记、管委会主任。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S004"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_tonghe_gov",
+      "name": "通河县人民政府",
+      "type": "government",
+      "level": "县级",
+      "parent": "哈尔滨市人民政府",
+      "location": "黑龙江省哈尔滨市通河县",
+      "source_ids": ["S001", "S004"]
+    },
+    {
+      "org_id": "org_tonghe_eda",
+      "name": "通河县经济开发区",
+      "type": "government",
+      "level": "县级",
+      "parent": "通河县人民政府",
+      "location": "黑龙江省哈尔滨市通河县",
+      "source_ids": ["S004"]
+    },
+    {
+      "org_id": "org_tonghe_audit",
+      "name": "通河县审计局",
+      "type": "government",
+      "level": "县级",
+      "parent": "通河县人民政府",
+      "location": "黑龙江省哈尔滨市通河县",
+      "source_ids": ["S004"]
+    }
+  ],
+  "relationships": [
+    {
+      "person_a_id": "tonghe_meng_xiangwei",
+      "person_b_id": "tonghe_gao_junjie",
+      "type": "colleague",
+      "context": "县长与县委书记搭档关系",
+      "overlap_org": "通河县",
+      "overlap_period": "~2021至今",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S004"]
+    }
+  ],
+  "source_register": [
+    {
+      "source_id": "S001",
+      "type": "government_website",
+      "url": "https://www.hrbtonghe.gov.cn/hebthxx/c109571/202101/c01_377193.shtml",
+      "title": "孟祥伟_政府领导_通河县人民政府办公室",
+      "access_date": "2026-07-24",
+      "reliability": "high"
+    },
+    {
+      "source_id": "S002",
+      "type": "government_website",
+      "url": "https://www.hrbtonghe.gov.cn/hebthxx/zwgk/zwgk.shtml",
+      "title": "政务公开_通河县人民政府",
+      "access_date": "2026-07-24",
+      "reliability": "high"
+    },
+    {
+      "source_id": "S003",
+      "type": "baidu_baike",
+      "url": "https://baike.baidu.com/item/%E9%80%9A%E6%B2%B3%E5%8E%BF",
+      "title": "通河县_百度百科",
+      "access_date": "2026-07-24",
+      "reliability": "medium"
+    },
+    {
+      "source_id": "S004",
+      "type": "government_website",
+      "url": "https://www.hrbtonghe.gov.cn/hebthxx/c109569/202407/c01_1000636.shtml",
+      "title": "孟祥伟_县委领导_通河县人民政府办公室",
+      "access_date": "2026-07-24",
+      "reliability": "high"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_position": "confirmed",
+    "career_timeline": "partial",
+    "education": "confirmed",
+    "relationships": "partial"
+  },
+  "open_questions": [
+    "1999年毕业后至2021年间约22年的具体履历完全未知",
+    "初始学历信息未公开（1999年参加工作，疑似大专或本科）",
+    "何时被任命为通河县长的确切日期",
+    "升任县长前曾在哪些岗位任职",
+    "前任县长是谁、调往何处"
+  ]
+}
