@@ -4,14 +4,14 @@
   "investigation_scope": {
     "province": "湖南省",
     "city": "郴州市",
-    "region": "临武县",
+    "region": "汝城县",
     "job": "县委书记",
-    "task_id": "hunan_临武县",
-    "time_focus": "current (as of 2026-07-24)"
+    "task_id": "hunan_汝城县",
+    "time_focus": "现任"
   },
   "identity": {
-    "person_id": "hunan_chenzhou_linwu_county_party_secretary_unknown",
-    "name": "（待查）",
+    "person_id": "hunan_chenzhou_rucheng_county_party_secretary_unknown",
+    "name": "待查",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
@@ -19,7 +19,7 @@
     "birthplace": "",
     "native_place": "",
     "education": [],
-    "party_join": "中共党员",
+    "party_join": "",
     "work_start": "",
     "dedupe_keys": {
       "name_birth": "",
@@ -28,45 +28,22 @@
     }
   },
   "current_status": {
-    "current_post": "中共临武县委书记",
-    "current_org": "中共临武县委员会",
+    "current_post": "中共汝城县委书记",
+    "current_org": "中共汝城县委员会",
     "administrative_rank": "正处级",
     "as_of": "2026-07-24",
     "is_current_confirmed": false,
     "source_ids": []
   },
-  "career_timeline": [
-    {
-      "start": "unknown",
-      "end": "present",
-      "org": "中共临武县委员会",
-      "title": "中共临武县委书记",
-      "level": "正处级",
-      "location": "湖南省郴州市临武县",
-      "system": "party",
-      "rank": "正处级",
-      "is_key_promotion": false,
-      "notes": "所有外网搜索（Exa、Jina、Baidu、政府网站）在此次调研期间不可用。县委书记姓名及整部履历待查。",
-      "confidence": "unverified",
-      "source_ids": []
-    }
-  ],
+  "career_timeline": [],
   "organizations": [
     {
-      "name": "中共临武县委员会",
+      "id": 1,
+      "name": "中共汝城县委员会",
       "type": "党委",
       "level": "县处级",
       "parent": "中共郴州市委",
-      "location": "湖南省郴州市临武县",
-      "source_ids": []
-    },
-    {
-      "name": "中共郴州市委",
-      "type": "党委",
-      "level": "地市级",
-      "parent": "中共湖南省委",
-      "location": "湖南省郴州市",
-      "source_ids": []
+      "location": "湖南省郴州市汝城县"
     }
   ],
   "relationships": [],
@@ -78,7 +55,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "未知——县委书记姓名及履历均未知。",
+      "summary": "",
       "notable_fast_promotions": []
     }
   },
@@ -86,13 +63,13 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "工作风格仅从公开记录、讲话和报道的治理行动中推断，并非私人心理评估。当前无任何可用信息。"
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
   },
   "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "因外网搜索不可用，未发现风险信号。此项不表示无风险信号存在。",
+      "description": "由于未能确认身份，无法检索相关风险信号",
       "date": "",
       "confidence": "unverified",
       "source_ids": []
@@ -104,51 +81,50 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "姓名未知；整部履历缺失（因所有外网搜索在此次调研期间均不可用）。"
+    "biggest_gap": "现任汝城县委书记的姓名、民族、出生年月、籍贯、教育背景、完整任职履历均未知"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "临武县委书记的姓名是什么？",
-      "why_it_matters": "这是本次调研的首要追问目标。",
+      "question": "现任汝城县委书记的姓名是什么？",
+      "why_it_matters": "这是本次调查的核心目标人物，无法确认身份则无法构建任何关系网络",
       "suggested_queries": [
-        "临武县 县委书记 现任",
-        "临武县 领导之窗 县委书记",
-        "site:linwu.gov.cn 县委书记",
-        "郴州市 临武县 县委书记 2025 2026"
+        "汝城县 县委书记",
+        "汝城县 领导之窗",
+        "汝城县 县委 领导班子",
+        "汝城 县委书记 2024 2025 2026"
       ],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "critical",
-      "question": "临武县委书记的出生年月、籍贯、教育背景是什么？",
-      "why_it_matters": "书记身份识别与去重的基础信息。",
+      "question": "现任汝城县委书记的性别、民族、出生年月、籍贯？",
+      "why_it_matters": "建立人物身份基线，用于去重和与其他领导人的关系分析",
       "suggested_queries": [
-        "临武县委书记 简历",
-        "临武县委书记 出生",
-        "临武县委书记 百度百科"
+        "汝城县委书记 简历",
+        "汝城县委书记 百度百科",
+        "汝城县委书记 出生"
+      ],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "现任汝城县委书记到任时间？前任是谁？",
+      "why_it_matters": "关键的前任继任关系，连接汝城到郴州市级干部调动的网络",
+      "suggested_queries": [
+        "汝城县委 任免",
+        "汝城县 干部大会",
+        "郴州 汝城 县委书记 任职"
       ],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "high",
-      "question": "临武县委书记的完整职业生涯时间线是怎样的？",
-      "why_it_matters": "了解晋升轨迹、系统经验及可能的关联网络。",
+      "question": "汝城县委书记的完整职业生涯轨迹？",
+      "why_it_matters": "揭示干部成长路径、系统经历和跨区域调动模式",
       "suggested_queries": [
-        "临武县委书记 任职经历",
-        "临武县委书记 曾任",
-        "郴州 组织部 干部任免 临武县"
-      ],
-      "last_attempted": "2026-07-24"
-    },
-    {
-      "priority": "high",
-      "question": "临武县委书记的前任是谁？继任者调动情况如何？",
-      "why_it_matters": "书记更替可揭示跨区域轮岗和系统内提拔模式。",
-      "suggested_queries": [
-        "临武县 前任县委书记",
-        "临武县委书记 调任",
-        "郴州市 县市区 党委书记 任免 2024 2025 2026"
+        "汝城县委书记 曾任",
+        "汝城县委书记 之前"
       ],
       "last_attempted": "2026-07-24"
     }
