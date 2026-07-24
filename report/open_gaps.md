@@ -1,7 +1,13 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (新华区 — artifacts validated & promoted)
+> Last updated: 2026-07-24 (霸州市 — artifacts validated & promoted)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+### 霸州市
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 刘岳 | 霸州市委书记 | 全部个人信息（出生、籍贯、教育、完整履历） | 2026-07-24 | 政府网站新闻报道确认其检查防汛工作（推测为市委书记），但市委领导之窗为JS渲染无法获取。Person JSON已创建。 |
+| 陈海强 | 霸州市委副书记、市长 | 出生、籍贯、教育背景、任市长前全部履历、到任时间 | 2026-07-24 | 官方领导之窗确认职务和分工（主持市政府全面工作），其余信息完全空白。Person JSON已创建。|
 
 ### 永清县
 | Person | Current Role | What's Missing | Last Attempted | Notes |
