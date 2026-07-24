@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Gov Relation Research Agent</creator>
+    <description>松北区（哈尔滨市）领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+      <attribute id="8" title="level" type="string"/>
+      <attribute id="9" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="肖彬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="哈尔滨新区党工委书记、松北区委书记"/>
+          <attvalue for="2" value="中共哈尔滨市松北区委员会 / 哈尔滨新区党工委"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p2" label="贺业方">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="哈尔滨新区党工委副书记、管委会主任，松北区委副书记、政府区长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府 / 哈尔滨新区管委会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1986-03"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/xiaobin/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="180" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p3" label="董方">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区委常委、政府副区长（常务）、党组副书记"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="回族"/>
+          <attvalue for="5" value="1973-02"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/dongfang/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p4" label="陈方晔">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区委常委、政府副区长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1976-02"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/cfy/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p5" label="夏厦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区政府副区长（无党派）"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1980-06"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/xsqz/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p6" label="苏志">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区政府副区长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1975-08"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/suzhi/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p7" label="刘辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区政府副区长、党组成员，区公安分局局长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府 / 哈尔滨市公安局松北分局"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1971-09"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/c112168/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p8" label="葛红升">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区政府副区长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974-02"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/c112502/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p9" label="刘惟乔">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区政府副区长、党组成员"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1973-05"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/c112521/ldxx.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p10" label="黄明瑾">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区人大常委会主任"/>
+          <attvalue for="2" value="哈尔滨市松北区人大常委会"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/"/>
+        </attvalues>
+        <viz:color r="50" g="180" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p11" label="赵琪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区人大常委会副主任（大会执行主席）"/>
+          <attvalue for="2" value="哈尔滨市松北区人大常委会"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/sbdt/202601/c01_1104833.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="p12" label="张建国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="松北区领导（区委办）"/>
+          <attvalue for="2" value="中共哈尔滨市松北区委员会"/>
+          <attvalue for="6" value="https://www.songbei.gov.cn/hebsbq/sbdt/202602/c01_1110317.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="circle"/>
+      </node>
+      <node id="o1" label="中共哈尔滨市松北区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o2" label="哈尔滨市松北区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o3" label="哈尔滨新区党工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="正厅级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o4" label="哈尔滨新区管理委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="正厅级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o5" label="中国（黑龙江）自由贸易试验区哈尔滨片区党工委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="正厅级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o6" label="中国（黑龙江）自由贸易试验区哈尔滨片区管委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="正厅级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o7" label="哈尔滨市松北区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="人大"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="o8" label="哈尔滨市公安局松北分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="松北区"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="松北区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o3" label="哈尔滨新区党工委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="哈尔滨新区党工委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="松北区委副书记、政府区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区委副书记、政府区长"/>
+          <attvalue for="2" value="2026-01"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o1" label="松北区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区委副书记"/>
+          <attvalue for="2" value="2026-01"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p2" target="o4" label="哈尔滨新区党工委副书记、管委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="哈尔滨新区党工委副书记、管委会主任"/>
+          <attvalue for="2" value="2026-01"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o5" label="自贸试验区哈尔滨片区党工委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="自贸试验区哈尔滨片区党工委副书记"/>
+          <attvalue for="2" value="2026-01"/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p3" target="o2" label="松北区委常委、政府副区长（常务）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区委常委、政府副区长（常务）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p3" target="o4" label="哈尔滨新区党工委委员、管委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="哈尔滨新区党工委委员、管委会副主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p4" target="o2" label="松北区委常委、政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区委常委、政府副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p4" target="o4" label="哈尔滨新区党工委委员、管委会成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="哈尔滨新区党工委委员、管委会成员"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p5" target="o2" label="松北区政府副区长（无党派）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区政府副区长（无党派）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p6" target="o2" label="松北区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区政府副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p7" target="o2" label="松北区政府副区长、党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区政府副区长、党组成员"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p7" target="o8" label="松北区公安分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区公安分局局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p8" target="o2" label="松北区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区政府副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p9" target="o2" label="松北区政府副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区政府副区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p10" target="o7" label="松北区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区人大常委会主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p11" target="o7" label="松北区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="松北区人大常委会副主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p12" target="o1" label="区委办公室负责人" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委办公室负责人"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="present"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p1" target="p2" label="党政正职搭档：区委书记与区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="党政正职搭档：区委书记与区长"/>
+          <attvalue for="2" value="松北区委/区政府"/>
+          <attvalue for="3" value="2026-01至今"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p1" target="p3" label="区委书记与常务副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+          <attvalue for="2" value="中共哈尔滨市松北区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p4" label="区委书记与常委副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与常委副区长"/>
+          <attvalue for="2" value="中共哈尔滨市松北区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p1" target="p10" label="区委书记与人常委会主任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与人常委会主任"/>
+          <attvalue for="2" value="松北区党政领导班子"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p2" target="p3" label="区长与常务副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与常务副区长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="2026-01至今"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p2" target="p4" label="区长与副区长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与副区长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="2026-01至今"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p2" target="p7" label="区长与副区长/公安局长" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与副区长/公安局长"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value="2026-01至今"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p3" target="p4" label="区政府领导（常务副区长与副区长）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区政府领导（常务副区长与副区长）"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p3" target="p5" label="区政府正副职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区政府正副职"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p3" target="p6" label="区政府正副职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区政府正副职"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p3" target="p7" label="区政府正副职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区政府正副职"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p3" target="p8" label="区政府正副职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区政府正副职"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p3" target="p9" label="区政府正副职" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区政府正副职"/>
+          <attvalue for="2" value="哈尔滨市松北区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
