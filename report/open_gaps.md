@@ -1,7 +1,13 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (沧州市新华区 — artifacts validated & promoted)
+> Last updated: 2026-07-24 (衡水市冀州区 — artifacts validated & promoted)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+### 冀州区
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 张洪涛 | 冀州区委书记 | 出生年月、籍贯、教育背景、任区委书记前全部履历、确切到任时间 | 2026-07-24 | 训练数据确认职务（约2021年任），但所有web搜索渠道（Exa限流、Baidu 403、jizhou.gov.cn超时、Jina超时）均不可用。Person JSON已创建。 |
+| 门保彬 | 冀州区政府区长 | 出生年月、籍贯、教育背景、任区长前全部履历、确切到任时间 | 2026-07-24 | 同上。所有信息来自训练数据，无法验证。Person JSON已创建。 |
 
 ### 霸州市
 | Person | Current Role | What's Missing | Last Attempted | Notes |
