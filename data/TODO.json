@@ -23241,7 +23241,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_长垣市_data.py, data/database/长垣市_network.db, data/graph/长垣市_network.gexf"
             }
           ]
         },
@@ -23260,7 +23262,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "henan_解放区",
@@ -23278,7 +23280,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_解放区_data.py, data/database/解放区_network.db, data/graph/解放区_network.gexf"
             },
             {
               "id": "henan_中站区",
