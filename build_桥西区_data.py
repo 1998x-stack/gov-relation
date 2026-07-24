@@ -42,9 +42,13 @@ from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 SLUG = "桥西区"
 
-_STAGING_DIR = _SCRIPT_DIR  # data/tmp/hebei_桥西区/
-DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
-GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
+# Detect whether we're running from staging or canonical location
+if _SCRIPT_DIR.name.startswith("hebei_"):
+    _STAGING_DIR = _SCRIPT_DIR
+else:
+    _STAGING_DIR = _REPO_ROOT / "data" / "tmp" / "hebei_桥西区"
+DB_PATH = DATABASE_DIR / f"{SLUG}_network.db"
+GEXF_PATH = GRAPH_DIR / f"{SLUG}_network.gexf"
 
 import sqlite3  # noqa: F811
 
