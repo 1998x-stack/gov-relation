@@ -3,7 +3,7 @@
 
 ## Summary
 
-Gaps identified during the 山城区 (鹤壁市) investigation. Core leaders are identified with current roles confirmed, but career timelines have significant gaps.
+Gaps identified during the 山城区 (鹤壁市) and 延津县 (新乡市) investigations. 延津县 data is entirely unverified (all web channels blocked). 山城区 core leaders are identified with current roles confirmed, but career timelines have significant gaps.
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
@@ -12,6 +12,8 @@ Gaps identified during the 山城区 (鹤壁市) investigation. Core leaders are
 | 黄舒军 | 山城区委书记 | 任区委书记前的完整履历 | 2026-07-24 | 仅知中央党校大学学历 |
 | 张建宇 | 山城区长 | 任市委网信办主任前的完整履历 | 2026-07-24 | 中央党校研究生 / 理学学士 |
 | 关越 | 前任区长 | 2017-2021年任职情况；调离去向 | 2026-07-24 | 1986年生，经济学博士 |
+| **延津县委书记** | 县委书记 | **全部信息** — 姓名、性别、民族、出生、籍贯、学历、完整履历 | 2026-07-24 | 所有网络搜索通道均不可用，数据为占位符 |
+| **延津县长** | 县长 | **全部信息** — 姓名、性别、民族、出生、籍贯、学历、完整履历 | 2026-07-24 | 所有网络搜索通道均不可用，数据为占位符 |
 
 ## ⭐⭐⭐⭐ High (key deputies or secondary leaders)
 
@@ -27,6 +29,16 @@ Gaps identified during the 山城区 (鹤壁市) investigation. Core leaders are
 | 李秀琴 | 曾任区委领导，现职 | 2026-07-24 | 2023年见于新闻 |
 | 张志明 | 曾任区委领导，现职 | 2026-07-24 | 2023年见于新闻 |
 | 林铎航/汪洋/秦国卫/肖扬 | 副区长，完整履历缺失 | 2026-07-24 | 仅为姓名和职务 |
+| 延津县委副书记 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县常务副县长 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县纪委书记 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县委组织部长 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县委政法委书记 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县委宣传部长 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县委统战部长 | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县副县长（5名） | 姓名及全部信息 | 2026-07-24 | 网络通道不可用 |
+| 延津县前任县委书记 | 姓名、去向 | 2026-07-24 | 网络通道不可用 |
+| 延津县前任县长 | 姓名、去向 | 2026-07-24 | 网络通道不可用 |
 
 ## ⭐⭐⭐ Medium (would enrich network picture)
 
@@ -35,6 +47,9 @@ Gaps identified during the 山城区 (鹤壁市) investigation. Core leaders are
 | 山城区领导班子的具体分管领域 | 2026-07-24 | 仅区级网站未找到领导分工页 |
 | 山城区向鹤壁市其他县区的干部交流记录 | 2026-07-24 | 马海澎升任市人大副主任；关越去向不明 |
 | 山城区委领导的详细个人简历（出生地、毕业院校等） | 2026-07-24 | 核心人物有百科但信息简略 |
+| 延津县跨县交流模式（延津←→新乡市其他县区） | 2026-07-24 | 所有搜索通道不可用 |
+| 延津县委常委会完整名单及分工 | 2026-07-24 | 未知 |
+| 延津县政府领导分工 | 2026-07-24 | 未知 |
 
 ## ⭐⭐ Low (nice to have)
 
@@ -42,6 +57,9 @@ Gaps identified during the 山城区 (鹤壁市) investigation. Core leaders are
 |-----|----------------|-------|
 | 黄舒军和张建宇的工作风格和治理记录 | 2026-07-24 | 刚上任，公开报道有限 |
 | 马海澎在淇滨区任职期间的详细情况 | 2026-07-24 | 仅知名衔 |
+| 延津县领导干部任前公示历史 | 2026-07-24 | 搜索不可用 |
+| 延津县各届县委书记/县长任职时间线 | 2026-07-24 | 搜索不可用 |
+| 延津县历任领导跨地区调动记录 | 2026-07-24 | 搜索不可用 |
 
 ---
 
@@ -65,3 +83,5 @@ Gaps identified during the 山城区 (鹤壁市) investigation. Core leaders are
 - 主要缺口在于核心人物的早期履历和部分成员的去向
 - 通过山城区人民政府网站 (http://www.hbscq.gov.cn) 和百度百科获取了基础信息
 - Baidu/Exa 搜索工具受限，未能获取更详细的任前公示信息
+- **延津县（新乡市）调研**: 所有网络搜索通道均不可用（Exa rate-limited, Baidu 403, yanjin.gov.cn/Jina Reader timeout）
+- **延津县**: 全部数据为占位符，需恢复网络后重新调查
