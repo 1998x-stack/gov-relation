@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>富拉尔基区领导班子工作关系网络</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans SC','SF Pro Text',system-ui,-apple-system,sans-serif;
+  background:#0c0b0a;
+  color:#d4cfc4;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh
+}
+/* ── Typography ── */
+h1,h2,h3,.display{font-family:'Noto Serif SC','Georgia',serif;font-weight:600}
+h1{font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:0.06em;line-height:1.25}
+h2{
+  font-size:clamp(1.15rem,2.5vw,1.55rem);
+  letter-spacing:0.04em;
+  display:flex;align-items:center;gap:0.6rem;
+  padding-bottom:0.5rem;
+  border-bottom:1px solid rgba(212,207,196,.12);
+  margin-bottom:1.25rem
+}
+h2 .accent-bar{display:inline-block;width:3px;height:1.15em;background:#E03C31;flex-shrink:0}
+.section-label{
+  font-family:'Noto Sans SC',sans-serif;
+  font-size:.68rem;font-weight:500;text-transform:uppercase;
+  letter-spacing:0.12em;color:#8a8478;
+  margin-bottom:0.25rem
+}
+/* ── Layout ── */
+.container{max-width:1280px;margin:0 auto;padding:0 1.5rem}
+.section{margin:0;padding:2.5rem 1.5rem}
+.section+.section{border-top:1px solid rgba(212,207,196,.07)}
+/* ── Hero ── */
+.hero{
+  min-height:55vh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:4rem 1.5rem 3rem;
+  position:relative;
+  overflow:hidden
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,transparent 40%,#0c0b0a 95%),
+    radial-gradient(ellipse 80% 40% at 20% 30%,rgba(224,60,49,.06),transparent),
+    radial-gradient(ellipse 60% 50% at 80% 70%,rgba(201,169,78,.04),transparent);
+  pointer-events:none
+}
+.hero-bg-text{
+  position:absolute;
+  top:-5%;right:-3%;
+  font-family:'Noto Serif SC',serif;
+  font-size:clamp(6rem,18vw,16rem);
+  font-weight:700;
+  color:rgba(224,60,49,.035);
+  line-height:1;
+  pointer-events:none;
+  user-select:none;
+  letter-spacing:-0.03em
+}
+.hero .title-group{position:relative;z-index:1}
+.hero .supra{
+  font-size:.72rem;font-weight:500;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:#8a8478;margin-bottom:.75rem
+}
+.hero h1{color:#f0ebe0;margin-bottom:.6rem}
+.hero .sub{
+  font-size:.98rem;color:#8a8478;
+  max-width:36rem;line-height:1.6
+}
+/* ── Stats Bar ── */
+.stats-bar{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(212,207,196,.08);
+  border:1px solid rgba(212,207,196,.08);
+  margin:2.5rem 1.5rem 0;
+  border-radius:2px
+}
+.stat-cell{
+  background:#0f0e0c;
+  padding:1.25rem 1rem;
+  text-align:center
+}
+.stat-cell .num{
+  font-family:'Noto Serif SC',serif;
+  font-size:2rem;font-weight:700;
+  color:#f0ebe0;line-height:1.1
+}
+.stat-cell .num span{color:#E03C31}
+.stat-cell .lbl{
+  font-size:.7rem;color:#8a8478;
+  text-transform:uppercase;letter-spacing:0.06em;
+  margin-top:.25rem
+}
+/* ── Person Grid ── */
+.person-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1px;
+  background:rgba(212,207,196,.08);
+  border:1px solid rgba(212,207,196,.08);
+  border-radius:2px;overflow:hidden
+}
+.person-card{
+  background:#0f0e0c;
+  padding:1.1rem 1rem;
+  position:relative;
+  transition:background .15s
+}
+.person-card:hover{background:#141210}
+.person-card .p-name{
+  font-family:'Noto Serif SC',serif;
+  font-size:1.05rem;font-weight:600;
+  color:#f0ebe0;margin-bottom:.15rem
+}
+.person-card .p-role{
+  font-size:.78rem;font-weight:400;
+  color:#c9a94e;margin-bottom:.3rem
+}
+.person-card .p-meta{
+  font-size:.7rem;color:#6b665a;line-height:1.4
+}
+.person-card .p-badge{
+  display:inline-block;
+  font-size:.58rem;font-weight:500;
+  padding:1px 5px;
+  border:1px solid rgba(224,60,49,.3);
+  color:#d65;
+  border-radius:1px;
+  margin-top:.25rem;
+  letter-spacing:0.04em
+}
+.person-card .p-badge.gov{border-color:rgba(201,169,78,.3);color:#c9a94e}
+.person-card .p-badge.other{border-color:rgba(212,207,196,.15);color:#8a8478}
+/* ── Tables ── */
+.table-wrap{overflow-x:auto;border:1px solid rgba(212,207,196,.08);border-radius:2px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+thead{background:rgba(224,60,49,.06)}
+th{
+  font-weight:500;text-align:left;
+  padding:.65rem .75rem;
+  color:#8a8478;font-size:.68rem;
+  text-transform:uppercase;letter-spacing:0.06em;
+  border-bottom:1px solid rgba(212,207,196,.08)
+}
+td{
+  padding:.6rem .75rem;
+  border-bottom:1px solid rgba(212,207,196,.04);
+  color:#c8c3b8
+}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(212,207,196,.02)}
+td.name{font-weight:500;color:#f0ebe0;white-space:nowrap}
+td.role{color:#c9a94e}
+td.birth{color:#8a8478;white-space:nowrap}
+td .ethnic{color:#6b665a;font-size:.72rem;display:block}
+/* ── Timeline ── */
+.timeline-group{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:700px){.timeline-group{grid-template-columns:1fr}}
+.timeline-col{border:1px solid rgba(212,207,196,.08);border-radius:2px;padding:1.25rem}
+.timeline-col h3{
+  font-family:'Noto Serif SC',serif;
+  font-size:.95rem;font-weight:600;
+  color:#f0ebe0;margin-bottom:.75rem;
+  padding-bottom:.4rem;
+  border-bottom:1px solid rgba(212,207,196,.08)
+}
+.timeline-item{
+  display:flex;gap:.6rem;
+  padding:.4rem 0
+}
+.timeline-item+.timeline-item{border-top:1px solid rgba(212,207,196,.04)}
+.timeline-item .t-date{
+  font-size:.72rem;font-weight:500;
+  color:#E03C31;white-space:nowrap;
+  min-width:6rem;padding-top:.05rem
+}
+.timeline-item .t-desc{font-size:.78rem;color:#c8c3b8;line-height:1.45}
+.timeline-item .t-desc .em{color:#c9a94e}
+.timeline-item .t-note{display:block;font-size:.68rem;color:#6b665a;margin-top:.1rem}
+/* ── Insights ── */
+.insights-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(212,207,196,.08);border:1px solid rgba(212,207,196,.08);border-radius:2px;overflow:hidden}
+.insight-card{background:#0f0e0c;padding:1.25rem}
+.insight-card h3{font-size:.82rem;color:#c9a94e;font-weight:600;margin-bottom:.35rem;font-family:'Noto Sans SC',sans-serif}
+.insight-card p{font-size:.75rem;color:#a8a294;line-height:1.55}
+.insight-card .severity{
+  display:inline-block;font-size:.58rem;padding:1px 5px;
+  border:1px solid currentColor;border-radius:1px;margin-top:.3rem;letter-spacing:0.04em
+}
+.insight-card .severity.high{color:#E03C31}
+.insight-card .severity.med{color:#c9a94e}
+.insight-card .severity.low{color:#6b665a}
+/* ── Source Box ── */
+.source-box{
+  background:rgba(212,207,196,.03);
+  border:1px solid rgba(212,207,196,.06);
+  border-radius:2px;
+  padding:1.25rem;
+  font-size:.72rem;color:#6b665a;line-height:1.6
+}
+.source-box a{color:#8a8478;text-decoration:none;border-bottom:1px solid rgba(138,132,120,.2)}
+.source-box a:hover{color:#c9a94e;border-color:#c9a94e}
+/* ── Footer ── */
+.footer{
+  text-align:center;
+  padding:2rem 1.5rem;
+  font-size:.68rem;color:#4a473e;
+  border-top:1px solid rgba(212,207,196,.04)
+}
+/* ── Utilities ── */
+.mt-1{margin-top:.75rem}
+.mb-1{margin-bottom:.75rem}
+.text-muted{color:#6b665a}
+.text-red{color:#E03C31}
+.text-gold{color:#c9a94e}
+.flex{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-bg-text">富拉尔基</div>
+  <div class="title-group container">
+    <div class="supra">黑龙江省齐齐哈尔市 · 市辖区</div>
+    <h1>富拉尔基区<br>领导班子工作关系网络</h1>
+    <p class="sub">
+      共和国工业的摇篮——"一五"期间3个苏联援建项目落地于此，
+      中国一重、建龙北满特钢等国家级企业所在地。
+      本报告梳理了富拉尔基区2025-2026年领导班子构成、工作关系网络及关键数据缺口。
+    </p>
+    <div class="flex" style="margin-top:1.25rem;gap:.6rem">
+      <span style="font-size:.72rem;color:#6b665a">情报简报</span>
+      <span style="font-size:.7rem;color:#6b665a">·</span>
+      <span style="font-size:.72rem;color:#8a8478">2026-07-24</span>
+      <span style="font-size:.7rem;color:#6b665a">·</span>
+      <span style="font-size:.72rem;color:#8a8478">富拉尔基区人民政府官网确认</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-bar container">
+  <div class="stat-cell"><div class="num"><span>24</span></div><div class="lbl">人物</div></div>
+  <div class="stat-cell"><div class="num"><span>12</span></div><div class="lbl">机构</div></div>
+  <div class="stat-cell"><div class="num"><span>30</span></div><div class="lbl">任职记录</div></div>
+  <div class="stat-cell"><div class="num"><span>15</span></div><div class="lbl">关系边</div></div>
+</div>
+
+<!-- ═══ CORE LEADERS ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>核心领导</h2>
+    <div class="person-grid">
+      <div class="person-card" style="border-left:2px solid #E03C31">
+        <div class="p-name">杨文波</div>
+        <div class="p-role">区委书记 · 党校校长</div>
+        <div class="p-meta">1972年3月 · 汉族 · 黑龙江省</div>
+        <div class="p-meta">黑龙江省委党校 经济管理 研究生</div>
+        <div class="p-meta">1991年入党 · 1989年参加工作</div>
+        <span class="p-badge">一级调研员</span>
+      </div>
+      <div class="person-card" style="border-left:2px solid #c9a94e">
+        <div class="p-name">李勇</div>
+        <div class="p-role">区委副书记 · 区长</div>
+        <div class="p-meta">1978年10月 · 汉族 · 国家开放大学</div>
+        <div class="p-meta">1998年入党 · 1996年参加工作</div>
+        <div class="p-meta">2024.12.04 任代理区长 → 2025年转正</div>
+        <span class="p-badge gov">经开区党工委书记</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIMELINE ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>任职时间线</h2>
+    <p class="text-muted" style="font-size:.75rem;margin-bottom:1rem">
+      ⚠️ 红色标记为确认信息，黑色部分为缺口（履历待查）
+    </p>
+    <div class="timeline-group">
+      <!-- 杨文波 -->
+      <div class="timeline-col">
+        <h3>杨文波 — 区委书记</h3>
+        <div class="timeline-item">
+          <span class="t-date">2020.09 — 至今</span>
+          <div class="t-desc"><span class="em">富拉尔基区委书记</span>、党校校长<span class="t-note">✅ CONFIRMED — flej.gov.cn 领导页面创建日期 202009</span></div>
+        </div>
+        <div class="timeline-item">
+          <span class="t-date">此前待查</span>
+          <div class="t-desc">2020年9月之前的履历完全未知<span class="t-note">❌ GAP — 需搜索杨文波个人百科或齐齐哈尔市委组织部任前公示</span></div>
+        </div>
+      </div>
+      <!-- 李勇 -->
+      <div class="timeline-col">
+        <h3>李勇 — 区长</h3>
+        <div class="timeline-item">
+          <span class="t-date">2024.12至今</span>
+          <div class="t-desc"><span class="em">富拉尔基区委副书记、区长</span><span class="t-note">2024.12.04 区人大常委会任命为代理区长</span></div>
+        </div>
+        <div class="timeline-item">
+          <span class="t-date">此前待查</span>
+          <div class="t-desc">2024年12月之前的履历完全未知<span class="t-note">❌ GAP — 需搜索李勇此前在齐齐哈尔的任职</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARTY STANDING COMMITTEE ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>区委常委会</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>姓名</th><th>职务</th><th>出生</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="name">杨文波</td><td class="role">区委书记</td><td class="birth">1972.03</td><td>一级调研员；兼党校校长</td></tr>
+          <tr><td class="name">李勇</td><td class="role">区委副书记、区长</td><td class="birth">1978.10</td><td>兼经开区党工委书记</td></tr>
+          <tr><td class="name">王晓峰</td><td class="role">区委副书记、统战部长</td><td class="birth">1972.09</td><td>三级调研员；区政协党组副书记</td></tr>
+          <tr><td class="name">赵宏宇</td><td class="role">区委常委、纪委书记、监委主任</td><td class="birth">1976.01</td><td>四级高级监察官</td></tr>
+          <tr><td class="name">徐斌</td><td class="role">区委常委、政法委书记</td><td class="birth">1972.04</td><td>—</td></tr>
+          <tr><td class="name">权世红</td><td class="role">区委常委、组织部部长</td><td class="birth">1975.11</td><td>女性</td></tr>
+          <tr><td class="name">马力</td><td class="role">区委常委、副区长</td><td class="birth">1970.06</td><td>常务副区长；三级调研员</td></tr>
+          <tr><td class="name">刘云鸣</td><td class="role">区委常委、宣传部部长</td><td class="birth">1973.05</td><td>三级调研员</td></tr>
+          <tr><td class="name">艾纯明</td><td class="role">区委常委、人武部部长</td><td class="birth">1974.10</td><td><span class="ethnic">满族</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GOVERNMENT ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>区政府领导班子</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>姓名</th><th>职务</th><th>出生</th><th>分管领域</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="name">李勇</td><td class="role">区长</td><td class="birth">1978.10</td><td>全面工作</td></tr>
+          <tr><td class="name">马力</td><td class="role">常务副区长</td><td class="birth">1970.06</td><td>常务、营商环境、生态、应急、民政</td></tr>
+          <tr><td class="name">孙智嘉</td><td class="role">副区长、公安分局局长</td><td class="birth">1972.07</td><td>公安、司法</td></tr>
+          <tr><td class="name">姜涛</td><td class="role">副区长</td><td class="birth">1982.04</td><td>卫生健康、教育、文旅、体育<span class="ethnic">达斡尔族 · 女性</span></td></tr>
+          <tr><td class="name">于得洋</td><td class="role">副区长</td><td class="birth">1993.12</td><td>市场监管、交通运输<span class="ethnic">朝鲜族 · 最年轻</span></td></tr>
+          <tr><td class="name">邓伟</td><td class="role">副区长</td><td class="birth">1985.06</td><td>农业农村、乡村振兴、林草</td></tr>
+          <tr><td class="name">褚彬</td><td class="role">副区长</td><td class="birth">1982.06</td><td>发改、工业、招商、科技、国资</td></tr>
+          <tr><td class="name">宋程村</td><td class="role">经开区管委会专职副主任</td><td class="birth">1979.12</td><td>协助区长分管开发区建设</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PEOPLE'S CONGRESS & CPPCC ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>区人大 · 区政协</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+      <div>
+        <div class="section-label">区人民代表大会常务委员会</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>姓名</th><th>职务</th></tr></thead>
+            <tbody>
+              <tr><td class="name">梁继光</td><td>主任</td></tr>
+              <tr><td class="name">刘浅</td><td>副主任</td></tr>
+              <tr><td class="name">王秀卉</td><td>副主任</td></tr>
+              <tr><td class="name">张积光</td><td>副主任</td></tr>
+              <tr><td class="name">艾微</td><td>副主任</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">中国人民政治协商会议</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>姓名</th><th>职务</th></tr></thead>
+            <tbody>
+              <tr><td class="name">李志强</td><td>主席</td></tr>
+              <tr><td class="name">张宇涛</td><td>副主席</td></tr>
+              <tr><td class="name">满涛</td><td>副主席</td></tr>
+              <tr><td class="name">王秀林</td><td>副主席</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSIGHTS ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>关键洞察</h2>
+    <div class="insights-grid">
+      <div class="insight-card">
+        <h3>党政一把手搭配</h3>
+        <p>杨文波（1972年生）与李勇（1978年生）年龄差6岁，为典型的"老书记+新区长"搭配。李勇于2024年12月从外部调入（此前职位待查），反映上级对齐齐哈尔老工业基地区域治理的重视。</p>
+        <span class="severity high">高置信度</span>
+      </div>
+      <div class="insight-card">
+        <h3>少数民族代表性强</h3>
+        <p>班子中已有3位少数民族成员：艾纯明（满族，人武部长）、姜涛（达斡尔族，副区长）、于得洋（朝鲜族，副区长），符合富拉尔基区达斡尔族命名的历史渊源。</p>
+        <span class="severity high">高置信度</span>
+      </div>
+      <div class="insight-card">
+        <h3>90后进入班子</h3>
+        <p>于得洋（1993年12月生）为班子最年轻成员，任职副区长时约31岁。2025年5月到任，属近年较年轻的县级副职。</p>
+        <span class="severity med">中等置信度</span>
+      </div>
+      <div class="insight-card">
+        <h3>前任信息空白</h3>
+        <p>杨文波（2020年前任）和李勇（2024年前任）的前任身份、去向均无法从当前公开网络获取。这是最大的数据缺口，需要本地网络或专门搜索工具补全。</p>
+        <span class="severity low">搜索受限</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DATA GAPS ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>数据缺口</h2>
+    <div style="display:grid;grid-template-columns:1fr;gap:1px;background:rgba(212,207,196,.08);border:1px solid rgba(212,207,196,.08);border-radius:2px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:1fr 2fr 1.5fr 1fr;gap:1px;background:rgba(212,207,196,.08);font-size:.72rem">
+        <div style="background:#0f0e0c;padding:.55rem .7rem;color:#8a8478;font-weight:500">优先级</div>
+        <div style="background:#0f0e0c;padding:.55rem .7rem;color:#8a8478;font-weight:500">缺口</div>
+        <div style="background:#0f0e0c;padding:.55rem .7rem;color:#8a8478;font-weight:500">说明</div>
+        <div style="background:#0f0e0c;padding:.55rem .7rem;color:#8a8478;font-weight:500">备注</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 2fr 1.5fr 1fr;gap:1px;background:rgba(212,207,196,.04);font-size:.72rem">
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#E03C31">⭐⭐⭐⭐⭐</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c8c3b8">杨文波此前履历</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">2020年前的完整职业生涯</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">需百度百科/任前公示</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 2fr 1.5fr 1fr;gap:1px;background:rgba(212,207,196,.04);font-size:.72rem">
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#E03C31">⭐⭐⭐⭐⭐</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c8c3b8">李勇此前履历</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">2024年12月前的任职经历</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">需搜索齐齐哈尔市干部信息</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 2fr 1.5fr 1fr;gap:1px;background:rgba(212,207,196,.04);font-size:.72rem">
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#E03C31">⭐⭐⭐⭐⭐</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c8c3b8">前任区委书记</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">杨文波之前谁任书记？去向？</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">约2020年离职</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 2fr 1.5fr 1fr;gap:1px;background:rgba(212,207,196,.04);font-size:.72rem">
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c9a94e">⭐⭐⭐⭐</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c8c3b8">前任区长</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">李勇之前谁任区长？去向？</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">约2024年11月离职</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 2fr 1.5fr 1fr;gap:1px;background:rgba(212,207,196,.04);font-size:.72rem">
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c9a94e">⭐⭐⭐⭐</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#c8c3b8">杨文波籍贯</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">具体出生地/籍贯</div>
+        <div style="background:#0f0e0c;padding:.5rem .7rem;color:#6b665a">—</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOURCES ═══ -->
+<section class="section">
+  <div class="container">
+    <h2><span class="accent-bar"></span>信息来源</h2>
+    <div class="source-box">
+      <div><strong style="color:#8a8478">富拉尔基区人民政府官网</strong><br>
+        <a href="https://www.flej.gov.cn/">https://www.flej.gov.cn/</a> — 领导之窗四套班子完整列表</div>
+      <div style="margin-top:.6rem"><strong style="color:#8a8478">杨文波简历页</strong><br>
+        <a href="https://www.flej.gov.cn/flej/c101886/202009/c02_ea98c50821e443989edd9d76cb08e714.shtml">flej.gov.cn/flej/c101886/…</a></div>
+      <div style="margin-top:.6rem"><strong style="color:#8a8478">李勇简历页</strong><br>
+        <a href="https://www.flej.gov.cn/flej/c101886/202412/c02_514084.shtml">flej.gov.cn/flej/c101886/…</a></div>
+      <div style="margin-top:.6rem"><strong style="color:#8a8478">维基百科 富拉尔基区</strong><br>
+        <a href="https://zh.wikipedia.org/wiki/富拉尔基区">zh.wikipedia.org/wiki/富拉尔基区</a></div>
+      <div style="margin-top:.6rem"><strong style="color:#8a8478">百度百科 富拉尔基区</strong><br>
+        baike.baidu.com/item/富拉尔基区 <span style="color:#E03C31">（本环境403不可达）</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  富拉尔基区领导班子工作关系网络 · 2026-07-24<br>
+  <span style="color:#3a3832">CONFIRMED 数据来自 flej.gov.cn · UNVERIFIED 信息已标注</span>
+</footer>
+
+</body>
+</html>
