@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>gov-relation research agent</creator>
+    <description>南县领导班子工作关系网络 — 截至2026-07-24</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="钟剑波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共南县委书记、县人民政府县长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="45.0"/>
+      </node>
+      <node id="p2" label="罗讯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任南县县委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="30.0"/>
+      </node>
+      <node id="o1" label="中共南县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="o2" label="南县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="o3" label="南县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="o4" label="政协南县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="18.0"/>
+      </node>
+      <node id="o5" label="益阳市资阳区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="18.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o2" label="南县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="南县人民政府县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021-10—"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="中共南县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共南县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2025-02—"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o5" label="益阳市资阳区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市资阳区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016—2020"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o1" label="中共南县县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共南县县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2020—2025-02"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="p2" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="罗讯约2025年2月前离任南县县委书记后，钟剑波（时任县长）兼任县委书记"/>
+          <attvalue for="2" value="中共南县委员会"/>
+          <attvalue for="3" value="2025-02"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
