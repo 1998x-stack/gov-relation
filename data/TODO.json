@@ -23017,7 +23017,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "henan_红旗区",
@@ -23053,7 +23053,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_卫滨区_data.py, data/database/卫滨区_network.db, data/graph/卫滨区_network.gexf"
             },
             {
               "id": "henan_凤泉区",
