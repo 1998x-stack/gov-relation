@@ -11,12 +11,21 @@ Region: 新华区
 Targets: 区委书记 & 区长
 
 Research Sources (2026-07-24):
-- 新华区政府网站 (www.czxh.gov.cn) → 领导介绍页面: 确认6位政府领导（哈增瑞、罗宵、张俊峰、马俊亮、陈思文、白丽英）
-- 新华要闻 2026-05-02 "金培元 哈增瑞督导调研节前重点工作" → 确认金培元仍任区委书记，哈增瑞为区长
-- 新华要闻 2026-04-09 → 确认霍刚任区委副书记
-- 罗宵领导分工页面 → 确认常务副区长
-- 陈国帮已不再担任新华区区长（已被哈增瑞接替）
+- 新华区政府网站 (www.czxh.gov.cn):
+  - 领导介绍 pages: confirmed 6 government leaders and their work assignments
+    - 哈增瑞 (区长): http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml
+    - 罗宵 (常务副区长): http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml
+    - 张俊峰 (副区长/公安局长): http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml
+    - 马俊亮 (副区长): http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml
+    - 陈思文 (副区长): http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml
+    - 白丽英 (副区长,女): http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml
+  - 新华要闻 2026-05-02 "金培元 哈增瑞督导调研节前重点工作" → confirms 金培元 as 区委书记, 哈增瑞 as 区长
+  - 新华要闻 2026-04-09 → confirms 霍刚 as 区委副书记
 - 区委常委班子成员（组织部长、纪委书记、政法委书记、统战部长、宣传部长）未能从现有页面确认
+- 陈国帮已不再担任新华区区长（已被哈增瑞接替，2025-01-16 领导页面已更新）
+- 刘建华约2016-2021年任新华区委书记（训练数据，未核实）
+- ⚠️ 所有外部搜索引擎（Exa/Google/Baidu）均无法访问 — 人物简历信息仅基于政府网站公开页面
+- ⚠️ 所有人物均缺少出生年月、籍贯、教育背景等个人信息
 
 Research Date: 2026-07-24
 """
@@ -71,7 +80,7 @@ persons = [
         "work_start": "待查",
         "current_post": "沧州市新华区委副书记、区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认哈增瑞为区委副书记、区长（2025-01-16发布）。来源: http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml"
+        "source": "confirmed — 新华区政府网站领导介绍页面确认哈增瑞为区委副书记、区长（2025-01-16发布）。主持区政府全面工作，分管区审计局。来源: http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml"
     },
     {
         "id": 3,
@@ -90,6 +99,7 @@ persons = [
     },
     # ════════════════════════════════════════
     # Government Leaders (confirmed via czxh.gov.cn 领导介绍)
+    # Work assignments sourced from official leadership pages (2025-04-29 updated)
     # ════════════════════════════════════════
     {
         "id": 4,
@@ -104,7 +114,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区委常委、区政府常务副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认罗宵为区委常委、常务副区长（2025-04-29更新）。来源: http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml"
+        "source": "confirmed — 新华区政府网站领导介绍页面确认罗宵为区委常委、常务副区长（2025-04-29更新）。负责区政府常务工作，分管发展改革、财税、国资监管、行政审批、应急管理、统计、金融等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml"
     },
     {
         "id": 5,
@@ -119,7 +129,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长（市公安局新华分局局长）",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认张俊峰为副区长（分管公安、司法），主持市公安局新华分局全面工作（2025-04-29更新）。来源: http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml"
+        "source": "confirmed — 新华区政府网站领导介绍页面确认张俊峰为副区长（2025-04-29更新）。主持市公安局新华分局全面工作，负责公安、司法、民族宗教、退役军人事务等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml"
     },
     {
         "id": 6,
@@ -134,7 +144,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认马俊亮为副区长（分管商务、招商引资、农业农村等）（2025-04-29更新）。来源: http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml"
+        "source": "confirmed — 新华区政府网站领导介绍页面确认马俊亮为副区长（2025-04-29更新，原页面2024-01发布）。负责商务、招商引资、农业农村、乡村振兴、水务、文旅等。来源: http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml"
     },
     {
         "id": 7,
@@ -149,7 +159,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认陈思文为副区长（分管人社、科工、生态环保、市场监管等）（2025-04-29更新）。来源: http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml"
+        "source": "confirmed — 新华区政府网站领导介绍页面确认陈思文为副区长（2025-04-29更新）。负责人力资源保障、科技和工信、生态环境保护、市场监管、沧州经济开发区新华园区建设等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml"
     },
     {
         "id": 8,
@@ -164,7 +174,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认白丽英为副区长（分管教育体育、卫生健康、医保、民政等）（2025-04-29更新）。来源: http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml"
+        "source": "confirmed — 新华区政府网站领导介绍页面确认白丽英为副区长（女）（2025-04-29更新）。负责教育体育、卫生健康、医保、民政、卫生城市创建等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml"
     },
     {
         "id": 9,
@@ -177,9 +187,9 @@ persons = [
         "education": "待查",
         "party_join": "中共党员",
         "work_start": "待查",
-        "current_post": "新华区领导（具体职务待查）",
+        "current_post": "新华区领导（具体职务待查 — 可能为区委常委）",
         "current_org": "中共沧州市新华区委员会",
-        "source": "partial — 2026-05-02 新闻确认徐晋为区领导。来源: http://www.czxh.gov.cn/czxh/xhyw/202605/a35fcf41c2e94a6c841a0a389e999bf1.shtml"
+        "source": "confirmed — 2026-05-02 新闻确认徐晋为区领导，与区委书记金培元、区长哈增瑞共同参加督导调研。来源: http://www.czxh.gov.cn/czxh/xhyw/202605/a35fcf41c2e94a6c841a0a389e999bf1.shtml。其排序在区委书记金培元、区长哈增瑞、副区长张俊峰之前，可能为区委常委或副区长。"
     },
     # ════════════════════════════════════════
     # 前任领导 (Predecessors — training data, unverified)
@@ -405,9 +415,10 @@ if __name__ == "__main__":
     print(f"  ❌ Exa 搜索 — API 限流")
     print(f"\n  待补充信息:")
     print(f"  1. 区委常委完整名单（组织部长、纪委书记、政法委书记、统战部长、宣传部长等）")
-    print(f"  2. 金培元、哈增瑞的个人简历（出生、籍贯、教育背景、早期履历）")
-    print(f"  3. 陈国帮、刘建华的去向")
+    print(f"  2. 金培元、哈增瑞、霍刚等人的个人简历（出生、籍贯、教育背景、早期履历）")
+    print(f"  3. 陈国帮、刘建华的具体去向")
     print(f"  4. 徐晋的具体职务")
+    print(f"  5. 所有外部搜索引擎（Exa/Google/Baidu/Aliyun）均无法访问，建议在搜索恢复后重新调查")
     print(f"\n✅ 构建完成。")
     print(f"  DB: {DB_PATH}")
     print(f"  GEXF: {GEXF_PATH}")
