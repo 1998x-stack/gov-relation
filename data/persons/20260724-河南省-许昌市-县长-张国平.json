@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "许昌市",
+    "region": "襄城县",
+    "job": "县长",
+    "task_id": "henan_襄城县",
+    "time_focus": "2023-2026"
+  },
+  "identity": {
+    "person_id": "xicheng_zhangguoping",
+    "name": "张国平",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张国平_",
+      "name_birthplace": "张国平_",
+      "official_profile_url": "http://www.xiangchengxian.gov.cn"
+    }
+  },
+  "current_status": {
+    "current_post": "中共襄城县委副书记、县人民政府县长",
+    "current_org": "襄城县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {"start": "2023-07", "end": "", "org": "襄城县人民政府", "title": "代县长、县长", "level": "县处级正职", "location": "河南许昌襄城", "system": "government", "rank": "正处级", "is_key_promotion": true, "notes": "2023年7月任代县长，后当选县长", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"start": "2023-07", "end": "", "org": "中共襄城县委员会", "title": "县委副书记", "level": "县处级副职", "location": "河南许昌襄城", "system": "party", "rank": "副处级", "is_key_promotion": true, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"start": "", "end": "2023-07", "org": "履历缺口", "title": "2023年7月前履历待查", "level": "", "location": "", "system": "", "rank": "", "is_key_promotion": false, "notes": "公开资料未找到张国平2023年7月前的任职信息", "confidence": "unverified", "source_ids": []}
+  ],
+  "organizations": [
+    {"organization": "襄城县人民政府", "role": "县长", "period": "2023-", "source_ids": ["S001"]},
+    {"organization": "中共襄城县委员会", "role": "县委副书记", "period": "2023-", "source_ids": ["S001"]}
+  ],
+  "relationships": [
+    {"person": "范耀江", "person_id": "xicheng_fanyaojiang", "relationship_type": "党政搭档", "strength": "strong", "evidence": "范耀江任县委书记，张国平任县长（2023年至今）", "overlap_org": "中共襄城县委员会/襄城县人民政府", "overlap_period": "2023-", "direction": "person_to_other", "confidence": "confirmed", "source_ids": ["S001"]}
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_sectors": ["政府管理", "项目建设"],
+    "notable_initiatives": ["推动重点项目建设", "调研企业复工复产", "安全生产督导"],
+    "institutional_affiliations": [],
+    "specializations": [],
+    "career_pattern_notes": "2023年7月从何岗位调任襄城县待查"
+  },
+  "work_style_and_personality": {
+    "public_statements": ["牢固树立项目为王理念，强化节点意识", "统筹发展与安全，筑牢底线思维"],
+    "reported_style": "注重重点项目调度、基层调研、安全生产"
+  },
+  "network_metrics": {
+    "total_known_relationships": 1,
+    "total_known_connections": 1,
+    "relationship_types": ["党政搭档"],
+    "centrality_notes": "作为县长，是襄城县网络的核心节点，但履历信息严重缺失"
+  },
+  "risk_and_integrity_signals": [],
+  "source_register": {
+    "S001": {"url": "http://www.xiangchengxian.gov.cn", "type": "government_website", "retrieved": "2026-07-24", "title": "襄城县人民政府门户网站"}
+  },
+  "confidence_summary": {
+    "overall": "partial",
+    "identity": "partial",
+    "career": "minimal",
+    "relationships": "confirmed",
+    "governance": "partial",
+    "professional": "partial"
+  },
+  "open_questions": ["张国平的出生年份、籍贯、学历？", "张国平2023年7月前的完整职业生涯？", "从何处调任襄城县？", "是否有其他地市/市直单位任职经历？"]
+}
