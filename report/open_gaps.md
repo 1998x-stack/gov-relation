@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24
+> Last updated: 2026-07-25
 
 ## New Gaps from 泌阳县 Investigation
 
@@ -66,9 +66,44 @@
 
 ---
 
+---
+
+## New Gaps from 汝南县 Investigation
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 待查 | 汝南县委书记 | 身份完全未知 — 姓名、性别、出生年份、籍贯、教育、完整履历 | 2026-07-25 | 县政府领导信息页不包含县委领导；县委领导页面(ldzc/)返回404；搜索工具全部不可用 |
+| 刘光辉 | 汝南县长 | 出生年份、籍贯、教育、完整履历 | 2026-07-25 | 官网确认现任，但无个人简介页面链接 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 汝南县委常委班子 | 完整名单和具体分工 | 2026-07-25 | 仅从县政府领导页确认7位县政府领导，县委领导完全未知 |
+| 前任县委书记 | 汝南县前任书记身份和去向 | 2026-07-25 | 未找到相关信息 |
+| 前任县长 | 汝南县前任县长身份和去向 | 2026-07-25 | 未找到相关信息 |
+| 孙伟/王文斌等 | 具体职务分工 | 2026-07-25 | 6位县政府领导仅列出姓名，无具体分管领域 |
+
+### ⭐⭐⭐ Medium
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 县政府领导分工详情 | 2026-07-25 | 领导页仅列姓名，无分工说明 |
+| 跨县干部交流网络 | 2026-07-25 | 核心人物缺失完整履历，无法分析跨县流动 |
+
+### ⭐⭐ Low
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 汝南县经济数据和政绩档案 | 2026-07-25 | 未搜索 |
+
+---
+
 ## Causes
 
 - Exa search API rate-limited (free tier quota exhausted)
 - Baidu Baike 403 forbidden
-- taikang.gov.cn inner pages (ldzc/, zfld/, article pages) timeout
+- taikang.gov.cn / runan.gov.cn inner pages (ldzc/, zfld/, article pages) timeout/404
 - Google/Bing search results blocked by region/network
