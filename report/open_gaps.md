@@ -1,6 +1,31 @@
 # Open Gaps Registry
 > Last updated: 2026-07-24
 
+## New Gaps from 洪山区 Investigation
+
+### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 待确认 | 洪山区委书记 | 姓名、性别、出生年份、籍贯、教育、完整履历 | 2026-07-24 | 洪山区政府网站(www.hongshan.gov.cn)仅公开政府领导信息，区委领导页面不可达 |
+| 刘华珍 | 洪山区长 | 出生年份、籍贯、教育、性别、完整履历 | 2026-07-24 | 官网确认职务和分工，但无个人简介页面 |
+
+### ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 洪山区委常委班子 | 完整名单和具体分工 | 2026-07-24 | 区政府网站仅公开区长和三位副区长，无党委常委信息 |
+| 洪山区人大常委会主任 | 姓名和完整履历 | 2026-07-24 | 完全未知 |
+| 洪山区政协主席 | 姓名和完整履历 | 2026-07-24 | 完全未知 |
+| 许永周/田燕/陈京 | 出生年份、籍贯、教育、履历 | 2026-07-24 | 三位副区长姓名确认于官网，但无详细信息 |
+
+### ⭐⭐ Low
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 洪山区经济发展数据 | 2026-07-24 | 洪山是大学之城(武汉大学城)，科技和创新经济为主 |
+| 前任区委书记去向 | 2026-07-24 | 无法确认前任信息 |
+
 ## New Gaps from 青山区 Investigation
 
 ### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
