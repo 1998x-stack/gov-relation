@@ -1,146 +1,305 @@
 {
   "schema_version": "1.0",
-  "identity": "哈增瑞",
-  "date_generated": "2026-07-24",
-  "investigation": "hebei_新华区",
-  "person_id": "cangzhou_ha_zengrui",
-  "province": "河北省",
-  "city": "沧州市",
-  "area": "新华区",
-  "current_position": "沧州市新华区委副书记、区长",
-  "basic_info": {
-    "name": "哈增瑞",
-    "gender": null,
-    "ethnicity": "汉族（推测）",
-    "birth": null,
-    "birthplace": null,
-    "native_place": null,
-    "education": null,
-    "party_join": "中共党员",
-    "work_start": null,
-    "photo_url": null
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "沧州市",
+    "region": "新华区",
+    "job": "区长",
+    "task_id": "hebei_新华区",
+    "time_focus": "current (~2024/2025–2026)"
   },
-  "current_position_detail": {
-    "title": "沧州市新华区委副书记、区长",
-    "org": "新华区人民政府",
-    "start_date": "约2024/2025",
-    "rank": "正处级",
-    "confidence": "confirmed"
+  "identity": {
+    "person_id": "hebei_cangzhou_xinhua_ha_zengrui",
+    "name": "哈增瑞",
+    "aliases": [],
+    "gender": "待查",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": "http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml"
+    }
+  },
+  "current_status": {
+    "current_post": "沧州市新华区委副书记、区长",
+    "current_org": "新华区人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
   },
   "career_timeline": [
     {
-      "period": "约2024/2025-present",
-      "title": "沧州市新华区委副书记、区长",
+      "start": "约2024/2025",
+      "end": "present",
       "org": "新华区人民政府",
+      "title": "沧州市新华区委副书记、区长",
+      "level": "县处级",
+      "location": "河北省沧州市新华区",
+      "system": "government",
       "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "政府网站领导介绍页面2025-01-16发布。接替陈国帮。来源: http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml",
       "confidence": "confirmed",
-      "source": "新华区政府网站领导介绍页面（2025-01-16发布）"
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到任新华区长前的全部履历（出生、籍贯、教育背景、此前任何职务）。所有搜索渠道（Exa限流、Baidu 403、Google被屏蔽）均不可用。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [],
+  "relationships": [
+    {
+      "person": "金培元",
+      "person_id": "hebei_cangzhou_xinhua_jin_peiyuan",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "党政主要领导搭档。2026-05-02 新闻确认二人共同带队督导调研。",
+      "overlap_org": "中共沧州市新华区委员会 / 新华区人民政府",
+      "overlap_period": "约2024/2025至今",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "罗宵",
+      "person_id": "hebei_cangzhou_xinhua_luo_xiao",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "区长与常务副区长。罗宵协助哈增瑞分管审计局。",
+      "overlap_org": "新华区人民政府",
+      "overlap_period": "约2024/2025至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "张俊峰",
+      "person_id": "hebei_cangzhou_xinhua_zhang_junfeng",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区长与副区长（公安分局局长），区政府班子成员。",
+      "overlap_org": "新华区人民政府",
+      "overlap_period": "待查",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    },
+    {
+      "person": "马俊亮",
+      "person_id": "hebei_cangzhou_xinhua_ma_junliang",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区长与副区长，区政府班子成员。",
+      "overlap_org": "新华区人民政府",
+      "overlap_period": "待查",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S005"]
+    },
+    {
+      "person": "陈思文",
+      "person_id": "hebei_cangzhou_xinhua_chen_siwen",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区长与副区长，区政府班子成员。",
+      "overlap_org": "新华区人民政府",
+      "overlap_period": "待查",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S006"]
+    },
+    {
+      "person": "白丽英",
+      "person_id": "hebei_cangzhou_xinhua_bai_liying",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区长与副区长，区政府班子成员。",
+      "overlap_org": "新华区人民政府",
+      "overlap_period": "待查",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S007"]
+    },
+    {
+      "person": "陈国帮",
+      "person_id": "hebei_cangzhou_xinhua_chen_guobang",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "接替陈国帮任新华区区长。",
+      "overlap_org": "新华区人民政府",
+      "overlap_period": "约2024/2025交接",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026-05-02",
+      "domain": "public_security",
+      "achievement_or_event": "带队督导调研，强调'九小'场所、人员密集场所及高层建筑消防安全排查整治，食品安全全链条监管，值班值守和应急响应。",
+      "role_in_event": "区长，共同带队",
+      "measurable_outcome": "部署消防安全、食品安全和应急值守等重点工作",
+      "location": "沧州市新华区",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["沧州市"],
+    "promotion_velocity": {
+      "summary": "履历完全未知，无法评估晋升速度。",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "pragmatic",
+        "evidence": "调研讲话聚焦具体领域：消防安全排查、全链条食品监管、值班值守，体现务实工作导向。",
+        "confidence": "plausible",
+        "source_ids": ["S002"]
+      }
+    ],
+    "speech_themes": ["安全风险防范", "民生保障", "精细化管理"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "政府网站新闻中未发现哈增瑞涉及纪律处分、审计问题或负面报道。但因互联网搜索严重受限，此结论不具确认效力。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
     }
   ],
   "source_register": [
     {
+      "id": "S001",
+      "title": "哈增瑞（区委副书记、区长）领导介绍页面",
       "url": "http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml",
-      "type": "政府网站",
-      "content": "哈增瑞（区委副书记、区长）领导介绍页面",
-      "accessibility": "accessible"
+      "publisher": "新华区人民政府",
+      "published_at": "2025-01-16",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认哈增瑞为区委副书记、区长，主持区政府全面工作"
     },
     {
+      "id": "S002",
+      "title": "金培元 哈增瑞督导调研节前重点工作",
       "url": "http://www.czxh.gov.cn/czxh/xhyw/202605/a35fcf41c2e94a6c841a0a389e999bf1.shtml",
-      "type": "政府网站",
-      "content": "金培元 哈增瑞督导调研节前重点工作 — 确认在任",
-      "accessibility": "accessible"
+      "publisher": "新华区人民政府",
+      "published_at": "2026-05-02",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认哈增瑞在任，与书记共同调研"
+    },
+    {
+      "id": "S003",
+      "title": "罗宵（区委常委、区政府常务副区长）领导介绍页面",
+      "url": "http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml",
+      "publisher": "新华区人民政府",
+      "published_at": "2025-04-29",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "罗宵协助哈增瑞分管审计局"
+    },
+    {
+      "id": "S004",
+      "title": "张俊峰（区政府副区长）领导介绍页面",
+      "url": "http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml",
+      "publisher": "新华区人民政府",
+      "published_at": "2025-04-29",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认张俊峰为副区长（公安分局局长）"
+    },
+    {
+      "id": "S005",
+      "title": "马俊亮（区政府副区长）领导介绍页面",
+      "url": "http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml",
+      "publisher": "新华区人民政府",
+      "published_at": "2025-04-29",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认马俊亮为副区长"
+    },
+    {
+      "id": "S006",
+      "title": "陈思文（区政府副区长）领导介绍页面",
+      "url": "http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml",
+      "publisher": "新华区人民政府",
+      "published_at": "2025-04-29",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认陈思文为副区长"
+    },
+    {
+      "id": "S007",
+      "title": "白丽英（区政府副区长）领导介绍页面",
+      "url": "http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml",
+      "publisher": "新华区人民政府",
+      "published_at": "2025-04-29",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认白丽英为副区长（女）"
     }
   ],
-  "relationships": [
-    {
-      "related_person": "金培元",
-      "relation_type": "superior_subordinate",
-      "context": "党政主要领导搭档。金培元为区委书记，哈增瑞为区长。",
-      "confidence": "confirmed",
-      "source": "新华区政府网站 2026-05-02 新闻"
-    },
-    {
-      "related_person": "罗宵",
-      "relation_type": "superior_subordinate",
-      "context": "区长与常务副区长。罗宵协助哈增瑞分管审计局。",
-      "confidence": "confirmed",
-      "source": "新华区政府网站领导介绍页面"
-    },
-    {
-      "related_person": "张俊峰",
-      "relation_type": "superior_subordinate",
-      "context": "区长与副区长",
-      "confidence": "confirmed",
-      "source": "新华区政府网站"
-    },
-    {
-      "related_person": "马俊亮",
-      "relation_type": "superior_subordinate",
-      "context": "区长与副区长",
-      "confidence": "confirmed",
-      "source": "新华区政府网站"
-    },
-    {
-      "related_person": "陈思文",
-      "relation_type": "superior_subordinate",
-      "context": "区长与副区长",
-      "confidence": "confirmed",
-      "source": "新华区政府网站"
-    },
-    {
-      "related_person": "白丽英",
-      "relation_type": "superior_subordinate",
-      "context": "区长与副区长",
-      "confidence": "confirmed",
-      "source": "新华区政府网站"
-    },
-    {
-      "related_person": "陈国帮",
-      "relation_type": "predecessor_successor",
-      "context": "接替陈国帮任新华区区长",
-      "confidence": "confirmed",
-      "source": "政府网站领导列表变化推断"
-    }
-  ],
-  "governance_profile": {
-    "known_focus_areas": [
-      "消防安全（九小场所、人员密集场所、高层建筑）",
-      "食品安全（采购、储存、销售全链条监管）",
-      "值班值守与应急响应"
-    ],
-    "notable_public_appearances": [
-      "2026-05-02: 与区委书记金培元共同督导调研节前重点工作"
-    ],
-    "governance_style": null,
-    "key_initiatives": []
-  },
-  "professional_background": {
-    "previous_positions": [],
-    "education_history": [],
-    "specialties": []
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "全部身份信息（出生、籍贯、教育）及任区长前的全部职业经历均因网络搜索严重受限而完全未知。"
   },
   "open_questions": [
     {
-      "question": "哈增瑞的出生年份、籍贯、教育背景",
-      "priority": "⭐⭐⭐⭐⭐",
-      "suggested_search": "Baidu Baike 哈增瑞；沧州市委组织部任前公示"
+      "priority": "critical",
+      "question": "哈增瑞的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "核心领导的基本身份信息是关系网络分析和去重的基础。",
+      "suggested_queries": ["哈增瑞 简历 新华区", "哈增瑞 诞生（出生）", "哈增瑞 任前公示"],
+      "last_attempted": "2026-07-24"
     },
     {
-      "question": "哈增瑞任新华区长前的早期履历",
-      "priority": "⭐⭐⭐⭐⭐",
-      "suggested_search": "哈增瑞 简历 沧州；哈增瑞曾任职务"
+      "priority": "critical",
+      "question": "哈增瑞在任新华区长前的全部职业经历是什么？此前在哪个部门/县区工作？",
+      "why_it_matters": "了解其来路是发现跨区关系和网络联系的关键。",
+      "suggested_queries": ["哈增瑞 此前 担任", "哈增瑞 沧州 任职"],
+      "last_attempted": "2026-07-24"
     },
     {
-      "question": "哈增瑞的具体上任时间",
-      "priority": "⭐⭐⭐⭐",
-      "suggested_search": "哈增瑞 任新华区区长 沧州市人大常委会"
-    },
-    {
-      "question": "陈国帮的去向",
-      "priority": "⭐⭐⭐⭐",
-      "suggested_search": "陈国帮 沧州 调任"
+      "priority": "high",
+      "question": "哈增瑞何时正式任新华区区长？具体的任命公告是什么？",
+      "why_it_matters": "确定党政主要领导交接时间线。",
+      "suggested_queries": ["哈增瑞 任命 新华区长 人大常委会"],
+      "last_attempted": "2026-07-24"
     }
-  ],
-  "confidence_overall": "partial",
-  "notes": "哈增瑞的区长身份已通过新华区政府网站领导介绍页面（2025-01-16）和 2026-05-02 新闻双重确认。但个人履历信息完全未知。哈增瑞接替的是陈国帮，具体交接时间有待查证。"
+  ]
 }
