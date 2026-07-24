@@ -32,7 +32,6 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# When run from data/tmp/hebei_桥西区/, resolve repo root three levels up
 _SCRIPT_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _SCRIPT_DIR.parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT))
@@ -42,7 +41,7 @@ from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 SLUG = "桥西区"
 
-_STAGING_DIR = _SCRIPT_DIR  # data/tmp/hebei_桥西区/
+_STAGING_DIR = _SCRIPT_DIR
 DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
 GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
 
@@ -54,7 +53,7 @@ import sqlite3  # noqa: F811
 
 persons = [
     # ════════════════════════════════════════
-    # 区委领导 (Party Committee)
+    # 区委领导 (Party Committee) - 12人
     # ════════════════════════════════════════
     {
         "id": 1,
@@ -88,7 +87,9 @@ persons = [
         "current_post": "桥西区委副书记、区长",
         "current_org": "桥西区人民政府",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(第十二次党代会开幕, 戈录伟主持)"),
+                    "(第十二次党代会开幕, 戈录伟主持); "
+                    "http://www.zjkqxq.gov.cn/single/98/45066.html "
+                    "(政府领导页面)"),
     },
     {
         "id": 3,
@@ -104,7 +105,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 4,
@@ -120,7 +121,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 5,
@@ -136,7 +137,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 6,
@@ -152,7 +153,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 7,
@@ -184,7 +185,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 9,
@@ -200,7 +201,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 10,
@@ -216,7 +217,7 @@ persons = [
         "current_post": "区委常委",
         "current_org": "中共张家口市桥西区委员会",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/12/96126.html "
-                    "(十二次党代会主席团成员/执行主席)"),
+                    "(十二次党代会执行主席)"),
     },
     {
         "id": 11,
@@ -238,7 +239,7 @@ persons = [
         "id": 12,
         "name": "杨巍洁",
         "gender": "",
-        "ethnicity": "",
+        "ethnicity": "汉族",
         "birth": "",
         "birthplace": "",
         "native_place": "",
@@ -266,7 +267,7 @@ persons = [
         "education": "",
         "party_join": "中共党员",
         "work_start": "",
-        "current_post": "副区长",
+        "current_post": "副区长（区政府党组成员）",
         "current_org": "桥西区人民政府",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/98/55582.html "
                     "(副区长分工及履历)"),
@@ -298,7 +299,7 @@ persons = [
         "education": "",
         "party_join": "中共党员",
         "work_start": "",
-        "current_post": "副区长",
+        "current_post": "副区长（区政府党组成员）",
         "current_org": "桥西区人民政府",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/98/60237.html "
                     "(副区长分工及履历)"),
@@ -312,12 +313,12 @@ persons = [
         "birthplace": "",
         "native_place": "",
         "education": "",
-        "party_join": "中共党员",
+        "party_join": "",
         "work_start": "",
         "current_post": "副区长",
         "current_org": "桥西区人民政府",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/98/55577.html "
-                    "(副区长分工及履历)"),
+                    "(副区长分工及履历; 非中共党员)"),
     },
     {
         "id": 17,
@@ -330,7 +331,7 @@ persons = [
         "education": "",
         "party_join": "中共党员",
         "work_start": "",
-        "current_post": "副区长",
+        "current_post": "副区长（区政府党组成员）",
         "current_org": "桥西区人民政府",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/98/45061.html "
                     "(副区长分工及履历)"),
@@ -354,6 +355,22 @@ persons = [
     },
     {
         "id": 19,
+        "name": "高军",
+        "gender": "",
+        "ethnicity": "",
+        "birth": "",
+        "birthplace": "",
+        "native_place": "",
+        "education": "",
+        "party_join": "中共党员",
+        "work_start": "",
+        "current_post": "区政协主席",
+        "current_org": "政协桥西区委员会",
+        "source": ("官方: http://www.zjkqxq.gov.cn/single/22/94768.html "
+                    "(政协桥西区十届七次会议)"),
+    },
+    {
+        "id": 20,
         "name": "李明",
         "gender": "",
         "ethnicity": "",
@@ -363,7 +380,7 @@ persons = [
         "education": "",
         "party_join": "中共党员",
         "work_start": "",
-        "current_post": "区领导",
+        "current_post": "区领导（职务待查）",
         "current_org": "待查",
         "source": ("官方: http://www.zjkqxq.gov.cn/single/22/94810.html "
                     "(2026年2月冬春招商座谈会以区领导身份参加)"),
@@ -375,54 +392,12 @@ persons = [
 # ══════════════════════════════════════════════════════════════════════════════
 
 organizations = [
-    {
-        "id": 1,
-        "name": "中共张家口市桥西区委员会",
-        "type": "党委",
-        "level": "市辖区",
-        "parent": "中共张家口市委员会",
-        "location": "河北省张家口市桥西区",
-    },
-    {
-        "id": 2,
-        "name": "桥西区人民政府",
-        "type": "政府",
-        "level": "市辖区",
-        "parent": "张家口市人民政府",
-        "location": "河北省张家口市桥西区",
-    },
-    {
-        "id": 3,
-        "name": "中共张家口市桥西区纪律检查委员会",
-        "type": "纪委",
-        "level": "市辖区",
-        "parent": "中共张家口市纪律检查委员会",
-        "location": "河北省张家口市桥西区",
-    },
-    {
-        "id": 4,
-        "name": "桥西区人大常委会",
-        "type": "人大",
-        "level": "市辖区",
-        "parent": "张家口市人大常委会",
-        "location": "河北省张家口市桥西区",
-    },
-    {
-        "id": 5,
-        "name": "政协桥西区委员会",
-        "type": "政协",
-        "level": "市辖区",
-        "parent": "政协张家口市委员会",
-        "location": "河北省张家口市桥西区",
-    },
-    {
-        "id": 6,
-        "name": "张家口市公安局桥西分局",
-        "type": "政府",
-        "level": "区直部门",
-        "parent": "张家口市公安局",
-        "location": "河北省张家口市桥西区",
-    },
+    {"id": 1, "name": "中共张家口市桥西区委员会", "type": "党委", "level": "市辖区", "parent": "中共张家口市委员会", "location": "河北省张家口市桥西区"},
+    {"id": 2, "name": "桥西区人民政府", "type": "政府", "level": "市辖区", "parent": "张家口市人民政府", "location": "河北省张家口市桥西区"},
+    {"id": 3, "name": "中共张家口市桥西区纪律检查委员会", "type": "纪委", "level": "市辖区", "parent": "中共张家口市纪律检查委员会", "location": "河北省张家口市桥西区"},
+    {"id": 4, "name": "桥西区人大常委会", "type": "人大", "level": "市辖区", "parent": "张家口市人大常委会", "location": "河北省张家口市桥西区"},
+    {"id": 5, "name": "政协桥西区委员会", "type": "政协", "level": "市辖区", "parent": "政协张家口市委员会", "location": "河北省张家口市桥西区"},
+    {"id": 6, "name": "张家口市公安局桥西分局", "type": "政府", "level": "区直部门", "parent": "张家口市公安局", "location": "河北省张家口市桥西区"},
 ]
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -430,35 +405,32 @@ organizations = [
 # ══════════════════════════════════════════════════════════════════════════════
 
 positions = [
-    # 区委领导
     {"person_id": 1, "org_id": 1, "title": "桥西区委书记", "start": "2026-06", "end": "至今", "rank": "正处级", "note": "2026年6月前后由区长转任；7月第十二次党代会连任"},
-    {"person_id": 1, "org_id": 2, "title": "桥西区区长", "start": "", "end": "2026-06", "rank": "正处级", "note": "2026年2月仍为区长；任区长起始时间待查"},
-    {"person_id": 1, "org_id": 1, "title": "桥西区委副书记", "start": "", "end": "2026-06", "rank": "副处级", "note": "区长同时任区委副书记"},
+    {"person_id": 1, "org_id": 2, "title": "桥西区区长", "start": "?", "end": "2026-06", "rank": "正处级", "note": "任区长起始时间待查"},
+    {"person_id": 1, "org_id": 1, "title": "桥西区委副书记", "start": "?", "end": "2026-06", "rank": "副处级", "note": "区长同时任区委副书记"},
     {"person_id": 2, "org_id": 2, "title": "桥西区区长", "start": "2026-07", "end": "至今", "rank": "正处级", "note": "第十二次党代会执行主席并主持开幕式"},
     {"person_id": 2, "org_id": 1, "title": "桥西区委副书记", "start": "2026-07", "end": "至今", "rank": "副处级", "note": ""},
-    {"person_id": 3, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 4, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 5, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 6, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 7, "org_id": 3, "title": "桥西区纪委书记", "start": "", "end": "至今", "rank": "副处级", "note": "十二届纪委第一次全会当选；受主席团委托主持会议"},
-    {"person_id": 7, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": ""},
-    {"person_id": 8, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 9, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 10, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
-    {"person_id": 11, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "十二次党代会主席团成员，在主席台就座"},
-    {"person_id": 12, "org_id": 2, "title": "桥西区常务副区长", "start": "", "end": "至今", "rank": "副处级", "note": "区委常委、区政府党组副书记"},
-    {"person_id": 12, "org_id": 1, "title": "桥西区委常委", "start": "", "end": "至今", "rank": "副处级", "note": "主席台就座"},
-    # 区政府领导
-    {"person_id": 13, "org_id": 2, "title": "桥西区副区长", "start": "", "end": "至今", "rank": "副处级", "note": "区政府党组成员；招商引资、商务、工信、园区建设等"},
-    {"person_id": 14, "org_id": 2, "title": "桥西区副区长", "start": "", "end": "至今", "rank": "副处级", "note": "区政府党组成员，兼公安分局局长"},
-    {"person_id": 14, "org_id": 6, "title": "桥西公安分局局长", "start": "", "end": "至今", "rank": "正科级", "note": "党委书记、局长、督察长"},
-    {"person_id": 15, "org_id": 2, "title": "桥西区副区长", "start": "", "end": "至今", "rank": "副处级", "note": "区政府党组成员；农业农村、林业、水务、生态环境等"},
-    {"person_id": 16, "org_id": 2, "title": "桥西区副区长", "start": "", "end": "至今", "rank": "副处级", "note": "市场监管、教育体育科技、卫生健康、文旅等"},
-    {"person_id": 17, "org_id": 2, "title": "桥西区副区长", "start": "", "end": "至今", "rank": "副处级", "note": "区政府党组成员；住建、城管、自然资源规划等"},
-    # 前任领导
-    {"person_id": 18, "org_id": 1, "title": "桥西区委书记", "start": "", "end": "2026-06", "rank": "正处级", "note": "2026年5月13日仍为书记；约6月离任；去向待查"},
-    # 其他区领导
-    {"person_id": 19, "org_id": 1, "title": "区领导", "start": "", "end": "至今", "rank": "", "note": "2026年2月参加冬春招商座谈会; 具体职务待查"},
+    {"person_id": 3, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 4, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 5, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 6, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 7, "org_id": 3, "title": "桥西区纪委书记", "start": "?", "end": "至今", "rank": "副处级", "note": "十二届纪委第一次全会当选"},
+    {"person_id": 7, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": ""},
+    {"person_id": 8, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 9, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 10, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会执行主席"},
+    {"person_id": 11, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": "十二次党代会主席团成员"},
+    {"person_id": 12, "org_id": 2, "title": "桥西区常务副区长", "start": "?", "end": "至今", "rank": "副处级", "note": "区委常委、区政府党组副书记"},
+    {"person_id": 12, "org_id": 1, "title": "桥西区委常委", "start": "?", "end": "至今", "rank": "副处级", "note": ""},
+    {"person_id": 13, "org_id": 2, "title": "桥西区副区长", "start": "?", "end": "至今", "rank": "副处级", "note": "区政府党组成员；招商引资、商务、工信、园区建设、供热等"},
+    {"person_id": 14, "org_id": 2, "title": "桥西区副区长", "start": "?", "end": "至今", "rank": "副处级", "note": "区政府党组成员，兼公安分局局长"},
+    {"person_id": 14, "org_id": 6, "title": "桥西公安分局局长", "start": "?", "end": "至今", "rank": "正科级", "note": "党委书记、局长、督察长"},
+    {"person_id": 15, "org_id": 2, "title": "桥西区副区长", "start": "?", "end": "至今", "rank": "副处级", "note": "区政府党组成员；农业农村、林业、水务、生态环境、民政等"},
+    {"person_id": 16, "org_id": 2, "title": "桥西区副区长", "start": "?", "end": "至今", "rank": "副处级", "note": "市场监管、教育体育科技、卫生健康、医保、文旅等"},
+    {"person_id": 17, "org_id": 2, "title": "桥西区副区长", "start": "?", "end": "至今", "rank": "副处级", "note": "区政府党组成员；住建、城管、自然资源规划、交通运输、社区建设等"},
+    {"person_id": 18, "org_id": 1, "title": "桥西区委书记", "start": "?", "end": "2026-06", "rank": "正处级", "note": "2026年5月13日仍为书记；约6月离任；去向待查"},
+    {"person_id": 19, "org_id": 5, "title": "桥西区政协主席", "start": "?", "end": "至今", "rank": "正处级", "note": "政协桥西区第十届委员会主席、党组书记"},
+    {"person_id": 20, "org_id": 1, "title": "区领导（职务待查）", "start": "?", "end": "至今", "rank": "", "note": "2026年2月参加冬春招商座谈会；具体职务待查"},
 ]
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -466,9 +438,7 @@ positions = [
 # ══════════════════════════════════════════════════════════════════════════════
 
 relationships = [
-    # 党政一把手
     {"person_a": 1, "person_b": 2, "type": "overlap", "context": "区委书记与区长党政工作搭档关系，共同担任第十二次党代会执行主席", "overlap_org": "桥西区", "overlap_period": "2026-"},
-    # 区委常委班子
     {"person_a": 1, "person_b": 3, "type": "overlap", "context": "区委书记与区委常委班子成员", "overlap_org": "中共桥西区委", "overlap_period": ""},
     {"person_a": 1, "person_b": 4, "type": "overlap", "context": "区委书记与区委常委班子成员", "overlap_org": "中共桥西区委", "overlap_period": ""},
     {"person_a": 1, "person_b": 5, "type": "overlap", "context": "区委书记与区委常委班子成员", "overlap_org": "中共桥西区委", "overlap_period": ""},
@@ -479,16 +449,13 @@ relationships = [
     {"person_a": 1, "person_b": 10, "type": "overlap", "context": "区委书记与区委常委班子成员", "overlap_org": "中共桥西区委", "overlap_period": ""},
     {"person_a": 1, "person_b": 11, "type": "overlap", "context": "区委书记与区委常委班子成员", "overlap_org": "中共桥西区委", "overlap_period": ""},
     {"person_a": 1, "person_b": 12, "type": "overlap", "context": "区委书记与常务副区长", "overlap_org": "中共桥西区委/区政府", "overlap_period": ""},
-    # 前任与继任
-    {"person_a": 1, "person_b": 18, "type": "predecessor_successor", "context": "左克平接替尚秀伟任桥西区委书记", "overlap_org": "中共桥西区委", "overlap_period": "2026-06"},
-    # 区长与副区长
     {"person_a": 2, "person_b": 12, "type": "overlap", "context": "区长与常务副区长工作搭档", "overlap_org": "桥西区政府", "overlap_period": ""},
     {"person_a": 2, "person_b": 13, "type": "overlap", "context": "区长与副区长工作搭档", "overlap_org": "桥西区政府", "overlap_period": ""},
     {"person_a": 2, "person_b": 14, "type": "overlap", "context": "区长与副区长工作搭档", "overlap_org": "桥西区政府", "overlap_period": ""},
     {"person_a": 2, "person_b": 15, "type": "overlap", "context": "区长与副区长工作搭档", "overlap_org": "桥西区政府", "overlap_period": ""},
     {"person_a": 2, "person_b": 16, "type": "overlap", "context": "区长与副区长工作搭档", "overlap_org": "桥西区政府", "overlap_period": ""},
     {"person_a": 2, "person_b": 17, "type": "overlap", "context": "区长与副区长工作搭档", "overlap_org": "桥西区政府", "overlap_period": ""},
-    # 前任区委书记与副区长（共事时期）
+    {"person_a": 1, "person_b": 18, "type": "predecessor_successor", "context": "左克平接替尚秀伟任桥西区委书记", "overlap_org": "中共桥西区委", "overlap_period": "2026-06"},
     {"person_a": 18, "person_b": 1, "type": "superior_subordinate", "context": "尚秀伟为区委书记时，左克平为区长", "overlap_org": "中共桥西区委/区政府", "overlap_period": "至2026-06"},
     {"person_a": 18, "person_b": 12, "type": "overlap", "context": "前任书记与常务副区长", "overlap_org": "中共桥西区委", "overlap_period": ""},
 ]

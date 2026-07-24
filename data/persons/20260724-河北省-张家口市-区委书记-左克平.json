@@ -7,7 +7,7 @@
     "region": "桥西区",
     "job": "区委书记",
     "task_id": "hebei_桥西区",
-    "time_focus": "当前任职"
+    "time_focus": "as of 2026-07-24 (二次调查)"
   },
   "identity": {
     "person_id": "hebei_zhangjiakou_qiaoxi_左克平_1",
@@ -24,7 +24,7 @@
     "dedupe_keys": {
       "name_birth": "",
       "name_birthplace": "",
-      "official_profile_url": "http://www.zjkqxq.gov.cn/"
+      "official_profile_url": "http://www.zjkqxq.gov.cn/single/98/45066.html"
     }
   },
   "current_status": {
@@ -40,7 +40,7 @@
   },
   "career_timeline": [
     {
-      "start": "待查",
+      "start": "?",
       "end": "2026-06",
       "org": "张家口市桥西区人民政府",
       "title": "张家口市桥西区委副书记、区长",
@@ -245,12 +245,16 @@
       {
         "signal": "强调解决干部'本领恐慌'问题",
         "evidence": "两优一先讲话明确指出'切实解决本领恐慌问题，将组织交派的各项任务做好做实'",
-        "source_ids": ["S003"]
+        "source_ids": [
+          "S003"
+        ]
       },
       {
         "signal": "强调整治形式主义、为基层减负",
         "evidence": "讲话明确'巩固拓展深入贯彻中央八项规定精神学习教育成果，整治形式主义为基层减负'",
-        "source_ids": ["S003"]
+        "source_ids": [
+          "S003"
+        ]
       }
     ],
     "caveat": "工作风格从公开党代会报告和讲话推断，非心理评估。"
@@ -347,51 +351,37 @@
   "confidence_summary": {
     "identity": "plausible",
     "current_role": "confirmed",
-    "career_completeness": "partial",
-    "relationship_confidence": "high",
-    "biggest_gap": "左克平的出生年份、出生地、学历、早期履历等基础身份信息在公开来源中不可得"
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "缺失完整工作履历（出生、籍贯、教育、此前任职）"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "左克平的出生年份和出生地是哪里？",
-      "why_it_matters": "人物身份识别和去重的基础字段",
+      "question": "左克平出生年月、籍贯、教育背景？",
+      "why_it_matters": "身份基本盘和干部画像核心信息",
       "suggested_queries": [
-        "左克平 出生",
-        "左克平 个人简历",
-        "左克平 河北 张家口"
+        "左克平 出生 年月",
+        "左克平 简历"
       ],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "critical",
-      "question": "左克平的教育背景是什么？",
-      "why_it_matters": "评估专业背景和能力画像",
+      "question": "左克平任桥西区长之前的全部工作履历？",
+      "why_it_matters": "关联左克平此前所在县区/部门的工作关系网络",
       "suggested_queries": [
-        "左克平 学历",
-        "左克平 毕业"
+        "左克平 曾任",
+        "左克平 任职经历"
       ],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "high",
-      "question": "左克平在2021年（或更早）任桥西区长之前的全部履历是什么？他之前在张家口市哪个部门/县区任职？",
-      "why_it_matters": "完整的职业履历是评估晋升路径和关系网络的基础",
+      "question": "左克平由区长转任区委书记的确切任命日期？",
+      "why_it_matters": "精确化人事变动时间线",
       "suggested_queries": [
-        "左克平 任职",
-        "左克平 履历",
-        "左克平 张家口 之前职务",
-        "桥西区 区长 任前公示 左克平"
-      ],
-      "last_attempted": "2026-07-24"
-    },
-    {
-      "priority": "high",
-      "question": "左克平何时开始担任桥西区区长？",
-      "why_it_matters": "明确区长任期起点，完善时间线",
-      "suggested_queries": [
-        "左克平 任桥西区长",
-        "桥西区 人大 任命 左克平"
+        "左克平 任桥西区委书记 公示"
       ],
       "last_attempted": "2026-07-24"
     }
