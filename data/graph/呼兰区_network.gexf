@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>哈尔滨市呼兰区领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="曹德友">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共呼兰区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="张磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p3" label="刘蕊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记"/>
+          <attvalue for="2" value="中共呼兰区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="任良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、常务副区长"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p5" label="邹青宇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长"/>
+          <attvalue for="2" value="中共呼兰区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p6" label="徐辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共呼兰区纪律检查委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="diamond"/>
+      </node>
+      <node id="p7" label="关巍">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、副区长"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="徐小燕">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共呼兰区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="李彤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p10" label="马金明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p11" label="张弘">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p12" label="张岐欣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+          <attvalue for="2" value="呼兰区人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p13" label="郭启才">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="呼兰区人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p14" label="董威江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="呼兰区人民代表大会常务委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p15" label="卢刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区领导"/>
+          <attvalue for="2" value="中共呼兰区委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p16" label="孟朝晖">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人民法院院长"/>
+          <attvalue for="2" value="呼兰区人民法院"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p17" label="付爱民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人民检察院检察长"/>
+          <attvalue for="2" value="呼兰区人民检察院"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="https://www.hulan.gov.cn/"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共呼兰区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="呼兰区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="中共呼兰区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="呼兰区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="呼兰区人民法院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100006" label="呼兰区人民检察院">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100007" label="中共呼兰区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100008" label="中共呼兰区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委主要负责人"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100001" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p3" target="o100001" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p4" target="o100001" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p5" target="o100001" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p6" target="o100001" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p7" target="o100001" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p8" target="o100001" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p2" target="o100002" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府主要负责人"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p4" target="o100002" label="常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o100002" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p9" target="o100002" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p10" target="o100002" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年4月任命"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p11" target="o100002" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月任命"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p6" target="o100003" label="纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p5" target="o100007" label="组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p8" target="o100008" label="宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="原副区长，2026年4月转任宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p12" target="o100004" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p13" target="o100004" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p14" target="o100004" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p16" target="o100005" label="院长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p17" target="o100006" label="检察长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友（区委书记）与张磊（区长）在区委常委会和区政府班子共事"/>
+          <attvalue for="2" value="中共呼兰区委/呼兰区人民政府"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与刘蕊在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与任良在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与邹青宇在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与徐辉在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e28" source="p1" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与关巍在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e29" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与徐小燕在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e30" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张磊（区长）与任良（常务副区长）在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e31" source="p2" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张磊与关巍在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e32" source="p2" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张磊与李彤在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e33" source="p2" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张磊与马金明在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2026年4月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e34" source="p2" target="p11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张磊与张弘在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2026年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e35" source="p4" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任良（常务副区长）与关巍（副区长）在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e36" source="p4" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任良与李彤在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e37" source="p4" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任良与马金明在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2026年4月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e38" source="p4" target="p11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="任良与张弘在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2026年7月至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e39" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘蕊与任良在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e40" source="p3" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘蕊与邹青宇在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e41" source="p3" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘蕊与徐辉在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e42" source="p3" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘蕊与徐小燕在区委常委会共事"/>
+          <attvalue for="2" value="中共呼兰区委"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e43" source="p1" target="p12" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="曹德友与张岐欣在区委、区人大工作中协作"/>
+          <attvalue for="2" value="呼兰区"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e44" source="p2" target="p12" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张磊向区人大常委会报告工作并提请人事任免"/>
+          <attvalue for="2" value="呼兰区人民政府/区人大常委会"/>
+          <attvalue for="3" value="2025年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e45" source="p8" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="徐小燕曾任副区长（至2026年4月），后转任宣传部部长，曾与张磊在区政府班子共事"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年-2026年4月"/>
+        </attvalues>
+      </edge>
+      <edge id="e46" source="p8" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="徐小燕与任良在区政府班子共事至2026年4月"/>
+          <attvalue for="2" value="呼兰区人民政府"/>
+          <attvalue for="3" value="2025年-2026年4月"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
