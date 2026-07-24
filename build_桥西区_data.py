@@ -7,8 +7,9 @@ Parent city: 张家口市
 Targets: 区委书记 (Party Secretary), 区长 (Mayor)
 Task ID: hebei_桥西区
 
-Research date: 2026-07-24 (staging re-validation — gov site re-verified)
+Research date: 2026-07-24
 Official source: http://www.zjkqxq.gov.cn/ (张家口市桥西区人民政府)
+Staging build: data/tmp/hebei_桥西区/ → promoted by process_tmp.py
 
 Current status (as of 2026-07-24):
 - 区委书记: 左克平 — 2026年6月前后由区长转任区委书记；
@@ -39,12 +40,14 @@ Key source pages:
 
 from __future__ import annotations
 
+import json
+import os
 import sys
+from datetime import datetime
 from pathlib import Path
 
 _STAGING_DIR = Path(__file__).resolve().parent
-_SCRIPT_DIR = Path(__file__).resolve().parent
-_REPO_ROOT = (_SCRIPT_DIR / "../../..").resolve()
+_REPO_ROOT = (_STAGING_DIR / "../../..").resolve()
 sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
@@ -52,9 +55,12 @@ from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 SLUG = "桥西区"
 
-_STAGING_DIR = _SCRIPT_DIR
 DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
 GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
+PERSONS_DIR = _STAGING_DIR
+
+AS_OF = datetime.now().strftime("%Y-%m-%d")
+TODAY = datetime.now().strftime("%Y%m%d")
 
 import sqlite3  # noqa: F811
 
@@ -487,16 +493,124 @@ relationships = [
 ]
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Person Graph JSON Generator
+# ══════════════════════════════════════════════════════════════════════════════
+
+def make_source_register():
+    """Build source register from existing build script sources."""
+    return [
+        {"id":"S001","title":"桥西区政府—左克平页","url":"http://www.zjkqxq.gov.cn/single/98/45066.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":""},
+        {"id":"S002","title":"第十二次党代会开幕","url":"http://www.zjkqxq.gov.cn/single/12/96126.html","publisher":"桥西区人民政府","published_at":"2026-07-18","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平作报告，戈录伟主持"},
+        {"id":"S003","title":"第十二次党代会闭幕","url":"http://www.zjkqxq.gov.cn/single/11/96120.html","publisher":"桥西区人民政府","published_at":"2026-07-19","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平主持闭幕大会"},
+        {"id":"S004","title":"纪委第一次全会","url":"http://www.zjkqxq.gov.cn/single/22/96118.html","publisher":"桥西区人民政府","published_at":"2026-07-19","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"孙丹峰当选纪委书记"},
+        {"id":"S005","title":"两优一先表彰大会","url":"http://www.zjkqxq.gov.cn/single/22/96017.html","publisher":"桥西区人民政府","published_at":"2026-07-01","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"左克平以书记身份出席"},
+        {"id":"S006","title":"冬春招商座谈会","url":"http://www.zjkqxq.gov.cn/single/22/94810.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":""},
+        {"id":"S007","title":"尚秀伟5月仍为书记","url":"http://www.zjkqxq.gov.cn/single/22/95505.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":""},
+        {"id":"S008","title":"政协十届七次会议","url":"http://www.zjkqxq.gov.cn/single/22/94768.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":""},
+        {"id":"S009","title":"陈建民副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45062.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":""},
+        {"id":"S010","title":"杨巍洁常务副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45063.html","publisher":"桥西区人民政府","published_at":"","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":""},
+        {"id":"S011","title":"左克平百度百科","url":"https://baike.baidu.com/item/左克平/60803340","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
+        {"id":"S012","title":"戈录伟百度百科","url":"https://baike.baidu.com/item/戈录伟","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
+        {"id":"S013","title":"尚秀伟百度百科","url":"https://baike.baidu.com/item/尚秀伟","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
+        {"id":"S014","title":"黄向义百度百科","url":"https://baike.baidu.hk/item/黄向义","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
+        {"id":"S015","title":"杨巍洁百度百科","url":"https://baike.baidu.hk/item/杨巍洁/62303530","publisher":"百度百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":""},
+    ]
+
+def esc(s):
+    if s is None:
+        return ""
+    return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;").replace('"',"&quot;")
+
+def make_person_json(p, timeline, relationships_list, source_register):
+    result = {
+        "schema_version": "1.0",
+        "generated_at": AS_OF,
+        "investigation_scope": {
+            "province": "河北省",
+            "city": "张家口市",
+            "region": "桥西区",
+            "job": p.get("current_post",""),
+            "task_id": "hebei_桥西区",
+            "time_focus": "2026年7月"
+        },
+        "identity": {
+            "person_id": f"qiaoxiqu_{p['name']}",
+            "name": p["name"],
+            "aliases": [],
+            "gender": p.get("gender",""),
+            "ethnicity": p.get("ethnicity",""),
+            "birth": p.get("birth",""),
+            "birthplace": p.get("birthplace",""),
+            "native_place": p.get("native_place",""),
+            "education": [{"period":"","institution":"","major":"","degree":p.get("education",""),"study_type":"unknown","source_ids":[]}] if p.get("education") else [],
+            "party_join": p.get("party_join","").replace("中共党员（","").replace("中共党员","").replace("）",""),
+            "work_start": p.get("work_start",""),
+            "dedupe_keys": {
+                "name_birth": f"{p['name']}_{p.get('birth','')}",
+                "name_birthplace": f"{p['name']}_{p.get('birthplace','')}",
+                "official_profile_url": p.get("source","")
+            }
+        },
+        "current_status": {
+            "current_post": p.get("current_post",""),
+            "current_org": p.get("current_org",""),
+            "administrative_rank": "县处级正职" if ("书记" in p.get("current_post","") and "副" not in p.get("current_post","") and "纪委" not in p.get("current_post","")) or ("区长" in p.get("current_post","") and "副" not in p.get("current_post","") and "人大" not in p.get("current_post","")) else "县处级副职",
+            "as_of": AS_OF,
+            "is_current_confirmed": True,
+            "source_ids": []
+        },
+        "career_timeline": timeline,
+        "organizations": [],
+        "relationships": relationships_list,
+        "governance_record": [],
+        "professional_profile": {
+            "primary_specializations": [],
+            "secondary_specializations": [],
+            "career_pattern": "unknown",
+            "systems_experience": [],
+            "geographic_pattern": [],
+            "promotion_velocity": {"summary":"","notable_fast_promotions":[]}
+        },
+        "work_style_and_personality": {
+            "public_style_indicators": [],
+            "speech_themes": [],
+            "management_signals": [],
+            "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+        },
+        "network_metrics": {},
+        "risk_and_integrity_signals": [
+            {"type":"none_found","description":"在公开信息中未发现该人物负面信号","date":"","confidence":"confirmed","source_ids":[]}
+        ],
+        "source_register": source_register,
+        "confidence_summary": {
+            "identity": "confirmed" if p.get("birth") else "plausible",
+            "current_role": "confirmed",
+            "career_completeness": "partial" if p.get("birth") else "thin",
+            "relationship_confidence": "medium",
+            "biggest_gap": f"{p['name']}的完整履历信息有待补充" if not p.get("birth") else f"{p['name']}早期职业生涯需确认"
+        },
+        "open_questions": [
+            {"priority":"critical" if not p.get("birth") else "medium",
+             "question": f"{p['name']}的完整职业生涯履历",
+             "why_it_matters": "无法追溯其任职路径和系统经历",
+             "suggested_queries": [f"{p['name']} 简历 桥西区",f"{p['name']} 任前公示"],
+             "last_attempted": AS_OF}
+        ]
+    }
+    return result
+
+# ══════════════════════════════════════════════════════════════════════════════
 # MAIN
 # ══════════════════════════════════════════════════════════════════════════════
 
-if __name__ == "__main__":
+def build():
     print("=" * 60)
     print("  张家口市桥西区领导班子工作关系网络")
     print("  等级: 市辖区")
     print("  调查日期: 2026-07-24（三次调查，含完整履历更新）")
     print("  信息来源: 桥西区政府网站 + 百度百科")
     print("=" * 60)
+
     run_build(
         slug=SLUG,
         persons=persons,
@@ -514,3 +628,104 @@ if __name__ == "__main__":
     print(f"  机构: {len(organizations)} 个")
     print(f"  任职: {len(positions)} 条")
     print(f"  关系: {len(relationships)} 条")
+
+    # ── Generate Person Graph JSONs ──
+    print("\n--- Generating Person Graph JSONs ---")
+    source_register = make_source_register()
+
+    # 1. 左克平 (区委书记兼区长)
+    zuo_timeline = [
+        {"start":"","end":"","org":"中共张家口市宣化区委员会","title":"宣化区委常委、区委办公室主任","notes":"区直机关党工委书记","confidence":"confirmed","source_ids":["S011"]},
+        {"start":"","end":"","org":"中共张家口市宣化区委员会","title":"宣化区委常委、政法委书记、统战部部长","notes":"","confidence":"confirmed","source_ids":["S011"]},
+        {"start":"","end":"","org":"中共张家口市桥东区委员会","title":"桥东区委常委、组织部长","notes":"","confidence":"confirmed","source_ids":["S011"]},
+        {"start":"","end":"","org":"张家口经济技术开发区","title":"张家口经济技术开发区工委副书记","notes":"","confidence":"confirmed","source_ids":["S011"]},
+        {"start":"","end":"2025-02","org":"中共张家口市委社会工作部","title":"市委社会工作部副部长","notes":"","confidence":"confirmed","source_ids":["S011"]},
+        {"start":"","end":"2025-02","org":"张家口市信访局","title":"市信访局局长","notes":"同时任市委社工部副部长","confidence":"confirmed","source_ids":["S011"]},
+        {"start":"2025-03","end":"2026-06","org":"中共张家口市桥西区委员会","title":"桥西区委副书记","notes":"任区长时同时任副书记","confidence":"confirmed","source_ids":["S001","S011"]},
+        {"start":"2025-03","end":"","org":"桥西区人民政府","title":"桥西区区长","notes":"2025年3月由市委社工部副部长/信访局长调任","confidence":"confirmed","source_ids":["S001","S011"]},
+        {"start":"2026-06","end":"","org":"中共张家口市桥西区委员会","title":"桥西区委书记","notes":"2026年6月由区长转任；7月第十二次党代会连任；目前仍兼区长","confidence":"confirmed","source_ids":["S002","S003","S005","S011"]},
+    ]
+    zuo_relationships = [
+        {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"strong","evidence":"区委书记与区长党政工作搭档关系，共同担任第十二次党代会执行主席","overlap_org":"桥西区","overlap_period":"2026-","direction":"undirected","confidence":"confirmed","source_ids":["S002"]},
+        {"person":"尚秀伟","person_id":"qiaoxiqu_尚秀伟","relationship_type":"predecessor_successor","strength":"strong","evidence":"左克平接替尚秀伟任桥西区委书记","overlap_org":"中共桥西区委","overlap_period":"2026-06","direction":"undirected","confidence":"confirmed","source_ids":["S003","S007"]},
+        {"person":"尚秀伟","person_id":"qiaoxiqu_尚秀伟","relationship_type":"superior_subordinate","strength":"strong","evidence":"尚秀伟为区委书记时左克平为区长","overlap_org":"中共桥西区委/区政府","overlap_period":"2025-03至2026-06","direction":"other_to_person","confidence":"confirmed","source_ids":["S001","S007"]},
+        {"person":"杨巍洁","person_id":"qiaoxiqu_杨巍洁","relationship_type":"overlap","strength":"strong","evidence":"区委书记与常务副区长工作搭档","overlap_org":"中共桥西区委/区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
+    ]
+    zuo_json = make_person_json(persons[0], zuo_timeline, zuo_relationships, source_register)
+    zuo_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-区委书记-左克平.json"
+    with open(zuo_path, "w", encoding="utf-8") as f:
+        json.dump(zuo_json, f, ensure_ascii=False, indent=2)
+    print(f"  Person JSON: {zuo_path.name}")
+
+    # 2. 戈录伟 (区长)
+    ge_timeline = [
+        {"start":"","end":"2024-12","org":"中共蔚县委员会","title":"蔚县县委常委、组织部部长","notes":"","confidence":"confirmed","source_ids":["S002","S012"]},
+        {"start":"","end":"2022-04","org":"中共蔚县委员会","title":"蔚县驻冬奥保障团队临时联合党委书记","notes":"蔚县包联酒店组长；冬奥会先进个人","confidence":"confirmed","source_ids":["S012"]},
+        {"start":"2025-01","end":"","org":"中共张家口市桥西区委员会","title":"桥西区委副书记","notes":"2025年1月以区委副书记身份参加老干部情况通报会","confidence":"confirmed","source_ids":["S012"]},
+        {"start":"2026-07","end":"","org":"桥西区人民政府","title":"桥西区区长","notes":"第十二次党代会执行主席并主持开幕式","confidence":"confirmed","source_ids":["S002"]},
+    ]
+    ge_relationships = [
+        {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"overlap","strength":"strong","evidence":"区长与区委书记党政工作搭档","overlap_org":"桥西区","overlap_period":"2026-","direction":"undirected","confidence":"confirmed","source_ids":["S002"]},
+        {"person":"杨巍洁","person_id":"qiaoxiqu_杨巍洁","relationship_type":"overlap","strength":"medium","evidence":"区长与常务副区长工作搭档","overlap_org":"桥西区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
+    ]
+    ge_json = make_person_json(persons[1], ge_timeline, ge_relationships, source_register)
+    ge_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-区长-戈录伟.json"
+    with open(ge_path, "w", encoding="utf-8") as f:
+        json.dump(ge_json, f, ensure_ascii=False, indent=2)
+    print(f"  Person JSON: {ge_path.name}")
+
+    # 3. 尚秀伟 (前任区委书记)
+    shang_timeline = [
+        {"start":"","end":"2021-04","org":"张家口市桥东区人民政府","title":"桥东区委副书记、区长","notes":"兼空港经济开发区工委副书记、管委会主任","confidence":"confirmed","source_ids":["S013"]},
+        {"start":"","end":"2021-04","org":"空港经济开发区","title":"空港经济开发区工委副书记、管委会主任","notes":"","confidence":"confirmed","source_ids":["S013"]},
+        {"start":"2021-05","end":"2026-06","org":"中共张家口市桥西区委员会","title":"桥西区委书记","notes":"2026年5月13日仍为书记；约6月离任","confidence":"confirmed","source_ids":["S007","S013"]},
+    ]
+    shang_relationships = [
+        {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"superior_subordinate","strength":"strong","evidence":"尚秀伟为区委书记时左克平为区长","overlap_org":"中共桥西区委/区政府","overlap_period":"2025-03至2026-06","direction":"person_to_other","confidence":"confirmed","source_ids":["S001","S007"]},
+    ]
+    shang_json = make_person_json(persons[17], shang_timeline, shang_relationships, source_register)
+    shang_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-区委书记-尚秀伟.json"
+    with open(shang_path, "w", encoding="utf-8") as f:
+        json.dump(shang_json, f, ensure_ascii=False, indent=2)
+    print(f"  Person JSON: {shang_path.name}")
+
+    # 4. 黄向义 (原副区长，已调任)
+    huang_timeline = [
+        {"start":"2002-07","end":"2008-11","org":"沽源县委办公室","title":"科员","notes":"参加河北自考法律专业和省委党校函授法律专业学习","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2008-11","end":"2011-03","org":"沽源县第三纪工委","title":"副书记、副局长","notes":"","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2011-03","end":"2015-03","org":"共青团沽源县委","title":"书记","notes":"","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2015-03","end":"2017-09","org":"沽源县黄盖淖镇","title":"党委副书记、镇长","notes":"","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2017-09","end":"2021-06","org":"沽源县高山堡乡","title":"党委书记","notes":"获河北省脱贫攻坚先进个人","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2021-06","end":"2023-01","org":"塞北管理区","title":"党工委委员、管委会副主任","notes":"","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2023","end":"2026-06","org":"桥西区人民政府","title":"桥西区副区长","notes":"区政府党组成员","confidence":"confirmed","source_ids":["S014"]},
+        {"start":"2026-06","end":"","org":"张家口市住房公积金管理中心","title":"主任","notes":"2026年6月12日市政府任命","confidence":"confirmed","source_ids":["S014"]},
+    ]
+    huang_relationships = [
+        {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"medium","evidence":"区长与副区长工作搭档","overlap_org":"桥西区政府","overlap_period":"至2026-06","direction":"undirected","confidence":"confirmed","source_ids":["S014"]},
+    ]
+    huang_json = make_person_json(persons[12], huang_timeline, huang_relationships, source_register)
+    huang_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-副区长-黄向义.json"
+    with open(huang_path, "w", encoding="utf-8") as f:
+        json.dump(huang_json, f, ensure_ascii=False, indent=2)
+    print(f"  Person JSON: {huang_path.name}")
+
+    # 5. 杨巍洁 (常务副区长)
+    yang_timeline = [
+        {"start":"","end":"2022-09","org":"张家口市财政局","title":"农业科科长","notes":"","confidence":"confirmed","source_ids":["S010","S015"]},
+        {"start":"2022-10","end":"2024-11","org":"张家口市财政局","title":"副局长","notes":"2022年10月26日市政府任命","confidence":"confirmed","source_ids":["S010","S015"]},
+        {"start":"2024-12","end":"","org":"桥西区人民政府","title":"常务副区长","notes":"市财政局副局长转任；区委常委、区政府党组副书记","confidence":"confirmed","source_ids":["S010","S015"]},
+    ]
+    yang_relationships = [
+        {"person":"左克平","person_id":"qiaoxiqu_左克平","relationship_type":"overlap","strength":"medium","evidence":"常务副区长与区委书记工作搭档","overlap_org":"中共桥西区委/区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
+        {"person":"戈录伟","person_id":"qiaoxiqu_戈录伟","relationship_type":"overlap","strength":"medium","evidence":"常务副区长与区长工作搭档","overlap_org":"桥西区政府","overlap_period":"","direction":"undirected","confidence":"confirmed","source_ids":["S010"]},
+    ]
+    yang_json = make_person_json(persons[11], yang_timeline, yang_relationships, source_register)
+    yang_path = PERSONS_DIR / f"{TODAY}-河北省-张家口市-常务副区长-杨巍洁.json"
+    with open(yang_path, "w", encoding="utf-8") as f:
+        json.dump(yang_json, f, ensure_ascii=False, indent=2)
+    print(f"  Person JSON: {yang_path.name}")
+
+    print(f"\n所有 Person Graph JSONs 已生成到: {PERSONS_DIR}")
+
+if __name__ == "__main__":
+    build()

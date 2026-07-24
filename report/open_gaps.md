@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (永清县 — Baidu accessible, Exa rate-limited, government site accessible)
+> Last updated: 2026-07-24 (新华区 — artifacts validated & promoted, all search channels still degraded: Exa rate-limited, Baidu 403, Jina timeout, Google blocked)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 
