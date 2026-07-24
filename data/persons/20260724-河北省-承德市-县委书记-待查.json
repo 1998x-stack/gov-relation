@@ -4,13 +4,13 @@
   "investigation_scope": {
     "province": "河北省",
     "city": "承德市",
-    "region": "承德县",
+    "region": "隆化县",
     "job": "县委书记",
-    "task_id": "hebei_承德县",
-    "time_focus": "as of 2026-07-24"
+    "task_id": "hebei_隆化县",
+    "time_focus": "2026-07-24"
   },
   "identity": {
-    "person_id": "chengdexian_county_party_secretary",
+    "person_id": "longhua_county_party_secretary_unknown",
     "name": "（待查）",
     "aliases": [],
     "gender": "",
@@ -22,31 +22,31 @@
     "party_join": "",
     "work_start": "",
     "dedupe_keys": {
-      "name_birth": "_",
-      "name_birthplace": "_",
-      "official_profile_url": "http://www.cdx.gov.cn"
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": ""
     }
   },
   "current_status": {
-    "current_post": "中共承德县委书记",
-    "current_org": "中共承德县委员会",
+    "current_post": "中共隆化县委书记",
+    "current_org": "中共隆化县委员会",
     "administrative_rank": "县处级正职",
     "as_of": "2026-07-24",
     "is_current_confirmed": false,
     "source_ids": []
   },
-  "career_timeline": [
+  "career_timeline": [],
+  "organizations": [
     {
-      "start": "unknown",
-      "end": "unknown",
-      "org": "履历缺口",
-      "title": "中共承德县委书记",
-      "notes": "2026年7月未能通过任何公开渠道确认承德县现任县委书记姓名及完整履历",
-      "confidence": "unverified",
+      "org_id": "longhua_county_party_committee",
+      "name": "中共隆化县委员会",
+      "type": "党委",
+      "level": "县处级",
+      "parent": "中共承德市委员会",
+      "location": "河北省承德市隆化县",
       "source_ids": []
     }
   ],
-  "organizations": [],
   "relationships": [],
   "governance_record": [],
   "professional_profile": {
@@ -56,7 +56,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "",
+      "summary": "完全未知",
       "notable_fast_promotions": []
     }
   },
@@ -64,87 +64,46 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    "caveat": "因网络访问受限，未获取到现任县委书记任何公开信息"
   },
   "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "No risk signals found through available public sources — identity not yet confirmed",
-      "date": "",
+      "description": "未找到任何风险信号——因未确认姓名，无法搜索",
+      "date": "2026-07-24",
       "confidence": "unverified",
       "source_ids": []
     }
   ],
-  "source_register": [
-    {
-      "id": "S001",
-      "title": "承德县人民政府网站",
-      "url": "http://www.cdx.gov.cn/",
-      "publisher": "承德县人民政府",
-      "published_at": "",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "County government site timed out; expected to host leadership roster"
-    },
-    {
-      "id": "S002",
-      "title": "承德市人民政府网站",
-      "url": "https://www.chengde.gov.cn/",
-      "publisher": "承德市人民政府",
-      "published_at": "",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "Parent city site accessible but no county leadership roster found via available URL patterns"
-    }
-  ],
+  "source_register": [],
   "confidence_summary": {
     "identity": "unverified",
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "Current county party secretary name and entire career history unknown"
+    "biggest_gap": "完全无法确认现任县委书记姓名，所有搜索渠道均受限"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "承德县现任县委书记姓名？",
-      "why_it_matters": "县委书记是关系网络核心节点，不确认则无法构建有效人物关系图",
-      "suggested_queries": [
-        "承德县 县委书记",
-        "承德县 现任 书记",
-        "site:cdx.gov.cn 县委书记"
-      ],
+      "question": "隆化县现任县委书记是谁？何时上任？",
+      "why_it_matters": "核心领导身份是网络分析的前提",
+      "suggested_queries": ["隆化县 县委书记 2025", "隆化县 县委领导 分工", "焦军 隆化 县委书记", "隆化县 现任县委书记 姓名"],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "critical",
-      "question": "承德县现任县委书记完整履历",
-      "why_it_matters": "无法评估县委书记的职业生涯路径、晋升速度及关系网络",
-      "suggested_queries": [
-        "承德县 县委书记 简历",
-        "承德县 书记 任职经历"
-      ],
+      "question": "县委书记的出生年月、籍贯、教育背景、完整履历",
+      "why_it_matters": "履职经历是关系网络分析的支柱",
+      "suggested_queries": ["隆化县委书记 简历", "隆化县委书记 百度百科"],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "high",
-      "question": "承德县委书记前任是谁？去向如何？",
-      "why_it_matters": "了解近期政治生态变动和干部交流路径",
-      "suggested_queries": [
-        "承德县 前 县委书记 调任"
-      ],
-      "last_attempted": "2026-07-24"
-    },
-    {
-      "priority": "medium",
-      "question": "承德县县委常委班子完整名单",
-      "why_it_matters": "县委常委是县级决策核心圈",
-      "suggested_queries": [
-        "承德县 县委常委"
-      ],
+      "question": "县委书记的前任是谁？前任的去向？",
+      "why_it_matters": "前任去向揭示晋升或问责路径",
+      "suggested_queries": ["隆化县 前任县委书记 去向", "隆化县 县委书记 调任"],
       "last_attempted": "2026-07-24"
     }
   ]
