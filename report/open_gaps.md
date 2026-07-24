@@ -1,6 +1,29 @@
 # Open Gaps Registry
 > Last updated: 2026-07-24
 
+## New Gaps from 蔡甸区 Investigation (2026-07-24)
+
+### ⭐⭐⭐⭐⭐ Critical
+| Person | Current Role | What's Missing | Notes |
+|--------|-------------|----------------|-------|
+| 余从斌 | 蔡甸区委书记 | 2021年前的完整履历（出生地、教育背景、入党时间、早期职务） | 1971年生，约50岁前履历完全未知 |
+| 黄元峰 | 蔡甸区长 | 2023年前全部履历（出生年份、出生地、教育、入党、早期职务） | 全部履历缺失 |
+
+### ⭐⭐⭐⭐ High
+| Person/Gap | What's Missing | Notes |
+|-----------|----------------|-------|
+| 蔡甸区委常委班子全员 | 除书记外其他8名常委的姓名和履历 | 全部待查 |
+| 蔡甸区副区长（4名） | 姓名和分工 | 全部待查 |
+| 陈新垓 | 2023年卸任后的去向 | 原蔡甸区委书记 |
+
+### ⭐⭐⭐ Medium
+| Gap | Notes |
+|-----|-------|
+| 蔡甸区与周边区县干部交流模式 | 无数据 |
+| 蔡甸区人大主任、政协主席 | 待查 |
+
+---
+
 ## New Gaps from 洪山区 Investigation
 
 ### ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
