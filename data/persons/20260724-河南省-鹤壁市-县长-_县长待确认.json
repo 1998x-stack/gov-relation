@@ -5,13 +5,13 @@
     "province": "河南省",
     "city": "鹤壁市",
     "region": "浚县",
-    "job": "浚县县委常委、常务副县长",
+    "job": "浚县人民政府县长",
     "task_id": "henan_浚县",
     "time_focus": "当前"
   },
   "identity": {
-    "person_id": "xunxian__常务副县长待确认",
-    "name": "（常务副县长待确认）",
+    "person_id": "xunxian__县长待确认",
+    "name": "（县长待确认）",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
@@ -22,13 +22,13 @@
     "party_join": "中共党员",
     "work_start": "",
     "dedupe_keys": {
-      "name_birth": "（常务副县长待确认）_",
-      "name_birthplace": "（常务副县长待确认）_",
+      "name_birth": "（县长待确认）_",
+      "name_birthplace": "（县长待确认）_",
       "official_profile_url": "https://www.xunxian.gov.cn/"
     }
   },
   "current_status": {
-    "current_post": "浚县县委常委、常务副县长",
+    "current_post": "浚县人民政府县长",
     "current_org": "浚县人民政府",
     "administrative_rank": "县处级正职",
     "as_of": "2026-07-24",
@@ -40,13 +40,27 @@
       "start": "unknown",
       "end": "present",
       "org": "浚县人民政府",
-      "title": "浚县县委常委、常务副县长",
+      "title": "浚县人民政府县长",
+      "level": "县处级正职",
+      "location": "河南省鹤壁市浚县",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "到任时间待确认",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共浚县委员会",
+      "title": "浚县县委副书记",
       "level": "县处级副职",
       "location": "河南省鹤壁市浚县",
       "system": "party",
       "rank": "县处级副职",
-      "is_key_promotion": true,
-      "notes": "待确认",
+      "is_key_promotion": false,
+      "notes": "兼任县委副书记",
       "confidence": "plausible",
       "source_ids": []
     }
@@ -58,9 +72,29 @@
       "type": "政府",
       "level": "县处级",
       "location": "河南省鹤壁市浚县"
+    },
+    {
+      "org_id": 1,
+      "name": "中共浚县委员会",
+      "type": "党委",
+      "level": "县处级",
+      "location": "河南省鹤壁市浚县"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "person": "（县委书记待确认）",
+      "person_id": "xunxian__县委书记待确认",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县委书记与县长党政主要领导搭档关系",
+      "overlap_org": "中共浚县委员会/浚县人民政府",
+      "overlap_period": "截至2026年7月",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
   "governance_record": [],
   "professional_profile": {
     "primary_specializations": [],
@@ -87,8 +121,8 @@
     "caveat": "工作风格推断需要公开报道、讲话和政府工作报告作为依据。当前阶段无法进行此分析。"
   },
   "network_metrics": {
-    "direct_connections": 0,
-    "memberships": 1
+    "direct_connections": 1,
+    "memberships": 2
   },
   "risk_and_integrity_signals": [
     {
