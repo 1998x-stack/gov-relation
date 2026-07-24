@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>OpenCode Sisyphus (china-gov-network skill)</creator>
+    <description>康保县领导关系网络 (Kangbao County Leadership Network) - 河北省张家口市</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+      <attribute id="8" title="level" type="string"/>
+      <attribute id="9" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="李军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共康保县委书记"/>
+          <attvalue for="2" value="中共康保县委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:李军约2021年由康保县长转任县委书记; 具体任命公告无法在线核实"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="周学勤">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县人民政府县长"/>
+          <attvalue for="2" value="康保县人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:周学勤约2021年任康保县长; 具体任命公告无法在线核实"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="刘雪松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张家口市人民政府副市长"/>
+          <attvalue for="2" value="张家口市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1969-10"/>
+          <attvalue for="6" value="推测:刘雪松曾任康保县委书记(约2019-2021),后任张家口市副市长"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="魏红侠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:魏红侠曾任康保县长(约2019-2021),后调任"/>
+        </attvalues>
+        <viz:color r="180" g="180" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="任亚飞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县委常委、纪委书记、县监委主任"/>
+          <attvalue for="2" value="中共康保县纪律检查委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中任亚飞以康保县纪委书记身份活动"/>
+        </attvalues>
+        <viz:color r="200" g="160" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="姚军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县委常委、组织部部长"/>
+          <attvalue for="2" value="中共康保县委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中姚军以康保县委组织部部长身份活动"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="胡万程">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县委常委、常务副县长"/>
+          <attvalue for="2" value="康保县人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中胡万程以康保县常务副县长身份活动"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="郭孟良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共康保县委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中郭孟良以康保县委宣传部部长身份活动"/>
+        </attvalues>
+        <viz:color r="0" g="180" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="王连满">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县委常委、政法委书记"/>
+          <attvalue for="2" value="中共康保县委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中王连满以康保县政法委书记身份活动"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p10" label="王金">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县人大常委会主任"/>
+          <attvalue for="2" value="康保县人民代表大会常务委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中王金以康保县人大主任身份活动"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="胡宝成">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="康保县政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议康保县委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="推测:公开报道中胡宝成以康保县政协主席身份活动"/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="1001" label="中共康保县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="河北张家口康保"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1002" label="康保县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="河北张家口康保"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1003" label="中共康保县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="纪律检查"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="河北张家口康保"/>
+        </attvalues>
+        <viz:color r="255" g="180" b="100"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1004" label="康保县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="人大"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="河北张家口康保"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1005" label="中国人民政治协商会议康保县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政协"/>
+          <attvalue for="8" value="县处级"/>
+          <attvalue for="9" value="河北张家口康保"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="1006" label="张家口市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="地厅级"/>
+          <attvalue for="9" value="河北张家口"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="1001" label="中共康保县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2021 - "/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="1002" label="康保县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任职务;具体任职时间不明"/>
+          <attvalue for="2" value=" - 2021"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="1002" label="康保县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2021 - "/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="1001" label="中共康保县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2019 - 2021"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="1006" label="张家口市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value="2021 - "/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="1002" label="康保县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="2019 - 2021"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p5" target="1003" label="康保县委常委、纪委书记、县监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p6" target="1001" label="康保县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p7" target="1002" label="康保县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p8" target="1001" label="康保县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p9" target="1001" label="康保县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p10" target="1004" label="康保县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p11" target="1005" label="康保县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="现任"/>
+          <attvalue for="2" value=" - "/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p3" target="p1" label="交接" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="刘雪松→李军 康保县委书记交接(约2021年)"/>
+          <attvalue for="2" value="中共康保县委员会"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="p2" label="交接" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李军→周学勤 康保县长交接(约2021年;李军转书记)"/>
+          <attvalue for="2" value="康保县人民政府"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p4" target="p1" label="交接" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="魏红侠→李军 康保县长交接(约2021年)"/>
+          <attvalue for="2" value="康保县人民政府"/>
+          <attvalue for="3" value="2021"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="p2" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李军(书记)+周学勤(县长)现任党政搭档"/>
+          <attvalue for="2" value="康保县人民政府"/>
+          <attvalue for="3" value="2021-"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
