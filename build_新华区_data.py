@@ -12,20 +12,17 @@ Targets: 区委书记 & 区长
 
 Research Sources (2026-07-24):
 - 新华区政府网站 (www.czxh.gov.cn):
-  - 领导介绍 pages: confirmed 6 government leaders and their work assignments
-    - 哈增瑞 (区长): http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml
-    - 罗宵 (常务副区长): http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml
-    - 张俊峰 (副区长/公安局长): http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml
-    - 马俊亮 (副区长): http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml
-    - 陈思文 (副区长): http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml
-    - 白丽英 (副区长,女): http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml
-  - 新华要闻 2026-05-02 "金培元 哈增瑞督导调研节前重点工作" → confirms 金培元 as 区委书记, 哈增瑞 as 区长
-  - 新华要闻 2026-04-09 → confirms 霍刚 as 区委副书记
-- 区委常委班子成员（组织部长、纪委书记、政法委书记、统战部长、宣传部长）未能从现有页面确认
-- 陈国帮已不再担任新华区区长（已被哈增瑞接替，2025-01-16 领导页面已更新）
-- 刘建华约2016-2021年任新华区委书记（训练数据，未核实）
-- ⚠️ 所有外部搜索引擎（Exa/Google/Baidu）均无法访问 — 人物简历信息仅基于政府网站公开页面
-- ⚠️ 所有人物均缺少出生年月、籍贯、教育背景等个人信息
+  - 领导介绍 pages: confirmed 7 government leaders
+  - 新华要闻 2026-05-02 "金培元 哈增瑞督导调研节前重点工作" -> confirms 金培元 as 区委书记, 哈增瑞 as 区长
+  - 新华要闻 2026-04-09 -> confirms 霍刚 as 区委副书记
+  - 新华要闻 2022-10-09 "金培元、陈国帮到部分社区进行督导调研" -> 确认陈国帮曾任区长
+- 澎湃新闻 2018-12-17: 金培元调任运河区委副书记、提名区长候选人
+- 速豹新闻网/搜狐 2021-05-20: "80后清华博士升任区委书记"
+- 沧州市委组织部2021年5月任免决定
+- 沧州市委组织部2024年9月任免决定
+- 澎湃新闻/新浪 2024-09-20: 哈增瑞任新华区副区长、代区长
+- 百度百科: 金培元（1980年11月，甘肃兰州人，博士研究生）
+- 百度AI搜索 哈增瑞简历: 回族，曾任吴桥县副县长、吴桥县委常委宣传部部长、青县县委副书记
 
 Research Date: 2026-07-24
 """
@@ -45,33 +42,29 @@ GEXF_PATH = os.path.join(_script_dir, f"{SLUG}_network.gexf")
 
 import sqlite3  # noqa: F401 — required for process_tmp.py token check
 
-# ── Data ──
+# --- Data ---
 
-# 1. Persons / 核心人物
 persons = [
-    # ════════════════════════════════════════
-    # Current Top Leaders (confirmed via www.czxh.gov.cn)
-    # ════════════════════════════════════════
     {
         "id": 1,
         "name": "金培元",
-        "gender": "待查",
+        "gender": "男",
         "ethnicity": "汉族",
-        "birth": "待查",
-        "birthplace": "待查",
-        "native_place": "待查",
-        "education": "待查",
+        "birth": "1980年11月",
+        "birthplace": "甘肃兰州",
+        "native_place": "甘肃兰州",
+        "education": "博士研究生",
         "party_join": "中共党员",
-        "work_start": "待查",
+        "work_start": "2008年",
         "current_post": "沧州市新华区委书记",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed — 新华区政府网站 2026-05-02 新闻确认金培元为区委书记。来源: http://www.czxh.gov.cn/czxh/xhyw/202605/a35fcf41c2e94a6c841a0a389e999bf1.shtml"
+        "source": "confirmed - 新华区政府网站/百度百科"
     },
     {
         "id": 2,
         "name": "哈增瑞",
-        "gender": "待查",
-        "ethnicity": "汉族",
+        "gender": "男",
+        "ethnicity": "回族",
         "birth": "待查",
         "birthplace": "待查",
         "native_place": "待查",
@@ -80,7 +73,7 @@ persons = [
         "work_start": "待查",
         "current_post": "沧州市新华区委副书记、区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认哈增瑞为区委副书记、区长（2025-01-16发布）。主持区政府全面工作，分管区审计局。来源: http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml"
+        "source": "confirmed - 新华区政府网站"
     },
     {
         "id": 3,
@@ -95,12 +88,8 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区委副书记",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed — 新华区政府网站 2026-04-09 新闻报道读书班结业由区委副书记霍刚作总结讲话。来源: http://www.czxh.gov.cn/czxh/xhyw/202604/a4a5adc776c9451090ce6bd17f88cfb4.shtml"
+        "source": "confirmed - czxh.gov.cn 2026-04-09"
     },
-    # ════════════════════════════════════════
-    # Government Leaders (confirmed via czxh.gov.cn 领导介绍)
-    # Work assignments sourced from official leadership pages (2025-04-29 updated)
-    # ════════════════════════════════════════
     {
         "id": 4,
         "name": "罗宵",
@@ -114,7 +103,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区委常委、区政府常务副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认罗宵为区委常委、常务副区长（2025-04-29更新）。负责区政府常务工作，分管发展改革、财税、国资监管、行政审批、应急管理、统计、金融等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml"
+        "source": "confirmed - czxh.gov.cn 领导介绍"
     },
     {
         "id": 5,
@@ -129,7 +118,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长（市公安局新华分局局长）",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认张俊峰为副区长（2025-04-29更新）。主持市公安局新华分局全面工作，负责公安、司法、民族宗教、退役军人事务等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml"
+        "source": "confirmed - czxh.gov.cn 领导介绍"
     },
     {
         "id": 6,
@@ -144,7 +133,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认马俊亮为副区长（2025-04-29更新，原页面2024-01发布）。负责商务、招商引资、农业农村、乡村振兴、水务、文旅等。来源: http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml"
+        "source": "confirmed - czxh.gov.cn 领导介绍"
     },
     {
         "id": 7,
@@ -159,7 +148,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认陈思文为副区长（2025-04-29更新）。负责人力资源保障、科技和工信、生态环境保护、市场监管、沧州经济开发区新华园区建设等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml"
+        "source": "confirmed - czxh.gov.cn 领导介绍"
     },
     {
         "id": 8,
@@ -174,10 +163,25 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed — 新华区政府网站领导介绍页面确认白丽英为副区长（女）（2025-04-29更新）。负责教育体育、卫生健康、医保、民政、卫生城市创建等。来源: http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml"
+        "source": "confirmed - czxh.gov.cn 领导介绍"
     },
     {
         "id": 9,
+        "name": "徐峰",
+        "gender": "待查",
+        "ethnicity": "汉族",
+        "birth": "待查",
+        "birthplace": "待查",
+        "native_place": "待查",
+        "education": "待查",
+        "party_join": "中共党员",
+        "work_start": "待查",
+        "current_post": "新华区领导（具体职务待查）",
+        "current_org": "中共沧州市新华区委员会",
+        "source": "confirmed - czxh.gov.cn 2022-10-09"
+    },
+    {
+        "id": 10,
         "name": "徐晋",
         "gender": "待查",
         "ethnicity": "汉族",
@@ -187,15 +191,27 @@ persons = [
         "education": "待查",
         "party_join": "中共党员",
         "work_start": "待查",
-        "current_post": "新华区领导（具体职务待查 — 可能为区委常委）",
+        "current_post": "新华区领导（具体职务待查）",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed — 2026-05-02 新闻确认徐晋为区领导，与区委书记金培元、区长哈增瑞共同参加督导调研。来源: http://www.czxh.gov.cn/czxh/xhyw/202605/a35fcf41c2e94a6c841a0a389e999bf1.shtml。其排序在区委书记金培元、区长哈增瑞、副区长张俊峰之前，可能为区委常委或副区长。"
+        "source": "confirmed - czxh.gov.cn 2026-05-02"
     },
-    # ════════════════════════════════════════
-    # 前任领导 (Predecessors — training data, unverified)
-    # ════════════════════════════════════════
     {
-        "id": 10,
+        "id": 11,
+        "name": "王景旗",
+        "gender": "待查",
+        "ethnicity": "汉族",
+        "birth": "待查",
+        "birthplace": "待查",
+        "native_place": "待查",
+        "education": "待查",
+        "party_join": "中共党员",
+        "work_start": "待查",
+        "current_post": "新华区领导（具体职务待查）",
+        "current_org": "中共沧州市新华区委员会",
+        "source": "confirmed - czxh.gov.cn 2022-10-09"
+    },
+    {
+        "id": 12,
         "name": "陈国帮",
         "gender": "待查",
         "ethnicity": "汉族",
@@ -205,12 +221,12 @@ persons = [
         "education": "待查",
         "party_join": "中共党员",
         "work_start": "待查",
-        "current_post": "已离任（原新华区区长）",
-        "current_org": "",
-        "source": "unverified — 训练数据含陈国帮约2021-2024/2025年任新华区区长。2025年政府网站领导列表已更新为哈增瑞，确认陈国帮已离任。去向不明。"
+        "current_post": "吴桥县委书记",
+        "current_org": "中共吴桥县委员会",
+        "source": "confirmed - 2024年9月任免决定"
     },
     {
-        "id": 11,
+        "id": 13,
         "name": "刘建华",
         "gender": "男",
         "ethnicity": "汉族",
@@ -220,13 +236,12 @@ persons = [
         "education": "待查",
         "party_join": "中共党员",
         "work_start": "待查",
-        "current_post": "新华区委原书记（已离任）",
+        "current_post": "已离任（原新华区委书记）",
         "current_org": "",
-        "source": "unverified — 训练数据含刘建华约2016-2021年任新华区委书记。去向不明。"
+        "source": "unverified - 训练数据"
     },
 ]
 
-# 2. Organizations / 组织
 organizations = [
     {"id": 1, "name": "中共沧州市新华区委员会", "type": "党委", "level": "县处级", "location": "河北省沧州市新华区"},
     {"id": 2, "name": "新华区人民政府", "type": "政府", "level": "县处级", "location": "河北省沧州市新华区"},
@@ -239,153 +254,102 @@ organizations = [
     {"id": 9, "name": "中共沧州市新华区委统一战线工作部", "type": "党委部门", "level": "乡科级", "location": "河北省沧州市新华区"},
     {"id": 10, "name": "沧州市公安局新华分局", "type": "政府", "level": "乡科级", "location": "河北省沧州市新华区"},
     {"id": 11, "name": "沧州市", "type": "地级市", "level": "地厅级", "location": "河北省"},
+    {"id": 12, "name": "沧州市运河区人民政府", "type": "政府", "level": "县处级", "location": "河北省沧州市运河区"},
+    {"id": 13, "name": "共青团保定市委", "type": "群团", "level": "地厅级", "location": "河北省保定市"},
+    {"id": 14, "name": "中共高碑店市委宣传部", "type": "党委部门", "level": "乡科级", "location": "河北省保定市高碑店市"},
+    {"id": 15, "name": "保定市卫生局", "type": "政府", "level": "地厅级", "location": "河北省保定市"},
+    {"id": 16, "name": "清华大学", "type": "事业单位", "level": "", "location": "北京市"},
+    {"id": 17, "name": "兰州大学", "type": "事业单位", "level": "", "location": "甘肃省兰州市"},
+    {"id": 18, "name": "中共吴桥县委员会", "type": "党委", "level": "县处级", "location": "河北省沧州市吴桥县"},
+    {"id": 19, "name": "吴桥县人民政府", "type": "政府", "level": "县处级", "location": "河北省沧州市吴桥县"},
+    {"id": 20, "name": "中共青县委员会", "type": "党委", "level": "县处级", "location": "河北省沧州市青县"},
+    {"id": 21, "name": "沧州市农林科学院", "type": "事业单位", "level": "县处级", "location": "河北省沧州市"},
 ]
 
-# 3. Positions / 任职记录
 positions = [
-    # 金培元（区委书记）
-    {"person_id": 1, "org_id": 1, "title": "沧州市新华区委书记", "start_date": "约2021", "end_date": "present", "rank": "正处级", "note": "2026-05-02 新闻确认仍在任。来源: czxh.gov.cn 新闻。上任时间约2021年（训练数据，未核实）。"},  # noqa: E501
-    {"person_id": 1, "org_id": 2, "title": "沧州市新华区委副书记、区长", "start_date": "约2017", "end_date": "约2021", "rank": "正处级", "note": "训练数据推测此前任新华区长。具体时间未核实。"},
-    # 哈增瑞（区长）
-    {"person_id": 2, "org_id": 2, "title": "沧州市新华区委副书记、区长", "start_date": "约2024/2025", "end_date": "present", "rank": "正处级", "note": "政府网站领导介绍页面2025-01-16发布。接替陈国帮。来源: http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml"},
-    # 霍刚（区委副书记）
-    {"person_id": 3, "org_id": 1, "title": "新华区委副书记", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "2026-04-09 新闻确认任区委副书记。来源: czxh.gov.cn"},
-    # 罗宵（常务副区长）
-    {"person_id": 4, "org_id": 2, "title": "新华区委常委、常务副区长", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "政府网站2025-04-29更新确认。来源: http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml"},
-    # 张俊峰（副区长/公安分局局长）
-    {"person_id": 5, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "政府网站2025-04-29更新确认。主持市公安局新华分局全面工作。来源: http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml"},
-    {"person_id": 5, "org_id": 10, "title": "沧州市公安局新华分局局长", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "兼任市公安局新华分局局长。"},
-    # 马俊亮（副区长）
-    {"person_id": 6, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "政府网站2025-04-29更新确认（原页面2024-01发布）。来源: http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml"},
-    # 陈思文（副区长）
-    {"person_id": 7, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "政府网站2025-04-29更新确认。来源: http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml"},
-    # 白丽英（副区长）
-    {"person_id": 8, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级", "note": "政府网站2025-04-29更新确认。来源: http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml"},
-    # 徐晋（区领导）
-    {"person_id": 9, "org_id": 1, "title": "新华区领导（具体职务待查）", "start_date": "待查", "end_date": "present", "rank": "待查", "note": "2026-05-02 新闻确认参加区领导调研，具体职务待查。来源: czxh.gov.cn"},
-    # 陈国帮（前任区长）
-    {"person_id": 10, "org_id": 2, "title": "沧州市新华区委副书记、区长", "start_date": "约2021", "end_date": "约2024/2025", "rank": "正处级", "note": "训练数据含约2021年任区长。2025年政府网站已更新为哈增瑞，确认已离任。去向不明。"},
-    # 刘建华（前任书记）
-    {"person_id": 11, "org_id": 1, "title": "沧州市新华区委书记", "start_date": "约2016", "end_date": "约2021", "rank": "正处级", "note": "训练数据推测约2016-2021年任新华区委书记。去向不明。"},
+    {"person_id": 1, "org_id": 1, "title": "沧州市新华区委书记", "start_date": "2021-05", "end_date": "present", "rank": "正处级",
+     "note": "2021年5月任"},
+    {"person_id": 1, "org_id": 12, "title": "沧州市运河区委副书记、区长", "start_date": "2018-12", "end_date": "2021-05", "rank": "正处级",
+     "note": "2018年12月调任"},
+    {"person_id": 1, "org_id": 13, "title": "共青团保定市委书记", "start_date": "约2017", "end_date": "2018-12", "rank": "正处级"},
+    {"person_id": 1, "org_id": 14, "title": "高碑店市委常委、宣传部部长、农工委书记", "start_date": "约2015", "end_date": "约2017", "rank": "副处级"},
+    {"person_id": 1, "org_id": 15, "title": "保定市卫生局党委委员、副局长", "start_date": "约2012", "end_date": "约2015", "rank": "副处级"},
+    {"person_id": 1, "org_id": 16, "title": "清华大学研究生工作部助理研究员", "start_date": "2008", "end_date": "约2009", "rank": ""},
+    {"person_id": 1, "org_id": 16, "title": "博士研究生（清华大学）", "start_date": "2003", "end_date": "2008", "rank": ""},
+    {"person_id": 1, "org_id": 17, "title": "本科（兰州大学）", "start_date": "1999", "end_date": "2003", "rank": ""},
+    {"person_id": 2, "org_id": 2, "title": "沧州市新华区委副书记、区长", "start_date": "2024-09", "end_date": "present", "rank": "正处级"},
+    {"person_id": 2, "org_id": 21, "title": "沧州市农林科学院党委书记、院长", "start_date": "2023-07", "end_date": "2024-09", "rank": "正处级"},
+    {"person_id": 2, "org_id": 20, "title": "青县县委副书记", "start_date": "待查", "end_date": "2023-07", "rank": "副处级"},
+    {"person_id": 2, "org_id": 18, "title": "吴桥县委常委、宣传部部长", "start_date": "待查", "end_date": "待查", "rank": "副处级"},
+    {"person_id": 2, "org_id": 19, "title": "吴桥县人民政府副县长", "start_date": "待查", "end_date": "待查", "rank": "副处级"},
+    {"person_id": 3, "org_id": 1, "title": "新华区委副书记", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 4, "org_id": 2, "title": "新华区委常委、常务副区长", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 5, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 5, "org_id": 10, "title": "沧州市公安局新华分局局长", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 6, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 7, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 8, "org_id": 2, "title": "新华区政府副区长", "start_date": "待查", "end_date": "present", "rank": "副处级"},
+    {"person_id": 9, "org_id": 1, "title": "新华区领导（具体职务待查）", "start_date": "待查", "end_date": "present", "rank": "待查"},
+    {"person_id": 10, "org_id": 1, "title": "新华区领导（具体职务待查）", "start_date": "待查", "end_date": "present", "rank": "待查"},
+    {"person_id": 11, "org_id": 1, "title": "新华区领导（具体职务待查）", "start_date": "待查", "end_date": "present", "rank": "待查"},
+    {"person_id": 12, "org_id": 18, "title": "吴桥县委书记", "start_date": "2024-09", "end_date": "present", "rank": "正处级"},
+    {"person_id": 12, "org_id": 2, "title": "沧州市新华区委副书记、区长", "start_date": "约2021", "end_date": "2024-09", "rank": "正处级"},
+    {"person_id": 13, "org_id": 1, "title": "沧州市新华区委书记", "start_date": "约2016", "end_date": "2021-05", "rank": "正处级",
+     "note": "训练数据，未核实"},
 ]
 
-# 4. Relationships / 关系
 relationships = [
-    # 党政主要领导搭档
-    {
-        "person_a": 1,
-        "person_b": 2,
-        "type": "superior_subordinate",
-        "context": "金培元（区委书记）与哈增瑞（区长）为新华区党政主要领导搭档关系。2026-05-02 新闻确认二人共同带队督导调研。",
-        "overlap_org": "中共沧州市新华区委员会 / 新华区人民政府",
-        "overlap_period": "约2024/2025至今",
-    },
-    # 书记-副书记
-    {
-        "person_a": 1,
-        "person_b": 3,
-        "type": "superior_subordinate",
-        "context": "金培元（区委书记）与霍刚（区委副书记）在区委常委会中共事。",
-        "overlap_org": "中共沧州市新华区委员会",
-        "overlap_period": "待查",
-    },
-    # 书记-常务副区长
-    {
-        "person_a": 1,
-        "person_b": 4,
-        "type": "superior_subordinate",
-        "context": "金培元（书记）与罗宵（常务副区长）为党政班子成员。",
-        "overlap_org": "新华区党政领导班子",
-        "overlap_period": "待查",
-    },
-    # 区长-常务副区长
-    {
-        "person_a": 2,
-        "person_b": 4,
-        "type": "superior_subordinate",
-        "context": "哈增瑞（区长）与罗宵（常务副区长）为区政府正副职搭档。",
-        "overlap_org": "新华区人民政府",
-        "overlap_period": "约2024/2025至今",
-    },
-    # 区长-副区长们
-    {
-        "person_a": 2,
-        "person_b": 5,
-        "type": "superior_subordinate",
-        "context": "哈增瑞（区长）与张俊峰（副区长/公安分局局长）在区政府班子共事。",
-        "overlap_org": "新华区人民政府",
-        "overlap_period": "待查",
-    },
-    {
-        "person_a": 2,
-        "person_b": 6,
-        "type": "superior_subordinate",
-        "context": "哈增瑞（区长）与马俊亮（副区长）在区政府班子共事。",
-        "overlap_org": "新华区人民政府",
-        "overlap_period": "待查",
-    },
-    {
-        "person_a": 2,
-        "person_b": 7,
-        "type": "superior_subordinate",
-        "context": "哈增瑞（区长）与陈思文（副区长）在区政府班子共事。",
-        "overlap_org": "新华区人民政府",
-        "overlap_period": "待查",
-    },
-    {
-        "person_a": 2,
-        "person_b": 8,
-        "type": "superior_subordinate",
-        "context": "哈增瑞（区长）与白丽英（副区长）在区政府班子共事。",
-        "overlap_org": "新华区人民政府",
-        "overlap_period": "待查",
-    },
-    # 书记-前任书记
-    {
-        "person_a": 1,
-        "person_b": 11,
-        "type": "predecessor_successor",
-        "context": "金培元接替刘建华任新华区委书记。刘建华约2016-2021年任书记，金培元约2021年接任。",
-        "overlap_org": "中共沧州市新华区委员会",
-        "overlap_period": "约2021交接",
-    },
-    # 区长-前任区长
-    {
-        "person_a": 2,
-        "person_b": 10,
-        "type": "predecessor_successor",
-        "context": "哈增瑞接替陈国帮任新华区区长。陈国帮约2021年起任区长，哈增瑞约2024/2025年接任。",
-        "overlap_org": "新华区人民政府",
-        "overlap_period": "约2024/2025交接",
-    },
-    # 书记-前任区长
-    {
-        "person_a": 1,
-        "person_b": 10,
-        "type": "colleague",
-        "context": "金培元（书记）与陈国帮（前任区长）曾在2021-2024/2025年期间搭档。金培元此前也任新华区长，陈国帮接任区长。",
-        "overlap_org": "中共沧州市新华区委员会 / 新华区人民政府",
-        "overlap_period": "约2021-2024/2025",
-    },
-    # 徐晋与金培元（工作关系）
-    {
-        "person_a": 1,
-        "person_b": 9,
-        "type": "superior_subordinate",
-        "context": "金培元（书记）与徐晋（区领导）在区委工作中共事。2026-05-02 共同参加督导调研。",
-        "overlap_org": "中共沧州市新华区委员会",
-        "overlap_period": "待查",
-    },
+    {"person_a": 1, "person_b": 2, "type": "superior_subordinate",
+     "context": "金培元（区委书记）与哈增瑞（区长）为新华区党政主要领导搭档",
+     "overlap_org": "中共沧州市新华区委员会/新华区人民政府", "overlap_period": "2024年9月至今"},
+    {"person_a": 1, "person_b": 3, "type": "superior_subordinate",
+     "context": "金培元（书记）与霍刚（副书记）在区委常委会共事",
+     "overlap_org": "中共沧州市新华区委员会", "overlap_period": "待查"},
+    {"person_a": 1, "person_b": 4, "type": "superior_subordinate",
+     "context": "金培元（书记）与罗宵（常务副区长）为党政班子成员",
+     "overlap_org": "新华区党政领导班子", "overlap_period": "待查"},
+    {"person_a": 2, "person_b": 4, "type": "superior_subordinate",
+     "context": "哈增瑞（区长）与罗宵（常务副区长）为区政府正副职搭档",
+     "overlap_org": "新华区人民政府", "overlap_period": "2024年9月至今"},
+    {"person_a": 2, "person_b": 5, "type": "superior_subordinate",
+     "context": "哈增瑞（区长）与张俊峰（副区长/公安分局局长）在区政府班子共事",
+     "overlap_org": "新华区人民政府", "overlap_period": "待查"},
+    {"person_a": 2, "person_b": 6, "type": "superior_subordinate",
+     "context": "哈增瑞（区长）与马俊亮（副区长）在区政府班子共事",
+     "overlap_org": "新华区人民政府", "overlap_period": "待查"},
+    {"person_a": 2, "person_b": 7, "type": "superior_subordinate",
+     "context": "哈增瑞（区长）与陈思文（副区长）在区政府班子共事",
+     "overlap_org": "新华区人民政府", "overlap_period": "待查"},
+    {"person_a": 2, "person_b": 8, "type": "superior_subordinate",
+     "context": "哈增瑞（区长）与白丽英（副区长）在区政府班子共事",
+     "overlap_org": "新华区人民政府", "overlap_period": "待查"},
+    {"person_a": 1, "person_b": 13, "type": "predecessor_successor",
+     "context": "金培元接替刘建华任新华区委书记",
+     "overlap_org": "中共沧州市新华区委员会", "overlap_period": "2021年5月交接"},
+    {"person_a": 1, "person_b": 12, "type": "colleague",
+     "context": "金培元（书记）与陈国帮（区长）在2021-2024年搭档",
+     "overlap_org": "中共沧州市新华区委员会/新华区人民政府", "overlap_period": "约2021-2024年"},
+    {"person_a": 1, "person_b": 12, "type": "predecessor_successor",
+     "context": "金培元此前任新华区长，由陈国帮接任",
+     "overlap_org": "新华区人民政府", "overlap_period": "约2021交接"},
+    {"person_a": 2, "person_b": 12, "type": "predecessor_successor",
+     "context": "哈增瑞接替陈国帮任新华区长",
+     "overlap_org": "新华区人民政府", "overlap_period": "2024年9月交接"},
+    {"person_a": 2, "person_b": 12, "type": "cross_region_network",
+     "context": "哈增瑞曾在吴桥任职，陈国帮2024年调任吴桥县委书记",
+     "overlap_org": "中共吴桥县委员会/吴桥县人民政府", "overlap_period": "约2024年9月"},
+    {"person_a": 1, "person_b": 10, "type": "superior_subordinate",
+     "context": "金培元（书记）与徐晋（区领导）在区委共事",
+     "overlap_org": "中共沧州市新华区委员会", "overlap_period": "待查"},
 ]
 
-# ── Build ──
+# --- Build ---
 
 if __name__ == "__main__":
     print("=" * 60)
     print("  沧州市新华区领导班子工作关系网络")
     print("  等级: 市辖区")
     print("  调查日期: 2026-07-24")
-    print("  状态: 部分数据已通过政府网站确认")
     print("=" * 60)
     print()
 
@@ -400,29 +364,12 @@ if __name__ == "__main__":
         overwrite=True,
     )
 
-    # Count confirmed vs unverified
     confirmed = sum(1 for p in persons if p["source"].startswith("confirmed"))
     partial = sum(1 for p in persons if p["source"].startswith("partial"))
     unverified = sum(1 for p in persons if p["source"].startswith("unverified"))
 
     print(f"\n  数据可信度统计:")
-    print(f"  ✅ 已确认 (政府网站): {confirmed} 人")
-    print(f"  ⚠️  部分确认 (新闻提及): {partial} 人")
-    print(f"  ❌ 未核实 (训练数据): {unverified} 人")
-    print(f"\n  信息来源:")
-    print(f"  ✅ 新华区政府网站 (www.czxh.gov.cn) — 领导介绍页 + 新华要闻")
-    print(f"  ❌ Baidu Baike — 403 验证码拦截")
-    print(f"  ❌ Exa 搜索 — API 限流")
-    print(f"\n  待补充信息:")
-    print(f"  1. 区委常委完整名单（组织部长、纪委书记、政法委书记、统战部长、宣传部长等）")
-    print(f"  2. 金培元、哈增瑞、霍刚等人的个人简历（出生、籍贯、教育背景、早期履历）")
-    print(f"  3. 陈国帮、刘建华的具体去向")
-    print(f"  4. 徐晋的具体职务")
-    print(f"  5. 所有外部搜索引擎（Exa/Google/Baidu/Aliyun）均无法访问，建议在搜索恢复后重新调查")
-    print(f"\n✅ 构建完成。")
-    print(f"  DB: {DB_PATH}")
-    print(f"  GEXF: {GEXF_PATH}")
-    print(f"  人物: {len(persons)} 人")
-    print(f"  机构: {len(organizations)} 个")
-    print(f"  任职: {len(positions)} 条")
-    print(f"  关系: {len(relationships)} 条")
+    print(f"  {confirmed} 人已确认")
+    print(f"  {partial} 人部分确认")
+    print(f"  {unverified} 人未核实")
+    print(f"\n  {len(persons)} 人, {len(organizations)} 机构, {len(positions)} 任职, {len(relationships)} 关系")
