@@ -27083,7 +27083,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "hubei_建始县",
@@ -27177,7 +27177,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_来凤县_data.py, data/database/来凤县_network.db, data/graph/来凤县_network.gexf"
             },
             {
               "id": "hubei_鹤峰县",
