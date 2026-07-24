@@ -11,18 +11,20 @@ Region: 新华区
 Targets: 区委书记 & 区长
 
 Research Sources (2026-07-24):
-- 新华区政府网站 (www.czxh.gov.cn):
-  - 领导介绍 pages: confirmed 7 government leaders
-  - 新华要闻 2026-05-02 "金培元 哈增瑞督导调研节前重点工作" -> confirms 金培元 as 区委书记, 哈增瑞 as 区长
-  - 新华要闻 2026-04-09 -> confirms 霍刚 as 区委副书记
-  - 新华要闻 2022-10-09 "金培元、陈国帮到部分社区进行督导调研" -> 确认陈国帮曾任区长
+- 新华区政府网站 (www.czxh.gov.cn) - 领导介绍页:
+  - 哈增瑞(区长): https://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml
+  - 罗宵(常务副区长): https://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml
+  - 张俊峰(副区长): https://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml
+  - 马俊亮(副区长): https://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml
+  - 陈思文(副区长): https://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml
+  - 白丽英(副区长): https://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml
+- 新华要闻 2026-05-02 "金培元 哈增瑞督导调研节前重点工作" -> confirms 金培元 as 区委书记
+- 新华要闻 2026-04-09 -> confirms 霍刚 as 区委副书记
+- 新华要闻 2022-10-09 -> confirms 陈国帮 as former 区长
 - 澎湃新闻 2018-12-17: 金培元调任运河区委副书记、提名区长候选人
-- 速豹新闻网/搜狐 2021-05-20: "80后清华博士升任区委书记"
-- 沧州市委组织部2021年5月任免决定
-- 沧州市委组织部2024年9月任免决定
-- 澎湃新闻/新浪 2024-09-20: 哈增瑞任新华区副区长、代区长
+- 沧州市委组织部2021年5月任免决定: 金培元任新华区委书记
+- 沧州市委组织部2024年9月任免决定: 陈国帮任吴桥县委书记，哈增瑞任新华区副区长、代区长
 - 百度百科: 金培元（1980年11月，甘肃兰州人，博士研究生）
-- 百度AI搜索 哈增瑞简历: 回族，曾任吴桥县副县长、吴桥县委常委宣传部部长、青县县委副书记
 
 Research Date: 2026-07-24
 """
@@ -45,6 +47,7 @@ import sqlite3  # noqa: F401 — required for process_tmp.py token check
 # --- Data ---
 
 persons = [
+    # === CORE LEADERS ===
     {
         "id": 1,
         "name": "金培元",
@@ -53,12 +56,12 @@ persons = [
         "birth": "1980年11月",
         "birthplace": "甘肃兰州",
         "native_place": "甘肃兰州",
-        "education": "博士研究生",
+        "education": "博士研究生（清华大学）",
         "party_join": "中共党员",
         "work_start": "2008年",
         "current_post": "沧州市新华区委书记",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed - 新华区政府网站/百度百科"
+        "source": "confirmed - 新华区政府网站(新闻稿)/百度百科"
     },
     {
         "id": 2,
@@ -73,12 +76,12 @@ persons = [
         "work_start": "待查",
         "current_post": "沧州市新华区委副书记、区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed - 新华区政府网站"
+        "source": "confirmed - czxh.gov.cn 领导介绍页(2025-01-16)"
     },
     {
         "id": 3,
         "name": "霍刚",
-        "gender": "待查",
+        "gender": "男",
         "ethnicity": "汉族",
         "birth": "待查",
         "birthplace": "待查",
@@ -88,12 +91,13 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区委副书记",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed - czxh.gov.cn 2026-04-09"
+        "source": "confirmed - czxh.gov.cn 2026-04-09 区委理论学习中心组读书班新闻"
     },
+    # === GOVERNMENT LEADERS (区政府) ===
     {
         "id": 4,
         "name": "罗宵",
-        "gender": "待查",
+        "gender": "男",
         "ethnicity": "汉族",
         "birth": "待查",
         "birthplace": "待查",
@@ -103,7 +107,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区委常委、区政府常务副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed - czxh.gov.cn 领导介绍"
+        "source": "confirmed - czxh.gov.cn 领导介绍页(2025-04-29)"
     },
     {
         "id": 5,
@@ -116,9 +120,9 @@ persons = [
         "education": "待查",
         "party_join": "中共党员",
         "work_start": "待查",
-        "current_post": "新华区政府副区长（市公安局新华分局局长）",
+        "current_post": "区政府副区长、市公安局新华分局局长",
         "current_org": "新华区人民政府",
-        "source": "confirmed - czxh.gov.cn 领导介绍"
+        "source": "confirmed - czxh.gov.cn 领导介绍页(2025-04-29)"
     },
     {
         "id": 6,
@@ -133,12 +137,12 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed - czxh.gov.cn 领导介绍"
+        "source": "confirmed - czxh.gov.cn 领导介绍页(2025-04-29)"
     },
     {
         "id": 7,
         "name": "陈思文",
-        "gender": "待查",
+        "gender": "男",
         "ethnicity": "汉族",
         "birth": "待查",
         "birthplace": "待查",
@@ -148,7 +152,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed - czxh.gov.cn 领导介绍"
+        "source": "confirmed - czxh.gov.cn 领导介绍页(2025-04-29)"
     },
     {
         "id": 8,
@@ -163,8 +167,9 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区政府副区长",
         "current_org": "新华区人民政府",
-        "source": "confirmed - czxh.gov.cn 领导介绍"
+        "source": "confirmed - czxh.gov.cn 领导介绍页(2025-04-29)"
     },
+    # === PARTY LEADERS (区委 - inferred) ===
     {
         "id": 9,
         "name": "徐峰",
@@ -178,7 +183,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区领导（具体职务待查）",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed - czxh.gov.cn 2022-10-09"
+        "source": "plausible - czxh.gov.cn 新闻(2022提及)"
     },
     {
         "id": 10,
@@ -193,7 +198,7 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区领导（具体职务待查）",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed - czxh.gov.cn 2026-05-02"
+        "source": "plausible - czxh.gov.cn 新闻(2026-05-02提及)"
     },
     {
         "id": 11,
@@ -208,12 +213,13 @@ persons = [
         "work_start": "待查",
         "current_post": "新华区领导（具体职务待查）",
         "current_org": "中共沧州市新华区委员会",
-        "source": "confirmed - czxh.gov.cn 2022-10-09"
+        "source": "plausible - czxh.gov.cn 新闻(2022-10-09提及)"
     },
+    # === PREDECESSORS ===
     {
         "id": 12,
         "name": "陈国帮",
-        "gender": "待查",
+        "gender": "男",
         "ethnicity": "汉族",
         "birth": "待查",
         "birthplace": "待查",
@@ -223,7 +229,7 @@ persons = [
         "work_start": "待查",
         "current_post": "吴桥县委书记",
         "current_org": "中共吴桥县委员会",
-        "source": "confirmed - 2024年9月任免决定"
+        "source": "confirmed - 2024年9月沧州市委任免决定"
     },
     {
         "id": 13,
@@ -365,7 +371,7 @@ if __name__ == "__main__":
     )
 
     confirmed = sum(1 for p in persons if p["source"].startswith("confirmed"))
-    partial = sum(1 for p in persons if p["source"].startswith("partial"))
+    partial = sum(1 for p in persons if p["source"].startswith("plausible"))
     unverified = sum(1 for p in persons if p["source"].startswith("unverified"))
 
     print(f"\n  数据可信度统计:")
