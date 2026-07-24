@@ -541,6 +541,7 @@ def make_source_register():
         {"id":"S017","title":"倪明远副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/55577.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"市场监管、教育体育科技等分工；非中共党员"},
         {"id":"S018","title":"王则栋副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/45061.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"住建、城管、自然资源规划等分工"},
         {"id":"S019","title":"黄向义副区长分工","url":"http://www.zjkqxq.gov.cn/single/98/55582.html","publisher":"桥西区人民政府","published_at":"2026-03-30","accessed_at":AS_OF,"source_type":"official","reliability":"high","notes":"招商引资、商务、工信等分工（已调离）"},
+        {"id":"S020","title":"尚秀伟快懂百科","url":"https://www.baike.com/wiki/尚秀伟","publisher":"快懂百科","published_at":"","accessed_at":AS_OF,"source_type":"encyclopedia","reliability":"medium","notes":"尚秀伟完整履历"},
     ]
 
 def esc(s):
