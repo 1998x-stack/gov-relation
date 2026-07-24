@@ -7,7 +7,7 @@ Parent city: 张家口市
 Targets: 区委书记 (Party Secretary), 区长 (Mayor)
 Task ID: hebei_桥西区
 
-Research date: 2026-07-24 (third investigation — full bio update)
+Research date: 2026-07-24 (staging re-validation — gov site re-verified)
 Official source: http://www.zjkqxq.gov.cn/ (张家口市桥西区人民政府)
 
 Current status (as of 2026-07-24):
