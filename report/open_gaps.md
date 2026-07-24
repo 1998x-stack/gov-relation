@@ -1,7 +1,13 @@
 # Open Gaps Registry
-> Last updated: 2026-07-24 (衡水市武强县 — artifacts validated & promoted)
+> Last updated: 2026-07-24 (衡水市安平县 — artifacts validated & promoted)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+### 安平县
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 曹向东 | 安平县委书记 | 出生年月、籍贯、教育背景、任县委书记前全部履历 | 2026-07-24 | 训练数据确认（plausible），但所有web搜索渠道（Exa限流、Baidu 403、anping.gov.cn HTTPS超时）均不可用。信息公开网无法获取领导之窗页面。2026年7月第十三次党代会可能已确认其连任。Person JSON已创建。 |
+| 赵东钊 | 安平县人民政府县长 | 出生年月、籍贯、教育背景、任县长前全部履历 | 2026-07-24 | Baidu Baike确认县长身份（2024年3月分工调整），2026年7月第十八届人大一次会议可能已连任。Person JSON已创建。 |
 
 ### 武强县
 | Person | Current Role | What's Missing | Last Attempted | Notes |
