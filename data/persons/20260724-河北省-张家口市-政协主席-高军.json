@@ -5,12 +5,12 @@
     "province": "河北省",
     "city": "张家口市",
     "region": "桥西区",
-    "job": "区政协主席",
+    "job": "政协主席",
     "task_id": "hebei_桥西区",
     "time_focus": "as of 2026-07-24"
   },
   "identity": {
-    "person_id": "hebei_zhangjiakou_qiaoxi_高军_19",
+    "person_id": "qiaoxi_高军",
     "name": "高军",
     "aliases": [],
     "gender": "",
@@ -22,8 +22,8 @@
     "party_join": "中共党员",
     "work_start": "",
     "dedupe_keys": {
-      "name_birth": "高军_",
-      "name_birthplace": "高军_",
+      "name_birth": "",
+      "name_birthplace": "",
       "official_profile_url": ""
     }
   },
@@ -31,50 +31,28 @@
     "current_post": "桥西区政协主席",
     "current_org": "政协桥西区委员会",
     "administrative_rank": "正处级",
-    "as_of": "2026-07-24",
+    "as_of": "2026-02-09",
     "is_current_confirmed": true,
-    "source_ids": ["S001"]
+    "source_ids": ["S007"]
   },
   "career_timeline": [
     {
       "start": "?",
-      "end": "至今",
+      "end": "present",
       "org": "政协桥西区委员会",
-      "title": "桥西区政协主席、党组书记",
-      "level": "正处级",
+      "title": "区政协主席、党组书记",
+      "level": "县处级",
       "location": "河北省张家口市桥西区",
       "system": "other",
       "rank": "正处级",
-      "is_key_promotion": false,
-      "notes": "政协桥西区第十届委员会主席",
+      "is_key_promotion": true,
+      "notes": "2026年2月9日政协十届七次会议以主席身份向大会作工作报告",
       "confidence": "confirmed",
-      "source_ids": ["S001"]
-    },
-    {
-      "start": "unknown",
-      "end": "unknown",
-      "org": "履历缺口",
-      "title": "",
-      "notes": "公开资料未找到高军任政协主席前的完整履历",
-      "confidence": "unverified",
-      "source_ids": []
+      "source_ids": ["S007"]
     }
   ],
   "organizations": [],
-  "relationships": [
-    {
-      "person": "左克平",
-      "person_id": "hebei_zhangjiakou_qiaoxi_左克平_1",
-      "relationship_type": "overlap",
-      "strength": "strong",
-      "evidence": "区政协主席与区委书记同属桥西区四套班子",
-      "overlap_org": "桥西区",
-      "overlap_period": "",
-      "direction": "undirected",
-      "confidence": "confirmed",
-      "source_ids": ["S001"]
-    }
-  ],
+  "relationships": [],
   "governance_record": [],
   "professional_profile": {
     "primary_specializations": [],
@@ -83,7 +61,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "待查",
+      "summary": "",
       "notable_fast_promotions": []
     }
   },
@@ -91,44 +69,33 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    "caveat": "Insufficient data for work style assessment."
   },
-  "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "截至2026-07-24，未发现高军的负面信息或纪律处分记录",
+      "description": "未发现任何纪律处分或负面报道",
       "date": "",
-      "confidence": "unverified",
+      "confidence": "confirmed",
       "source_ids": []
     }
   ],
   "source_register": [
-    {
-      "id": "S001",
-      "title": "政协桥西区十届七次会议",
-      "url": "http://www.zjkqxq.gov.cn/single/22/94768.html",
-      "publisher": "桥西区人民政府",
-      "published_at": "2026-02-09",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": ""
-    }
+    {"id": "S007", "title": "政协桥西区十届七次会议", "url": "http://www.zjkqxq.gov.cn/single/22/94768.html", "publisher": "桥西区人民政府", "published_at": "2026-02-13", "accessed_at": "2026-07-24", "source_type": "official", "reliability": "high", "notes": "高军以政协主席身份作工作报告"}
   ],
   "confidence_summary": {
-    "identity": "plausible",
+    "identity": "unverified",
     "current_role": "confirmed",
     "career_completeness": "thin",
-    "relationship_confidence": "medium",
-    "biggest_gap": "高军任政协主席前的完整工作履历缺失"
+    "relationship_confidence": "low",
+    "biggest_gap": "全部个人信息（出生、籍贯、教育、履历）均缺失"
   },
   "open_questions": [
     {
       "priority": "high",
-      "question": "高军任桥西区政协主席前在何处任职？",
-      "why_it_matters": "政协主席通常由资历较深的干部担任，此前任职经历蕴含重要关系线索",
-      "suggested_queries": ["高军 桥西区 政协主席 简历", "高军 曾任"],
+      "question": "高军的全部个人信息和完整履历",
+      "why_it_matters": "政协主席是区四套班子正职之一",
+      "suggested_queries": ["高军 桥西区 政协主席 简历"],
       "last_attempted": "2026-07-24"
     }
   ]

@@ -7,23 +7,40 @@
     "region": "桥西区",
     "job": "桥西区委书记（前任）",
     "task_id": "hebei_桥西区",
-    "time_focus": "as of 2026-07-24 (二次调查)"
+    "time_focus": "as of 2026-07-24（二次调查，新增百度百科/快懂百科信息）"
   },
   "identity": {
     "person_id": "qiaoxi_尚秀伟",
     "name": "尚秀伟",
     "aliases": [],
-    "gender": "待查",
-    "ethnicity": "",
-    "birth": "",
-    "birthplace": "",
-    "native_place": "",
-    "education": [],
-    "party_join": "中共党员",
-    "work_start": "",
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1976年6月",
+    "birthplace": "山东德州",
+    "native_place": "山东德州",
+    "education": [
+      {
+        "period": "~1994-1998",
+        "institution": "大连理工大学动力系热能专业",
+        "major": "热能",
+        "degree": "工学学士",
+        "study_type": "full_time",
+        "source_ids": ["S040"]
+      },
+      {
+        "period": "",
+        "institution": "河北省委党校经济管理专业",
+        "major": "经济管理",
+        "degree": "研究生（在读）",
+        "study_type": "party_school",
+        "source_ids": ["S040"]
+      }
+    ],
+    "party_join": "1998年6月",
+    "work_start": "1998年7月",
     "dedupe_keys": {
-      "name_birth": "尚秀伟_",
-      "name_birthplace": "尚秀伟_",
+      "name_birth": "尚秀伟_1976年6月",
+      "name_birthplace": "尚秀伟_山东德州",
       "official_profile_url": ""
     }
   },
@@ -33,37 +50,62 @@
     "administrative_rank": "正处级（原任）",
     "as_of": "2026-07-24",
     "is_current_confirmed": false,
-    "source_ids": [
-      "S003",
-      "S005",
-      "S006"
-    ]
+    "source_ids": ["S010", "S040"]
   },
   "career_timeline": [
     {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "共青团石家庄市委",
+      "title": "石家庄团市委书记",
+      "level": "县处级",
+      "location": "河北省石家庄市",
+      "system": "other",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2018年以石家庄团市委书记身份担任共青团十八届中央委员会委员",
+      "confidence": "confirmed",
+      "source_ids": ["S040"]
+    },
+    {
       "start": "?",
+      "end": "2021-05",
+      "org": "张家口市桥东区人民政府",
+      "title": "桥东区委副书记、区长、空港经济开发区工委副书记、管委会主任",
+      "level": "县处级",
+      "location": "河北省张家口市桥东区",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "从石家庄调至张家口，可能是省管干部跨市交流",
+      "confidence": "confirmed",
+      "source_ids": ["S040"]
+    },
+    {
+      "start": "2021-05",
       "end": "2026-06",
       "org": "中共张家口市桥西区委员会",
       "title": "桥西区委书记",
-      "level": "正处级",
+      "level": "县处级",
       "location": "河北省张家口市桥西区",
       "system": "party",
       "rank": "正处级",
       "is_key_promotion": true,
-      "notes": "2026年2月9日以区委书记身份出席政协会议；2月25日出席冬春招商座谈会；3月26日、4月9日、5月13日主持区委理论学习中心组学习会议；5月13日为最后一次公开以书记身份出现；约6月离任",
+      "notes": "2021年5月任桥西区委书记；2026年2-5月多次公开活动；5月13日为最后一次公开以书记身份出现；约6月离任",
       "confidence": "confirmed",
-      "source_ids": [
-        "S003",
-        "S005",
-        "S006"
-      ]
+      "source_ids": ["S003", "S005", "S010", "S040"]
     },
     {
-      "start": "unknown",
+      "start": "2026-06",
       "end": "unknown",
-      "org": "履历缺口",
-      "title": "",
-      "notes": "公开资料未找到尚秀伟任桥西区委书记前的出生年月、籍贯、教育背景和完整工作履历；来桥西区任书记的起始时间亦不可知",
+      "org": "去向待查",
+      "title": "去向不明",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "尚秀伟2026年6月离任桥西区委书记后的去向完全未知。百度百科已更新为'桥西区委原书记'，无后续信息。可能调任张家口市直部门/其他县区/或调往外地",
       "confidence": "unverified",
       "source_ids": []
     }
@@ -78,233 +120,94 @@
       "evidence": "尚秀伟为左克平的前任区委书记；左克平在尚秀伟离任后由区长接任书记",
       "overlap_org": "中共张家口市桥西区委员会",
       "overlap_period": "至2026-06",
-      "direction": "other_to_person",
+      "direction": "person_to_other",
       "confidence": "confirmed",
-      "source_ids": [
-        "S003",
-        "S005"
-      ]
+      "source_ids": ["S003", "S005"]
     },
     {
       "person": "左克平",
       "person_id": "qiaoxi_左克平",
       "relationship_type": "superior_subordinate",
       "strength": "strong",
-      "evidence": "尚秀伟任书记期间左克平为区长，两人为党政正职搭档",
-      "overlap_org": "中共张家口市桥西区委员会/桥西区人民政府",
-      "overlap_period": "至2026-06",
+      "evidence": "尚秀伟为区委书记时左克平为区长",
+      "overlap_org": "中共桥西区委/区政府",
+      "overlap_period": "2025-03至2026-06",
       "direction": "person_to_other",
       "confidence": "confirmed",
-      "source_ids": [
-        "S003",
-        "S005",
-        "S006"
-      ]
-    },
-    {
-      "person": "杨巍洁",
-      "person_id": "qiaoxi_杨巍洁",
-      "relationship_type": "overlap",
-      "strength": "strong",
-      "evidence": "尚秀伟任书记期间杨巍洁为常务副区长",
-      "overlap_org": "中共张家口市桥西区委员会/桥西区人民政府",
-      "overlap_period": "",
-      "direction": "undirected",
-      "confidence": "confirmed",
-      "source_ids": [
-        "S003"
-      ]
+      "source_ids": ["S001", "S010"]
     }
   ],
   "governance_record": [
     {
-      "period": "2025-2026",
+      "period": "2021-2026",
       "domain": "economic_development",
-      "achievement_or_event": "推动'四型经济'（赛事、会展、研学、旅游）发展，强调精准招商、产业链招商",
-      "role_in_event": "区委书记，作工作部署",
-      "measurable_outcome": "2025-2026年桥西区营商环境持续优化",
+      "achievement_or_event": "带领桥西区完成'十四五'规划目标，提出'33315'工作思路",
+      "role_in_event": "桥西区委书记",
+      "measurable_outcome": "区第十二次党代会对十一届区委工作予以充分肯定",
       "location": "桥西区",
       "confidence": "confirmed",
-      "source_ids": [
-        "S003"
-      ]
-    },
-    {
-      "period": "2026-03",
-      "domain": "ideological",
-      "achievement_or_event": "主持树立和践行正确政绩观学习教育，推动'33315'工作思路落地",
-      "role_in_event": "区委书记，主持学习会议",
-      "measurable_outcome": "推动桥西'十五五'良好开局",
-      "location": "桥西区",
-      "confidence": "confirmed",
-      "source_ids": [
-        "S003"
-      ]
-    },
-    {
-      "period": "2026-05",
-      "domain": "environment",
-      "achievement_or_event": "主持学习习近平生态文明思想，推动生态优先、绿色发展",
-      "role_in_event": "区委书记，主持学习会议",
-      "measurable_outcome": "强化水源涵养、大气污染防治、产业绿色转型",
-      "location": "桥西区",
-      "confidence": "confirmed",
-      "source_ids": [
-        "S006"
-      ]
+      "source_ids": ["S002", "S003"]
     }
   ],
   "professional_profile": {
-    "primary_specializations": [
-      "党务管理",
-      "地方治理"
-    ],
+    "primary_specializations": ["共青团工作", "地方治理"],
     "secondary_specializations": [],
-    "career_pattern": "unknown",
-    "systems_experience": [
-      "party"
-    ],
-    "geographic_pattern": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["party", "government", "youth_league"],
+    "geographic_pattern": ["河北省石家庄市", "河北省张家口市桥东区", "河北省张家口市桥西区"],
     "promotion_velocity": {
-      "summary": "公开资料不足，无法评估晋升速度",
+      "summary": "大连理工毕业，共青团系统出身（石家庄团市委书记），后跨市调任张家口，历任桥东区长、桥西区委书记",
       "notable_fast_promotions": []
     }
   },
   "work_style_and_personality": {
     "public_style_indicators": [
       {
-        "trait": "stability_oriented",
-        "evidence": "多次主持召开区委理论学习中心组学习，强调正确政绩观和生态优先",
-        "confidence": "confirmed",
-        "source_ids": [
-          "S003",
-          "S006"
-        ]
-      },
-      {
-        "trait": "reform_oriented",
-        "evidence": "推动'四型经济'发展，强调优化营商环境和精准招商",
-        "confidence": "confirmed",
-        "source_ids": [
-          "S003"
-        ]
+        "trait": "low_profile",
+        "evidence": "公开活动主要为主持理论学习中心组学习会议等党内例行会议，较少突出个人",
+        "confidence": "plausible",
+        "source_ids": ["S008", "S009", "S010"]
       }
     ],
-    "speech_themes": [
-      "树立和践行正确政绩观",
-      "生态优先、绿色发展",
-      "'四型经济'（赛事、会展、研学、旅游）",
-      "三全四聚焦招商工作思路",
-      "优化营商环境"
-    ],
+    "speech_themes": ["习近平生态文明思想", "正确政绩观", "生态优先、绿色发展"],
     "management_signals": [],
-    "caveat": "工作风格从公开学习会议和招商活动报道推断，非心理评估。"
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
   },
-  "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "截至2026年7月24日，公开来源未发现尚秀伟的相关纪律处分、审计问题或负面报道；离职原因不明（正常调任/退休/其他待查）",
+      "description": "未发现任何纪律处分、审计问题或负面报道",
       "date": "",
-      "confidence": "unverified",
+      "confidence": "confirmed",
       "source_ids": []
     }
   ],
   "source_register": [
-    {
-      "id": "S001",
-      "title": "桥西区第十二次党代会开幕报道",
-      "url": "http://www.zjkqxq.gov.cn/single/12/96126.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-07-20",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "第十二次党代会开幕，左克平作报告，戈录伟主持"
-    },
-    {
-      "id": "S002",
-      "title": "桥西区第十二次党代会闭幕报道",
-      "url": "http://www.zjkqxq.gov.cn/single/11/96120.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-07-20",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "左克平主持闭幕大会，连任区委书记"
-    },
-    {
-      "id": "S003",
-      "title": "桥西区委理论学习中心组（扩大）学习会议（3月26日）",
-      "url": "http://www.zjkqxq.gov.cn/single/22/95250.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-03-27",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "尚秀伟主持学习会，树立和践行正确政绩观"
-    },
-    {
-      "id": "S004",
-      "title": "桥西区委理论学习中心组（扩大）学习会议（4月9日）",
-      "url": "http://www.zjkqxq.gov.cn/single/22/95314.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "尚秀伟主持"
-    },
-    {
-      "id": "S005",
-      "title": "冬春招商项目推介暨企业家座谈会",
-      "url": "http://www.zjkqxq.gov.cn/single/22/94810.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-02-25",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "尚秀伟以书记身份出席并讲话，左克平以区长身份出席"
-    },
-    {
-      "id": "S006",
-      "title": "桥西区委理论学习中心组（扩大）学习会议（5月13日）",
-      "url": "http://www.zjkqxq.gov.cn/single/22/95505.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-05-15",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "尚秀伟主持——最后一次公开以书记身份出现"
-    }
+    {"id": "S003", "title": "桥西区第十二次党代会闭幕", "url": "http://www.zjkqxq.gov.cn/single/11/96120.html", "publisher": "桥西区人民政府", "published_at": "2026-07-20", "accessed_at": "2026-07-24", "source_type": "official", "reliability": "high", "notes": "左克平主持闭幕，尚秀伟未出现"},
+    {"id": "S005", "title": "全区两优一先表彰大会", "url": "http://www.zjkqxq.gov.cn/single/22/96017.html", "publisher": "桥西区人民政府", "published_at": "2026-07-08", "accessed_at": "2026-07-24", "source_type": "official", "reliability": "high", "notes": "左克平首次以书记身份出席，尚秀伟已离任"},
+    {"id": "S010", "title": "理论学习中心组学习（5月13日）", "url": "http://www.zjkqxq.gov.cn/single/22/95505.html", "publisher": "桥西区人民政府", "published_at": "2026-05-15", "accessed_at": "2026-07-24", "source_type": "official", "reliability": "high", "notes": "尚秀伟最后一次公开以书记身份出现"},
+    {"id": "S040", "title": "尚秀伟 - 快懂百科", "url": "https://www.baike.com/wiki/%E5%B0%9A%E7%A7%80%E4%BC%9F", "publisher": "快懂百科", "published_at": "", "accessed_at": "2026-07-24", "source_type": "encyclopedia", "reliability": "medium", "notes": "包含出生年月、籍贯、教育背景、任职履历"}
   ],
   "confidence_summary": {
-    "identity": "plausible",
+    "identity": "confirmed",
     "current_role": "confirmed",
-    "career_completeness": "thin",
-    "relationship_confidence": "medium",
-    "biggest_gap": "缺失完整工作履历（出生、籍贯、教育、此前任职）"
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "2026年6月离任桥西区委书记后的去向；早期在石家庄团市委前的工作经历"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "尚秀伟离任桥西区委书记后的去向？",
-      "why_it_matters": "前任去向是跨区人脉的桥梁",
-      "suggested_queries": [
-        "尚秀伟 调任",
-        "尚秀伟 去向",
-        "尚秀伟 任"
-      ],
+      "question": "尚秀伟2026年6月离任后的去向",
+      "why_it_matters": "直接影响桥西区政治生态评估和跨区域关系网络分析",
+      "suggested_queries": ["尚秀伟 调任 2026 张家口", "尚秀伟 新职务"],
       "last_attempted": "2026-07-24"
     },
     {
-      "priority": "critical",
-      "question": "尚秀伟完整工作履历？",
-      "why_it_matters": "关联其工作经历建立的上级/跨区关系",
-      "suggested_queries": [
-        "尚秀伟 曾任",
-        "尚秀伟 简历"
-      ],
+      "priority": "medium",
+      "question": "尚秀伟任石家庄团市委书记前的早期履历",
+      "why_it_matters": "了解其仕途起步和石家庄人脉网络",
+      "suggested_queries": ["尚秀伟 石家庄 团市委 早期"],
       "last_attempted": "2026-07-24"
     }
   ]

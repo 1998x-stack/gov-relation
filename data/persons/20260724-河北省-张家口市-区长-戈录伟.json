@@ -7,13 +7,13 @@
     "region": "桥西区",
     "job": "区长",
     "task_id": "hebei_桥西区",
-    "time_focus": "as of 2026-07-24 (二次调查)"
+    "time_focus": "as of 2026-07-24（二次调查，新增蔚县任职信息）"
   },
   "identity": {
-    "person_id": "hebei_zhangjiakou_qiaoxi_戈录伟_2",
+    "person_id": "qiaoxi_戈录伟",
     "name": "戈录伟",
     "aliases": [],
-    "gender": "待查",
+    "gender": "",
     "ethnicity": "汉族",
     "birth": "",
     "birthplace": "",
@@ -24,7 +24,7 @@
     "dedupe_keys": {
       "name_birth": "",
       "name_birthplace": "",
-      "official_profile_url": "http://www.zjkqxq.gov.cn/single/98/45066.html"
+      "official_profile_url": ""
     }
   },
   "current_status": {
@@ -33,238 +33,162 @@
     "administrative_rank": "正处级",
     "as_of": "2026-07-18",
     "is_current_confirmed": true,
-    "source_ids": [
-      "S001",
-      "S002",
-      "S011"
-    ]
+    "source_ids": ["S002", "S030"]
   },
   "career_timeline": [
     {
-      "start": "2026-07",
-      "end": "present",
+      "start": "?",
+      "end": "?",
+      "org": "蔚县",
+      "title": "蔚县县委常委、组织部部长",
+      "level": "县处级",
+      "location": "河北省张家口市蔚县",
+      "system": "organization",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "曾任蔚县县委常委、组织部部长；同时担任蔚县驻太舞、源宿、雪皓居、雪麓居酒店保障服务团队临时联合党委书记、蔚县包联酒店组长（2022冬奥保障相关）",
+      "confidence": "confirmed",
+      "source_ids": ["S030"]
+    },
+    {
+      "start": "2022-04",
+      "end": "",
+      "org": "河北省",
+      "title": "荣获'2022年冬奥会、冬残奥会河北省先进个人'称号",
+      "level": "",
+      "location": "河北省",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "与左克平同时获得该荣誉",
+      "confidence": "confirmed",
+      "source_ids": ["S030"]
+    },
+    {
+      "start": "2025-01",
+      "end": "2026-07",
       "org": "中共张家口市桥西区委员会",
-      "title": "张家口市桥西区委副书记",
+      "title": "桥西区委副书记",
       "level": "县处级",
       "location": "张家口市桥西区",
       "system": "party",
       "rank": "副处级",
-      "is_key_promotion": false,
-      "notes": "担任区委副书记，第十二次党代会执行主席并主持开幕式",
+      "is_key_promotion": true,
+      "notes": "2025年1月2日以桥西区委副书记身份参加老干部情况通报会",
       "confidence": "confirmed",
-      "source_ids": [
-        "S002"
-      ]
+      "source_ids": ["S030"]
     },
     {
       "start": "2026-07",
       "end": "present",
       "org": "桥西区人民政府",
-      "title": "张家口市桥西区区长",
+      "title": "桥西区委副书记、区长",
       "level": "县处级",
       "location": "张家口市桥西区",
       "system": "government",
       "rank": "正处级",
       "is_key_promotion": true,
-      "notes": "2026年7月18日主持开幕式，第十二次党代会执行主席，区政府领导页面显示为区委副书记、区长。此前（2026年3月30日政府网站更新时）不在政府领导名单中，说明是2026年3月30日后到任的新任区长",
+      "notes": "第十二次党代会执行主席并主持开幕式；区政府领导页面已更新为'区委副书记、区长'",
       "confidence": "confirmed",
-      "source_ids": [
-        "S001",
-        "S002"
-      ]
+      "source_ids": ["S002"]
     }
   ],
-  "organizations": [
-    {
-      "org_id": "org_桥西区人民政府",
-      "name": "桥西区人民政府",
-      "type": "政府",
-      "role": "区长"
-    },
-    {
-      "org_id": "org_中共张家口市桥西区委员会",
-      "name": "中共张家口市桥西区委员会",
-      "type": "党委",
-      "role": "区委副书记"
-    }
-  ],
+  "organizations": [],
   "relationships": [
     {
       "person": "左克平",
-      "person_id": "hebei_zhangjiakou_qiaoxi_左克平_1",
+      "person_id": "qiaoxi_左克平",
       "relationship_type": "overlap",
       "strength": "strong",
-      "evidence": "区长与区委书记党政工作搭档关系，共同担任第十二次党代会执行主席",
+      "evidence": "区长与区委书记党政工作搭档",
       "overlap_org": "桥西区",
       "overlap_period": "2026-",
       "direction": "undirected",
       "confidence": "confirmed",
-      "source_ids": [
-        "S001",
-        "S002"
-      ]
+      "source_ids": ["S002"]
     },
     {
-      "person": "杨巍洁",
-      "person_id": "hebei_zhangjiakou_qiaoxi_杨巍洁_12",
-      "relationship_type": "overlap",
-      "strength": "strong",
-      "evidence": "区长与常务副区长政府工作搭档，区政府领导班子成员",
-      "overlap_org": "桥西区人民政府",
-      "overlap_period": "2026-",
-      "direction": "undirected",
-      "confidence": "confirmed",
-      "source_ids": [
-        "S002",
-        "S011"
-      ]
-    },
-    {
-      "person": "吉树强",
-      "person_id": "hebei_zhangjiakou_qiaoxi_吉树强_3",
-      "relationship_type": "overlap",
+      "person": "左克平",
+      "person_id": "qiaoxi_左克平",
+      "relationship_type": "same_system",
       "strength": "medium",
-      "evidence": "同为第十二次党代会执行主席",
-      "overlap_org": "中共桥西区委",
-      "overlap_period": "2026-",
+      "evidence": "两人均获得'2022年冬奥会、冬残奥会河北省先进个人'称号，可能在冬奥保障工作中有交集",
+      "overlap_org": "",
+      "overlap_period": "",
       "direction": "undirected",
-      "confidence": "confirmed",
-      "source_ids": [
-        "S002"
-      ]
-    },
-    {
-      "person": "孙丹峰",
-      "person_id": "hebei_zhangjiakou_qiaoxi_孙丹峰_7",
-      "relationship_type": "overlap",
-      "strength": "medium",
-      "evidence": "同为第十二次党代会执行主席",
-      "overlap_org": "中共桥西区委",
-      "overlap_period": "2026-",
-      "direction": "undirected",
-      "confidence": "confirmed",
-      "source_ids": [
-        "S002"
-      ]
+      "confidence": "plausible",
+      "source_ids": ["S020", "S030"]
     }
   ],
   "governance_record": [
     {
-      "period": "2026",
+      "period": "2022",
       "domain": "other",
-      "achievement_or_event": "主持第十二次党代会开幕式，作为区政府主要领导负责桥西区全面行政工作",
-      "role_in_event": "区长、大会执行主席",
-      "measurable_outcome": "顺利完成第十二次党代会各项议程",
-      "location": "张家口市桥西区",
+      "achievement_or_event": "被授予'2022年冬奥会、冬残奥会河北省先进个人'称号",
+      "role_in_event": "蔚县驻酒店保障服务团队临时联合党委书记",
+      "measurable_outcome": "省级表彰",
+      "location": "河北省",
       "confidence": "confirmed",
-      "source_ids": [
-        "S002"
-      ]
+      "source_ids": ["S030"]
     }
   ],
   "professional_profile": {
-    "primary_specializations": [
-      "政府行政管理"
-    ],
-    "secondary_specializations": [],
-    "career_pattern": "unknown",
-    "systems_experience": [
-      "party",
-      "government"
-    ],
-    "geographic_pattern": [
-      "张家口市"
-    ],
+    "primary_specializations": ["组织人事", "基层党建"],
+    "secondary_specializations": ["冬奥保障"],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["organization", "party"],
+    "geographic_pattern": ["河北省张家口市蔚县", "河北省张家口市桥西区"],
     "promotion_velocity": {
-      "summary": "公开资料不足，无法评估晋升速度",
+      "summary": "从蔚县县委常委、组织部长调任桥西区委副书记（2025年1月），2026年7月升任区长，属跨县区调任晋升",
       "notable_fast_promotions": []
     }
   },
   "work_style_and_personality": {
     "public_style_indicators": [
       {
-        "trait": "low_profile",
-        "evidence": "公开报道中戈录伟以主持程序性会议为主，未见到独立政策发声",
-        "confidence": "plausible",
-        "source_ids": [
-          "S002"
-        ]
+        "trait": "unknown",
+        "evidence": "公开信息极为有限，无法评估工作风格",
+        "confidence": "unverified",
+        "source_ids": []
       }
     ],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "工作风格从公开报道推断，非心理评估。"
+    "caveat": "Work style assessment limited due to minimal public information."
   },
-  "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "截至2026年7月24日，未发现戈录伟的相关纪律处分或负面报道",
+      "description": "未发现任何纪律处分、审计问题、负面报道或异常免职记录",
       "date": "",
       "confidence": "confirmed",
       "source_ids": []
     }
   ],
   "source_register": [
-    {
-      "id": "S001",
-      "title": "中国共产党张家口市桥西区第十二次代表大会闭幕",
-      "url": "http://www.zjkqxq.gov.cn/single/11/96120.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-07-20",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "戈录伟作为大会执行主席出席闭幕大会"
-    },
-    {
-      "id": "S002",
-      "title": "中国共产党张家口市桥西区第十二次代表大会开幕",
-      "url": "http://www.zjkqxq.gov.cn/single/12/96126.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-07-20",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "戈录伟主持开幕大会，确认为区委副书记、区长；确认执行主席名单"
-    },
-    {
-      "id": "S011",
-      "title": "常务副区长杨巍洁同志 - 政府领导页面",
-      "url": "http://www.zjkqxq.gov.cn/single/98/45063.html",
-      "publisher": "张家口市桥西区人民政府",
-      "published_at": "2026-03-30",
-      "accessed_at": "2026-07-24",
-      "source_type": "official",
-      "reliability": "high",
-      "notes": "杨巍洁分工页面（2026年3月30日更新），佐证此时左克平为区长"
-    }
+    {"id": "S002", "title": "桥西区第十二次党代会开幕", "url": "http://www.zjkqxq.gov.cn/single/12/96126.html", "publisher": "桥西区人民政府", "published_at": "2026-07-20", "accessed_at": "2026-07-24", "source_type": "official", "reliability": "high", "notes": "戈录伟以执行主席身份主持开幕式"},
+    {"id": "S030", "title": "戈录伟 - 百度百科", "url": "https://baike.baidu.com/item/%E6%88%88%E5%BD%95%E4%BC%9F", "publisher": "百度百科", "published_at": "2025-01-02", "accessed_at": "2026-07-24", "source_type": "encyclopedia", "reliability": "medium", "notes": "信息较简略，仅有蔚县组织部长和桥西区委副书记职务"}
   ],
   "confidence_summary": {
-    "identity": "plausible",
+    "identity": "unverified",
     "current_role": "confirmed",
     "career_completeness": "thin",
     "relationship_confidence": "medium",
-    "biggest_gap": "缺失完整工作履历（出生、籍贯、教育、此前任职）"
+    "biggest_gap": "出生年月、籍贯、教育背景、任蔚县组织部长前全部早期履历"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "戈录伟2026年7月之前的全部工作履历？来自哪个部门/县区？",
-      "why_it_matters": "连接桥西区与外部的人脉网络最关键缺口",
-      "suggested_queries": [
-        "戈录伟 曾任",
-        "戈录伟 任前公示"
-      ],
+      "question": "戈录伟的出生年月、籍贯、教育背景",
+      "why_it_matters": "核心人物身份信息完全缺失",
+      "suggested_queries": ["戈录伟 出生 年月", "戈录伟 籍贯"],
       "last_attempted": "2026-07-24"
     },
     {
       "priority": "critical",
-      "question": "戈录伟出生年月、籍贯、教育背景？",
-      "why_it_matters": "身份基本盘",
-      "suggested_queries": [
-        "戈录伟 简历"
-      ],
+      "question": "戈录伟任蔚县县委常委、组织部长前的全部早期履历",
+      "why_it_matters": "了解其仕途起步和早期人脉",
+      "suggested_queries": ["戈录伟 蔚县 任职", "戈录伟 早期"],
       "last_attempted": "2026-07-24"
     }
   ]
