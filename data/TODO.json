@@ -25066,7 +25066,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": []
         }
       ]
@@ -25090,7 +25090,9 @@
               "label": "二把手"
             }
           ],
-          "done": false
+          "done": false,
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_湖北省_data.py, data/graph/湖北省_network.gexf"
         },
         {
           "id": "hubei_武汉市",
@@ -25125,7 +25127,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_江岸区_data.py, data/database/江岸区_network.db, data/graph/江岸区_network.gexf"
             },
             {
               "id": "hubei_江汉区",
@@ -25161,7 +25165,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_硚口区_data.py, data/database/硚口区_network.db, data/graph/硚口区_network.gexf"
             },
             {
               "id": "hubei_汉阳区",
@@ -25179,7 +25185,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_汉阳区_data.py, data/database/汉阳区_network.db, data/graph/汉阳区_network.gexf"
             },
             {
               "id": "hubei_武昌区",
@@ -25343,7 +25351,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_武汉市_data.py, data/database/武汉市_network.db, data/graph/武汉市_network.gexf"
         },
         {
           "id": "hubei_黄石市",
