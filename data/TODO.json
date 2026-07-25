@@ -43347,7 +43347,7 @@
               "label": "二把手"
             }
           ],
-          "done": false
+          "done": true
         },
         {
           "id": "shanghai_闵行区",
@@ -43364,7 +43364,9 @@
               "label": "二把手"
             }
           ],
-          "done": false
+          "done": false,
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_闵行区_data.py, data/database/闵行区_network.db, data/graph/闵行区_network.gexf"
         },
         {
           "id": "shanghai_宝山区",
