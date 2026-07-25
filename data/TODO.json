@@ -40803,7 +40803,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             },
             {
               "id": "shandong_张店区",
@@ -40821,7 +40821,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_张店区_data.py, data/database/张店区_network.db, data/graph/张店区_network.gexf"
             },
             {
               "id": "shandong_博山区",
@@ -40931,7 +40933,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_淄博市_data.py, data/database/淄博市_network.db, data/graph/淄博市_network.gexf"
         },
         {
           "id": "shandong_枣庄市",
