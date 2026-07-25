@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-25
+> Last updated: 2026-07-25 (including 铁岭县 update)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
