@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-25 (added 平原县)
+> Last updated: 2026-07-25 (added 武城县)
 
 ## Resolved Gaps
 *(None yet)*
@@ -25,6 +25,25 @@
 
 **Confidence**: All data marked as "plausible" or "unverified" — web search was unavailable during research.
 
+## 武城县 Investigation Summary (2026-07-25)
+
+**Task**: shandong_武城县 — 山东省德州市武城县 (县委书记 & 县长)
+**Status**: Partial-evidence build completed (all web search tools fully blocked/rate-limited)
+**Build script**: `scripts/build/build_武城县_data.py`
+**Database**: `data/database/武城县_network.db`
+**Graph**: `data/graph/武城县_network.gexf`
+**Person JSONs**: 无法生成（全部成员待查）
+
+**Key Findings**:
+- 县委书记: 待查 — 所有搜索工具均不可用，无法确认
+- 县长: 待查 — 所有搜索工具均不可用，无法确认
+- 前任县委书记: 待查
+- 前任县长: 待查
+- 县委常委会全体成员（10人）：全部待查
+- wucheng.gov.cn 首页可访问但领导之窗页面404/超时
+
+**Confidence**: All data marked as "unverified" — this is a **complete-evidence-gap** build. Only organizational skeleton is known.
+
 ## 宁津县 Investigation Summary (2026-07-25)
 
 **Task**: shandong_宁津县 — 山东省德州市宁津县 (县委书记 & 县长)
@@ -48,6 +67,10 @@
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
+| 待查 | 武城县委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知。所有Web搜索全面受限，属于complete-evidence-gap |
+| 待查 | 武城县委副书记、县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知 |
+| 待查 | 夏津县县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 赵之达升任县委书记后，县长人选未公开 |
+| 赵之达 | 夏津县委书记 | 完整履历（出生日期、籍贯、教育背景、早期任职经历、全部晋升时间线） | 2026-07-25 | 核心目标，仅知2021年起任职夏津 |
 | 待查 | 临沭县委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知。Web搜索全面受限（Exa限流、百度403、Jina超时） |
 | 待查 | 临沭县委副书记、县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知 |
 | 高善玉 | 宁津县委书记 | 完整履历（出生日期、籍贯、教育背景、早期任职经历、晋升时间线） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
@@ -58,6 +81,20 @@
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
 | Person/Gap | What's Missing | Last Attempted | Notes |
 |-----------|----------------|----------------|-------|
+| 曲传增 | 夏津县委常委、副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 实际主持政府工作的常务副县长 |
+| 王勇 | 夏津县委副书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 县委副书记 |
+| 赵之达的前任县委书记 | 姓名、去向 | 2026-07-25 | 未从公开渠道确认 |
+| 武城县委领导班子 | 全部10名县委常委的具体人选、姓名、履历 | 2026-07-25 | 一个县的全部领导班子未知 |
+| 武城县委专职副书记 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县常务副县长 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县纪委书记 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县委组织部长 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县委宣传部长 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县委政法委书记 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县委统战部长 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县委办公室主任 | 姓名、履历 | 2026-07-25 | 未知 |
+| 武城县前任县委书记 | 姓名、任期、去向 | 2026-07-25 | 未知 |
+| 武城县前任县长 | 姓名、任期、去向 | 2026-07-25 | 未知 |
 | 前任县委书记 | 姓名、去向 | 2026-07-25 | 未知 |
 | 前任县长 | 姓名、去向 | 2026-07-25 | 未知 |
 | 县委常委完整名单 | 纪委书记、组织部长、宣传部长、政法委书记等 | 2026-07-25 | 仅知颜士刚为县委常委 |
