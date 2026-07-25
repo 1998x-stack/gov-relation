@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-25
+> Last updated: 2026-07-25 (updated with 振安区)
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps) — 本溪满族自治县
 | Person | Current Role | What's Missing | Last Attempted | Notes |
@@ -25,6 +25,9 @@
 | 待查 | 东洲区区委书记 | 姓名、身份、履历完全未知 | 2026-07-25 | 政府网站 www.fsdzq.gov.cn 完全不可访问；所有搜索工具均受限或超时 |
 | 待查 | 东洲区区长 | 姓名、身份、履历完全未知 | 2026-07-25 | 同上 - 所有网络搜索工具均受限 |
 | 待查 | 东洲区领导班子全体成员 | 完整领导班子名单完全未知 | 2026-07-25 | 区委常委、常务副区长、组织部长等7个关键岗位均待查 |
+| 待查 | 振安区委书记 | 姓名、身份、履历完全未知 | 2026-07-25 | 政府网站 www.ddzhenan.gov.cn 完全不可访问；所有搜索工具（Exa/Baidu/Google/Jina）均受限或超时 |
+| 待查 | 振安区区长 | 姓名、身份、履历完全未知 | 2026-07-25 | 同上 - 所有网络搜索工具均受限 |
+| 待查 | 振安区领导班子全体成员 | 完整领导班子名单完全未知 | 2026-07-25 | 区委常委、副区长等关键岗位均待查 |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
 | Person/Gap | What's Missing | Last Attempted | Notes |
