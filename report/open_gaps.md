@@ -80,6 +80,28 @@ Last updated: 2026-07-25
 
 *(None yet — first investigation)*
 
+## 中宁县 — Critical
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 何建勃 | 中宁县委书记（需核实） | 出生日期、籍贯、教育背景、完整任职履历 | 2026-07-25 | 所有网络搜索工具均不可用（Exa限流、政府站点超时、Jina超时） |
+| 周永根 | 中宁县县长（需核实） | 出生日期、籍贯、教育背景、完整任职履历、此前职务 | 2026-07-25 | 同上 |
+
+## 中宁县 — High
+- 核实何建勃、周永根是否仍在任（截至2026年）
+- 中宁县委常委班子完整名单确认
+- 前任县委书记陈宏的现任去向（是否仍任中卫市副市长）
+- 补充所有核心人物的出生日期、教育背景
+- 中宁县领导分工信息
+
+## 中宁县 — Medium
+- 中宁县政府组成部门负责人
+- 中宁县乡镇（宁安镇等）主要领导
+- 中宁县与中卫市其他县区的干部交流情况
+
+## Resolved Gaps
+
+*(None yet — first investigation)*
+
 ## Previous Unresolved (carried forward)
 
 *(No previous investigation exists for 西夏区)*
