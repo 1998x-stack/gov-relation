@@ -38391,7 +38391,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             },
             {
               "id": "shaanxi_耀州区",
@@ -38409,7 +38409,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_耀州区_data.py, data/database/耀州区_network.db, data/graph/耀州区_network.gexf"
             },
             {
               "id": "shaanxi_宜君县",
@@ -38429,7 +38431,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_铜川市_data.py, data/database/铜川市_network.db, data/graph/铜川市_network.gexf"
         },
         {
           "id": "shaanxi_宝鸡市",
