@@ -1,6 +1,19 @@
 # Open Gaps Registry
 > Last updated: 2026-07-25
 
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps) — 本溪满族自治县
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 丛茂昆 | 本溪满族自治县委书记 | 完整履历（出生、籍贯、学历、曾任职务、任书记时间） | 2026-07-25 | 仅确认现任身份和一次调研活动 |
+| 蔡壮 | 本溪满族自治县长 | 完整履历（出生、籍贯、学历、曾任职务、任县长时间） | 2026-07-25 | 仅确认现职务和主持县常务会议 |
+
+## ⭐⭐⭐⭐ High (important deputies or key connections) — 本溪满族自治县
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 县委系统领导班子 | 纪委书记、组织部长、宣传部长等名单 | 2026-07-25 | 政府官网仅显示政府班子 |
+| 孙承宇/杜福易/李贵华/刘旭/姜久彬/邓守莳/战俊铭 | 各自履历信息 | 2026-07-25 | 仅知姓名和当前职务 |
+| 前任县委书记邵涛 | 去向、调任时间、履历 | 2026-07-25 | 需核实是否确为邵涛 |
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
