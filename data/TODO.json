@@ -30625,7 +30625,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "inner_mongolia_临河区",
@@ -30661,7 +30661,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_五原县_data.py, data/database/五原县_network.db, data/graph/五原县_network.gexf"
             },
             {
               "id": "inner_mongolia_磴口县",
@@ -30679,7 +30681,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_磴口县_data.py, data/database/磴口县_network.db, data/graph/磴口县_network.gexf"
             }
           ]
         },
