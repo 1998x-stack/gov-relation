@@ -39492,7 +39492,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             },
             {
               "id": "shaanxi_南郑区",
@@ -39528,7 +39528,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_城固县_data.py, data/database/城固县_network.db, data/graph/城固县_network.gexf"
             },
             {
               "id": "shaanxi_洋县",
@@ -39546,7 +39548,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_洋县_data.py, data/database/洋县_network.db, data/graph/洋县_network.gexf"
             },
             {
               "id": "shaanxi_西乡县",
@@ -39674,7 +39678,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_汉中市_data.py, data/database/汉中市_network.db, data/graph/汉中市_network.gexf"
         },
         {
           "id": "shaanxi_榆林市",
