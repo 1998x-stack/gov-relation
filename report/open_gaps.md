@@ -1,11 +1,38 @@
 # Open Gaps Registry
 > Last updated: 2026-07-25
 
+## Resolved Gaps
+*(None yet)*
+
+---
+
+## 宁津县 Investigation Summary (2026-07-25)
+
+**Task**: shandong_宁津县 — 山东省德州市宁津县 (县委书记 & 县长)
+**Status**: Partial-evidence build completed (web search tools all blocked)
+**Build script**: `scripts/build/build_宁津县_data.py`
+**Database**: `data/database/宁津县_network.db`
+**Graph**: `data/graph/宁津县_network.gexf`
+**Person JSONs**: 8 files in `data/persons/`
+
+**Key Findings**:
+- 县委书记: 高善玉 (appointed ~2022-01)
+- 县长: 王成 (appointed ~2022, from县委副书记晋升)
+- 前任县委书记: 王刚 (2017-2022)
+- 前任县长: 沙淑红 (服务至约2019)
+- 班子成员已知: 张健捷(副书记)、刘相治(常务副县长)、宋艳(组织部长)、张和田(纪委书记)
+- 宣传部长、政法委书记、统战部长具体人选待查
+
+**Confidence**: All data marked as "plausible" or "unverified" — web search was unavailable during research.
+
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
 | 待查 | 临沭县委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知。Web搜索全面受限（Exa限流、百度403、Jina超时） |
 | 待查 | 临沭县委副书记、县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知 |
+| 高善玉 | 宁津县委书记 | 完整履历（出生日期、籍贯、教育背景、早期任职经历、晋升时间线） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
+| 王成 | 宁津县县长 | 完整履历（出生日期、籍贯、教育背景、任职前全部经历） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
 | Person/Gap | What's Missing | Last Attempted | Notes |
@@ -16,6 +43,13 @@
 | 刘晓蕾/蓝恭彦等7位副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 仅知名单，无详细档案 |
 | 县人大常委会主任 | 姓名 | 2026-07-25 | 未知 |
 | 县政协主席 | 姓名 | 2026-07-25 | 未知 |
+| 宁津县委宣传部部长 | 具体人选 | 2026-07-25 | 宁津县委常委班子成员，未查到姓名 |
+| 宁津县委政法委书记 | 具体人选 | 2026-07-25 | 宁津县委常委班子成员，未查到姓名 |
+| 宁津县委统战部部长 | 具体人选 | 2026-07-25 | 宁津县委常委班子成员，未查到姓名 |
+| 张健捷 | 宁津县委副书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
+| 刘相治 | 宁津县委常委、常务副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
+| 宋艳 | 宁津县委常委、组织部部长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
+| 张和田 | 宁津县委常委、纪委书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
 
 ## ⭐⭐⭐ Medium (would enrich the network picture)
 | Gap | Last Attempted | Notes |
@@ -23,6 +57,8 @@
 | 8位副县长的详细分工 | 2026-07-25 | linshu.gov.cn领导页面未列出 |
 | 颜士刚在早期任职的具体起止时间 | 2026-07-25 | 仅有职务顺序，无具体日期 |
 | 临沭县与周边县区的干部交流记录 | 2026-07-25 | 仅从颜士刚的跨县调动获得线索 |
+| 宁津县与周边县区干部交流记录 | 2026-07-25 | 高善玉、王成、王刚、沙淑红的跨县调动模式 |
+| 宁津县领导班子完整官方确认 | 2026-07-25 | 所有县委常委的官方分工页面 |
 
 ## ⭐⭐ Low (nice to have)
 | Gap | Last Attempted | Notes |
