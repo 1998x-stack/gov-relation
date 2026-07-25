@@ -42683,7 +42683,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             },
             {
               "id": "shandong_禹城市",
@@ -42701,7 +42701,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_禹城市_data.py, data/database/禹城市_network.db, data/graph/禹城市_network.gexf"
             }
           ],
           "blocked": true,
@@ -42868,7 +42870,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_聊城市_data.py, data/database/聊城市_network.db, data/graph/聊城市_network.gexf"
         },
         {
           "id": "shandong_滨州市",
