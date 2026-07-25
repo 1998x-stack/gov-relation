@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-25">
+    <creator>Claude Code Research Agent</creator>
+    <description>博兴县领导工作关系网络 — Boxing County Leadership Network, Shandong Province</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="confidence" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="pboxing_li_shoujiang" label="李守江">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委书记"/>
+          <attvalue for="2" value="中共博兴县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pboxing_zhang_yadong" label="张亚东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委副书记、县长"/>
+          <attvalue for="2" value="博兴县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pboxing_npc_chair" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县人大常委会主任"/>
+          <attvalue for="2" value="博兴县人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_cppcc_chair" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议博兴县委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_deputy_party_sec" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委副书记"/>
+          <attvalue for="2" value="中共博兴县委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_discipline_sec" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共博兴县纪律检查委员会"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_exec_deputy_mayor" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、常务副县长"/>
+          <attvalue for="2" value="博兴县人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pboxing_org_dept_head" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+          <attvalue for="2" value="中共博兴县委组织部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_propaganda_head" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+          <attvalue for="2" value="中共博兴县委宣传部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_legal_affairs_head" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+          <attvalue for="2" value="中共博兴县委政法委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_united_front_head" label="（待确认）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+          <attvalue for="2" value="中共博兴县委统一战线工作部"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="pboxing_prev_party_sec" label="焦本强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任县委书记"/>
+          <attvalue for="2" value="中共博兴县委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="pboxing_binzhou_party_sec" label="李春田">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="滨州市委书记"/>
+          <attvalue for="2" value="中共滨州市委"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o100000" label="中共博兴县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100001" label="博兴县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100002" label="博兴县人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100003" label="中国人民政治协商会议博兴县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100004" label="中共博兴县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100005" label="中共博兴县委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正科级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100006" label="中共博兴县委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正科级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100007" label="中共博兴县委政法委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正科级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100008" label="中共博兴县委统一战线工作部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委部门"/>
+          <attvalue for="2" value="正科级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100009" label="中共滨州市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地厅级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o100010" label="滨州市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地厅级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="pboxing_li_shoujiang" target="o100000" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="1" source="pboxing_zhang_yadong" target="o100000" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="pboxing_zhang_yadong" target="o100001" label="县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="pboxing_prev_party_sec" target="o100000" label="县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="pboxing_npc_chair" target="o100002" label="县人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县人大常委会主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="pboxing_cppcc_chair" target="o100003" label="县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县政协主席"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="pboxing_deputy_party_sec" target="o100000" label="县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委副书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="pboxing_discipline_sec" target="o100004" label="县委常委、纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="pboxing_exec_deputy_mayor" target="o100001" label="县委常委、常务副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、常务副县长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="pboxing_org_dept_head" target="o100005" label="县委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、组织部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="pboxing_propaganda_head" target="o100006" label="县委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、宣传部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="pboxing_legal_affairs_head" target="o100007" label="县委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、政法委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="pboxing_united_front_head" target="o100008" label="县委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="县委常委、统战部部长"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="pboxing_binzhou_party_sec" target="o100009" label="滨州市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="滨州市委书记"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="pboxing_li_shoujiang" target="pboxing_zhang_yadong" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="李守江（县委书记）- 张亚东（县长）：党政主要领导合作关系"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="pboxing_binzhou_party_sec" target="pboxing_li_shoujiang" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="李春田（滨州市委书记）- 李守江（博兴县委书记）：市-县上下级"/>
+          <attvalue for="2" value="confirmed"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="pboxing_li_shoujiang" target="pboxing_npc_chair" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李守江（县委书记）- 人大主任：县委-人大四大班子领导"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="pboxing_li_shoujiang" target="pboxing_cppcc_chair" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="李守江（县委书记）- 政协主席：县委-政协四大班子领导"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="pboxing_li_shoujiang" target="pboxing_deputy_party_sec" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记 - 县委专职副书记"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="pboxing_li_shoujiang" target="pboxing_discipline_sec" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县委书记 - 纪委书记"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="pboxing_zhang_yadong" target="pboxing_exec_deputy_mayor" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="县长 - 常务副县长"/>
+          <attvalue for="2" value="plausible"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
