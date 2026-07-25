@@ -38050,7 +38050,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             }
           ]
         }
@@ -38110,7 +38110,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_新城区_data.py, data/database/新城区_network.db, data/graph/新城区_network.gexf"
             },
             {
               "id": "shaanxi_碑林区",
@@ -38328,7 +38330,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_西安市_data.py, data/database/西安市_network.db, data/graph/西安市_network.gexf"
         },
         {
           "id": "shaanxi_铜川市",
