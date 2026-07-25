@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-25">
+    <creator>Gov Relation Research Agent</creator>
+    <description>莱阳市领导班子工作关系网络 — 中共莱阳市委、莱阳市人民政府及前任领导</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="level" type="string"/>
+      <attribute id="3" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="卢春玲">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="邵蕾">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市委副书记、市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="邹得民">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市委常委、副市长（正县级）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p4" label="于涛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市委常委、宣传部部长、副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="于述东">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市副市长、市公安局局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="李占伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="李诚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="陈林旭">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="王宏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="李胜刚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="烟台市委党校常务副校长（曾任莱阳市委书记）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p11" label="刘森">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="曾任莱阳市委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+    </nodes>
+    <nodes>
+      <node id="o1" label="中共莱阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="莱阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="莱阳市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="政协莱阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共莱阳市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共莱阳市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共莱阳市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共莱阳市委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="中共莱阳市委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="莱阳市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="莱阳经济开发区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="开发区"/>
+          <attvalue for="2" value="县级"/>
+          <attvalue for="3" value="山东省烟台市莱阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o12" label="中共烟台市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="地级"/>
+          <attvalue for="3" value="山东省烟台市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o13" label="烟台市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="地级"/>
+          <attvalue for="3" value="山东省烟台市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o14" label="中共烟台市委党校">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="事业单位"/>
+          <attvalue for="2" value="地级"/>
+          <attvalue for="3" value="山东省烟台市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="莱阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o2" label="莱阳市委副书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委副书记、市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o1" label="莱阳市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委副书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o2" label="莱阳市委常委、副市长（正县级）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委常委、副市长（正县级）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o1" label="莱阳市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委常委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o7" label="莱阳市委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委常委、宣传部部长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p4" target="o2" label="莱阳市政府党组成员、副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市政府党组成员、副市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o2" label="莱阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p5" target="o10" label="莱阳市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市公安局局长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p6" target="o2" label="莱阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p7" target="o2" label="莱阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p8" target="o2" label="莱阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p9" target="o2" label="莱阳市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市副市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p10" target="o1" label="莱阳市委书记（曾任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委书记（曾任）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p11" target="o1" label="莱阳市委书记（曾任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="莱阳市委书记（曾任）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="卢春玲任莱阳市委书记，邵蕾任市长，党政搭档"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p10" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="卢春玲接替李胜刚担任莱阳市委书记（推测）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p11" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="卢春玲接替刘森担任莱阳市委书记（推测）"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p1" target="p3" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="卢春玲任市委书记，邹得民任市委常委、副市长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p1" target="p4" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="卢春玲任市委书记，于涛任市委常委、宣传部部长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p2" target="p3" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵蕾任市长，邹得民任常务副市长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p2" target="p5" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵蕾任市长，于述东任副市长兼公安局长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p2" target="p6" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵蕾任市长，李占伟任副市长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p2" target="p7" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵蕾任市长，李诚任副市长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p2" target="p8" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵蕾任市长，陈林旭任副市长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e26" source="p2" target="p9" label="superior_subordinate" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="邵蕾任市长，王宏任副市长"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e27" source="p4" target="p5" label="overlap" weight="1.5">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="于涛（市委常委、宣传部长）与于述东（副市长、政法委副书记）在莱阳市委班子共事"/>
+          <attvalue for="2" value="至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
