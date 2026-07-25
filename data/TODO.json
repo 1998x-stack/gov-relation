@@ -43311,7 +43311,7 @@
               "label": "二把手"
             }
           ],
-          "done": false
+          "done": true
         },
         {
           "id": "shanghai_虹口区",
@@ -43328,7 +43328,9 @@
               "label": "二把手"
             }
           ],
-          "done": false
+          "done": false,
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_虹口区_data.py, data/database/虹口区_network.db, data/graph/虹口区_network.gexf"
         },
         {
           "id": "shanghai_杨浦区",
