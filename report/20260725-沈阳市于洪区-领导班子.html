@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沈阳市于洪区领导班子工作关系网络</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;scroll-behavior:smooth}
+body{
+  background:#0c0b0a;
+  color:#e6ddd0;
+  font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  min-height:100vh;
+}
+::selection{background:#E03C31;color:#fff}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#0c0b0a}
+::-webkit-scrollbar-thumb{background:#E03C31}
+
+/* Typography */
+h1,h2,h3,h4{font-family:'Noto Serif SC',serif;font-weight:700;line-height:1.3;letter-spacing:0.02em}
+h1{font-size:2.2rem}
+h2{font-size:1.4rem;margin-bottom:1.5rem}
+h3{font-size:1.1rem;margin-bottom:0.75rem}
+.section-label{
+  font-family:'Noto Serif SC',serif;
+  font-size:0.65rem;
+  text-transform:uppercase;
+  letter-spacing:0.3em;
+  color:#E03C31;
+  margin-bottom:0.5rem;
+}
+
+/* Container */
+.container{max-width:1280px;margin:0 auto;padding:2rem 1.5rem}
+
+/* Header */
+.header{
+  border-bottom:1px solid rgba(230,221,208,0.12);
+  padding-bottom:2.5rem;
+  margin-bottom:2.5rem;
+}
+.header-eyebrow{
+  font-size:0.6rem;
+  letter-spacing:0.4em;
+  color:rgba(230,221,208,0.4);
+  text-transform:uppercase;
+  margin-bottom:0.5rem;
+}
+.header h1{max-width:660px}
+.header-meta{
+  display:flex;
+  gap:2.5rem;
+  margin-top:1.5rem;
+  flex-wrap:wrap;
+}
+.header-meta-item{font-size:0.85rem;color:rgba(230,221,208,0.55)}
+.header-meta-item span{color:#E03C31;font-weight:500}
+
+/* Stats bar */
+.stats-bar{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(230,221,208,0.1);
+  border:1px solid rgba(230,221,208,0.1);
+  margin-bottom:2.5rem;
+}
+.stat-cell{
+  background:#0c0b0a;
+  padding:1.25rem 1rem;
+  text-align:center;
+}
+.stat-number{
+  font-family:'Noto Serif SC',serif;
+  font-size:2rem;
+  font-weight:900;
+  color:#E03C31;
+  line-height:1;
+}
+.stat-label{font-size:0.75rem;color:rgba(230,221,208,0.5);margin-top:0.3rem;letter-spacing:0.05em}
+
+/* Cards grid */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:1px;
+  background:rgba(230,221,208,0.1);
+  border:1px solid rgba(230,221,208,0.1);
+  margin-bottom:2.5rem;
+}
+.person-card{
+  background:#0c0b0a;
+  padding:1.25rem;
+  position:relative;
+  transition:background 0.2s;
+}
+.person-card:hover{background:rgba(224,60,49,0.04)}
+.person-card .role-tag{
+  display:inline-block;
+  font-size:0.6rem;
+  letter-spacing:0.15em;
+  padding:0.2rem 0.5rem;
+  border:1px solid;
+  margin-bottom:0.5rem;
+}
+.role-tag.secretary{color:#E03C31;border-color:#E03C31}
+.role-tag.mayor{color:#6b9eff;border-color:#6b9eff}
+.role-tag.deputy{color:#c9a94e;border-color:#c9a94e}
+.role-tag.standing{color:#b8866e;border-color:#b8866e}
+.role-tag.other{color:rgba(230,221,208,0.4);border-color:rgba(230,221,208,0.2)}
+.person-card .name{
+  font-family:'Noto Serif SC',serif;
+  font-size:1.15rem;
+  font-weight:700;
+  margin-bottom:0.15rem;
+}
+.person-card .title{
+  font-size:0.8rem;
+  color:rgba(230,221,208,0.65);
+  line-height:1.5;
+  margin-bottom:0.5rem;
+}
+.person-card .attrs{
+  font-size:0.7rem;
+  color:rgba(230,221,208,0.35);
+  display:flex;
+  gap:0.75rem;
+}
+.person-card .gap-icon{
+  display:inline-block;
+  width:6px;height:6px;
+  background:#E03C31;
+  margin-right:0.3rem;
+  vertical-align:middle;
+}
+
+/* Section */
+.section{
+  margin-bottom:2.5rem;
+  border-top:1px solid rgba(230,221,208,0.08);
+  padding-top:2rem;
+}
+
+/* Timeline */
+.timeline{position:relative;padding-left:1.5rem}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:1px;
+  background:rgba(230,221,208,0.15);
+}
+.timeline-item{position:relative;padding-bottom:1.5rem}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{
+  content:'';
+  position:absolute;
+  left:-1.5rem;
+  top:0.5rem;
+  width:9px;height:9px;
+  border-radius:50%;
+  background:#0c0b0a;
+  border:1.5px solid rgba(230,221,208,0.25);
+  transform:translateX(-50%);
+}
+.timeline-item.highlight::before{border-color:#E03C31;background:#E03C31}
+.timeline-date{
+  font-size:0.7rem;
+  color:rgba(230,221,208,0.4);
+  letter-spacing:0.05em;
+  margin-bottom:0.2rem;
+}
+.timeline-text{
+  font-size:0.85rem;
+  color:rgba(230,221,208,0.8);
+}
+.timeline-text strong{color:#e6ddd0}
+
+/* Table */
+.data-table{width:100%;border-collapse:collapse;font-size:0.8rem}
+.data-table th{
+  text-align:left;
+  font-weight:500;
+  color:rgba(230,221,208,0.4);
+  font-size:0.65rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:0.5rem 0.75rem;
+  border-bottom:1px solid rgba(230,221,208,0.1);
+}
+.data-table td{
+  padding:0.5rem 0.75rem;
+  border-bottom:1px solid rgba(230,221,208,0.05);
+  vertical-align:top;
+}
+.data-table tr:hover td{background:rgba(224,60,49,0.03)}
+.data-table .gap-row td{color:rgba(230,221,208,0.35)}
+.gap-priority{display:inline-block;font-size:0.55rem;letter-spacing:0.1em;margin-right:0.3rem}
+
+/* Gaps */
+.gaps-list{list-style:none}
+.gaps-list li{
+  padding:0.75rem 0;
+  border-bottom:1px solid rgba(230,221,208,0.06);
+  font-size:0.85rem;
+  display:flex;
+  align-items:flex-start;
+  gap:0.75rem;
+}
+.gaps-list li:last-child{border-bottom:none}
+.gap-stars{
+  font-size:0.7rem;
+  color:#E03C31;
+  flex-shrink:0;
+  min-width:4rem;
+}
+
+/* Insights */
+.insights-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(230,221,208,0.1);
+  border:1px solid rgba(230,221,208,0.1);
+}
+.insight-cell{
+  background:#0c0b0a;
+  padding:1.25rem;
+}
+.insight-cell h4{font-size:0.9rem;margin-bottom:0.4rem}
+.insight-cell p{font-size:0.8rem;color:rgba(230,221,208,0.6)}
+.insight-cell .tag{
+  display:inline-block;
+  font-size:0.55rem;
+  letter-spacing:0.1em;
+  padding:0.15rem 0.4rem;
+  border:1px solid;
+  margin-top:0.5rem;
+}
+.tag.confirmed{color:#c9a94e;border-color:#c9a94e}
+.tag.gap{color:#E03C31;border-color:#E03C31}
+
+/* Legend */
+.legend{
+  display:flex;
+  gap:1.5rem;
+  flex-wrap:wrap;
+  margin-bottom:1.5rem;
+  font-size:0.7rem;
+  color:rgba(230,221,208,0.5);
+}
+.legend-item{display:flex;align-items:center;gap:0.4rem}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+
+/* Footer */
+.footer{
+  border-top:1px solid rgba(230,221,208,0.08);
+  padding-top:1.5rem;
+  margin-top:2.5rem;
+  font-size:0.7rem;
+  color:rgba(230,221,208,0.3);
+}
+
+/* Two-col layout */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:800px){
+  .two-col{grid-template-columns:1fr}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .insights-grid{grid-template-columns:1fr}
+  h1{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<header class="header">
+  <div class="header-eyebrow">Intelligence Briefing · 于洪区</div>
+  <h1>沈阳市于洪区领导班子<br>工作关系网络</h1>
+  <div class="header-meta">
+    <div class="header-meta-item">调查日期 <span>2026年7月25日</span></div>
+    <div class="header-meta-item">数据分级 <span>公开来源（一级）</span></div>
+    <div class="header-meta-item">信息完整度 <span>68%</span></div>
+  </div>
+</header>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stat-cell"><div class="stat-number">18</div><div class="stat-label">人物</div></div>
+  <div class="stat-cell"><div class="stat-number">5</div><div class="stat-label">机构</div></div>
+  <div class="stat-cell"><div class="stat-number">19</div><div class="stat-label">任职记录</div></div>
+  <div class="stat-cell"><div class="stat-number">7</div><div class="stat-label">关系连线</div></div>
+</div>
+
+<!-- People -->
+<section class="section">
+  <div class="section-label">Personnel Roster</div>
+  <h2>领导班子全体成员</h2>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#E03C31"></span> 区委书记</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#6b9eff"></span> 区长 / 副区长</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#c9a94e"></span> 区委副书记</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#b8866e"></span> 区委常委</span>
+    <span class="legend-item"><span class="legend-dot" style="background:rgba(230,221,208,0.3)"></span> 其他</span>
+  </div>
+  <div class="cards-grid" id="person-grid"></div>
+</section>
+
+<!-- Timeline + Insights -->
+<section class="section">
+  <div class="two-col">
+    <div>
+      <div class="section-label">Transition Timeline</div>
+      <h2>近期人事变动</h2>
+      <div class="timeline" id="timeline"></div>
+    </div>
+    <div>
+      <div class="section-label">Assessment</div>
+      <h2>关键洞察</h2>
+      <div class="insights-grid">
+        <div class="insight-cell">
+          <h4>权力集中度</h4>
+          <p>王洪超由区长升任书记，原职位由刘伟接替代区长。书记+区长均换人，属于全面交接。</p>
+          <span class="tag gap">高政威去向待查</span>
+        </div>
+        <div class="insight-cell">
+          <h4>关键二级岗位</h4>
+          <p>常务副区长由郝威接替张龙；副书记由鲁瑶接替么家伟。二级岗位同步换血，属系统调整。</p>
+          <span class="tag confirmed">郝威1984年生，80后上位</span>
+        </div>
+        <div class="insight-cell">
+          <h4>班子结构特征</h4>
+          <p>平均年龄约50岁。6位副区长中4位为区委常委。冶桂春（回族、无党派、女性）为唯一非党副区长。</p>
+          <span class="tag confirmed">结构性配置完整</span>
+        </div>
+        <div class="insight-cell">
+          <h4>信息缺口预警</h4>
+          <p>纪委、宣传、政法3个区委专职常委身份未确认。王洪超完整履历缺失，影响更深层分析。</p>
+          <span class="tag gap">4项关键信息缺失</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Data Table -->
+<section class="section">
+  <div class="section-label">Master Roster</div>
+  <h2>完整花名册</h2>
+  <table class="data-table" id="master-table"></table>
+</section>
+
+<!-- Gaps -->
+<section class="section">
+  <div class="section-label">Open Gaps</div>
+  <h2>信息缺口</h2>
+  <ul class="gaps-list">
+    <li><span class="gap-stars">☆☆☆☆☆</span> <span><strong>区委专职常委（纪委/宣传/政法书记）</strong><br>官网无区委领导页面，需从新闻报道挖掘</span></li>
+    <li><span class="gap-stars">☆☆☆☆☆</span> <span><strong>王洪超完整简历</strong><br>出生年、籍贯、早期职业生涯均缺失</span></li>
+    <li><span class="gap-stars">☆☆☆☆</span> <span><strong>高政威去向</strong><br>前任区委书记2026年3-6月间调离，去向不明</span></li>
+    <li><span class="gap-stars">☆☆☆☆</span> <span><strong>刘伟此前职务</strong><br>代区长从何处调任来于洪区</span></li>
+    <li><span class="gap-stars">☆☆☆</span> <span><strong>张龙去向</strong><br>原常务副区长5月后离任，去向不明</span></li>
+    <li><span class="gap-stars">☆☆☆</span> <span><strong>么家伟 / 鲁瑶交接</strong><br>么家伟3-5月任副书记，7月鲁瑶接替，交接时间点需确认</span></li>
+  </ul>
+</section>
+
+<!-- Sources -->
+<section class="section">
+  <div class="section-label">Sources</div>
+  <h2>信息来源</h2>
+  <p style="font-size:0.8rem;color:rgba(230,221,208,0.5);margin-bottom:0.5rem">
+    全部数据来源于沈阳市于洪区人民政府官方网站 (www.syyh.gov.cn)，一级政府公开信息。
+  </p>
+  <div style="font-size:0.7rem;color:rgba(230,221,208,0.35);line-height:1.8">
+    区政府领导信息页面 · 区长刘伟简历页 · 各副区长简历页（7人） · 2026年3月分工文件 · 王洪超慰问新闻 · 全区警示教育会 · 区委十二届十次全会 · 校地签约新闻 · 区委培训班新闻 · 民革会议新闻 · 防汛安置新闻 · 项目工作会议新闻
+  </div>
+</section>
+
+<footer class="footer">
+  沈阳市于洪区 · 领导班子工作关系网络调查报告 · 2026年7月25日<br>
+  数据文件: SQLite / GEXF / Markdown 同期生成
+</footer>
+
+</div>
+
+<script>
+// Data
+const persons = [
+  {id:"wang",name:"王洪超",role:"区委书记",roleType:"secretary",birth:"",eth:"汉族",edu:"硕士研究生",note:"原区长，2026年6月晋升",gap:true},
+  {id:"liu",name:"刘伟",role:"区委副书记、代区长",roleType:"mayor",birth:"1978年3月",eth:"汉族",edu:"硕士研究生",note:"主持区政府全面工作"},
+  {id:"yao",name:"么家伟",role:"区委副书记（前任）",roleType:"deputy",birth:"",eth:"",edu:"",note:"2026年3-5月在任，7月由鲁瑶接替",gap:true},
+  {id:"lu",name:"鲁瑶",role:"区委副书记",roleType:"deputy",birth:"",eth:"",edu:"",note:"2026年6月起新任",gap:true},
+  {id:"hao",name:"郝威",role:"区委常委、常务副区长",roleType:"standing",birth:"1984年12月",eth:"汉族",edu:"大学/硕士",note:"80后上位，接替张龙"},
+  {id:"wangyl",name:"王永亮",role:"区委常委、副区长",roleType:"standing",birth:"1971年2月",eth:"汉族",edu:"在职大学"},
+  {id:"jiao",name:"矫健",role:"区委常委、副区长",roleType:"standing",birth:"1980年11月",eth:"汉族(女)",edu:"在职大学"},
+  {id:"guan",name:"关伟",role:"区委常委、统战部部长",roleType:"standing",birth:"",eth:"",edu:"",gap:true},
+  {id:"zhou",name:"周文辉",role:"区委常委、组织部部长",roleType:"standing",birth:"",eth:"",edu:"",gap:true},
+  {id:"ye",name:"冶桂春",role:"副区长",roleType:"other",birth:"1975年2月",eth:"回族(女)",edu:"研究生/硕士",note:"无党派人士"},
+  {id:"dong",name:"董铁石",role:"副区长",roleType:"other",birth:"1976年10月",eth:"汉族",edu:"大学/学士"},
+  {id:"chen",name:"陈嘉宁",role:"副区长、公安分局局长",roleType:"other",birth:"1971年9月",eth:"汉族",edu:"在职大学"},
+  {id:"wangtw",name:"王太文",role:"副区长",roleType:"other",birth:"1976年3月",eth:"汉族",edu:"大学/学士"},
+  {id:"li",name:"李广杰",role:"区人大常委会主任",roleType:"other",birth:"",eth:"",edu:""},
+  {id:"zhangdj",name:"张殿军",role:"区政协主席",roleType:"other",birth:"",eth:"",edu:""},
+  {id:"liuc",name:"刘成",role:"区政协党组书记",roleType:"other",birth:"",eth:"",edu:""},
+  {id:"gao",name:"高政威",role:"原区委书记（已离任）",roleType:"other",birth:"",eth:"",edu:"",note:"去向待查",gap:true},
+  {id:"zhanl",name:"张龙",role:"原常务副区长（已离任）",roleType:"other",birth:"",eth:"",edu:"",note:"去向待查",gap:true},
+];
+
+const timeline = [
+  {date:"2025年12月",text:"高政威以区委书记身份主持区委十二届十次全会"},
+  {date:"2026年3月",text:"高政威（书记）+ 王洪超（区长）+ 么家伟（副书记）出席校地签约"},
+  {date:"2026年5月",text:"张龙仍以常务副区长身份主持项目工作会议"},
+  {date:"2026年6月",text:"<strong>王洪超升任区委书记 · 刘伟调任代区长 · 鲁瑶任副书记</strong>",highlight:true},
+  {date:"2026年7月",text:"新领导班子完整运作，王洪超主持全区警示教育会"},
+];
+
+const masterRows = [
+  ["王洪超","区委书记","—","汉族","原区长晋升"],
+  ["刘伟","区委副书记、代区长","1978.3","汉族","硕士研究生"],
+  ["么家伟","区委副书记（前任）","—","—","3-5月在任"],
+  ["鲁瑶","区委副书记","—","—","6月起新任"],
+  ["郝威","常务副区长","1984.12","汉族","80后"],
+  ["王永亮","副区长（区委常委）","1971.2","汉族","在职大学"],
+  ["矫健","副区长（区委常委）","1980.11","汉族(女)","在职大学"],
+  ["关伟","统战部部长（常委）","—","—",""],
+  ["周文辉","组织部部长（常委）","—","—",""],
+  ["冶桂春","副区长","1975.2","回族(女)","无党派"],
+  ["董铁石","副区长","1976.10","汉族","大学/学士"],
+  ["陈嘉宁","副区长/公安局长","1971.9","汉族","在职大学"],
+  ["王太文","副区长","1976.3","汉族","大学/学士"],
+  ["李广杰","人大常委会主任","—","—",""],
+  ["张殿军","政协主席","—","—",""],
+  ["刘成","政协党组书记","—","—",""],
+  ["高政威","<span style='color:#E03C31'>原书记（去向待查）</span>","—","—",""],
+  ["张龙","<span style='color:#E03C31'>原常务副区长（去向待查）</span>","—","—",""],
+];
+
+// Render person cards
+const grid = document.getElementById('person-grid');
+persons.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'person-card';
+  card.innerHTML = `
+    <div class="role-tag ${p.roleType}">${p.roleType === 'secretary' ? '区委书记' : p.roleType === 'mayor' ? '区政府' : p.roleType === 'deputy' ? '副书记' : p.roleType === 'standing' ? '区委常委' : p.roleType === 'other' ? '其他' : ''}</div>
+    <div class="name">${p.name}${p.gap ? '<span style="color:#E03C31;font-size:0.6rem;margin-left:0.3rem">⬡</span>' : ''}</div>
+    <div class="title">${p.role}</div>
+    <div class="attrs">
+      ${p.birth ? '<span>'+p.birth+'</span>' : ''}
+      ${p.eth ? '<span>'+p.eth+'</span>' : ''}
+      ${p.edu ? '<span>'+p.edu+'</span>' : ''}
+    </div>
+    ${p.note ? '<div style="font-size:0.65rem;color:rgba(230,221,208,0.35);margin-top:0.3rem">'+p.note+'</div>' : ''}
+  `;
+  grid.appendChild(card);
+});
+
+// Render timeline
+const tl = document.getElementById('timeline');
+timeline.forEach(t => {
+  const item = document.createElement('div');
+  item.className = 'timeline-item' + (t.highlight ? ' highlight' : '');
+  item.innerHTML = `<div class="timeline-date">${t.date}</div><div class="timeline-text">${t.text}</div>`;
+  tl.appendChild(item);
+});
+
+// Render table
+const table = document.getElementById('master-table');
+const thead = document.createElement('thead');
+thead.innerHTML = '<tr><th>姓名</th><th>职务</th><th>出生</th><th>民族</th><th>备注</th></tr>';
+table.appendChild(thead);
+const tbody = document.createElement('tbody');
+masterRows.forEach(row => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = row.map(c => '<td>'+c+'</td>').join('');
+  tbody.appendChild(tr);
+});
+table.appendChild(tbody);
+</script>
+</body>
+</html>
