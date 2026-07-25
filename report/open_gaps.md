@@ -1,34 +1,76 @@
 # Open Gaps Registry
+
 > Last updated: 2026-07-25
 
+## Overview
+
+This investigation of **西宁市城西区** encountered complete web access degradation.
+The government website (xnchengxi.gov.cn), Baidu Baike, Wikipedia, Jina Reader, and
+search engines were all unreachable or timed out. As a result, almost all identity-level
+data remains unknown. This registry documents the gaps at critical and high priority levels.
+
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
-| 张福清 | 乐都区委书记 | 出生年月、籍贯、教育背景、任书记前全部履历 | 2026-07-25 | 核心人物，仅从政府新闻确认身份，无个人基本信息 |
-| 付强 | 乐都区区长 | 出生年月、籍贯、教育背景、任区长前全部履历 | 2026-07-25 | 核心人物，同上 |
-| 韩俊良 | 湟中区委书记 | 出生年月、籍贯、教育背景、任书记前全部履历 | 2026-07-25 | 百度百科/Baidu搜索因网络限制不可用 |
-| 孟高冰 | 湟中区区长 | 出生年月、籍贯、教育背景、任副区长前全部履历 | 2026-07-25 | 同上 |
+| 待查 | 城西区区委书记 | 姓名、性别、民族、出生年月、籍贯、教育背景、入党时间、完整履历 | 2026-07-25 | 最核心目标人物 — 因政府网站不可达，完全无法识别 |
+| 待查 | 城西区区长 | 姓名、性别、民族、出生年月、籍贯、教育背景、入党时间、完整履历 | 2026-07-25 | 第二核心目标人物 — 与区委书记同样完全未知 |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
+
 | Person/Gap | What's Missing | Last Attempted | Notes |
 |-----------|----------------|----------------|-------|
-| 尚众邦 | 乐都区委副书记 | 出生年月、完整履历、以往任职 | 2026-07-25 | 仅从一篇2026-05新闻确认职务 |
-| 前任乐都区委书记 | 身份、去向 | 2026-07-25 | 张福清之前的区委书记身份待查 |
-| 前任乐都区长 | 身份、去向 | 2026-07-25 | 付强之前的区长身份待查 |
-| 鄂福涛等15+位乐都区领导 | 具体职务、完整履历 | 2026-07-25 | 仅从区人大会议名单确认名字，具体分工不明 |
-| 郭健（湟中前任区长） | 去向、完整履历 | 2026-07-25 | 2025年1月仍以区长身份出席 |
-| 吉辉（湟中前任书记） | 去向、完整履历 | 2026-07-25 | 十九届六中全会研讨班后未找到更新信息 |
-| 李晓舸（湟中前任书记） | 去向、完整履历 | 2026-07-25 | 2021年调研后未找到更新信息 |
+| 待查 (区委副书记) | 姓名及履历 | 2026-07-25 | 是否为区长兼任或设专职副书记未知 |
+| 待查 (区纪委书记) | 姓名及履历 | 2026-07-25 | - |
+| 待查 (常务副区长) | 姓名及履历 | 2026-07-25 | - |
+| 待查 (组织部部长) | 姓名及履历 | 2026-07-25 | - |
+| 待查 (政法委书记) | 姓名及履历 | 2026-07-25 | - |
+| 前任区委书记 | 姓名及去向 | 2026-07-25 | 前任→现任的晋升/调任路径完全未知 |
+| 前任区长 | 姓名及去向 | 2026-07-25 | 同上 |
 
 ## ⭐⭐⭐ Medium (would enrich the network picture)
+
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 华巍、彭峰等6位副区长的完整履历 | 2026-07-25 | 仅找到分工，无个人详细信息 |
-| 乐都区委常委会全体成员名单及具体分工 | 2026-07-25 | 政府网站ldzc页面为空 |
-| 跨区县干部交流情况 | 2026-07-25 | 与海东市其他区县的干部调动模式 |
+| 区人大常委会主任姓名 | 2026-07-25 | - |
+| 区政协主席姓名 | 2026-07-25 | - |
+| 5位副区长姓名及分工 | 2026-07-25 | - |
+| 区委宣传部部长姓名 | 2026-07-25 | - |
+| 领导班子完整名册 | 2026-07-25 | - |
+| 城西区与其他西宁市辖区（城东、城中、城北）的干部交流模式 | 2026-07-25 | - |
+| 各级官员的Baidu Baike页面 | 2026-07-25 | Baidu Baike HTTP 403 |
+| 任前公示（西宁市委组织部） | 2026-07-25 | 政府站不可达 |
 
 ## ⭐⭐ Low (nice to have)
+
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 乐都区人大、政协领导完整名单 | 2026-07-25 | 已知罗建军（人大主任），其余待查 |
-| 乐都区各乡镇/街道主要领导 | 2026-07-25 | 20个乡镇（街道） |
+| 城西区年度政府工作报告 | 2026-07-25 | - |
+| 主要领导公开讲话原文 | 2026-07-25 | - |
+| 城西区经济社会发展数据 | 2026-07-25 | - |
+
+## Web Access Status
+
+The following sources were all unreachable during 2026-07-25 investigation:
+- `https://www.xnchengxi.gov.cn/` — TCP timeout (primary official source)
+- `https://baike.baidu.com/` — HTTP 403
+- `https://zh.wikipedia.org/` — TCP timeout
+- `https://r.jina.ai/` (Jina Reader) — TCP timeout
+- Exa Search API — rate-limited (MCP free tier exhausted)
+- Google/Bing search — inaccessible via webfetch
+
+## Suggested Recovery Queries
+
+When web access is restored, prioritize:
+
+1. `site:xnchengxi.gov.cn "领导之窗" OR "领导分工"`
+2. `西宁市城西区 区委书记 2024 2025 2026`
+3. `城西区 区长 2024 2025 2026 任命`
+4. `西宁市 组织部 城西区 任前公示`
+5. `西宁市城西区 领导名单`
+6. `baike.baidu.com 城西区 西宁市`
+7. Individual Baidu Baike lookups for any names found above
+
+## Resolved Gaps
+
+*(None yet — first investigation)*
