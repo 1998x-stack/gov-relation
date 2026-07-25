@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "20260725",
+  "investigation_scope": {
+    "province": "山东省",
+    "city": "济南市",
+    "region": "济南市",
+    "job": "前任市委书记",
+    "task_id": "shandong_济南市",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "jinan_孙立成",
+    "name": "孙立成",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1962年",
+    "birthplace": "河北",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "孙立成_1962年",
+      "name_birthplace": "孙立成_河北",
+      "official_profile_url": "公开报道"
+    }
+  },
+  "current_status": {
+    "current_post": "前任市委书记",
+    "current_org": "中共济南市委员会",
+    "administrative_rank": "",
+    "as_of": "2026-07-25",
+    "is_current_confirmed": false,
+    "source_ids": [
+      "S001"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "2020-03",
+      "end": "2022-03",
+      "org": "中共济南市委员会",
+      "title": "市委书记",
+      "level": "副省级",
+      "rank": "副省级",
+      "notes": "前任济南市委书记，后任山东省政协副主席",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "中共济南市委员会",
+      "type": "党委"
+    },
+    {
+      "id": 2,
+      "name": "济南市人民政府",
+      "type": "政府"
+    },
+    {
+      "id": 3,
+      "name": "济南市人民代表大会常务委员会",
+      "type": "人大"
+    },
+    {
+      "id": 4,
+      "name": "中国人民政治协商会议济南市委员会",
+      "type": "政协"
+    },
+    {
+      "id": 5,
+      "name": "中共济南市纪律检查委员会",
+      "type": "党委"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "刘强",
+      "person_id": "jinan_刘强",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "前任市委书记—现任市委书记",
+      "overlap_org": "中共济南市委员会",
+      "overlap_period": "2022-03",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "person": "王忠林",
+      "person_id": "jinan_王忠林",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "前任—继任（市委书记）",
+      "overlap_org": "中共济南市委员会",
+      "overlap_period": "2020-03",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "济南市人民政府官方网站",
+      "url": "公开报道",
+      "publisher": "济南市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "2026年7月新闻和会议报道确认领导职务"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "完整履历（百度百科403，搜索引擎超时）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "孙立成的准确出生年月、籍贯、学历教育背景",
+      "why_it_matters": "核心身份信息，用于去重和跨区域关联分析",
+      "suggested_queries": [
+        "孙立成 简历",
+        "孙立成 任前公示",
+        "孙立成 百度百科"
+      ],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "critical",
+      "question": "孙立成的完整任职履历（每段职务的起止时间）",
+      "why_it_matters": "关系网络分析需要精确的时间线",
+      "suggested_queries": [
+        "孙立成 此前担任",
+        "孙立成 任职经历"
+      ],
+      "last_attempted": "2026-07-25"
+    }
+  ]
+}
