@@ -1,5 +1,27 @@
 # Open Gaps Registry
-> Last updated: 2026-07-25 (added 武城县)
+> Last updated: 2026-07-26 (added 东昌府区)
+
+## 东昌府区 Investigation Summary (2026-07-26)
+
+**Task**: shandong_东昌府区 — 山东省聊城市东昌府区 (区委书记 & 区长)
+**Status**: Complete-evidence-gap build (all web search tools fully blocked/rate-limited; government site unreachable; Baidu 403; Exa rate-limited)
+**Build script**: `data/tmp/shandong_东昌府区/build_东昌府区_data.py` (staged, not yet promoted)
+**Database**: `data/database/东昌府区_network.db` (pending promotion)
+**Graph**: `data/graph/东昌府区_network.gexf` (pending promotion)
+**Person JSONs**: 2 files staged in `data/tmp/shandong_东昌府区/`
+
+**Key Findings**:
+- 区委书记: 待查 — 所有搜索工具均不可用，无法确认
+- 区长: 待查 — 所有搜索工具均不可用，无法确认
+- 前任区委书记: 马军权（约2021年上任），当前去向待查
+- 前任区长: 江绍华（约2019-2021年任职），当前去向待查
+- dongchangfu.gov.cn 无法访问（传输超时）
+- zh.wikipedia.org/wiki/东昌府区 可访问但仅提供地理信息
+
+**Confidence**: All data marked as "unverified" — this is a **complete-evidence-gap** build. Only organizational skeleton and district geography are known.
+
+## Resolved Gaps
+*(None yet)*
 
 ## Resolved Gaps
 *(None yet)*
@@ -67,6 +89,10 @@
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
+| 待查 | 东昌府区委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-26 | 核心目标，完全未知。所有Web搜索全面受限，属于complete-evidence-gap |
+| 待查 | 东昌府区长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-26 | 核心目标，完全未知 |
+| 马军权 | 前任东昌府区委书记 | 完整的起止日期、当前去向 | 2026-07-26 | 约2021年起任职东昌府区，是否仍在任或已调离不确定 |
+| 江绍华 | 前任东昌府区长 | 完整的起止日期、当前去向 | 2026-07-26 | 约2019-2021年任区长，去向待查 |
 | 待查 | 武城县委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知。所有Web搜索全面受限，属于complete-evidence-gap |
 | 待查 | 武城县委副书记、县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知 |
 | 待查 | 夏津县县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 赵之达升任县委书记后，县长人选未公开 |
