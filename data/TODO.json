@@ -35112,7 +35112,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "liaoning_平山区",
@@ -35130,7 +35130,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_平山区_data.py, data/database/平山区_network.db, data/graph/平山区_network.gexf"
             },
             {
               "id": "liaoning_溪湖区",
