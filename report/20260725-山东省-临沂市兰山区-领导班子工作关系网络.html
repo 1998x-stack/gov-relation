@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兰山区领导班子工作关系网络 — 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0f0f0f;
+  --surface-raised: #181818;
+  --surface-card: #1c1c1c;
+  --text-primary: #e8e0d8;
+  --text-secondary: #999084;
+  --text-muted: #665e54;
+  --accent: #E03C31;
+  --accent-dim: rgba(224, 60, 49, 0.15);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201, 169, 78, 0.12);
+  --border: rgba(232, 224, 216, 0.08);
+  --border-light: rgba(232, 224, 216, 0.04);
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --radius: 2px;
+  --gap-xs: 0.375rem;
+  --gap-sm: 0.75rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 3rem;
+  --gap-xl: 5rem;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text-primary);
+  background: var(--surface);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.02em; }
+h1 { font-size: 2rem; font-weight: 700; line-height: 1.3; }
+h2 { font-size: 1.35rem; margin-bottom: var(--gap-md); padding-bottom: var(--gap-sm); border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.05rem; font-weight: 500; }
+.container { max-width: 1280px; margin: 0 auto; padding: var(--gap-lg) var(--gap-md); }
+
+/* Header */
+.header {
+  padding: var(--gap-xl) 0 var(--gap-lg);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--gap-lg);
+}
+.header h1 { margin-bottom: var(--gap-sm); }
+.header .subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+.header .badge {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--gap-md);
+}
+
+/* Stats bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
+.stat-card {
+  background: var(--surface-card);
+  padding: var(--gap-md);
+  border: 1px solid var(--border);
+}
+.stat-card .number {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: var(--gap-xs);
+}
+.stat-card .label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+/* Person cards */
+.section { margin-bottom: var(--gap-xl); }
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--gap-md);
+}
+.person-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  padding: var(--gap-md);
+  position: relative;
+}
+.person-card .role-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.person-card .role-tag.secretary { border-color: var(--accent); color: var(--accent); }
+.person-card .role-tag.chief { border-color: var(--gold); color: var(--gold); }
+.person-card .role-tag.deputy { border-color: var(--text-muted); color: var(--text-secondary); }
+.person-card .name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--gap-xs);
+}
+.person-card .title {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--gap-sm);
+}
+.person-card .meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.person-card .conn-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  margin-top: var(--gap-sm);
+  margin-right: 0.25rem;
+}
+
+/* Timeline */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--gap-md);
+  padding-left: var(--gap-md);
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.7rem;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+.timeline-item.confirmed::before { background: var(--gold); }
+.timeline-item.gap::before { background: transparent; border: 1px solid var(--accent); }
+.timeline-item .date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+.timeline-item .event {
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+.timeline-item .note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+.timeline-item .gap-label {
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  text-align: left;
+  padding: var(--gap-sm);
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+td {
+  padding: var(--gap-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+tr:hover { background: var(--surface-raised); }
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.tag.confirmed { border-color: var(--gold-dim); color: var(--gold); }
+.tag.gap { border-color: var(--accent-dim); color: var(--accent); }
+.tag.missing { border-color: transparent; color: var(--text-muted); }
+
+/* Insights */
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-md);
+}
+.insight-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  padding: var(--gap-md);
+}
+.insight-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: var(--gap-sm);
+  color: var(--gold);
+}
+.insight-card p, .insight-card li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.insight-card ul { list-style: none; }
+.insight-card li {
+  padding: 0.25rem 0;
+  padding-left: var(--gap-sm);
+  position: relative;
+}
+.insight-card li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+.insight-card .priority-tag {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.35rem;
+  margin-left: var(--gap-xs);
+}
+.priority-tag.p1 { background: var(--accent-dim); color: var(--accent); }
+.priority-tag.p2 { background: var(--gold-dim); color: var(--gold); }
+
+/* Gaps table */
+.gap-table td:first-child { width: 120px; }
+.gap-level { font-family: var(--font-mono); font-size: 0.8rem; }
+
+/* Footer */
+.footer {
+  margin-top: var(--gap-xl);
+  padding-top: var(--gap-lg);
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.footer a { color: var(--text-secondary); text-decoration: none; }
+.footer a:hover { color: var(--text-primary); }
+
+@media (max-width: 768px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .person-grid { grid-template-columns: 1fr; }
+  .insight-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="badge">classified // 2026-07-25</div>
+  <h1>兰山区领导班子工作关系网络</h1>
+  <div class="subtitle">临沂市 · 山东省 · 情报简报</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-card"><div class="number">9</div><div class="label">关键人物</div></div>
+  <div class="stat-card"><div class="number">7</div><div class="label">组织机构</div></div>
+  <div class="stat-card"><div class="number">13</div><div class="label">任职记录</div></div>
+  <div class="stat-card"><div class="number">15</div><div class="label">关系连接</div></div>
+</div>
+
+<div class="section">
+  <h2>一、区政府领导班子</h2>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="role-tag chief">区长</div>
+      <div class="name">程凯</div>
+      <div class="title">兰山区委副书记、区长、党组书记</div>
+      <div class="meta">1977.04 · 男 · 汉族 · 大学学历</div>
+      <div><span class="conn-badge">主持全面</span><span class="conn-badge">财政</span><span class="conn-badge">审计</span><span class="conn-badge">商务</span><span class="conn-badge">商城</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">常务副区长</div>
+      <div class="name">刘元迅</div>
+      <div class="title">区委常委、副区长（常务）、党组副书记</div>
+      <div class="meta">1973.12 · 男 · 汉族 · 省委党校研究生</div>
+      <div><span class="conn-badge">协助财政</span><span class="conn-badge">发改</span><span class="conn-badge">金融</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">商城主任</div>
+      <div class="name">田宗春</div>
+      <div class="title">兰山商城管委会主任、党委书记</div>
+      <div class="meta">1968.09 · 男 · 汉族 · 大学学历</div>
+      <div><span class="conn-badge">商城管委会</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">副区长</div>
+      <div class="name">高兴先</div>
+      <div class="title">副区长、党组成员，公安分局局长</div>
+      <div class="meta">1975.06 · 男 · 汉族 · 大学学历 · 二级高级警长</div>
+      <div><span class="conn-badge">公安</span><span class="conn-badge">司法</span><span class="conn-badge">信访</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">副区长</div>
+      <div class="name">曹景强</div>
+      <div class="title">副区长、党组成员</div>
+      <div class="meta">1975.05 · 男 · 汉族 · 大学学历</div>
+      <div><span class="conn-badge">住建</span><span class="conn-badge">综合执法</span><span class="conn-badge">交通</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">副区长</div>
+      <div class="name">赵磊</div>
+      <div class="title">副区长、党组成员</div>
+      <div class="meta">1977.06 · 男 · 汉族 · 省委党校研究生</div>
+      <div><span class="conn-badge">生态环境</span><span class="conn-badge">民政</span><span class="conn-badge">人社</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">副区长</div>
+      <div class="name">赵童</div>
+      <div class="title">副区长、党组成员</div>
+      <div class="meta">1984.02 · 女 · 汉族 · 研究生</div>
+      <div><span class="conn-badge">教育</span><span class="conn-badge">农业农村</span><span class="conn-badge">文旅</span></div>
+    </div>
+    <div class="person-card">
+      <div class="role-tag deputy">办公室主任</div>
+      <div class="name">刘海波</div>
+      <div class="title">区政府党组成员、办公室主任</div>
+      <div class="meta">1979.05 · 男 · 汉族 · 大学学历</div>
+      <div><span class="conn-badge">日常事务</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>二、区委书记</h2>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="role-tag secretary">区委书记</div>
+      <div class="name">刘波</div>
+      <div class="title">中共临沂市兰山区委员会书记</div>
+      <div class="meta">出生年月·籍贯·学历·履历 均 <span style="color:var(--accent)">待查</span></div>
+      <div><span class="conn-badge">党政搭档</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>三、区长履历时间线 · 程凯</h2>
+  <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:var(--gap-md);">▲ 金色节点为已确认信息；<span style="color:var(--accent)">红色空心节点</span>为信息缺口</p>
+  <div class="timeline">
+    <div class="timeline-item confirmed">
+      <div class="date">1977年4月</div>
+      <div class="event">出生</div>
+      <div class="note">性别男，汉族</div>
+    </div>
+    <div class="timeline-item gap">
+      <div class="gap-label">▼ 信息缺口 ▼</div>
+      <div class="date">1995年 — 2023年（约28年）</div>
+      <div class="event">教育经历 + 职业生涯前段</div>
+      <div class="note">大学学历✅但具体院校专业未知。<br>入党时间、参加工作年份、此前任职单位均缺失。</div>
+    </div>
+    <div class="timeline-item confirmed">
+      <div class="date">约2023-2024年</div>
+      <div class="event">任兰山区区长（具体任命时间待确认）</div>
+      <div class="note">是否先任代区长再转正？具体日期待查。</div>
+    </div>
+    <div class="timeline-item confirmed">
+      <div class="date">2026年7月</div>
+      <div class="event">以区委副书记、区长身份活跃</div>
+      <div class="note">至少7次公开活动：重点项目现场办公、大气污染防治、防汛督导、国际选品中心等</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>四、关系矩阵</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead>
+      <tr>
+        <th>人物A</th><th>人物B</th><th>关系类型</th><th>背景</th><th>确认状态</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>刘波</td><td>程凯</td><td>党政搭档</td><td>区委书记—区长</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>刘元迅</td><td>上下级</td><td>区长—常务副区长</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>高兴先</td><td>上下级</td><td>区长—副区长（公安）</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>曹景强</td><td>上下级</td><td>区长—副区长（住建）</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>赵磊</td><td>上下级</td><td>区长—副区长（人社）</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>赵童</td><td>上下级</td><td>区长—副区长（教育）</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>田宗春</td><td>上下级</td><td>区长—商城管委会</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>程凯</td><td>刘海波</td><td>上下级</td><td>区长—办公室主任</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>刘元迅</td><td>各副区长</td><td>同僚</td><td>常务副区长—副区长</td><td><span class="tag confirmed">已确认</span></td></tr>
+      <tr><td>各副区长</td><td>各副区长</td><td>同僚</td><td>副区长之间</td><td><span class="tag confirmed">已确认</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section">
+  <h2>五、关键洞察</h2>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <h4>🔴 最高优先级缺口</h4>
+      <ul>
+        <li>程凯前28年职业生涯完全空白 <span class="priority-tag p1">P1</span></li>
+        <li>刘波区委书记完整履历缺失 <span class="priority-tag p1">P1</span></li>
+        <li>前任区长去向不明 <span class="priority-tag p1">P1</span></li>
+      </ul>
+    </div>
+    <div class="insight-card">
+      <h4>🟡 中高优先级</h4>
+      <ul>
+        <li>程凯担任代区长→区长时间线 <span class="priority-tag p2">P2</span></li>
+        <li>区政府换届时间 <span class="priority-tag p2">P2</span></li>
+        <li>赵童（1984年女性）快速晋升路径 <span class="priority-tag p2">P2</span></li>
+      </ul>
+    </div>
+    <div class="insight-card">
+      <h4>🟢 权力结构评估</h4>
+      <ul>
+        <li>程凯直接掌控财政和审计，集权特征明显</li>
+        <li>刘元迅作为常务副区长是核心副手</li>
+        <li>团队以70后为主（6/8人），年龄梯队合理</li>
+      </ul>
+    </div>
+    <div class="insight-card">
+      <h4>🔵 数据来源可靠性</h4>
+      <ul>
+        <li>官方政府网站 ← 一级来源 ✅</li>
+        <li>百度百科 ← 被屏蔽 ❌</li>
+        <li>维基百科 ← 仅有地区介绍 ⚠️</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>六、开放缺口注册</h2>
+  <div style="overflow-x:auto">
+  <table class="gap-table">
+    <thead>
+      <tr>
+        <th>优先级</th><th>缺口描述</th><th>涉及人物</th><th>建议搜索</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="gap-level" style="color:var(--accent)">P1 — 最高</span></td>
+        <td>程凯此前任职履历（28年空白）</td>
+        <td>程凯</td>
+        <td>"程凯 简历"、"程凯 临沂"</td>
+      </tr>
+      <tr>
+        <td><span class="gap-level" style="color:var(--accent)">P1 — 最高</span></td>
+        <td>刘波完整履历</td>
+        <td>刘波</td>
+        <td>"刘波 兰山区 简历"</td>
+      </tr>
+      <tr>
+        <td><span class="gap-level" style="color:var(--accent)">P1 — 最高</span></td>
+        <td>前任区长/书记去向</td>
+        <td>待查</td>
+        <td>"兰山区 前任 区长"</td>
+      </tr>
+      <tr>
+        <td><span class="gap-level" style="color:var(--gold)">P2 — 高</span></td>
+        <td>程凯的籍贯、入党时间</td>
+        <td>程凯</td>
+        <td>百度百科 程凯</td>
+      </tr>
+      <tr>
+        <td><span class="gap-level" style="color:var(--gold)">P2 — 高</span></td>
+        <td>程凯任命为代区长/区长的时间</td>
+        <td>程凯</td>
+        <td>"兰山区 代区长 2024"</td>
+      </tr>
+      <tr>
+        <td><span class="gap-level" style="color:var(--text-muted)">P3 — 中</span></td>
+        <td>跨区干部交流网络</td>
+        <td>全体</td>
+        <td>"临沂市 干部交流"</td>
+      </tr>
+      <tr>
+        <td><span class="gap-level" style="color:var(--text-muted)">P3 — 中</span></td>
+        <td>各副职详细履历</td>
+        <td>刘元迅等</td>
+        <td>各人百度百科</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="section">
+  <h2>七、数据文件</h2>
+  <table>
+    <thead><tr><th>文件</th><th>路径</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>SQLite数据库</td><td>data/database/兰山区_network.db</td><td>4表结构（persons / organizations / positions / relationships）</td></tr>
+      <tr><td>GEXF图文件</td><td>data/graph/兰山区_network.gexf</td><td>含节点颜色/大小/形状的可视化图</td></tr>
+      <tr><td>人物JSON档案</td><td>data/tmp/shandong_兰山区/persons/</td><td>程凯、刘波的深度档案</td></tr>
+      <tr><td>Markdown报告</td><td>report/20260725-山东省-临沂市兰山区-领导班子工作关系网络调查报告.md</td><td>完整文字版报告</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  <p>数据来源：<a href="http://www.lyls.gov.cn/">兰山区人民政府官方网站</a> · 数据时效：截至2026年7月</p>
+  <p>生成日期：2026-07-25 · <a href="index.html">返回报告索引</a></p>
+</div>
+
+</div>
+</body>
+</html>
