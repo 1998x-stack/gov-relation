@@ -1,6 +1,16 @@
 {
+  "schema_version": "1.0",
+  "generated_at": "2026-07-25",
+  "investigation_scope": {
+    "province": "吉林省",
+    "city": "白山市",
+    "region": "抚松县",
+    "job": "县委书记",
+    "task_id": "jilin_抚松县",
+    "time_focus": "2024-2026"
+  },
   "identity": {
-    "person_id": "jilin_baishan_jingyu_待查_县委书记",
+    "person_id": "fusong_待查_县委书记",
     "name": "待查_县委书记",
     "aliases": [],
     "gender": "",
@@ -8,7 +18,16 @@
     "birth": "",
     "birthplace": "",
     "native_place": "",
-    "education": [],
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
     "party_join": "中共党员",
     "work_start": "",
     "dedupe_keys": {
@@ -19,85 +38,221 @@
   },
   "current_status": {
     "current_post": "县委书记",
-    "current_org": "中共靖宇县委员会",
-    "administrative_rank": "县处级正职",
+    "current_org": "中共抚松县委员会",
+    "administrative_rank": "",
     "as_of": "2026-07-25",
     "is_current_confirmed": false,
-    "source_ids": []
+    "source_ids": [
+      "S002",
+      "S003"
+    ]
   },
   "career_timeline": [
     {
       "start": "unknown",
       "end": "present",
-      "org": "中共靖宇县委员会",
+      "org": "中共抚松县委员会",
       "title": "县委书记",
       "level": "",
-      "location": "靖宇县",
+      "location": "吉林省白山市抚松县",
       "system": "party",
-      "rank": "县处级正职",
+      "rank": "",
       "is_key_promotion": false,
-      "notes": "县委书记姓名确认失败。县政府网站jingyu.gov.cn及所有子页面均超时无法访问。白山市人民政府网站同样不可达。未找到任何可靠的公开来源确认当前在任县委书记姓名。需后续通过白山市委组织部公示或新闻报道进一步核实。",
+      "notes": "县委书记姓名确认失败。县政府网站fusong.gov.cn及所有子页面均超时无法访问。未找到任何可靠的公开来源确认当前在任县委书记姓名。需后续通过白山市委组织部公示或新闻报道进一步核实。",
       "confidence": "unverified",
-      "source_ids": []
+      "source_ids": [
+        "S002",
+        "S003"
+      ]
     }
   ],
   "organizations": [],
-  "relationships": [],
-  "governance_record": [],
-  "professional_profile": {
-    "primary_specializations": [],
-    "secondary_specializations": [],
-    "career_pattern": "unknown",
-    "systems_experience": [],
-    "geographic_pattern": [],
-    "promotion_velocity": {
-      "summary": "",
-      "notable_fast_promotions": []
-    }
-  },
-  "work_style_and_personality": {
-    "public_style_indicators": [],
-    "speech_themes": [],
-    "management_signals": [],
-    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
-  },
-  "network_metrics": {},
-  "risk_and_integrity_signals": [
+  "relationships": [
     {
-      "type": "none_found",
-      "description": "No risk signals found — name unverified, no records to review",
-      "date": "2026-07-25",
+      "person": "待查_县长",
+      "person_id": "fusong_待查_县长",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记与县长搭班（党政一把手）",
+      "overlap_org": "抚松县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_前任县委书记",
+      "person_id": "fusong_待查_前任县委书记",
+      "relationship_type": "predecessor_successor",
+      "strength": "weak",
+      "evidence": "前任县委书记 -> 现任县委书记（推定接替关系）",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "王文江",
+      "person_id": "fusong_王文江",
+      "relationship_type": "overlap",
+      "strength": "weak",
+      "evidence": "王文江曾挂职抚松县委常委、副县长，与县委书记（姓名待查）在同一班子共事",
+      "overlap_org": "抚松县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_常务副县长",
+      "person_id": "fusong_待查_常务副县长",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导常务副县长",
+      "overlap_org": "抚松县",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_纪委书记",
+      "person_id": "fusong_待查_纪委书记",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导纪委书记（双重领导体制）",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_组织部长",
+      "person_id": "fusong_待查_组织部长",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导组织部长",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_县委副书记",
+      "person_id": "fusong_待查_县委副书记",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导专职副书记",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_宣传部长",
+      "person_id": "fusong_待查_宣传部长",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导宣传部长",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_政法委书记",
+      "person_id": "fusong_待查_政法委书记",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导政法委书记",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "person": "待查_统战部长",
+      "person_id": "fusong_待查_统战部长",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "县委书记领导统战部长",
+      "overlap_org": "中共抚松县委员会",
+      "overlap_period": "",
+      "direction": "undirected",
       "confidence": "unverified",
       "source_ids": []
     }
   ],
-  "source_register": [],
+  "governance_record": [],
+  "professional_profile": {},
+  "work_style_and_personality": {},
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "江源区 build script (data/tmp/jilin_江源区/build_江源区_data.py)",
+      "url": "file:///workspace/data/xieming/other-codes/gov-relation/data/tmp/jilin_江源区/build_江源区_data.py",
+      "publisher": "本仓库先前调查",
+      "published_at": "2026-07-25",
+      "accessed_at": "2026-07-25",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "确认王文江挂职抚松县委常委、副县长。潘国强、李江波等江源区领导信息。"
+    },
+    {
+      "id": "S002",
+      "title": "抚松县人民政府官网",
+      "url": "http://www.fusong.gov.cn/",
+      "publisher": "抚松县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "medium",
+      "notes": "所有子页面均超时无法访问。"
+    },
+    {
+      "id": "S003",
+      "title": "白山市人民政府官网",
+      "url": "http://www.baishan.gov.cn/",
+      "publisher": "白山市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "medium",
+      "notes": "所有子页面均超时无法访问。"
+    }
+  ],
   "confidence_summary": {
     "identity": "unverified",
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "姓名完全未知。因政府网站和公共网络均不可达，县委书记姓名无法确认。"
+    "biggest_gap": "姓名及所有履历信息均不可获取。政府网站无法访问，搜索引擎全面不可用。"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "靖宇县县委书记姓名是什么？",
-      "why_it_matters": "核心目标人物之一，完整调查必须确认姓名和身份",
+      "question": "待查_县委书记的姓名、性别、出生年月、籍贯、民族、教育背景及入党时间",
+      "why_it_matters": "核心目标人物的基础身份信息完全空白，无法进行后续网络分析和关系挖掘",
       "suggested_queries": [
-        "靖宇县 县委书记",
-        "靖宇县 领导分工 县委书记",
-        "靖宇县政府 领导之窗",
-        "白山市委组织部 任前公示 靖宇"
+        "抚松县委书记 简历",
+        "抚松 县委常委 任命"
       ],
       "last_attempted": "2026-07-25"
     },
     {
       "priority": "critical",
-      "question": "待查_县委书记的出生年月、籍贯、学历和完整履历",
-      "why_it_matters": "身份确认后需补充完整履历",
+      "question": "待查_县委书记的完整任职履历（所有曾任职岗位及时间）",
+      "why_it_matters": "无法建立工作关系网络和跨区域交流轨迹",
       "suggested_queries": [
-        "靖宇县 县委书记 简历"
+        "白山市 抚松县 干部 任前公示"
       ],
       "last_attempted": "2026-07-25"
     }
