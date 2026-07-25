@@ -30125,7 +30125,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             }
           ]
         },
@@ -30180,7 +30180,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_海南区_data.py, data/database/海南区_network.db, data/graph/海南区_network.gexf"
             },
             {
               "id": "inner_mongolia_乌达区",
@@ -30198,9 +30200,13 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_乌达区_data.py, data/database/乌达区_network.db, data/graph/乌达区_network.gexf"
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_乌海市_data.py, data/database/乌海市_network.db, data/graph/乌海市_network.gexf"
         },
         {
           "id": "inner_mongolia_赤峰市",
