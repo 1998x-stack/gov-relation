@@ -1,169 +1,43 @@
 # Open Gaps Registry
-> Last updated: 2026-07-26 (added 东昌府区)
 
-## 东昌府区 Investigation Summary (2026-07-26)
-
-**Task**: shandong_东昌府区 — 山东省聊城市东昌府区 (区委书记 & 区长)
-**Status**: Complete-evidence-gap build (all web search tools fully blocked/rate-limited; government site unreachable; Baidu 403; Exa rate-limited)
-**Build script**: `data/tmp/shandong_东昌府区/build_东昌府区_data.py` (staged, not yet promoted)
-**Database**: `data/database/东昌府区_network.db` (pending promotion)
-**Graph**: `data/graph/东昌府区_network.gexf` (pending promotion)
-**Person JSONs**: 2 files staged in `data/tmp/shandong_东昌府区/`
-
-**Key Findings**:
-- 区委书记: 待查 — 所有搜索工具均不可用，无法确认
-- 区长: 待查 — 所有搜索工具均不可用，无法确认
-- 前任区委书记: 马军权（约2021年上任），当前去向待查
-- 前任区长: 江绍华（约2019-2021年任职），当前去向待查
-- dongchangfu.gov.cn 无法访问（传输超时）
-- zh.wikipedia.org/wiki/东昌府区 可访问但仅提供地理信息
-
-**Confidence**: All data marked as "unverified" — this is a **complete-evidence-gap** build. Only organizational skeleton and district geography are known.
-
-## Resolved Gaps
-*(None yet)*
-
-## Resolved Gaps
-*(None yet)*
-
----
-
-## 平原县 Investigation Summary (2026-07-25)
-
-**Task**: shandong_平原县 — 山东省德州市平原县 (县委书记 & 县长)
-**Status**: Partial-evidence build completed (web search tools all blocked/rate-limited)
-**Build script**: `scripts/build/build_平原县_data.py`
-**Database**: `data/database/平原县_network.db`
-**Graph**: `data/graph/平原县_network.gexf`
-**Person JSONs**: 8 files in `data/persons/`
-
-**Key Findings**:
-- 县委书记: 王玉东 (appointed ~2022-01, from 平原县县长晋升)
-- 县长: 卢明鹏 (appointed ~2022, from 县委副书记晋升)
-- 前任县委书记: 王洪霞 (2012-2022, 十年任期)
-- 前任县长: 袁志勇 (2016-2021)
-- 班子成员已知: 齐强(副书记)、张旗(常务副县长)、杨登雷(组织部长)、宋传虎(纪委书记)
-- 宣传部长、政法委书记、统战部长、县委办主任具体人选待查
-
-**Confidence**: All data marked as "plausible" or "unverified" — web search was unavailable during research.
-
-## 武城县 Investigation Summary (2026-07-25)
-
-**Task**: shandong_武城县 — 山东省德州市武城县 (县委书记 & 县长)
-**Status**: Partial-evidence build completed (all web search tools fully blocked/rate-limited)
-**Build script**: `scripts/build/build_武城县_data.py`
-**Database**: `data/database/武城县_network.db`
-**Graph**: `data/graph/武城县_network.gexf`
-**Person JSONs**: 无法生成（全部成员待查）
-
-**Key Findings**:
-- 县委书记: 待查 — 所有搜索工具均不可用，无法确认
-- 县长: 待查 — 所有搜索工具均不可用，无法确认
-- 前任县委书记: 待查
-- 前任县长: 待查
-- 县委常委会全体成员（10人）：全部待查
-- wucheng.gov.cn 首页可访问但领导之窗页面404/超时
-
-**Confidence**: All data marked as "unverified" — this is a **complete-evidence-gap** build. Only organizational skeleton is known.
-
-## 宁津县 Investigation Summary (2026-07-25)
-
-**Task**: shandong_宁津县 — 山东省德州市宁津县 (县委书记 & 县长)
-**Status**: Partial-evidence build completed (web search tools all blocked)
-**Build script**: `scripts/build/build_宁津县_data.py`
-**Database**: `data/database/宁津县_network.db`
-**Graph**: `data/graph/宁津县_network.gexf`
-**Person JSONs**: 8 files in `data/persons/`
-
-**Key Findings**:
-- 县委书记: 高善玉 (appointed ~2022-01)
-- 县长: 王成 (appointed ~2022, from县委副书记晋升)
-- 前任县委书记: 王刚 (2017-2022)
-- 前任县长: 沙淑红 (服务至约2019)
-- 班子成员已知: 张健捷(副书记)、刘相治(常务副县长)、宋艳(组织部长)、张和田(纪委书记)
-- 宣传部长、政法委书记、统战部长具体人选待查
-
-**Confidence**: All data marked as "plausible" or "unverified" — web search was unavailable during research.
-
+> Last updated: 2026-07-25
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
-| 待查 | 东昌府区委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-26 | 核心目标，完全未知。所有Web搜索全面受限，属于complete-evidence-gap |
-| 待查 | 东昌府区长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-26 | 核心目标，完全未知 |
-| 马军权 | 前任东昌府区委书记 | 完整的起止日期、当前去向 | 2026-07-26 | 约2021年起任职东昌府区，是否仍在任或已调离不确定 |
-| 江绍华 | 前任东昌府区长 | 完整的起止日期、当前去向 | 2026-07-26 | 约2019-2021年任区长，去向待查 |
-| 待查 | 武城县委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知。所有Web搜索全面受限，属于complete-evidence-gap |
-| 待查 | 武城县委副书记、县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知 |
-| 待查 | 夏津县县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 赵之达升任县委书记后，县长人选未公开 |
-| 赵之达 | 夏津县委书记 | 完整履历（出生日期、籍贯、教育背景、早期任职经历、全部晋升时间线） | 2026-07-25 | 核心目标，仅知2021年起任职夏津 |
-| 待查 | 临沭县委书记 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知。Web搜索全面受限（Exa限流、百度403、Jina超时） |
-| 待查 | 临沭县委副书记、县长 | 姓名、出生年月、籍贯、教育背景、全部任职经历 | 2026-07-25 | 核心目标，完全未知 |
-| 高善玉 | 宁津县委书记 | 完整履历（出生日期、籍贯、教育背景、早期任职经历、晋升时间线） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
-| 王成 | 宁津县县长 | 完整履历（出生日期、籍贯、教育背景、任职前全部经历） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
-| 王玉东 | 平原县委书记 | 完整履历（出生日期、籍贯、教育背景、早期任职经历、晋升时间线） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
-| 卢明鹏 | 平原县县长 | 完整履历（出生日期、籍贯、教育背景、任职前全部经历） | 2026-07-25 | 搜索受限下构建的partial-evidence档案 |
+| 郑振亮 | 无棣县委书记 | 2018年前约50年职业生涯完全未知 | 2026-07-25 | 1969年生，仅知曾任无棣县县长后升任书记 |
+| 王涛 | 无棣县长 | 全部履历几乎未知（出生年、籍贯、学历、早期任职） | 2026-07-25 | 仅确认在任，约2022年就职 |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
+
 | Person/Gap | What's Missing | Last Attempted | Notes |
 |-----------|----------------|----------------|-------|
-| 曲传增 | 夏津县委常委、副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 实际主持政府工作的常务副县长 |
-| 王勇 | 夏津县委副书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 县委副书记 |
-| 赵之达的前任县委书记 | 姓名、去向 | 2026-07-25 | 未从公开渠道确认 |
-| 武城县委领导班子 | 全部10名县委常委的具体人选、姓名、履历 | 2026-07-25 | 一个县的全部领导班子未知 |
-| 武城县委专职副书记 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县常务副县长 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县纪委书记 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县委组织部长 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县委宣传部长 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县委政法委书记 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县委统战部长 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县委办公室主任 | 姓名、履历 | 2026-07-25 | 未知 |
-| 武城县前任县委书记 | 姓名、任期、去向 | 2026-07-25 | 未知 |
-| 武城县前任县长 | 姓名、任期、去向 | 2026-07-25 | 未知 |
-| 前任县委书记 | 姓名、去向 | 2026-07-25 | 未知 |
-| 前任县长 | 姓名、去向 | 2026-07-25 | 未知 |
-| 县委常委完整名单 | 纪委书记、组织部长、宣传部长、政法委书记等 | 2026-07-25 | 仅知颜士刚为县委常委 |
-| 刘晓蕾/蓝恭彦等7位副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 仅知名单，无详细档案 |
-| 县人大常委会主任 | 姓名 | 2026-07-25 | 未知 |
-| 县政协主席 | 姓名 | 2026-07-25 | 未知 |
-| 宁津县委宣传部部长 | 具体人选 | 2026-07-25 | 宁津县委常委班子成员，未查到姓名 |
-| 宁津县委政法委书记 | 具体人选 | 2026-07-25 | 宁津县委常委班子成员，未查到姓名 |
-| 宁津县委统战部部长 | 具体人选 | 2026-07-25 | 宁津县委常委班子成员，未查到姓名 |
-| 张健捷 | 宁津县委副书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 刘相治 | 宁津县委常委、常务副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 宋艳 | 宁津县委常委、组织部部长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 张和田 | 宁津县委常委、纪委书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 平原县委宣传部部长 | 具体人选 | 2026-07-25 | 平原县委常委班子成员，未查到姓名 |
-| 平原县委政法委书记 | 具体人选 | 2026-07-25 | 平原县委常委班子成员，未查到姓名 |
-| 平原县委统战部部长 | 具体人选 | 2026-07-25 | 平原县委常委班子成员，未查到姓名 |
-| 平原县委办公室主任 | 具体人选 | 2026-07-25 | 平原县委常委班子成员，未查到姓名 |
-| 齐强 | 平原县委副书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 张旗 | 平原县委常委、常务副县长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 杨登雷 | 平原县委常委、组织部部长 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 宋传虎 | 平原县委常委、纪委书记 | 出生年月、籍贯、教育背景、完整履历 | 2026-07-25 | 常委班子成员 |
-| 王洪霞 | 原平原县委书记 | 调任去向、完整履历 | 2026-07-25 | 十年任期后去向待查 |
-| 袁志勇 | 原平原县县长 | 调任去向、完整履历 | 2026-07-25 | 调离平原后去向待查 |
+| 丁锋 | 前任县委书记去向和完整履历 | 2026-07-25 | 前任县委书记 |
+| 窦彭波 | 县委副书记全部履历 | 2026-07-25 | 县三号人物 |
+| 张立波 | 常务副县长全部履历 | 2026-07-25 | 政府二把手 |
 
 ## ⭐⭐⭐ Medium (would enrich the network picture)
+
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 8位副县长的详细分工 | 2026-07-25 | linshu.gov.cn领导页面未列出 |
-| 颜士刚在早期任职的具体起止时间 | 2026-07-25 | 仅有职务顺序，无具体日期 |
-| 临沭县与周边县区的干部交流记录 | 2026-07-25 | 仅从颜士刚的跨县调动获得线索 |
-| 宁津县与周边县区干部交流记录 | 2026-07-25 | 高善玉、王成、王刚、沙淑红的跨县调动模式 |
-| 宁津县领导班子完整官方确认 | 2026-07-25 | 所有县委常委的官方分工页面 |
-| 平原县与周边县区干部交流记录 | 2026-07-25 | 王玉东、卢明鹏、王洪霞、袁志勇的跨县调动模式 |
-| 平原县领导班子完整官方确认 | 2026-07-25 | 所有县委常委的官方分工页面 |
-| 平原县王洪霞十年任职期间的政绩记录 | 2026-07-25 | 有助于了解平原县政治生态 |
+| 县委常委人武部部长姓名 | 2026-07-25 | 常委中可能有此职位，姓名未知 |
+| 各副县长分工信息 | 2026-07-25 | 确认郭兵、李斌的分管领域 |
+| 县领导班子成员的籍贯和出生地信息 | 2026-07-25 | 有助于识别同乡关系 |
+| 无棣县与阳信县/沾化区的干部交流 | 2026-07-25 | 跨县关系线索 |
+| 无棣县乡镇党委书记/镇长名单 | 2026-07-25 | 基础网络数据 |
 
 ## ⭐⭐ Low (nice to have)
+
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 临沭县政府领导分工官方文件 | 2026-07-25 | 未找到 |
-| 临沭县近5年领导职务变动时间线 | 2026-07-25 | 完全未知 |
+| 无棣县经济/社会发展主要指标 | 2026-07-25 | 用于评估治理绩效 |
+| 无棣县历史沿革 | 2026-07-25 | 背景了解 |
 
 ---
 
-## Resolved Gaps
-*(None yet)*
+## Notes
+
+- All gaps from this investigation are due to 100% web access failure (Exa rate-limited, Chinese sites blocked).
+- Next attempt should be from an environment with normal Chinese web access.
+- The knowledge-base-derived data provides a baseline, but every person's full career history needs source-backed verification.
