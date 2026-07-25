@@ -1,147 +1,164 @@
 #!/usr/bin/env python3
-"""Build SQLite database and GEXF graph for 铁西区, 沈阳市, 辽宁省.
+"""Build SQLite database, GEXF graph, and person JSONs for 铁西区 (Tiexi District), 鞍山市, 辽宁省.
 
-Investigation date: 2026-07-25
-Task ID: liaoning_铁西区
 Level: 市辖区
-Targets: 区委书记 & 区长
+Province: 辽宁省
+Parent city: 鞍山市
+Targets: 区委书记 (District Party Secretary), 区长 (District Mayor)
+Task ID: liaoning_铁西区
 
-Research status: PARTIAL — core leaders identified from tiexi.gov.cn official news articles.
-Full career timelines, education, and detailed biography are UNVERIFIED due to
-severe web access degradation (Exa rate-limited, Baidu/Jina blocked, government
-site partial access only via dtyw/news pages).
+Research date: 2026-07-25
+Official source: http://www.astxq.gov.cn/ (鞍山市铁西区人民政府 — UNREACHABLE during investigation)
 
-Confirmed from tiexi.gov.cn official news:
-  区委书记: 吴振宇 (confirmed from 2026-07-07 两优一先 article — "区委书记、经开区党工委书记吴振宇")
-  区长: 赵永圣 (confirmed from multiple articles — "区长，经开区、中德园管委会主任赵永圣")
-  区委副书记: 吴绍斌 (confirmed from 2026-07-07 article — "区委副书记吴绍斌主持会议")
-  区委常委、组织部部长: 段志慧 (confirmed from 2026-07-07 article)
+Current status (as of 2026-07-25):
+- 区委书记: **待查** — All web search tools (Exa rate-limited, Baidu 403/CAPTCHA,
+  Jina Reader timeout, Google blocked) and government sites (www.astxq.gov.cn DNS/timeout)
+  were unreachable or timed out during this investigation.
+- 区长: **待查** — Same constraints.
 
 Confidence notes:
-  - 吴振宇 as current 区委书记: CONFIRMED (official news)
-  - 赵永圣 as current 区长: CONFIRMED (multiple official news articles)
-  - 吴绍斌 as 区委副书记: CONFIRMED
-  - 段志慧 as 区委常委、组织部部长: CONFIRMED
-  - Predecessors: NOT researched — web access degraded
-  - No biographical details (birth year, education, birthplace) for any leader
-  - Full standing committee roster incomplete
+  Due to complete web access degradation, the current leadership names could not be confirmed
+  from any official source. This build script uses placeholder records ("待查_区委书记" and
+  "待查_区长") to establish the structural framework.
+
+  NOTE: Existing 铁西区_network.db and 铁西区_network.gexf in data/ directory cover
+  **沈阳市**铁西区, NOT 鞍山市铁西区. These are distinct regions.
 """
 
 from __future__ import annotations
 
 import json
-import sqlite3  # noqa: required by process_tmp.py token check
+import os
+import sys
 from datetime import datetime
 from pathlib import Path
 
-import sys
-sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+_STAGING_DIR = Path(__file__).resolve().parent
+_REPO_ROOT = (_STAGING_DIR / "../../..").resolve()
+sys.path.insert(0, str(_REPO_ROOT))
 
 from gov_relation.runner import run_build
-from gov_relation.paths import DATABASE_DIR, GRAPH_DIR, PERSONS_DIR
+from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
-# ── Paths ──────────────────────────────────────────────────────────────────
-STAGING_DIR = Path(__file__).resolve().parent
 SLUG = "铁西区"
-TODAY = datetime.now().strftime("%Y%m%d")
+
+DB_PATH = _STAGING_DIR / f"{SLUG}_network.db"
+GEXF_PATH = _STAGING_DIR / f"{SLUG}_network.gexf"
+PERSONS_DIR = _STAGING_DIR
+
 AS_OF = "2026-07-25"
+TODAY = "20260725"
 
-DB_PATH = STAGING_DIR / f"{SLUG}_network.db"
-GEXF_PATH = STAGING_DIR / f"{SLUG}_network.gexf"
-PERSON_DIR = STAGING_DIR
+import sqlite3  # noqa: F811
 
-# ── Persons ────────────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# PERSONS
+# ══════════════════════════════════════════════════════════════════════════════
+
+# NOTE: Due to complete web search degradation, all leader names are placeholder records.
+# Future updates should replace these with confirmed names and biographies.
+
 persons = [
-    # ═══════ Core Leadership ═══════
+    # ════════════════════════════════════════
+    # Core Leadership (Primary Targets)
+    # ════════════════════════════════════════
+
+    # 1. 待查_区委书记 — 区委书记 (Party Secretary of Tiexi District)
     {
         "id": 1,
-        "name": "吴振宇",
+        "name": "待查_区委书记",
         "gender": "",
         "ethnicity": "",
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
-        "current_post": "区委书记、经开区党工委书记",
-        "current_org": "中共沈阳市铁西区委员会",
-        "source": "铁西区政府官网 — 两优一先表彰大会报道 (2026-07-07)"
+        "current_post": "区委书记",
+        "current_org": "中共鞍山市铁西区委员会",
+        "source": "未确认 — 区委书记姓名、履历均待查。政府网站 www.astxq.gov.cn 在调查期间无法访问。",
     },
+    # 2. 待查_区长 — 区委副书记、区长
     {
         "id": 2,
-        "name": "赵永圣",
-        "gender": "男",
+        "name": "待查_区长",
+        "gender": "",
         "ethnicity": "",
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
-        "current_post": "区长，经开区、中德园管委会主任",
-        "current_org": "铁西区人民政府",
-        "source": "铁西区政府官网 — 多篇新闻报道 (2026-06/07)"
+        "current_post": "区长",
+        "current_org": "鞍山市铁西区人民政府",
+        "source": "未确认 — 区长姓名、履历均待查。政府网站 www.astxq.gov.cn 在调查期间无法访问。",
     },
-    # ═══════ 区委副书记 ═══════
+
+    # ════════════════════════════════════════
+    # 区委常委 (District Party Standing Committee)
+    # ════════════════════════════════════════
+
+    # 3. 待查_区委副书记
     {
         "id": 3,
-        "name": "吴绍斌",
+        "name": "待查_区委副书记",
         "gender": "",
         "ethnicity": "",
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
         "current_post": "区委副书记",
-        "current_org": "中共沈阳市铁西区委员会",
-        "source": "铁西区政府官网 — 两优一先表彰大会报道 (2026-07-07)"
+        "current_org": "中共鞍山市铁西区委员会",
+        "source": "未确认 — 待查",
     },
-    # ═══════ 区委常委 ═══════
+    # 4. 待查_常务副区长
     {
         "id": 4,
-        "name": "段志慧",
-        "gender": "",
-        "ethnicity": "",
-        "birth": "",
-        "birthplace": "",
-        "education": "",
-        "party_join": "",
-        "work_start": "",
-        "current_post": "区委常委、组织部部长",
-        "current_org": "中共沈阳市铁西区委组织部",
-        "source": "铁西区政府官网 — 两优一先表彰大会报道 (2026-07-07)"
-    },
-    # ═══════ Standing Committee — inferred from typical Shenyang district structure ═══════
-    # These are PLACEHOLDER entries — names unknown from available sources
-    # Will be marked unverified
-    {
-        "id": 5,
         "name": "待查_常务副区长",
         "gender": "",
         "ethnicity": "",
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
-        "current_post": "区委常委、副区长（负责政府常务工作）",
-        "current_org": "铁西区人民政府",
-        "source": "未确认 — 待查"
+        "current_post": "区委常委、副区长",
+        "current_org": "鞍山市铁西区人民政府",
+        "source": "未确认 — 待查",
     },
+    # 5. 待查_纪委书记
     {
-        "id": 6,
+        "id": 5,
         "name": "待查_纪委书记",
         "gender": "",
         "ethnicity": "",
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
         "current_post": "区委常委、区纪委书记、区监委主任",
-        "current_org": "中共沈阳市铁西区纪律检查委员会",
-        "source": "未确认 — 待查"
+        "current_org": "中共鞍山市铁西区纪律检查委员会",
+        "source": "未确认 — 待查",
     },
+    # 6. 待查_组织部部长
+    {
+        "id": 6,
+        "name": "待查_组织部部长",
+        "gender": "",
+        "ethnicity": "",
+        "birth": "",
+        "birthplace": "",
+        "education": "",
+        "party_join": "中共党员",
+        "work_start": "",
+        "current_post": "区委常委、组织部部长",
+        "current_org": "中共鞍山市铁西区委组织部",
+        "source": "未确认 — 待查",
+    },
+    # 7. 待查_宣传部部长
     {
         "id": 7,
         "name": "待查_宣传部部长",
@@ -150,12 +167,13 @@ persons = [
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
         "current_post": "区委常委、宣传部部长",
-        "current_org": "中共沈阳市铁西区委宣传部",
-        "source": "未确认 — 待查"
+        "current_org": "中共鞍山市铁西区委宣传部",
+        "source": "未确认 — 待查",
     },
+    # 8. 待查_政法委书记
     {
         "id": 8,
         "name": "待查_政法委书记",
@@ -164,12 +182,13 @@ persons = [
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
         "current_post": "区委常委、政法委书记",
-        "current_org": "中共沈阳市铁西区委政法委员会",
-        "source": "未确认 — 待查"
+        "current_org": "中共鞍山市铁西区委政法委员会",
+        "source": "未确认 — 待查",
     },
+    # 9. 待查_统战部部长
     {
         "id": 9,
         "name": "待查_统战部部长",
@@ -178,13 +197,18 @@ persons = [
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
         "current_post": "区委常委、统战部部长",
-        "current_org": "中共沈阳市铁西区委统战部",
-        "source": "未确认 — 待查"
+        "current_org": "中共鞍山市铁西区委统战部",
+        "source": "未确认 — 待查",
     },
-    # ═══════ Predecessors ═══════
+
+    # ════════════════════════════════════════
+    # 前任领导 (Predecessors)
+    # ════════════════════════════════════════
+
+    # 10. 待查_前任区委书记
     {
         "id": 10,
         "name": "待查_前任区委书记",
@@ -193,12 +217,13 @@ persons = [
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
-        "current_post": "前任区委书记",
-        "current_org": "",
-        "source": "未确认 — 待查"
+        "current_post": "前任区委书记（已离任）",
+        "current_org": "中共鞍山市铁西区委员会（已离任）",
+        "source": "未确认 — 待查",
     },
+    # 11. 待查_前任区长
     {
         "id": 11,
         "name": "待查_前任区长",
@@ -207,176 +232,250 @@ persons = [
         "birth": "",
         "birthplace": "",
         "education": "",
-        "party_join": "",
+        "party_join": "中共党员",
         "work_start": "",
-        "current_post": "前任区长",
-        "current_org": "",
-        "source": "未确认 — 待查"
+        "current_post": "前任区长（已离任）",
+        "current_org": "鞍山市铁西区人民政府（已离任）",
+        "source": "未确认 — 待查",
     },
 ]
 
-# ── Organizations ──────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# ORGANIZATIONS
+# ══════════════════════════════════════════════════════════════════════════════
+
 organizations = [
-    {"id": 1, "name": "中共沈阳市铁西区委员会", "type": "党委", "level": "县处级", "parent": "中共沈阳市委员会", "location": "辽宁省沈阳市铁西区"},
-    {"id": 2, "name": "铁西区人民政府", "type": "政府", "level": "县处级", "parent": "沈阳市人民政府", "location": "辽宁省沈阳市铁西区"},
-    {"id": 3, "name": "中共沈阳市铁西区纪律检查委员会", "type": "纪委", "level": "县处级", "parent": "中共沈阳市铁西区委员会", "location": "辽宁省沈阳市铁西区"},
-    {"id": 4, "name": "中共沈阳市铁西区委组织部", "type": "党委", "level": "乡科级", "parent": "中共沈阳市铁西区委员会", "location": "辽宁省沈阳市铁西区"},
-    {"id": 5, "name": "中共沈阳市铁西区委宣传部", "type": "党委", "level": "乡科级", "parent": "中共沈阳市铁西区委员会", "location": "辽宁省沈阳市铁西区"},
-    {"id": 6, "name": "中共沈阳市铁西区委政法委员会", "type": "党委", "level": "乡科级", "parent": "中共沈阳市铁西区委员会", "location": "辽宁省沈阳市铁西区"},
-    {"id": 7, "name": "中共沈阳市铁西区委统战部", "type": "党委", "level": "乡科级", "parent": "中共沈阳市铁西区委员会", "location": "辽宁省沈阳市铁西区"},
-    {"id": 8, "name": "沈阳经济技术开发区管理委员会", "type": "开发区", "level": "国家级经开区", "parent": "沈阳市人民政府", "location": "辽宁省沈阳市铁西区"},
-    {"id": 9, "name": "中德（沈阳）高端装备制造产业园管委会", "type": "开发区", "level": "国家级", "parent": "沈阳市人民政府", "location": "辽宁省沈阳市铁西区"},
-    {"id": 10, "name": "铁西区人大常委会", "type": "人大", "level": "县处级", "parent": "", "location": "辽宁省沈阳市铁西区"},
-    {"id": 11, "name": "政协铁西区委员会", "type": "政协", "level": "县处级", "parent": "", "location": "辽宁省沈阳市铁西区"},
+    {
+        "id": 1,
+        "name": "中共鞍山市铁西区委员会",
+        "type": "党委",
+        "level": "县处级",
+        "parent": "中共鞍山市委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 2,
+        "name": "鞍山市铁西区人民政府",
+        "type": "政府",
+        "level": "县处级",
+        "parent": "鞍山市人民政府",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 3,
+        "name": "中共鞍山市铁西区纪律检查委员会",
+        "type": "纪委",
+        "level": "县处级",
+        "parent": "中共鞍山市铁西区委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 4,
+        "name": "中共鞍山市铁西区委组织部",
+        "type": "党委",
+        "level": "乡科级",
+        "parent": "中共鞍山市铁西区委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 5,
+        "name": "中共鞍山市铁西区委宣传部",
+        "type": "党委",
+        "level": "乡科级",
+        "parent": "中共鞍山市铁西区委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 6,
+        "name": "中共鞍山市铁西区委政法委员会",
+        "type": "党委",
+        "level": "乡科级",
+        "parent": "中共鞍山市铁西区委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 7,
+        "name": "中共鞍山市铁西区委统战部",
+        "type": "党委",
+        "level": "乡科级",
+        "parent": "中共鞍山市铁西区委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 8,
+        "name": "鞍山市铁西区人大常委会",
+        "type": "人大",
+        "level": "县处级",
+        "parent": "鞍山市人民代表大会常务委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
+    {
+        "id": 9,
+        "name": "政协鞍山市铁西区委员会",
+        "type": "政协",
+        "level": "县处级",
+        "parent": "政协鞍山市委员会",
+        "location": "辽宁省鞍山市铁西区",
+    },
 ]
 
-# ── Positions ──────────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# POSITIONS
+# ══════════════════════════════════════════════════════════════════════════════
+
 positions = [
-    # 吴振宇
-    {"person_id": 1, "org_id": 1, "title": "区委书记", "start": "", "end": "present", "rank": "正处级（副省级城市辖区高配）", "note": "现任铁西区委书记，同时任经开区党工委书记"},
-    {"person_id": 1, "org_id": 8, "title": "经开区党工委书记（兼）", "start": "", "end": "present", "rank": "", "note": ""},
-    # 赵永圣
-    {"person_id": 2, "org_id": 2, "title": "区长", "start": "", "end": "present", "rank": "正处级", "note": "现任铁西区长"},
-    {"person_id": 2, "org_id": 8, "title": "经开区管委会主任（兼）", "start": "", "end": "present", "rank": "", "note": ""},
-    {"person_id": 2, "org_id": 9, "title": "中德园管委会主任（兼）", "start": "", "end": "present", "rank": "", "note": ""},
-    # 吴绍斌
-    {"person_id": 3, "org_id": 1, "title": "区委副书记", "start": "", "end": "present", "rank": "副处级", "note": ""},
-    # 段志慧
-    {"person_id": 4, "org_id": 4, "title": "区委常委、组织部部长", "start": "", "end": "present", "rank": "副处级", "note": ""},
-    {"person_id": 4, "org_id": 1, "title": "区委常委", "start": "", "end": "present", "rank": "副处级", "note": ""},
-    # 待查_常务副区长
-    {"person_id": 5, "org_id": 2, "title": "区委常委、常务副区长", "start": "", "end": "present", "rank": "副处级", "note": "身份待确认"},
-    # 待查_纪委书记
-    {"person_id": 6, "org_id": 3, "title": "区委常委、纪委书记、监委主任", "start": "", "end": "present", "rank": "副处级", "note": "身份待确认"},
-    # 待查_宣传部部长
-    {"person_id": 7, "org_id": 5, "title": "区委常委、宣传部部长", "start": "", "end": "present", "rank": "副处级", "note": "身份待确认"},
-    # 待查_政法委书记
-    {"person_id": 8, "org_id": 6, "title": "区委常委、政法委书记", "start": "", "end": "present", "rank": "副处级", "note": "身份待确认"},
-    # 待查_统战部部长
-    {"person_id": 9, "org_id": 7, "title": "区委常委、统战部部长", "start": "", "end": "present", "rank": "副处级", "note": "身份待确认"},
+    # ── Core Leadership ──
+    {"person_id": 1, "org_id": 1, "title": "区委书记", "start": "", "end": "present",
+     "rank": "正处级", "note": "姓名、任职时间均待查"},
+    {"person_id": 2, "org_id": 2, "title": "区长", "start": "", "end": "present",
+     "rank": "正处级", "note": "姓名、任职时间均待查"},
+
+    # ── 区委常委 ──
+    {"person_id": 3, "org_id": 1, "title": "区委副书记", "start": "", "end": "present",
+     "rank": "副处级", "note": "待查"},
+    {"person_id": 4, "org_id": 2, "title": "区委常委、副区长", "start": "", "end": "present",
+     "rank": "副处级", "note": "负责区政府常务工作"},
+    {"person_id": 5, "org_id": 3, "title": "区委常委、区纪委书记、区监委主任", "start": "", "end": "present",
+     "rank": "副处级", "note": "待查"},
+    {"person_id": 6, "org_id": 4, "title": "区委常委、组织部部长", "start": "", "end": "present",
+     "rank": "副处级", "note": "待查"},
+    {"person_id": 7, "org_id": 5, "title": "区委常委、宣传部部长", "start": "", "end": "present",
+     "rank": "副处级", "note": "待查"},
+    {"person_id": 8, "org_id": 6, "title": "区委常委、政法委书记", "start": "", "end": "present",
+     "rank": "副处级", "note": "待查"},
+    {"person_id": 9, "org_id": 7, "title": "区委常委、统战部部长", "start": "", "end": "present",
+     "rank": "副处级", "note": "待查"},
+
+    # ── 前任领导 ──
+    {"person_id": 10, "org_id": 1, "title": "前任区委书记", "start": "", "end": "",
+     "rank": "正处级", "note": "姓名、任职时间均待查"},
+    {"person_id": 11, "org_id": 2, "title": "前任区长", "start": "", "end": "",
+     "rank": "正处级", "note": "姓名、任职时间均待查"},
 ]
 
-# ── Relationships ──────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# RELATIONSHIPS
+# ══════════════════════════════════════════════════════════════════════════════
+
 relationships = [
-    # 吴振宇 — 赵永圣 (党政搭档)
-    {"person_a": 1, "person_b": 2, "type": "党政搭档", "context": "吴振宇任区委书记，赵永圣任区长，党政一把手搭班子", "overlap_org": "铁西区", "overlap_period": "至今", "confidence": "confirmed"},
-    # 吴振宇 — 吴绍斌 (上下级)
-    {"person_a": 1, "person_b": 3, "type": "上下级", "context": "吴振宇任书记，吴绍斌任副书记，配合工作", "overlap_org": "中共沈阳市铁西区委员会", "overlap_period": "至今", "confidence": "confirmed"},
-    # 吴振宇 — 段志慧 (上下级)
-    {"person_a": 1, "person_b": 4, "type": "上下级", "context": "吴振宇任书记，段志慧任组织部长，在区委常委会共事", "overlap_org": "中共沈阳市铁西区委员会", "overlap_period": "至今", "confidence": "confirmed"},
-    # 赵永圣 — 吴绍斌 (党政配合)
-    {"person_a": 2, "person_b": 3, "type": "工作关系", "context": "赵永圣任区长，吴绍斌任区委副书记，党政配合", "overlap_org": "铁西区", "overlap_period": "至今", "confidence": "confirmed"},
-    # 吴振宇 — 待查常务副区长 (上下级)
-    {"person_a": 1, "person_b": 5, "type": "上下级", "context": "区委书记与常务副区长的上下级关系", "overlap_org": "铁西区", "overlap_period": "至今", "confidence": "plausible"},
-    # 赵永圣 — 待查常务副区长 (上下级)
-    {"person_a": 2, "person_b": 5, "type": "上下级", "context": "常务副区长协助区长主持政府日常工作", "overlap_org": "铁西区人民政府", "overlap_period": "至今", "confidence": "plausible"},
-    # 吴振宇 — 待查纪委书记 (上下级)
-    {"person_a": 1, "person_b": 6, "type": "上下级", "context": "区委书记领导下的纪委工作", "overlap_org": "中共沈阳市铁西区委员会", "overlap_period": "至今", "confidence": "plausible"},
+    {"person_a": 1, "person_b": 2, "type": "overlap",
+     "context": "区委书记与区长党政主要领导搭档（姓名待确认）",
+     "overlap_org": "中共鞍山市铁西区委员会/鞍山市铁西区人民政府",
+     "overlap_period": "待查"},
+    {"person_a": 1, "person_b": 3, "type": "superior_subordinate",
+     "context": "区委书记与区委副书记",
+     "overlap_org": "中共鞍山市铁西区委员会",
+     "overlap_period": "待查"},
+    {"person_a": 2, "person_b": 4, "type": "superior_subordinate",
+     "context": "区长与常务副区长",
+     "overlap_org": "鞍山市铁西区人民政府",
+     "overlap_period": "待查"},
+    {"person_a": 1, "person_b": 10, "type": "predecessor_successor",
+     "context": "现任与前任区委书记交接（姓名待确认）",
+     "overlap_org": "中共鞍山市铁西区委员会",
+     "overlap_period": "待查"},
+    {"person_a": 2, "person_b": 11, "type": "predecessor_successor",
+     "context": "现任与前任区长交接（姓名待确认）",
+     "overlap_org": "鞍山市铁西区人民政府",
+     "overlap_period": "待查"},
+    {"person_a": 1, "person_b": 5, "type": "superior_subordinate",
+     "context": "区委书记与纪委书记",
+     "overlap_org": "中共鞍山市铁西区委员会",
+     "overlap_period": "待查"},
 ]
+
+# ══════════════════════════════════════════════════════════════════════════════
+# HELPERS
+# ══════════════════════════════════════════════════════════════════════════════
 
 
 def make_source_register() -> list[dict]:
     return [
-        {"id": "S001", "title": "铁西区人民政府 — 动态要闻", "url": "http://www.tiexi.gov.cn/dtyw/", "publisher": "铁西区人民政府", "published_at": "2026-07-25", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "铁西区官方政府网站动态要闻栏目"},
-        {"id": "S002", "title": "铁西区两优一先表彰大会报道", "url": "http://www.tiexi.gov.cn/dtyw/202607/t20260707_5053471.html", "publisher": "铁西区人民政府", "published_at": "2026-07-07", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "确认吴振宇（区委书记）、吴绍斌（副书记）、段志慧（组织部长）"},
-        {"id": "S003", "title": "赵永圣调研中考前准备工作报道", "url": "http://www.tiexi.gov.cn/dtyw/202606/t20260622_5043911.html", "publisher": "铁西区人民政府", "published_at": "2026-06-20", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "确认赵永圣为区长、经开区/中德园管委会主任"},
-        {"id": "S004", "title": "区政府召开党组（扩大）会议报道", "url": "http://www.tiexi.gov.cn/dtyw/202606/t20260618_5043523.html", "publisher": "铁西区人民政府", "published_at": "2026-06-18", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "赵永圣主持区政府党组会议"},
-        {"id": "S005", "title": "区政府第113次常务会议报道", "url": "http://www.tiexi.gov.cn/dtyw/202607/t20260722_5060700.html", "publisher": "铁西区人民政府", "published_at": "2026-07-22", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "赵永圣主持区政府常务会议"},
-        {"id": "S006", "title": "铁西区简介页面", "url": "http://www.tiexi.gov.cn/zhtx/", "publisher": "铁西区人民政府", "published_at": "2026-05-26", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "铁西区概况信息"},
-        {"id": "S007", "title": "铁西区政务公开 — 政策文件", "url": "http://www.tiexi.gov.cn/zwxxgk/", "publisher": "铁西区人民政府", "published_at": "2026-07-25", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "包含区政府领导分工通知（沈西政办发〔2026〕3号）"},
+        {
+            "id": "S001",
+            "title": "鞍山市铁西区人民政府（官方域名）",
+            "url": "http://www.astxq.gov.cn/",
+            "publisher": "鞍山市铁西区人民政府",
+            "published_at": "",
+            "accessed_at": AS_OF,
+            "source_type": "official",
+            "reliability": "unknown",
+            "notes": "政府网站在调查期间无法访问（DNS超时/连接失败）",
+        },
+        {
+            "id": "S002",
+            "title": "鞍山市人民政府官网",
+            "url": "http://www.anshan.gov.cn/",
+            "publisher": "鞍山市人民政府",
+            "published_at": "",
+            "accessed_at": AS_OF,
+            "source_type": "official",
+            "reliability": "high",
+            "notes": "鞍山市政府网站可访问，但未直接列出铁西区领导信息",
+        },
+        {
+            "id": "S003",
+            "title": "百度百科 - 铁西区（鞍山）",
+            "url": "https://baike.baidu.com/item/%E9%93%81%E8%A5%BF%E5%8C%BA/2620282",
+            "publisher": "百度百科",
+            "published_at": "",
+            "accessed_at": AS_OF,
+            "source_type": "encyclopedia",
+            "reliability": "unknown",
+            "notes": "百度百科在调查期间返回CAPTCHA验证，无法获取页面内容",
+        },
     ]
 
 
-def make_person_json(p: dict, source_register: list[dict]) -> dict:
-    is_party_secretary = "区委书记" in p["current_post"] and "前任" not in p["current_post"]
-    is_mayor = "区长" in p["current_post"] and "前任" not in p["current_post"] and "副" not in p["current_post"]
+def generate_person_json(job: str, name: str) -> dict:
+    """Generate per-person graph JSON following person_graph_json.md schema."""
+    person_id_str = f"tiexi_anshan_{name}"
 
-    rank = "正处级" if (is_party_secretary or is_mayor) else "副处级"
-    if "经开区" in p["current_post"] and "书记" in p["current_post"]:
-        rank = "正处级"
-
-    # Build career entries from positions
-    career_entries = []
-    for pos in positions:
-        if pos["person_id"] == p["id"]:
-            org_name = {o["id"]: o["name"] for o in organizations}.get(pos["org_id"], "")
-            career_entries.append({
-                "start": pos.get("start", "unknown"),
-                "end": pos.get("end", "present"),
-                "org": org_name,
-                "title": pos["title"],
-                "level": pos.get("rank", ""),
-                "location": "",
-                "system": "party" if any(k in pos["title"] for k in ["书记", "纪委", "组织部", "宣传部", "统战", "政法委"]) else "government",
-                "rank": pos.get("rank", ""),
-                "is_key_promotion": "present" in pos.get("end", ""),
-                "notes": pos.get("note", ""),
-                "confidence": "confirmed" if "待查" not in p["name"] else "unverified",
-                "source_ids": ["S002", "S003"] if "待查" not in p["name"] else ["S001"]
-            })
-
-    # Build relationship list for this person
-    person_rels = []
-    for r in relationships:
-        if r["person_a"] == p["id"] or r["person_b"] == p["id"]:
-            other_id = r["person_b"] if r["person_a"] == p["id"] else r["person_a"]
-            other_name = {x["id"]: x["name"] for x in persons}.get(other_id, "")
-            person_rels.append({
-                "person": other_name,
-                "person_id": f"tiexi_{other_name}" if other_name else "",
-                "relationship_type": r["type"],
-                "strength": "medium",
-                "evidence": r.get("context", ""),
-                "overlap_org": r.get("overlap_org", ""),
-                "overlap_period": r.get("overlap_period", ""),
-                "direction": "undirected",
-                "confidence": r.get("confidence", "unverified"),
-                "source_ids": ["S002", "S003"]
-            })
-
-    person_id_prefix = f"tiexi_{p['name']}"
-    biggest_gap = "公开资料受限，无法获取完整履历、出生日期、教育背景等详细信息"
-
-    result = {
+    return {
         "schema_version": "1.0",
         "generated_at": AS_OF,
         "investigation_scope": {
             "province": "辽宁省",
-            "city": "沈阳市",
+            "city": "鞍山市",
             "region": "铁西区",
-            "job": p["current_post"],
+            "job": job,
             "task_id": "liaoning_铁西区",
-            "time_focus": "2026"
+            "time_focus": "2025–2026",
         },
         "identity": {
-            "person_id": person_id_prefix,
-            "name": p["name"],
+            "person_id": person_id_str,
+            "name": name,
             "aliases": [],
-            "gender": p.get("gender", ""),
-            "ethnicity": p.get("ethnicity", ""),
-            "birth": p.get("birth", ""),
-            "birthplace": p.get("birthplace", ""),
+            "gender": "",
+            "ethnicity": "",
+            "birth": "",
+            "birthplace": "",
             "native_place": "",
-            "education": [{"period": "", "institution": "", "major": "", "degree": p.get("education", ""), "study_type": "unknown", "source_ids": []}] if p.get("education") else [],
-            "party_join": "",
-            "work_start": p.get("work_start", ""),
+            "education": [],
+            "party_join": "中共党员",
+            "work_start": "",
             "dedupe_keys": {
-                "name_birth": f"{p['name']}_{p.get('birth', '')}",
-                "name_birthplace": f"{p['name']}_{p.get('birthplace', '')}",
-                "official_profile_url": ""
-            }
+                "name_birth": f"{name}_",
+                "name_birthplace": f"{name}_",
+                "official_profile_url": "",
+            },
         },
         "current_status": {
-            "current_post": p["current_post"],
-            "current_org": p["current_org"],
-            "administrative_rank": rank,
+            "current_post": job,
+            "current_org": "中共鞍山市铁西区委员会" if "书记" in job else "鞍山市铁西区人民政府",
+            "administrative_rank": "正处级",
             "as_of": AS_OF,
-            "is_current_confirmed": "待查" not in p["name"] and "前任" not in p["current_post"],
-            "source_ids": ["S002", "S003"]
+            "is_current_confirmed": False,
+            "source_ids": [],
         },
-        "career_timeline": career_entries,
-        "organizations": [],
-        "relationships": person_rels,
+        "career_timeline": [],
+        "organizations": [
+            {"org_id": 1, "name": "中共鞍山市铁西区委员会", "type": "党委",
+             "level": "县处级", "location": "辽宁省鞍山市铁西区"},
+            {"org_id": 2, "name": "鞍山市铁西区人民政府", "type": "政府",
+             "level": "县处级", "location": "辽宁省鞍山市铁西区"},
+        ],
+        "relationships": [],
         "governance_record": [],
         "professional_profile": {
             "primary_specializations": [],
@@ -384,75 +483,84 @@ def make_person_json(p: dict, source_register: list[dict]) -> dict:
             "career_pattern": "unknown",
             "systems_experience": [],
             "geographic_pattern": [],
-            "promotion_velocity": {"summary": "", "notable_fast_promotions": []}
+            "promotion_velocity": {
+                "summary": "完全未知 — 政府网站不可访问，搜索工具均受限",
+                "notable_fast_promotions": [],
+            },
         },
         "work_style_and_personality": {
             "public_style_indicators": [],
             "speech_themes": [],
             "management_signals": [],
-            "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+            "caveat": "Work style cannot be assessed without public records.",
         },
         "network_metrics": {},
-        "risk_and_integrity_signals": [],
-        "source_register": source_register,
+        "risk_and_integrity_signals": [
+            {
+                "type": "none_found",
+                "description": "截至2026年7月，由于搜索工具严重受限，无法进行有效搜索。未发现公开的纪律处分、审计问题或负面报道。",
+                "date": "",
+                "confidence": "unverified",
+                "source_ids": [],
+            }
+        ],
+        "source_register": make_source_register(),
         "confidence_summary": {
-            "identity": "plausible" if "待查" not in p["name"] else "unverified",
-            "current_role": "confirmed" if ("待查" not in p["name"] and "前任" not in p["current_post"]) else "plausible",
+            "identity": "unverified",
+            "current_role": "unverified",
             "career_completeness": "thin",
-            "relationship_confidence": "medium",
-            "biggest_gap": biggest_gap
+            "relationship_confidence": "low",
+            "biggest_gap": f"铁西区{job}的姓名、出生年月、籍贯、教育背景、完整履历全部未知",
         },
         "open_questions": [
             {
                 "priority": "critical",
-                "question": f"{p['name']}的出生年份、籍贯、教育背景是什么？",
-                "why_it_matters": "基础身份信息，用于人员去重和履历分析",
-                "suggested_queries": [f"{p['name']} 简历 沈阳", f"{p['name']} 铁西区 任前公示", f"{p['name']} 百度百科"],
-                "last_attempted": AS_OF
+                "question": f"鞍山市铁西区{job}的姓名是什么？",
+                "why_it_matters": "这是最基本的身份信息，是所有后续研究的基础",
+                "suggested_queries": [
+                    f"鞍山市铁西区 {job}",
+                    f"鞍山市铁西区 领导 分工",
+                    f"site:astxq.gov.cn {job}",
+                ],
+                "last_attempted": AS_OF,
             },
             {
                 "priority": "critical",
-                "question": f"{p['name']}的完整任职履历是什么？",
-                "why_it_matters": "核心人物的职业轨迹",
-                "suggested_queries": [f"{p['name']} 铁西区 任职经历"],
-                "last_attempted": AS_OF
+                "question": f"鞍山市铁西区{job}的出生年月、籍贯、教育背景？",
+                "why_it_matters": "身份去重和档案建库的基础信息",
+                "suggested_queries": [
+                    f"鞍山市铁西区 {job} 简历",
+                ],
+                "last_attempted": AS_OF,
             },
-        ]
+            {
+                "priority": "high",
+                "question": f"鞍山市铁西区{job}的完整职业生涯履历？",
+                "why_it_matters": "评估专业背景和职业发展路径",
+                "suggested_queries": [
+                    f"鞍山市铁西区 {job} 任前公示",
+                ],
+                "last_attempted": AS_OF,
+            },
+            {
+                "priority": "high",
+                "question": f"鞍山市铁西区{job}何时开始担任现职？接替哪位前任？",
+                "why_it_matters": "确认任职时间节点和前任/继任关系",
+                "suggested_queries": [
+                    f"鞍山 市委组织部 铁西区 任免",
+                ],
+                "last_attempted": AS_OF,
+            },
+        ],
     }
 
-    if p["name"] == "吴振宇":
-        result["open_questions"].append({
-            "priority": "critical",
-            "question": "吴振宇何时接任铁西区委书记？此前任何职？前任区委书记是谁？",
-            "why_it_matters": "理解区委书记交接链条",
-            "suggested_queries": ["吴振宇 铁西区委书记 任命", "吴振宇 简历"],
-            "last_attempted": AS_OF
-        })
-    elif p["name"] == "赵永圣":
-        result["open_questions"].append({
-            "priority": "critical",
-            "question": "赵永圣何时接任铁西区长？此前职务是什么？前任区长是谁？",
-            "why_it_matters": "理解区长交接链条",
-            "suggested_queries": ["赵永圣 铁西区长 简历", "赵永圣 沈阳 任命"],
-            "last_attempted": AS_OF
-        })
-        result["open_questions"].append({
-            "priority": "high",
-            "question": "赵永圣之前的职业经历（是否曾在沈阳其他区县任职）？",
-            "why_it_matters": "跨区干部交流分析",
-            "suggested_queries": ["赵永圣 沈阳 任职"],
-            "last_attempted": AS_OF
-        })
 
-    return result
-
+# ══════════════════════════════════════════════════════════════════════════════
+# MAIN
+# ══════════════════════════════════════════════════════════════════════════════
 
 def main() -> None:
-    print(f"{'='*60}")
-    print(f"Building {SLUG} network data")
-    print(f"{'='*60}")
-
-    # Build DB + GEXF via runner
+    # 1. Build database and GEXF
     run_build(
         slug=SLUG,
         persons=persons,
@@ -463,31 +571,31 @@ def main() -> None:
         gexf_path=GEXF_PATH,
         overwrite=True,
     )
+    print(f"  DB: {DB_PATH}")
+    print(f"  GEXF: {GEXF_PATH}")
 
-    # Write person JSON files for confirmed leaders
-    source_reg = make_source_register()
-
-    person_info = [
-        (1, "吴振宇", "区委书记"),
-        (2, "赵永圣", "区长"),
-        (3, "吴绍斌", "区委副书记"),
-        (4, "段志慧", "区委常委_组织部部长"),
+    # 2. Write person JSONs for core leaders
+    core_people = [
+        ("区委书记", "待查_区委书记"),
+        ("区长", "待查_区长"),
+        ("区委副书记", "待查_区委副书记"),
+        ("常务副区长", "待查_常务副区长"),
+        ("纪委书记", "待查_纪委书记"),
+        ("组织部部长", "待查_组织部部长"),
+        ("宣传部部长", "待查_宣传部部长"),
+        ("政法委书记", "待查_政法委书记"),
+        ("统战部部长", "待查_统战部部长"),
     ]
 
-    for pid, pname, pjob in person_info:
-        p_data = {p["id"]: p for p in persons}[pid]
-        person_json = make_person_json(p_data, source_reg)
-        fname = f"{TODAY}-辽宁省-沈阳市-{pjob}-{pname}.json"
-        fpath = PERSON_DIR / fname
-        with open(fpath, "w", encoding="utf-8") as f:
-            json.dump(person_json, f, ensure_ascii=False, indent=2)
-        print(f"  ✓ Person JSON: {fname}")
+    for job, name in core_people:
+        person_data = generate_person_json(job, name)
+        filename = f"{TODAY}-辽宁省-鞍山市-{job}-{name}.json"
+        filepath = PERSONS_DIR / filename
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(person_data, f, ensure_ascii=False, indent=2)
+        print(f"  Person JSON: {filepath}")
 
-    print(f"\n{'='*60}")
-    print(f"{SLUG} build complete!")
-    print(f"DB: {DB_PATH}")
-    print(f"GEXF: {GEXF_PATH}")
-    print(f"{'='*60}")
+    print("\nBuild complete.")
 
 
 if __name__ == "__main__":
