@@ -120,21 +120,62 @@
 
 ---
 
+---
+
+# Open Gaps Registry — 邛崃市（sichuan_邛崃市）
+> Last updated: 2026-07-26
+
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 王德彰 | 邛崃市委书记、市长（党政一肩挑） | **全部履历**：出生日期、籍贯、教育背景、入党时间、全部任职经历 | 2026-07-26 | 姓名已确认，但无一丁点履历信息可用 |
+| 王瑞平 | 邛崃市人大常委会主任 | 全部个人信息（出生、籍贯、教育、履历） | 2026-07-26 | 仅姓名确认 |
+| 徐戎 | 邛崃市政协主席 | 全部个人信息（出生、籍贯、教育、履历） | 2026-07-26 | 仅姓名确认 |
+
+## ⭐⭐⭐⭐ High (important deputies or key connections)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 惠朝旭 | 确认是否曾任邛崃市长、当前去向 | 2026-07-26 | Wikipedia旧数据显示为市长，但数据过时 |
+| 前任邛崃市委书记 | 姓名、去向 | 2026-07-26 | 何人何时离任完全未知 |
+| 邛崃市委领导班子 | 全体市委班子成员姓名和分工 | 2026-07-26 | 副书记、纪委、组织、宣传、政法、统战全部未知 |
+
+## ⭐⭐⭐ Medium (would enrich the network picture)
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 邛崃市政府网站领导之窗页面 | 2026-07-26 | qionglai.gov.cn WAF 412 |
+| 邛崃与崇州、大邑、蒲江的干部交流记录 | 2026-07-26 | 跨县调动模式待查 |
+| 邛崃市经济数据与主政者关联 | 2026-07-26 | GDP约476亿元，在成都排名中下 |
+
+## ⭐⭐ Low (nice to have)
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 各乡镇街道主要领导 | 2026-07-26 | |
+| 领导班子成员具体分工 | 2026-07-26 | |
+
 ## Root Cause of Gaps
 
-All gaps stem from **Web search tool unavailability** during this investigation:
-- **Exa search** hit free tier rate limit — the primary search provider was unavailable for the entire session
-- **Baidu** returned 403 — all `/baike.baidu.com/` and `baidu.com` requests blocked
-- **djy.gov.cn** returned 412 precondition failed — government site inaccessible
-- **Jina Reader** timed out on all requests
+All gaps stem from **complete web access unavailability** during this investigation:
+- All Chinese government sites (qionglai.gov.cn, chengdu.gov.cn) — WAF 412
+- Baidu Baike — anti-scraping CAPTCHA
+- All search engines (Google, Bing, DuckDuckGo) — connection timeout
+- All Chinese news sites (thepaper.cn, sina, sohu) — connection reset
+- Jina Reader, Wayback Machine — timeout/down
+- curl_cffi with TLS impersonation — all blocked
 
 ## Recommended Recovery
 
-1. Run in an environment with working Exa search and verified Baidu access
+1. Run in an environment with verified Baidu and Google access (preferably from Chinese IP)
 2. Target URLs to prioritize:
-   - `https://www.djy.gov.cn/djys/ldzc/` — government leadership page
-   - `https://baike.baidu.com/item/蒋蔚来`
-   - `https://baike.baidu.com/item/张亚丹`
-   - `https://www.thepaper.cn/` search for "都江堰" recent appointment articles
-   - `https://www.google.com/search?q=都江堰市+市委书记+简历`
-3. If using a Chinese IP / VPN, the Baidu and government sites should be accessible
+   - `https://www.qionglai.gov.cn/qls/ldzc/ldzc.shtml` — government leadership page
+   - `https://baike.baidu.com/item/王德彰`
+   - `https://baike.baidu.com/item/王瑞平`
+   - `https://baike.baidu.com/item/徐戎`
+   - `https://baike.baidu.com/item/下辖/57788641`
+   - Search "王德彰 任前公示 成都 市委组织部"
+   - Search "邛崃市 市委常委 名单 2024"
+   - Search "惠朝旭 邛崃"
+3. Check Chengdu HR/notifications page for 任前公示 (appointment notices)
