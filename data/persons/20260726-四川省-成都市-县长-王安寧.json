@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "四川省",
+    "city": "成都市",
+    "region": "金堂县",
+    "job": "县长",
+    "task_id": "sichuan_金堂县",
+    "time_focus": "2023-present"
+  },
+  "identity": {
+    "person_id": "jintang_wang_anning",
+    "name": "王安寧",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "王安寧_",
+      "name_birthplace": "王安寧_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "金堂县县长",
+    "current_org": "金堂县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2023-10",
+      "end": "至今",
+      "org": "金堂县人民政府",
+      "title": "金堂县县长",
+      "level": "县处级正职",
+      "location": "四川省成都市金堂县",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "接替古建桥担任金堂县县长。Wikipedia infobox 确认。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到王安寧的完整履历（出生年月、教育背景、早期任职经历、到金堂前的任职）",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "jintang_county_government",
+      "org_name": "金堂县人民政府",
+      "role": "县长",
+      "period": "2023-至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "钟静远",
+      "person_id": "jintang_zhong_jingyuan",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "王安寧作为县长与县委书记钟静远在2023年后共同搭班子",
+      "overlap_org": "金堂县",
+      "overlap_period": "2023-至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "古建桥",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "王安寧接替古建桥担任金堂县县长",
+      "overlap_org": "金堂县人民政府",
+      "overlap_period": "2023",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "缺乏足够的公开信息评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，未收集到足够的工作风格信息",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现王安寧相关的纪律处分、调查或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "金堂县 - 维基百科",
+      "url": "https://zh.wikipedia.org/wiki/金堂县",
+      "publisher": "维基百科",
+      "published_at": "2026-06-12",
+      "accessed_at": "2026-07-26",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "Wikipedia page for 金堂县, provides infobox with county mayor 王安寧"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "王安寧的完整履历（出生年月、教育背景、任命为县长前的任职经历）在公开资料中不可得"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "王安寧的出生年月、教育背景和入党时间是什么？",
+      "why_it_matters": "这是干部档案的基础信息，对追踪其整个职业轨迹至关重要",
+      "suggested_queries": ["王安寧 简历", "王安寧 出生", "王安寧 金堂"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "王安寧在担任金堂县长之前的完整职业履历是什么？",
+      "why_it_matters": "可以揭示其职业背景、专业领域和政治网络",
+      "suggested_queries": ["王安寧 任职", "王安寧 成都", "王安寧 曾任"],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}
