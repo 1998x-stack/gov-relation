@@ -4,19 +4,19 @@
   "investigation_scope": {
     "province": "山西省",
     "city": "临汾市",
-    "region": "隰县",
+    "region": "永和县",
     "job": "县委书记",
-    "task_id": "shanxi_隰县",
-    "time_focus": "2024-2026"
+    "task_id": "shanxi_永和县",
+    "time_focus": "current"
   },
   "identity": {
-    "person_id": "xixian_current_secretary",
-    "name": "（现任县委书记）待查",
+    "person_id": "yonghe_county_party_secretary_unknown",
+    "name": "（待查）",
     "aliases": [],
     "gender": "",
     "ethnicity": "",
     "birth": "",
-    "birthplace": "山西省（推测）",
+    "birthplace": "",
     "native_place": "",
     "education": [],
     "party_join": "",
@@ -28,16 +28,53 @@
     }
   },
   "current_status": {
-    "current_post": "中共隰县县委书记",
-    "current_org": "中共隰县委员会",
+    "current_post": "中共永和县委书记",
+    "current_org": "中共永和县委员会",
     "administrative_rank": "正处级",
     "as_of": "2026-07-26",
     "is_current_confirmed": false,
     "source_ids": []
   },
-  "career_timeline": [],
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "中共永和县委员会",
+      "title": "永和县委书记",
+      "level": "县处级",
+      "location": "山西省临汾市永和县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到当前县委书记姓名及相关履历。因网络搜索基础设施故障（Exa 限流、百度 403、政府网站超时、Jina Reader 超时），所有中文搜索渠道均不可达。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "县委书记完整职业生涯履历完全缺失——姓名、性别、出生年月、籍贯、教育背景、历任职务、任命时间、此前职务等信息全部未知。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
   "organizations": [],
-  "relationships": [],
+  "relationships": [
+    {
+      "person": "（现任县长）待查",
+      "person_id": "unknown",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县委书记与县长构成党政一把手搭班子关系",
+      "overlap_org": "永和县",
+      "overlap_period": "目前",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
   "governance_record": [],
   "professional_profile": {
     "primary_specializations": [],
@@ -46,7 +83,7 @@
     "systems_experience": [],
     "geographic_pattern": [],
     "promotion_velocity": {
-      "summary": "完全未知，因网络封锁无法获取公开资料",
+      "summary": "完全未知",
       "notable_fast_promotions": []
     }
   },
@@ -54,13 +91,13 @@
     "public_style_indicators": [],
     "speech_themes": [],
     "management_signals": [],
-    "caveat": "因网络封锁（Exa 限流、百度 403、政府网站超时），无法获取当前县委书记姓名与履历。"
+    "caveat": "因无法获取当前县委书记的任何公开信息，无法进行工作风格推断。"
   },
   "network_metrics": {},
   "risk_and_integrity_signals": [
     {
       "type": "none_found",
-      "description": "由于网络封锁未找到任何风险信号",
+      "description": "未发现任何风险信号——因完全无法获取该人物信息",
       "date": "2026-07-26",
       "confidence": "unverified",
       "source_ids": []
@@ -72,32 +109,44 @@
     "current_role": "unverified",
     "career_completeness": "thin",
     "relationship_confidence": "low",
-    "biggest_gap": "县委书记姓名完全未知，无公开履历数据"
+    "biggest_gap": "姓名、性别、出生、籍贯、教育、履历——所有信息完全缺失"
   },
   "open_questions": [
     {
       "priority": "critical",
-      "question": "隰县现任县委书记是谁？",
-      "why_it_matters": "核心调研目标",
+      "question": "永和县委书记姓名是什么？",
+      "why_it_matters": "核心目标人物，所有分析的基础",
       "suggested_queries": [
-        "隰县 县委书记 2025",
-        "隰县 县委书记 任前公示 临汾市委组织部",
-        "隰县人民政府 领导之窗",
-        "site:lfxixian.gov.cn 县委书记"
+        "永和县 县委书记 现任",
+        "永和县人民政府 领导之窗",
+        "site:yonghe.gov.cn 书记",
+        "临汾市 永和县 任前公示 书记"
       ],
       "last_attempted": "2026-07-26"
     },
     {
       "priority": "critical",
-      "question": "隰县县委书记的完整履历是什么？",
-      "why_it_matters": "调研目标要求了解其政治背景",
-      "suggested_queries": [],
+      "question": "永和县委书记的完整职业生涯履历是什么？",
+      "why_it_matters": "了解晋升路径、地域轨迹、专业背景",
+      "suggested_queries": [
+        "{name} 简历 永和",
+        "{name} 任前公示"
+      ],
       "last_attempted": "2026-07-26"
     },
     {
       "priority": "critical",
-      "question": "隰县县委书记的任命时间和来源（从何岗位调任）？",
-      "why_it_matters": "了解交流模式",
+      "question": "前任永和县委书记是谁？去向何处？",
+      "why_it_matters": "填补县委书记继承链条，识别跨县调动模式",
+      "suggested_queries": [
+        "前任永和县委书记 卸任 去向"
+      ],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "永和县委书记此前任何职？从哪调入？",
+      "why_it_matters": "了解晋升模式——是从本地提拔还是跨县调入",
       "suggested_queries": [],
       "last_attempted": "2026-07-26"
     }
