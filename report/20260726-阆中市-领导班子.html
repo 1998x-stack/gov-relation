@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阆中市领导班子工作关系网络 · 情报简报</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+:root {
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface2: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e8e0d6;
+  --text-dim: #8a8076;
+  --accent: #E03C31;
+  --gold: #C9A94E;
+  --blue: #3a6b8a;
+  --green: #3a7a5a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  padding: 0;
+}
+h1, h2, h3 { font-family: 'Noto Serif SC', serif; font-weight: 700; }
+h1 { font-size: 2.2rem; margin-bottom: .3rem; }
+h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .5rem;
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: .6rem;
+}
+h2::before { content: ""; display: inline-block; width: 4px; height: 1.1rem; background: var(--accent); }
+h3 { font-size: 1rem; color: var(--gold); margin-bottom: .5rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+/* Header */
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 2.5rem 2rem; border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #111 0%, var(--surface) 100%);
+}
+.header .meta { text-align: right; font-size: .85rem; color: var(--text-dim); }
+.subtitle { font-size: .9rem; color: var(--text-dim); margin-bottom: 1.5rem; }
+.classified { display: inline-block; border: 1px solid var(--accent); color: var(--accent); font-size: .7rem; padding: .1rem .4rem; letter-spacing: 1px; }
+
+/* Stats */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--border); margin: 1.5rem 0;
+}
+.stat { background: var(--surface2); padding: 1rem; text-align: center; }
+.stat .num { font-size: 1.6rem; font-weight: 700; font-family: 'Noto Serif SC', serif; color: var(--gold); }
+.stat .label { font-size: .75rem; color: var(--text-dim); }
+
+/* Person cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); margin: 1rem 0; }
+.card { background: var(--surface2); padding: 1.2rem; }
+.card h3 { color: var(--text); font-size: .95rem; }
+.card .title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .4rem; }
+.card .badge { font-size: .65rem; padding: .1rem .4rem; border: 1px solid var(--accent); color: var(--accent); }
+.card .badge.gold { border-color: var(--gold); color: var(--gold); }
+.card .info { font-size: .8rem; color: var(--text-dim); line-height: 1.5; }
+.card .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .5rem; }
+.card .tag { font-size: .65rem; padding: .05rem .35rem; border: 1px solid var(--border); }
+
+/* Matrix table */
+table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+th, td { border: 1px solid var(--border); padding: .5rem .4rem; text-align: left; }
+th { background: var(--surface2); color: var(--gold); font-weight: 500; font-size: .75rem; }
+td { background: var(--surface); }
+td.rel-confirmed { color: var(--gold); }
+td.rel-missing { color: var(--accent); font-style: italic; }
+
+/* Gap flags */
+.gap-box { background: var(--surface2); border-left: 3px solid var(--accent); padding: .8rem 1rem; margin: 1rem 0; font-size: .85rem; }
+.gap-box h4 { color: var(--accent); margin-bottom: .3rem; font-size: .85rem; }
+.gap-box ul { padding-left: 1.2rem; color: var(--text-dim); }
+.gap-box li { margin-bottom: .2rem; }
+
+/* Notes */
+.note { font-size: .75rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 1.5rem; }
+
+@media (max-width: 640px) {
+  .header { flex-direction: column; gap: .5rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <div class="subtitle"><span class="text">四川省南充市 · 县级市</span></div>
+    <h1>阆中市领导班子<br>工作关系网络</h1>
+    <div style="margin-top:.4rem;"><span class="text">情报简报</span></div>
+  </div>
+  <div class="meta">
+    <div>2026-07-26</div>
+    <div>研究档案 · 内部参考</div>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="stats">
+  <div class="stat"><div class="num">10</div><div class="label">人物</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">机构</div></div>
+  <div class="stat"><div class="num">12</div><div class="label">任职</div></div>
+  <div class="stat"><div class="num">9</div><div class="label">关系</div></div>
+</div>
+
+<h2>领导人物一览</h2>
+<div class="grid">
+
+<div class="card">
+  <div class="title-row"><span class="badge">🔴 正处级</span><span class="badge gold">市委</span></div>
+  <div class="card-title">杨德宇</div>
+  <div class="sub">市委书记</div>
+  <div class="info">履历待查 · 仅从全会公报确认姓名及职务</div>
+  <div class="tags"><span class="tag">信息缺口：出生/籍贯/教育/前任职务均未知</span></div>
+</div>
+
+<div class="card">
+  <div class="title-row"><span class="badge">🔴 正处级</span><span class="badge gold">党政</span></div>
+  <div class="card-title">唐硕</div>
+  <div class="sub">市委副书记、市长</div>
+  <div class="info">1980.12 · 四川南充 · 西华师范大学</div>
+  <div class="tags"><span class="tag">政府全面</span><span class="tag">审计/工业</span></div>
+</div>
+
+<div class="card">
+  <div class="title-row"><span class="badge gold">市委常委</span><span class="badge">副处级</span></div>
+  <div class="card-title">张小林</div>
+  <div class="sub">市委常委、常务副市长</div>
+  <div class="info">1978.05 · 四川营山 · 川师大汉语言</div>
+  <div class="tags"><span class="tag">常务</span><span class="tag">财政/金融/发改</span></div>
+</div>
+
+<div class="card">
+  <div class="title-row"><span class="badge gold">市委常委</span><span class="badge">挂职</span></div>
+  <div class="card-title">李新建</div>
+  <div class="sub">市委常委、副市长（挂职）</div>
+  <div class="info">1979.11 · 浙江仙居 · 硕士 · 挂职3年</div>
+  <div class="tags"><span class="tag">东西部协作</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">杜小兵</div>
+  <div class="sub">副市长、公安局长</div>
+  <div class="info">1970.09 · 四川南部 · 省委党校法律</div>
+  <div class="tags"><span class="tag">公安</span><span class="tag">司法/信访</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">杜敏</div>
+  <div class="sub">副市长</div>
+  <div class="info">1976.06 · 四川阆中 · 川师大应用化学</div>
+  <div class="tags"><span class="tag">住建/文旅</span><span class="tag">本地籍</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">杨劲松</div>
+  <div class="sub">副市长</div>
+  <div class="info">1982.03 · 四川阆中 · 四川大学法律</div>
+  <div class="tags"><span class="tag">民政/农业/教育</span><span class="tag">本地籍</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">张松</div>
+  <div class="sub">副市长</div>
+  <div class="info">1981.07 · 四川阆中 · 川师大汉语言</div>
+  <div class="tags"><span class="tag">招商/自然资源</span><span class="tag">本地籍</span></div>
+</div>
+
+<div class="card">
+  <div class="title-row"><span class="badge">挂职</span></div>
+  <div class="card-title">邓雁城</div>
+  <div class="sub">副市长（挂职）</div>
+  <div class="info">1979.04 · 河南延津 · 山东大学数学硕士</div>
+  <div class="tags"><span class="tag">中国电子</span><span class="tag">产业帮扶</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">何姝睿</div>
+  <div class="sub">副市长</div>
+  <div class="info">1988.01 · 四川营山 · 西华师大公共管理硕士</div>
+  <div class="tags"><span class="tag">目前在请假</span><span class="tag">最年轻</span></div>
+</div>
+
+</div>
+
+<h2>🔄 关系矩阵</h2>
+<table>
+<tr><th>人物 A</th><th>人物 B</th><th>关系类型</th><th>背景</th></tr>
+<tr><td>杨德宇</td><td>唐硕</td><td class="confirmed">党政同僚</td><td>书记-市长正职合作</td></tr>
+<tr><td>张小林</td><td>唐硕</td><td class="confirmed">上下级</td><td>常务副市长为市长副手</td></tr>
+<tr><td>张小林</td><td>杜小兵</td><td class="confirmed">AB角配对</td><td>常务与公安互为替代</td></tr>
+<tr><td>杜敏</td><td>张松</td><td class="confirmed">AB角配对</td><td>住建文旅+招商自然资源</td></tr>
+<tr><td>李新建</td><td>杨劲松</td><td class="confirmed">AB角配对</td><td>东西部协作+民政农业</td></tr>
+<tr><td>李新建</td><td>邓雁城</td><td class="confirmed">同级挂职</td><td>均为挂职副市长</td></tr>
+<tr><td>杜敏</td><td>杨劲松</td><td class="confirmed">同僚</td><td>同为阆中本地籍干部</td></tr>
+<tr><td>杜敏</td><td>张松</td><td class="confirmed">同僚</td><td>同为阆中本地籍干部</td></tr>
+<tr><td>张小林</td><td>何姝睿</td><td class="confirmed">同乡</td><td>同为营山籍</td></tr>
+</table>
+
+<h2>⚠️ AB角配对制度</h2>
+<p class="subtitle">市政府AB角制度确保关键工作不因领导缺席中断</p>
+<table>
+<tr><th>A角</th><th>B角</th><th>覆盖领域</th></tr>
+<tr><td>张小林（常务副市长）</td><td>杜小兵（公安局长）</td><td>市政府全面工作/法治政法</td></tr>
+<tr><td>杜敏（住建文旅）</td><td>张松（招商·自然资源）</td><td>城市管理/资源规划</td></tr>
+<tr><td>李新建（东西部协作）</td><td>杨劲松（民政·农业）</td><td>乡村振兴/东西协作</td></tr>
+</table>
+
+<h2>🔍 关键信息缺口</h2>
+
+<div class="gap-box">
+<h4>🔴 最高优先级 — 杨德宇完整履历</h4>
+<p>市委书记杨德宇仅从全会公报确认姓名和职务。出生年月、籍贯、教育背景、入党时间、此前担任的职务、到任时间、晋升路径——全部未知。</p>
+</div>
+
+<div class="gap-box" style="border-left-color: var(--gold);">
+<h4>🔴 最高优先级 — 市委常委完整名单</h4>
+<p>仅有4人可确认（杨德宇、唐硕、张小林、李新建）。其余5-7名市委常委（专职副书记、纪委书记、组织部长、宣传部长、政法委书记、统战部长、人武部长）职务和任职者完全未知。</p>
+</div>
+
+<div class="gap-box" style="border-left-color: var(--gold);">
+<h4>🟠 高优先级 — 前任市委书记去向</h4>
+<p>杨德宇的前任未知。交接时机、前任的去向、后续安排均未查到。</p>
+</div>
+
+<div class="gap-box" style="border-left-color: var(--border);">
+<h4>🟡 中优先级</h4>
+<p>· 杜小兵（1970年生，较年长）何时退居二线？<br>
+· 何姝睿请假事由及归来时间<br>
+· 挂职干部期满后的调运动向</p>
+</div>
+
+<div class="note">
+<strong>数据来源</strong>: 阆中市人民政府官方网站领导信息页面及人事任免通知。<br>
+所有副市长简历均来自政府官网，置信度：✅已确认。<br>
+市委常委会组成信息为政府官网未公开的缺口，需从新闻报道搜索进一步挖掘。
+</div>
+
+</div>
+</body>
+</html>
