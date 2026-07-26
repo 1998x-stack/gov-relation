@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "山西省",
+    "city": "临汾市",
+    "region": "侯马市",
+    "job": "原侯马市委书记",
+    "task_id": "shanxi_侯马市",
+    "time_focus": "已知作为前任书记的信息"
+  },
+  "identity": {
+    "person_id": "houma_wu_yong",
+    "name": "吴勇",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "山西省",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "吴勇",
+      "name_birthplace": "山西",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "（前任侯马市委书记，现已调离）",
+    "current_org": "",
+    "administrative_rank": "正处级（或晋升）",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": false,
+    "source_ids": []
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "吴勇的完整履历因网络封锁无法获取。仅知道他曾任侯马市委书记，接替前任王煦杰。吴勇担任侯马市委书记的具体起止时间、此前职务、此后去向均不明确。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "houma_cpc_committee",
+      "org_name": "中共侯马市委员会",
+      "role": "市委书记（前任）",
+      "period": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "relationships": [
+    {
+      "person": "王煦杰",
+      "person_id": "houma_wang_xujie",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "王煦杰→吴→勇，侯马市委书记交接",
+      "overlap_org": "中共侯马市委员会",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "person": "尹明星",
+      "person_id": "houma_yin_mingxing",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "吴勇任书记时，尹明乡同期任市长",
+      "overlap_org": "侯马市",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "完全未知",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "无公开资料可评估。"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "前任书记吴勇的完整履历（出生、籍贯、教育、所有任职经历、调离去向）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "吴勇的出生年份、籍贯、教育背景",
+      "why_it_matters": "核心人物基本信息",
+      "suggested_queries": ["吴勇 简历 侯马 书记"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "吴勇何时接替王煦杰任侯马市委书记？",
+      "why_it_matters": "理解继任时间线",
+      "suggested_queries": ["王煦杰 侯马 书记 离任 时间"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "吴勇调离侯马后的去向",
+      "why_it_matters": "了解干部晋升/交流模式",
+      "suggested_queries": ["吴勇 现任 职务", "吴勇 调任"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "吴勇任侯马市委书记之前担任什么职务",
+      "why_it_matters": "完整的晋升路径",
+      "suggested_queries": ["吴勇 曾任"],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}
