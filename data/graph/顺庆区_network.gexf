@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-26">
+    <creator>Gov Relation Research Agent</creator>
+    <description>顺庆区领导班子工作关系网络 — 四川省南充市顺庆区</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+      <attribute id="3" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="蒲鹏程">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共南充市顺庆区委员会"/>
+          <attvalue for="3" value="https://www.shunqing.gov.cn/xwdt/"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="唐粼波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区长"/>
+          <attvalue for="2" value="顺庆区人民政府"/>
+          <attvalue for="3" value="https://www.shunqing.gov.cn/xwdt/"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="未确认_区委副书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记（待确认）"/>
+          <attvalue for="2" value="中共南充市顺庆区委员会"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="未确认_人大主任">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任（待确认）"/>
+          <attvalue for="2" value="顺庆区人大常委会"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="未确认_政协主席">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席（待确认）"/>
+          <attvalue for="2" value="政协顺庆区委员会"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="未确认_纪委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区纪委书记/监委主任（待确认）"/>
+          <attvalue for="2" value="中共南充市顺庆区纪律检查委员会/区监察委员会"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="未确认_常务副区长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、常务副区长（待确认）"/>
+          <attvalue for="2" value="顺庆区人民政府"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p8" label="未确认_组织部长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长（待确认）"/>
+          <attvalue for="2" value="中共南充市顺庆区委员会组织部"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="未确认_宣传部长">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长（待确认）"/>
+          <attvalue for="2" value="中共南充市顺庆区委员会宣传部"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="未确认_政法委书记">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记（待确认）"/>
+          <attvalue for="2" value="中共南充市顺庆区委员会政法委员会"/>
+          <attvalue for="3" value="待补充"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共南充市顺庆区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="顺庆区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="顺庆区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="顺庆区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="顺庆区纪委监委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共南充市顺庆区委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共南充市顺庆区委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共南充市顺庆区委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="p1" target="o1" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="p2" target="o2" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p3" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p4" target="o3" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p5" target="o4" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p6" target="o5" label="区纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p7" target="o2" label="区委常委、常务副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p8" target="o6" label="区委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p10" target="o7" label="区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p11" target="o8" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="2" value="待确认姓名"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区委书记与区长是顺庆区的党政正职关系"/>
+          <attvalue for="2" value="顺庆区"/>
+          <attvalue for="3" value="至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
