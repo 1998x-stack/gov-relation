@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贡井区领导班子工作关系网络图</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #e8dcc8; font-family: "Noto Serif SC", serif; }
+#header { padding: 20px 30px; border-bottom: 1px solid #2a2a2a; }
+#header h1 { font-size: 20px; font-weight: 400; color: #e8dcc8; letter-spacing: 2px; }
+#header .sub { font-size: 12px; color: #6a6a6a; margin-top: 4px; }
+#network { width: 100%; height: calc(100vh - 80px); }
+#legend { position: fixed; bottom: 20px; left: 20px; background: rgba(10,10,10,0.85); border: 1px solid #2a2a2a; padding: 12px 16px; font-size: 12px; }
+#legend .item { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+#legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+#legend .box { width: 10px; height: 10px; display: inline-block; }
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>贡井区领导班子 · 工作关系网络</h1>
+  <div class="sub">2026-07-26 · 数据来源：贡井区人民政府官网</div>
+</div>
+<div id="network"></div>
+<div id="legend">
+  <div class="item"><span class="dot" style="background:#E03C31"></span> 区政府主要领导</div>
+  <div class="item"><span class="dot" style="background:#3B82F6"></span> 副区长</div>
+  <div class="item"><span class="dot" style="background:#C9A94E"></span> 副区长/区委常委</div>
+  <div class="item"><span class="box" style="background:#555"></span> 组织机构</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<script>
+const nodes = new vis.DataSet([
+  { id: "fangmao", label: "方矛
+区长", group: "gov", shape: "dot", size: 25, color: { background: "#E03C31", border: "#E03C31" }, title: "区委副书记、区长" },
+  { id: "liuyuanchu", label: "刘远初
+常务副区长", shape: "dot", size: 12, color: { background: "#C9A94E", border: "#C9A94E" }, title: "区委常委、常务副区长\n1975.04，省委党校大学" },
+  { id: "limin", label: "李敏
+副区长", shape: "dot", size: 12, color: { background: "#C9A94E", border: "#C9A94E" }, title: "区委常委、宣传部部长\n1975.02，党校大学" },
+  { id: "lifengbo", label: "李丰波
+副区长", shape: "dot", size: 12, color: { background: "#C9A94E", border: "#C9A94E" }, title: "区委常委、副区长\n1985.09，博士研究生" },
+  { id: "liupengcheng", label: "刘鹏程
+副区长", shape: "dot", size: 12, color: { background: "#3B82F6", border: "#3B82F6" }, title: "副区长\n1984.01，大学" },
+  { id: "zhongxin", label: "钟昕
+副区长", shape: "dot", size: 12, color: { background: "#3B82F6", border: "#3B82F6" }, title: "副区长\n1986.11，大学" },
+  { id: "dantangjie", label: "但唐杰
+副区长", shape: "dot", size: 12, color: { background: "#3B82F6", border: "#3B82F6" }, title: "副区长\n1988.10，法律硕士" },
+  { id: "chenying", label: "陈英
+副区长", shape: "dot", size: 12, color: { background: "#3B82F6", border: "#3B82F6" }, title: "副区长、公安分局局长\n1976.09，在职研究生" },
+  { id: "org_gov", label: "贡井区政府", shape: "box", size: 8, color: { background: "#555", border: "#555" }, font: { color: "#999", size: 10 } },
+  { id: "org_party", label: "贡井区委", shape: "box", size: 8, color: { background: "#555", border: "#555" }, font: { color: "#999", size: 10 } },
+  { id: "org_police", label: "贡井公安分局", shape: "box", size: 8, color: { background: "#555", border: "#555" }, font: { color: "#999", size: 10 } },
+]);
+const edges = new vis.DataSet([
+  // 区政府→各区领导
+  { from: "fangmao", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "liuyuanchu", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "limin", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "lifengbo", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "liupengcheng", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "zhongxin", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "dantangjie", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  { from: "chenying", to: "org_gov", color: "#666", width: 1, title: "任职" },
+  // 区委关系
+  { from: "liuyuanchu", to: "org_party", color: "#C9A94E", width: 1, dashes: true, title: "区委常委" },
+  { from: "limin", to: "org_party", color: "#C9A94E", width: 1, dashes: true, title: "区委常委" },
+  { from: "lifengbo", to: "org_party", color: "#C9A94E", width: 1, dashes: true, title: "区委常委" },
+  // 公安
+  { from: "chenying", to: "org_police", color: "#666", width: 1, title: "任职" },
+  // 上下级关系
+  { from: "fangmao", to: "liuyuanchu", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级：区长-常务副区长" },
+  { from: "fangmao", to: "limin", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级" },
+  { from: "fangmao", to: "lifengbo", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级" },
+  { from: "fangmao", to: "liupengcheng", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级" },
+  { from: "fangmao", to: "zhongxin", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级" },
+  { from: "fangmao", to: "dantangjie", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级" },
+  { from: "fangmao", to: "chenying", color: "#ff6b6b", width: 2, dashes: [5,5], title: "上下级" },
+  // 同僚关系
+  { from: "liuyuanchu", to: "limin", color: "#4a90d9", width: 1, title: "同僚-区委常委" },
+  { from: "liuyuanchu", to: "lifengbo", color: "#4a90d9", width: 1, title: "同僚-区委常委" },
+  { from: "limin", to: "lifengbo", color: "#4a90d9", width: 1, title: "同僚-区委常委" },
+]);
+const container = document.getElementById("network");
+const options = {
+  physics: { barnesHut: { gravitationalConstant: -8000, springLength: 120, springConstant: 0.01 } },
+  edges: {
+    smooth: { type: "curvedCW", roundness: 0.2 }
+  },
+  interaction: { hover: true, tooltipDelay: 100 },
+  manipulation: false,
+};
+new vis.Network(container, { nodes, edges }, options);
+</script>
+</body>
+</html>
