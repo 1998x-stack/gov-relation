@@ -179,3 +179,63 @@ All gaps stem from **complete web access unavailability** during this investigat
    - Search "邛崃市 市委常委 名单 2024"
    - Search "惠朝旭 邛崃"
 3. Check Chengdu HR/notifications page for 任前公示 (appointment notices)
+
+---
+
+# Open Gaps Registry — 简阳市（sichuan_简阳市）
+> Last updated: 2026-07-26
+
+## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 待查 | 简阳市委书记 | **全部信息**：姓名、出生、籍贯、教育、入党、完整履历 | 2026-07-26 | web access completely blocked — no data obtainable |
+| 待查 | 简阳市市长 | **全部信息**：姓名、出生、籍贯、教育、入党、完整履历 | 2026-07-26 | web access completely blocked — no data obtainable |
+
+## ⭐⭐⭐⭐⭐ Critical (additional unknown roles)
+
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 简阳市委领导班子 | 全体市委班子成员姓名和分工（副书记、纪委、组织、宣传、政法、统战） | 2026-07-26 | 所有职位均未知 |
+| 简阳市副市长 | 至少4-6位副市长姓名和分工 | 2026-07-26 | 官方ldzc页面不可达 |
+| 简阳市人大主任 | 姓名、履历 | 2026-07-26 | — |
+| 简阳市政协主席 | 姓名、履历 | 2026-07-26 | — |
+| 前任市委书记 | 姓名、去向 | 2026-07-26 | 何人何时离任完全未知 |
+| 前任市长 | 姓名、去向 | 2026-07-26 | 何人何时离任完全未知 |
+
+## ⭐⭐⭐ Medium (would enrich the network picture)
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 简阳市与周边区县（龙泉驿、金堂、资阳）的干部交流记录 | 2026-07-26 | 2016年划归成都代管，跨县调动模式待查 |
+| 简阳托管给成都高新区的12乡镇的干部网络 | 2026-07-26 | 石板凳、三岔等街道由高新区管理 |
+| 简阳市政府网站领导之窗页面 | 2026-07-26 | scjy.gov.cn 不可达 |
+| 简阳历任书记/市长更替时间线 | 2026-07-26 | 2016年改隶成都后的历次人事变动 |
+
+## ⭐⭐ Low（nice to have）
+
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 各乡镇街道主要领导 | 2026-07-26 | 37个镇/街道，每个的主官 |
+| 领导班子成员具体分工 | 2026-07-26 | — |
+| 简阳市经济社会发展与主政者关联 | 2026-07-26 | GDP数据及与周边比较 |
+
+## Root Cause of Gaps
+
+All gaps stem from **complete web access unavailability** during this investigation:
+- All Chinese government sites (scjy.gov.cn, chengdu.gov.cn) — WAF/timeout
+- Baidu Baike — anti-scraping CAPTCHA
+- All search engines (Google, Bing, DuckDuckGo) — connection timeout
+- All Chinese news sites (thepaper.cn, sina, sohu) — connection timeout
+- Jina Reader, Wayback Machine — timeout/down
+
+## Recommended Recovery
+
+1. Run in an environment with verified Chinese IP and Baidu/Google access
+2. Target URLs to prioritize:
+   - `https://www.scjy.gov.cn/zwgk/ldzc/` — government leadership page
+   - `https://baike.baidu.com/item/简阳市` — Baidu Baike
+   - Search "简阳市委书记 任前公示 成都市委组织部"
+   - Search "简阳市 市委常委 名单 2025"
+   - Search "简阳市市长 任命 成都市"
+   - Search "简阳市 人大 会议 市长 选举"
