@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西充县领导班子工作关系网络</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0a;
+  color: #e8dcc8;
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+  line-height: 1.7;
+}
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 60px 0 40px;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 48px;
+}
+.header h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #f0e6d3;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+.header .date {
+  color: #8a7e6a;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+}
+.header .seal {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #c43a31;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c43a31;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  transform: rotate(-5deg);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.stat-card {
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  padding: 20px;
+  text-align: center;
+}
+.stat-card .num {
+  font-size: 2em;
+  font-weight: 700;
+  color: #c9a94e;
+}
+.stat-card .label {
+  color: #8a7e6a;
+  font-size: 0.8em;
+  margin-top: 4px;
+  letter-spacing: 2px;
+}
+
+/* Person cards */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.person-card {
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.person-card:hover { border-color: #c43a31; }
+.person-card .role { color: #c43a31; font-size: 0.75em; letter-spacing: 2px; margin-bottom: 4px; }
+.person-card .name { font-size: 1.2em; color: #f0e6d3; font-weight: 700; margin-bottom: 8px; }
+.person-card .meta { color: #8a7e6a; font-size: 0.8em; line-height: 1.5; }
+.person-card .badge {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 4px;
+  font-size: 0.7em;
+  border: 1px solid;
+  letter-spacing: 1px;
+}
+.badge-secretary { border-color: #c43a31; color: #c43a31; }
+.badge-mayor { border-color: #4a7fb5; color: #4a7fb5; }
+.badge-deputy { border-color: #c9a94e; color: #c9a94e; }
+.badge-other { border-color: #6a6a6a; color: #8a8a8a; }
+
+/* Timeline */
+.timeline { margin-bottom: 48px; }
+.timeline h2 { color: #c43a31; font-size: 1em; letter-spacing: 3px; margin-bottom: 24px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
+.timeline-item {
+  padding: 16px 0 16px 24px;
+  border-left: 1px solid #3a3a3a;
+  position: relative;
+  margin-left: 12px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 22px;
+  width: 9px;
+  height: 9px;
+  background: #0a0a0a;
+  border: 1px solid #c9a94e;
+  border-radius: 50%;
+}
+.timeline-item .date { color: #c9a94e; font-size: 0.8em; }
+.timeline-item .content { color: #c8bca8; font-size: 0.9em; margin-top: 4px; }
+
+/* Relationship matrix */
+.matrix { margin-bottom: 48px; }
+.matrix h2 { color: #c43a31; font-size: 1em; letter-spacing: 3px; margin-bottom: 24px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
+.matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+}
+.matrix th, .matrix td {
+  border: 1px solid #2a2a2a;
+  padding: 10px 8px;
+  text-align: center;
+}
+.matrix th {
+  background: #151515;
+  color: #c9a94e;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.matrix td { color: #b0a48c; }
+.matrix .confirmed { color: #c9a94e; font-weight: 700; }
+.matrix .missing { color: #4a4a4a; }
+.matrix .source-link { color: #5a7a9a; text-decoration: none; font-size: 0.8em; }
+
+/* Insights */
+.insights { margin-bottom: 48px; }
+.insights h2 { color: #c43a31; font-size: 1em; letter-spacing: 3px; margin-bottom: 24px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
+.insight-item {
+  padding: 20px;
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 12px;
+}
+.insight-item .priority { 
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 2px 8px;
+  background: #1a1a1a;
+  border: 1px solid;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.priority-high { border-color: #c43a31; color: #c43a31; }
+.priority-med { border-color: #c9a94e; color: #c9a94e; }
+
+/* Footer */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid #2a2a2a;
+  font-size: 0.75em;
+  color: #5a5a5a;
+  text-align: center;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>西充县领导班子工作关系网络</h1>
+    <div class="date">四川省南充市 · 调查简报 · 2026年7月26日</div>
+    <div class="seal">绝密<br>INTEL</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="num">22</div><div class="label">人员</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">核心领导</div></div>
+    <div class="stat-card"><div class="num">13</div><div class="label">县委常委</div></div>
+    <div class="stat-card"><div class="num">16</div><div class="label">信息缺口</div></div>
+  </div>
+
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="badge badge-secretary">县委书记</div>
+      <div class="name">何鹏</div>
+      <div class="meta">
+        男 · 汉族<br>
+        现任西充县委书记<br>
+        到任：2024年<br>
+        <span style="color:#c43a31;">⚠ 履历待查</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-mayor">县长</div>
+      <div class="name">张洪波</div>
+      <div class="meta">
+        男 · 汉族<br>
+        现任西充县委副书记、县长<br>
+        到任：2022年<br>
+        <span style="color:#c43a31;">⚠ 履历待查</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-deputy">专职副书记</div>
+      <div class="name">张洪</div>
+      <div class="meta">
+        男 · 汉族<br>
+        现任西充县委副书记<br>
+        到任：2025年8月<br>
+        <span style="color:#c43a31;">⚠ 履历待查</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">龚诚</div>
+      <div class="meta">县委常委、副县长</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">屠继东</div>
+      <div class="meta">县委常委、政法委书记</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">涂开美</div>
+      <div class="meta">县委常委、统战部部长</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">姚艳</div>
+      <div class="meta">县委常委、总工会主席</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">彭永金</div>
+      <div class="meta">县委常委、人武部部长</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">赵全昱</div>
+      <div class="meta">县委常委、组织部部长</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">黄永强</div>
+      <div class="meta">县委常委、宣传部部长</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">县委常委</div>
+      <div class="name">冯敏</div>
+      <div class="meta">县委常委、纪委书记</div>
+    </div>
+    <div class="person-card">
+      <div class="badge badge-other">挂职</div>
+      <div class="name">苏茂科</div>
+      <div class="meta">县委常委、副县长（挂职）</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <h2>人事变动时间线</h2>
+    <div class="timeline-item">
+      <div class="date">约2022年9月</div>
+      <div class="content">张洪波调任西充县委副书记、县长</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">约2024年10月</div>
+      <div class="content">何鹏接任西充县委书记（接替张光全）</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025年8月</div>
+      <div class="content">张洪任西充县委专职副书记</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025年9月</div>
+      <div class="content">赵全昱任组织部部长；冯敏任纪委书记；苏茂科挂职副县长</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025年12月</div>
+      <div class="content">李灵任副县长</div>
+    </div>
+  </div>
+
+  <div class="matrix">
+    <h2>核心关系矩阵</h2>
+    <table>
+      <tr>
+        <th></th><th>何鹏</th><th>张洪波</th><th>张洪</th>
+      </tr>
+      <tr>
+        <th>何鹏</th>
+        <td>—</td>
+        <td class="confirmed">书记-县长<br>合作关系✓</td>
+        <td class="confirmed">书记-副书记<br>合作关系✓</td>
+      </tr>
+      <tr>
+        <th>张洪波</th>
+        <td class="confirmed">✓ 多方联合调研<br>2026年多次同框</td>
+        <td>—</td>
+        <td class="confirmed">均为何鹏重要<br>搭档</td>
+      </tr>
+      <tr>
+        <th>张洪</th>
+        <td class="confirmed">✓ 协助党务</td>
+        <td class="missing">共同出席<br>会议</td>
+        <td>—</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="insights">
+    <h2>关键洞察</h2>
+    <div class="insight-item">
+      <div class="priority priority-high">P1 — 极重要</div>
+      <strong>何鹏、张洪波、张洪三人履历完全缺失</strong><br>
+      三位核心领导的出生年月、籍贯、学历、入党时间、此前任职等信息在官方渠道（西充县政府官网）完全未公开，仅显示"男，汉族"及现任职务。这在本项目所有调查中属于罕见的极端信息真空案例。
+    </div>
+    <div class="insight-item">
+      <div class="priority priority-high">P1 · 极重要</div>
+      <strong>前任县委书记去向待查</strong><br>
+      推测前任为张光全，但县区政府网站对前任信息无任何公开说明。张光的去向是理解何鹏上位背景的关键线索。
+    </div>
+    <div class="insight-item">
+      <div class="priority priority-med">P2 · 重要</div>
+      <strong>2024-2025年常委班子密集更新</strong><br>
+      2024年何鹏上任后，2025年9月集中调整了组织部、纪委、以及一位挂职副县长和专职副书记的新任。大量新面孔可能影响内部权力格局。
+    </div>
+  </div>
+
+  <div class="footer">
+    本简报基于公开渠道信息整理，信息缺口已标注。数据来源：西充县人民政府官方网站。<br>
+    西充县 · 四川省南充市 · 2026年7月
+  </div>
+</div>
+</body>
+</html>
