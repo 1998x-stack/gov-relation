@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "四川省",
+    "city": "广元市",
+    "region": "旺苍县",
+    "job": "旺苍县人民政府县长",
+    "task_id": "sichuan_旺苍县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "wangcang_daiquisi_xianzhang",
+    "name": "待确认",
+    "aliases": [],
+    "gender": "",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "旺苍县人民政府县长",
+    "current_org": "旺苍县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": false,
+    "source_ids": []
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "旺苍县人民政府",
+      "title": "县长",
+      "level": "县处级正职",
+      "location": "四川省广元市旺苍县",
+      "system": "government",
+      "rank": "正县",
+      "is_key_promotion": false,
+      "notes": "唐文辉约2019-2023任县委书记（此前曾任县长），之后继任县长未确认。因 web 访问受限，现任县长姓名、履历未知。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "career_gaps": [
+    {
+      "start": "unknown",
+      "end": "present",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到当前县长信息",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 2,
+      "name": "旺苍县人民政府",
+      "type": "政府",
+      "role": "县长"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "唐涛（或唐文辉）",
+      "person_id": "wangcai_tangwenhui",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "唐涛/唐文辉约2019离任县长（升县委书记），继任县长待确认",
+      "overlap_org": "旺苍县人民政府",
+      "overlap_period": "约2019",
+      "direction": "other_to_person",
+      "confidence": "plausible"
+    },
+    {
+      "person": "待确认（县委书记）",
+      "person_id": "wangcang_daiquisi_shuji",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "党政搭档关系——县委书记与县长为县级党政双正职",
+      "overlap_org": "旺苍县",
+      "overlap_period": "2023-至今",
+      "direction": "undirected",
+      "confidence": "unverified"
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "未知",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "Web访问受限，无法获取现任县长的风险信号。",
+      "date": "2026-07-26",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "现任旺苍县县长姓名、出生、籍贯、教育、履历全部未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "当前旺苍县县长姓名",
+      "why_it_matters": "核心目标人物，无姓名无法建档",
+      "suggested_queries": ["旺苍县 县长 2024 2025", "旺苍县人民政府 县长"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "critical",
+      "question": "当前旺苍县县长的前一个岗位",
+      "why_it_matters": "确定该县长是否为广元市下派干部还是从其他县调来",
+      "suggested_queries": ["旺苍县 县长 任前公示"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "唐文辉（原县长）的去向",
+      "why_it_matters": "明确县长更替路径",
+      "suggested_queries": ["唐文辉 广元 任职"],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}
