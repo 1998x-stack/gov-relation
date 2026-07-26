@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "山西省",
+    "city": "太原市",
+    "region": "古交市",
+    "job": "市委书记",
+    "task_id": "shanxi_古交市",
+    "time_focus": "2025-2026"
+  },
+  "identity": {
+    "person_id": "gujiao_li_weiyan",
+    "name": "李卫雁",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李卫雁",
+      "name_birthplace": "李卫雁",
+      "official_profile_url": "http://www.gujiao.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "市委书记",
+    "current_org": "中共古交市委",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "至今",
+      "org": "中共古交市委",
+      "title": "市委书记",
+      "level": "正处级",
+      "location": "山西省太原市古交市",
+      "system": "party",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "现任古交市委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "古交市人民政府",
+      "title": "市长",
+      "level": "正处级",
+      "location": "山西省太原市古交市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "曾任古交市市长，后接任市委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到出任市长前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共古交市委",
+      "role": "市委书记"
+    },
+    {
+      "name": "古交市人民政府",
+      "role": "市长（前任）"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "张麒",
+      "person_id": "gujiao_zhang_qi",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "市委书记与市长党政一把手搭档",
+      "overlap_org": "古交市",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "邢武晓",
+      "person_id": "gujiao_xing_wuxiao",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "市委书记与市委副书记",
+      "overlap_org": "中共古交市委",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "刘锦春",
+      "person_id": "jiancaoping_刘锦春",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "刘锦春调任尖草坪区委书记后，李卫雁接任古交市长",
+      "overlap_org": "古交市人民政府",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历信息不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-26，公开信息中未发现与李卫雁相关的纪律处分、审计问题或负面报道",
+      "date": "2026-07-26",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "古交市领导之窗",
+      "url": "http://www.gujiao.gov.cn/",
+      "publisher": "古交市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-26",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方网站确认李卫雁为现任古交市委书记"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李卫雁出任市长前的完整履历（出生、教育、早期任职等）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李卫雁出生于哪一年？籍贯何处？",
+      "why_it_matters": "核心人物身份信息缺失，影响图谱完整性",
+      "suggested_queries": [
+        "李卫雁 简历 古交",
+        "李卫雁 任前公示 古交市委书记"
+      ],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "李卫雁出任市长前的任职履历",
+      "why_it_matters": "无法评估其晋升路径和核心系统经验",
+      "suggested_queries": [
+        "李卫雁 此前 担任",
+        "李卫雁 太原 任职经历"
+      ],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "李卫雁何时由市长转任市委书记？",
+      "why_it_matters": "需要明确人事变动的时间节点",
+      "suggested_queries": [
+        "古交市 李卫雁 任市委书记",
+        "李卫雁 任免 古交"
+      ],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}

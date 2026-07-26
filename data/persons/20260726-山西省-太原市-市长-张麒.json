@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "山西省",
+    "city": "太原市",
+    "region": "古交市",
+    "job": "市长",
+    "task_id": "shanxi_古交市",
+    "time_focus": "2025-2026"
+  },
+  "identity": {
+    "person_id": "gujiao_zhang_qi",
+    "name": "张麒",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张麒",
+      "name_birthplace": "张麒",
+      "official_profile_url": "http://www.gujiao.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "市委副书记、市长",
+    "current_org": "古交市人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "至今",
+      "org": "古交市人民政府",
+      "title": "市委副书记、市长",
+      "level": "正处级",
+      "location": "山西省太原市古交市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": true,
+      "notes": "现任古交市委副书记、市长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "古交市人民政府",
+      "title": "市委常委、副市长",
+      "level": "副处级",
+      "location": "山西省太原市古交市",
+      "system": "government",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "曾任古交市委常委、副市长",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到出任古交市委常委、副市长前的完整履历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "古交市人民政府",
+      "role": "市长"
+    },
+    {
+      "name": "中共古交市委",
+      "role": "副书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "李卫雁",
+      "person_id": "gujiao_li_weiyan",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "市长与市委书记党政一把手搭档",
+      "overlap_org": "古交市",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "杜国名",
+      "person_id": "gujiao_du_guoming",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "市长与常务副市长工作搭档",
+      "overlap_org": "古交市人民政府",
+      "overlap_period": "至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "履历信息不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-26，公开信息中未发现与张麒相关的纪律处分、审计问题或负面报道",
+      "date": "2026-07-26",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "古交市领导之窗",
+      "url": "http://www.gujiao.gov.cn/",
+      "publisher": "古交市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-26",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官方网站确认张麒为现任古交市委副书记、市长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "张麒出任古交市委常委、副市长前的完整履历（出生、教育、早期任职等）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "张麒出生于哪一年？籍贯何处？",
+      "why_it_matters": "核心人物身份信息缺失，影响图谱完整性",
+      "suggested_queries": [
+        "张麒 简历 古交",
+        "张麒 太原 古交"
+      ],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "high",
+      "question": "张麒出任古交市委常委、副市长前的完整任职履历",
+      "why_it_matters": "无法评估其晋升路径和核心系统经验",
+      "suggested_queries": [
+        "张麒 此前 担任",
+        "张麒 任前公示 古交市长"
+      ],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "medium",
+      "question": "张麒何时担任古交市长？",
+      "why_it_matters": "需要明确其上任时间节点",
+      "suggested_queries": [
+        "张麒 任古交市长",
+        "古交市 人大 任命 张麒"
+      ],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}
