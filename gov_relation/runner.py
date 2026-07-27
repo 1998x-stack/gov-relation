@@ -105,11 +105,41 @@ def run_build(
 
     # ── Central registry ────────────────────────────────────────────
     if central is not None:
+        # Build id → hash maps so positions/relationships can reference correctly
+        person_id_to_hash: dict[str, str] = {}
+        org_id_to_hash: dict[str, str] = {}
         for p in persons:
-            central.merge_person(p)
+            h = central.merge_person(p)
+            person_id_to_hash[str(p.get("id", ""))] = h
         for o in organizations:
-            central.merge_organization(o)
+            h = central.merge_organization(o)
+            org_id_to_hash[str(o.get("id", ""))] = h
         for pos in positions:
-            central.insert_position(pos)
+            p_hash = person_id_to_hash.get(str(pos.get("person_id", "")))
+            o_hash = org_id_to_hash.get(str(pos.get("org_id", "")))
+            if p_hash and o_hash:
+                central.insert_position({
+                    "person_hash": p_hash,
+                    "org_hash": o_hash,
+                    "title": pos.get("title", ""),
+                    "start_date": pos.get("start_date", ""),
+                    "end_date": pos.get("end_date", ""),
+                    "rank": pos.get("rank", ""),
+                    "note": pos.get("note", ""),
+                    "province": central.province,
+                    "source": "",
+                })
         for rel in relationships:
-            central.insert_relationship(rel)
+            pa_hash = person_id_to_hash.get(str(rel.get("person_a", "")))
+            pb_hash = person_id_to_hash.get(str(rel.get("person_b", "")))
+            if pa_hash and pb_hash:
+                central.insert_relationship({
+                    "person_a_hash": pa_hash,
+                    "person_b_hash": pb_hash,
+                    "type": rel.get("type", ""),
+                    "context": rel.get("context", ""),
+                    "overlap_org_hash": "",
+                    "overlap_period": rel.get("overlap_period", ""),
+                    "province": central.province,
+                    "source": "",
+                })

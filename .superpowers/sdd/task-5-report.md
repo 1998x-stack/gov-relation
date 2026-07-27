@@ -17,4 +17,4 @@ GREEN: 3/3 passed (TestDetectProvince::test_known_slugs, test_unknown_slug_raise
 ```
 
 ## Commit SHA
-TBD — pending commit
+`72a887e7`

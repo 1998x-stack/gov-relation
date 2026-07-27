@@ -17,13 +17,13 @@ import hashlib
 import unicodedata
 
 
+import re
+
 def normalize(s: str | None) -> str:
-    """Normalize a string for hashing: NFKC, collapse spaces, strip."""
+    """Normalize for hashing: NFKC, strip all whitespace."""
     if s is None:
         return ""
     s = unicodedata.normalize("NFKC", s)
-    # collapse multiple whitespace chars into one
-    import re
     s = re.sub(r'\s+', '', s)
     return s
 

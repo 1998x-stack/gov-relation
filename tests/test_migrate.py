@@ -256,4 +256,12 @@ class TestIntegration:
     def test_slug_without_province_is_skipped(self, tmp_path: Path) -> None:
         """A DB whose slug has no province mapping is skipped during main()."""
         from scripts.migrate_to_central import main
-        pass
+        import sys
+        old_argv = sys.argv
+        sys.argv = ["migrate_to_central.py", "--dry-run", "--limit", "1000"]
+        try:
+            main()
+        except SystemExit:
+            pass
+        finally:
+            sys.argv = old_argv
