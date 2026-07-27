@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-25",
+  "investigation_scope": {
+    "province": "陕西省",
+    "city": "延安市",
+    "region": "宜川县",
+    "job": "县长",
+    "task_id": "shaanxi_宜川县",
+    "time_focus": "截至2026年7月"
+  },
+  "identity": {
+    "person_id": "yichuan_li_gang",
+    "name": "李岗",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1977-04",
+    "birthplace": "陕西延长",
+    "native_place": "陕西延长",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "哲学硕士",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "2000-06",
+    "work_start": "1997-07",
+    "dedupe_keys": {
+      "name_birth": "李岗_1977-04",
+      "name_birthplace": "李岗_陕西延长",
+      "official_profile_url": "https://www.ycx.gov.cn/zfxxgk/fdzdgknr/ldzc/xc/lg/1.html"
+    }
+  },
+  "current_status": {
+    "current_post": "宜川县委副书记、县长",
+    "current_org": "宜川县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-02-11",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "中共延安市委组织部",
+      "title": "副科长",
+      "level": "副科级",
+      "location": "延安市",
+      "system": "party",
+      "rank": "副科级",
+      "is_key_promotion": false,
+      "notes": "具体起止日期不详",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "",
+      "org": "中共延安市委组织部",
+      "title": "科长",
+      "level": "正科级",
+      "location": "延安市",
+      "system": "party",
+      "rank": "正科级",
+      "is_key_promotion": false,
+      "notes": "具体起止日期不详",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "宜川县人民政府",
+      "title": "副县长",
+      "level": "副处级",
+      "location": "宜川县",
+      "system": "government",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "具体任职时间不详",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "中共宜川县委员会",
+      "title": "县委常委、组织部部长",
+      "level": "副处级",
+      "location": "宜川县",
+      "system": "party",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "约2025底",
+      "org": "中共宜川县委员会",
+      "title": "县委副书记",
+      "level": "副处级",
+      "location": "宜川县",
+      "system": "party",
+      "rank": "副处级",
+      "is_key_promotion": true,
+      "notes": "从专职副书记或兼任副书记过渡",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "约2025底/2026初",
+      "end": "至今",
+      "org": "宜川县人民政府",
+      "title": "县委副书记、县长（县政府党组书记）",
+      "level": "正处级",
+      "location": "宜川县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替薛延飞任县长。2026年2月11日官网简历更新确认",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {"name": "中共延安市委组织部", "role": "副科长→科长", "period": "不详"},
+    {"name": "宜川县人民政府", "role": "副县长→县长", "period": "2026至今"},
+    {"name": "中共宜川县委员会", "role": "常委、组织部部长→副书记→县长兼副书记", "period": ""}
+  ],
+  "relationships": [
+    {
+      "person": "高勇",
+      "person_id": "yichuan_gao_yong",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "与县委书记高勇的党政正职搭档关系",
+      "overlap_org": "宜川县",
+      "overlap_period": "2026至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "薛延飞",
+      "person_id": "yichuan_xue_yanfei",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "李岗接替薛延飞任宜川县长",
+      "overlap_org": "宜川县人民政府",
+      "overlap_period": "约2025底",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "魏建文",
+      "person_id": "yichuan_wei_jianwen",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "同为延安市委组织部系统成长，李岗任县长后魏建文为常务副县长",
+      "overlap_org": "宜川县人民政府/中共延安市委组织部",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["组织人事"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party_organization", "government"],
+    "geographic_pattern": ["延安市", "宜川县"],
+    "promotion_velocity": {
+      "summary": "从县委组织部部长→县委副书记→县长的晋升在2025-2026年集中完成，提拔速度较快",
+      "notable_fast_promotions": [
+        "2025-2026年：从县委副书记提拔为县长"
+      ]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现李岗的纪律处分、审计问题或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "李岗简历 — 宜川县人民政府",
+      "url": "https://www.ycx.gov.cn/zfxxgk/fdzdgknr/ldzc/xc/lg/1.html",
+      "publisher": "宜川县人民政府",
+      "published_at": "2026-02-11",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "县长官方简历，含出生年月、籍贯、入党时间、参加工作时间和职业路径概述"
+    },
+    {
+      "id": "S002",
+      "title": "宜川县第十九届人民代表大会第六次会议胜利闭幕",
+      "url": "https://www.ycx.gov.cn/xwzx/bdyw/2039149857819615233.html",
+      "publisher": "宜川县人民政府",
+      "published_at": "2026-04-01",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认李岗为县长"
+    },
+    {
+      "id": "S003",
+      "title": "魏建文简历",
+      "url": "https://www.ycx.gov.cn/zfxxgk/fdzdgknr/ldzc/cwfxc/wjw/1.html",
+      "publisher": "宜川县人民政府",
+      "published_at": "2026-04-08",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认魏建文从组织部长调任常务副县长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "早期在延安市委组织部以及副县长、组织部长职位的具体起止日期缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "李岗在延安市委组织部任副科长、科长的具体起止时间？",
+      "why_it_matters": "决定其在组织系统的经历长度和可能的同龄人关系",
+      "suggested_queries": ["李岗 市委组织部 任职", "李岗 延安 组织部"],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "high",
+      "question": "李岗调任宜川的具体时间？",
+      "why_it_matters": "精确化职业时间线",
+      "suggested_queries": ["李岗 宜川 常委", "李岗 组织部长 任命"],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "medium",
+      "question": "李岗的学历详情（在职研究生院校、专业？）",
+      "why_it_matters": "院校关系可能构成校友网络",
+      "suggested_queries": ["李岗 哲学硕士 毕业院校"],
+      "last_attempted": "2026-07-25"
+    }
+  ]
+}

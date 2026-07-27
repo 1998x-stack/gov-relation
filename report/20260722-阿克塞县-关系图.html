@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿克塞县领导班子 · vis.js 关系图</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d0d0d; color: #e8e0d0; font-family: 'Inter', sans-serif; }
+#mynetwork { width: 100%; height: calc(100vh - 120px); border-top: 1px solid #2a2a2a; }
+.header {
+  padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid #2a2a2a;
+}
+.header h1 { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 700; }
+.header .sub { font-size: 0.7rem; color: #8a8478; margin-top: 0.2rem; }
+.header .links { display: flex; gap: 1rem; }
+.header .links a { color: #C9A94E; font-size: 0.75rem; text-decoration: none; }
+.header .links a:hover { text-decoration: underline; }
+.legend {
+  display: flex; gap: 1.5rem; padding: 0.5rem 1.5rem;
+  font-size: 0.7rem; color: #8a8478;
+  border-bottom: 1px solid #2a2a2a;
+  flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 0.4rem; }
+.legend-color { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #2a2a2a; }
+.legend-line { width: 20px; height: 2px; border-radius: 0; }
+.legend-line.thick { height: 3px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>阿克塞哈萨克族自治县领导班子工作关系网络 · 酒泉市 · 甘肃省</h1>
+    <div class="sub">动态关系图 · 点击节点查看详情 · 2026-07-22</div>
+  </div>
+  <div class="links">
+    <a href="20260722-阿克塞县-领导班子工作关系网络调查报告.md">📄 调查报告</a>
+    <a href="20260722-阿克塞县-领导班子工作关系网络.html">📊 情报简报</a>
+  </div>
+</div>
+<div class="legend">
+  <span class="legend-item"><span class="legend-color" style="background:#dc3232;"></span> 县委书记</span>
+  <span class="legend-item"><span class="legend-color" style="background:#3264c8;"></span> 政府正职</span>
+  <span class="legend-item"><span class="legend-color" style="background:#329632;"></span> 副县长</span>
+  <span class="legend-item"><span class="legend-color" style="background:#8e44ad;"></span> 人大/政协</span>
+  <span class="legend-item"><span class="legend-color" style="background:#969696;"></span> 其他领导</span>
+  <span class="legend-item"><span class="legend-color" style="background:#d4897a;"></span> 前任</span>
+  <span class="legend-item"><span class="legend-color" style="background:#666; border-radius:2px;"></span> 组织</span>
+  <span class="legend-item"><span class="legend-line" style="background:#C9A94E;"></span> 党政搭档</span>
+  <span class="legend-item"><span class="legend-line" style="background:#888;"></span> 上下级</span>
+</div>
+<div id="mynetwork"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js"></script>
+<script>
+const nodes = new vis.DataSet([
+  { id: 1,  label: '张桐',       title: '县委书记', group: 'secretary', size: 25 },
+  { id: 2,  label: '库美斯剑',    title: '县长', group: 'gov_head', size: 22 },
+  { id: 3,  label: '杨国平',     title: '副县长', group: 'deputy', size: 14 },
+  { id: 4,  label: '张国',       title: '副县长', group: 'deputy', size: 14 },
+  { id: 5,  label: '尚帅',       title: '副县长', group: 'deputy', size: 14 },
+  { id: 6,  label: '李春华',     title: '副县长', group: 'deputy', size: 14 },
+  { id: 7,  label: '巴依哈孜',   title: '副县长', group: 'deputy', size: 14 },
+  { id: 8,  label: '钟兴鹏',     title: '副县长', group: 'deputy', size: 14 },
+  { id: 9,  label: '卢保健',     title: '副县长', group: 'deputy', size: 14 },
+  { id: 10, label: '刘蓉',       title: '副县长（女）', group: 'deputy', size: 14 },
+  { id: 11, label: '张鹏',       title: '县领导', group: 'other', size: 12 },
+  { id: 12, label: '张健',       title: '县领导', group: 'other', size: 12 },
+  { id: 13, label: '武海龙',     title: '县领导', group: 'other', size: 12 },
+  { id: 14, label: '李珊珊',     title: '县领导（女）', group: 'other', size: 12 },
+  { id: 15, label: '塞力古',     title: '人大副主任', group: 'congress', size: 12 },
+  { id: 16, label: '包远泠',     title: '政协副主席', group: 'congress', size: 12 },
+  { id: 17, label: '陶涛',       title: '前任县委书记', group: 'former', size: 16 },
+  // Organizations
+  { id: 1001, label: '阿克塞县委',     title: '党委', group: 'org', size: 8, shape: 'box' },
+  { id: 1002, label: '县政府',         title: '政府', group: 'org', size: 8, shape: 'box' },
+  { id: 1003, label: '县人大',         title: '人大', group: 'org', size: 8, shape: 'box' },
+  { id: 1004, label: '县政协',         title: '政协', group: 'org', size: 8, shape: 'box' },
+]);
+
+const edges = new vis.DataSet([
+  // Person→Organization
+  { from: 1, to: 1001, label: '书记', arrows: 'to', color: '#888', width: 1 },
+  { from: 2, to: 1002, label: '县长', arrows: 'to', color: '#888', width: 1 },
+  { from: 2, to: 1001, label: '副书记', arrows: 'to', color: '#888', width: 1 },
+  { from: 3, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 4, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 5, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 6, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 7, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 8, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 9, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 10, to: 1002, label: '副县长', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 11, to: 1002, label: '县领导', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 12, to: 1002, label: '县领导', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 13, to: 1002, label: '县领导', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 14, to: 1002, label: '县领导', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 15, to: 1003, label: '副主任', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 16, to: 1004, label: '副主席', arrows: 'to', color: '#666', width: 0.8 },
+  { from: 17, to: 1001, label: '前书记', arrows: 'to', color: '#666', width: 0.8 },
+  // Person→Person
+  { from: 1, to: 2,     label: '党政搭档', color: { color: '#C9A94E' }, width: 3, dashes: false },
+  { from: 2, to: 3,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 4,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 5,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 6,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 7,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 8,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 9,     label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 2, to: 10,    label: '上下级', color: { color: '#888' }, width: 1.5 },
+  { from: 15, to: 2,    label: '列席监督', color: { color: '#8e44ad' }, width: 1, dashes: true },
+  { from: 16, to: 2,    label: '列席监督', color: { color: '#8e44ad' }, width: 1, dashes: true },
+  { from: 17, to: 1,    label: '前后任', color: { color: '#d4897a' }, width: 2, dashes: true },
+]);
+
+const groups = {
+  secretary: { color: { background: '#dc3232', border: '#ff6666' }, shape: 'dot' },
+  gov_head:  { color: { background: '#3264c8', border: '#6699ff' }, shape: 'dot' },
+  deputy:    { color: { background: '#329632', border: '#66cc66' }, shape: 'dot' },
+  congress:  { color: { background: '#8e44ad', border: '#bb77dd' }, shape: 'dot' },
+  other:     { color: { background: '#969696', border: '#cccccc' }, shape: 'dot' },
+  former:    { color: { background: '#d4897a', border: '#eebb99' }, shape: 'dot' },
+  org:       { color: { background: '#555555', border: '#888888' }, shape: 'box', font: { color: '#aaa', size: 10 } },
+};
+
+const options = {
+  physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -40, centralGravity: 0.005, springLength: 180, springConstant: 0.02 } },
+  groups: groups,
+  nodes: { font: { color: '#e8e0d0', size: 11 }, size: 14 },
+  edges: { font: { color: '#8a8478', size: 8, strokeWidth: 0 }, smooth: { type: 'continuous' } },
+  interaction: { hover: true, tooltipDelay: 200 },
+  layout: { improvedLayout: true }
+};
+
+const container = document.getElementById('mynetwork');
+const network = new vis.Network(container, { nodes, edges }, options);
+</script>
+</body>
+</html>

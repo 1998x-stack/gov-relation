@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沧州市新华区领导班子工作关系网络 — 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0f0f0f;
+  --surface-raised: #181818;
+  --surface-card: #1c1c1c;
+  --text-primary: #e8e0d8;
+  --text-secondary: #999084;
+  --text-muted: #665e54;
+  --accent: #E03C31;
+  --accent-dim: rgba(224, 60, 49, 0.15);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201, 169, 78, 0.12);
+  --border: rgba(232, 224, 216, 0.08);
+  --border-light: rgba(232, 224, 216, 0.04);
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --radius: 2px;
+  --gap-xs: 0.375rem;
+  --gap-sm: 0.75rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 3rem;
+  --gap-xl: 5rem;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--text-primary);
+  background: var(--surface);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Typography */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.02em; }
+h1 { font-size: 2rem; font-weight: 700; line-height: 1.3; }
+h2 { font-size: 1.35rem; margin-bottom: var(--gap-md); padding-bottom: var(--gap-sm); border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); }
+p { margin-bottom: var(--gap-sm); }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Layout */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--gap-md); }
+
+/* Header / Masthead */
+.masthead {
+  padding: var(--gap-xl) var(--gap-md) var(--gap-lg);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--gap-lg);
+  position: relative;
+}
+.masthead::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 60px; height: 3px;
+  background: var(--accent);
+}
+.masthead .container { max-width: 1280px; margin: 0 auto; }
+.masthead-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: var(--gap-sm);
+}
+.masthead h1 { margin-bottom: var(--gap-xs); }
+.masthead-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--gap-md);
+}
+.masthead-stats {
+  display: flex;
+  gap: var(--gap-lg);
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* Sections */
+.section { margin-bottom: var(--gap-xl); }
+.section .container { max-width: 1280px; margin: 0 auto; }
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-md);
+}
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+/* Person Grid */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+.person-card {
+  background: var(--surface-card);
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  transition: background 0.2s;
+}
+.person-card:hover { background: #222; }
+.person-card-role {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: var(--gap-xs);
+}
+.person-card-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: var(--gap-xs);
+}
+.person-card-meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.person-card-badges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: var(--gap-sm);
+}
+.badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.badge-gold { border-color: var(--gold); color: var(--gold); }
+.badge-accent { border-color: var(--accent); color: var(--accent); }
+
+/* Timeline */
+.timeline { position: relative; padding-left: var(--gap-lg); }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--gap-md);
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--gap-lg) + 3px);
+  top: 6px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--text-muted);
+}
+.timeline-item.key::before { border-color: var(--accent); background: var(--accent-dim); }
+.timeline-item.unknown::before { border-color: var(--text-muted); opacity: 0.4; }
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+.timeline-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+.timeline-org {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.timeline-confidence {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* Relationship Matrix */
+.matrix-wrapper { overflow-x: auto; }
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+.matrix-table th, .matrix-table td {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.matrix-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+.matrix-table td { color: var(--text-secondary); font-size: 0.7rem; }
+.matrix-table .rel-strong { color: var(--gold); }
+.matrix-table .rel-medium { color: var(--text-primary); }
+.matrix-table .rel-weak { color: var(--text-muted); }
+
+/* Key Insights */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+.insight-card {
+  background: var(--surface-card);
+  padding: var(--gap-md);
+  position: relative;
+  overflow: hidden;
+}
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 100%;
+}
+.insight-card.highlight::before { background: var(--accent); }
+.insight-card.info::before { background: var(--gold); }
+.insight-card.gap::before { background: var(--text-muted); }
+.insight-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  margin-bottom: var(--gap-xs);
+}
+.insight-card.highlight .insight-label { color: var(--accent); }
+.insight-card.info .insight-label { color: var(--gold); }
+.insight-card.gap .insight-label { color: var(--text-muted); }
+.insight-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--gap-xs);
+}
+.insight-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Exchange Flow - replaced by styled list for simplicity */
+.exchange-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.exchange-item {
+  background: var(--surface-card);
+  padding: var(--gap-md);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  font-size: 0.85rem;
+}
+.exchange-arrow {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 400;
+  margin: 0 var(--gap-xs);
+}
+.exchange-org {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: var(--gap-lg) 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.footer a { color: var(--text-muted); }
+.footer a:hover { color: var(--text-secondary); }
+
+/* Section dividers - solid thin rule */
+.section-divider { border: none; height: 1px; background: var(--border); margin: var(--gap-lg) 0; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+  .masthead { padding: var(--gap-lg) var(--gap-sm) var(--gap-md); }
+  .masthead-stats { gap: var(--gap-md); }
+  .person-grid { grid-template-columns: 1fr; }
+  .insights-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 var(--gap-sm); }
+}
+
+/* Print simulation hint */
+@media print {
+  body { background: #fff; color: #000; }
+  :root { --surface: #fff; --surface-card: #f8f8f8; --text-primary: #000; --text-secondary: #555; --border: #ddd; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <div class="masthead-eyebrow">河北省 · 沧州市 · 新华区</div>
+    <h1>领导班子工作关系网络</h1>
+    <p class="masthead-sub">情报简报 · 2026年7月24日 · 调查目标：区委书记 &amp; 区长</p>
+    <div class="masthead-stats">
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">人物节点</span></div>
+      <div class="stat"><span class="stat-num">21</span><span class="stat-label">机构节点</span></div>
+      <div class="stat"><span class="stat-num">23</span><span class="stat-label">任职边</span></div>
+      <div class="stat"><span class="stat-num">14</span><span class="stat-label">关系边</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- Person Cards -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2>关键人物</h2>
+    </div>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:var(--gap-md);">新华区党政领导班子成员及重要关联人物</p>
+    <div class="person-grid">
+
+      <!-- 金培元 -->
+      <div class="person-card">
+        <div class="person-card-role">区委书记 · 正处级</div>
+        <div class="person-card-name">金培元</div>
+        <div class="person-card-meta">
+          男 · 汉族 · 1980.11<br>
+          甘肃兰州 · 清华博士
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-gold">80后</span>
+          <span class="badge badge-gold">清华</span>
+          <span class="badge badge-accent">跨市</span>
+        </div>
+      </div>
+
+      <!-- 哈增瑞 -->
+      <div class="person-card">
+        <div class="person-card-role">区委副书记 · 区长 · 正处级</div>
+        <div class="person-card-name">哈增瑞</div>
+        <div class="person-card-meta">
+          男 · 回族 · 出生待查<br>
+          吴桥→青县→沧州
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-gold">少数民族</span>
+          <span class="badge badge-accent">跨区</span>
+        </div>
+      </div>
+
+      <!-- 霍刚 -->
+      <div class="person-card">
+        <div class="person-card-role">区委副书记 · 副处级</div>
+        <div class="person-card-name">霍刚</div>
+        <div class="person-card-meta">
+          男 · 2026.04 新闻确认在任<br>
+          履历完全未知
+        </div>
+        <div class="person-card-badges">
+          <span class="badge" style="border-color:var(--text-muted);color:var(--text-muted);">履历待查</span>
+        </div>
+      </div>
+
+      <!-- 罗宵 -->
+      <div class="person-card">
+        <div class="person-card-role">区委常委 · 常务副区长 · 副处级</div>
+        <div class="person-card-name">罗宵</div>
+        <div class="person-card-meta">
+          发改 · 财税 · 审批 · 应急 · 统计<br>
+          协助区长分管审计局
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-accent">常务</span>
+        </div>
+      </div>
+
+      <!-- 张俊峰 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 公安分局局长 · 副处级</div>
+        <div class="person-card-name">张俊峰</div>
+        <div class="person-card-meta">
+          公安 · 司法 · 民族宗教 · 退役军人<br>
+          协助罗宵负责安全生产
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 马俊亮 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">马俊亮</div>
+        <div class="person-card-meta">
+          商务 · 招商 · 农业 · 水务 · 文旅<br>
+          大运河文化带建设
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 陈思文 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">陈思文</div>
+        <div class="person-card-meta">
+          人社 · 科工 · 生态环保 · 市场监管<br>
+          沧州开发区新华园区
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 白丽英 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长（女）· 副处级</div>
+        <div class="person-card-name">白丽英</div>
+        <div class="person-card-meta">
+          教育体育 · 卫健 · 医保 · 民政<br>
+          卫生城市创建
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- Career Timelines -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2>核心人物履历时间线</h2>
+    </div>
+
+    <!-- 金培元 timeline -->
+    <h3 style="margin-bottom:var(--gap-sm);">金培元 · 区委书记</h3>
+    <div class="timeline" style="margin-bottom:var(--gap-lg);">
+
+      <div class="timeline-item key">
+        <div class="timeline-date">2021.05 — 至今</div>
+        <div class="timeline-title">沧州市新华区委书记</div>
+        <div class="timeline-org">中共沧州市新华区委员会</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item key">
+        <div class="timeline-date">2018.12 — 2021.05</div>
+        <div class="timeline-title">沧州市运河区委副书记、区长</div>
+        <div class="timeline-org">运河区人民政府</div>
+        <div class="timeline-confidence">✅ confirmed · 澎湃新闻</div>
+      </div>
+
+      <div class="timeline-item key">
+        <div class="timeline-date">约2017 — 2018.12</div>
+        <div class="timeline-title">共青团保定市委书记</div>
+        <div class="timeline-org">共青团保定市委</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">约2015 — 约2017</div>
+        <div class="timeline-title">高碑店市委常委、宣传部部长、农工委书记</div>
+        <div class="timeline-org">中共高碑店市委宣传部</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">约2012 — 约2015</div>
+        <div class="timeline-title">保定市卫生局党委委员、副局长</div>
+        <div class="timeline-org">保定市卫生局</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item unknown">
+        <div class="timeline-date">2009 — 约2012</div>
+        <div class="timeline-title">过渡岗位待查</div>
+        <div class="timeline-org">清华→保定卫生局期间</div>
+        <div class="timeline-confidence">❌ 缺口</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2008 — 约2009</div>
+        <div class="timeline-title">清华大学研究生工作部助理研究员</div>
+        <div class="timeline-org">清华大学</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2003 — 2008</div>
+        <div class="timeline-title">博士研究生（硕博连读）</div>
+        <div class="timeline-org">清华大学</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">1999 — 2003</div>
+        <div class="timeline-title">本科</div>
+        <div class="timeline-org">兰州大学</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+    </div>
+
+    <!-- 哈增瑞 timeline -->
+    <h3 style="margin-bottom:var(--gap-sm);">哈增瑞 · 区长</h3>
+    <div class="timeline" style="margin-bottom:var(--gap-lg);">
+
+      <div class="timeline-item key">
+        <div class="timeline-date">2024.09 — 至今</div>
+        <div class="timeline-title">新华区委副书记、区长</div>
+        <div class="timeline-org">新华区人民政府</div>
+        <div class="timeline-confidence">✅ confirmed · 政府网站</div>
+      </div>
+
+      <div class="timeline-item key">
+        <div class="timeline-date">2023.07 — 2024.09</div>
+        <div class="timeline-title">沧州市农林科学院党委书记、院长</div>
+        <div class="timeline-org">沧州市农林科学院</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">待查 — 2023.07</div>
+        <div class="timeline-title">青县县委副书记</div>
+        <div class="timeline-org">中共青县委员会</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">待查</div>
+        <div class="timeline-title">吴桥县委常委、宣传部部长</div>
+        <div class="timeline-org">中共吴桥县委宣传部</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">待查</div>
+        <div class="timeline-title">吴桥县人民政府副县长<br><span style="font-size:0.7rem;color:var(--gold);">2021.04 获河北省脱贫攻坚先进个人</span></div>
+        <div class="timeline-org">吴桥县人民政府</div>
+        <div class="timeline-confidence">✅ confirmed</div>
+      </div>
+
+      <div class="timeline-item unknown">
+        <div class="timeline-date">完全未知</div>
+        <div class="timeline-title">早期职业生涯（出生年月/籍贯/教育均未知）</div>
+        <div class="timeline-org">—</div>
+        <div class="timeline-confidence">❌ 重大缺口</div>
+      </div>
+    </div>
+
+    <!-- 霍刚 timeline -->
+    <h3 style="margin-bottom:var(--gap-sm);">霍刚 · 区委副书记</h3>
+    <div class="timeline" style="margin-bottom:var(--gap-md);">
+      <div class="timeline-item">
+        <div class="timeline-date">待查 — 至今</div>
+        <div class="timeline-title">新华区委副书记</div>
+        <div class="timeline-org">中共沧州市新华区委员会</div>
+        <div class="timeline-confidence">✅ 2026.04 新闻确认</div>
+      </div>
+      <div class="timeline-item unknown">
+        <div class="timeline-date">完全未知</div>
+        <div class="timeline-title">全部履历</div>
+        <div class="timeline-org">—</div>
+        <div class="timeline-confidence">❌ 无数据</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- Relationship Matrix -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2>工作关系矩阵</h2>
+    </div>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:var(--gap-md);">确认的关联关系 — 金色:强关系 / 白色:中关系 / 灰色:弱关系</p>
+    <div class="matrix-wrapper">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>人物A</th>
+            <th>人物B</th>
+            <th>关系类型</th>
+            <th>强度</th>
+            <th>重叠机构</th>
+            <th>重叠期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rel-strong">金培元</td>
+            <td class="rel-strong">哈增瑞</td>
+            <td>党政主要领导搭档</td>
+            <td class="rel-strong">强</td>
+            <td>区委/区政府</td>
+            <td>2024.09至今</td>
+          </tr>
+          <tr>
+            <td>金培元</td>
+            <td>霍刚</td>
+            <td>书记/副书记</td>
+            <td class="rel-strong">强</td>
+            <td>区委常委会</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td>金培元</td>
+            <td>罗宵</td>
+            <td>书记/常委副区长</td>
+            <td class="rel-medium">中</td>
+            <td>党政班子</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td class="rel-strong">哈增瑞</td>
+            <td class="rel-strong">罗宵</td>
+            <td>区长/常务副区长</td>
+            <td class="rel-strong">强</td>
+            <td>区政府</td>
+            <td>2024.09至今</td>
+          </tr>
+          <tr>
+            <td>哈增瑞</td>
+            <td>张俊峰</td>
+            <td>正副区长</td>
+            <td class="rel-medium">中</td>
+            <td>区政府</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td>哈增瑞</td>
+            <td>马俊亮</td>
+            <td>正副区长</td>
+            <td class="rel-medium">中</td>
+            <td>区政府</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td>哈增瑞</td>
+            <td>陈思文</td>
+            <td>正副区长</td>
+            <td class="rel-medium">中</td>
+            <td>区政府</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td>哈增瑞</td>
+            <td>白丽英</td>
+            <td>正副区长</td>
+            <td class="rel-medium">中</td>
+            <td>区政府</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td>金培元</td>
+            <td>陈国帮</td>
+            <td>前期搭档（前区长）</td>
+            <td class="rel-strong">强</td>
+            <td>区委/区政府</td>
+            <td>约2021-2024</td>
+          </tr>
+          <tr>
+            <td class="rel-weak">哈增瑞</td>
+            <td class="rel-weak">陈国帮</td>
+            <td>前后任 · 跨区交集</td>
+            <td class="rel-weak">弱</td>
+            <td>吴桥县委</td>
+            <td>约2024交</td>
+          </tr>
+          <tr>
+            <td class="rel-weak">金培元</td>
+            <td class="rel-weak">刘建华</td>
+            <td>前后任书记</td>
+            <td class="rel-weak">弱</td>
+            <td>区委</td>
+            <td>2021.05交接</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- Cross-County Exchange -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2>跨县区人事交流</h2>
+    </div>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:var(--gap-md);">干部跨区域流动路径</p>
+    <ul class="exchange-list">
+
+      <li class="exchange-item">
+        <span class="exchange-arrow">←</span>
+        <span><strong>保定市</strong> <span class="exchange-org">(团市委·卫生局·高碑店)</span></span>
+        <span class="exchange-arrow">→</span>
+        <span><strong>运河区</strong> <span class="exchange-org">(区长)</span></span>
+        <span class="exchange-arrow">→</span>
+        <span><strong>新华区</strong> <span class="exchange-org">(区委书记)</span></span>
+        <span style="margin-left:auto;font-size:0.65rem;color:var(--accent);">金培元 · 跨市</span>
+      </li>
+
+      <li class="exchange-item">
+        <span class="exchange-arrow">←</span>
+        <span><strong>吴桥县</strong> <span class="exchange-org">(副县长·宣传部长)</span></span>
+        <span class="exchange-arrow">→</span>
+        <span><strong>青县</strong> <span class="exchange-org">(副书记)</span></span>
+        <span class="exchange-arrow">→</span>
+        <span><strong>沧州市直</strong> <span class="exchange-org">(农林科学院)</span></span>
+        <span class="exchange-arrow">→</span>
+        <span><strong>新华区</strong> <span class="exchange-org">(区长)</span></span>
+        <span style="margin-left:auto;font-size:0.65rem;color:var(--gold);">哈增瑞 · 沧州内</span>
+      </li>
+
+      <li class="exchange-item" style="opacity:0.66;">
+        <span class="exchange-arrow">←</span>
+        <span><strong>新华区</strong> <span class="exchange-org">(区长)</span></span>
+        <span class="exchange-arrow">→</span>
+        <span><strong>?</strong> <span class="exchange-org">(去向不明)</span></span>
+        <span style="margin-left:auto;font-size:0.65rem;color:var(--text-muted);">陈国帮 · 待查</span>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- Key Insights -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2>关键洞察</h2>
+    </div>
+    <div class="insights-grid">
+
+      <div class="insight-card highlight">
+        <div class="insight-label">核心发现</div>
+        <div class="insight-title">80后清华博士主政新华区</div>
+        <div class="insight-desc">金培元（1980年生）2008年清华博士毕业后，仅用13年即升任正处级区委书记。是罕见的既有清华大学顶尖学术背景、又跨越保定和沧州两市的多系统干部。</div>
+      </div>
+
+      <div class="insight-card info">
+        <div class="insight-label">干部特征</div>
+        <div class="insight-title">少数民族区长 · 回族干部</div>
+        <div class="insight-desc">哈增瑞为回族，路径从吴桥（县级）→青县（县级）→沧州市直→新华区（市辖区），是典型的沧州本地培养干部。出生年月/籍贯/教育背景完全未知，为下一步深挖焦点。</div>
+      </div>
+
+      <div class="insight-card highlight">
+        <div class="insight-label">网络特征</div>
+        <div class="insight-title">党政班子已全面确认</div>
+        <div class="insight-desc">区政府1正5副全部通过政府网站确认，分工明确。这是高质量的数据基础——但区委常委班子（组织部长、纪委书记等5个关键岗位）完全未知，构成网络盲区。</div>
+      </div>
+
+      <div class="insight-card info">
+        <div class="insight-label">待解线索</div>
+        <div class="insight-title">陈国帮去向不明</div>
+        <div class="insight-desc">前区长陈国帮约2024年9月离任，去向不明。值得注意的是哈增瑞曾在吴桥县任职，而陈国帮若调任周边县区（尤其是吴桥），两人将构成跨区联系。</div>
+      </div>
+
+      <div class="insight-card gap">
+        <div class="insight-label">数据缺口 · 高优先级</div>
+        <div class="insight-title">哈增瑞基本身份信息</div>
+        <div class="insight-desc">哈增瑞（区长）的出生年月、籍贯、教育背景完全未知。作为党政一把手，缺少这些基本信息就难以构建完整的网络图谱。</div>
+      </div>
+
+      <div class="insight-card gap">
+        <div class="insight-label">数据缺口 · 中优先级</div>
+        <div class="insight-title">区委常委班子五人未知</div>
+        <div class="insight-desc">区委组织部部长、区纪委书记、区委政法委书记、区委统战部部长、区委宣传部部长五人信息完全缺失。这是新华区权力结构的核心空白。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- Sources -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <h2>数据来源</h2>
+    </div>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:var(--gap-md);">所有声称均标注来源 URL。政府网站为一级来源，媒体为二级来源。</p>
+    <div style="font-size:0.75rem;color:var(--text-secondary);line-height:1.8;columns:2 320px;column-gap:var(--gap-lg);">
+      <div>① <a href="http://www.czxh.gov.cn/">新华区政府网站</a> — 门户</div>
+      <div>② <a href="http://www.czxh.gov.cn/czxh/c100090/listDisplaySelf.shtml">政府领导列表</a> — 6位领导</div>
+      <div>③ <a href="http://www.czxh.gov.cn/czxh/c100090/202501/b65ed9065165442491fa265365eb5a0a.shtml">哈增瑞介绍页</a> — 区长确认</div>
+      <div>④ <a href="http://www.czxh.gov.cn/czxh/c100090/202504/47cf59e942064466a50aaf8f29a6ab6c.shtml">罗宵介绍页</a> — 常务副区长</div>
+      <div>⑤ <a href="http://www.czxh.gov.cn/czxh/c100090/202504/fb99888e3f25475a8551bb1fe6eeab12.shtml">张俊峰介绍页</a> — 副区长</div>
+      <div>⑥ <a href="http://www.czxh.gov.cn/czxh/c100090/202401/e3238fe9122243d096c4bd78ac57a2cd.shtml">马俊亮介绍页</a> — 副区长</div>
+      <div>⑦ <a href="http://www.czxh.gov.cn/czxh/c100090/202504/09a68fa1a2824a9caa16b7637eaaca5f.shtml">陈思文介绍页</a> — 副区长</div>
+      <div>⑧ <a href="http://www.czxh.gov.cn/czxh/c100090/202504/2821a46ce9444d8a9d57b255fa71d20c.shtml">白丽英介绍页</a> — 副区长</div>
+      <div>⑨ <a href="http://www.czxh.gov.cn/czxh/xhyw/202605/a35fcf41c2e94a6c841a0a389e999bf1.shtml">金培元/哈增瑞调研</a></div>
+      <div>⑩ <a href="http://www.czxh.gov.cn/czxh/xhyw/202604/a4a5adc776c9451090ce6bd17f88cfb4.shtml">霍刚确认新闻</a></div>
+      <div>⑪ <a href="https://www.thepaper.cn/newsDetail_forward_2708822">金培元履历（澎湃）</a></div>
+      <div>⑫ <a href="https://k.sina.cn/article_6489476410_182b36d7a001013k7c.html">金培元/哈增瑞任命（新浪）</a></div>
+      <div>⑬ <a href="https://www.sohu.com/a/564327918_121124368">哈增瑞代理区长（搜狐）</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>生成于 2026-07-24 · 数据构建脚本: <code style="font-size:0.65rem;color:var(--text-muted);">build_新华区_data.py</code></p>
+    <p>数据库: <code>data/database/新华区_network.db</code> · 图谱: <code>data/graph/新华区_network.gexf</code></p>
+    <p style="margin-top:var(--gap-sm);"><a href="https://github.com/lazycodex-ai/gov-relation">政府人员履历与工作关系网络研究仓库</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

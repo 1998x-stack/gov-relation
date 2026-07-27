@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Sisyphus Research Agent</creator>
+    <description>金林区领导班子关系网络 - 20260724</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="1" label="鲍谦">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共金林区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="2" label="刘佳明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区长"/>
+          <attvalue for="2" value="金林区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="3" label="陈默">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会主任"/>
+          <attvalue for="2" value="金林区人大常委会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="4" label="隋鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="中共金林区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="5" label="张先锋">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长"/>
+          <attvalue for="2" value="金林区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="6" label="刘长林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="金林区人大常委会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="7" label="张凯">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="金林区人大常委会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="8" label="隋美春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="金林区人大常委会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="9" label="刘杰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="金林区人大常委会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="10" label="王继权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="中共金林区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="11" label="刘绘">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委"/>
+          <attvalue for="2" value="中共金林区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共金林区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="金林区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="金林区人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="金林区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="金林区政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="1" target="o1" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年5月至7月以区委书记身份主持区委常委会和理论学习中心组"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="2" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委理论学习中心组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="2" target="o2" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="推测为区长（排名在区委书记之后、人大主任之前）"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="3" target="o3" label="区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月主持区二届人大常委会第三十五次会议"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="4" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委理论学习中心组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="5" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="列席区二届人大常委会第三十五次会议"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="6" target="o3" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="7" target="o3" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="8" target="o3" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="9" target="o3" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="10" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委理论学习中心组成员，研讨发言"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="11" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委理论学习中心组成员，研讨发言"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="1" target="2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与区长党政工作搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="1" target="3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与区人大主任党政工作关系"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="1" target="4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="1" target="10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="1" target="11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区委书记与区委常委"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="2" target="5" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区长与副区长工作上下级关系"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="2" target="4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与区委常委工作搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="2" target="10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与区委常委工作搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="2" target="11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="区长与区委常委工作搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="3" target="6" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区人大主任与副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="3" target="7" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区人大主任与副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="3" target="8" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区人大主任与副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="3" target="9" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="区人大主任与副主任"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="4" target="10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="同为区委理论学习中心组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="4" target="11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="同为区委理论学习中心组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="10" target="11" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="同为区委理论学习中心组成员"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

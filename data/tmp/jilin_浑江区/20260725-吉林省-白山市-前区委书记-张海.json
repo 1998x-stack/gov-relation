@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-25",
+  "investigation_scope": {
+    "province": "吉林省",
+    "city": "白山市",
+    "region": "浑江区",
+    "job": "前区委书记",
+    "task_id": "jilin_浑江区",
+    "time_focus": "2025年离任"
+  },
+  "identity": {
+    "person_id": "jilin_baishan_hunjiang_zhanghai",
+    "name": "张海",
+    "aliases": [],
+    "gender": "",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张海_",
+      "name_birthplace": "张海_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "原浑江区委书记（已离任）",
+    "current_org": "",
+    "administrative_rank": "正县级",
+    "as_of": "2025-12",
+    "is_current_confirmed": false,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "2025-12",
+      "org": "中共白山市浑江区委员会",
+      "title": "浑江区委书记",
+      "level": "县处级",
+      "location": "吉林省白山市浑江区",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": false,
+      "notes": "2025年6月仍以区委书记身份参与高考巡考工作，2025年12月任免决定后离任",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_hunjiang_party_committee",
+      "name": "中共白山市浑江区委员会",
+      "type": "党委",
+      "level": "县处级",
+      "parent_org": "中共白山市委员会",
+      "location": "吉林省白山市浑江区",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "王明明",
+      "person_id": "jilin_baishan_hunjiang_wangmingming",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "张海离任浑江区委书记，王明明接任",
+      "overlap_org": "中共白山市浑江区委员会",
+      "overlap_period": "",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "资料不足",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月未发现负面信息",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "浑江区-百度百科",
+      "url": "https://baike.baidu.com/item/%E6%B5%91%E6%B1%9F%E5%8C%BA",
+      "publisher": "百度百科",
+      "published_at": "2026-07",
+      "accessed_at": "2026-07-25",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "百度百科浑江区词条政治栏目显示张海为前区委书记（离任）"
+    },
+    {
+      "id": "S002",
+      "title": "区委书记张海一行在我区各考点开展高考巡考工作",
+      "url": "",
+      "publisher": "浑江区教育局",
+      "published_at": "2025-06",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "据百度百科引用，2025年6月高考期间张海仍以区委书记身份带队巡考"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "缺少张海完整的个人简历、出生日期、籍贯、教育背景和此后去向"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "张海的完整履历是什么？包括出生日期、籍贯、教育背景",
+      "why_it_matters": "无法确认其身份唯一性和职业发展路径",
+      "suggested_queries": ["张海 浑江区 简历", "张海 白山市 区委书记"],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "high",
+      "question": "张海离任后调往何处？",
+      "why_it_matters": "了解干部交流方向和晋升/平调/退休路径",
+      "suggested_queries": ["张海 任免 2025年12月", "张海 白山市"],
+      "last_attempted": "2026-07-25"
+    }
+  ]
+}

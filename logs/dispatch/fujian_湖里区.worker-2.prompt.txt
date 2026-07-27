@@ -1,0 +1,49 @@
+Use the china-gov-network skill at .agents/skills/china-gov-network.
+
+Non-negotiable execution rules:
+- You are the end-to-end executor, not a planner. Do not stop after creating a plan or launching subagents.
+- If you use subagents, wait for their results, synthesize them, and continue through artifact creation yourself.
+- If subagents are unavailable, asynchronous, or return incomplete information, continue the investigation directly with the available tools.
+- Do not call scripts/todo_queue.py claim/done/fail/release. The external worker owns queue state.
+- Do not finish with only notes, todos, or a staging directory. A successful run must leave the canonical build script, SQLite DB, GEXF graph, and person JSON files after validation and promotion.
+- If evidence is incomplete, encode gaps with confidence/open_questions, but still create structurally valid artifacts from confirmed/plausible evidence.
+
+Task:
+- task_id: fujian_湖里区
+- province: 福建省
+- parent_city: 厦门市
+- region: 湖里区
+- level: 市辖区
+- targets: 区委书记 & 区长
+- model_intent: iagent
+
+Expected artifact paths:
+- staging_dir: data/tmp/fujian_湖里区/
+- build_script: data/tmp/fujian_湖里区/build_湖里区_data.py
+- database: data/tmp/fujian_湖里区/湖里区_network.db
+- gexf: data/tmp/fujian_湖里区/湖里区_network.gexf
+- person_json_pattern: data/tmp/fujian_湖里区/YYYYMMDD-福建省-厦门市-{job}-{name}.json
+
+Canonical destination after validation:
+- build_script: build_湖里区_data.py
+- database: data/database/湖里区_network.db
+- gexf: data/graph/湖里区_network.gexf
+- person_json_dir: data/persons/
+
+Required workflow:
+1. Run Phase 0 repository preflight.
+2. Read relevant references from .agents/skills/china-gov-network/references:
+   - investigation_stages.md
+   - subagent_dispatch.md
+   - person_graph_json.md
+   - gexf_pattern.md when writing graph output
+3. Research current officeholders, leadership roster, biographies, predecessor/successor moves, relationship evidence, governance/professional profile, and open gaps.
+4. Write all newly generated artifacts into the staging directory first. Do not write new build scripts into repo root directly.
+5. Validate with py_compile, script execution, json.tool for person JSON, and scripts/process_tmp.py data/tmp/fujian_湖里区.
+6. Promote with scripts/process_tmp.py data/tmp/fujian_湖里区 --apply only after the dry run is clean.
+7. Run scripts/inventory.py after promotion.
+8. Before exiting, verify these canonical paths exist:
+   - build_湖里区_data.py
+   - data/database/湖里区_network.db
+   - data/graph/湖里区_network.gexf
+   - at least two data/persons/YYYYMMDD-...json files for the core leaders when names are known

@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "平顶山市",
+    "region": "鲁山县",
+    "job": "县委书记",
+    "task_id": "henan_鲁山县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "lushan_liu_peng",
+    "name": "刘鹏",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘鹏_unknown",
+      "name_birthplace": "刘鹏_unknown",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "县委书记",
+    "current_org": "中共鲁山县委员会",
+    "administrative_rank": "正县级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": false,
+    "source_ids": []
+  },
+  "career_timeline": [
+    {
+      "start": "约2019",
+      "end": "约2021",
+      "org": "鲁山县人民政府",
+      "title": "县长",
+      "level": "正县级",
+      "location": "鲁山县",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "从县长升任县委书记",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "start": "约2021",
+      "end": "至今",
+      "org": "中共鲁山县委员会",
+      "title": "县委书记",
+      "level": "正县级",
+      "location": "鲁山县",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "现任鲁山县委书记",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到详细早期履历，包括出生年份、籍贯、教育背景、入党时间、参加工作时间及2019年之前的任职经历",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "lushan_county_committee",
+      "name": "中共鲁山县委员会",
+      "role": "县委书记",
+      "period": "约2021至今",
+      "source_ids": []
+    },
+    {
+      "org_id": "lushan_county_gov",
+      "name": "鲁山县人民政府",
+      "role": "县长",
+      "period": "约2019至约2021",
+      "source_ids": []
+    }
+  ],
+  "relationships": [
+    {
+      "person": "叶锐",
+      "person_id": "lushan_ye_rui",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县委书记与县长工作搭档，双方在鲁山县共事",
+      "overlap_org": "鲁山县",
+      "overlap_period": "约2022至今",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    },
+    {
+      "person": "杨英锋",
+      "person_id": "lushan_yang_yingfeng",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "县委书记前后任（杨英锋约2016-2021，刘鹏约2021至今）",
+      "overlap_org": "中共鲁山县委员会",
+      "overlap_period": "约2021交接",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["鲁山县"],
+    "promotion_velocity": {
+      "summary": "从县长升任县委书记，属于县级主要领导正常晋升路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "缺少公开报道支撑工作风格分析",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现刘鹏相关的纪律处分、审计问题或负面媒体报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "出生年份、籍贯、教育背景、入党时间、参加工作时间及2019年前全部履历均缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "刘鹏的出生年份、籍贯、教育背景是什么？",
+      "why_it_matters": "影响身份核验和与其他官员的籍贯/校友关系分析",
+      "suggested_queries": ["刘鹏 简历 鲁山", "刘鹏 出生 年月", "刘鹏 鲁山县 县委书记 任前公示"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "刘鹏2019年之前的职业生涯是什么？",
+      "why_it_matters": "完整履历是关系网络分析的基础",
+      "suggested_queries": ["刘鹏 鲁山 任职经历", "刘鹏 平顶山 履历"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "刘鹏的确切升任县委书记和担任县长的时间？",
+      "why_it_matters": "精确化任职时间轴",
+      "suggested_queries": ["刘鹏 任鲁山县县委书记", "刘鹏 鲁山县县长 任命"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

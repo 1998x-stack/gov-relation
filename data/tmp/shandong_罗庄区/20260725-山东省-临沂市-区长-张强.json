@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-25",
+  "investigation_scope": {
+    "province": "山东省",
+    "city": "临沂市",
+    "region": "罗庄区",
+    "job": "区长",
+    "task_id": "shandong_罗庄区",
+    "time_focus": "2022-present"
+  },
+  "identity": {
+    "person_id": "shandong_luozhuang_zhangqiang",
+    "name": "张强",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1972-08",
+    "birthplace": "山东郯城",
+    "native_place": "山东郯城",
+    "education": [
+      {
+        "period": "",
+        "institution": "山东省委党校",
+        "major": "",
+        "degree": "研究生",
+        "study_type": "party_school",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张强_1972-08",
+      "name_birthplace": "张强_山东郯城",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "罗庄区人民政府区长",
+    "current_org": "罗庄区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-25",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "2020",
+      "end": "2022-01",
+      "org": "中共罗庄区委员会",
+      "title": "罗庄区委副书记（专职）",
+      "level": "县处级副职",
+      "location": "山东临沂罗庄区",
+      "system": "party",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2022-01",
+      "end": "present",
+      "org": "罗庄区人民政府",
+      "title": "罗庄区人民政府区长",
+      "level": "县处级正职",
+      "location": "山东临沂罗庄区",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "提任区长",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "period": "2022-01至今",
+      "name": "罗庄区人民政府",
+      "role": "区长",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "period": "2020至2022-01",
+      "name": "中共罗庄区委员会",
+      "role": "区委副书记（专职）",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "彭波",
+      "person_id": "luozhuang_pengbo",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "彭波任区委书记，张强任区长，为党政搭档",
+      "overlap_org": "罗庄区人民政府",
+      "overlap_period": "2022至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2022-2026",
+      "domain": "economic_development",
+      "achievement_or_event": "主持罗庄区政府全面工作",
+      "role_in_event": "区长",
+      "measurable_outcome": "",
+      "location": "临沂市罗庄区",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党政管理", "地方治理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["山东临沂"],
+    "promotion_velocity": {
+      "summary": "本地成长型干部",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开信息不足",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至调研日期未发现公开负面信息",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "罗庄区人民政府网站—领导之窗",
+      "url": "http://www.lyluozhuang.gov.cn/",
+      "publisher": "罗庄区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "领导人页面（网站暂时无法访问）"
+    },
+    {
+      "id": "S002",
+      "title": "临沂市人民政府网站",
+      "url": "http://www.linyi.gov.cn/",
+      "publisher": "临沂市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-25",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "可访问，包含区县链接"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "早期履历（2020年以前）完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "张强2020年之前的完整职业履历？",
+      "why_it_matters": "完整履历是评估干部成长路径和关系网络的基础",
+      "suggested_queries": ["张强 罗庄区 区长 简历", "张强 临沂 任前公示", "张强 郯城 工作经历"],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "high",
+      "question": "张强的学历信息？包括毕业院校和专业",
+      "why_it_matters": "校友关系是关系网络的重要维度",
+      "suggested_queries": ["张强 山东省委党校 研究生"],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "high",
+      "question": "张强之前担任过哪些职务？从何处调任罗庄区？",
+      "why_it_matters": "可以追溯跨县区或跨部门交流线索",
+      "suggested_queries": ["张强 临沂 调任", "张强 罗庄 区委副书记 任职"],
+      "last_attempted": "2026-07-25"
+    }
+  ]
+}

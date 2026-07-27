@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="20260726">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>盐湖区 领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="李永辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1976-08"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="武鑫">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1982-06"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p3" label="卢静">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委副书记、运城中学党委书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1979-10"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="150" g="50" b="50"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p4" label="张晓波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、纪委书记、监委主任"/>
+          <attvalue for="2" value="中共运城市盐湖区纪律检查委员会"/>
+          <attvalue for="3" value="1979-09"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="王军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区政府党组副书记、副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1983-02"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="郭亚明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、统战部部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1976-09"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="杨建帮">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、政法委书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1970-01"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="王大风">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、宣传部部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1975-07"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="板海静">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、人武部政委"/>
+          <attvalue for="2" value="运城市盐湖区人武部"/>
+          <attvalue for="3" value="1975-02"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="秦盛华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、组织部部长、区委党校校长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1986-02"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="郑冬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区政府党组成员、副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1983-12"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="李宝拴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委常委、区委办公室主任"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value="1980-08"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="秦浩">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副区长、市公安局盐湖分局局长"/>
+          <attvalue for="2" value="运城市公安局盐湖分局"/>
+          <attvalue for="3" value="1972-10"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p14" label="穆首翔">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1977-07"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p15" label="王坚强">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1973-10"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p16" label="李娟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1983-10"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p17" label="高超">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1982-04"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p18" label="薛国鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府二级调研员"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1978-01"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p19" label="程国良">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政府党组成员、区政府办公室主任"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value="1981-05"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p20" label="张军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组书记、主任"/>
+          <attvalue for="2" value="盐湖区人民代表大会常务委员会"/>
+          <attvalue for="3" value="1971-05"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p21" label="李金果">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会副主任"/>
+          <attvalue for="2" value="盐湖区人民代表大会常务委员会"/>
+          <attvalue for="3" value="1967-12"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p22" label="雷云峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="盐湖区人民代表大会常务委员会"/>
+          <attvalue for="3" value="1967-11"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p23" label="赵洪波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="盐湖区人民代表大会常务委员会"/>
+          <attvalue for="3" value="1971-05"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p24" label="周鸿">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、副主任"/>
+          <attvalue for="2" value="盐湖区人民代表大会常务委员会"/>
+          <attvalue for="3" value="1972-08"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p25" label="薛世鹏">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区人大常委会党组成员、秘书长"/>
+          <attvalue for="2" value="盐湖区人民代表大会常务委员会"/>
+          <attvalue for="3" value="1977-02"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p26" label="宁华文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1967-04"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p27" label="李锐">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组书记"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1973-04"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p28" label="马红琴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席、民盟盐湖区委主委"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1967-07"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p29" label="麻芙蓉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1973-04"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p30" label="卫晓军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1970-08"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p31" label="卫开河">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、副主席"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1971-03"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p32" label="戈米">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区政协党组成员、秘书长"/>
+          <attvalue for="2" value="中国人民政治协商会议运城市盐湖区委员会"/>
+          <attvalue for="3" value="1975-09"/>
+          <attvalue for="4" value="yanhu.gov.cn"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共运城市盐湖区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="盐湖区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共运城市盐湖区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="运城市公安局盐湖分局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="运城市盐湖区人武部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="运城中学">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="2" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="盐湖区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中国人民政治协商会议运城市盐湖区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区委一把手"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o2" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组书记"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o1" label="区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o6" label="运城中学党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼任"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="o3" label="区纪委书记、监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p4" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p5" target="o2" label="区政府党组副书记、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="常务副区长"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p5" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p6" target="o1" label="区委常委、统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p7" target="o1" label="区委常委、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p8" target="o1" label="区委常委、宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p9" target="o5" label="人武部政委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p9" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p10" target="o1" label="区委常委、组织部部长、区委党校校长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p11" target="o2" label="区委常委、副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p11" target="o1" label="区委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p12" target="o1" label="区委常委、区委办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p13" target="o4" label="副区长、市公安局盐湖分局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p14" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p15" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p16" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p17" target="o2" label="副区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="区政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p18" target="o2" label="区政府二级调研员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p19" target="o2" label="区政府党组成员、区政府办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p20" target="o7" label="区人大常委会党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p21" target="o7" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="民建"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p22" target="o7" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p23" target="o7" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p24" target="o7" label="区人大常委会副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p25" target="o7" label="区人大常委会秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p26" target="o8" label="区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p27" target="o8" label="区政协党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p28" target="o8" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="民盟"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p29" target="o8" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="民革"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p30" target="o8" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p31" target="o8" label="区政协副主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p32" target="o8" label="区政协秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p1" target="p2" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与区长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p1" target="p3" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与区委副书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p1" target="p4" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与纪委书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p1" target="p5" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与常务副区长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p1" target="p6" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与统战部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p1" target="p7" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与政法委书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p1" target="p8" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与宣传部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="p1" target="p9" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与人武部政委"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="p1" target="p10" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与组织部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="p1" target="p11" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与副区长(常委)"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="p1" target="p12" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区委书记与区委办主任"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="p2" target="p5" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与常务副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="p2" target="p11" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与副区长(常委)"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="p2" target="p13" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与公安局长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="p2" target="p14" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="p2" target="p15" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="p2" target="p16" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="p2" target="p17" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与副区长"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="p2" target="p19" label="领导_副手" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="领导_副手"/>
+          <attvalue for="1" value="区长与政府办主任"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="58" source="p4" target="p5" label="同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="同僚"/>
+          <attvalue for="1" value="纪委书记与常务副区长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="59" source="p4" target="p7" label="同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="同僚"/>
+          <attvalue for="1" value="纪委书记与政法委书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="60" source="p5" target="p10" label="同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="同僚"/>
+          <attvalue for="1" value="常务副区长与组织部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="61" source="p5" target="p11" label="同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="同僚"/>
+          <attvalue for="1" value="常务副区长与副区长(常委)"/>
+          <attvalue for="2" value="盐湖区人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="62" source="p7" target="p13" label="工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="工作关系"/>
+          <attvalue for="1" value="政法委书记与公安局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="63" source="p10" target="p3" label="同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="同僚"/>
+          <attvalue for="1" value="组织部长与区委副书记"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="64" source="p6" target="p8" label="同僚" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="同僚"/>
+          <attvalue for="1" value="统战部长与宣传部长"/>
+          <attvalue for="2" value="中共运城市盐湖区委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>gov-relation research agent</creator>
+    <description>益阳市领导班子工作关系网络 — 含市领导及区县党政正职</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="向世聪">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共益阳市委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p2" label="刘勇会">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共益阳市委副书记、市人民政府代市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="60.0"/>
+      </node>
+      <node id="p3" label="陈竞">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湖南省副省长、长沙市委书记、省委常委"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p4" label="熊炜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="湖南省人民政府副秘书长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p5" label="邓斌">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共益阳市委副书记、统战部部长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="220" g="80" b="80" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p6" label="刘泽友">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="益阳市人大常委会主任"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p7" label="胡立安">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="益阳市政协主席"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="60" g="180" b="60" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p8" label="付振南">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共资阳区委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p9" label="黄瑛">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="资阳区区长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p10" label="李丰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共赫山区委书记、区长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p11" label="钟剑波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共南县委书记、县人民政府县长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p12" label="向荣">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共桃江县委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p13" label="周登高">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="桃江县人民政府县长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p14" label="石录明">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共安化县委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p15" label="潘文剑">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="安化县人民政府县长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p16" label="杨智勇">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="中共沅江市委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="p17" label="罗必胜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="沅江市人民政府市长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200" a="1.0"/>
+        <viz:size value="35.0"/>
+      </node>
+      <node id="o1" label="中共益阳市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o2" label="益阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o3" label="益阳市人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o4" label="益阳市政协">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o5" label="中共益阳市资阳区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o6" label="资阳区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o7" label="中共益阳市赫山区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o8" label="赫山区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o9" label="中共南县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o10" label="南县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o11" label="中共桃江县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o12" label="桃江县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o13" label="中共安化县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o14" label="安化县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o15" label="中共沅江市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o16" label="沅江市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o17" label="中共长沙市委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o18" label="湖南省统计局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o19" label="湖南省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o20" label="中共安化县委员会（历史）">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o21" label="中共道县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="20.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o18" label="湖南省统计局党组书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖南省统计局党组书记、局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o1" label="中共益阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共益阳市委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2026-05-16—"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o21" label="中共道县委副书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共道县委副书记、县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—2016-07"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p2" target="o21" label="中共道县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共道县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016-08—2019-03"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p2" target="o13" label="中共安化县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共安化县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2019-04—2021-10"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o1" label="中共益阳市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共益阳市委常委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021-10—"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p2" target="o2" label="益阳市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市人民政府副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2022-01—2026-04"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p2" target="o1" label="中共益阳市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共益阳市委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2026-04—"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p2" target="o2" label="益阳市人民政府代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市人民政府代市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2026-04—"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p3" target="o19" label="长沙市节约用水办公室干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="长沙市节约用水办公室干部"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1990—1994"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p3" target="o19" label="中国建设银行长沙市分行" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中国建设银行长沙市分行"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1994—1995"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p3" target="o19" label="共青团湖南省委（历任职员至部长）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="共青团湖南省委（历任职员至部长）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1995—2007"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p3" target="o19" label="中共张家界市永定区委副书记、代区长→区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共张家界市永定区委副书记、代区长→区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2007-02—2011-12"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p3" target="o19" label="中共慈利县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共慈利县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2011-12—2013-12"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p3" target="o19" label="中共衡阳市石鼓区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共衡阳市石鼓区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2013-12—2015-02"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p3" target="o19" label="衡阳市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="衡阳市人民政府副市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2015-02—2016-09"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p3" target="o19" label="中共衡阳市委常委、组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共衡阳市委常委、组织部部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016-09—2019-10"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p3" target="o19" label="湖南省委组织部副部长、省公务员局局长（兼）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖南省委组织部副部长、省公务员局局长（兼）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2019-10—2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p3" target="o2" label="益阳市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市人民政府市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021-08—2023-02"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p3" target="o1" label="中共益阳市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共益阳市委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2023-02—2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p3" target="o19" label="湖南省副省长（兼益阳书记至2026.05）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖南省副省长（兼益阳书记至2026.05）"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2025-07—"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p3" target="o17" label="中共长沙市委书记、省委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共长沙市委书记、省委常委"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2026-06—"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p4" target="o2" label="益阳市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市人民政府市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2023-02—2026-04"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p4" target="o19" label="湖南省人民政府副秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖南省人民政府副秘书长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2026-04—"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p5" target="o1" label="中共益阳市委副书记、统战部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共益阳市委副书记、统战部长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p6" target="o3" label="益阳市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市人大常委会主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2024-12—"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p7" target="o4" label="益阳市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市政协主席"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2022-01—"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p8" target="o5" label="中共资阳区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共资阳区委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p9" target="o6" label="资阳区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="资阳区区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p10" target="o7" label="中共赫山区委书记、区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共赫山区委书记、区长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p11" target="o9" label="中共南县委书记、县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共南县委书记、县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p12" target="o11" label="中共桃江县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共桃江县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p13" target="o19" label="道林镇中心学校教师" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="道林镇中心学校教师"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2000—2005"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p13" target="o19" label="湘潭大学行政管理专业硕士" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湘潭大学行政管理专业硕士"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2005—2008"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p13" target="o19" label="益阳市龙岭工业园管委会党政综合办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市龙岭工业园管委会党政综合办公室主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2008—2009"/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p13" target="o19" label="益阳市沧水铺镇循环经济工业园管委会办公室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市沧水铺镇循环经济工业园管委会办公室主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2009—2010-03"/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p13" target="o7" label="赫山区委办公室调研室主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="赫山区委办公室调研室主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2010-03—2010-10"/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p13" target="o19" label="桃江县经济合作局党组副书记/局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桃江县经济合作局党组副书记/局长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2010-10—2012-09"/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p13" target="o20" label="安化县人民政府副县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安化县人民政府副县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2012-11—2016-08"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p13" target="o1" label="益阳市委办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市委办公室副主任"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016-08—2017-05"/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p13" target="o1" label="益阳市委副秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="益阳市委副秘书长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2017-05—2020-04"/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p13" target="o20" label="中共安化县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共安化县委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2020-04—2021-07"/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p13" target="o12" label="桃江县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="桃江县人民政府县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2021-07—"/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p14" target="o13" label="中共安化县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共安化县委书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p15" target="o14" label="安化县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="安化县人民政府县长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="p16" target="o19" label="湖南师范大学留校工作" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="湖南师范大学留校工作"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="1997—2016"/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="p16" target="o5" label="中共资阳区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共资阳区委副书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2016-08—2017-05"/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="p16" target="o15" label="中共沅江市委副书记、市长→书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="中共沅江市委副书记、市长→书记"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="2017-05—"/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="p17" target="o16" label="沅江市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="沅江市人民政府市长"/>
+          <attvalue for="2" value=""/>
+          <attvalue for="3" value="—"/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="p3" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="陈竞任益阳市委书记期间刘勇会先后任市委常委、副市长、副书记、代市长，直接上下级关系"/>
+          <attvalue for="2" value="中共益阳市委/益阳市人民政府"/>
+          <attvalue for="3" value="2021-2026"/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="p3" target="p4" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="superior_subordinate"/>
+          <attvalue for="1" value="陈竞任书记、熊炜任市长期间搭档约2年（2023.02-2024.04）"/>
+          <attvalue for="2" value="中共益阳市委/益阳市人民政府"/>
+          <attvalue for="3" value="2023-2024"/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="p2" target="p14" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="刘勇会2019-2021任安化县委书记，石录明后接任"/>
+          <attvalue for="2" value="中共安化县委员会"/>
+          <attvalue for="3" value="2019-2021"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="p2" target="p16" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="刘勇会任市委常委/副市长/代市长期间与沅江市委书记杨智勇在益阳市级层面共事"/>
+          <attvalue for="2" value="益阳市"/>
+          <attvalue for="3" value="2021-至今"/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="p13" target="p14" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="周登高任安化县副县长期间后与石录明同县工作"/>
+          <attvalue for="2" value="安化县"/>
+          <attvalue for="3" value="2012-2016"/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="p16" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="杨智勇曾在资阳区委任副书记（2016-2017），付振南现任资阳区委书记"/>
+          <attvalue for="2" value="中共资阳区委员会"/>
+          <attvalue for="3" value="2016-2017"/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="p3" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="陈竞2023.02-2026.05任益阳市委书记，向世聪2026.05接任"/>
+          <attvalue for="2" value="中共益阳市委"/>
+          <attvalue for="3" value="2026-05"/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="p13" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="周登高任安化副县长+副书记期间，与刘勇会（安化县委书记2019-2021）先后共事"/>
+          <attvalue for="2" value="安化县"/>
+          <attvalue for="3" value="2020-2021"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

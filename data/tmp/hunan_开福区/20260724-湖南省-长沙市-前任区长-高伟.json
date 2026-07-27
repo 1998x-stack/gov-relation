@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "20260724",
+  "investigation_scope": {
+    "province": "湖南省",
+    "city": "长沙市",
+    "region": "开福区",
+    "job": "前任区长",
+    "task_id": "hunan_开福区",
+    "time_focus": "2026年7月"
+  },
+  "identity": {
+    "person_id": "kaifu_高伟",
+    "name": "高伟",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "高伟_",
+      "name_birthplace": "高伟_",
+      "official_profile_url": "https://www.kaifu.gov.cn/（2026年3月讲话报道）"
+    }
+  },
+  "current_status": {
+    "current_post": "前任区长",
+    "current_org": "开福区人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": true,
+    "source_ids": [
+      "S001"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "2026-03/2026-06",
+      "org": "开福区人民政府",
+      "title": "区长",
+      "level": "正处级",
+      "rank": "正处级",
+      "notes": "前任开福区长，2026年3月仍有活动报道",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "中共长沙市开福区委员会",
+      "type": "党委"
+    },
+    {
+      "id": 2,
+      "name": "开福区人民政府",
+      "type": "政府"
+    },
+    {
+      "id": 3,
+      "name": "开福区人民代表大会常务委员会",
+      "type": "人大"
+    },
+    {
+      "id": 4,
+      "name": "中国人民政治协商会议开福区委员会",
+      "type": "政协"
+    },
+    {
+      "id": 5,
+      "name": "中共长沙市开福区纪律检查委员会",
+      "type": "党委"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "蒋文武",
+      "person_id": "kaifu_蒋文武",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "前任区长—现任区长",
+      "overlap_org": "开福区人民政府",
+      "overlap_period": "2026.03-2026.06",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "person": "罗玉环",
+      "person_id": "kaifu_罗玉环",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "前任区委书记—前任区长搭档",
+      "overlap_org": "中共长沙市开福区委员会",
+      "overlap_period": "至2026年",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "长沙市开福区人民政府官方网站",
+      "url": "https://www.kaifu.gov.cn/",
+      "publisher": "开福区人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "开福区政府门户网站政府领导页面及活动报道"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "high",
+    "biggest_gap": "完整任职履历（每段职务精确起止时间）"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "高伟的完整任职履历（每段职务精确起止时间）",
+      "why_it_matters": "关系网络分析需要精确的时间线",
+      "suggested_queries": [
+        "高伟 简历",
+        "高伟 任前公示",
+        "高伟 百度百科"
+      ],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "高伟的出生年月和籍贯",
+      "why_it_matters": "核心身份信息，用于去重和跨区域关联分析",
+      "suggested_queries": [
+        "高伟 简历",
+        "高伟 籍贯"
+      ],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

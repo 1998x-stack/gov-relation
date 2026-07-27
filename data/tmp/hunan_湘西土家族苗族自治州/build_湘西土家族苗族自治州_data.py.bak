@@ -1,0 +1,776 @@
+#!/usr/bin/env python3
+"""Build SQLite database, GEXF graph, and person JSONs for 湘西土家族苗族自治州.
+
+Task ID: hunan_湘西土家族苗族自治州
+Level: 地级市
+Province: 湖南省
+Targets: 市委书记 & 市长
+
+Data sourced from:
+- 中国经济网 (尚生龙任湘西州代州长): http://district.ce.cn/newarea/sddy/202606/t20260622_3044364.shtml
+- 湘西网 (刘涛报道): http://www.xxnet.com.cn/news/
+- 腾讯新闻 (尚生龙任邵阳副书记): https://news.qq.com/rain/a/20250219A004RG00
+- 百度百科 (刘涛): https://baike.baidu.com/item/%E5%88%98%E6%B6%9B/1971年
+- 百度百科 (虢正贵): https://baike.baidu.com/item/%E8%99%A2%E6%AD%A3%E8%B4%B5
+- 百度百科 (陈华): https://baike.baidu.com/item/%E9%99%88%E5%8D%8E/20117663
+- jendow百科 (尚生龙): https://www.jendow.com.tw/wiki/%E5%B0%9A%E7%94%9F%E9%BE%8D
+- 新湖南 (尚生龙任邵阳副书记): https://m.voc.com.cn/xhn/news/202502/27771467.html
+- 张家界政府网站 (尚生龙简历): https://www.molibody.com/html/c23820170110i80500.html
+- Wikipedia (湘西州): https://zh.wikipedia.org/wiki/湘西土家族苗族自治州
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import sys
+from datetime import datetime
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+for parent_count in [2, 3, 4, 5]:
+    candidate = Path(__file__).resolve().parents[parent_count]
+    if (candidate / "gov_relation").is_dir():
+        REPO_ROOT = candidate
+        break
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from gov_relation.runner import run_build
+from gov_relation.paths import DATABASE_DIR, GRAPH_DIR, PERSONS_DIR
+
+# ── Metadata ─────────────────────────────────────────────────────────────────
+SLUG = "湘西土家族苗族自治州"
+SLUG_SHORT = "湘西土家族苗族自治州"
+TODAY = datetime.now().strftime("%Y%m%d")
+AS_OF = "2026-07-25"
+
+# ── Human-readable person ID helpers ─────────────────────────────────────────
+PID = lambda s: f"xiangxi_{s}"
+
+# ── Persons ──────────────────────────────────────────────────────────────────
+persons = [
+    # ═══ LEVEL 0: Prefecture-level leaders ═══
+    {
+        "id": PID("liu_tao"),
+        "name": "刘涛",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1971-06",
+        "birthplace": "河南省方城县",
+        "education": "研究生（河南大学中国现代文学硕士）",
+        "party_join": "1996-11",
+        "work_start": "1997-07",
+        "current_post": "湘西州委书记",
+        "current_org": "中共湘西土家族苗族自治州委员会",
+        "source": "https://baike.baidu.com/item/%E5%88%98%E6%B6%9B/1971%E5%B9%B4",
+    },
+    {
+        "id": PID("shang_shenglong"),
+        "name": "尚生龙",
+        "gender": "男",
+        "ethnicity": "土家族",
+        "birth": "1975-02",
+        "birthplace": "湖南省桑植县",
+        "education": "省委党校在职研究生（法学理论）",
+        "party_join": "1996-01",
+        "work_start": "1997-07",
+        "current_post": "湘西州代理州长",
+        "current_org": "湘西土家族苗族自治州人民政府",
+        "source": "https://baike.baidu.com/item/%E5%B0%9A%E7%94%9F%E9%BE%99/9023713",
+    },
+    {
+        "id": PID("guo_zhenggui"),
+        "name": "虢正贵",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1964-09",
+        "birthplace": "湖南省长沙市望城区",
+        "education": "大专（长沙基础大学物理专业）",
+        "party_join": "1984-06",
+        "work_start": "1984-07",
+        "current_post": "湖南省政协副主席",
+        "current_org": "湖南省政协",
+        "source": "https://baike.baidu.com/item/%E8%99%A2%E6%AD%A3%E8%B4%B5",
+    },
+    {
+        "id": PID("chen_hua"),
+        "name": "陈华",
+        "gender": "女",
+        "ethnicity": "土家族",
+        "birth": "1967-12",
+        "birthplace": "湖南省石门县",
+        "education": "中央党校研究生（经济管理）",
+        "party_join": "1990-06",
+        "work_start": "1990-07",
+        "current_post": "前任湘西州州长（另有任用）",
+        "current_org": "",
+        "source": "https://baike.baidu.com/item/%E9%99%88%E5%8D%8E/20117663",
+    },
+    {
+        "id": PID("gong_minghan"),
+        "name": "龚明汉",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1964-09",
+        "birthplace": "湖南省张家界市永定区",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "州人大常委会主任",
+        "current_org": "湘西土家族苗族自治州人大常委会",
+        "source": "https://zh.wikipedia.org/wiki/湘西土家族苗族自治州",
+    },
+    {
+        "id": PID("xiang_bangwei"),
+        "name": "向邦伟",
+        "gender": "男",
+        "ethnicity": "土家族",
+        "birth": "1969-03",
+        "birthplace": "",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "州政协主席",
+        "current_org": "政协湘西土家族苗族自治州委员会",
+        "source": "https://zh.wikipedia.org/wiki/湘西土家族苗族自治州",
+    },
+
+    # ═══ 8 counties/cities ═══
+    # --- 吉首市 ---
+    {
+        "id": PID("zhou_lizhi"),
+        "name": "周立志",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1978-05",
+        "birthplace": "湖南省永州市",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "吉首市委书记",
+        "current_org": "中共吉首市委员会",
+        "source": "https://zh.wikipedia.org/wiki/吉首市",
+    },
+    {
+        "id": PID("fu_jiasheng"),
+        "name": "符家盛",
+        "gender": "男",
+        "ethnicity": "苗族",
+        "birth": "1973-04",
+        "birthplace": "湖南省龙山县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "吉首市市长",
+        "current_org": "吉首市人民政府",
+        "source": "https://zh.wikipedia.org/wiki/吉首市",
+    },
+    # --- 泸溪县 ---
+    {
+        "id": PID("fu_jiabo"),
+        "name": "符家波",
+        "gender": "男",
+        "ethnicity": "苗族",
+        "birth": "1979-05",
+        "birthplace": "",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "泸溪县委书记",
+        "current_org": "中共泸溪县委员会",
+        "source": "https://zh.wikipedia.org/wiki/泸溪县",
+    },
+    {
+        "id": PID("he_li"),
+        "name": "贺立",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1988-12",
+        "birthplace": "湖南省长沙县",
+        "education": "研究生",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "泸溪县县长",
+        "current_org": "泸溪县人民政府",
+        "source": "https://zh.wikipedia.org/wiki/泸溪县",
+    },
+    # --- 凤凰县 ---
+    {
+        "id": PID("mao_jia"),
+        "name": "毛家",
+        "gender": "男",
+        "ethnicity": "土家族",
+        "birth": "1973-10",
+        "birthplace": "湖南省永顺县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "凤凰县委书记",
+        "current_org": "中共凤凰县委员会",
+        "source": "https://zh.wikipedia.org/wiki/凤凰县",
+    },
+    {
+        "id": PID("fan_zhongqing"),
+        "name": "樊忠清",
+        "gender": "男",
+        "ethnicity": "苗族",
+        "birth": "1975-10",
+        "birthplace": "湖南省花垣县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "凤凰县县长",
+        "current_org": "凤凰县人民政府",
+        "source": "https://zh.wikipedia.org/wiki/凤凰县",
+    },
+    # --- 花垣县 ---
+    {
+        "id": PID("wang_jinghai"),
+        "name": "王京海",
+        "gender": "男",
+        "ethnicity": "土家族",
+        "birth": "1975-09",
+        "birthplace": "湖南省慈利县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "花垣县委书记兼县长",
+        "current_org": "中共花垣县委员会",
+        "source": "https://zh.wikipedia.org/wiki/花垣县",
+    },
+    # --- 保靖县 ---
+    {
+        "id": PID("zhou_jianwu"),
+        "name": "周建武",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1977-11",
+        "birthplace": "湖南省涟源市",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "保靖县委书记",
+        "current_org": "中共保靖县委员会",
+        "source": "https://zh.wikipedia.org/wiki/保靖县",
+    },
+    {
+        "id": PID("guo_yingxiang"),
+        "name": "郭应湘",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1979-06",
+        "birthplace": "湖南省桂东县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "保靖县县长",
+        "current_org": "保靖县人民政府",
+        "source": "https://zh.wikipedia.org/wiki/保靖县",
+    },
+    # --- 古丈县 ---
+    {
+        "id": PID("teng_zhaohui"),
+        "name": "滕朝辉",
+        "gender": "男",
+        "ethnicity": "土家族",
+        "birth": "1974-10",
+        "birthplace": "",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "古丈县委书记",
+        "current_org": "中共古丈县委员会",
+        "source": "https://zh.wikipedia.org/wiki/古丈县",
+    },
+    {
+        "id": PID("chen_jianxin"),
+        "name": "陈建新",
+        "gender": "男",
+        "ethnicity": "汉族",
+        "birth": "1979-06",
+        "birthplace": "湖南省衡东县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "古丈县县长",
+        "current_org": "古丈县人民政府",
+        "source": "https://zh.wikipedia.org/wiki/古丈县",
+    },
+    # --- 永顺县 ---
+    {
+        "id": PID("xiang_jiamao"),
+        "name": "向加茂",
+        "gender": "男",
+        "ethnicity": "苗族",
+        "birth": "1973-02",
+        "birthplace": "",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "永顺县委书记兼县长",
+        "current_org": "中共永顺县委员会",
+        "source": "https://zh.wikipedia.org/wiki/永顺县",
+    },
+    # --- 龙山县 ---
+    {
+        "id": PID("shi_rongfen"),
+        "name": "时荣芬",
+        "gender": "女",
+        "ethnicity": "苗族",
+        "birth": "1976-12",
+        "birthplace": "湖南省花垣县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "龙山县县委书记",
+        "current_org": "中共龙山县委员会",
+        "source": "https://zh.wikipedia.org/wiki/龙山县",
+    },
+    {
+        "id": PID("zhou_shengyi"),
+        "name": "周胜益",
+        "gender": "男",
+        "ethnicity": "苗族",
+        "birth": "1972-09",
+        "birthplace": "湖南省保靖县",
+        "education": "",
+        "party_join": "",
+        "work_start": "",
+        "current_post": "龙山县县长",
+        "current_org": "龙山县人民政府",
+        "source": "https://zh.wikipedia.org/wiki/龙山县",
+    },
+]
+
+# ── Organizations ────────────────────────────────────────────────────────────
+organizations = [
+    # Prefecture level
+    {"id": 1, "name": "中共湘西土家族苗族自治州委员会", "type": "party_committee", "level": "prefecture", "parent": "中共湖南省委", "location": "吉首市"},
+    {"id": 2, "name": "湘西土家族苗族自治州人民政府", "type": "government", "level": "prefecture", "parent": "湖南省人民政府", "location": "吉首市"},
+    {"id": 3, "name": "湘西土家族苗族自治州人大常委会", "type": "npc", "level": "prefecture", "parent": "湖南省人大常委会", "location": "吉首市"},
+    {"id": 4, "name": "政协湘西土家族苗族自治州委员会", "type": "cppcc", "level": "prefecture", "parent": "湖南省政协", "location": "吉首市"},
+
+    # 吉首市
+    {"id": 5, "name": "中共吉首市委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "吉首市"},
+    {"id": 6, "name": "吉首市人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "吉首市"},
+
+    # 泸溪县
+    {"id": 7, "name": "中共泸溪县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "泸溪县"},
+    {"id": 8, "name": "泸溪县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "泸溪县"},
+
+    # 凤凰县
+    {"id": 9, "name": "中共凤凰县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "凤凰县"},
+    {"id": 10, "name": "凤凰县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "凤凰县"},
+
+    # 花垣县
+    {"id": 11, "name": "中共花垣县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "花垣县"},
+    {"id": 12, "name": "花垣县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "花垣县"},
+
+    # 保靖县
+    {"id": 13, "name": "中共保靖县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "保靖县"},
+    {"id": 14, "name": "保靖县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "保靖县"},
+
+    # 古丈县
+    {"id": 15, "name": "中共古丈县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "古丈县"},
+    {"id": 16, "name": "古丈县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "古丈县"},
+
+    # 永顺县
+    {"id": 17, "name": "中共永顺县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "永顺县"},
+    {"id": 18, "name": "永顺县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "永顺县"},
+
+    # 龙山县
+    {"id": 19, "name": "中共龙山县委员会", "type": "party_committee", "level": "county", "parent": "中共湘西州委", "location": "龙山县"},
+    {"id": 20, "name": "龙山县人民政府", "type": "government", "level": "county", "parent": "湘西州人民政府", "location": "龙山县"},
+]
+
+# ── Map person string IDs to integer IDs ─────────────────────────────────────
+PERSON_MAP = {p["id"]: idx + 1 for idx, p in enumerate(persons)}
+ORG_MAP = {o["id"]: o["id"] for o in organizations}
+
+# ── Positions ────────────────────────────────────────────────────────────────
+positions = [
+    # Prefecture level
+    {"person_id": PERSON_MAP[PID("liu_tao")], "org_id": 1, "title": "州委书记", "start_date": "2024-10", "end_date": "present", "rank": "正厅级", "note": ""},
+    {"person_id": PERSON_MAP[PID("shang_shenglong")], "org_id": 2, "title": "代理州长", "start_date": "2026-06", "end_date": "present", "rank": "正厅级", "note": "2026.06.17任副州长、代理州长"},
+    {"person_id": PERSON_MAP[PID("guo_zhenggui")], "org_id": 1, "title": "前任州委书记", "start_date": "2021-03", "end_date": "2024-10", "rank": "正厅级", "note": "现任省政协副主席"},
+    {"person_id": PERSON_MAP[PID("chen_hua")], "org_id": 2, "title": "前任州长", "start_date": "2023-01", "end_date": "2026-06", "rank": "正厅级", "note": "另有任用"},
+    {"person_id": PERSON_MAP[PID("gong_minghan")], "org_id": 3, "title": "州人大常委会主任", "start_date": "2021-01", "end_date": "present", "rank": "正厅级", "note": ""},
+    {"person_id": PERSON_MAP[PID("xiang_bangwei")], "org_id": 4, "title": "州政协主席", "start_date": "2026-02", "end_date": "present", "rank": "正厅级", "note": ""},
+
+    # 吉首市
+    {"person_id": PERSON_MAP[PID("zhou_lizhi")], "org_id": 5, "title": "吉首市委书记", "start_date": "2023-10", "end_date": "present", "rank": "正处级", "note": "同时任州委常委"},
+    {"person_id": PERSON_MAP[PID("fu_jiasheng")], "org_id": 6, "title": "吉首市市长", "start_date": "2020-04", "end_date": "present", "rank": "正处级", "note": ""},
+
+    # 泸溪县
+    {"person_id": PERSON_MAP[PID("fu_jiabo")], "org_id": 7, "title": "泸溪县委书记", "start_date": "2025-11", "end_date": "present", "rank": "正处级", "note": "2025.11.24升任县委书记; 原县长"},
+    {"person_id": PERSON_MAP[PID("he_li")], "org_id": 8, "title": "泸溪县县长", "start_date": "2026-01", "end_date": "present", "rank": "正处级", "note": "2026.01.16当选; 此前为岳阳县委常委/常务副县长"},
+
+    # 凤凰县
+    {"person_id": PERSON_MAP[PID("mao_jia")], "org_id": 9, "title": "凤凰县委书记", "start_date": "2022-01", "end_date": "present", "rank": "正处级", "note": ""},
+    {"person_id": PERSON_MAP[PID("fan_zhongqing")], "org_id": 10, "title": "凤凰县县长", "start_date": "2022-03", "end_date": "present", "rank": "正处级", "note": ""},
+
+    # 花垣县
+    {"person_id": PERSON_MAP[PID("wang_jinghai")], "org_id": 11, "title": "花垣县委书记", "start_date": "2025-02", "end_date": "present", "rank": "正处级", "note": "兼县长"},
+    {"person_id": PERSON_MAP[PID("wang_jinghai")], "org_id": 12, "title": "花垣县县长", "start_date": "2022-03", "end_date": "present", "rank": "正处级", "note": ""},
+
+    # 保靖县
+    {"person_id": PERSON_MAP[PID("zhou_jianwu")], "org_id": 13, "title": "保靖县委书记", "start_date": "2024-06", "end_date": "present", "rank": "正处级", "note": ""},
+    {"person_id": PERSON_MAP[PID("guo_yingxiang")], "org_id": 14, "title": "保靖县县长", "start_date": "2024-07", "end_date": "present", "rank": "正处级", "note": ""},
+
+    # 古丈县
+    {"person_id": PERSON_MAP[PID("teng_zhaohui")], "org_id": 15, "title": "古丈县委书记", "start_date": "2023-12", "end_date": "present", "rank": "正处级", "note": ""},
+    {"person_id": PERSON_MAP[PID("chen_jianxin")], "org_id": 16, "title": "古丈县县长", "start_date": "2024-07", "end_date": "present", "rank": "正处级", "note": ""},
+
+    # 永顺县
+    {"person_id": PERSON_MAP[PID("xiang_jiamao")], "org_id": 17, "title": "永顺县委书记", "start_date": "2025-02", "end_date": "present", "rank": "正处级", "note": "兼县长"},
+    {"person_id": PERSON_MAP[PID("xiang_jiamao")], "org_id": 18, "title": "永顺县县长", "start_date": "2021-10", "end_date": "present", "rank": "正处级", "note": ""},
+
+    # 龙山县
+    {"person_id": PERSON_MAP[PID("shi_rongfen")], "org_id": 19, "title": "龙山县县委书记", "start_date": "2022-01", "end_date": "present", "rank": "正处级", "note": ""},
+    {"person_id": PERSON_MAP[PID("zhou_shengyi")], "org_id": 20, "title": "龙山县县长", "start_date": "2022-03", "end_date": "present", "rank": "正处级", "note": ""},
+]
+
+# ── Relationships ────────────────────────────────────────────────────────────
+relationships = [
+    # Prefecture-level key relationships
+    {"person_a": PERSON_MAP[PID("guo_zhenggui")], "person_b": PERSON_MAP[PID("liu_tao")],
+     "type": "predecessor_successor",
+     "context": "虢正贵2024年10月卸任后刘涛接任湘西州委书记",
+     "overlap_org": "中共湘西州委", "overlap_period": "2024-10"},
+    {"person_a": PERSON_MAP[PID("liu_tao")], "person_b": PERSON_MAP[PID("shang_shenglong")],
+     "type": "colleague",
+     "context": "刘涛（州委书记）与尚生龙（代理州长）搭班",
+     "overlap_org": "湘西州", "overlap_period": "2026-06起"},
+    {"person_a": PERSON_MAP[PID("chen_hua")], "person_b": PERSON_MAP[PID("shang_shenglong")],
+     "type": "predecessor_successor",
+     "context": "陈华2026年6月卸任后尚生龙接任代理州长",
+     "overlap_org": "湘西州人民政府", "overlap_period": "2026-06"},
+    {"person_a": PERSON_MAP[PID("guo_zhenggui")], "person_b": PERSON_MAP[PID("chen_hua")],
+     "type": "colleague",
+     "context": "虢正贵（州委书记）与陈华（州长）曾搭班约2年",
+     "overlap_org": "湘西州", "overlap_period": "2023-01至2024-10"},
+    {"person_a": PERSON_MAP[PID("liu_tao")], "person_b": PERSON_MAP[PID("chen_hua")],
+     "type": "colleague",
+     "context": "刘涛（州委书记）与陈华（州长）搭班约1年半",
+     "overlap_org": "湘西州", "overlap_period": "2024-10至2026-06"},
+
+    # County-level 书记-县长 colleague relationships
+    {"person_a": PERSON_MAP[PID("zhou_lizhi")], "person_b": PERSON_MAP[PID("fu_jiasheng")],
+     "type": "colleague",
+     "context": "周立志（吉首市委书记）与符家盛（吉首市长）搭班",
+     "overlap_org": "吉首市", "overlap_period": "2023-10起"},
+    {"person_a": PERSON_MAP[PID("fu_jiabo")], "person_b": PERSON_MAP[PID("he_li")],
+     "type": "colleague",
+     "context": "符家波（泸溪县委书记）与贺立（泸溪县长）搭班",
+     "overlap_org": "泸溪县", "overlap_period": "2026-01起"},
+    {"person_a": PERSON_MAP[PID("mao_jia")], "person_b": PERSON_MAP[PID("fan_zhongqing")],
+     "type": "colleague",
+     "context": "毛家（凤凰县委书记）与樊忠清（凤凰县长）搭班",
+     "overlap_org": "凤凰县", "overlap_period": "2022-03起"},
+    {"person_a": PERSON_MAP[PID("zhou_jianwu")], "person_b": PERSON_MAP[PID("guo_yingxiang")],
+     "type": "colleague",
+     "context": "周建武（保靖县委书记）与郭应湘（保靖县长）搭班",
+     "overlap_org": "保靖县", "overlap_period": "2024-07起"},
+    {"person_a": PERSON_MAP[PID("teng_zhaohui")], "person_b": PERSON_MAP[PID("chen_jianxin")],
+     "type": "colleague",
+     "context": "滕朝辉（古丈县委书记）与陈建新（古丈县长）搭班",
+     "overlap_org": "古丈县", "overlap_period": "2024-07起"},
+    {"person_a": PERSON_MAP[PID("shi_rongfen")], "person_b": PERSON_MAP[PID("zhou_shengyi")],
+     "type": "colleague",
+     "context": "时荣芬（龙山县委书记）与周胜益（龙山县县长）搭班",
+     "overlap_org": "龙山县", "overlap_period": "2022-03起"},
+
+    # Same native place connections (weak)
+    {"person_a": PERSON_MAP[PID("fan_zhongqing")], "person_b": PERSON_MAP[PID("shi_rongfen")],
+     "type": "same_native_place",
+     "context": "樊忠清（凤凰县长）与时荣芬（龙山县委书记）同为中国湖南省花垣县人",
+     "overlap_org": "", "overlap_period": ""},
+]
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BUILD
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Staging-aware paths ─────────────────────────────────────────────────
+_CURRENT_DIR = Path(__file__).parent.resolve()
+_STAGING_CANDIDATE = REPO_ROOT / "data" / "tmp" / "hunan_湘西土家族苗族自治州"
+if _CURRENT_DIR.name == "hunan_湘西土家族苗族自治州":
+    STAGING = _CURRENT_DIR
+else:
+    STAGING = _STAGING_CANDIDATE
+
+DB_PATH = STAGING / f"{SLUG}_network.db"
+GEXF_PATH = STAGING / f"{SLUG}_network.gexf"
+
+# ── Build via runner ────────────────────────────────────────────────────
+run_build(
+    slug=SLUG,
+    persons=persons,
+    organizations=organizations,
+    positions=positions,
+    relationships=relationships,
+    db_path=DB_PATH,
+    gexf_path=GEXF_PATH,
+    overwrite=True,
+)
+
+print(f"\n   DB: {DB_PATH}")
+print(f"   GEXF: {GEXF_PATH}")
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PERSON JSONs
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def write_person_json(person: dict, career: list[dict], relationships_list: list[dict],
+                      education_list: list[dict], governance: list[dict],
+                      sources: list[dict], gaps: list[dict], confidence: dict,
+                      professional: dict = None, style: dict = None) -> str:
+    """Write a single person JSON file and return its filename."""
+    person_id = person["id"]
+    slug_name = person["name"]
+    job_short = person["current_post"].replace("/", "_")
+
+    filename = f"{TODAY}-湖南省-{SLUG}-{job_short}-{slug_name}.json"
+
+    doc = {
+        "schema_version": "1.0",
+        "generated_at": TODAY,
+        "investigation_scope": {
+            "province": "湖南省",
+            "city": SLUG,
+            "region": SLUG,
+            "job": job_short,
+            "task_id": "hunan_湘西土家族苗族自治州",
+            "time_focus": "2026年7月",
+        },
+        "identity": {
+            "person_id": person_id,
+            "name": person["name"],
+            "aliases": [],
+            "gender": person.get("gender", ""),
+            "ethnicity": person.get("ethnicity", ""),
+            "birth": person.get("birth", ""),
+            "birthplace": person.get("birthplace", ""),
+            "native_place": "",
+            "education": education_list,
+            "party_join": person.get("party_join", ""),
+            "work_start": person.get("work_start", ""),
+            "dedupe_keys": {
+                "name_birth": f"{person['name']}_{person.get('birth', '')}",
+                "name_birthplace": f"{person['name']}_{person.get('birthplace', '')}",
+                "official_profile_url": person.get("source", ""),
+            },
+        },
+        "current_status": {
+            "current_post": person["current_post"],
+            "current_org": person["current_org"],
+            "administrative_rank": "",
+            "as_of": AS_OF,
+            "is_current_confirmed": True,
+            "source_ids": ["S001"],
+        },
+        "career_timeline": career,
+        "organizations": [],
+        "relationships": relationships_list,
+        "governance_record": governance,
+        "professional_profile": professional or {},
+        "work_style_and_personality": style or {},
+        "network_metrics": {},
+        "risk_and_integrity_signals": [],
+        "source_register": sources,
+        "confidence_summary": confidence,
+        "open_questions": gaps,
+    }
+
+    output_path = STAGING / filename
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, indent=2)
+    print(f"   Person JSON: {output_path}")
+    return filename
+
+
+# ── Shared source register entries ──────────────────────────────────────
+LIU_TAO_SOURCES = [
+    {"id": "S001", "title": "百度百科-刘涛", "url": "https://baike.baidu.com/item/%E5%88%98%E6%B6%9B/1971%E5%B9%B4",
+     "publisher": "百度百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium", "notes": "刘涛，1971年6月生，河南方城人"},
+    {"id": "S002", "title": "湘西网-刘涛报道集", "url": "http://www.xxnet.com.cn/news/",
+     "publisher": "湘西网·团结报", "published_at": "", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": "2026年7月刘涛仍在湘西州委书记任上活动"},
+    {"id": "S003", "title": "刘涛到花垣县暗访安全生产", "url": "http://m.xxnet.com.cn/content/2026-07/20/content_332822.html",
+     "publisher": "湘西网", "published_at": "2026-07-20", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": "2026年7月19日刘涛暗访花垣县安全生产"},
+    {"id": "S004", "title": "刘涛主持召开州委常委会会议", "url": "http://www.xxnet.com.cn/news/content/2026-07/13/content_332698.html",
+     "publisher": "湘西网", "published_at": "2026-07-13", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": ""},
+    {"id": "S005", "title": "刘涛到凤凰县调研文旅工作", "url": "https://www.toutiao.com/article/7662545945195741748/",
+     "publisher": "今日头条/湘西网", "published_at": "2026-07-15", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": ""},
+]
+
+SHANG_SOURCES = [
+    {"id": "S001", "title": "百度百科-尚生龙", "url": "https://baike.baidu.com/item/%E5%B0%9A%E7%94%9F%E9%BE%99/9023713",
+     "publisher": "百度百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium", "notes": "尚生龙，1975年2月生，湖南桑植人，土家族"},
+    {"id": "S002", "title": "中国经济网-尚生龙任湘西州代州长", "url": "http://district.ce.cn/newarea/sddy/202606/t20260622_3044364.shtml",
+     "publisher": "中国经济网", "published_at": "2026-06-22", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": "2026年6月17日任命为副州长、代理州长"},
+    {"id": "S003", "title": "腾讯新闻-尚生龙任邵阳市委副书记", "url": "https://news.qq.com/rain/a/20250219A004RG00",
+     "publisher": "腾讯新闻", "published_at": "2025-02-19", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": "2025年2月任邵阳市委副书记"},
+    {"id": "S004", "title": "jendow百科-尚生龙", "url": "https://www.jendow.com.tw/wiki/%E5%B0%9A%E7%94%9F%E9%BE%8D",
+     "publisher": "jendow百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium", "notes": "完整基层履历：三家馆乡→桑植县→张家界市"},
+    {"id": "S005", "title": "新湖南-尚生龙任邵阳副书记", "url": "https://m.voc.com.cn/xhn/news/202502/27771467.html",
+     "publisher": "新湖南", "published_at": "2025-02-18", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": "此前任张家界市委常委、常务副市长"},
+]
+
+CHEN_HUA_SOURCES = [
+    {"id": "S001", "title": "百度百科-陈华", "url": "https://baike.baidu.com/item/%E9%99%88%E5%8D%8E/20117663",
+     "publisher": "百度百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium", "notes": "陈华，女，土家族，1967年12月生，湖南石门人"},
+    {"id": "S002", "title": "中国经济网-尚生龙任湘西州委副书记 陈华另有任用", "url": "http://district.ce.cn/newarea/sddy/202606/t20260609_3019808.shtml",
+     "publisher": "中国经济网", "published_at": "2026-06-09", "accessed_at": AS_OF, "source_type": "media", "reliability": "high", "notes": "2026年6月陈华不再担任湘西州委副书记、州长"},
+    {"id": "S003", "title": "湘西州人大常委会人事任免", "url": "https://xx.voc.com.cn/news/202606/32929145.html",
+     "publisher": "新湖南·湘西频道", "published_at": "2026-06-17", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "接受陈华辞去州长职务"},
+    {"id": "S004", "title": "湖南省政府-陈华专访", "url": "http://www.hunan.gov.cn/topic/2026ybg/202602/t20260209_33913164.html",
+     "publisher": "湖南省人民政府门户网站", "published_at": "2026-02-09", "accessed_at": AS_OF, "source_type": "official", "reliability": "high", "notes": "2026年2月陈华仍以州长身份接受采访"},
+]
+
+GUO_SOURCES = [
+    {"id": "S001", "title": "百度百科-虢正贵", "url": "https://baike.baidu.com/item/%E8%99%A2%E6%AD%A3%E8%B4%B5",
+     "publisher": "百度百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium", "notes": "虢正贵，1964年9月生，长沙望城人"},
+    {"id": "S002", "title": "Wikipedia-虢正贵", "url": "https://zh.wikipedia.org/wiki/虢正贵",
+     "publisher": "维基百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium", "notes": ""},
+]
+
+# ── Person JSON: 刘涛 ──────────────────────────────────────────────────
+write_person_json(
+    person=next(p for p in persons if p["id"] == PID("liu_tao")),
+    career=[
+        {"start": "1994-09", "end": "1997-07", "org": "河南大学", "title": "中国现代文学专业硕士研究生", "level": "", "location": "开封", "system": "education", "rank": "", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "~2008", "end": "2015-02", "org": "河南省劳动和社会保障厅", "title": "副厅长", "level": "副厅级", "location": "郑州", "system": "government", "rank": "副厅级", "is_key_promotion": True, "notes": "具体到任时间需进一步确认", "confidence": "plausible", "source_ids": ["S001"]},
+        {"start": "2015-02", "end": "2017-12", "org": "中共焦作市委", "title": "焦作市委常委、组织部部长", "level": "副厅级", "location": "焦作", "system": "organization", "rank": "副厅级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2017-12", "end": "2021-07", "org": "中共焦作市委", "title": "焦作市委副书记（2018.01兼统战部长）", "level": "副厅级", "location": "焦作", "system": "party", "rank": "副厅级", "is_key_promotion": True, "notes": "2018年1月起兼任统战部长", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2021-07", "end": "2024-10", "org": "许昌市人民政府", "title": "许昌市委副书记、市长", "level": "正厅级", "location": "许昌", "system": "government", "rank": "正厅级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2024-10", "end": "present", "org": "中共湘西州委", "title": "湘西州委书记", "level": "正厅级", "location": "吉首", "system": "party", "rank": "正厅级", "is_key_promotion": True, "notes": "跨省调任，首位外省籍湘西州委书记", "confidence": "confirmed", "source_ids": ["S001", "S002", "S003"]},
+    ],
+    relationships_list=[
+        {"person": "虢正贵", "person_id": PID("guo_zhenggui"), "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "虢正贵卸任后刘涛接任", "overlap_org": "中共湘西州委", "overlap_period": "2024-10", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"person": "尚生龙", "person_id": PID("shang_shenglong"), "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "书记-代理州长搭班", "overlap_org": "湘西州", "overlap_period": "2026-06起", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S002"]},
+        {"person": "陈华", "person_id": PID("chen_hua"), "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "刘涛任书记时陈华为州长", "overlap_org": "湘西州", "overlap_period": "2024-10至2026-06", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S002"]},
+    ],
+    education_list=[{"period": "~1990-1994", "institution": "河南大学中文系", "major": "语言文学", "degree": "学士", "study_type": "full_time", "source_ids": ["S001"]},
+                     {"period": "1994-1997", "institution": "河南大学文学院", "major": "中国现代文学", "degree": "硕士", "study_type": "full_time", "source_ids": ["S001"]}],
+    governance=[
+        {"period": "2024-10至2026-07", "domain": "public_security", "achievement_or_event": "多次暗访检查安全生产，推动安全生产翻身仗", "role_in_event": "州委书记（督导）", "measurable_outcome": "在全州推进安全生产单元格管理", "location": "湘西州", "confidence": "confirmed", "source_ids": ["S003", "S004"]},
+        {"period": "2026-07", "domain": "economic_development", "achievement_or_event": "走访调研花垣县吉首市重点企业，推进企业服务年行动", "role_in_event": "州委书记", "measurable_outcome": "为多家企业协调融资、用工等需求", "location": "花垣县、吉首市", "confidence": "confirmed", "source_ids": ["S005"]},
+        {"period": "2026-05", "domain": "other", "achievement_or_event": "到保靖县接待信访群众，推动信访机制优化", "role_in_event": "州委书记（接访）", "measurable_outcome": "推动'321'工作机制和'四应四不'信访事项督办", "location": "保靖县", "confidence": "confirmed", "source_ids": []},
+    ],
+    sources=LIU_TAO_SOURCES,
+    gaps=[{"priority": "medium", "question": "刘涛1997-2008年（硕士毕业后到河南省劳动和社会保障厅副厅长之间）的具体履历", "why_it_matters": "覆盖约10年的早期职业生涯，包含从省级部门到副厅级的关键晋升", "suggested_queries": ["刘涛 河南省劳动厅", "刘涛 早期 简历", "刘涛 1998"], "last_attempted": AS_OF}],
+    confidence={"identity": "confirmed", "current_role": "confirmed", "career_completeness": "partial", "relationship_confidence": "high", "biggest_gap": "1997-2008年早期履历"},
+    professional={"primary_specializations": ["组织人事", "地方治理"], "career_pattern": "cross_province_rotation", "systems_experience": ["organization", "party", "government"], "geographic_pattern": ["河南", "湖南"], "promotion_velocity": {"summary": "正常晋升，55岁任正厅级"}},
+    style={"public_style_indicators": [{"trait": "grassroots_oriented", "evidence": "多次暗访、突击检查安全生产", "confidence": "confirmed", "source_ids": ["S003"]}], "caveat": "Work style inferred from public records."},
+)
+
+
+# ── Person JSON: 尚生龙 ────────────────────────────────────────────────
+write_person_json(
+    person=next(p for p in persons if p["id"] == PID("shang_shenglong")),
+    career=[
+        {"start": "1994-09", "end": "1997-07", "org": "湖南税务高等专科学校", "title": "税务专业大专学习", "level": "", "location": "长沙", "system": "education", "rank": "", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001", "S004"]},
+        {"start": "1997-07", "end": "1999-08", "org": "张家界市永定区三家馆乡", "title": "党政办秘书、综治办主任、人武部副部长", "level": "乡科级", "location": "张家界永定区", "system": "government", "rank": "科员", "is_key_promotion": False, "notes": "基层起步", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "1999-08", "end": "2000-09", "org": "张家界市永定区三家馆乡", "title": "乡党委委员、人武部部长", "level": "乡科级", "location": "张家界永定区", "system": "government", "rank": "副科级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "2000-09", "end": "2001-01", "org": "张家界市永定区三家馆乡", "title": "乡党委副书记、人武部部长", "level": "乡科级", "location": "张家界永定区", "system": "government", "rank": "副科级", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "2001-01", "end": "2003-02", "org": "张家界市永定区三家馆乡", "title": "乡党委副书记、乡长", "level": "乡科级", "location": "张家界永定区", "system": "government", "rank": "正科级", "is_key_promotion": True, "notes": "其间2000.08-2002.12中央党校函授本科经济管理专业学习", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "2003-02", "end": "2004-03", "org": "张家界市永定区三家馆乡", "title": "乡党委书记", "level": "乡科级", "location": "张家界永定区", "system": "party", "rank": "正科级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "2004-03", "end": "2004-12", "org": "中共张家界市永定区委", "title": "永定区委常委（兼三家馆乡党委书记）", "level": "副处级", "location": "张家界永定区", "system": "party", "rank": "副处级", "is_key_promotion": True, "notes": "进入区县级领导层", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "2004-12", "end": "2006-06", "org": "张家界市永定区崇文街道办事处", "title": "永定区委常委、崇文街道党委书记", "level": "副处级", "location": "张家界永定区", "system": "party", "rank": "副处级", "is_key_promotion": False, "notes": "其间2005.09参加中央党校在职研究生班; 2005.11-2006.01挂职北京石景山区老山街道工委副书记", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"start": "2006-06", "end": "2007-12", "org": "中共桑植县委", "title": "桑植县委常委、澧源镇党委书记（2006.08提名为镇人大主席候选人）", "level": "副处级", "location": "桑植县", "system": "party", "rank": "副处级", "is_key_promotion": True, "notes": "调回家乡桑植县", "confidence": "confirmed", "source_ids": ["S001", "S003", "S004"]},
+        {"start": "2007-12", "end": "2009-04", "org": "桑植县人民政府", "title": "桑植县委常委、副县长、党组成员", "level": "副处级", "location": "桑植县", "system": "government", "rank": "副处级", "is_key_promotion": False, "notes": "其间2005.09-2008.07省委党校在职研究生班法学理论专业学习", "confidence": "confirmed", "source_ids": ["S001", "S004"]},
+        {"start": "2009-04", "end": "2017-01", "org": "桑植县人民政府", "title": "桑植县委常委、常务副县长、党组副书记", "level": "副处级", "location": "桑植县", "system": "government", "rank": "副处级", "is_key_promotion": True, "notes": "常务副县长，主持政府日常工作", "confidence": "confirmed", "source_ids": ["S001", "S004"]},
+        {"start": "2017-01", "end": "2021-04", "org": "张家界市人民政府", "title": "张家界市副市长、党组成员", "level": "副厅级", "location": "张家界", "system": "government", "rank": "副厅级", "is_key_promotion": True, "notes": "分管农业、农村、扶贫、水利、防汛抗旱、林业、民政等工作", "confidence": "confirmed", "source_ids": ["S001", "S003"]},
+        {"start": "2021-04", "end": "2025-02", "org": "中共张家界市委", "title": "张家界市委常委、副市长（后转任常务副市长）", "level": "副厅级", "location": "张家界", "system": "party", "rank": "副厅级", "is_key_promotion": True, "notes": "2022年1月张家界市第八届人大一次会议当选副市长; 后转任常务副市长", "confidence": "confirmed", "source_ids": ["S001", "S005"]},
+        {"start": "2025-02", "end": "2026-06", "org": "中共邵阳市委", "title": "邵阳市委副书记、市委教育工委书记", "level": "副厅级", "location": "邵阳", "system": "party", "rank": "副厅级", "is_key_promotion": True, "notes": "2025年2月任邵阳市委委员、常委、副书记", "confidence": "confirmed", "source_ids": ["S003", "S005"]},
+        {"start": "2026-06", "end": "present", "org": "湘西土家族苗族自治州人民政府", "title": "湘西州代理州长、州委副书记", "level": "正厅级", "location": "吉首市", "system": "government", "rank": "正厅级", "is_key_promotion": True, "notes": "2026.06.09任湘西州委副书记; 2026.06.17任副州长、代理州长", "confidence": "confirmed", "source_ids": ["S002", "S003"]},
+    ],
+    relationships_list=[
+        {"person": "刘涛", "person_id": PID("liu_tao"), "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "州委书记与代理州长搭班", "overlap_org": "湘西州", "overlap_period": "2026-06起", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S002"]},
+    ],
+    education_list=[{"period": "1994-1997", "institution": "湖南税务高等专科学校", "major": "税务", "degree": "大专", "study_type": "full_time", "source_ids": ["S001", "S004"]},
+                     {"period": "2000-2002", "institution": "中央党校函授学院", "major": "经济管理", "degree": "本科", "study_type": "part_time", "source_ids": ["S004"]},
+                     {"period": "2005-2008", "institution": "湖南省委党校", "major": "法学理论", "degree": "在职研究生", "study_type": "party_school", "source_ids": ["S001"]}],
+    governance=[
+        {"period": "2017-2021", "domain": "agriculture", "achievement_or_event": "分管农业、农村、扶贫、水利等工作", "role_in_event": "张家界市副市长", "measurable_outcome": "", "location": "张家界", "confidence": "confirmed", "source_ids": []},
+        {"period": "2021-2025", "domain": "economic_development", "achievement_or_event": "任常务副市长期间负责宁张对口合作", "role_in_event": "张家界市委常委、常务副市长", "measurable_outcome": "推进张家界与南京对口合作", "location": "张家界", "confidence": "confirmed", "source_ids": []},
+    ],
+    sources=SHANG_SOURCES,
+    gaps=[{"priority": "low", "question": "尚生龙2009-2017任桑植县常务副县长期间的具体政绩", "why_it_matters": "长约8年的桑植县政府常务工作经历", "suggested_queries": ["尚生龙 桑植 常务副县长"], "last_attempted": AS_OF}],
+    confidence={"identity": "confirmed", "current_role": "confirmed", "career_completeness": "complete", "relationship_confidence": "high", "biggest_gap": "无重大缺口"},
+    professional={"primary_specializations": ["乡镇基层治理", "县域经济", "地方财政"], "career_pattern": "local_ladder", "systems_experience": ["government", "party"], "geographic_pattern": ["永定区", "桑植", "张家界", "邵阳", "湘西"], "promotion_velocity": {"summary": "从乡镇基层逐步晋升，23年从科员至正厅级"}},
+    style={"public_style_indicators": [{"trait": "grassroots_oriented", "evidence": "从乡镇秘书起步，长期在基层和县区工作", "confidence": "confirmed", "source_ids": ["S004"]}, {"trait": "pragmatic", "evidence": "在环保督察整改、对口合作等工作中以务实著称", "confidence": "plausible", "source_ids": []}], "caveat": "Work style is inferred from public records."},
+)
+
+
+# ── Person JSON: 陈华 ──────────────────────────────────────────────────
+write_person_json(
+    person=next(p for p in persons if p["id"] == PID("chen_hua")),
+    career=[
+        {"start": "1987-09", "end": "1990-07", "org": "常德师专", "title": "英语专业学生", "level": "", "location": "常德", "system": "education", "rank": "", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "1990-07", "end": "1995-02", "org": "石门县一中", "title": "教师", "level": "", "location": "石门县", "system": "education", "rank": "", "is_key_promotion": False, "notes": "任教约5年", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "1995-02", "end": "1996-07", "org": "中共石门县委组织部", "title": "干部", "level": "乡科级", "location": "石门县", "system": "organization", "rank": "科员", "is_key_promotion": True, "notes": "1993.09-1996.07湖南师范大学英语专业函授本科", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "1996-07", "end": "1998-01", "org": "石门县连杆厂", "title": "党支部副书记、厂长助理", "level": "乡科级", "location": "石门县", "system": "state_owned_enterprise", "rank": "副科级", "is_key_promotion": False, "notes": "企业挂职", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "1998-01", "end": "2000-12", "org": "石门县二都乡", "title": "乡党委副书记、乡长; 宝峰开发区党委副书记、副主任、副总经理", "level": "乡科级", "location": "石门县", "system": "government", "rank": "正科级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2000-12", "end": "2002-05", "org": "石门县维新镇", "title": "镇党委书记", "level": "乡科级", "location": "石门县", "system": "party", "rank": "正科级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2002-05", "end": "2005-08", "org": "中共常德市武陵区委", "title": "武陵区委常委、组织部部长", "level": "副处级", "location": "常德", "system": "organization", "rank": "副处级", "is_key_promotion": True, "notes": "2003.09-2006.07中央党校在职研究生经济管理专业学习", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2005-08", "end": "2007-02", "org": "常德市人民政府", "title": "市政府副秘书长", "level": "副处级", "location": "常德", "system": "government", "rank": "副处级", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2007-02", "end": "2009-09", "org": "常德市外事侨务办公室", "title": "市外侨办主任、党组书记", "level": "正处级", "location": "常德", "system": "government", "rank": "正处级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2009-09", "end": "2010-04", "org": "常德市文化局", "title": "局长、党组书记", "level": "正处级", "location": "常德", "system": "government", "rank": "正处级", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2010-04", "end": "2012-10", "org": "常德市文化广电新闻出版局", "title": "局长、党组书记（2012.02兼市委宣传部副部长）", "level": "正处级", "location": "常德", "system": "government", "rank": "正处级", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2012-12", "end": "2016-09", "org": "常德市人民政府", "title": "常德市副市长、党组成员", "level": "副厅级", "location": "常德", "system": "government", "rank": "副厅级", "is_key_promotion": True, "notes": "2015.12兼市计生协会会长", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2016-09", "end": "2021-09", "org": "中共常德市委", "title": "常德市委常委、统战部部长（兼副市长至2017.01）", "level": "副厅级", "location": "常德", "system": "party", "rank": "副厅级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2021-09", "end": "2022-12", "org": "中共常德市委", "title": "常德市委副书记、统战部部长", "level": "副厅级", "location": "常德", "system": "party", "rank": "副厅级", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2022-12", "end": "2023-01", "org": "湘西土家族苗族自治州人民政府", "title": "湘西州代州长", "level": "正厅级", "location": "吉首市", "system": "government", "rank": "正厅级", "is_key_promotion": True, "notes": "跨市调任", "confidence": "confirmed", "source_ids": ["S001", "S002"]},
+        {"start": "2023-01", "end": "2026-06", "org": "湘西土家族苗族自治州人民政府", "title": "湘西州州长", "level": "正厅级", "location": "吉首市", "system": "government", "rank": "正厅级", "is_key_promotion": True, "notes": "2023.01.09正式当选", "confidence": "confirmed", "source_ids": ["S001", "S003"]},
+    ],
+    relationships_list=[
+        {"person": "虢正贵", "person_id": PID("guo_zhenggui"), "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "虢正贵任州委书记时陈华为州长，搭班约1年9个月", "overlap_org": "湘西州", "overlap_period": "2023-01至2024-10", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"person": "刘涛", "person_id": PID("liu_tao"), "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "刘涛任州委书记后陈华为州长至2026年6月", "overlap_org": "湘西州", "overlap_period": "2024-10至2026-06", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S002"]},
+    ],
+    education_list=[{"period": "1987-1990", "institution": "常德师专", "major": "英语", "degree": "大专", "study_type": "full_time", "source_ids": ["S001"]},
+                     {"period": "1993-1996", "institution": "湖南师范大学", "major": "英语", "degree": "本科", "study_type": "part_time", "source_ids": ["S001"]},
+                     {"period": "2003-2006", "institution": "中央党校", "major": "经济管理", "degree": "研究生", "study_type": "party_school", "source_ids": ["S001"]}],
+    governance=[
+        {"period": "2023-2026", "domain": "rural_revitalization", "achievement_or_event": "推进湘西州从'示范引领'到'全域跨越'的乡村振兴路径", "role_in_event": "州长（主持）", "measurable_outcome": "三分之二脱贫群众依靠产业稳定增收", "location": "湘西州", "confidence": "confirmed", "source_ids": ["S004"]},
+        {"period": "2024-2026", "domain": "economic_development", "achievement_or_event": "推动'1+5+X'现代化产业体系建设", "role_in_event": "州长", "measurable_outcome": "", "location": "湘西州", "confidence": "confirmed", "source_ids": ["S004"]},
+    ],
+    sources=CHEN_HUA_SOURCES,
+    gaps=[{"priority": "critical", "question": "陈华2026年6月'另有任用'的具体去向", "why_it_matters": "前任州长的去向影响网络分析", "suggested_queries": ["陈华 湘西 2026 任命", "陈华 另有任用 新职"], "last_attempted": AS_OF}],
+    confidence={"identity": "confirmed", "current_role": "confirmed", "career_completeness": "complete", "relationship_confidence": "high", "biggest_gap": "卸任后的去向未知"},
+    professional={"primary_specializations": ["组织人事", "文化事业", "统战工作", "地方治理"], "career_pattern": "cross_city_rotation", "systems_experience": ["organization", "government", "party", "education", "propaganda"], "geographic_pattern": ["石门", "常德", "湘西"], "promotion_velocity": {"summary": "从教师起步进入政界，逐步晋升，55岁任正厅级"}},
+    style={"public_style_indicators": [{"trait": "pragmatic", "evidence": "在省两会受访时强调'因地制宜发展新质生产力'", "confidence": "confirmed", "source_ids": ["S004"]}], "caveat": "Work style is inferred from public records."},
+)
+
+
+# ── Person JSON: 虢正贵 ────────────────────────────────────────────────
+write_person_json(
+    person=next(p for p in persons if p["id"] == PID("guo_zhenggui")),
+    career=[
+        {"start": "2002-01", "end": "2006-09", "org": "湖南省宁乡县", "title": "宁乡县委书记", "level": "正处级", "location": "宁乡", "system": "party", "rank": "", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2006-09", "end": "~2008", "org": "长沙市人民政府", "title": "长沙市副市长", "level": "副厅级", "location": "长沙", "system": "government", "rank": "", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "~2008", "end": "~2012", "org": "中共长沙市委", "title": "长沙市委常委", "level": "副厅级", "location": "长沙", "system": "party", "rank": "", "is_key_promotion": True, "notes": "历任统战部长、政法委书记", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "~2012", "end": "2015", "org": "湖南省人民政府", "title": "省政府副秘书长", "level": "副厅级", "location": "长沙", "system": "government", "rank": "", "is_key_promotion": False, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "~2015", "end": "2016", "org": "湖南省人民政府研究室", "title": "省政府研究室主任", "level": "正厅级", "location": "长沙", "system": "government", "rank": "", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "~2016", "end": "2021-03", "org": "湖南湘江新区", "title": "湘江新区管委会主任", "level": "正厅级", "location": "长沙", "system": "development_zone", "rank": "", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"start": "2021-03", "end": "2024-10", "org": "中共湘西州委", "title": "湘西州委书记", "level": "正厅级", "location": "吉首", "system": "party", "rank": "", "is_key_promotion": True, "notes": "", "confidence": "confirmed", "source_ids": ["S001", "S002"]},
+        {"start": "2023-01", "end": "present", "org": "湖南省政协", "title": "湖南省政协副主席", "level": "副部级", "location": "长沙", "system": "other", "rank": "", "is_key_promotion": True, "notes": "2023年1月当选, 2024年10月卸任湘西州委书记后专注省政协工作", "confidence": "confirmed", "source_ids": ["S001"]},
+    ],
+    relationships_list=[
+        {"person": "刘涛", "person_id": PID("liu_tao"), "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "虢正贵卸任后刘涛接任", "overlap_org": "中共湘西州委", "overlap_period": "2024-10", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+        {"person": "陈华", "person_id": PID("chen_hua"), "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "虢正贵任书记时陈华为州长", "overlap_org": "湘西州", "overlap_period": "2023-01至2024-10", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+    ],
+    education_list=[{"period": "", "institution": "长沙基础大学", "major": "物理", "degree": "大专", "study_type": "full_time", "source_ids": ["S001"]}],
+    governance=[],
+    sources=GUO_SOURCES,
+    gaps=[{"priority": "low", "question": "虢正贵1984-2002年早期履历的具体时间线", "why_it_matters": "从参加工作到宁乡县委书记前约18年的完整履历", "suggested_queries": ["虢正贵 早期 简历 1984"], "last_attempted": AS_OF}],
+    confidence={"identity": "confirmed", "current_role": "confirmed", "career_completeness": "partial", "relationship_confidence": "high", "biggest_gap": "1984-2002年早期履历"},
+    professional={"primary_specializations": ["地方治理", "新区开发"], "career_pattern": "local_ladder", "systems_experience": ["government", "party", "development_zone"], "geographic_pattern": ["宁乡", "长沙", "湘西"], "promotion_velocity": {"summary": "从县委书记到省部级副职约21年"}},
+    style={"public_style_indicators": [], "caveat": "Work style is inferred from public records."},
+)
+
+
+print(f"\n✅ All artifacts written to {STAGING}")

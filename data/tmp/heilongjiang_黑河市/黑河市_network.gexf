@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="20260724">
+    <creator>OpenCode Research Agent</creator>
+    <description>黑河市领导班子工作关系网络 - 黑河市</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="秦波">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共黑河市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="战明秀">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="黑河市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="狄恒">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市人大常委会主任"/>
+          <attvalue for="2" value="黑河市人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p4" label="丁兆禄">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政协主席"/>
+          <attvalue for="2" value="中国人民政治协商会议黑河市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="吴子慧">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共黑河市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="尤晓林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共黑河市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="赵迎春">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共黑河市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="李平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委"/>
+          <attvalue for="2" value="中共黑河市委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="李百山">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市监察委员会主任"/>
+          <attvalue for="2" value="黑河市监察委员会"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="贾牧樵">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长、市公安局局长"/>
+          <attvalue for="2" value="黑河市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="邸建军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府秘书长"/>
+          <attvalue for="2" value="黑河市人民政府"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="李锡文">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市委书记"/>
+          <attvalue for="2" value="中共黑河市委员会"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p13" label="赵荣国">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市长"/>
+          <attvalue for="2" value="黑河市人民政府"/>
+        </attvalues>
+        <viz:color r="150" g="150" b="150"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共黑河市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="黑河市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="黑河市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议黑河市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="黑河市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="黑河市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="黑龙江省人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共黑龙江省委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="黑河市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年4月任黑河市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o2" label="黑河市代市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年12月任代市长（此前任副市长或省直职务）"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o2" label="黑河市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2025年转正——2026年4月改任书记前为市长"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o1" label="黑河市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年4月接替李锡文任黑河市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p2" target="o2" label="黑河市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月16日黑河市第七届人大第七次会议当选"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o1" label="黑河市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记、市长"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p3" target="o3" label="黑河市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2024年8月任现职"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p4" target="o4" label="黑河市政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2022年1月当选"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p5" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月仍在任"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p6" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月仍在任"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p7" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月仍在任"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p8" target="o1" label="市委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月仍在任"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p9" target="o5" label="市监察委员会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年7月16日当选"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p10" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="兼市公安局局长"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p10" target="o6" label="市公安局局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p11" target="o2" label="市政府秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p12" target="o1" label="黑河市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年9月至2026年4月任黑河市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p13" target="o2" label="黑河市人民政府市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2021年12月至2024年12月任黑河市长"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="秦波作为市委书记，战明秀作为市长，党政主要领导搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="秦波与狄恒在黑河市共事"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="秦波与丁兆禄在黑河市共事"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p1" target="p12" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="秦波接替李锡文任黑河市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p2" target="p1" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="战明秀接替秦波任黑河市长（秦波转任书记）"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="战明秀与狄恒在黑河市共事"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="战明秀与丁兆禄在黑河市共事"/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p2" target="p10" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与副市长工作搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p2" target="p11" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="市长与市政府秘书长工作搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="狄恒与丁兆禄在黑河市共事"/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p12" target="p13" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="李锡文（书记）与赵荣国（市长）党政搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p1" target="p13" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="秦波接替赵荣国任黑河市长"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

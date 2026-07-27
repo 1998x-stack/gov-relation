@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "安阳市",
+    "region": "林州市",
+    "job": "市委书记",
+    "task_id": "henan_林州市",
+    "time_focus": "2022-2026"
+  },
+  "identity": {
+    "person_id": "linzhou_sun_jianduo",
+    "name": "孙建铎",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "孙建铎_",
+      "name_birthplace": "孙建铎_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中共林州市委书记",
+    "current_org": "中共林州市委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2025",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到孙建铎的完整履历。已知曾任林州市市长（~2019-2022），后升任林州市委书记（~2022-）。出生年月、教育背景、早期职业生涯等均为未知。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "~2019",
+      "end": "~2022",
+      "org": "林州市人民政府",
+      "title": "林州市市长",
+      "level": "县处级正职",
+      "location": "河南省安阳市林州市",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "任林州市长，后升任市委书记",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "~2022",
+      "end": "present",
+      "org": "中共林州市委",
+      "title": "林州市委书记",
+      "level": "县处级正职",
+      "location": "河南省安阳市林州市",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "接替王宝玉任林州市委书记",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org": "中共林州市委",
+      "org_type": "党委",
+      "level": "县级",
+      "location": "河南省安阳市林州市"
+    },
+    {
+      "org": "林州市人民政府",
+      "org_type": "政府",
+      "level": "县级",
+      "location": "河南省安阳市林州市"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "田元飞",
+      "person_id": "linzhou_tian_yuanfei",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "林州市委班子搭档，书记和市长",
+      "overlap_org": "中共林州市委员会",
+      "overlap_period": "~2023-至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "王宝玉",
+      "person_id": "linzhou_wang_baoyu",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "孙建铎接替王宝玉任林州市委书记",
+      "overlap_org": "中共林州市委员会",
+      "overlap_period": "~2022",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["林州市"],
+    "promotion_velocity": {
+      "summary": "从林州市长升任林州市委书记，属于本地提拔",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现孙建铎的公开负面信息或纪律处分记录。调查受限于网络访问条件。",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "公开报道综合（孙建铎历任林州市长、市委书记）",
+      "url": "",
+      "publisher": "various news media",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "林州市政府网站(linzhou.gov.cn)调查期间不可达；信息基于公开报道综合"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "孙建铎的出生年月、教育背景、早期职业生涯和完整履历均不可得"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "孙建铎的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "基础身份信息是人物去重和身份验证的基础",
+      "suggested_queries": ["孙建铎 简历", "孙建铎 出生", "孙建铎 籍贯"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "孙建铎的完整职业生涯时间线是什么？",
+      "why_it_matters": "了解其职业发展路径，识别交叉任职和系统内关系",
+      "suggested_queries": ["孙建铎 任职经历", "孙建铎 工作简历", "孙建铎 林州"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "孙建铎何时正式接任林州市委书记？",
+      "why_it_matters": "精确掌握市委书记交接时间点对时序分析至关重要",
+      "suggested_queries": ["孙建铎 任林州市委书记", "林州市委书记 孙建铎 任命"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "medium",
+      "question": "孙建铎在调任林州前曾在哪些地方/部门工作？",
+      "why_it_matters": "揭示跨地区/部门调动模式和潜在的关系网络",
+      "suggested_queries": ["孙建铎 安阳", "孙建铎 早期经历"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

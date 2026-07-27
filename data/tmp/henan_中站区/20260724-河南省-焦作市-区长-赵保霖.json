@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "焦作市",
+    "region": "中站区",
+    "job": "区长",
+    "task_id": "henan_中站区",
+    "time_focus": "2026-07"
+  },
+  "identity": {
+    "person_id": "henan_jiaozuo_zhongzhan_zhaobaolin",
+    "name": "赵保霖",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "赵保霖_",
+      "name_birthplace": "赵保霖_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中站区委副书记、区长",
+    "current_org": "中站区人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "present",
+      "org": "中站区人民政府",
+      "title": "中站区区长",
+      "level": "县处级正职",
+      "location": "河南省焦作市中站区",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "兼任区委副书记；具体任命日期和会议待查",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "present",
+      "org": "中共中站区委",
+      "title": "中站区委副书记",
+      "level": "县处级副职",
+      "location": "河南省焦作市中站区",
+      "system": "party",
+      "rank": "县处级副职",
+      "is_key_promotion": false,
+      "notes": "区长兼任区委副书记为通常安排",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_name": "中站区人民政府",
+      "org_type": "政府",
+      "role": "区长",
+      "period": "至今"
+    },
+    {
+      "org_name": "中共中站区委",
+      "org_type": "党委",
+      "role": "副书记",
+      "period": "至今"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "程宝成",
+      "person_id": "henan_jiaozuo_zhongzhan_chengbaocheng",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "若两人确实分任区委书记和区长，则为党政正职搭档关系",
+      "overlap_org": "中共中站区委",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "缺乏数据",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至研究日，未发现赵保霖的纪律处分、审计问题或负面媒体报道",
+      "date": "2026-07-24",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "培训数据（未从实时官方来源验证）",
+      "url": "",
+      "publisher": "",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "inferred",
+      "reliability": "low",
+      "notes": "研究期间外部网络不可用：Exa API 限流、百度返回403、中站区政府网站 (jzq.gov.cn) 超时。赵保霖是否仍任区长的信息需官方来源确认。"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "赵保霖的完整履历（出生日期、籍贯、教育背景、此前任职岗位）完全未知；是否仍任中站区区长需要官方来源确认"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "赵保霖是否仍任中站区区长？是否被免职或调任？",
+      "why_it_matters": "这是本调查的核心目标人物之一",
+      "suggested_queries": ["赵保霖 中站区 区长 任前公示", "赵保霖 任免 焦作", "site:jzq.gov.cn 赵保霖"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "赵保霖的出生日期、籍贯、教育背景是什么？",
+      "why_it_matters": "人员去重和身份确认需要这些基础信息",
+      "suggested_queries": ["赵保霖 简历 中站区", "赵保霖 百度百科"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "赵保霖此前在哪些岗位任职？",
+      "why_it_matters": "理解其职业发展路径和政治网络",
+      "suggested_queries": ["赵保霖 焦作 任职履历", "赵保霖 前职"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "medium",
+      "question": "赵保霖接替的是谁作为区长？程宝成升任区委书记后区长职位如何交接？",
+      "why_it_matters": "确认政府正职前后任关系",
+      "suggested_queries": ["中站区 区长 任命 人大", "中站区 区长 接任"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

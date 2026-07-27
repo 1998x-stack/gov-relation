@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-25">
+    <creator>gov-relation research agent</creator>
+    <description>牡丹区（菏泽市）领导班子工作关系网络 - 基于公开资料</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="尹茂林">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区委书记"/>
+          <attvalue for="2" value="中共牡丹区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="董良峰">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="区长"/>
+          <attvalue for="2" value="牡丹区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="张福龙">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="原区委书记（已离任）"/>
+          <attvalue for="2" value="原中共牡丹区委员会"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共牡丹区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="牡丹区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="牡丹区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议牡丹区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共牡丹区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="菏泽市">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="p1" target="o1" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="约2021年12月任牡丹区委书记; 此前为牡丹区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="1" source="p1" target="o2" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="前任区长; 后升任区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="约2022年初任牡丹区区长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p3" target="o1" label="区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="尹茂林的前任; 后调任菏泽市或其他职务"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o6" label="市人大常委会党组成员/副主任（拟）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="据传调任菏泽市人大; 待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o6" label="菏泽市有关部门任职" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="公开资料未找到尹茂林2017年前完整履历; 待补充"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p2" target="o6" label="菏泽市有关部门任职" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="公开资料未找到董良峰任区长前完整履历; 待补充"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p1" target="p2" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="区委书记与区长搭档关系"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p1" target="p3" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="尹茂林接替张福龙任区委书记; 此前尹茂林任区长时张福龙为区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p2" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="张福龙任区委书记时，董良峰是否已在区领导班子中待确认"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

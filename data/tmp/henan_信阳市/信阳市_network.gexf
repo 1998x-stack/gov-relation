@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-07-24">
+    <creator>Research Agent</creator>
+    <description>信阳市领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="gender" type="string"/>
+      <attribute id="4" title="ethnicity" type="string"/>
+      <attribute id="5" title="birth" type="string"/>
+      <attribute id="6" title="source" type="string"/>
+      <attribute id="7" title="org_type" type="string"/>
+      <attribute id="8" title="level" type="string"/>
+      <attribute id="9" title="location" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="张宏伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn (multiple news articles); https://www.xinyang.gov.cn/2026/03-09/773731.html"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="卢希望">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1974年8月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/04-23/781390.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="杨进">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、政法委书记"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/06-11/789596.html"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="王军">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、市纪委书记、监委主任"/>
+          <attvalue for="2" value="中共信阳市纪律检查委员会"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/06-11/789596.html"/>
+        </attvalues>
+        <viz:color r="255" g="165" b="0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p5" label="曾辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、统战部部长"/>
+          <attvalue for="2" value="中共信阳市委统战部"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/06-11/789596.html"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p6" label="孔剑君">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、组织部部长"/>
+          <attvalue for="2" value="中共信阳市委组织部"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/06-11/789596.html"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="于海忠">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、市委秘书长"/>
+          <attvalue for="2" value="中共信阳市委办公室"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/06-11/789596.html"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="赵军伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、常务副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1976年9月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2025/04-25/600279.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p9" label="唐永伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、信阳军分区政委"/>
+          <attvalue for="2" value="信阳军分区"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/06-11/789596.html"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="李新伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、宣传部部长，市政府党组成员"/>
+          <attvalue for="2" value="中共信阳市委宣传部"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1970年10月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2024/05-28/561284.html"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p11" label="张劲松">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委，市政府党组成员"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1977年4月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/07-03/793002.html"/>
+        </attvalues>
+        <viz:color r="180" g="100" b="180"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p12" label="郑云">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="女"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1972年8月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2023/01-18/561267.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p13" label="何克">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1975年4月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2024/10-31/561286.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p14" label="刘磊">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1968年5月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2023/01-18/561269.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p15" label="汪明君">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1970年10月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2023/01-18/561266.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p16" label="袁钢">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1971年9月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2024/03-27/561283.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p17" label="杨好平">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1975年8月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2025/09-01/693364.html"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p18" label="孔辉">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市政府秘书长、党组成员，机关党组书记"/>
+          <attvalue for="2" value="信阳市人民政府办公室"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value="1971年1月"/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2025/10-30/703672.html"/>
+        </attvalues>
+        <viz:color r="200" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p19" label="陈志伟">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="前任市长"/>
+          <attvalue for="2" value="（已离任）"/>
+          <attvalue for="3" value="男"/>
+          <attvalue for="4" value="汉族"/>
+          <attvalue for="5" value=""/>
+          <attvalue for="6" value="https://www.xinyang.gov.cn/2026/02-12/753704.html (2026年政府工作报告)"/>
+        </attvalues>
+        <viz:color r="30" g="100" b="200"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共信阳市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="信阳市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共信阳市纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="信阳市监察委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共信阳市委统战部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共信阳市委组织部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="中共信阳市委办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共信阳市委宣传部">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="信阳军分区">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="事业单位"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="信阳市人民政府办公室">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="政府"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o11" label="中共信阳市委政法委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="7" value="党委"/>
+          <attvalue for="8" value="地级市"/>
+          <attvalue for="9" value="信阳市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p2" target="o2" label="市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长"/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p2" target="o1" label="市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p3" target="o1" label="市委副书记、政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委副书记、政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p3" target="o11" label="政法委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="政法委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p4" target="o3" label="市纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市纪委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p4" target="o4" label="市监委主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市监委主任"/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p5" target="o5" label="统战部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="统战部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p6" target="o6" label="组织部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="组织部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p7" target="o7" label="市委秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p8" target="o2" label="市委常委、常务副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、常务副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p9" target="o9" label="信阳军分区政委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="信阳军分区政委"/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p10" target="o8" label="宣传部部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="宣传部部长"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p10" target="o2" label="市政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p11" target="o2" label="市委常委、市政府党组成员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市委常委、市政府党组成员"/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p12" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p13" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p14" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p15" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p16" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p17" target="o2" label="副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="副市长"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p18" target="o10" label="市政府秘书长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市政府秘书长"/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p19" target="o2" label="市长（前任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="市长（前任）"/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p1" target="p2" label="市委书记—市长搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委书记—市长搭档"/>
+          <attvalue for="2" value="信阳市"/>
+          <attvalue for="3" value="2026年—"/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p1" target="p3" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p2" target="p8" label="市长—常务副市长搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市长—常务副市长搭档"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="2026年—"/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p2" target="p19" label="前后任市长（交接2026年2月—4月）" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="前后任市长（交接2026年2月—4月）"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value="2026年"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p1" target="p8" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p1" target="p4" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p1" target="p5" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p1" target="p6" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p1" target="p7" label="书记—秘书长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="书记—秘书长工作关系"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p1" target="p10" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p1" target="p11" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p1" target="p9" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p8" target="p13" label="市政府班子共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市政府班子共事"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p8" target="p14" label="市政府班子共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市政府班子共事"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p8" target="p18" label="常务副市长—秘书长工作关系" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="常务副市长—秘书长工作关系"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p15" target="p16" label="市政府班子共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市政府班子共事"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p12" target="p17" label="市政府班子共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市政府班子共事"/>
+          <attvalue for="2" value="信阳市人民政府"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p10" target="p11" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p3" target="p4" label="市委常委会共事" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="共事"/>
+          <attvalue for="1" value="市委常委会共事"/>
+          <attvalue for="2" value="中共信阳市委员会"/>
+          <attvalue for="3" value=""/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

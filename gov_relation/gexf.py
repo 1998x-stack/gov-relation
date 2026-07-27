@@ -189,6 +189,8 @@ class GEXFBuilder:
                     if attvalues is None:
                         attvalues = ET.SubElement(edge_el, "attvalues")
                     ET.SubElement(attvalues, "attvalue", attrib={"for": attr_id, "value": val})
+        if not self._edges:
+            edges_el.text = " "  # non-breaking prevents self-closing
 
         tree = ET.ElementTree(root)
         path = Path(path)

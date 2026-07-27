@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Generate a vis.js interactive graph for 襄垣县 leadership network."""
+
+import os, json
+
+OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                   "report", "graph.html")
+
+nodes = [
+    {"id": 1, "label": "李瑜", "group":"secretary","title":"县委书记\n1972年3月生","size":25},
+    {"id": 2, "label": "元海波","group":"mayor","title":"县长\n1975年8月生\n潞城市人","size":22},
+    {"id": 3, "label": "贾钢辉","group":"deputy","title":"县委副书记\n2024年9月任命","size":18},
+    {"id": 4, "label": "鲍明敏","group":"standing","title":"县委常委、常务副县长","size":16},
+    {"id": 5, "label": "周炳良","group":"standing","title":"县委常委、副县长","size":16},
+    {"id": 6, "label": "张帆","group":"discipline","title":"县委常委、纪委书记","size":16},
+    {"id": 7, "label": "魏巍","group":"standing","title":"县委常委、宣传部部长","size":16},
+    {"id": 8, "label": "贾永兴","group":"standing","title":"县委常委、统战部部长","size":16},
+    {"id": 9, "label": "杜娟","group":"vc","title":"副县长(挂职)\n1983年3月生","size":14},
+    {"id": 10, "label":"张小锋","group":"vc","title":"副县长","size":14},
+    {"id": 11, "label":"赵楠楠","group":"vc","title":"副县长","size":14},
+    {"id": 12, "label":"王建方","group":"vc","title":"副县长","size":14},
+    {"id": 13, "label":"宋双麒","group":"vc","title":"副县长","size":14},
+    {"id": 14, "label":"赵俊杰","group":"vc","title":"副县长","size":14},
+    {"id": 15, "label":"郭瑞华","group":"other","title":"政府办公室主任","size":12},
+    {"id": 16, "label":"田福合","group":"other","title":"县监委主任","size":12},
+    {"id": 101,"label":"段联刚","group":"former","title":"前县长→怀仁市委书记\n1976年4月生","size":14},
+    {"id": 102,"label":"张晋伟","group":"former","title":"前县委书记→大同市副市长","size":14},
+    {"id": 103,"label":"翟卫华","group":"former","title":"前县委书记(2022年逝世)\n1969年生","size":14},
+    {"id": 104,"label":"王辉","group":"former","title":"前组织部部长→人大主任\n1971年2月生","size":12},
+    {"id": 105,"label":"王建斌","group":"former","title":"人大副主任\n1969年生","size":10},
+    {"id": 106,"label":"杨勇","group":"former","title":"前县委副书记","size":10},
+    # Organizations
+    {"id": 201,"label":"县委","group":"org","title":"中国共产党襄垣县委员会","size":10},
+    {"id": 202,"label":"县政府","group":"org","title":"襄垣县人民政府","size":10},
+    {"id": 203,"label":"县纪委","group":"org","title":"襄垣县纪律检查委员会","size":10},
+]
+
+edges = [
+    # Work relationships (person -> org)
+    {"from":1,"to":201,"title":"县委书记","color":"#666"},
+    {"from":1,"to":202,"title":"前县长→书记","color":"#666"},
+    {"from":2,"to":202,"title":"县长","color":"#666"},
+    {"from":3,"to":201,"title":"县委副书记","color":"#666"},
+    {"from":4,"to":202,"title":"常务副县长","color":"#666"},
+    {"from":5,"to":202,"title":"副县长","color":"#666"},
+    {"from":6,"to":203,"title":"县纪委书记","color":"#666"},
+    {"from":7,"to":201,"title":"宣传部部长","color":"#666"},
+    {"from":8,"to":201,"title":"统战部部长","color":"#666"},
+    {"from":9,"to":202,"title":"副县长(挂职)","color":"#666"},
+    {"from":10,"to":202,"title":"副县长","color":"#666"},
+    {"from":11,"to":202,"title":"副县长","color":"#666"},
+    {"from":12,"to":202,"title":"副县长","color":"#666"},
+    {"from":13,"to":202,"title":"副县长","color":"#666"},
+    {"from":14,"to":202,"title":"副县长","color":"#666"},
+    {"from":101,"to":202,"title":"前县长","color":"#666"},
+    {"from":102,"to":201,"title":"前县委书记","color":"#666"},
+    {"from":103,"to":201,"title":"前县委书记","color":"#666"},
+    # Person to person
+    {"from":1,"to":2,"title":"党政搭档(2026.7起)","color":"#c9a94e","width":3},
+    {"from":1,"to":101,"title":"书记-县长搭档(2023-2026)","color":"#c9a94e","width":3},
+    {"from":102,"to":1,"title":"前书记-县长搭档","color":"#c9a94e","width":2},
+    {"from":103,"to":1,"title":"前书记-县长搭档(2022)","color":"#c9a94e","width":2},
+    {"from":101,"to":102,"title":"继任关系","color":"#888","width":1},
+    {"from":102,"to":103,"title":"继任关系","color":"#888","width":1},
+    {"from":103,"to":1,"title":"继任(逝世后)","color":"#888","width":1},
+    {"from":3,"to":7,"title":"2024年9月同时任命","color":"#64b4f0","width":1},
+]
+
+groups = {
+    "secretary": {"shape":"dot","color":{"background":"#c83232","border":"#a02020"},"font":{"size":14,"color":"#ffe0e0"}},
+    "mayor": {"shape":"dot","color":{"background":"#3264c8","border":"#2048a0"},"font":{"size":14,"color":"#e0e8ff"}},
+    "deputy": {"shape":"dot","color":{"background":"#6478f0","border":"#4058c8"},"font":{"size":12,"color":"#e0e4ff"}},
+    "standing": {"shape":"dot","color":{"background":"#6478f0","border":"#4058c8"},"font":{"size":12,"color":"#e0e4ff"}},
+    "discipline": {"shape":"dot","color":{"background":"#c89032","border":"#a07020"},"font":{"size":12,"color":"#ffe8c0"}},
+    "vc": {"shape":"dot","color":{"background":"#64b4f0","border":"#4090c8"},"font":{"size":11,"color":"#d0e8ff"}},
+    "other": {"shape":"dot","color":{"background":"#a0a0a0","border":"#707070"},"font":{"size":11,"color":"#ddd"}},
+    "former": {"shape":"dot","color":{"background":"#888888","border":"#555"},"font":{"size":11,"color":"#bbb"}},
+    "org": {"shape":"box","color":{"background":"#1a1a1a","border":"#555"},"font":{"size":10,"color":"#999"}},
+}
+
+options = {
+    "physics": {"forceAtlas2Based":{"gravitationalConstant":-60,"centralGravity":0.01,"springsLength":200,"springConstant":0.02},"stabilization":{"iterations":150}},
+    "edges": {"width":1,"font":{"size":10},"smooth":{"type":"curvedCW","roundness":0.2}},
+    "groups": groups,
+    "nodes": {"font":{"face":"Noto Serif SC, SimSun, serif","strokeWidth":0},"borderWidth":1},
+    "interaction": {"hover":True,"tooltipDelay":200},
+}
+
+html = f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>襄垣县领导班子工作关系网络</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.6/vis-network.min.js"></script>
+<style>
+*{{box-sizing:border-box}}
+body{{margin:0;background:#0d0d0d;color:#ddd;font-family:'Noto Serif SC','SimSun',serif;overflow:hidden}}
+#app{{display:flex;height:100vh;width:100%}}
+#sidebar{{width:340px;min-width:340px;padding:20px;overflow-y:auto;background:#141414;border-right:1px solid #222}}
+#sidebar h1{{font-size:15px;color:#E03C31;margin:0 0 2px;font-weight:700;letter-spacing:1px}}
+#sidebar .sub{{font-size:11px;color:#555;margin-bottom:8px}}
+#graph{{flex:1;min-width:0}}
+.stats{{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:10px}}
+.stat-box{{background:#111;padding:6px;border:1px solid #222;text-align:center}}
+.stat-num{{font-size:16px;font-weight:700;color:#c9a94e}}
+.stat-lbl{{font-size:10px;color:#555}}
+h2{{font-size:12px;color:#c9a94e;margin:10px 0 6px;border-bottom:1px solid #222;padding-bottom:3px}}
+.lg-item{{display:flex;align-items:center;gap:6px;font-size:11px;color:#666;margin-bottom:2px}}
+.legend-dot{{width:10px;height:10px;border-radius:50%;flex-shrink:0}}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="sidebar">
+<h1>襄垣县 领导班子</h1>
+<div class="sub">山西省 · 长治市</div>
+<div class="stats">
+<div class="stat-box"><div class="stat-num">{len(nodes)}</div><div class="stat-lbl">节点</div></div>
+<div class="stat-box"><div class="stat-num">{len([n for n in nodes if n['id']<200])}</div><div class="stat-lbl">人物</div></div>
+</div>
+<div class="stats">
+<div class="stat-box"><div class="stat-num">{len(edges)}</div><div class="stat-lbl">连线</div></div>
+<div class="stat-box"><div class="stat-num">{len([n for n in nodes if n['id']>=200])}</div><div class="stat-lbl">机构</div></div>
+</div>
+<h2>图例</h2>
+<div class="lg-item"><div class="legend-dot" style="background:#c7a7a0"></div>县委书记</div>
+<div class="lg-item"><div class="legend-dot" style="background:#3264c8"></div>县长</div>
+<div class="lg-item"><div class="legend-dot" style="background:#6478f0"></div>县委常委</div>
+<div class="lg-item"><div class="legend-dot" style="background:#c89032"></div>纪检</div>
+<div class="lg-item"><div class="legend-dot" style="background:#64b4f0"></div>副县长</div>
+<div class="lg-item"><div class="legend-dot" style="background:#888"></div>前任</div>
+<div class="lg-item"><div class="legend-dot" style="background:#999;border-radius:0;width:10px;height:10px"></div>机构</div>
+<hr style="border-color:#222">
+<h2>操作</h2>
+<div style="font-size:10px;color:#555;line-height:1.8">悬停查看详情<br>拖拽调整布局<br>滚轮缩放</div>
+</div>
+<div id="graph"></div>
+</div>
+<script>
+var nd = {json.dumps(nodes, ensure_ascii=False)};
+var ed = {json.dumps(edges, ensure_ascii=False)};
+var opt = {json.dumps(options, ensure_ascii=False)};
+opt.groups=opt.images;delete opt.images;
+var container=document.getElementById('graph');
+var network=new vis.Network(container, {{nodes:new vis.DataSet(nd),edges:new vis.DataSet(ed)}},opt);
+</script>
+</body>
+</html>"""
+
+with open(OUT, "w", encoding="utf-8") as f:
+    f.write(html)
+print(f"Written: {OUT}")

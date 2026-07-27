@@ -75,7 +75,7 @@
 <p><strong>调查日期</strong>: 2026-07-24</p>
 <p><strong>任务 ID</strong>: henan_郸城县</p>
 <p><strong>等级</strong>: 县</p>
-<p><strong>目标</strong>: 县委书记 & 县长</p>
+<p><strong>目标</strong>: 县委书记 &amp; 县长</p>
 </blockquote>
 
 <hr>
@@ -84,7 +84,7 @@
 
 <p>由于本次调查时网络访问严重受限（Exa 搜索 API 限流、Baidu Baike 和 Jina Reader 超时、Google/Bing 被阻断），<strong>未能确认当前郸城县任何领导干部的具体姓名和履历</strong>。</p>
 
-<p>本报告所有人员信息均为<strong>占位数据</strong>，结构完整性优先于内容真实性。所有数据点均标记为 `unverified`。待网络恢复正常后，需重新调查并更新全部数据。</p>
+<p>本报告所有人员信息均为<strong>占位数据</strong>，结构完整性优先于内容真实性。所有数据点均标记为 <code>unverified</code>。待网络恢复正常后，需重新调查并更新全部数据。</p>
 
 <hr>
 
@@ -106,7 +106,7 @@
 
 <table>
 <tr><td>字段</td><td>内容</td></tr>
-<tr><td>姓名</td><td><strong>待查</strong></td></tr>
+<tr><td>姓名</td><td>**待查**</td></tr>
 <tr><td>性别</td><td>待查</td></tr>
 <tr><td>民族</td><td>待查</td></tr>
 <tr><td>出生</td><td>待查</td></tr>
@@ -116,7 +116,7 @@
 <tr><td>参加工作时间</td><td>待查</td></tr>
 <tr><td>现任职务</td><td>郸城县委书记</td></tr>
 <tr><td>任职起始</td><td>待查</td></tr>
-<tr><td>置信度</td><td><strong>unverified</strong></td></tr>
+<tr><td>置信度</td><td>**unverified**</td></tr>
 </table>
 
 <blockquote>
@@ -132,7 +132,7 @@
 
 <table>
 <tr><td>字段</td><td>内容</td></tr>
-<tr><td>姓名</td><td><strong>待查</strong></td></tr>
+<tr><td>姓名</td><td>**待查**</td></tr>
 <tr><td>性别</td><td>待查</td></tr>
 <tr><td>民族</td><td>待查</td></tr>
 <tr><td>出生</td><td>待查</td></tr>
@@ -142,7 +142,7 @@
 <tr><td>参加工作时间</td><td>待查</td></tr>
 <tr><td>现任职务</td><td>郸城县县长</td></tr>
 <tr><td>任职起始</td><td>待查</td></tr>
-<tr><td>置信度</td><td><strong>unverified</strong></td></tr>
+<tr><td>置信度</td><td>**unverified**</td></tr>
 </table>
 
 <blockquote>
@@ -289,7 +289,7 @@
 
 <ol>
 <li><strong>等待网络恢复后重新运行</strong>完整工作流（Phase 1 → Phase 2 → Phase 3）</li>
-<li>优先从 `https://www.dancheng.gov.cn/ldzc/`（领导之窗）获取当前领导名单</li>
+<li>优先从 <code>https://www.dancheng.gov.cn/ldzc/</code>（领导之窗）获取当前领导名单</li>
 <li>逐个搜索核心人物的 Baidu Baike 条目获取完整履历</li>
 <li>查看周口市委组织部近三年的任前公示</li>
 <li>完成全部数据后更新 build 脚本、Person JSON 和报告</li>

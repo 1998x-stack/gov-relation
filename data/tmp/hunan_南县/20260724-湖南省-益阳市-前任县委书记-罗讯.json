@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "湖南省",
+    "city": "益阳市",
+    "region": "南县",
+    "job": "前任南县县委书记",
+    "task_id": "hunan_南县",
+    "time_focus": "2016-2025"
+  },
+  "identity": {
+    "person_id": "hunan_nanxian_luoxun_1974",
+    "name": "罗讯",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1974-09",
+    "birthplace": "湖南益阳",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "大学",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1995-08",
+    "dedupe_keys": {
+      "name_birth": "罗讯_1974-09",
+      "name_birthplace": "罗讯_湖南益阳",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "前任南县县委书记",
+    "current_org": "中共南县委员会（前任）",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "1995-08",
+      "end": "未知",
+      "org": "待查",
+      "title": "早期职业生涯",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1995年8月参加工作。1995年至2016年间的具体履历公开资料未查到。",
+      "confidence": "unverified",
+      "source_ids": []
+    },
+    {
+      "start": "2016",
+      "end": "2020",
+      "org": "益阳市资阳区人民政府",
+      "title": "益阳市资阳区区长",
+      "level": "县处级正职",
+      "location": "湖南省益阳市资阳区",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2016年任资阳区区长，任期内与区委书记乐运成、陈静彬等搭档。2020年离任。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2020",
+      "end": "2025-02",
+      "org": "中共南县委员会",
+      "title": "中共南县县委书记",
+      "level": "县处级正职",
+      "location": "湖南省益阳市南县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "约2020年由资阳区长调任南县县委书记。约2025年2月离任，由时任县长钟剑波接任。",
+      "confidence": "plausible",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2025-02",
+      "end": "未知",
+      "org": "待查",
+      "title": "离任南县县委书记后去向",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "2025年2月后离任南县县委书记。去向待查（可能调任益阳市级部门或其他地区）。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 5,
+      "name": "益阳市资阳区人民政府",
+      "role": "区长",
+      "period": "2016-2020",
+      "source_ids": ["S001"]
+    },
+    {
+      "org_id": 1,
+      "name": "中共南县委员会",
+      "role": "县委书记",
+      "period": "2020-2025.02",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "钟剑波",
+      "person_id": "hunan_nanxian_zhongjianbo_1976",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "罗讯为前任南县县委书记，钟剑波于2025年2月接任县委书记",
+      "overlap_org": "中共南县委员会",
+      "overlap_period": "2025-02",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "乐运成",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "罗讯任资阳区长期间，乐运成任资阳区委书记，二人为党政搭档",
+      "overlap_org": "益阳市资阳区",
+      "overlap_period": "约2016-2020",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "陈静彬",
+      "person_id": "",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "罗讯任资阳区长早期，陈静彬曾任资阳区委书记",
+      "overlap_org": "益阳市资阳区",
+      "overlap_period": "约2016",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["湖南省", "益阳市", "资阳区", "南县"],
+    "promotion_velocity": {
+      "summary": "从资阳区长平调南县县委书记，属于县域间岗位轮换",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-24搜索未发现罗讯的纪律处分或负面报道",
+      "date": "2026-07-24",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "build_资阳区_data.py (已有构建脚本)",
+      "url": "",
+      "publisher": "gov-relation repo",
+      "published_at": "2026-07-24",
+      "accessed_at": "2026-07-24",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "资阳区数据脚本，含罗讯履历信息"
+    },
+    {
+      "id": "S002",
+      "title": "build_益阳市_data.py / build_yiyang_data.py",
+      "url": "",
+      "publisher": "gov-relation repo",
+      "published_at": "2026-07-24",
+      "accessed_at": "2026-07-24",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "益阳市数据脚本，含南县钟剑波接任时间线"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "plausible",
+    "career_completeness": "partial",
+    "relationship_confidence": "low",
+    "biggest_gap": "离任南县县委书记后的去向未查到；早期履历（1995-2016）基本缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "罗讯离任南县县委书记后的去向是什么？",
+      "why_it_matters": "前任去向可揭示益阳市人事调整模式，同时也是关系网络追踪的关键节点",
+      "suggested_queries": ["罗讯 最新任职 益阳", "罗讯 2025 调任", "罗讯 南县 县委书记 去向"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "罗讯1995年至2016年间的完整工作履历",
+      "why_it_matters": "理解其职业成长路径和关系网络源头",
+      "suggested_queries": ["罗讯 简历 益阳", "罗讯 资阳区 区长 任命"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "medium",
+      "question": "罗讯的出生具体地点（湖南益阳下哪个区/县）",
+      "why_it_matters": "身份信息精确化",
+      "suggested_queries": ["罗讯 出生地"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

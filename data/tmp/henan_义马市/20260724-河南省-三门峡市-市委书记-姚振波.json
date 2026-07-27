@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "三门峡市",
+    "region": "义马市",
+    "job": "市委书记",
+    "task_id": "henan_义马市",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "yima_yao_zhenbo",
+    "name": "姚振波",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "未知",
+    "birthplace": "未知",
+    "native_place": "未知",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "未知",
+    "dedupe_keys": {
+      "name_birth": "姚振波_未知",
+      "name_birthplace": "姚振波_未知",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "义马市委书记",
+    "current_org": "中共义马市委员会",
+    "administrative_rank": "正县级",
+    "as_of": "2026-05",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "2026-01",
+      "org": "义马市人民政府",
+      "title": "义马市长",
+      "level": "正县级",
+      "location": "河南省三门峡市义马市",
+      "system": "government",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "姚振波此前担任义马市长，后接替袁锐锋任市委书记",
+      "confidence": "plausible",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2026-01",
+      "end": "present",
+      "org": "中共义马市委员会",
+      "title": "义马市委书记",
+      "level": "正县级",
+      "location": "河南省三门峡市义马市",
+      "system": "party",
+      "rank": "正县级",
+      "is_key_promotion": true,
+      "notes": "接替袁锐锋出任义马市委书记（袁锐锋调任湖滨区委书记）",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {"org_name": "中共义马市委员会", "role": "现任职", "period": "2026-"},
+    {"org_name": "义马市人民政府", "role": "曾任", "period": "至2026"}
+  ],
+  "relationships": [
+    {
+      "person": "袁锐锋",
+      "person_id": "yima_yuan_ruifeng",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "姚振波接替袁锐锋担任义马市委书记，此前袁锐锋任书记时姚振波任市长",
+      "overlap_org": "义马市",
+      "overlap_period": "2023-2026",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "赵麒",
+      "person_id": "yima_zhao_qi",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "姚振波任市委书记、赵麒任市长，党政正职搭档",
+      "overlap_org": "义马市",
+      "overlap_period": "2026-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["义马市"],
+    "promotion_velocity": {
+      "summary": "从市长升任市委书记，属当地阶梯式晋升",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，未发现姚振波相关的纪律处分、审计问题或负面报道",
+      "date": "2026-07",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "义马市百度百科",
+      "url": "https://baike.baidu.com/item/%E4%B9%89%E9%A9%AC%E5%B8%82/6861185",
+      "publisher": "百度百科",
+      "published_at": "2026-07-05",
+      "accessed_at": "2026-07-24",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "百度百科义马市词条，含截至2026年5月的现任领导名单"
+    },
+    {
+      "id": "S002",
+      "title": "袁锐锋百度百科",
+      "url": "https://baike.baidu.com/item/%E8%A2%81%E9%94%90%E9%94%8B/55883389",
+      "publisher": "百度百科",
+      "published_at": "2026-06-27",
+      "accessed_at": "2026-07-24",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "袁锐锋词条提及姚振波被任命为副市长、代理市长的人事信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "姚振波的完整履历（出生年月、教育背景、早年工作经历）完全缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "姚振波的出生年月、籍贯、教育背景是什么？",
+      "why_it_matters": "这是基础身份信息，对人物识别和去重至关重要",
+      "suggested_queries": ["姚振波 简历 出生", "姚振波 任前公示", "姚振波 三门峡 组织部 公示"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "critical",
+      "question": "姚振波在担任义马市长之前的完整职业生涯是怎样的？",
+      "why_it_matters": "了解其职业成长路径，判断其专业背景和系统来源",
+      "suggested_queries": ["姚振波 任职经历", "姚振波 此前担任", "姚振波 工作简历"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "姚振波何时开始担任义马市长？前任市长是谁？",
+      "why_it_matters": "补充时间线和前后任信息",
+      "suggested_queries": ["义马市长 姚振波 任命", "义马市人大 姚振波 市长"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-24",
+  "investigation_scope": {
+    "province": "湖南省",
+    "city": "益阳市",
+    "region": "南县",
+    "job": "中共南县委书记、县人民政府县长",
+    "task_id": "hunan_南县",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "hunan_nanxian_zhongjianbo_1976",
+    "name": "钟剑波",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1976-11",
+    "birthplace": "湖南省桃江县",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "钟剑波_1976-11",
+      "name_birthplace": "钟剑波_湖南省桃江县",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中共南县委书记、县人民政府县长",
+    "current_org": "中共南县委员会/南县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-24",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "公开资料未找到钟剑波2021年10月任南县县长前的完整履历。已知其为湖南桃江人，中共党员。",
+      "confidence": "unverified",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-10",
+      "end": "至今",
+      "org": "南县人民政府",
+      "title": "南县人民政府县长",
+      "level": "县处级正职",
+      "location": "湖南省益阳市南县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2021年10月任南县县长。维基百科记录其同时担任南县县长。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2025-02",
+      "end": "至今",
+      "org": "中共南县委员会",
+      "title": "中共南县委书记",
+      "level": "县处级正职",
+      "location": "湖南省益阳市南县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2025年2月由县长升任县委书记，同时留任县长（一肩挑）。接替前任县委书记罗讯。",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": 1,
+      "name": "中共南县委员会",
+      "role": "县委书记",
+      "period": "2025-02至今",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "org_id": 2,
+      "name": "南县人民政府",
+      "role": "县长",
+      "period": "2021-10至今",
+      "source_ids": ["S001"]
+    }
+  ],
+  "relationships": [
+    {
+      "person": "罗讯",
+      "person_id": "hunan_ziyang_luoxun_1974",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "罗讯为前任南县县委书记（约2020-2025.02），钟剑波于2025年2月接任县委书记职务",
+      "overlap_org": "中共南县委员会",
+      "overlap_period": "2025-02",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["湖南省", "益阳市", "南县"],
+    "promotion_velocity": {
+      "summary": "2021年10月任县长，2025年2月升任县委书记同时兼任县长，成长于南县本地",
+      "notable_fast_promotions": [
+        "2025-02由县长升任县委书记（兼任）"
+      ]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料有限，无法判断工作风格",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-07-24搜索未发现钟剑波的纪律处分、审计问题或负面报道",
+      "date": "2026-07-24",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "维基百科 · 南县",
+      "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E5%8E%BF",
+      "publisher": "维基百科",
+      "published_at": "",
+      "accessed_at": "2026-07-24",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "含南县主要领导信息"
+    },
+    {
+      "id": "S002",
+      "title": "build_益阳市_data.py / build_yiyang_data.py (已有构建脚本)",
+      "url": "",
+      "publisher": "gov-relation repo",
+      "published_at": "2026-07-24",
+      "accessed_at": "2026-07-24",
+      "source_type": "database",
+      "reliability": "high",
+      "notes": "南县作为益阳市下属县已有多源数据交叉验证"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "钟剑波任南县县长前（2021年前）的完整工作履历缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "钟剑波2021年10月任南县县长前的完整工作履历是什么？",
+      "why_it_matters": "缺乏早期履历无法评估其职业成长路径和关系网络",
+      "suggested_queries": ["钟剑波 简历 南县", "钟剑波 个人履历", "钟剑波 任前公示 益阳"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "high",
+      "question": "钟剑波的出生具体年月日、教育背景（学历、院校、专业）？",
+      "why_it_matters": "身份信息完整性",
+      "suggested_queries": ["钟剑波 出生", "钟剑波 学历"],
+      "last_attempted": "2026-07-24"
+    },
+    {
+      "priority": "medium",
+      "question": "钟剑波目前仍为南县县委书记与县长一肩挑，还是已另有县长任命？",
+      "why_it_matters": "确认当前党政正职配置",
+      "suggested_queries": ["南县 县长 2026", "南县 县领导 分工"],
+      "last_attempted": "2026-07-24"
+    }
+  ]
+}

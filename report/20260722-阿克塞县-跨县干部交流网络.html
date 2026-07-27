@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿克塞县跨县干部交流网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --surface-2: #222;
+  --border: #2a2a2a;
+  --text: #ece7d5;
+  --text-muted: #9a9483;
+  --accent: #E03C31;
+  --accent-dim: rgba(224, 60, 49, .12);
+  --gold: #C9A94E;
+  --gold-dim: rgba(201, 169, 78, .1);
+  --green: #4a9;
+  --blue: #4a8ad4;
+  --purple: #a78;
+  --radius: 4px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 0;
+}
+.serif { font-family: 'Noto Serif SC', serif; }
+
+/* ── Header ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 40px 48px 32px;
+  position: relative;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 48px;
+  width: 48px; height: 3px;
+  background: var(--accent);
+}
+.header-eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+  max-width: 720px;
+}
+.header-sub {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.header-sub span { white-space: nowrap; }
+
+/* ── Stats bar ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+.stat-cell {
+  padding: 24px 32px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.stat-cell:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* ── Section ── */
+.section {
+  padding: 40px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 16px; height: 1px;
+  background: var(--accent);
+}
+.section-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  margin-left: 28px;
+}
+
+/* ── Person grid ── */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: border-color .2s;
+}
+.person-card:hover { border-color: rgba(201, 169, 78, .3); }
+.person-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.person-role {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.person-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+.tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  letter-spacing: .5px;
+}
+.tag-gold { border-color: var(--gold); color: var(--gold); }
+.tag-accent { border-color: var(--accent); color: var(--accent); }
+.tag-blue { border-color: var(--blue); color: var(--blue); }
+
+/* ── Timeline ── */
+.timeline-section { position: relative; }
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-left: 28px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-group {
+  position: relative;
+  margin-bottom: 32px;
+}
+.timeline-group::before {
+  content: '';
+  position: absolute;
+  left: -28px; top: 6px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--accent);
+}
+.timeline-person {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.timeline-item {
+  font-size: 13px;
+  padding: 6px 0;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.timeline-year {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+/* ── Channel diagram ── */
+.channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.channel-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.channel-label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.channel-arrow {
+  font-size: 20px;
+  color: var(--text-muted);
+  margin: 4px 0;
+}
+.channel-names {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.channel-names em {
+  font-style: normal;
+  background: var(--accent-dim);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+/* ── Matrix table ── */
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.matrix-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.matrix-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.matrix-table tr:last-child td { border-bottom: none; }
+.cell-yes { color: var(--gold); font-weight: 600; }
+.cell-no { color: var(--text-muted); }
+
+/* ── Insights ── */
+.insight-list { list-style: none; }
+.insight-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.insight-item:last-child { border-bottom: none; }
+.insight-badge {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  height: fit-content;
+}
+.badge-high { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent); }
+.badge-med { background: var(--gold-dim); color: var(--gold); border: 1px solid var(--gold); }
+
+/* ── Footer ── */
+.footer {
+  padding: 24px 48px;
+  font-size: 11px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .header, .section { padding: 24px 20px; }
+  .header h1 { font-size: 24px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat-cell { padding: 16px 20px; }
+  .stat-cell:nth-child(2) { border-right: none; }
+  .stat-cell:nth-child(3), .stat-cell:nth-child(4) { border-top: 1px solid var(--border); }
+  .person-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header">
+  <div class="header-eyebrow">Intelligence Dossier · 2026-07-22</div>
+  <h1>阿克塞哈萨克族自治县<br>跨县干部交流网络</h1>
+  <div class="header-sub">
+    <span>调查区域：甘肃省酒泉市</span>
+    <span>分类：政治人事网络</span>
+    <span>密级：公开信息汇编</span>
+  </div>
+</header>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats">
+  <div class="stat-cell"><div class="stat-num">16</div><div class="stat-label">人员</div></div>
+  <div class="stat-cell"><div class="stat-num">18</div><div class="stat-label">机构</div></div>
+  <div class="stat-cell"><div class="stat-num">42</div><div class="stat-label">任职记录</div></div>
+  <div class="stat-cell"><div class="stat-num">15</div><div class="stat-label">关系连边</div></div>
+</div>
+
+<!-- ═══ KEY PERSONNEL ═══ -->
+<section class="section">
+  <div class="section-title">关键人物</div>
+  <div class="section-desc">阿克塞县历任及现任主要领导，按跨县流动类型分类</div>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="person-name">张桐</div>
+      <div class="person-role">阿克塞县委书记</div>
+      <div class="person-tags">
+        <span class="tag tag-accent">酒泉市直→阿克塞</span>
+        <span class="tag">2026.01-</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">库美斯剑</div>
+      <div class="person-role">阿克塞县长</div>
+      <div class="person-tags">
+        <span class="tag tag-blue">哈萨克族</span>
+        <span class="tag">本土成长</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">陶涛</div>
+      <div class="person-role">阿克塞前任书记 → 酒泉副市长</div>
+      <div class="person-tags">
+        <span class="tag tag-accent">酒泉市直→阿克塞→副市长</span>
+        <span class="tag tag-gold">晋升</span>
+        <span class="tag">1973</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">张金荣</div>
+      <div class="person-role">阿克塞前任书记 → 酒泉市政协副主席</div>
+      <div class="person-tags">
+        <span class="tag tag-accent">市委组织部→阿克塞→政协</span>
+        <span class="tag tag-gold">晋升</span>
+        <span class="tag">1966</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">张鹏</div>
+      <div class="person-role">阿克塞县委常委、常务副县长</div>
+      <div class="person-tags">
+        <span class="tag tag-accent">肃州区→阿克塞</span>
+        <span class="tag">1980</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">张健</div>
+      <div class="person-role">阿克塞县委常委、宣传部部长</div>
+      <div class="person-tags">
+        <span class="tag tag-accent">肃州区→阿克塞</span>
+        <span class="tag">2023</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">银雁</div>
+      <div class="person-role">原阿克塞县长（被查）</div>
+      <div class="person-tags">
+        <span class="tag tag-blue">哈萨克族·新疆巴里坤</span>
+        <span class="tag">2011-2016</span>
+        <span class="tag" style="border-color:#666;color:#666;">2025被查</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">毛学文</div>
+      <div class="person-role">阿克塞常务副县长 → 拟任县党委副书记</div>
+      <div class="person-tags">
+        <span class="tag tag-gold">阿克塞→输出</span>
+        <span class="tag">1970</span>
+      </div>
+    </div>
+    <div class="person-card">
+      <div class="person-name">白振林</div>
+      <div class="person-role">阿克塞县委副书记 → 拟任市属国企正职</div>
+      <div class="person-tags">
+        <span class="tag tag-gold">阿克塞→输出</span>
+        <span class="tag">1975</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAREER TIMELINES ═══ -->
+<section class="section timeline-section">
+  <div class="section-title">关键人物履历时间线</div>
+  <div class="section-desc">阿克塞县三届县委书记的跨县流动路径</div>
+  <div class="timeline">
+
+    <div class="timeline-group">
+      <div class="timeline-person">陶涛</div>
+      <div class="timeline-item"><span class="timeline-year">&lt;2018</span>酒泉市纪委副书记、市监察局副局长</div>
+      <div class="timeline-item"><span class="timeline-year">2018→2021</span>阿克塞县委书记</div>
+      <div class="timeline-item"><span class="timeline-year">2025→</span>酒泉市人民政府党组成员、副市长</div>
+    </div>
+
+    <div class="timeline-group">
+      <div class="timeline-person">张金荣</div>
+      <div class="timeline-item"><span class="timeline-year">2011-2014</span>酒泉市委组织部副部长</div>
+      <div class="timeline-item"><span class="timeline-year">2014-2016</span>酒泉市委组织部常务副部长</div>
+      <div class="timeline-item"><span class="timeline-year">2016-2020</span>阿克塞县委书记</div>
+      <div class="timeline-item"><span class="timeline-year">2021-2025</span>酒泉市政协副主席</div>
+      <div class="timeline-item"><span class="timeline-year">2025→</span>酒泉市政协党组副书记、一级巡视员</div>
+    </div>
+
+    <div class="timeline-group">
+      <div class="timeline-person">张桐</div>
+      <div class="timeline-item"><span class="timeline-year">&lt;2026</span>酒泉市生态环境局党组书记、局长</div>
+      <div class="timeline-item"><span class="timeline-year">2026.01→</span>阿克塞县委书记</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CROSS-COUNTY CHANNELS ═══ -->
+<section class="section">
+  <div class="section-title">跨县干部交流通道</div>
+  <div class="section-desc">基于公开信息识别的四种跨县流动模式</div>
+  <div class="channels">
+
+    <div class="channel-card">
+      <div class="channel-label">通道 A · 酒泉市直→阿克塞书记</div>
+      <div class="channel-arrow">酒泉市直机关 → 阿克塞县委书记</div>
+      <div class="channel-names">
+        张金荣 <em>市委组织部</em> → 县委<br>
+        陶涛 <em>市纪委</em> → 县委<br>
+        张桐 <em>市生态环境局</em> → 县委
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <div class="channel-label">通道 B · 肃州区→阿克塞副职</div>
+      <div class="channel-arrow">肃州区 → 阿克塞县委常委</div>
+      <div class="channel-names">
+        张健 <em>肃州区委办</em> → 县委宣传部<br>
+        张鹏 <em>肃州区</em> → 常委/副县长<br>
+        <span style="color:var(--text-muted)">2023-2024年集中发生</span>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <div class="channel-label">通道 C · 阿克塞→晋升输出</div>
+      <div class="channel-arrow">阿克塞副职 → 其他县区/市企</div>
+      <div class="channel-names">
+        陶涛 县委书记 → <em>酒泉副市长</em><br>
+        张金荣 书记 → <em>市政协副主席</em><br>
+        白振林 副书记 → <em>市属国企正职</em><br>
+        毛学文 常务副县长 → <em>县党委副书记</em>
+      </div>
+    </div>
+
+    <div class="channel-card">
+      <div class="channel-label">通道 D · 哈萨克族干部网络</div>
+      <div class="channel-arrow">同族+同乡跨县纽带</div>
+      <div class="channel-names">
+        库美斯剑 <em>阿克塞县长</em> 哈萨克族<br>
+        银雁 <em>阿克塞原县长</em> 哈·巴里坤<br>
+        塞力泰 <em>肃州统战部→侨联</em> 哈·巴里坤
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ MATRIX ═══ -->
+<section class="section">
+  <div class="section-title">跨县任职交集矩阵</div>
+  <div class="section-desc">✓ = 在该机构/区域有任职记录</div>
+  <table class="matrix-table">
+    <thead>
+      <tr><th>人物</th><th>阿克塞</th><th>酒泉市直</th><th>肃州区</th><th>跨县类型</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>张桐</td><td class="cell-yes">✓</td><td class="cell-yes">✓</td><td class="cell-no">—</td><td>市直→阿克塞</td></tr>
+      <tr><td>陶涛</td><td class="cell-yes">✓</td><td class="cell-yes">✓</td><td class="cell-no">—</td><td>市直→阿克塞→副市长</td></tr>
+      <tr><td>张金荣</td><td class="cell-yes">✓</td><td class="cell-yes">✓</td><td class="cell-no">—</td><td>组织部→阿克塞→政协</td></tr>
+      <tr><td>张鹏</td><td class="cell-yes">✓</td><td class="cell-yes">✓</td><td class="cell-yes">✓</td><td>三地流动</td></tr>
+      <tr><td>张健</td><td class="cell-yes">✓</td><td class="cell-no">—</td><td class="cell-yes">✓</td><td>肃州→阿克塞</td></tr>
+      <tr><td>库美斯剑</td><td class="cell-yes">✓</td><td class="cell-no">—</td><td class="cell-no">—</td><td>本土成长</td></tr>
+      <tr><td>银雁</td><td class="cell-yes">✓</td><td class="cell-no">—</td><td class="cell-no">—</td><td>全部在阿克塞</td></tr>
+      <tr><td>塞力泰</td><td class="cell-no">—</td><td class="cell-yes">✓</td><td class="cell-yes">✓</td><td>肃州→侨联</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══ INSIGHTS ═══ -->
+<section class="section">
+  <div class="section-title">关键洞察</div>
+  <div class="section-desc">基于确认信息与推断发现</div>
+  <ul class="insight-list">
+    <li class="insight-item">
+      <span class="insight-badge badge-high">高置信</span>
+      <div><strong>县委书记任命模式</strong> — 阿克塞县委书记连续3任（张金荣·陶涛·张桐）均为酒泉市直部门正职空降，而非从其他县区交流产生。这暗示阿克塞县委书记岗位是"市直正职→县区历练→再提拔"的中间站。</div>
+    </li>
+    <li class="insight-item">
+      <span class="insight-badge badge-high">高置信</span>
+      <div><strong>肃州区→阿克塞副职走廊</strong> — 2023-2024年间，至少2名肃州区干部调任阿克塞县委常委（张健、张鹏）。肃州区作为酒泉市府驻地，同时是阿克塞副职的最重要输送源。</div>
+    </li>
+    <li class="insight-item">
+      <span class="insight-badge badge-med">中等置信</span>
+      <div><strong>阿克塞是"干部输出县"</strong> — 副县级以上干部调出频率较高。2024年仅上半年即有3人公示调出（毛学文、白振林、钟兴鹏）。可能与阿克塞人口少（1.06万）、县级职数有限有关。</div>
+    </li>
+    <li class="insight-item">
+      <span class="insight-badge badge-med">中等置信</span>
+      <div><strong>哈萨克族同乡网络</strong> — 银雁（新疆巴里坤人，哈萨克族）与塞力泰（新疆巴里坤人，哈萨克族）构成同乡+同族双重纽带。两人从新疆到甘肃的轨迹提示可能存在跨省哈萨克族干部交流路径。</div>
+    </li>
+  </ul>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div>数据来源：百度百科·百度搜索·凤凰网·汲古新知·酒泉人大·中国甘肃网·搜狐新闻</div>
+  <div style="margin-top:4px">数据文件：data/database/aksai_network.db · data/graph/aksai_network.gexf · scripts/build/build_aksai_data.py</div>
+</footer>
+
+</body>
+</html>

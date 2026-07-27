@@ -1,0 +1,1 @@
+scripts/build/build_固原市_data.py

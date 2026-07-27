@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "山西省",
+    "city": "吕梁市",
+    "region": "柳林县",
+    "job": "组织部长",
+    "task_id": "shanxi_柳林县",
+    "time_focus": "2020-2026"
+  },
+  "identity": {
+    "person_id": "shanxi_liulin_wang_weiguo",
+    "name": "王卫国",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1977.12",
+    "birthplace": "山西省",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "大学学历",
+        "study_type": "unknown",
+        "source_ids": ["S001"]
+      }
+    ],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "王卫国_1977",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "柳林县委常委、组织部长",
+    "current_org": "中共柳林县委",
+    "administrative_rank": "副县级",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "方山县人民政府 / 中共方山县委",
+      "title": "方山县副县长",
+      "level": "县级",
+      "location": "方山县",
+      "system": "government",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "在方山县任副县长",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "",
+      "org": "中共方山县委",
+      "title": "方山县委常委、组织部长",
+      "level": "县级",
+      "location": "方山县",
+      "system": "organization",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "调任方山县组织部长",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "至今",
+      "org": "中共柳林县委",
+      "title": "柳林县委常委、组织部长",
+      "level": "县级",
+      "location": "柳林县",
+      "system": "organization",
+      "rank": "副县级",
+      "is_key_promotion": false,
+      "notes": "从方山县调任柳林县组织部长，接替赵日政",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "方山县人民政府/中共方山县委",
+      "type": "government",
+      "role": "副县长"
+    },
+    {
+      "id": 2,
+      "name": "中共方山县委",
+      "type": "party",
+      "role": "组织部长"
+    },
+    {
+      "id": 3,
+      "name": "中共柳林县委",
+      "type": "party",
+      "role": "组织部长"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "赵日政",
+      "person_id": "shanxi_liulin_zhao_rizheng",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "赵日政前任柳林组织部长，王卫国接任此职",
+      "overlap_org": "中共柳林县委组织部",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "杨月祥",
+      "person_id": "shanxi_liulin_yang_yuexiang",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "王卫国与杨月祥在柳林县委常委会共事",
+      "overlap_org": "中共柳林县委",
+      "overlap_period": "至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["组织工作"],
+    "secondary_specializations": ["政府管理"],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["organization", "government"],
+    "geographic_pattern": ["方山县", "柳林县"],
+    "promotion_velocity": {
+      "summary": "从方山县副县长到柳林常务，总由赵日政调任组织部长，",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "degree_centrality": 0,
+    "betweenness_centrality": 0,
+    "community": ""
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现负面记录",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "柳林县人民政府网站",
+      "url": "",
+      "publisher": "柳林县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-26",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "政府网站可能已下线或超"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "王卫国的完整履历。在方山县任职副县长和组织部长的具体时间点，教育背景完整信息、入党时间、参加工作时间"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "王卫国的完整履历，在方山副县长和组织部长的具体起止时间",
+      "why_it_matters": "缺失大多履历信息",
+      "suggested_queries": ["王卫国 方山 组织部长 简历", "王卫国 柳林 组织部长 任前公示"],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}

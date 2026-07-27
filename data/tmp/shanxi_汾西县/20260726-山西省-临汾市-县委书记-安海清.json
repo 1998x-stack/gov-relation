@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-26",
+  "investigation_scope": {
+    "province": "山西省",
+    "city": "临汾市",
+    "region": "汾西县",
+    "job": "县委书记",
+    "task_id": "shanxi_汾西县",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "shanxi_fenxi_an_haiqing_1971",
+    "name": "安海清",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1971",
+    "birthplace": "山西省高平市",
+    "native_place": "山西省高平市",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "安海清_1971",
+      "name_birthplace": "安海清_高平",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中共汾西县委书记",
+    "current_org": "中共汾西县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07-26",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "",
+      "org": "中共古县委员会",
+      "title": "古县县委常委、组织部部长",
+      "level": "副处级",
+      "location": "山西省临汾市古县",
+      "system": "organization",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "早期任职，具体起止日期未找到",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "",
+      "org": "中共安泽县委员会",
+      "title": "安泽县委常委、组织部部长",
+      "level": "副处级",
+      "location": "山西省临汾市安泽县",
+      "system": "organization",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "具体起止日期未找到",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "",
+      "end": "2021-01",
+      "org": "中共临汾市纪律检查委员会",
+      "title": "临汾市纪委常委（市监委委员）",
+      "level": "副处级",
+      "location": "山西省临汾市",
+      "system": "discipline",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-06",
+      "org": "中共临汾市委员会",
+      "title": "临汾市委主持日常工作的副秘书长、办公室主任",
+      "level": "正处级",
+      "location": "山西省临汾市",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "主持日常工作，为重要正处级岗位",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2026-06",
+      "end": "present",
+      "org": "中共汾西县委员会",
+      "title": "汾西县委书记",
+      "level": "县处级正职",
+      "location": "山西省临汾市汾西县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2026年6月2日经省委研究决定任命，接替王林波",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "organizations": [
+    {"org_id": "org_shanxi_fenxi_county", "name": "中共汾西县委员会", "type": "党委", "role": "current"},
+    {"org_id": "org_shanxi_gu_county", "name": "中共古县委员会", "type": "党委", "role": "former"},
+    {"org_id": "org_shanxi_anze_county", "name": "中共安泽县委员会", "type": "党委", "role": "former"},
+    {"org_id": "org_shanxi_linfen_city", "name": "中共临汾市委员会", "type": "党委", "role": "former"},
+    {"org_id": "org_shanxi_linfen_discipline", "name": "中共临汾市纪律检查委员会", "type": "纪委", "role": "former"}
+  ],
+  "relationships": [
+    {
+      "person": "霍俊波",
+      "person_id": "shanxi_fenxi_huo_junbo_1980",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "县委书记与县长搭班子，共同出席多项活动",
+      "overlap_org": "汾西县",
+      "overlap_period": "2026-06至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "王林波",
+      "person_id": "",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "直接接替王林波任汾西县委书记",
+      "overlap_org": "中共汾西县委员会",
+      "overlap_period": "2026-06",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "卢燕飞",
+      "person_id": "",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "县委书记与常务副县长上下级关系",
+      "overlap_org": "汾西县",
+      "overlap_period": "2026-06至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["组织工作", "纪检监察", "党委办公室管理"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["organization", "discipline", "party"],
+    "geographic_pattern": ["高平（籍贯）", "古县", "安泽县", "临汾市", "汾西县"],
+    "promotion_velocity": {
+      "summary": "从县级组织部部长逐步升至临汾市委副秘书长、办公室主任（正处级），后外放汾西县委书记，属典型组织系统晋升路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "low_profile",
+        "evidence": "公开资料较少个人风格描述",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "2026年7月检索未发现安海清的纪律处分、审计问题或负面报道",
+      "date": "2026-07-26",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "安海清任汾西县委书记（搜狐转载汾西融媒）",
+      "url": "https://www.sohu.com/a/1031789298_121430044",
+      "publisher": "搜狐",
+      "published_at": "2026-06-03",
+      "accessed_at": "2026-07-26",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "转载汾西融媒官方消息，包含安海清完整前任职务报道"
+    },
+    {
+      "id": "S002",
+      "title": "汾西县人民政府门户网站",
+      "url": "http://www.fenxi.gov.cn/",
+      "publisher": "汾西县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-26",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "首页新闻多次提到安海清和霍俊波"
+    },
+    {
+      "id": "S003",
+      "title": "汾西县人民政府领导信息",
+      "url": "http://www.fenxi.gov.cn/contents/9166/995.html",
+      "publisher": "汾西县人民政府",
+      "published_at": "",
+      "accessed_at": "2026-07-26",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "县级领导分工页面，包含霍俊波等领导人信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "教育背景、入党时间、以及古县、安泽县具体任职时间段均未找到"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "安海清的教育背景（大学及专业）是什么？",
+      "why_it_matters": "教育背景是评估官员专业方向的基基信息",
+      "suggested_queries": ["安海清 毕业 院校", "安海清 学历"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "medium",
+      "question": "安海清在古县和安泽县组织部长的具体任职年月？",
+      "why_it_matters": "精确时间线有助于判定跨县交流模式",
+      "suggested_queries": ["古县 安海清 组织部长 任职", "安泽县 安海清"],
+      "last_attempted": "2026-07-26"
+    },
+    {
+      "priority": "low",
+      "question": "安海清的入党年份？",
+      "why_it_matters": "计算其政治生涯起始点",
+      "suggested_queries": ["安海清 入党"],
+      "last_attempted": "2026-07-26"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-25",
+  "investigation_scope": {
+    "province": "内蒙古自治区",
+    "city": "呼和浩特市",
+    "region": "清水河县",
+    "job": "前任县委书记",
+    "task_id": "inner_mongolia_清水河县",
+    "time_focus": "2020-2025"
+  },
+  "identity": {
+    "person_id": "qingshuihe_zhang_keling",
+    "name": "张科灵",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张科灵_",
+      "name_birthplace": "张科灵_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "呼和浩特市人大常委会副主任",
+    "current_org": "呼和浩特市人民代表大会常务委员会",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-07-25",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "2025-01",
+      "org": "中国共产党清水河县委员会",
+      "title": "清水河县委书记",
+      "level": "正处级",
+      "location": "呼和浩特市清水河县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2025年1月当选市人大常委会副主任后卸任县委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "2025-01",
+      "end": "present",
+      "org": "呼和浩特市人民代表大会常务委员会",
+      "title": "副主任",
+      "level": "副厅级",
+      "location": "呼和浩特市",
+      "system": "government",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "晋升副厅级",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_qingshuihe_county_party",
+      "name": "中国共产党清水河县委员会",
+      "role": "former_employer"
+    },
+    {
+      "org_id": "org_hohhot_npc",
+      "name": "呼和浩特市人民代表大会常务委员会",
+      "role": "current_employer"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "徐艳国",
+      "person_id": "qingshuihe_xu_yanguo",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "张科灵卸任清水河县委书记后由徐艳国接任",
+      "overlap_org": "中国共产党清水河县委员会",
+      "overlap_period": "2025",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["县级行政管理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["清水河县", "呼和浩特市"],
+    "promotion_velocity": {
+      "summary": "由县委书记晋升为市人大常委会副主任，属正常晋升路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "unknown",
+        "evidence": "公开资料不足",
+        "confidence": "unverified",
+        "source_ids": []
+      }
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现纪律处分或负面报道",
+      "date": "",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "徐艳国任清水河县委书记",
+      "url": "https://www.163.com/dy/article/JQCN0KRG05563DJA.html",
+      "publisher": "网易新闻（汲古知新）",
+      "published_at": "2025-03-11",
+      "accessed_at": "2026-07-25",
+      "source_type": "media",
+      "reliability": "medium",
+      "notes": "引用政府官网信息"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "完整履历、出生信息、教育背景完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "张科灵的完整身份信息（出生日期、籍贯、教育背景）",
+      "why_it_matters": "基本履历信息完全缺失",
+      "suggested_queries": ["张科灵 简历", "张科灵 清水河县 县委书记 履历"],
+      "last_attempted": "2026-07-25"
+    },
+    {
+      "priority": "high",
+      "question": "张科灵何时开始担任清水河县委书记",
+      "why_it_matters": "需要了解其前任云霖琼与他的交接时间",
+      "suggested_queries": ["张科灵 任清水河县委书记", "清水河县委书记 任职"],
+      "last_attempted": "2026-07-25"
+    }
+  ]
+}
