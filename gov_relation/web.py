@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlparse
 
 from .inventory import collect_inventory
 from .log import get_logger
-from .paths import DATABASE_DIR, DOCS_DIR, GRAPH_DIR, PERSONS_DIR, REPORT_DIR, REPO_ROOT
+from .paths import CENTRAL_DIR, DATABASE_DIR, DOCS_DIR, GRAPH_DIR, PERSONS_DIR, PROVINCE_DIR, REGISTRY_DB, REPORT_DIR, REPO_ROOT
 
 logger = get_logger(__name__)
 
@@ -380,6 +380,31 @@ def database_rows(name: str, table: str, limit: int = 500) -> list[dict]:
         conn.close()
 
 
+def list_central_provinces() -> list[dict]:
+    """Read registry.db for central province stats."""
+    if not REGISTRY_DB.exists():
+        return []
+    conn = sqlite3.connect(f"file:{REGISTRY_DB}?mode=ro", uri=True)
+    conn.row_factory = sqlite3.Row
+    try:
+        rows = conn.execute("SELECT * FROM region_registry ORDER BY province").fetchall()
+        return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
+def list_central_migration_audit() -> list[dict]:
+    if not REGISTRY_DB.exists():
+        return []
+    conn = sqlite3.connect(f"file:{REGISTRY_DB}?mode=ro", uri=True)
+    conn.row_factory = sqlite3.Row
+    try:
+        rows = conn.execute("SELECT * FROM migration_audit ORDER BY migrated_at DESC LIMIT 300").fetchall()
+        return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
 def static_payload() -> dict:
     inv = collect_inventory()
     dbs = list_databases()
@@ -396,6 +421,8 @@ def static_payload() -> dict:
         "graphs": list_graphs(),
         "reports": list_reports(),
         "person_profiles": list_person_profiles(),
+        "central_provinces": list_central_provinces(),
+        "central_migration": list_central_migration_audit(),
     }
 
 

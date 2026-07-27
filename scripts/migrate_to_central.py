@@ -47,6 +47,21 @@ def migrate_one(db_path: Path, central: Central, slug: str) -> dict[str, int]:
     src = sqlite3.connect(str(db_path))
     src.row_factory = sqlite3.Row
 
+    # Quick check: if DB is empty (0 bytes or no tables), skip gracefully
+    if db_path.stat().st_size == 0:
+        src.close()
+        return stats
+
+    # Verify basic tables exist
+    try:
+        tables = {r[0] for r in src.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()}
+        if "persons" not in tables:
+            src.close()
+            return stats
+    except Exception:
+        src.close()
+        return stats
+
     # 1. Persons — collect old id → hash mapping
     persons = _fetch_tuples(src, "persons")
     old_id_to_hash: dict[str, str] = {}
