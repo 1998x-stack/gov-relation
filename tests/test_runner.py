@@ -105,3 +105,43 @@ class TestRunBuild:
         import xml.etree.ElementTree as ET
         root = ET.fromstring(content)
         assert root.tag.endswith("gexf")
+
+
+class TestRunBuildWithCentralOpt:
+    def test_central_param_does_not_break_basic(self, tmp_path: Path) -> None:
+        from gov_relation.runner import run_build
+        db_path = tmp_path / "basic_network.db"
+        gexf_path = tmp_path / "basic_network.gexf"
+        # basic call with no central should work exactly as before
+        run_build(
+            slug="test",
+            persons=[{"id": 1, "name": "张三"}],
+            organizations=[],
+            positions=[],
+            relationships=[],
+            db_path=str(db_path),
+            gexf_path=str(gexf_path),
+        )
+        assert db_path.exists()
+        assert gexf_path.exists()
+
+    def test_central_param_does_not_crash(self, tmp_path: Path) -> None:
+        from gov_relation.runner import run_build
+        from gov_relation.central import Central
+        central = Central("test_runner_prov")
+        db_path = tmp_path / "with_central_network.db"
+        gexf_path = tmp_path / "with_central_network.gexf"
+        run_build(
+            slug="test",
+            persons=[{"id": 1, "name": "张三", "birth": "1977-01"}],
+            organizations=[
+                {"id": 10, "name": "县政府", "fqn": "run县人民政府", "province": "test_runner_prov"},
+            ],
+            positions=[],
+            relationships=[],
+            db_path=str(db_path),
+            gexf_path=str(gexf_path),
+            central=central,
+        )
+        assert db_path.exists()
+        central.close()

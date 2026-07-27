@@ -45,6 +45,7 @@ def run_build(
     db_path: str | Path,
     gexf_path: str | Path,
     overwrite: bool = False,
+    central: Any = None,  # Optional Central writer
 ) -> None:
     db_path = Path(db_path)
     gexf_path = Path(gexf_path)
@@ -101,3 +102,14 @@ def run_build(
         )
     builder.write(gexf_path)
     logger.info("GEXF ready: %s", gexf_path)
+
+    # ── Central registry ────────────────────────────────────────────
+    if central is not None:
+        for p in persons:
+            central.merge_person(p)
+        for o in organizations:
+            central.merge_organization(o)
+        for pos in positions:
+            central.insert_position(pos)
+        for rel in relationships:
+            central.insert_relationship(rel)
