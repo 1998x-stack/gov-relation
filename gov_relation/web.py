@@ -39,11 +39,19 @@ def _table_row_to_html(line: str) -> str:
     return f"<tr>{cols}</tr>"
 
 
+def _html_escape(text: str) -> str:
+    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+_INLINE_CODE_RE = re.compile(r"`([^`]+)`")
+
+
 def md_to_html(md_text: str, title: str = "") -> str:
     """Convert a subset of Markdown to a standalone HTML page.
 
     Supports: H1-H6, blockquotes, horizontal rules, bold, italic,
-    links, images, bullet/unordered lists, tables, and paragraph wrapping.
+    links, images, bullet/unordered lists, tables, fenced code blocks,
+    inline code, and paragraph wrapping.
 
     Uses only Python stdlib — no third-party dependencies.
     """
@@ -51,20 +59,14 @@ def md_to_html(md_text: str, title: str = "") -> str:
         m = _RE_H1.search(md_text)
         title = m.group(1).strip() if m else "Report"
 
-    # inline formatting (skip hr — handled at block level)
-    text = md_text
-    text = _RE_IMAGE.sub(r'<img src="\2" alt="\1">', text)
-    text = _RE_LINK.sub(r'<a href="\2">\1</a>', text)
-    text = _RE_BOLD.sub(r"<strong>\1</strong>", text)
-    text = _RE_ITALIC.sub(r"<em>\1</em>", text)
-
     # --- block-level conversion ---
-    lines = text.split("\n")
+    lines = md_text.split("\n")
     out: list[str] = []
     in_table = False
     in_list = False
     list_type: str | None = None
     in_blockquote = False
+    in_code_block = False
 
     def _close_blockquote() -> None:
         nonlocal in_blockquote
@@ -85,8 +87,33 @@ def md_to_html(md_text: str, title: str = "") -> str:
             out.append("</table>")
             in_table = False
 
+    def _apply_inline(text: str) -> str:
+        text = _html_escape(text)
+        text = _RE_BOLD.sub(r"<strong>\1</strong>", text)
+        text = _INLINE_CODE_RE.sub(r"<code>\1</code>", text)  # before italic so `_` inside backticks isn't parsed as italic
+        text = _RE_ITALIC.sub(r"<em>\1</em>", text)
+        text = _RE_LINK.sub(r'<a href="\2">\1</a>', text)
+        text = _RE_IMAGE.sub(r'<img src="\2" alt="\1">', text)
+        return text
+
     for raw_line in lines:
         line = raw_line.strip()
+
+        if line.startswith("```"):
+            if not in_code_block:
+                _close_blockquote()
+                _close_list()
+                _close_table()
+                in_code_block = True
+                out.append("<pre><code>")
+            else:
+                in_code_block = False
+                out.append("</code></pre>")
+            continue
+
+        if in_code_block:
+            out.append(_html_escape(line) + "\n")
+            continue
 
         # Horizontal rule
         if _RE_HORIZONTAL_RULE.match(line):
@@ -107,7 +134,7 @@ def md_to_html(md_text: str, title: str = "") -> str:
             _close_blockquote()
             _close_list()
             _close_table()
-            out.append(f"<h{heading[0]}>{heading[1]}</h{heading[0]}>")
+            out.append(f"<h{heading[0]}>{_apply_inline(heading[1])}</h{heading[0]}>")
             continue
 
         # Empty line — close open blocks
@@ -126,7 +153,7 @@ def md_to_html(md_text: str, title: str = "") -> str:
             if not in_blockquote:
                 out.append("<blockquote>")
                 in_blockquote = True
-            out.append(f"<p>{bq_match.group(1).strip()}</p>")
+            out.append(f"<p>{_apply_inline(bq_match.group(1).strip())}</p>")
             continue
         else:
             _close_blockquote()
@@ -160,7 +187,7 @@ def md_to_html(md_text: str, title: str = "") -> str:
                 out.append("<ul>")
                 in_list = True
                 list_type = "ul"
-            out.append(f"<li>{line[2:]}</li>")
+            out.append(f"<li>{_apply_inline(line[2:])}</li>")
             continue
         # Ordered list
         ol_match = re.match(r"^\d+\.\s+(.+)$", line)
@@ -172,7 +199,7 @@ def md_to_html(md_text: str, title: str = "") -> str:
                 out.append("<ol>")
                 in_list = True
                 list_type = "ol"
-            out.append(f"<li>{ol_match.group(1)}</li>")
+            out.append(f"<li>{_apply_inline(ol_match.group(1))}</li>")
             continue
 
         # Close list if we hit non-list content
@@ -181,12 +208,14 @@ def md_to_html(md_text: str, title: str = "") -> str:
         # Default: paragraph
         _close_blockquote()
         _close_table()
-        out.append(f"<p>{line}</p>")
+        out.append(f"<p>{_apply_inline(line)}</p>")
 
     # Close any remaining open tags
     _close_blockquote()
     _close_list()
     _close_table()
+    if in_code_block:
+        out.append("</code></pre>")
 
     body_html = "\n".join(out)
 
@@ -471,9 +500,15 @@ def generate_index_html(todo_path: str = "data/TODO.json") -> str:
     if not recent_html:
         recent_html = """      <div class="recent-row" style="color:var(--ink-dim);">暂无完成记录</div>"""
 
-    todo_pct = 0
-    if meta.get("total_items"):
-        todo_pct = meta.get("finished_items", 0) * 100 // meta["total_items"]
+    # Compute actual done/total from tasks (not stale meta)
+    real_total = 0
+    real_done = 0
+    for prov in todo_full.get("provinces", []):
+        d, t = _count_todo_tasks(prov.get("tasks", []))
+        real_total += t
+        real_done += d
+
+    todo_pct = (real_done * 100 // real_total) if real_total else 0
 
     # ── Build HTML ──
     html = f"""<!DOCTYPE html>
@@ -594,7 +629,7 @@ footer a {{ color: var(--blue); }}
         <div class="title">数据浏览 Explorer</div>
         <div class="sub">浏览数据库、关系图和报告</div>
       </a>
-      <a href="../report/graph.html" class="link-card">
+      <a href="report/graph.html" class="link-card">
         <div class="label">INTERACTIVE GRAPH</div>
         <div class="title">全量关系图谱</div>
         <div class="sub">vis.js 交互网络图</div>
@@ -608,9 +643,9 @@ footer a {{ color: var(--blue); }}
   <div class="container">
     <h2>总体进度</h2>
     <div class="progress-summary">
-      <span>总任务: <b>{meta.get("total_items", 0)}</b></span>
-      <span>已完成: <b>{meta.get("finished_items", 0)}</b></span>
-      <span>剩余: <b>{meta.get("remaining_items", 0)}</b></span>
+      <span>总任务: <b>{real_total}</b></span>
+      <span>已完成: <b>{real_done}</b></span>
+      <span>剩余: <b>{real_total - real_done}</b></span>
     </div>
     <div class="bar-wrap" style="height:12px;"><div class="bar-fill" style="width:{todo_pct}%;background:var(--gold);height:12px;"></div></div>
     <div class="sub" style="text-align:right;margin-top:0.25rem;">{todo_pct}%</div>
