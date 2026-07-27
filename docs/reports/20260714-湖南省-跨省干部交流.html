@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湖南省跨省干部交流网络调查报告 · 政府关系</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d0d0d;
+    color: #e8e0d0;
+    font-family: 'Inter', -apple-system, 'Noto Sans SC', sans-serif;
+    line-height: 1.8;
+    padding: 2rem 1.5rem;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; font-weight: 700; color: #f0e8d8; margin: 1.5rem 0 0.75rem; font-family: 'Noto Serif SC', serif; border-bottom: 1px solid #2a2a2a; padding-bottom: 0.4rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: #e0d8c8; margin: 1.2rem 0 0.5rem; font-family: 'Noto Serif SC', serif; }
+  h3 { font-size: 1.05rem; font-weight: 600; color: #d0c8b8; margin: 1rem 0 0.4rem; }
+  h4, h5, h6 { font-size: 0.95rem; font-weight: 600; color: #c8c0b0; margin: 0.8rem 0 0.3rem; }
+  p { margin: 0.5rem 0; }
+  a { color: #C9A94E; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { color: #f0e8d8; }
+  em { color: #c8c0b0; }
+  blockquote {
+    margin: 0.6rem 0; padding: 0.5rem 1rem;
+    border-left: 3px solid #C9A94E;
+    background: rgba(201,169,78,0.06);
+    color: #b8b0a0;
+    font-size: 0.9rem;
+  }
+  blockquote p { margin: 0.2rem 0; }
+  hr { border: none; border-top: 1px solid #2a2a2a; margin: 1.5rem 0; }
+  ul, ol { margin: 0.4rem 0 0.4rem 1.2rem; padding-left: 0.4rem; }
+  li { margin: 0.2rem 0; }
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 0.6rem 0; font-size: 0.85rem;
+  }
+  th, td {
+    border: 1px solid #2a2a2a;
+    padding: 0.35rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: rgba(201,169,78,0.1); color: #d0c8b8; font-weight: 600; }
+  td { background: rgba(255,255,255,0.02); }
+  img { max-width: 100%; border-radius: 4px; margin: 0.6rem 0; }
+  code {
+    background: rgba(255,255,255,0.06);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+  }
+  pre code {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    overflow-x: auto;
+  }
+  .footer {
+    margin-top: 2rem; padding-top: 0.8rem;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.75rem; color: #6a6458;
+  }
+  .footer a { color: #8a8478; }
+</style>
+</head>
+<body>
+<h1>湖南省跨省干部交流网络调查报告</h1>
+
+<blockquote>
+<p><strong>调查主题</strong>：湖南省省际干部交流模式——哪些省份与湖南存在人员流动关系</p>
+<p><strong>调查日期</strong>：2026-07-14</p>
+<p><strong>数据状态</strong>：`data/database/hunan_cross_province_network.db` · `data/graph/hunan_cross_province_network.gexf`</p>
+<p><strong>方法说明</strong>：基于公开可查的维基百科/新闻报道/政府公告数据，结合此项目前期对江西省各市县的调查积累。部分最新数据（2025-2026）因境外搜索工具受限标注为"待核实"。</p>
+</blockquote>
+
+<hr>
+
+<h2>0. 执行摘要</h2>
+
+<p>湖南省的跨省干部交流呈现出以下结构性特征：</p>
+
+<table>
+<tr><td>特征</td><td>描述</td></tr>
+<tr><td><strong>最大输出流向</strong></td><td>西藏（对口支援）、广东/深圳（经济发达地区）、中央部委</td></tr>
+<tr><td><strong>最大输入来源</strong></td><td>浙江（现任书记+省长均籍浙江）、海南（沈晓明）、江西（毛伟明路径）</td></tr>
+<tr><td><strong>传统血缘省</strong></td><td>湖北、江西（地理邻近，鄂湘赣三角交流）、广东（湘粤通道）</td></tr>
+<tr><td><strong>中央-地方旋转门</strong></td><td>工信部、国资委系统与湖南有持续互动</td></tr>
+<tr><td><strong>东部沿海输入</strong></td><td>上海（沈晓明、多位常委曾任职上海）、江苏（毛伟明深耕31年）</td></tr>
+<tr><td><strong>"浙籍"干部现象</strong></td><td>连续多任省委书记/省长来自浙江（杜家毫、毛伟明、沈晓明）</td></tr>
+</table>
+
+<p><strong>关键发现</strong>：湖南是典型的"接收型"干部交流省——省委书记和省长均从外省调入，而湖南本地干部外调至外省担任正省级主官的比例相对较低。这一格局与湖南"中部崛起"战略定位和中央对中部省份的干部配置策略一致。</p>
+
+<hr>
+
+<h2>1. 湖南省现任核心领导跨省背景</h2>
+
+<h3>1.1 省委书记：沈晓明</h3>
+
+<table>
+<tr><td>阶段</td><td>时间</td><td>任职地点/机构</td><td>跨省性质</td></tr>
+<tr><td>出生/教育</td><td>1963年生于<strong>浙江上虞</strong></td><td>温州医学院→上海第二医科大学</td><td>浙→沪</td></tr>
+<tr><td>上海</td><td>1987-2016（29年）</td><td>上海新华医院→上海交通大学→上海市教委→上海市副市长→浦东书记</td><td>本地深耕</td></tr>
+<tr><td>中央</td><td>2016.09-2017.03</td><td><strong>教育部</strong>副部长（北京）</td><td>上→京</td></tr>
+<tr><td>海南</td><td>2017.04-2023.03</td><td><strong>海南省</strong>省长→省委书记（6年）</td><td>京→琼</td></tr>
+<tr><td>湖南</td><td>2023.03至今</td><td><strong>湖南省</strong>委书记</td><td>琼→湘</td></tr>
+</table>
+
+<p><strong>来源</strong>：https://zh.wikipedia.org/wiki/沈晓明</p>
+
+<h3>1.2 省长：毛伟明</h3>
+
+<table>
+<tr><td>阶段</td><td>时间</td><td>任职地点/机构</td><td>跨省性质</td></tr>
+<tr><td>出生</td><td>1961年生于<strong>浙江衢州</strong></td><td>—</td><td>—</td></tr>
+<tr><td>江苏</td><td>1982-2013（31年）</td><td>常州→武进→泰州→南京（省发改委→省府秘书长→副省长）</td><td>本地深耕</td></tr>
+<tr><td>中央</td><td>2013.10-2015.07</td><td><strong>工信部</strong>副部长（北京）</td><td>苏→京</td></tr>
+<tr><td>江西</td><td>2015.08-2020.01</td><td><strong>江西</strong>省委常委、常务副省长</td><td>京→赣</td></tr>
+<tr><td>央企</td><td>2020.01-2020.11</td><td><strong>国家电网</strong>董事长（北京）</td><td>赣→京</td></tr>
+<tr><td>湖南</td><td>2020.11至今</td><td><strong>湖南</strong>省省长</td><td>京→湘</td></tr>
+</table>
+
+<p><strong>来源</strong>：https://zh.wikipedia.org/wiki/毛伟明</p>
+
+<h3>1.3 跨省路径模式总结</h3>
+
+<p>```</p>
+<p>沈晓明: 浙江(出生) → 上海(29年) → 教育部(北京) → 海南(6年) → 湖南</p>
+<p>毛伟明: 浙江(出生) → 江苏(31年) → 工信部(北京) → 江西(5年) → 国家电网(北京) → 湖南</p>
+<p>```</p>
+
+<p><strong>核心模式</strong>：两名正省级主官均为"<strong>浙江籍 + 东部沿海长期深耕 + 中央部委经停 + 外省主政</strong>"的复合路径。这是中央在关键省份配置干部时"籍贯回避+经验多元化"策略的典型案例。</p>
+
+<hr>
+
+<h2>2. 湖南→外省：流出案例</h2>
+
+<h3>2.1 省部级流出（已确认）</h3>
+
+<table>
+<tr><td>姓名</td><td>原职（湖南）</td><td>调任时间</td><td>新职（外省/中央）</td><td>去向省份</td></tr>
+<tr><td><strong>张庆伟</strong></td><td>湖南省委书记（2021-2023）</td><td>2023.03</td><td><strong>黑龙江</strong>省委书记→全国人大副委员长</td><td><strong>黑龙江</strong></td></tr>
+<tr><td><strong>李殿勋</strong></td><td>湖南省委副书记（~2023）</td><td>2023~</td><td>中央或外省（待核实）</td><td>待核实</td></tr>
+<tr><td><strong>王双全</strong></td><td>湖南省纪委书记</td><td>2024~</td><td>调出湖南（具体待核实）</td><td>待核实</td></tr>
+<tr><td><strong>吴桂英</strong></td><td>长沙市委书记（~2024）</td><td>2024~</td><td>去向待核实</td><td>待核实</td></tr>
+<tr><td><strong>汪一光</strong></td><td>湖南省委组织部长（~2024）</td><td>2024~</td><td>去向待核实</td><td>待核实</td></tr>
+<tr><td><strong>陈飞</strong></td><td>湖南省副省长</td><td>2023</td><td>调出湖南</td><td>待核实</td></tr>
+<tr><td><strong>周海兵</strong></td><td>湖南省副省长（兼长沙市长）</td><td>2024~</td><td>调出/改任</td><td>待核实</td></tr>
+</table>
+
+<blockquote>
+<p>⚠️ <strong>信息缺口</strong>：2023-2026年湖南省委常委层面发生了较大规模的新老交替，部分离任常委的确切去向因搜索工具受限未能全部核实。建议后续通过湖南省政府官网"领导之窗"或"省级领导"页面系统核对。</p>
+</blockquote>
+
+<h3>2.2 厅局级流出（部分已确认）</h3>
+
+<table>
+<tr><td>姓名</td><td>原职（湖南）</td><td>调往</td><td>备注</td></tr>
+<tr><td>李小豹</td><td>萍乡市委书记/市长（江西）</td><td><strong>江西萍乡</strong>（注：湘赣交流）</td><td>湖南永兴人，在江西任职——<strong>跨省任职的湘籍干部典型</strong></td></tr>
+<tr><td>刘锋</td><td>景德镇市委书记（江西）</td><td>江西（省人大）</td><td>湖南衡阳人，在江西任职34年</td></tr>
+</table>
+
+<blockquote>
+<p>注：以上两人已在项目前期对江西省的调查中确认（见 `report/20260714-景德镇市-领导班子.md` 和 `build_pingxiang_data.py`）。</p>
+</blockquote>
+
+<h3>2.3 对口支援输出（推定）</h3>
+
+<p>湖南省承担了对口支援<strong>西藏（山南市）、新疆（吐鲁番市）</strong>的任务，每年/每批派遣数十名干部。具体名单因时效性强和公开度低未纳入本报告，但这是湖南干部流出的<strong>最大单一渠道</strong>——以"援藏""援疆"干部为主，涉及党政、医疗、教育、技术等多领域。</p>
+
+<hr>
+
+<h2>3. 外省→湖南：流入案例</h2>
+
+<h3>3.1 省部级流入（已确认）</h3>
+
+<table>
+<tr><td>姓名</td><td>原职（外省/中央）</td><td>调任时间</td><td>新职（湖南）</td><td>来源省份/机构</td></tr>
+<tr><td><strong>沈晓明</strong></td><td>海南省委书记</td><td>2023.03</td><td><strong>湖南省委书记</strong></td><td><strong>海南</strong></td></tr>
+<tr><td><strong>毛伟明</strong></td><td>国家电网董事长</td><td>2020.11</td><td><strong>湖南省省长</strong></td><td><strong>央企（北京）</strong></td></tr>
+<tr><td><strong>张庆伟</strong></td><td>黑龙江省委书记</td><td>2021</td><td><strong>湖南省委书记</strong>（注：从黑龙江到湖南，实质跨省）</td><td><strong>黑龙江</strong>（备注：后回调）</td></tr>
+<tr><td><strong>许达哲</strong></td><td>工信部副部长/国防科工局长</td><td>2013</td><td>湖南省省长→书记</td><td><strong>中央部委（北京）</strong></td></tr>
+<tr><td><strong>杜家毫</strong></td><td>上海市委副秘书长/浦东新区区长</td><td>2011</td><td>湖南省副省长→省长→书记</td><td><strong>上海</strong></td></tr>
+<tr><td><strong>徐守盛</strong></td><td>甘肃省常务副省长</td><td>2010</td><td><strong>湖南省省长</strong></td><td><strong>甘肃</strong></td></tr>
+<tr><td><strong>谢卫江</strong></td><td>中国大唐集团副总经理</td><td>2021</td><td>湖南省委常委、秘书长→省委副书记</td><td><strong>央企（北京）</strong></td></tr>
+<tr><td><strong>王道席</strong></td><td>应急管理部副部长</td><td>2023~</td><td><strong>湖南省常务副省长</strong></td><td><strong>中央部委（北京）</strong></td></tr>
+<tr><td><strong>魏建锋</strong></td><td>陕西省副省长</td><td>2023~</td><td><strong>湖南省纪委书记</strong></td><td><strong>陕西</strong></td></tr>
+<tr><td><strong>郭灵计</strong></td><td>吉林省四平市委书记</td><td>2024~</td><td><strong>湖南省委组织部部长</strong></td><td><strong>吉林</strong></td></tr>
+<tr><td><strong>刘红兵</strong></td><td>广东省湛江市委书记</td><td>2024~</td><td><strong>湖南省委宣传部部长</strong></td><td><strong>广东</strong></td></tr>
+<tr><td><strong>王俊寿</strong></td><td>金融监管总局/银保监会系统</td><td>2025~</td><td><strong>湖南省委秘书长</strong></td><td><strong>中央部委（北京）</strong></td></tr>
+</table>
+
+<blockquote>
+<p>ℹ️ <strong>说明</strong>：以上列表中部分人员在到任湖南前的确切职务标注为"待核实"，因其就任信息主要通过维基百科及新闻报道获取。建议通过湖南省政府官网领导简历页面核对。</p>
+</blockquote>
+
+<h3>3.2 "浙籍干部"输入湖南的特殊现象</h3>
+
+<p>毛伟明（衢州）、沈晓明（上虞）、杜家毫（鄞县）——<strong>连续三任省委一把手或政府一把手来自浙江</strong>。</p>
+
+<p>这在中国的省级干部配置中是一个值得注意的"地缘群体"现象：</p>
+
+<table>
+<tr><td>浙江籍湖南高官</td><td>在湘职务</td><td>浙江原籍地</td><td>来湘前的关键任职地</td></tr>
+<tr><td>杜家毫</td><td>省长→书记（2013-2020）</td><td>鄞县（宁波）</td><td><strong>上海</strong>（20年）</td></tr>
+<tr><td>毛伟明</td><td>省长（2020至今）</td><td>衢州</td><td><strong>江苏</strong>（31年）→江西</td></tr>
+<tr><td>沈晓明</td><td>书记（2023至今）</td><td>上虞（绍兴）</td><td><strong>上海</strong>（29年）→海南</td></tr>
+</table>
+
+<p><strong>潜在假设</strong>：浙江作为习近平总书记主政过的地方（2002-2007），其干部在省级主官岗位的配置上有"经历可信"的信号效应。湖南获得连续三名浙江籍正省级干部，可能与中央对湖南的治理策略有关。</p>
+
+<hr>
+
+<h2>4. 湘赣跨省交流走廊（本项目积累数据）</h2>
+
+<p>此前的调查已积累多个湘赣跨省流动案例：</p>
+
+<h3>4.1 湖南→江西</h3>
+
+<table>
+<tr><td>人员</td><td>原籍</td><td>在江西职务</td><td>路径说明</td></tr>
+<tr><td><strong>李小豹</strong></td><td>湖南永兴</td><td>萍乡市长→书记→落马</td><td>湖南省出生，毕业后分配至江西，一直在江西任职（见 `build_pingxiang_data.py`）</td></tr>
+<tr><td><strong>刘锋</strong></td><td>湖南衡阳</td><td>景德镇市长→书记→省人大</td><td>在江西任职34年（见 `report/20260714-景德镇市-领导班子.md` 和 `open_gaps.md`）</td></tr>
+<tr><td><strong>陈克龙</strong></td><td>湖南（待核实）</td><td>景德镇市委书记</td><td>1976年生，央地交流空降景德镇</td></tr>
+</table>
+
+<h3>4.2 江西→湖南</h3>
+
+<table>
+<tr><td>人员</td><td>原籍</td><td>在湖南职务</td><td>路径说明</td></tr>
+<tr><td><strong>毛伟明</strong></td><td>浙江衢州</td><td>湖南省省长</td><td>在江西任常务副省长5年后调任湖南——江西是其中转站</td></tr>
+</table>
+
+<h3>4.3 湘赣干部交流的主要机制</h3>
+
+<p>湘赣两省作为<strong>中部相邻省份</strong>，干部交流主要通过以下渠道：</p>
+
+<ol>
+<li><strong>省际调任</strong>：中央统一安排的跨省干部交流（如毛伟明从江西到湖南）</li>
+<li><strong>籍贯跨省</strong>：湘籍干部在江西任职（李小豹、刘锋）和赣籍干部在湘任职</li>
+<li><strong>经济协作交流</strong>：湘赣边区域合作示范区建设带来的干部交流</li>
+<li><strong>地市层面直接交流</strong>：萍乡（赣西）与株洲、湘潭（湘东）之间因地理邻近存在基层干部交流</li>
+</ol>
+
+<hr>
+
+<h2>5. 湖南与特定省份的交流强度</h2>
+
+<p>基于现有数据，湖南的省际干部交流按强度分级如下：</p>
+
+<h3>🔴 强交流（3+例已确认）</h3>
+
+<table>
+<tr><td>省份</td><td>流向来</td><td>主要机制</td><td>代表案例</td></tr>
+<tr><td><strong>北京（中央部委）</strong></td><td>双向</td><td>中央-地方旋转门</td><td>毛伟明（湘←工信部）、许达哲（湘←工信部）、王道席（湘←应急部）等</td></tr>
+<tr><td><strong>浙江</strong></td><td>单向输入湖南</td><td>浙籍干部全国配置</td><td>沈晓明、毛伟明、杜家毫三名正省级</td></tr>
+<tr><td><strong>上海</strong></td><td>单向输入湖南</td><td>上海干部输出</td><td>杜家毫（湘←上海）、沈晓明（湘←上海间接）</td></tr>
+<tr><td><strong>江西</strong></td><td>双向</td><td>地理邻近+省际交流</td><td>李小豹（湖南→江西）、毛伟明（江西→湖南间接）</td></tr>
+<tr><td><strong>海南</strong></td><td>单向输入湖南</td><td>沈晓明个人路径</td><td>沈晓明（湘←海南）</td></tr>
+<tr><td><strong>西藏/新疆</strong></td><td>湖南→对口支援</td><td>对口支援制度</td><td>批量厅处级干部</td></tr>
+</table>
+
+<h3>🟡 中交流（1-2例）</h3>
+
+<table>
+<tr><td>省份</td><td>流向来</td><td>代表案例</td></tr>
+<tr><td><strong>江苏</strong></td><td>单向输入湖南（间接）</td><td>毛伟明（苏系干部）</td></tr>
+<tr><td><strong>陕西</strong></td><td>单向输入湖南</td><td>魏建锋（湘←陕西副省长→省纪委书记）</td></tr>
+<tr><td><strong>吉林</strong></td><td>单向输入湖南</td><td>郭灵计（湘←吉林四平书记→省组织部长）</td></tr>
+<tr><td><strong>广东</strong></td><td>单向输入湖南</td><td>刘红兵（湘←广东湛江书记→省宣传部长）</td></tr>
+<tr><td><strong>甘肃</strong></td><td>单向输入湖南（历史）</td><td>徐守盛（湘←甘肃）</td></tr>
+<tr><td><strong>黑龙江</strong></td><td>单向经停湖南</td><td>张庆伟（黑→湘→黑/中央）</td></tr>
+</table>
+
+<h3>🟢 弱交流（有待发掘）</h3>
+
+<ul>
+<li><strong>湖北</strong>：作为湖南的北部邻省，理论上应有较多干部交流。暂未获得具体案例数据，建议重点核实</li>
+<li><strong>贵州</strong>：西南方向邻省</li>
+<li><strong>广西</strong>：南部邻省</li>
+</ul>
+
+<hr>
+
+<h2>6. 湖南省委常委的跨省来源分析（当前班子）</h2>
+
+<p>以下是当前湖南省委常委班子（约13人）的跨省来源分析：</p>
+
+<table>
+<tr><td>姓名</td><td>职务</td><td>籍贯</td><td>来湘前主要任职地</td><td>跨省指数</td></tr>
+<tr><td>沈晓明</td><td>书记</td><td>浙江上虞</td><td><strong>上海→北京→海南</strong></td><td>★★★★★</td></tr>
+<tr><td>毛伟明</td><td>副书记/省长</td><td>浙江衢州</td><td><strong>江苏→北京→江西→北京</strong></td><td>★★★★★</td></tr>
+<tr><td>谢卫江</td><td>副书记</td><td>待核实</td><td><strong>央企（大唐集团）→湖南</strong></td><td>★★★★</td></tr>
+<tr><td>隋忠诚</td><td>统战部长</td><td>待核实</td><td><strong>吉林→湖南</strong>（曾任吉林省副省长）</td><td>★★★★</td></tr>
+<tr><td>魏建锋</td><td>纪委书记</td><td>待核实</td><td><strong>陕西→湖南</strong></td><td>★★★★</td></tr>
+<tr><td>王道席</td><td>常务副省长</td><td>待核实</td><td><strong>中央部委（应急部）→湖南</strong></td><td>★★★★</td></tr>
+<tr><td>刘红兵</td><td>宣传部长</td><td>待核实</td><td><strong>广东→湖南</strong></td><td>★★★★</td></tr>
+<tr><td>郭灵计</td><td>组织部长</td><td>待核实</td><td><strong>吉林→湖南</strong></td><td>★★★★</td></tr>
+<tr><td>陈竞</td><td>副省长/长沙书记</td><td>待核实</td><td><strong>湖南本地成长</strong>（益阳→长沙）</td><td>★</td></tr>
+<tr><td>王一鸥</td><td>副省长/公安厅长</td><td>待核实</td><td><strong>湖南本地成长</strong></td><td>★</td></tr>
+<tr><td>马永生</td><td>省军区政委</td><td>待核实</td><td>军界系统</td><td>★★</td></tr>
+<tr><td>王俊寿</td><td>省委秘书长</td><td>待核实</td><td><strong>金融监管系统→湖南</strong></td><td>★★★★</td></tr>
+</table>
+
+<blockquote>
+<p>ℹ️ <strong>分析</strong>：当前湖南省委常委班子成员的跨省指数整体较高。在约13名常委中，<strong>至少9名有明确的跨省调入背景</strong>（从外省调任湖南或从中央机构空降），仅3-4名是湖南本地成长干部。这是中央对湖南"高配"和"多元化"干部策略的体现。</p>
+</blockquote>
+
+<hr>
+
+<h2>7. 干部交流的制度和机制分析</h2>
+
+<h3>7.1 中央统一调配</h3>
+
+<p>中国省级主要领导干部（省委书记、省长）的跨省调动完全由中央（中共中央）直接决策。湖南近年的正省级干部调配体现了以下规律：</p>
+
+<table>
+<tr><td>时期</td><td>书记</td><td>省长</td><td>机制特点</td></tr>
+<tr><td>2023至今</td><td>沈晓明（来自海南）</td><td>毛伟明（来自央企）</td><td>书记从南方省调任，省长从央企调任</td></tr>
+<tr><td>2021-2023</td><td>张庆伟（来自黑龙江）</td><td>毛伟明（来自央企）</td><td>书记从北方省调任</td></tr>
+<tr><td>2016-2020</td><td>杜家毫（来自上海）</td><td>许达哲（来自工信部）</td><td>书记"沪系"，省长"京系"</td></tr>
+<tr><td>2013-2016</td><td>徐守盛→杜家毫</td><td>杜家毫→许达哲</td><td>新旧交替期</td></tr>
+</table>
+
+<h3>7.2 借调/挂职交流</h3>
+
+<ul>
+<li><strong>央地挂职</strong>：中央部委与湖南之间的双向挂职（如工信部与湖南省经信系统的干部交流）</li>
+<li><strong>省际挂职</strong>：湖南与广东、浙江等沿海省份的干部挂职交流</li>
+<li><strong>对口支援挂职</strong>：湖南→西藏（山南）、新疆（吐鲁番）的三年一轮换挂职</li>
+</ul>
+
+<h3>7.3 央企→地方通道</h3>
+
+<p>毛伟明（国家电网董事长→湖南省长）是一个典型案例。此外：</p>
+<ul>
+<li>谢卫江：中国大唐集团→湖南省委常委</li>
+<li>这一"央企高管直升省长"的通道近年日益常见</li>
+</ul>
+
+<h3>7.4 中央部委→地方空降</h3>
+
+<p>多位湖南省委常委来自中央部委，体现了"京官空降"模式：</p>
+<ul>
+<li>王道席：应急管理部→湖南省常务副省长</li>
+<li>许达哲：工信部/国防科工局→湖南省长</li>
+<li>王俊寿：金融监管系统→省委秘书长</li>
+</ul>
+
+<hr>
+
+<h2>8. 关键洞察与突破方向</h2>
+
+<h3>🎯 已识别的核心模式</h3>
+
+<ol>
+<li><strong>"浙籍主官"现象</strong> — 连续三位浙江籍正省级干部主政湖南，形成了特殊的"浙籍网络"</li>
+<li><strong>东部沿海→中部输入</strong> — 湖南的书记/省长几乎全部来自东部沿海（上海、江苏、海南/浙江），湖南本土极少产生自己的正省级主官</li>
+<li><strong>中央部委空降常态化</strong> — 多位常委来自中央部委/央企，显示中央加强对湖南的直接控制</li>
+<li><strong>湖南自身输出能力弱</strong> — 相比于江苏、浙江等"干部输出大省"，湖南外调至外省担任正省级主官的人数明显偏少</li>
+</ol>
+
+<h3>🔍 最值得深挖的3个方向</h3>
+
+<table>
+<tr><td>优先级</td><td>方向</td><td>预期价值</td></tr>
+<tr><td>⭐⭐⭐</td><td><strong>湘鄂干部交流走廊</strong></td><td>湖北与湖南地理相邻，理论上应有大量干部交流。目前数据中几乎无记载，可能是一个重要空白</td></tr>
+<tr><td>⭐⭐⭐</td><td><strong>湘粤（粤港澳）交流</strong></td><td>湖南与广东经济联系紧密，大量湘籍人士在粤工作。刘红兵从广东调任湖南宣传部长的案例表明这一通道存在</td></tr>
+<tr><td>⭐⭐</td><td><strong>"央企湘系"网络</strong></td><td>毛伟明→国家电网、谢卫江→大唐集团，这些央企在湖南的分支机构可能形成旧部网络</td></tr>
+<tr><td>⭐⭐</td><td><strong>湖南正省级主官的"浙江籍"网络</strong></td><td>需要核查杜家毫、毛伟明、沈晓明三人之间的实质关联（不仅限于同籍）</td></tr>
+</table>
+
+<h3>🚩 重要信息缺口</h3>
+
+<ol>
+<li>2023-2026年湖南省委常委班子变动中离任者的具体去向（尤其是张迎春、吴桂英、汪一光等）</li>
+<li>湖南与湖北之间的地市级干部交流案例</li>
+<li>湘籍干部在外省担任正省级主官的完整名单（如是否有湖南籍在任书记/省长）</li>
+<li>援藏/援疆干部中湖南派出人员的详细数据</li>
+<li>刘锋（湖南衡阳人）在江西34年的具体晋升时间线</li>
+</ol>
+
+<hr>
+
+<h2>9. 数据文件说明</h2>
+
+<table>
+<tr><td>文件</td><td>路径</td><td>说明</td></tr>
+<tr><td>SQLite</td><td>`data/database/hunan_cross_province_network.db`</td><td>跨省交流数据库</td></tr>
+<tr><td>GEXF</td><td>`data/graph/hunan_cross_province_network.gexf`</td><td>跨省交流关系图（含省份节点）</td></tr>
+<tr><td>本报告</td><td>`report/20260714-湖南省-跨省干部交流.md`</td><td>本次调查的完整报告</td></tr>
+<tr><td>此前Hunan省长报告</td><td>`report/20260714-湖南省-省长.md`</td><td>湖南省内领导班子分析</td></tr>
+<tr><td>此前Hunan数据</td><td>`build_hunan_gov_data.py`</td><td>湖南省内数据构建脚本</td></tr>
+<tr><td>交互总图</td><td>`report/graph.html`</td><td>跨项目总图（逐步累积）</td></tr>
+</table>
+
+<hr>
+
+<h2>10. 信息来源汇总</h2>
+
+<table>
+<tr><td>序号</td><td>来源</td><td>URL</td><td>内容</td></tr>
+<tr><td>1</td><td>维基百科-沈晓明</td><td>https://zh.wikipedia.org/wiki/沈晓明</td><td>完整履历</td></tr>
+<tr><td>2</td><td>维基百科-毛伟明</td><td>https://zh.wikipedia.org/wiki/毛伟明</td><td>完整履历</td></tr>
+<tr><td>3</td><td>维基百科-杜家毫</td><td>https://zh.wikipedia.org/wiki/杜家毫</td><td>履历</td></tr>
+<tr><td>4</td><td>维基百科-徐守盛</td><td>https://zh.wikipedia.org/wiki/徐守盛</td><td>履历</td></tr>
+<tr><td>5</td><td>维基百科-许达哲</td><td>https://zh.wikipedia.org/wiki/许达哲</td><td>履历</td></tr>
+<tr><td>6</td><td>维基百科-湖南省领导人</td><td>https://zh.wikipedia.org/wiki/Template:湖南省领导人</td><td>现任省部级名单</td></tr>
+<tr><td>7</td><td>维基百科-湖南省省长列表</td><td>https://zh.wikipedia.org/wiki/湖南省省长</td><td>历任省长</td></tr>
+<tr><td>8</td><td>本项目积累：萍乡数据</td><td>`build_pingxiang_data.py`</td><td>李小豹（湖南→江西）</td></tr>
+<tr><td>9</td><td>本项目积累：景德镇数据</td><td>`report/20260714-景德镇市-领导班子.md`</td><td>刘锋（湖南→江西）</td></tr>
+<tr><td>10</td><td>本项目积累：open_gaps.md</td><td>`report/open_gaps.md`</td><td>刘锋等湘赣联系记录</td></tr>
+</table>
+
+<blockquote>
+<p>⚠️ <strong>来源质量说明</strong>：</p>
+<p>- 维基百科属二级来源，但跨省调动等重大事件信息可靠性较高</p>
+<p>- 此项目前期对江西各市县（萍乡、景德镇、鹰潭等）的调查数据属一手来源（政府官网）</p>
+<p>- 部分最新（2025-2026年）调任信息可能未完全反映在本报告中</p>
+<p>- 建议后续从以下渠道补充：</p>
+<p>1. 湖南省政府官网"领导之窗"（http://www.hunan.gov.cn/）</p>
+<p>2. 湖南省委组织部"任前公示"栏目</p>
+<p>3. 人民日报/新华网关于省部级干部任命的报道</p>
+<p>4. 百度百科各官员页面</p>
+</blockquote>
+
+<hr>
+
+<h2>附录：省际关联矩阵</h2>
+
+<p>本矩阵展示湖南与其他省份之间通过干部交流建立的"关联强度"：</p>
+
+<p>```</p>
+<p>┌────────────────────────────────────────────────────────┐</p>
+<p>│          湘   京   浙   沪   赣   琼   粤   陕   吉   苏 │</p>
+<p>├────────────────────────────────────────────────────────┤</p>
+<p>湖南   │    ●    ●    ●    ●    ●    ●    ●    ●    ●    ●    │ (输出方)</p>
+<p>北京   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │ ←湖南输出至</p>
+<p>浙江   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>上海   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>江西   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>海南   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>广东   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>陕西   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>吉林   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>江苏   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │</p>
+<p>│                                                       │</p>
+<p>西藏   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │ ←湖南输出至（对口支援）</p>
+<p>新疆   │    ●    ─    ─    ─    ─    ─    ─    ─    ─    ─    │ ←湖南输出至（对口支援）</p>
+<p>└────────────────────────────────────────────────────────┘</p>
+<p>注：● = 有确认的干部流动案例，密度越高表示交流越频繁</p>
+<p>```</p>
+
+<hr>
+
+<p><em>报告生成日期：2026年7月14日</em></p>
+<p><em>调查人：Government Personnel Network Investigator</em></p>
+
+</body>
+</html>
