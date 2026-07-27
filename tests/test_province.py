@@ -37,7 +37,15 @@ class TestBuildMapFromTodo:
                     "province": "江西省",
                     "tasks": [
                         {"id": "jiangxi_province", "region": "江西省", "level": "province"},
-                        {"id": "jiangxi_南昌市", "region": "南昌市", "level": "prefecture"},
+                        {
+                            "id": "jiangxi_南昌市",
+                            "region": "南昌市",
+                            "level": "prefecture",
+                            "sub_tasks": [
+                                {"id": "jiangxi_东湖区", "region": "东湖区", "level": "district"},
+                                {"id": "jiangxi_西湖区", "region": "西湖区", "level": "district"},
+                            ],
+                        },
                     ],
                 },
                 {
@@ -53,6 +61,10 @@ class TestBuildMapFromTodo:
             json.dump(todo, f)
 
         mapping = build_slug_province_map(todo_path)
+        # Top-level tasks
         assert mapping["南昌市"] == "江西省"
         assert mapping["安徽省"] == "安徽省"
         assert mapping["江西省"] == "江西省"
+        # Sub-tasks (county/district level)
+        assert mapping["东湖区"] == "江西省"
+        assert mapping["西湖区"] == "江西省"

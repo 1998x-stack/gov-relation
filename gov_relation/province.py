@@ -7,7 +7,7 @@ from .paths import TODO_PATH
 
 
 def build_slug_province_map(todo_path: Path | None = None) -> dict[str, str]:
-    """Parse TODO.json to map region slugs to province names."""
+    """Parse TODO.json to map region slugs (including county-level) to province names."""
     path = todo_path or TODO_PATH
     if not path.exists():
         raise FileNotFoundError(f"TODO.json not found at {path}")
@@ -19,6 +19,11 @@ def build_slug_province_map(todo_path: Path | None = None) -> dict[str, str]:
             region = task.get("region", "")
             if region:
                 mapping[region] = province
+            # Also collect sub-tasks (county/district level)
+            for st in task.get("sub_tasks", []):
+                st_region = st.get("region", "")
+                if st_region:
+                    mapping[st_region] = province
     return mapping
 
 
