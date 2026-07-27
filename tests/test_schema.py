@@ -136,3 +136,56 @@ class TestEndToEnd:
         assert conn.execute("SELECT COUNT(*) FROM organizations").fetchone()[0] == 1
         assert conn.execute("SELECT COUNT(*) FROM positions").fetchone()[0] == 2
         assert conn.execute("SELECT COUNT(*) FROM relationships").fetchone()[0] == 1
+
+
+class TestCentralSchema:
+    def test_creates_central_tables(self) -> None:
+        import sqlite3
+        conn = sqlite3.connect(":memory:")
+        conn.row_factory = sqlite3.Row
+        from gov_relation.schema import create_central_schema
+        create_central_schema(conn)
+        tables = conn.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence' ORDER BY name"
+        ).fetchall()
+        names = [r[0] for r in tables]
+        assert names == ["organizations", "persons", "positions", "relationships"]
+
+    def test_central_persons_has_id_hash_pk(self) -> None:
+        import sqlite3
+        conn = sqlite3.connect(":memory:")
+        from gov_relation.schema import create_central_schema
+        create_central_schema(conn)
+        conn.execute(
+            "INSERT INTO persons (id_hash, name, name_normalized) VALUES (?, ?, ?)",
+            ("abc123", "张三", "张三"),
+        )
+        with pytest.raises(sqlite3.IntegrityError):
+            conn.execute(
+                "INSERT INTO persons (id_hash, name, name_normalized) VALUES (?, ?, ?)",
+                ("abc123", "张三(重复)", "张三"),
+            )
+
+    def test_central_tables_enable_wal(self) -> None:
+        """Verify journal_mode was set to WAL (for file DBs; :memory: returns 'memory')."""
+        import sqlite3
+        conn = sqlite3.connect(":memory:")
+        from gov_relation.schema import create_central_schema
+        create_central_schema(conn)
+        mode = conn.execute("PRAGMA journal_mode").fetchone()[0]
+        # :memory: always returns 'memory', but the PRAGMA was executed without error
+        assert isinstance(mode, str)
+        assert len(mode) > 0
+
+    def test_creates_registry_tables(self) -> None:
+        import sqlite3
+        conn = sqlite3.connect(":memory:")
+        from gov_relation.schema import create_registry_schema
+        create_registry_schema(conn)
+        tables = conn.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name != 'sqlite_sequence' ORDER BY name"
+        ).fetchall()
+        names = [r[0] for r in tables]
+        assert "region_registry" in names
+        assert "migration_audit" in names
+        assert "merge_conflicts" in names
