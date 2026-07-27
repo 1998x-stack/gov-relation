@@ -44,3 +44,14 @@ class TestDataPath:
 
     def test_data_path_empty_returns_data_dir(self) -> None:
         assert data_path() == DATA_DIR
+
+
+class TestCentralPaths:
+    def test_central_paths_have_correct_names(self) -> None:
+        from gov_relation.paths import REGISTRY_DB, PROVINCE_DIR
+        assert REGISTRY_DB.name == "registry.db"
+        assert PROVINCE_DIR.name == "provincial"
+
+    def test_central_paths_under_data_central(self) -> None:
+        from gov_relation.paths import CENTRAL_DIR
+        assert str(CENTRAL_DIR).endswith("data/central")

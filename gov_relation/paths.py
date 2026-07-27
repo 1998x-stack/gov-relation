@@ -15,6 +15,10 @@ REPORT_DIR = REPO_ROOT / "report"
 DOCS_DIR = REPO_ROOT / "docs"
 TODO_PATH = DATA_DIR / "TODO.json"
 
+CENTRAL_DIR = DATA_DIR / "central"
+REGISTRY_DB = CENTRAL_DIR / "registry.db"
+PROVINCE_DIR = CENTRAL_DIR / "provincial"
+
 
 def repo_path(*parts: str) -> Path:
     """Return a path rooted at the repository."""
