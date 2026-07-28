@@ -49682,7 +49682,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "sichuan_木里藏族自治县",
@@ -49796,7 +49796,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_普格县_data.py, data/database/普格县_network.db, data/graph/普格县_network.gexf"
             },
             {
               "id": "sichuan_布拖县",
