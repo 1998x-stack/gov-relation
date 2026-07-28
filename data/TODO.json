@@ -57863,7 +57863,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             },
             {
               "id": "zhejiang_平湖市",
@@ -58057,7 +58057,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_越城区_data.py, data/database/越城区_network.db, data/graph/越城区_network.gexf"
             },
             {
               "id": "zhejiang_柯桥区",
@@ -58149,7 +58151,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_绍兴市_data.py, data/database/绍兴市_network.db, data/graph/绍兴市_network.gexf"
         },
         {
           "id": "zhejiang_金华市",
