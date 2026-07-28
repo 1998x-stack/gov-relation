@@ -1,45 +1,38 @@
-# Open Gaps Registry
-
+# Open Gaps Registry — 水磨沟区 (Shuimogou District)
 > Last updated: 2026-07-28
 
-## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
+## ⭐⭐⭐⭐⭐ Critical (core figures with major identity gaps)
 
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
-| 李友英 | 昭觉县委书记 | 出生年份、籍贯、民族、教育背景、入党时间、任德昌县长前全部履历 | 2026-07-28 | 身份识别信息和早期仕途完全未知。唯一确认的事实是：曾为德昌县长，2026年7月转任昭觉县委书记。 |
-| 李友英 | 同上 | 何时开始任德昌县长？从何职转任？ | 2026-07-28 | 无法追溯其升迁路径 |
+| 水磨沟区长（姓名待查） | 区委副书记、区长 | Full name and complete identity | 2026-07-28 | Name only in photo on official site; no textual name found |
+| 水磨沟区委书记（疑为邢保新） | 区委书记 | Confirmation of name, full resume | 2026-07-28 | "邢保新" appears in Baidu search results but not on official site |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
 
-| Person/Gap | Current Role | What's Missing | Last Attempted | Notes |
-|-----------|-------------|----------------|----------------|-------|
-| 白此联 | 昭觉县长 | 1996年参加工作至任昭觉县府办副主任之间的约12年履历 | 2026-07-28 | 早期履历不透明 |
-| 白此联 | 昭觉县长 | 每段任职的具体起止年月 | 2026-07-28 | 仅有任职顺序，无精确时间点 |
-| 郑宏杨 | 常务副县长 | 全部履历（除姓名、性别、民族、出生、籍贯） | 2026-07-28 | 仅有基本信息确认 |
-| 前任县委书记 | — | 姓名、去向、在位时间 | 2026-07-28 | 完全未知。L普的前任信息缺失阻碍了全县干部流动分析 |
-| 前任县长 | — | 姓名、去向、在位时间 | 2026-07-28 | 完全未知 |
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|---------------|----------------|-------|
+| 陆万辉 | Pre-2024 career history | 2026-07-28 | Only current role confirmed from official site |
+| 阿力木·阿布都热合曼 | Pre-2024 career history | 2026-07-28 | Only current role confirmed |
+| 宋振博 | Complete career timeline | 2026-07-28 | 1964年生，曾任水磨沟区委书记及新市区区长；详情不足 |
+| Water 区委班子 | 组织、宣传、统战、政法、纪委领导 | 2026-07-28 | 区委网站无法访问 |
 
-## ⭐⭐⭐ Medium (县委班子成员)
+## ⭐⭐⭐ Medium (would enrich the network picture)
 
-| 岗位 | Action Needed | Last Attempted | Notes |
-|------|--------------|----------------|-------|
-| 专职副书记 | 确认姓名和履历 | 2026-07-28 | 标准配置在11个常委中 |
-| 纪委书记 | 确认名称与履历 | 2026-07-28 | 监督机构设置在县政府外部 |
-| 组织部长 | 名单与履历 | 2026-07-28 | |
-| 宣传部长 | 名单与履历 | 2026-07-28 | |
-| 政法委书记 | 名单与履历 | 2026-07-28 | |
-| 统战部长 | 名单与履历 | 2026-07-28 | |
-| 武装部长/政委 | 名单与履历 | 2026-07-28 | |
+| Gap | Last Attempted | Notes |
+|-----|---------------|-------|
+| Cross-county cadre transfer patterns | 2026-07-28 | 杨鹏（挂职）来历待查 |
+| 杨鹏挂职派出单位 | 2026-07-28 | 硕士研究生学历，挂职副区长 |
+| 水磨沟区人大、政协领导 | 2026-07-28 | Not investigated in this session |
 
-## ⭐⭐ Low (would enrich the network picture)
+## ⭐⭐ Low (nice to have)
 
-| Gap | Notes | Last Attempted |
-|-----|-------|----------------|
-| 李友英在德昌的政绩记录 | 已有的德昌县数据中有一定治理记录，标注于该县文档中 | 2026-07-28 |
-| 白此联的政绩和治理风格 | 无公开施政方针或访谈资料 | 2026-07-28 |
-| 昭觉县政府各副县长分工 | 官网可获取，但由于网络限制无法访问 | 2026-07-28 |
-| 9名副县长的履历 | 仅有名字从政府网站获得 | 2026-07-28 |
+| Gap | Last Attempted | Notes |
+|-----|---------------|-------|
+| 水磨沟区经济产业数据 | 2026-07-28 | Not essential for personnel network |
+| Historical leaders before 宋振博 | 2026-07-28 | 宋斌可能是更早书记 |
+
+---
 
 ## Resolved
-
-*(No entries yet — first investigation cycle)*
+*(None in this session)*
