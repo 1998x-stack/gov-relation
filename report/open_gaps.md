@@ -1,5 +1,5 @@
 # Open Gaps Registry
-> Last updated: 2026-07-28
+> Last updated: 2026-07-29
 
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
@@ -7,6 +7,9 @@
 | （待确认） | 萨嘎县委书记 | 姓名、简历、出生信息、教育背景全部缺失 | 2026-07-28 | 核心任务目标 — 西藏政府网站无法访问 |
 | （待确认） | 萨嘎县长 | 姓名、简历、出生背景全部缺失 | 2026-07-28 | 核心任务目标 — 西藏政府网站无法访问 |
 | （待确认） | 萨嘎县前县委书记 | 姓名、去向、任职时间 | 2026-07-28 | 关系链完全断裂 |
+| **郭建康** | **贡觉县委书记** | **完整履历 — 年龄、民族、教育、前职完全未知** | **2026-07-29** | **核心一把手，零公开信息** |
+| **登巴杨培** | **贡觉县长** | **出生年份、籍贯、入党时间** | **2026-07-29** | **履历完整但缺基础身份字段** |
+| **王玉杰** | **贡觉前县委书记** | **去向不明（另有任用）** | **2026-07-29** | **郭建康前任，调任何处未知** |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
 | Person/Gap | What's Missing | Last Attempted | Notes |
