@@ -56690,7 +56690,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "yunnan_梁河县",
@@ -56825,7 +56825,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_福贡县_data.py, data/database/福贡县_network.db, data/graph/福贡县_network.gexf"
             },
             {
               "id": "yunnan_贡山独龙族怒族自治县",
