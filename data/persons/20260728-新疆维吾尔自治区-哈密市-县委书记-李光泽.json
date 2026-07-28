@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-28",
+  "investigation_scope": {
+    "province": "新疆维吾尔自治区",
+    "city": "哈密市",
+    "region": "伊吾县",
+    "job": "县委书记",
+    "task_id": "xinjiang_伊吾县",
+    "time_focus": "current as of 2026-07"
+  },
+  "identity": {
+    "person_id": "yiwu_li_guangze",
+    "name": "李光泽",
+    "aliases": [],
+    "gender": "",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李光泽_",
+      "name_birthplace": "李光泽_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "伊吾县委书记",
+    "current_org": "中共伊吾县委员会",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-06",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "",
+      "end": "present",
+      "org": "中共伊吾县委员会",
+      "title": "伊吾县委书记",
+      "level": "县处级",
+      "location": "新疆哈密伊吾",
+      "system": "party",
+      "rank": "正职",
+      "is_key_promotion": true,
+      "notes": "现任。公开信息显示2024-2025年间占据该职位",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"org_name": "中共伊吾县委员会", "org_id": 1, "role": "县委书记", "period": "present"}
+  ],
+  "relationships": [
+    {
+      "person": "沙吾列别克·阿汉",
+      "person_id": "yiwu_sha_wulie_bieke_ahan",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "李光泽任县委书记，沙吾列别克·阿汉任县长，党政搭档",
+      "overlap_org": "伊吾县人民政府",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "信息不足，无法评估晋升速度",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style inference requires public speeches and governance records which are not yet available."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026年7月，公开范围内未发现李光泽的纪律处分、调查或负面报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "伊吾县百度百科",
+      "url": "https://baike.baidu.com/item/伊吾县",
+      "publisher": "百度百科",
+      "published_at": "",
+      "accessed_at": "2026-07-28",
+      "source_type": "encyclopedia",
+      "reliability": "medium",
+      "notes": "列出李光泽为现任县委书记，沙吾列别克·阿汉为县长，截至2026年6月"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李光泽的出生年月、籍贯、教育背景、完整履历均缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李光泽的出生年月、籍贯、教育背景",
+      "why_it_matters": "无法确认人员身份唯一性，无法进行网络分析",
+      "suggested_queries": ["李光泽 简历", "李光泽 出生 年月 新疆 哈密", "李光泽 任前公示 哈密"],
+      "last_attempted": "2026-07-28"
+    },
+    {
+      "priority": "high",
+      "question": "李光泽的完整职业生涯（历任职务、晋升时间线）",
+      "why_it_matters": "无法分析晋升模式和跨县交流情况",
+      "suggested_queries": ["李光泽 任职经历", "李光泽 历任", "李光泽 此前 担任"],
+      "last_attempted": "2026-07-28"
+    },
+    {
+      "priority": "medium",
+      "question": "李光泽的前任及任职时间",
+      "why_it_matters": "无法建立县委书记交接链",
+      "suggested_queries": ["伊吾县 前任 县委书记"],
+      "last_attempted": "2026-07-28"
+    }
+  ]
+}
