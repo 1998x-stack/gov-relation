@@ -58356,7 +58356,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": true
             }
           ],
           "blocked": true,
@@ -58395,7 +58395,9 @@
                   "label": "二把手"
                 }
               ],
-              "done": false
+              "done": false,
+              "blocked": true,
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_柯城区_data.py, data/database/柯城区_network.db, data/graph/柯城区_network.gexf"
             },
             {
               "id": "zhejiang_衢江区",
@@ -58487,7 +58489,9 @@
               ],
               "done": false
             }
-          ]
+          ],
+          "blocked": true,
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_衢州市_data.py, data/database/衢州市_network.db, data/graph/衢州市_network.gexf"
         },
         {
           "id": "zhejiang_舟山市",
