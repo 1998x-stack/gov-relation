@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-08-03">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>施秉县领导班子关系网络（基于www.qdnsb.gov.cn官方新闻、领导活动报道）</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="潘丽章">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县委书记"/>
+          <attvalue for="2" value="中共施秉县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 官方新闻（2026年7月多篇报道确认姓名和职务）"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50" a="1.0"/>
+        <viz:size value="20.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="p2" label="石家彬">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县委副书记、县人民政府县长"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 官方新闻（2026年7月多篇报道确认姓名和职务）"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p3" label="张炜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县委副书记"/>
+          <attvalue for="2" value="中共施秉县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 县委常委会新闻（2026-07-22, 2026-07-15）"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p4" label="周武权">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县委副书记"/>
+          <attvalue for="2" value="中共施秉县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 县委常委会第218次会议（2026-07-15）"/>
+        </attvalues>
+        <viz:color r="100" g="150" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p5" label="邰文福">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县政协主席"/>
+          <attvalue for="2" value="政协施秉县委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 县委常委会第219次（扩大）会议（2026-07-22）"/>
+        </attvalues>
+        <viz:color r="180" g="160" b="80" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p6" label="龙燚">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县领导"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 石家彬调研报道（2026-07-18）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p7" label="郝稳">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县领导"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 石家彬调研报道（2026-07-18）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p8" label="姜文大">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县领导"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 潘丽章调研报道（2026-07-18）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="p9" label="金延楷">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="施秉县领导"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value="www.qdnsb.gov.cn 潘丽章调研报道（2026-07-18）"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100" a="1.0"/>
+        <viz:size value="12.0"/>
+        <viz:shape value="triangle"/>
+      </node>
+      <node id="o100001" label="中共施秉县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100002" label="施秉县人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100003" label="施秉县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100004" label="政协施秉县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+      <node id="o100005" label="中共施秉县纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="150" a="0.8"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="hexagon"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o100001" label="施秉县委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="女，姓名通过官方新闻确认（2026年7月多篇报道：常委会主持会议、调研乡村）"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o100001" label="施秉县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o100002" label="施秉县人民政府县长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="官方新闻多次报道。调研景区安全、学校建设、自然资源工作等"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p3" target="o100001" label="施秉县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席县委常委会第218次、第219次会议"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p4" target="o100001" label="施秉县委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出现在县委常委会第218次会议名单"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p5" target="o100004" label="施秉县政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="出席县委常委会第219次会议"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p6" target="o100002" label="施秉县副县长（推测）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同县长调研，职务待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p7" target="o100002" label="施秉县领导（推测为副县长）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同县长调研，职务待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p8" target="o100002" label="施秉县领导（推测为副县长）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同县委书记潘丽章调研，职务待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p9" target="o100002" label="施秉县领导（推测为副县长）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="陪同县委书记潘丽章调研，职务待确认"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘丽章（县委书记）与石家彬（县长）构成县委书记-县长搭档"/>
+          <attvalue for="2" value="中共施秉县委员会/施秉县人民政府"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘丽章与张炜（县委副书记）在县委常委会共事"/>
+          <attvalue for="2" value="中共施秉县委员会"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘丽章与周武权（县委副书记）在县委常委会共事"/>
+          <attvalue for="2" value="中共施秉县委员会"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘丽章与邰文福（政协主席）在县委常委会会议同席"/>
+          <attvalue for="2" value="中共施秉县委员会"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p2" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="石家彬与龙燚共同调研防溺水、旅游服务保障等工作"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p2" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="石家彬与郝稳共同调研"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p1" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘丽章与姜文大共同调研防溺水、防汛抗旱等工作"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p1" target="p9" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="relationship"/>
+          <attvalue for="1" value="潘丽章与金延楷共同调研"/>
+          <attvalue for="2" value="施秉县人民政府"/>
+          <attvalue for="3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
