@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九台区领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+  background: #0c0c0c;
+  color: #e8e0d4;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+/* ── Layout ── */
+.page { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+/* ── Header ── */
+.header { border-bottom: 1px solid rgba(232,224,212,0.12); padding-bottom: 2rem; margin-bottom: 2.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; }
+.header-main { }
+.header-main h1 { font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 1.75rem; color: #E8E0D4; letter-spacing: 0.06em; }
+.header-main .subtitle { font-size: 0.85rem; color: rgba(232,224,212,0.5); margin-top: 0.25rem; letter-spacing: 0.08em; }
+.header-main .subtitle span { color: #E03C31; }
+.header-stats { display: flex; gap: 2rem; margin-top: 0.5rem; }
+.stat { text-align: center; }
+.stat .num { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 1.6rem; color: #E03C31; line-height: 1; }
+.stat .label { font-size: 0.7rem; color: rgba(232,224,212,0.45); letter-spacing: 0.1em; margin-top: 0.15rem; }
+/* ── Section ── */
+.section { margin-bottom: 3rem; }
+.section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.section-header .marker { width: 3px; height: 1.25rem; background: #E03C31; flex-shrink: 0; }
+.section-header h2 { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 1.15rem; color: #E8E0D4; letter-spacing: 0.05em; }
+/* ── Person Cards ── */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: rgba(255,255,255,0.06); }
+.card { background: #111; padding: 1.25rem; position: relative; }
+.card .role-tag { display: inline-block; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.08em; padding: 0.15rem 0.5rem; border: 1px solid; margin-bottom: 0.5rem; text-transform: uppercase; }
+.card .role-tag.party { border-color: #E03C31; color: #E03C31; }
+.card .role-tag.gov { border-color: #C9A94E; color: #C9A94E; }
+.card .role-tag.congress { border-color: rgba(255,255,212,0.25); color: rgba(255,255,212,0.5); }
+.card h3 { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 1.05rem; color: #F0E8D8; }
+.card .title-line { font-size: 0.8rem; color: rgba(232,224,212,0.6); margin: 0.1rem 0 0.4rem; }
+.card .meta { font-size: 0.72rem; color: rgba(232,224,212,0.35); line-height: 1.5; }
+.card .meta strong { color: rgba(232,224,212,0.55); font-weight: 500; }
+.card .portfolio { font-size: 0.72rem; color: rgba(232,224,212,0.5); margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,212,0.06); }
+.card .badge-gap { display: inline-block; font-size: 0.6rem; background: rgba(224,60,49,0.12); color: #E03C31; padding: 0.1rem 0.4rem; margin-left: 0.3rem; letter-spacing: 0.05em; }
+.card .badge-new { display: inline-block; font-size: 0.6rem; background: rgba(201,169,78,0.12); color: #C9A94E; padding: 0.1rem 0.4rem; margin-left: 0.3rem; letter-spacing: 0.05em; }
+/* ── Timeline ── */
+.timeline { position: relative; padding-left: 1.75rem; }
+.timeline::before { content: ''; position: absolute; left: 0.5rem; top: 0.25rem; bottom: 0.25rem; width: 1px; background: rgba(255,255,212,0.1); }
+.timeline-item { position: relative; padding-bottom: 1.25rem; }
+.timeline-item::before { content: ''; position: absolute; left: -1.25rem; top: 0.45rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #E03C31; border: 2px solid #0c0c0c; }
+.timeline-item .t-date { font-size: 0.7rem; color: rgba(232,224,212,0.35); letter-spacing: 0.05em; }
+.timeline-item .t-title { font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 0.9rem; color: #E8E0D4; }
+.timeline-item .t-desc { font-size: 0.75rem; color: rgba(232,224,212,0.4); }
+/* ── Matrix ── */
+.matrix { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+.matrix th { text-align: left; font-weight: 500; color: rgba(232,224,212,0.35); padding: 0.4rem 0.1rem; border-bottom: 1px solid rgba(255,255,212,0.06); letter-spacing: 0.05em; }
+.matrix td { padding: 0.35rem 0.1rem; border-bottom: 1px solid rgba(255,255,212,0.03); color: rgba(232,224,212,0.55); }
+.matrix td strong { color: #E8E0D4; font-weight: 500; }
+.matrix .tag-strong { display: inline-block; background: rgba(201,169,78,0.15); color: #C9A94E; padding: 0.05rem 0.5rem; font-size: 0.65rem; }
+.matrix .tag-weak { display: inline-block; background: rgba(255,255,212,0.04); color: rgba(232,224,212,0.35); padding: 0.05rem 0.5rem; font-size: 0.65rem; }
+/* ── Insights ── */
+.insight-card { background: rgba(224,60,49,0.03); border: 1px solid rgba(224,60,49,0.12); padding: 1rem 1.25rem; margin-bottom: 0.75rem; }
+.insight-card .i-num { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 0.8rem; color: #E03C31; }
+.insight-card p { font-size: 0.85rem; color: rgba(232,224,212,0.7); margin-top: 0.2rem; }
+/* ── Footer ── */
+.footer { border-top: 1px solid rgba(255,255,212,0.08); padding-top: 1.5rem; margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; font-size: 0.72rem; color: rgba(232,224,212,0.25); }
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .page { padding: 1.25rem 1rem; }
+  .header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .matrix { font-size: 0.65rem; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- Header -->
+<div class="header">
+  <div class="header-main">
+    <h1>九台区领导班子工作关系网络</h1>
+    <div class="subtitle">情报简报 · <span>2026年8月3日</span> · 长春市九台区</div>
+  </div>
+  <div class="header-stats">
+    <div class="stat"><div class="num">11</div><div class="label">人物</div></div>
+    <div class="stat"><div class="num">5</div><div class="label">机构</div></div>
+    <div class="stat"><div class="num">15</div><div class="label">任职</div></div>
+    <div class="stat"><div class="num">13</div><div class="label">关系</div></div>
+  </div>
+</div>
+
+<!-- Key Insights -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>关键洞察</h2></div>
+  <div class="insight-card">
+    <div class="i-num">#01 代区长代理期</div>
+    <p>车志昕现任<strong>代区长</strong>（非正区长），人大选举尚未完成，推测近期从长春市直部门或周边区县调入。</p>
+  </div>
+  <div class="insight-card">
+    <div class="i-num">#02 常委副区长新任命</div>
+    <p>费欣伟2026年8月经区人大常委会第三十三次会议任命为<strong>区委常委、副区长</strong>，为班子最新成员。</p>
+  </div>
+  <div class="insight-card">
+    <div class="i-num">#03 常委会构成不完全</div>
+    <p>纪委�书记、组织部长、宣传部长、政法委书记等专职区委常委信息<strong>全部缺失</strong>，需进一步调查。</p>
+  </div>
+  <div class="insight-card">
+    <div class="i-num">#04 一把手履历空白</div>
+    <p>区委书记<strong>陈亮</strong>的完整履历（出生年月、学历、此前职务）<strong>完全未知</strong>，为本调查最大信息缺口。</p>
+  </div>
+  <div class="insight-card">
+    <div class="i-num">#05 班子骨架</div>
+    <p>区政府呈 <strong>1 + 6 + 1</strong> 结构：1代区长 + 6副区长 + 1政府党组成员，其中 2名副区长同时也是区委常委。</p>
+  </div>
+</div>
+
+<!-- Person Cards: Party Committee -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>区委领导</h2></div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="role-tag party">区委书记</div>
+      <h3>陈亮</h3>
+      <div class="title-line">中共长春市九台区委书记</div>
+      <div class="meta">男 · 汉族 · 中共党员</div>
+      <div class="portfolio">区委主要负责人<span class="badge-gap">履历缺失</span></div>
+    </div>
+    <div class="card">
+      <div class="role-tag party">区委副书记</div>
+      <h3>车志昕</h3>
+      <div class="title-line">区委副书记、代区长</div>
+      <div class="meta">男 · 汉族 · 1983.03 · 大学学历 · 中共党员</div>
+      <div class="portfolio">主持区政府全面工作，分管审计局</div>
+    </div>
+    <div class="card">
+      <div class="role-tag party">常委</div>
+      <h3>祖东航</h3>
+      <div class="title-line">区委常委、常务副区长</div>
+      <div class="meta">男 · 汉族 · 1971.05 · 大学学历 · 中共党员</div>
+      <div class="portfolio">分管发改、财政、人社、应急等</div>
+    </div>
+    <div class="card">
+      <div class="role-tag party">常委</div>
+      <h3>费欣伟</h3>
+      <div class="title-line">区委常委、副区长</div>
+      <div class="meta">男 · 汉族 · 1975.02 · 大学学历 · 中共党员</div>
+      <div class="portfolio">分管财政（国企国资）、自然资源、住建、城管<span class="badge-new">新任·2026.08</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Person Cards: Government -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>区政府领导</h2></div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="role-tag gov">代区长</div>
+      <h3>车志昕</h3>
+      <div class="title-line">代区长（兼区委副书记）</div>
+      <div class="meta">男 · 汉族 · 1983.03 · 大学学历</div>
+      <div class="portfolio">主持全面，分管审计局</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">常务副区长</div>
+      <h3>祖东航</h3>
+      <div class="title-line">区委常委、副区长</div>
+      <div class="meta">男 · 汉族 · 1971.05 · 大学学历</div>
+      <div class="portfolio">发改、财政、人社、应急等</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">副区长</div>
+      <h3>费欣伟</h3>
+      <div class="title-line">区委常委、副区长</div>
+      <div class="meta">男 · 汉族 · 1975.02 · 大学学历</div>
+      <div class="portfolio">财政国企国资、自然资源、住建、城管</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">副区长</div>
+      <h3>朴英</h3>
+      <div class="title-line">副区长</div>
+      <div class="meta">女 · 朝鲜族 · 1975.11 · 研究生（MBA）· 民建会员</div>
+      <div class="portfolio">教育、文化旅游、卫健、科技</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">副区长</div>
+      <h3>秦力民</h3>
+      <div class="title-line">副区长、公安分局局长</div>
+      <div class="meta">男 · 汉族 · 1973.09 · 大学 · 中共党员</div>
+      <div class="portfolio">公安、司法、退役军人、信访</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">副区长</div>
+      <h3>张帆</h3>
+      <div class="title-line">副区长</div>
+      <div class="meta">男 · 汉族 · 1988.06 · 研究生 · 中共党员</div>
+      <div class="portfolio">工信、商务、民政、政教服务</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">副区长</div>
+      <h3>罗强华</h3>
+      <div class="title-line">副区长</div>
+      <div class="meta">男 · 汉族 · 1982.01 · 研究生 · 中共党员</div>
+      <div class="portfolio">交通、供销、残联</div>
+    </div>
+    <div class="card">
+      <div class="role-tag gov">党组成员</div>
+      <h3>郑权</h3>
+      <div class="title-line">区政府党组成员</div>
+      <div class="meta">男 · 汉族 · 1974.06 · 大学 · 中共党员</div>
+      <div class="portfolio">协助祖东航分管农业农村工作</div>
+    </div>
+  </div>
+</div>
+
+<!-- Person Cards: Congress & Consultative -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>人大 · 政协</h2></div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="role-tag congress">人大常委会</div>
+      <h3>张运广</h3>
+      <div class="title-line">九台区人大常委会主任</div>
+      <div class="meta">男 · 汉族 · 中共党员</div>
+    </div>
+    <div class="card">
+      <div class="role-tag congress">政协</div>
+      <h3>王晓东</h3>
+      <div class="title-line">九台区政协主席</div>
+      <div class="meta">男 · 汉族 · 中共党员</div>
+    </div>
+  </div>
+</div>
+
+<!-- Relationship Matrix -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>关系矩阵</h2></div>
+  <table class="matrix">
+    <thead>
+      <tr><th>人物A</th><th>人物B</th><th>关系类型</th><th>背景</th><th>强度</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>陈亮</strong></td><td><strong>车志昕</strong></td><td>共事</td><td>区委书记—代县长党政搭档</td><td><span class="tag-strong">强</span></td></tr>
+      <tr><td><strong>车志昕</strong></td><td><strong>祖东航</strong></td><td>共事</td><td>区长—常务副区长</td><td><span class="tag-strong">强</span></td></tr>
+      <tr><td><strong>车志昕</strong></td><td><strong>费欣伟</strong></td><td>共事</td><td>区长—常委副区长</td><td><span class="tag-strong">强</span></td></tr>
+      <tr><td><strong>车志昕</strong></td><td><strong>朴英</strong></td><td>共事</td><td>区长—副区长</td><td><span class="tag-weak">弱</span></td></tr>
+      <tr><td><strong>车志昕</strong></td><td><strong>秦立民</strong></td><td>共事</td><td>区长—副区长/公安局长</td><td><span class="tag-weak">弱</span></td></tr>
+      <tr><td><strong>车志昕</strong></td><td><strong>张帆</strong></td><td>共事</td><td>区长—副区长</td><td><span class="tag-weak">弱</span></td></tr>
+      <tr><td><strong>车志昕</strong></td><td><strong>罗强华</strong></td><td>共事</td><td>区长—副区长</td><td><span class="tag-weak">弱</span></td></tr>
+      <tr><td><strong>祖东航</strong></td><td><strong>费欣伟</strong></td><td>共事</td><td>两位常委副区长</td><td><span class="tag-strong">强</span></td></tr>
+      <tr><td><strong>祖东航</strong></td><td><strong>郑权</strong></td><td>协助</td><td>党组成员协助农业农村</td><td><span class="tag-weak">弱</span></td></tr>
+      <tr><td><strong>陈亮</strong></td><td><strong>张运广</strong></td><td>共事</td><td>区委书记—人大主任</td><td><span class="tag-weak">弱</span></td></tr>
+      <tr><td><strong>陈亮</strong></td><td><strong>王晓东</strong></td><td>共事</td><td>区委书记—政协主席</td><td><span class="tag-weak">弱</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Career Timeline (Top figures) -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>核心人物任职路径</h2></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+    <div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-weight:600;font-size:0.95rem;color:#E8E0D4;margin-bottom:0.75rem;">陈亮 — 区委书记</h3>
+      <div class="timeline">
+        <div class="timeline-item"><div class="t-date">上任至今</div><div class="t-title">区委书记</div><div class="t-desc">中共长春市九台区委主要负责人</div></div>
+        <div class="timeline-item"><div class="t-date">未知</div><div class="t-title">此前经历</div><div class="t-desc" style="color:#E03C31;">履历完全缺失 · 待查</div></div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-weight:600;font-size:0.95rem;color:#E8E0D4;margin-bottom:0.75rem;">车志昕 — 代区长</h3>
+      <div class="timeline">
+        <div class="timeline-item"><div class="t-date">2026 — 至今</div><div class="t-title">区委副书记、代区长</div><div class="t-desc">主持区政府全面，区审计局分管</div></div>
+        <div class="timeline-item"><div class="t-date">未知</div><div class="t-title">此前经历</div><div class="t-desc" style="color:#E03C31;">1983年生，2026年前经历待查</div></div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-weight:600;font-size:0.95rem;color:#E8E0D4;margin-bottom:0.75rem;">费欣伟 — 新任常委副区长</h3>
+      <div class="timeline">
+        <div class="timeline-item"><div class="t-date">2026.08 — 至今</div><div class="t-title">区委常委、副区长</div><div class="t-desc">经人大常委会第三十三次会议任命</div></div>
+        <div class="timeline-item"><div class="t-date">未知</div><div class="t-title">此前经历</div><div class="t-desc" style="color:rgba(232,224,212,0.4);">1975年生，此前职务经历待查</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Data Files -->
+<div class="section">
+  <div class="section-header"><div class="marker"></div><h2>数据文件</h2></div>
+  <table class="matrix">
+    <thead><tr><th>文件</th><th>路径</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>SQLite 数据库</td><td><code style="color:rgba(232,224,212,0.4);font-size:0.65rem;">data/database/九台区_network.db</code></td><td>4表 · 11人 · 5机构 · 15任职 · 13关系</td></tr>
+      <tr><td>GEXF 图文件</td><td><code style="color:rgba(232,224,212,0.4);font-size:0.65rem;">data/graph/九台区_network.gexf</code></td><td>Gephi/Cytoscape 兼容</td></tr>
+      <tr><td>调查报告</td><td><code style="color:rgba(232,224,212,0.4);font-size:0.65rem;">report/20260803-九台区-领导班子调查报告.md</code></td><td>完整文本报告</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <span>数据来源：长春市九台区人民政府官方网站 · 调查日期：2026-08-03</span>
+  <span>gov-relation · 政府人员关系网络</span>
+</div>
+
+</div>
+</body>
+</html>
