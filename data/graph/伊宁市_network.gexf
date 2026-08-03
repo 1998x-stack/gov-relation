@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-08-03">
+    <creator>Gov-Relation Research Agent</creator>
+    <description>伊宁市 领导班子关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="current_post" type="string"/>
+      <attribute id="2" title="current_org" type="string"/>
+      <attribute id="3" title="birth" type="string"/>
+      <attribute id="4" title="source" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_org" type="string"/>
+      <attribute id="3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="哈米提·阿克木">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委副书记、政府党组书记、市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="1969年3月"/>
+          <attvalue for="4" value="https://www.yining.gov.cn/yining/ldxx/202204/e15c9268ac274502ba52d0f64a20fe5c.shtml"/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p2" label="马华">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、统战部部长、常务副市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="待查"/>
+          <attvalue for="4" value="https://www.yining.gov.cn/yining/ldxx/202204/3597907fedbc40ed9e201fa7dbbf828f.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p3" label="汤中原">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委常委、副市长（援疆）"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="1978年8月"/>
+          <attvalue for="4" value="https://www.yining.gov.cn/yining/ldxx/202204/6bc5753edafc4605b1591ab69187d39d.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p4" label="夏地曼·乌鲁木齐拜">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="1984年7月"/>
+          <attvalue for="4" value="https://www.yining.gov.cn/yining/ldxx/202312/8b6f8ecb4c994b0ebf0886533f68fed3.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p5" label="地丽努尔·塔西">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="1986年8月"/>
+          <attvalue for="4" value="https://www.yining.gov.cn/yining/ldxx/202204/1eb3a93a92854821b153bf4a22ac14d3.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p6" label="邢科">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="副市长、市公安局党委书记、局长、督察长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="1984年11月"/>
+          <attvalue for="4" value="https://www.yining.gov.cn/yining/ldxx/202204/b48aa80dfbfe4150892f184cfee60fa2.shtml"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p7" label="待查（市委书记）">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="市委书记"/>
+          <attvalue for="2" value="中共伊宁市委员会"/>
+          <attvalue for="3" value=""/>
+          <attvalue for="4" value=""/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="o1" label="中共伊宁市委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="伊宁市人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中共伊犁哈萨克自治州委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="伊犁哈萨克自治州人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="伊宁市公安局">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="中共伊宁县委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="伊宁县人大常委会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="0" b="0"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="巩留县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="尼勒克县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="霍城县委">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+        </attvalues>
+        <viz:color r="2" g="5" b="5"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="1" source="p1" target="o2" label="新疆工学院电气工程系工业电气自动化专业学习" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="2" source="p1" target="o2" label="毕业待分配" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="3" source="p1" target="o2" label="新疆第九汽车运输公司技术员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="4" source="p1" target="o2" label="伊宁县第一中学教师" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="5" source="p1" target="o6" label="伊宁县委办秘书" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="6" source="p1" target="o6" label="伊宁县英塔木乡科技副乡长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="7" source="p1" target="o6" label="伊宁县团委协助工作" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="8" source="p1" target="o6" label="伊宁县委文明办副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="9" source="p1" target="o6" label="伊宁县团委副书记（主持工作）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="10" source="p1" target="o6" label="伊宁县胡地亚于孜乡党委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="11" source="p1" target="o6" label="伊宁县英塔木乡党委委员、乡长候选人" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="12" source="p1" target="o6" label="伊宁县英塔木乡党委委员、乡长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="13" source="p1" target="o6" label="伊宁县萨木于孜乡党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="期间读在职研究生"/>
+        </attvalues>
+      </edge>
+      <edge id="14" source="p1" target="o6" label="伊宁县萨木于孜乡党委书记（副县级待遇）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="15" source="p1" target="o8" label="巩留县委常委" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="16" source="p1" target="o7" label="伊宁县人大常委会主任候选人、党组书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="17" source="p1" target="o7" label="伊宁县人大党组书记、主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="18" source="p1" target="o3" label="伊犁州党委组织部副部长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="19" source="p1" target="o2" label="伊宁市委副书记、政府党组书记、市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="20" source="p2" target="o2" label="南昌大学机电工程学院机械设计制造及其自动化专业学习" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="辅修工商管理2008-2009"/>
+        </attvalues>
+      </edge>
+      <edge id="21" source="p2" target="o2" label="北京金一文化发展有限公司渠道专员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="企业工作"/>
+        </attvalues>
+      </edge>
+      <edge id="22" source="p2" target="o2" label="伊宁市萨依布依街道办事处党工委秘书" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="23" source="p2" target="o2" label="伊宁市塔什科瑞克乡党建办干部（借调市委办）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="24" source="p2" target="o1" label="伊宁市委办公室秘书" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="25" source="p2" target="o1" label="伊宁市委办公室副主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="26" source="p2" target="o2" label="伊宁市英也尔镇党委副书记（主持工作）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="27" source="p2" target="o2" label="伊宁市英也尔镇党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="期间获清华MPA"/>
+        </attvalues>
+      </edge>
+      <edge id="28" source="p2" target="o2" label="伊宁市投资促进中心筹备组负责人" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="29" source="p2" target="o2" label="伊宁市住建局党组书记、副局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="30" source="p2" target="o2" label="伊宁市托格拉克乡党委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="31" source="p2" target="o1" label="伊宁市委常委、统战部部长、政协党组副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职南京建邺区2024.10-2025.01"/>
+        </attvalues>
+      </edge>
+      <edge id="32" source="p2" target="o2" label="伊宁市委常委、统战部部长、常务副市长人选" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="33" source="p3" target="o2" label="江苏省南京市六合区工作" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="23年南京地方工作经历"/>
+        </attvalues>
+      </edge>
+      <edge id="34" source="p3" target="o2" label="伊宁市委常委、副市长（援疆）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="江苏援疆干部"/>
+        </attvalues>
+      </edge>
+      <edge id="35" source="p4" target="o2" label="武汉理工大学管理学院市场营销专业学习" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="36" source="p4" target="o2" label="待业" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="37" source="p4" target="o2" label="伊犁州烟草专卖局（公司）霍城分局客户经理" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="38" source="p4" target="o9" label="尼勒克县纪委监察局执法监察室干部" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="39" source="p4" target="o9" label="尼勒克县胡吉尔台乡副乡长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="挂职乌鲁木齐社区副主任2015-2016"/>
+        </attvalues>
+      </edge>
+      <edge id="40" source="p4" target="o9" label="尼勒克县乌赞镇党委副书记、纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="41" source="p4" target="o9" label="尼勒克县加哈乌拉斯台乡党委副书记、乡长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="42" source="p4" target="o2" label="伊宁市人民政府党组成员、副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="43" source="p5" target="o2" label="新疆大学科学技术学院市场营销专业学习" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="44" source="p5" target="o2" label="待业" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="45" source="p5" target="o2" label="共青团伊宁市委员会大学生西部计划志愿者" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="46" source="p5" target="o2" label="伊宁市潘津乡人民政府纪检干事/出纳/专职副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="47" source="p5" target="o2" label="伊宁市巴彦岱镇副镇长/党委委员/纪委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="48" source="p5" target="o2" label="伊宁市宁远路街道筹备/达达木图镇镇长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="49" source="p5" target="o2" label="伊宁市人民政府副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="50" source="p6" target="o2" label="新疆师范大学旅游管理专业学习" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="51" source="p6" target="o2" label="伊宁市待业" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="52" source="p6" target="o6" label="伊宁县公安局派出所民警/所长/国保大队教导员" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="逐步晋升至一级警长"/>
+        </attvalues>
+      </edge>
+      <edge id="53" source="p6" target="o10" label="霍城县公安局党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="霍城县委政法委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="54" source="p6" target="o5" label="伊宁市政府党组成员、副市长、公安局党委书记、局长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="2026年1月正式任命"/>
+        </attvalues>
+      </edge>
+      <edge id="55" source="p7" target="o1" label="市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="待查 — 公开资料未找到姓名和履历"/>
+        </attvalues>
+      </edge>
+      <edge id="56" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市长与常务副市长，伊宁市政府班子"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2025.04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="57" source="p1" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市长与援疆副市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2023.04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="58" source="p1" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市长与副市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2023.09至今"/>
+        </attvalues>
+      </edge>
+      <edge id="59" source="p1" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市长与副市长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2024.10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="60" source="p1" target="p6" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="市长与副市长兼公安局局长"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2026.01至今"/>
+        </attvalues>
+      </edge>
+      <edge id="61" source="p2" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="常务副市长与副市长，政府班子"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2025.04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="62" source="p4" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="副市长，政府班子"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2024.10至今"/>
+        </attvalues>
+      </edge>
+      <edge id="63" source="p2" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="同届市委常委"/>
+          <attvalue for="2" value="中共伊宁市委员会"/>
+          <attvalue for="3" value="2025.04至今"/>
+        </attvalues>
+      </edge>
+      <edge id="64" source="p2" target="p5" label="predecessor_successor" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="predecessor_successor"/>
+          <attvalue for="1" value="马华曾任托格拉克乡党委书记（2022-2023）；地丽努尔曾任达达木图镇镇长（2021-2024）"/>
+          <attvalue for="2" value="伊宁市乡镇系统"/>
+          <attvalue for="3" value="2020-2023"/>
+        </attvalues>
+      </edge>
+      <edge id="65" source="p6" target="p5" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="overlap"/>
+          <attvalue for="1" value="副市长，政府班子"/>
+          <attvalue for="2" value="伊宁市人民政府"/>
+          <attvalue for="3" value="2026.01至今"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
