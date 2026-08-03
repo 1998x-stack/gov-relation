@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>忻州市领导班子工作关系网络 · 情报简报</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; scroll-behavior: smooth; }
+body {
+  background: #0A0A0F;
+  color: #E8E0D0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+h1, h2, h3, h4, .serif { font-family: 'Noto Serif SC', serif; }
+a { color: #C9A94E; text-decoration: none; }
+a:hover { border-bottom: 1px solid #C9A94E; }
+
+/* header */
+.header {
+  border-bottom: 1px solid rgba(232,224,208,0.12);
+  padding: 3rem 2rem 2rem;
+  max-width: 1280px; margin: 0 auto;
+}
+.header__top {
+  display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;
+}
+.header__title { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; }
+.header__title em { font-style: normal; color: #E03C31; }
+.header__meta { font-size: 0.85rem; color: rgba(232,224,208,0.5); margin-top: 0.5rem; }
+.header__stats {
+  display: flex; gap: 2rem; margin-top: 1.5rem;
+}
+.stat { text-align: center; }
+.stat__num { font-size: 1.8rem; font-weight: 600; font-family: 'Noto Serif SC', serif; color: #E8E0D0; }
+.stat__num.red { color: #E03C31; }
+.stat__num.gold { color: #C9A94E; }
+.stat__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(232,224,208,0.45); margin-top: 0.15rem; }
+
+/* alert banner */
+.alert {
+  margin: 1.5rem 2rem 0; max-width: 1280px; margin-left: auto; margin-right: auto;
+  border: 1px solid #E03C31; padding: 0.75rem 1.25rem;
+  font-size: 0.9rem; color: #E03C31;
+}
+.alert strong { font-weight: 600; }
+
+/* sections */
+.section {
+  max-width: 1280px; margin: 0 auto; padding: 2rem;
+  border-bottom: 1px solid rgba(232,224,208,0.08);
+}
+.section__header { margin-bottom: 1.5rem; }
+.section__title {
+  font-family: 'Noto Serif SC', serif; font-size: 1.3rem; font-weight: 700;
+  display: inline-block; border-bottom: 2px solid #E03C31; padding-bottom: 0.3rem;
+}
+.section__sub { font-size: 0.85rem; color: rgba(232,224,208,0.5); margin-top: 0.5rem; }
+
+/* person grid */
+.person-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem;
+}
+.person-card {
+  border: 1px solid rgba(232,224,208,0.1);
+  padding: 1rem 1.1rem;
+  position: relative;
+  transition: border-color 0.2s;
+}
+.person-card:hover { border-color: rgba(232,224,208,0.3); }
+.person-card__name { font-family: 'Noto Serif SC', serif; font-size: 1.1rem; font-weight: 700; }
+.person-card__role { font-size: 0.82rem; color: rgba(232,224,208,0.6); margin-top: 0.15rem; }
+.person-card__meta { font-size: 0.78rem; color: rgba(232,224,208,0.35); margin-top: 0.5rem; }
+.person-card__badge {
+  display: inline-block; font-size: 0.65rem; padding: 0.1rem 0.4rem;
+  margin-top: 0.4rem; margin-right: 0.25rem;
+  letter-spacing: 0.05em;
+}
+.badge-red { border: 1px solid #E03C31; color: #E03C31; }
+.badge-gold { border: 1px solid #C9A94E; color: #C9A94E; }
+.badge-gray { border: 1px solid rgba(232,224,208,0.2); color: rgba(232,224,208,0.5); }
+
+/* table */
+.relation-table, .leadership-table {
+  width: 100%; border-collapse: collapse; font-size: 0.88rem;
+}
+.relation-table th, .relation-table td,
+.leadership-table th, .leadership-table td {
+  border: 1px solid rgba(232,224,208,0.08);
+  padding: 0.5rem 0.75rem; text-align: left; vertical-align: top;
+}
+.relation-table th, .leadership-table th {
+  font-weight: 500; font-size: 0.78rem; letter-spacing: 0.05em;
+  color: rgba(232,224,208,0.4); text-transform: uppercase;
+}
+.relation-table tr:hover, .leadership-table tr:hover { background: rgba(232,224,208,0.02); }
+
+/* timeline */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0;
+  width: 1px; background: rgba(232,224,208,0.15);
+}
+.tl-item { position: relative; margin-bottom: 1.5rem; }
+.tl-item::before {
+  content: ''; position: absolute; left: -1.6rem; top: 0.4rem;
+  width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: rgba(232,224,208,0.2); border: 1px solid rgba(232,224,208,0.3);
+}
+.tl-item.gold::before { background: #C9A94E; border-color: #C9A94E; }
+.tl-item.red::before { background: #E03C31; border-color: #E03C31; }
+.tl-date { font-size: 0.75rem; color: rgba(232,224,208,0.4); }
+.tl-title { font-weight: 600; margin-top: 0.1rem; }
+.tl-desc { font-size: 0.82rem; color: rgba(232,224,208,0.6); margin-top: 0.15rem; }
+
+/* insight panel */
+.insights { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1rem; }
+.insight-card {
+  border: 1px solid rgba(232,224,208,0.1); padding: 1.25rem;
+}
+.insight-card__num {
+  font-family: 'Noto Serif SC', serif; font-size: 0.75rem; letter-spacing: 0.1em;
+  color: rgba(232,224,208,0.25);
+}
+.insight-card__title { font-weight: 600; margin-top: 0.3rem; }
+.insight-card__text { font-size: 0.85rem; color: rgba(232,224,208,0.6); margin-top: 0.3rem; }
+
+/* sources */
+.source-list { font-size: 0.82rem; }
+.source-list li { margin-bottom: 0.3rem; word-break: break-all; }
+
+/* footer */
+.footer {
+  text-align: center; padding: 2rem; font-size: 0.75rem;
+  color: rgba(232,224,208,0.25);
+}
+
+@media (max-width: 700px) {
+  .header { padding: 1.5rem 1rem; }
+  .header__title { font-size: 1.5rem; }
+  .header__stats { gap: 1rem; flex-wrap: wrap; }
+  .section { padding: 1.5rem 1rem; }
+  .person-grid { grid-template-columns: 1fr 1fr; }
+  .relation-table, .leadership-table { font-size: 0.78rem; display: block; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__top">
+    <div>
+      <h1 class="header__title">忻州市<span class="serif" style="font-weight:300;margin:0 0.3rem;">·</span><span class="header__title" style="font-weight:400;">领导班子</span><br><span style="font-size:1rem; font-weight:300; letter-spacing:0.15em; color:rgba(232,224,208,0.5);">工作关系网络</span></h1>
+      <div class="header__meta">情报简报 · 2026年8月3日 · 山西省忻州市</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="header__stats">
+        <div class="stat"><div class="stat__num gold">24</div><div class="stat__label">人物</div></div>
+        <div class="stat"><div class="stat__num">10</div><div class="stat__label">机构</div></div>
+        <div class="stat"><div class="stat__num red">24</div><div class="stat__label">任职</div></div>
+        <div class="stat"><div class="stat__num">16</div><div class="stat__label">关系</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="alert">
+  <strong>▼ 重大人事变动</strong> 2026年Q2–Q3：李建国由市长转任市委书记；刘鹓调任市委副书记、市长。此为全新党政搭档。
+</div>
+
+<!-- 领导班子 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">市委领导班子</h2>
+    <div class="section__sub">市委常委成员 · 中共忻州市委</div>
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="leadership-table">
+    <thead><tr><th>姓名</th><th>职务</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>李建国</td><td>市委书记</td><td>原市长晋升，2026年转任</td></tr>
+      <tr><td>刘鹓</td><td>市委副书记、市长</td><td>新任，从省级调任</td></tr>
+      <tr><td>温建军</td><td>市委常委、副市长</td><td>常务副市长，分管经济</td></tr>
+      <tr><td>张敏</td><td>市委常委</td><td></td></tr>
+      <tr><td>吴玉东</td><td>市委常委、市纪委书记</td><td></td></tr>
+      <tr><td>邰三亲</td><td>市委常委、宣传部部长</td><td>女性</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">市政府领导班子</h2>
+    <div class="section__sub">忻州市人民政府</div>
+  </div>
+  <div style="overflow-x:auto">
+  <table class="leadership-table">
+    <thead><tr><th>姓名</th><th>职务</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>刘鹓</td><td>市长</td><td>主持全面工作</td></tr>
+      <tr><td>温建军</td><td>常务副市长</td><td>发改、财政、能源、太忻一体化</td></tr>
+      <tr><td>史红波</td><td>副市长、公安局长</td><td>一级巡视员</td></tr>
+      <tr><td>贾玲香</td><td>副市长</td><td>民盟成员（非党）</td></tr>
+      <tr><td>耿鹏鹏</td><td>副市长</td><td>自然资源、住建</td></tr>
+      <tr><td>崔峥岭</td><td>副市长兼繁峙县委书记</td><td>二级巡视员</td></tr>
+      <tr><td>李硕</td><td>副市长</td><td>1982年·回族·河南郑州·80后</td></tr>
+      <tr><td>张艮生</td><td>市政府秘书长</td><td></td></tr>
+      <tr><td>练建熙</td><td>市政府党组成员（挂职）</td><td>1981年·法学博士·国管局挂职</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">人大 &amp; 政协</h2>
+  </div>
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem;">
+  <div>
+    <h3 style="font-family:'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.75rem; color:rgba(232,224,208,0.7);">人大常委会</h3>
+    <table class="leadership-table" style="font-size:0.85rem;">
+      <tr><th>姓名</th><th>职务</th></tr>
+      <tr><td>王建江</td><td>主任</td></tr>
+      <tr><td>王月娥</td><td>副主任</td></tr>
+    </table>
+  </div>
+  <div>
+    <h3 style="font-family:'Noto Serif SC',serif; font-size:1rem; font-weight:600; margin-bottom:0.5rem; color:rgba(232,224,223,0.5);">政协</h3>
+    <table class="leadership-table" style="font-size:0.85rem;">
+      <tr><th>姓名</th><th>职务</th></tr>
+      <tr><td>范建民</td><td>主席</td></tr>
+      <tr><td>王源</td><td>政协领导</td></tr>
+    </table>
+  </div>
+  </div>
+</section>
+
+<!-- 核心人物卡片 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">人物卡片</h2>
+    <div class="section__sub">忻州市主要党政领导</div>
+  </div>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="person-card__name">李建国</div>
+      <div class="person-card__role">市委书记</div>
+      <div class="person-card__meta">1972年生 · 山西</div>
+      <div><span class="person-card__badge badge-red">市委</span><span class="person-card__badge badge-gold">书记</span></div>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">刘鹓</div>
+      <div class="person-card__role">市委副书记、市长</div>
+      <div class="person-card__meta">新任 · 待查</div>
+      <div class="person-card__badge badge-red">政府</div><span class="person-card__badge badge-gold">市长</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">温建军</div>
+      <div class="person-card__role">市委常委、副市长</div>
+      <div class="person-card__meta">从2022年起在任</div>
+      <span class="person-card__badge badge-red">常委</span><span class="person-card__badge badge-gray">常务</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">张敏</div>
+      <div class="person-card__role">市委常委</div>
+      <div class="person-card__meta"></div>
+      <span class="person-card__badge badge-gray">常委</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">吴玉东</div>
+      <div class="person-card__role">市委常委、纪委书记</div>
+      <div class="person-card__meta"></div>
+      <span class="person-card__badge badge-red">纪委</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">邰三亲</div>
+      <div class="person-card__role">市委常委、宣传部部长</div>
+      <div class="person-card__meta">女性</div>
+      <span class="person-card__badge badge-gray">宣传</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">史红波</div>
+      <div class="person-card__role">副市长、公安局长</div>
+      <div class="person-card__meta">一级巡视员</div>
+      <span class="person-card__badge badge-gray">公安</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">贾玲香</div>
+      <div class="person-card__role">副市长</div>
+      <div class="person-card__meta">民盟成员</div>
+      <span class="person-card__badge badge-gray">非党</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">耿鹏鹏</div>
+      <div class="person-card__role">副市长</div>
+      <div class="person-card__meta"></div>
+      <span class="person-card__badge badge-gray">住建</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">崔峥岭</div>
+      <div class="person-card__role">副市长兼繁峙县委书记</div>
+      <div class="person-card__meta">二级巡视员</div>
+      <span class="person-card__badge badge-gray">繁峙</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">李硕</div>
+      <div class="person-card__role">副市长</div>
+      <div class="person-card__meta">1982年 · 回族 · 河南郑州</div>
+      <span class="person-card__badge badge-gold">80后</span><span class="person-card__badge badge-gray">金融</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">王建江</div>
+      <div class="person-card__role">市人大常委会主任</div>
+      <div class="person-card__meta"></div>
+      <span class="person-card__badge badge-gray">人大</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">范建民</div>
+      <div class="person-card__role">市政协主席</div>
+      <div class="person-card__meta"></div>
+      <span class="person-card__badge badge-gray">政协</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">王月娥</div>
+      <div class="person-card__role">市人大常委会副主任</div>
+      <div class="person-card__meta">女性</div>
+      <span class="person-card__badge badge-gray">人大</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">练建熙</div>
+      <div class="person-card__role">市政府党组成员（挂职）</div>
+      <div class="person-card__meta">1981年 · 江苏东台 · 法学博士</div>
+      <span class="person-card__badge badge-gold">80后</span><span class="person-card__badge badge-gray">挂职</span>
+    </div>
+    <div class="person-card">
+      <div class="person-card__name">张艮生</div>
+      <div class="person-card__role">市政府秘书长</div>
+      <div class="person-card__meta"></div>
+      <span class="person-card__badge badge-gray">秘书长</span>
+    </div>
+  </div>
+</section>
+
+<!-- 关键人物履历 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">核心人物履历</h2>
+    <div class="section__sub">李建国 · 市委书记</div>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">~2022–2026</div>
+      <div class="tl-title">忻州市委副书记、市长</div>
+      <div class="tl-desc">主持市政府全面工作，推动太忻一体化经济区建设、产业转型</div>
+    </div>
+    <div class="tl-item gold">
+      <div class="tl-date">2026年（近期）</div>
+      <div class="tl-title">晋升忻州市委书记</div>
+      <div class="tl-desc">接替前任郑连生，开始主持市委全面工作。</div>
+    </div>
+  </div>
+
+  <div class="section__sub" style="margin-top:2rem;">刘鹓 · 市委副书记、市长</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">2026年</div>
+      <div class="tl-title">调任忻州市委副书记、市长</div>
+      <div class="tl-desc"><span style="color:#E03C31;">履历待详查</span> — 新任市长，此前背景信息有限。</div>
+    </div>
+    <div class="tl-item red">
+      <div class="tl-date">2026年7–8月</div>
+      <div class="tl-title">密集开展工作</div>
+      <div class="tl-desc">走访驻忻州军分区、慰问部队、督导安全生产、防汛工作。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 关系矩阵 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section__title">关系矩阵</h2>
+    <div class="section__sub">人物间关键连接</div>
+  </div>
+  <div style="overflow-x:auto">
+  <table class="relation-table">
+    <thead><tr><th>人物 A</th><th>人物 B</th><th>关系类型</th><th>背景</th><th>重叠单位</th></tr></thead>
+    <tbody>
+      <tr><td>李建国</td><td>刘鹓</td><td>党政协同</td><td>书记—市长，全市党政主要负责人</td><td>市委／市政府</td></tr>
+      <tr><td>李建国</td><td>温建军</td><td>上下级</td><td>书记与常务副市长</td><td>市委常委会</td></tr>
+      <tr><td>李建国</td><td>王建江</td><td>四套班子</td><td>书记与人大主任</td><td>忻州市四大班子</td></tr>
+      <tr><td>李建国</td><td>范建民</td><td>四套班子</td><td>书记与政协主席</td><td>忻州市四大班子</td></tr>
+      <tr><td>刘鹓</td><td>温建军</td><td>政府搭档</td><td>市长与常务副市长</td><td>市政府</td></tr>
+      <tr><td>温建军</td><td>史红波</td><td>政府同僚</td><td>同为市政府领导班子</td><td>市政府</td></tr>
+      <tr><td>温建军</td><td>李硕</td><td>政府同僚</td><td>常务副市长与80后副市长</td><td>市政府</td></tr>
+      <tr><td>李硕</td><td>练建熙</td><td>同批调入</td><td>2022年初同时从中央/国家部委调入</td><td>市政府</td></tr>
+      <tr><td>李建国</td><td>吴玉东</td><td>上下级</td><td>书记与纪委书记</td><td>市委常委会</td></tr>
+      <tr><td>李建国</td><td>邰三亲</td><td>上下级</td><td>书记与宣传部部长</td><td>市委常委会</td></tr>
+      <tr><td>刘鹓</td><td>王建江</td><td>四套班子</td><td>市长与人大主任</td><td>四大班子</td></tr>
+      <tr><td>刘鹓</td><td>范建民</td><td>四套班子</td><td>市长与政协主席</td><td>四大班子</td></tr>
+      <tr><td>崔峥岭</td><td>李建国</td><td>上下级</td><td>繁峙县委书记向市委书记汇报</td><td>市委／繁峙</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 关键洞察 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section-title">关键洞察</h2>
+    <div class="section__sub">权力结构评估 · 突破线索</div>
+  </div>
+  <div class="insight-box">
+    <div class="insight-card">
+      <div class="insight-card__num">01</div>
+      <div class="insight-card__title">党政核心稳固</div>
+      <div class="insight-card__text">李建国长期任市长后转书记，熟悉全市运作；刘鹓新任市长，两人搭配有延续性但也有磨合空间。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card__num">02</div>
+      <div class="insight-card__title">中央与地方交流</div>
+      <div class="insight-card__text">李硕（国开行）、练建熙（国管局）均为中央/部委向地方输送，反映金融、后勤领域的人才下沉路径。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card__num">03</div>
+      <div class="insight-card__text">王建江（人大）与范建民（政协）资历较深，构成对党政的双重联系</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card__num">04</div>
+      <div class="insight-card__title">关键信息缺口</div>
+      <div class="insight-card__text">刘鹓履历基本未知（最高优先）。张敏常委分工、孙强/孟宏斌/石宝吉等领导角色均为待查项。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 信息缺口 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section-title">信息缺口</h2>
+  </div>
+  <div style="overflow-x:auto">
+  <table class="relation-table">
+    <thead><tr><th>空缺</th><th>优先级</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>刘鹓完整履历</td><td>⭐⭐⭐⭐⭐</td><td>新任市长背景几乎完全未知</td></tr>
+      <tr><td>张敏具体职务</td><td>⭐⭐⭐⭐</td><td>常委分工待确认</td></tr>
+      <tr><td>孙强、孟宏斌、石宝吉、罗志宏、李德刚角色</td><td>⭐⭐⭐⭐</td><td>副厅级具体岗位待确认</td></tr>
+      <tr><td>各副市长出生年份</td><td>⭐⭐⭐</td><td>多位出生年月空缺</td></tr>
+      <tr><td>前市委书记郑连生去向</td><td>⭐⭐⭐</td><td>已知已升省领导境内，具体岗位待查</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- 来源 -->
+<section class="section">
+  <div class="section__header">
+    <h2 class="section-title">信息来源</h2>
+  </div>
+  <ol class="source-list">
+    <li><a href="https://www.sxxz.gov.cn/">忻州市人民政府门户网站</a> — 官方</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202607/t20260729_4196403.shtml">忻州市委常委会（扩大）会议</a> — 官方 (2026-07-29)</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202607/t20260731_4196689.shtml">忻州市委常委会会议</a> — 官方 (2026-07-31)</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202607/t20260728_4196188.shtml">市委理论学习中心组学习会</a> — 官方 (2026-07-28)</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202608/t20260803_4197049.shtml">忻州市"八一"军事日国防教育大讲堂</a> — 官方 (2026-08-03)</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202608/t20260803_4197052.shtml">李建国走访慰问驻军部队</a> — 官方 (2026-08-03)</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202608/t20260803_4197046.shtml">刘鹓走访慰问驻忻部队</a> — 官方 (2026-08-03)</li>
+    <li><a href="https://www.sxxz.gov.cn/zwyw/xzyw/202607/t20260710_4192808.shtml">忻州市领导干部赴省党风廉政教育基地参观</a> — 官方 (2026-07-10)</li>
+    <li><a href="https://www.163.com/dy/article/H1SCF29H0514R9P4.html">澎湃新闻：忻州市政府领导班子新增80后</a> — 新闻 (2022-03-07)</li>
+    <li><a href="https://www.163.com/dy/article/H22O8C1K0514A9SI.html">忻州市政府领导班子新增80后具体分工</a> — 新闻 (2022-03-10)</li>
+  </ol>
+</section>
+
+<footer class="footer">
+  Gov-Relation Research Agent · 2026-08-03 · 山西省忻州市
+</footer>
+
+</body>
+</html>
