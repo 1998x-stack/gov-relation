@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-03",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "张家口市",
+    "region": "赤城县",
+    "job": "县长",
+    "task_id": "hebei_赤城县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "chicheng_chen_tao",
+    "name": "陈涛",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {"name_birth": "陈涛_", "name_birthplace": "陈涛_", "official_profile_url": "http://www.ccx.gov.cn/single/22/79481.html"}
+  },
+  "current_status": {
+    "current_post": "赤城县委副书记、县长",
+    "current_org": "赤城县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-03",
+    "is_current_confirmed": true,
+    "source_ids": ["S002", "S006"]
+  },
+  "career_timeline": [
+    {"start": "2026-07", "end": "至今", "org": "赤城县人民政府", "title": "赤城县委副书记、代县长/县长", "level": "正处级", "location": "河北省张家口市赤城县", "system": "government", "rank": "正处级", "is_key_promotion": true, "notes": "2026年7月3日以代县长身份主持防汛会议；7月20日政协会议确认代县长身份；7月21日在十八届人大一次会议上作政府工作报告；7月24日大会闭幕完成选举.", "confidence": "confirmed", "source_ids": ["S002", "S006"]},
+    {"start": "unknown", "end": "unknown", "org": "履历缺口", "title": "", "level": "", "location": "", "system": "other", "rank": "", "is_key_promotion": false, "notes": "2026年7月到任前的所有职务完全未知。推测可能来自张家口市直机关或其他县区，也可能来自省直机关。", "confidence": "unverified", "source_ids": []}
+  ],
+  "organizations": [
+    {"name": "赤城县人民政府", "type": "政府", "role": "主要领导"}
+  ],
+  "relationships": [
+    {"person": "邓艳杰", "person_id": "chicheng_deng_yanjie", "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "县委书记与县长的搭班关系", "overlap_org": "中共赤城县委员会/赤城县人民政府", "overlap_period": "2026-07至今", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"person": "戎海广", "person_id": "chicheng_rong_haiguang", "relationship_type": "overlap", "strength": "medium", "evidence": "县长与专职副书记，一届县委班子", "overlap_org": "中共赤城县委员会", "overlap_period": "2026-07至今", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S006"]}
+  ],
+  "governance_record": [
+    {"period": "2026-07", "domain": "economic_development", "achievement_or_event": "在县十八届人大一次会议上作政府工作报告，提出2030年GDP突破100亿元目标", "role_in_event": "县长作报告", "measurable_outcome": "", "location": "赤城县", "confidence": "confirmed", "source_ids": ["S006"]},
+    {"period": "2026-07-30", "domain": "public_security", "achievement_or_event": "走访慰问驻赤官兵、优抚对象，调研防汛备汛", "role": "县长", "measurable_outcome": "", "location": "赤城县", "confidence": "confirmed", "source_ids": ["http://www.ccx.gov.cn/"]}
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {"summary": "无法判断——背景完全未知", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [{"trait": "unknown", "evidence": "最近刚上任，公开信息极为有限", "confidence": "unverified", "source_ids": []}],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records only."
+  },
+  "network_metrics": null,
+  "risk_and_integrity_signals": [{"type": "none_found", "description": "未发现任何纪律处分或负面信号", "date": "", "confidence": "unverified", "source_ids": []}],
+  "source_register": [
+    {"id": "S002", "title": "政协赤城县第十二届委员会第一次会议开幕", "url": "http://www.ccx.gov.cn/single/22/79481.html", "publisher": "赤城县人民政府", "published_at": "2026-07-20", "accessed_at": "2026-08-03", "source_type": "official", "reliability": "high", "notes": "确认陈涛为县委副书记、代县长"},
+    {"id": "S006", "title": "赤城县第十八届人民代表大会第一次会议开幕", "url": "http://www.ccx.gov.cn/single/22/79586.html", "publisher": "赤城县人民政府", "published_at": "2026-07-21", "accessed_at": "2026-08-03", "source_type": "official", "reliability": "high", "notes": "陈涛作政府工作报告"}
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "所有个人信息（出生年月、籍贯、教育、此前履历）完全未知"
+  },
+  "open_questions": [
+    {"priority": "critical", "question": "陈涛的完整个人信息（出生年月、籍贯、教育背景）？", "why_it_matters": "核心领导之一，身份信息完全缺失", "suggested_queries": ["陈涛 赤城 县长 简历", "陈涛 张家口 任职", "陈涛 任前公示"], "last_attempted": "2026-08-03"},
+    {"priority": "critical", "question": "陈涛任赤城县长前的全部工作经历？", "why_it_matters": "核心领导，此前职务完全未知，可能来自张家口市直或其他县区", "suggested_queries": ["陈涛 张家口市委组织部", "陈涛 任前公示"], "last_attempted": "2026-08-03"}
+  ]
+}

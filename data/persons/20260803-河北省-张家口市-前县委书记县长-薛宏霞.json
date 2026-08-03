@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-03",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "张家口市",
+    "region": "赤城县",
+    "job": "前县委书记/县长",
+    "task_id": "hebei_赤城县",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "chicheng_xue_hongxia",
+    "name": "薛宏霞",
+    "aliases": [],
+    "gender": "女",
+    "ethnicity": "满族",
+    "birth": "1984-07",
+    "birthplace": "河北承德围场",
+    "native_place": "河北承德围场",
+    "education": [],
+    "party_join": "2005-06",
+    "work_start": "2007-08",
+    "dedupe_keys": {"name_birth": "薛宏霞_1984-07", "name_birthplace": "薛宏霞_河北承德围场", "official_profile_url": ""}
+  },
+  "current_status": {
+    "current_post": "康保县委书记",
+    "current_org": "中共康保县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-03",
+    "is_current_confirmed": true,
+    "source_ids": ["S011"]
+  },
+  "career_timeline": [
+    {"start": "2007-08", "end": "unknown", "org": "工作初始", "title": "开始工作", "level": "", "location": "", "system": "other", "rank": "", "is_key_promotion": false, "notes": "2007年8月参加工作时间已知，但具体单位和岗位未知", "confidence": "unverified", "source_ids": ["S011"]},
+    {"start": "unknown", "end": "~2016", "org": "履历缺口", "title": "", "level": "", "location": "", "system": "other", "rank": "", "is_key_promotion": false, "notes": "2007-2016年约9年履历完全未知", "confidence": "unverified", "source_ids": []},
+    {"start": "~2016", "end": "~2020", "org": "丰宁满族自治县人民政府", "title": "副县长", "level": "副处级", "location": "河北省承德市丰宁满族自治县", "system": "government", "rank": "副处级", "is_key_promotion": true, "notes": "", "confidence": "plausible", "source_ids": ["S011"]},
+    {"start": "~2021-06", "end": "~2025", "org": "赤城县人民政府", "title": "赤城县委副书记、县长", "level": "正处级", "location": "河北省张家口市赤城县", "system": "government", "rank": "正处级", "is_key_promotion": true, "notes": "具体到任时间待查", "confidence": "plausible", "source_ids": ["S011"]},
+    {"start": "~2025", "end": "2026-05", "org": "中共赤城县委员会", "title": "赤城县委书记", "level": "正处级", "location": "河北省张家口市赤城县", "system": "party", "rank": "正处级", "is_key_promotion": true, "notes": "赵红革调任后由县长升书记", "confidence": "plausible", "source_ids": ["S011"]},
+    {"start": "2026-07", "end": "至今", "org": "中共康保县委员会", "title": "康保县委书记", "level": "正处级", "location": "河北省张家口市康保县", "system": "party", "rank": "正处级", "is_key_promotion": true, "notes": "2026年7月19日康保县第十三届县委一次全会当选", "confidence": "confirmed", "source_ids": ["S011"]}
+  ],
+  "organizations": [
+    {"name": "丰宁满族自治县人民政府", "type": "政府", "role": "早年副县长"},
+    {"name": "中共赤城县委员会", "type": "党委", "role": "原主要领导"},
+    {"name": "赤城县人民政府", "type": "政府", "role": "原主要领导"},
+    {"name": "中共康保县委员会", "type": "党委", "role": "现任主要领导"}
+  ],
+  "relationships": [
+    {"person": "邓艳杰", "person_id": "chicheng_deng_yanjie", "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "薛宏霞调任康保后邓艳杰接任书记，此前薛宏霞任书记时邓艳杰为县长", "overlap_org": "中共赤城县委员会", "overlap_period": "~2025-2026", "direction": "undirected", "confidence": "confirmed", "source_ids": []},
+    {"person": "赵红革", "person_id": "chicheng_zhao_hongge", "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "赵红革调人大后薛宏霞接任书记", "overlap_org": "中共赤城县委员会", "overlap_period": "~2025", "direction": "undirected", "confidence": "confirmed", "source_ids": []}
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["government", "party"],
+    "geographic_pattern": ["丰宁县(承德)", "赤城县(张家口)", "康保县(张家口)"],
+    "promotion_velocity": {"summary": "由副县长到县委书记（约10年），属较快晋升", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {"public_style_indicators": [], "speech_themes": [], "management_signals": [], "caveat": "Work style inferred from public records only."},
+  "network_metrics": null,
+  "risk_and_integrity_signals": [{"type": "none_found", "description": "未发现风险信号", "date": "", "confidence": "plausible", "source_ids": []}],
+  "source_register": [
+    {"id": "S011", "title": "百度百科 薛宏霞", "url": "https://baike.baidu.com/item/%E8%96%9B%E5%AE%8F%E9%9C%9E/57070217", "publisher": "百度百科", "published_at": "", "accessed_at": "2026-08-03", "source_type": "encyclopedia", "reliability": "medium", "notes": "提供基本信息和大致履历"}
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "high",
+    "biggest_gap": "2007-2016年约9年履历完全未知；赤城县长和书记的精确到任时间不确定"
+  },
+  "open_questions": [
+    {"priority": "high", "question": "薛宏霞2007.08参加工作后至~2016（~9年）的履历？", "why_it_matters": "占其职业生涯近半，完全空白", "suggested_queries": ["薛宏霞 承德 任职", "薛宏霞 围场", "薛宏霞 简历 丰宁 任职 早期"], "last_attempted": "2026-08-03"},
+    {"priority": "high", "question": "薛宏霞任赤城县长和书记的精确到任时间", "why_it_matters": "精确时间线对承接和调任分析很重要", "suggested_queries": ["薛宏霞 赤城县长 任命", "薛宏霞 赤城县委书记 到任"], "last_attempted": "2026-08-03"}
+  ]
+}
