@@ -6,6 +6,8 @@
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
 | 伊宁市市委书记 (姓名未知) | 中共伊宁市委员会 | 姓名、性别、民族、籍贯、履历全部未知 | 2026-08-03 | Web search tools (Exa, Baidu, Jina, Google) all blocked/timeout. The yining.gov.cn site only lists government leaders. Party secretary would be on separate CPC committee site. |
+| 江孜县委书记（姓名未知） | 中共江孜县委员会 | 姓名、性别、民族、籍贯、履历全部未知 | 2026-08-03 | Web完全不可用（Exa限流、Baidu验证码、jiangzi.gov.cn超时）。参见report/20260803-xizang_江孜县报告.md |
+| 江孜县长（姓名未知） | 江孜县人民政府 | 姓名、性别、民族、籍贯、履历全部未知 | 2026-08-03 | 同上，Web完全不可用 |
 
 ## ⭐⭐⭐⭐ High (important deputies or key connections)
 
