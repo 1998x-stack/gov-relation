@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3"
+      xmlns:viz="http://gexf.net/1.3/viz"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd"
+      version="1.3">
+  <meta>
+    <creator>China-Gov-Network Investigation</creator>
+    <description>黑龙江省齐齐哈尔市碾子山区领导班子工作关系网络</description>
+    <date>2026-08-03</date>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="type" title="Node Type" type="string"/>
+      <attribute id="role" title="Role" type="string"/>
+      <attribute id="org_type" title="Org Type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="type" title="Edge Type" type="string"/>
+      <attribute id="start" title="Start Date" type="string"/>
+      <attribute id="end" title="End Date" type="string"/>
+      <attribute id="strength" title="Strength" type="string"/>
+      <attribute id="context" title="Context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="nzsq_ma_tianshuai" label="马天帅">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委书记、一级调研员"/>
+          <attvalue for="birth" value="1974年5月"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30" a="1.0"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="nzsq_sun_kun" label="孙坤">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委副书记、区政府区长"/>
+          <attvalue for="birth" value="1986年3月"/>
+        </attvalues>
+        <viz:color r="180" g="60" b="180" a="1.0"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="nzsq_shi_qiwen" label="石奇文">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委副书记、二级调研员"/>
+          <attvalue for="birth" value="1975年3月"/>
+        </attvalues>
+        <viz:color r="180" g="60" b="180" a="1.0"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="nzsq_zheng_heshan" label="郑禾山">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委副书记（挂职）"/>
+          <attvalue for="birth" value="1988年6月"/>
+        </attvalues>
+        <viz:color r="180" g="60" b="180" a="1.0"/>
+        <viz:size value="16.0"/>
+      </node>
+      <node id="nzsq_zhang_lijun" label="张利军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、区政府副区长、三级调研员"/>
+          <attvalue for="birth" value="1980年10月"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_pan_junwei" label="潘军伟">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、政法委书记、三级调研员"/>
+          <attvalue for="birth" value="1970年8月"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_han_zhicheng" label="韩志成">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、纪委书记、监委主任、四级高级监察官"/>
+          <attvalue for="birth" value="1976年7月"/>
+        </attvalues>
+        <viz:color r="180" g="130" b="50" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_ren_xingguo" label="任兴国">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、宣传部部长"/>
+          <attvalue for="birth" value="1976年8月"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_wang_yunfeng" label="王云峰">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委常委、组织部部长"/>
+          <attvalue for="birth" value="1982年7月"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_liu_qingzhi" label="刘清志">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区委委员、常委"/>
+          <attvalue for="birth" value="1980年3月"/>
+        </attvalues>
+        <viz:color r="120" g="120" b="120" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_jiang_heng" label="姜恒">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府副区长"/>
+          <attvalue for="birth" value="1981年9月"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="nzsq_liu_dianjun" label="刘殿军">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府副区长"/>
+          <attvalue for="birth" value="1971年5月"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="nzsq_song_li" label="宋丽">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府副区长"/>
+          <attvalue for="birth" value="1972年2月"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="nzsq_liu_xianmin" label="刘宪民">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府党组成员、三级调研员"/>
+          <attvalue for="birth" value="1969年5月"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="nzsq_li_dongdong" label="李冬冬">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政府副区长、公安局局长、四级高级警长"/>
+          <attvalue for="birth" value="1976年11月"/>
+        </attvalues>
+        <viz:color r="40" g="140" b="220" a="1.0"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="nzsq_liu_guoqing" label="刘国庆">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区人大常委会主任"/>
+          <attvalue for="birth" value="1969年10月"/>
+        </attvalues>
+        <viz:color r="220" g="160" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_yin_yanzhen" label="殷艳珍">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区人大常委会副主任"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="160" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_wang_liguo" label="王立国">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区人大常委会副主任"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="160" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_ma_baokui" label="马宝奎">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区人大常委会副主任"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="220" g="160" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_qi_guangyan" label="亓光焱">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政协主席"/>
+          <attvalue for="birth" value="1970年11月"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_huang_jinbao" label="黄金宝">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政协副主席"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_yang_xin" label="杨欣">
+        <attvalues>
+          <attvalue for="type" value="person"/>
+          <attvalue for="role" value="区政协副主席"/>
+          <attvalue for="birth" value="待查"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="14.0"/>
+      </node>
+      <node id="nzsq_party_committee" label="中共齐齐哈尔市碾子山区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_discipline" label="中共齐齐哈尔市碾子山区纪律检查委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="纪委"/>
+        </attvalues>
+        <viz:color r="160" g="120" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_org_dept" label="中共齐齐哈尔市碾子山区委组织部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_propaganda_dept" label="中共齐齐哈尔市碾子山区委宣传部">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_politics_law" label="中共齐齐哈尔市碾子山区委政法委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委部门"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_gov" label="齐齐哈尔市碾子山区人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_public_security" label="齐齐哈尔市碾子山区公安局">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_npc" label="齐齐哈尔市碾子山区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="150" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="nzsq_cppcc" label="中国人民政治协商会议齐齐哈尔市碾子山区委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政协"/>
+        </attvalues>
+        <viz:color r="180" g="130" b="40" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="qqhr_party_committee" label="中共齐齐哈尔市委员会">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="党委"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+      <node id="qqhr_gov" label="齐齐哈尔市人民政府">
+        <attvalues>
+          <attvalue for="type" value="org"/>
+          <attvalue for="org_type" value="政府"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200" a="1.0"/>
+        <viz:size value="8.0"/>
+        <viz:shape value="square"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="nzsq_ma_tianshuai" target="nzsq_party_committee" type="directed" label="区委书记、一级调研员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024.06"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e2" source="nzsq_sun_kun" target="nzsq_gov" type="directed" label="区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024.11"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e3" source="nzsq_sun_kun" target="nzsq_party_committee" type="directed" label="区委副书记">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2024.11"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e4" source="nzsq_shi_qiwen" target="nzsq_party_committee" type="directed" label="区委副书记、二级调研员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e5" source="nzsq_zheng_heshan" target="nzsq_party_committee" type="directed" label="区委副书记（挂职）">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025.03"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e6" source="nzsq_zhang_lijun" target="nzsq_party_committee" type="directed" label="区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.07"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e7" source="nzsq_zhang_lijun" target="nzsq_gov" type="directed" label="区政府副区长、三级调研员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.07"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e8" source="nzsq_pan_junwei" target="nzsq_party_committee" type="directed" label="区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e9" source="nzsq_pan_junwei" target="nzsq_politics_law" type="directed" label="区委政法委书记、三级调研员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e10" source="nzsq_han_zhicheng" target="nzsq_party_committee" type="directed" label="区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025.12"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e11" source="nzsq_han_zhicheng" target="nzsq_discipline" type="directed" label="区纪委书记、监委主任、四级高级监察官">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2025.12"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e12" source="nzsq_ren_xingguo" target="nzsq_party_committee" type="directed" label="区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e13" source="nzsq_ren_xingguo" target="nzsq_propaganda_dept" type="directed" label="宣传部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e14" source="nzsq_wang_yunfeng" target="nzsq_party_committee" type="directed" label="区委常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023.06"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e15" source="nzsq_wang_yunfeng" target="nzsq_org_dept" type="directed" label="组织部部长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023.06"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e16" source="nzsq_liu_qingzhi" target="nzsq_party_committee" type="directed" label="区委委员、常委">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2023.12"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e17" source="nzsq_jiang_heng" target="nzsq_gov" type="directed" label="区政府副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e18" source="nzsq_liu_dianjun" target="nzsq_gov" type="directed" label="区政府副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e19" source="nzsq_song_li" target="nzsq_gov" type="directed" label="区政府副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e20" source="nzsq_liu_xianmin" target="nzsq_gov" type="directed" label="区政府党组成员、三级调研员">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.09"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e21" source="nzsq_li_dongdong" target="nzsq_gov" type="directed" label="区政府副区长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2022.05"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e22" source="nzsq_li_dongdong" target="nzsq_public_security" type="directed" label="区公安局局长、四级高级警长">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2022.05"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e23" source="nzsq_liu_guoqing" target="nzsq_npc" type="directed" label="区人大常委会主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.11"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e24" source="nzsq_yin_yanzhen" target="nzsq_npc" type="directed" label="区人大常委会副主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e25" source="nzsq_wang_liguo" target="nzsq_npc" type="directed" label="区人大常委会副主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e26" source="nzsq_ma_baokui" target="nzsq_npc" type="directed" label="区人大常委会副主任">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e27" source="nzsq_qi_guangyan" target="nzsq_cppcc" type="directed" label="区政协主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="2021.11"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e28" source="nzsq_huang_jinbao" target="nzsq_cppcc" type="directed" label="区政协副主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+      <edge id="e29" source="nzsq_yang_xin" target="nzsq_cppcc" type="directed" label="区政协副主席">
+        <attvalues>
+          <attvalue for="type" value="worked_at"/>
+          <attvalue for="start" value="待查"/>
+          <attvalue for="end" value="present"/>
+        </attvalues>
+        <viz:color r="80" g="80" b="80" a="0.5"/>
+        <viz:thickness value="1.0"/>
+      </edge>
+          <edge id="e30" source="nzsq_ma_tianshuai" target="nzsq_sun_kun" type="undirected" label="区委书记与区长党政正职搭档">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与区长党政正职搭档"/>
+          <attvalue for="start" value="2024.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e31" source="nzsq_ma_tianshuai" target="nzsq_shi_qiwen" type="undirected" label="区委书记与专职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与专职副书记"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e32" source="nzsq_ma_tianshuai" target="nzsq_zheng_heshan" type="undirected" label="区委书记与挂职副书记">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区委书记与挂职副书记"/>
+          <attvalue for="start" value="2025.03"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e33" source="nzsq_sun_kun" target="nzsq_zhang_lijun" type="undirected" label="区长与常务副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区长与常务副区长"/>
+          <attvalue for="start" value="2024.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e34" source="nzsq_sun_kun" target="nzsq_jiang_heng" type="undirected" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区长与副区长"/>
+          <attvalue for="start" value="2024.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e35" source="nzsq_sun_kun" target="nzsq_liu_dianjun" type="undirected" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区长与副区长"/>
+          <attvalue for="start" value="2024.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e36" source="nzsq_sun_kun" target="nzsq_song_li" type="undirected" label="区长与副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区长与副区长"/>
+          <attvalue for="start" value="2024.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e37" source="nzsq_sun_kun" target="nzsq_li_dongdong" type="undirected" label="区长与副区长兼公安局长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="区长与副区长兼公安局长"/>
+          <attvalue for="start" value="2024.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e38" source="nzsq_shi_qiwen" target="nzsq_pan_junwei" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e39" source="nzsq_shi_qiwen" target="nzsq_ren_xingguo" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e40" source="nzsq_shi_qiwen" target="nzsq_wang_yunfeng" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2023.06"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e41" source="nzsq_pan_junwei" target="nzsq_ren_xingguo" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e42" source="nzsq_pan_junwei" target="nzsq_wang_yunfeng" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2023.06"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e43" source="nzsq_ren_xingguo" target="nzsq_wang_yunfeng" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2023.06"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e44" source="nzsq_han_zhicheng" target="nzsq_pan_junwei" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2025.12"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e45" source="nzsq_han_zhicheng" target="nzsq_ren_xingguo" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2025.12"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e46" source="nzsq_liu_qingzhi" target="nzsq_shi_qiwen" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2023.12"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e47" source="nzsq_liu_qingzhi" target="nzsq_wang_yunfeng" type="undirected" label="同为区委常委">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区委常委"/>
+          <attvalue for="start" value="2023.12"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e48" source="nzsq_zhang_lijun" target="nzsq_jiang_heng" type="undirected" label="同为区政府领导">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区政府领导"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e49" source="nzsq_zhang_lijun" target="nzsq_liu_dianjun" type="undirected" label="同为区政府领导">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区政府领导"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e50" source="nzsq_zhang_lijun" target="nzsq_song_li" type="undirected" label="同为区政府领导">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为区政府领导"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e51" source="nzsq_jiang_heng" target="nzsq_liu_dianjun" type="undirected" label="同为副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为副区长"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e52" source="nzsq_jiang_heng" target="nzsq_song_li" type="undirected" label="同为副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为副区长"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e53" source="nzsq_liu_dianjun" target="nzsq_song_li" type="undirected" label="同为副区长">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="同为副区长"/>
+          <attvalue for="start" value="2021.09"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+          <edge id="e54" source="nzsq_liu_guoqing" target="nzsq_qi_guangyan" type="undirected" label="人大主任与政协主席">
+        <attvalues>
+          <attvalue for="type" value="relationship"/>
+          <attvalue for="strength" value="strong"/>
+          <attvalue for="context" value="人大主任与政协主席"/>
+          <attvalue for="start" value="2021.11"/>
+        </attvalues>
+        <viz:color r="184" g="149" b="62" a="0.8"/>
+        <viz:thickness value="2.5"/>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
