@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>徐汇区人民政府领导团队 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface2: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e8e6e0;
+  --text2: #9a9890;
+  --accent: #e03c31;
+  --gold: #c9a94e;
+  --gold-dim: rgba(201,169,78,0.15);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  padding: 0;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 60px 0 40px;
+  position: relative;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 24px;
+  width: 40px; height: 3px;
+  background: var(--accent, var(--gold));
+}
+.header .label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.header h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.header .sub {
+  color: var(--text2, var(--border));
+  font-size: 14px;
+}
+/* Stats bar */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin: 40px 0;
+  border: 1px solid var(--border);
+}
+.stats > div {
+  background: var(--surface);
+  padding: 24px 16px;
+  text-align: center;
+}
+.stats .num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 28px;
+  color: var(--accent, var(--accent));
+  font-weight: 700;
+}
+.stats .num.gold { color: var(--gold); }
+.stats .lbl {
+  font-size: 11px;
+  color: var(--text2, var(--border));
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+/* Section */
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 48px 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 40px; height: 2px;
+  background: var(--accent, var(--accent));
+}
+/* Person card */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.person-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.person-card:hover {
+  border-color: var(--accent, var(--accent));
+}
+.person-card .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.person-card .title-row {
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.person-card .details {
+  font-size: 13px;
+  color: var(--text2, var(--border));
+  line-height: 1.6;
+}
+.person-card .details span {
+  display: block;
+}
+.person-card .badge {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  margin-top: 8px;
+  color: var(--text2, var(--border));
+}
+.person-card .badge.confirmed {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.person-card .badge.gap {
+  border-color: var(--accent, var(--accent));
+  color: var(--accent, var(--accent));
+}
+/* Relationship matrix */
+.rel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 20px 0;
+}
+.rel-table th, .rel-table td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: center;
+}
+.rel-table th {
+  background: var(--surface2);
+  font-weight: 500;
+  color: var(--text2, var(--border));
+}
+.rel-table td {
+  background: var(--surface);
+}
+.rel-table .dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+.rel-table .dot.gold { background: var(--gold); }
+.rel-table .dot.red { background: var(--accent, var(--accent)); }
+.rel-table .dot.empty { background: var(--border); opacity: 0.3; }
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+  margin: 20px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 20px 20px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -19px; top: 6px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent, var(--accent));
+  border: 2px solid var(--bg);
+}
+.timeline-item .date {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.timeline-item .event {
+  font-size: 13px;
+  margin-top: 4px;
+}
+/* Hierarchy */
+.hierarchy {
+  padding: 20px 0;
+}
+.hierarchy .level {
+  margin: 8px 0;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hierarchy .level .role {
+  font-size: 11px;
+  color: var(--gold);
+  min-width: 80px;
+}
+.hierarchy .level .persons {
+  font-size: 14px;
+}
+.hierarchy .level.level-1 { border-left: 3px solid var(--accent, var(--accent)); }
+.hierarchy .level.level-2 { border-left: 3px solid var(--gold); margin-left: 24px; }
+.hierarchy .level.level-3 { border-left: 3px solid var(--border); margin-left: 48px; }
+/* Sources */
+.source-list {
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.source-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+.source-list a {
+  color: var(--text2, var(--border));
+  text-decoration: none;
+}
+.source-list a:hover {
+  color: var(--gold);
+}
+/* Footer */
+.footer {
+  margin-top: 60px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text2, var(--border));
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <div class="label">● 情报简报 INTELLIGENCE BRIEFING</div>
+    <h1>上海市徐汇区人民政府<br>领导团队</h1>
+    <div class="details">调查日期：2026-08-03 ｜ 来源：徐汇区人民政府门户网站</div>
+  </header>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div><div class="num gold">10</div><div class="lbl">人物</div></div>
+    <div><div class="num">3</div><div class="lbl">机构</div></div>
+    <div><div class="num">12</div><div class="lbl">任职记录</div></div>
+    <div><div class="num">9</div><div class="lbl">关系连接</div></div>
+  </div>
+
+  <!-- 1. 区长 -->
+  <h2 class="section-title">区长</h2>
+  <div class="person-card" style="max-width:600px">
+    <div class="name">王华</div>
+    <div class="title-row">中共徐汇区委副书记 · 徐汇区区长</div>
+    <div class="details">
+      <span>■ 性别：男</span>
+      <span>■ 职级：正局级</span>
+      <span>■ 分工：主持区政府全面工作</span>
+      <span>■ 来源：进博会保障会议主持 / 夏令热线区长访谈 / 多次区政府常务会议主持</span>
+    </div>
+    <div class="badge confirmed">✔ 已确认</div>
+  </div>
+
+  <!-- 2. 全体副区长/区领导 -->
+  <h2 class="section-title">副区长及区领导</h2>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="name">赵懿</div>
+      <div class="title-row">区委常委 · 宣传部部长</div>
+      <div class="details">
+        <span>■ 分工：宣传、意识形态、精神文明</span>
+        <span>■ 彭康旧居揭牌以"区委常委、宣传部部长"致辞</span>
+      </div>
+      <div class="badge confirmed">✔ 已确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">郑长林</div>
+      <div class="title-row">副区长</div>
+      <div class="details">
+        <span>■ 分工：合作交流 · 对口支援</span>
+        <span>■ 随曹立强书记赴新疆兵地融合考察</span>
+      </div>
+      <div class="badge confirmed">✔ 已确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">罗华品</div>
+      <div class="title-row">副区长</div>
+      <div class="details">
+        <span>■ 分工：安全生产 · 应急管理 · 民政</span>
+        <span>■ 多次陪同王华区长安全检查及建军慰问</span>
+      </div>
+      <div class="badge confirmed">✔ 已确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">邓大伟</div>
+      <div class="title-row">副区长</div>
+      <div class="details">
+        <span>■ 分工：待确认</span>
+        <span>■ 进博会保障会议名单出现</span>
+      </div>
+      <div class="badge gap">⚠ 分工待确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">魏兰</div>
+      <div class="title-row">副区长</div>
+      <div class="details">
+        <span>■ 性别：女</span>
+        <span>■ 分工：商务 · 进博会 · 对外开放</span>
+        <span>■ 进博会保障会议作具体部署</span>
+      </div>
+      <div class="badge confirmed">✔ 已确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">陈勇</div>
+      <div class="title-row">副区长</div>
+      <div class="details">
+        <span>■ 分工：科技 · 信息产业 · 未来产业</span>
+        <span>■ 量子计算培育区启动仪式致辞</span>
+      </div>
+      <div class="badge confirmed">✔ 已确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">徐国文</div>
+      <div class="title-row">副区长级领导</div>
+      <div class="details">
+        <span>■ 分工：待确认</span>
+        <span>■ 随曹立强赴新疆考察</span>
+      </div>
+      <div class="badge gap">⚠ 职务待确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">吴捷</div>
+      <div class="title-row">副区长级领导</div>
+      <div class="details">
+        <span>■ 分工：待确认</span>
+        <span>■ 随曹立强赴新疆考察</span>
+      </div>
+      <div class="badge gap">⚠ 职务待确认</div>
+    </div>
+    <div class="person-card">
+      <div class="name">陶威</div>
+      <div class="title-row">副区长级领导</div>
+      <div class="details">
+        <span>■ 分工：待确认</span>
+        <span>■ 建军慰问活动名单中出现</span>
+      </div>
+      <div class="badge gap">⚠ 职务待确认</div>
+    </div>
+  </div>
+
+  <!-- 3. 组织层级 -->
+  <h2 class="section-title">组织结构</h2>
+  <div class="hierarchy">
+    <div class="level level-1">
+      <span class="role">区委书记</span>
+      <span class="persons">曹立强</span>
+    </div>
+    <div class="level level-2">
+      <span class="role">区长</span>
+      <span class="persons">王华（区委副书记）</span>
+    </div>
+    <div class="level level-3">
+      <span class="role">区委常委</span>
+      <span class="persons">赵懿（宣传部部长）</span>
+    </div>
+    <div class="level level-3">
+      <span class="role">副区长</span>
+      <span class="persons">郑长林 · 罗华品 · 邓大伟 · 魏兰 · 陈勇</span>
+    </div>
+    <div class="level level-3">
+      <span class="role">副区长级</span>
+      <span class="persons">徐国文 · 吴捷 · 陶威</span>
+    </div>
+  </div>
+
+  <!-- 4. 关系矩阵 -->
+  <h2 class="section-title">共现关系矩阵</h2>
+  <table class="rel-table">
+    <tr>
+      <th></th><th>王华</th><th>赵懿</th><th>郑长林</th><th>罗华品</th><th>魏兰</th><th>陈勇</th>
+    </tr>
+    <tr>
+      <th>王华</th><td>—</td>
+      <td><span class="dot gold"></span></td>
+      <td><span class="dot gold"></span></td>
+      <td><span class="dot red"></span></td>
+      <td><span class="dot gold"></span></td>
+      <td><span class="dot gold"></span></td>
+    </tr>
+    <tr>
+      <th>赵懿</th><td><span class="dot gold"></span></td>
+      <td>—</td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+    </tr>
+    <tr>
+      <th>郑长林</th><td><span class="dot gold"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td>—</td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+    </tr>
+    <tr>
+      <th>罗华品</th><td><span class="dot red"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td>—</td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+    </tr>
+    <tr>
+      <th>魏兰</th><td><span class="dot gold"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td>—</td>
+      <td><span class="dot empty"></span></td>
+    </tr>
+    <tr>
+      <th>陈勇</th><td><span class="dot gold"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td><span class="dot empty"></span></td>
+      <td>—</td>
+    </tr>
+  </table>
+  <div style="font-size:11px;color:var(--text2,var(--border));margin-top:8px;">
+    <span class="dot gold" style="margin-right:4px;"></span> = 进博会会议共现
+    <span class="dot red" style="margin-right:4px;margin-left:16px;"></span> = 多次公务同行
+  </div>
+
+  <!-- 5. Timeline -->
+  <h2 class="section-title">近期重大活动 · 时间线</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">2026-08-03</div>
+      <div class="event">进博会会议新闻发布</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-07-31</div>
+      <div class="event">第九届进博会城市服务保障工作会议 · 魏兰作具体部署</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-07-30</div>
+      <div class="event">王华做客夏令热线 · 区长访谈</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-07-29</div>
+      <div class="event">建军节走访慰问 · 罗华品 · 陶威参加</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-07-10</div>
+      <div class="event">曹立强率代表团赴新疆 · 郑长林 · 徐国文 · 吴捷随行</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-07-07</div>
+      <div class="event">安全生产检查 · 王华带队 · 罗华品参加</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-07-01</div>
+      <div class="event">量子计算未来产业培育区启动 · 陈勇致辞</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-06-29</div>
+      <div class="event">交大彭康旧居揭牌 · 赵懿致辞</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2026-06-11</div>
+      <div class="event">第135次区政府常务会议 · 王华主持</div>
+    </div>
+  </div>
+
+  <!-- 6. 关键发现 -->
+  <h2 class="section-title">关键发现与信息缺口</h2>
+  <div class="person-card">
+    <div class="title-row">已确认</div>
+    <div class="details">
+      <span>■ 区长王华职务明确，主持全面工作和区政府常务会议</span>
+      <span>■ 6位副区长级领导被2026年7-8月官方新闻确认：赵懿（宣传部）、郑长林（对口）、罗华品（安全）、邓大伟（待定）、魏兰（商务）、陈勇（科技）</span>
+      <span>■ 魏兰是唯一确知性别的女性副区长</span>
+    </div>
+  </div>
+  <div class="person-card" style="margin-top:12px;">
+    <div class="title-row" style="color:var(--accent,var(--accent));">待确认</div>
+    <div class="details">
+      <span>■ 全体领导出生年份、籍贯、教育背景 —— 百度百科403阻挡</span>
+      <span>■ 区政府领导分工正式文件 —— 官网ldzc/路径500错误</span>
+      <span>■ 邓大伟、徐国文、吴捷、陶威的具体分工领域</span>
+      <span>■ 徐国文、吴捷、陶威的精确行政级别</span>
+    </div>
+  </div>
+
+  <!-- 7. 信息来源 -->
+  <h2 class="section-title">信息来源</h2>
+  <ol class="sources">
+    <li><a href="https://www.xuhui.gov.cn/xwzx_zybd/20260803/575616.html">进博会城市服务保障工作会议 (2026-08-03)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xwzx_tpxw/20260729/575484.html">建军节走访慰问 (2026-07-29)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xwzx_tpxw/20260710/575064.html">曹立强赴新疆考察 (2026-07-10)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xwzx_tpxw/20260707/574980.html">安全生产检查 (2026-07-07)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xwzx_tpxw/20260701/574848.html">量子计算大会 (2026-07-01)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xwzx_tpxw/20260629/574803.html">彭康旧居揭牌 (2026-06-29)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xwzx_zybd/20260731/575562.html">夏令热线区长访谈 (2026-07-31)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xxgk/portal/article/detail?id=8a4c0c069ab0643c019ecf82b06f0333">第135次区政府常务会议 (2026-06-11)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xxgk/portal/article/detail?id=8a4c0c06982a9c10019999dc344214a2">第111次区政府常务会议 (2025-09-30)</a></li>
+    <li><a href="https://www.xuhui.gov.cn/xxgk/portal/article/detail?id=8a4c0c06982a9c10019840b126b10168">第106次区政府常务会议 (2025-07-25)</a></li>
+  </ol>
+
+  <!-- Data files -->
+  <h2 class="section-title">数据文件</h2>
+  <div style="font-size:13px;line-height:1.8;">
+    <div>■ SQLite 数据库：<code style="color:var(--gold);">data/database/徐汇区_network.db</code></div>
+    <div>■ GEXF 图谱文件：<code style="color:var(--gold);">data/graph/徐汇区_network.gexf</code></div>
+    <div>■ Markdown 报告：<code style="color:var(--gold);">report/20260803-上海市-徐汇区-区政府领导团队.md</code></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    上海市徐汇区人民政府领导团队研究 · 2026-08-03<br>
+    数据来源：徐汇区人民政府官方网站 · 所有信息可溯源至权威来源
+  </div>
+</footer>
+
+</body>
+</html>
