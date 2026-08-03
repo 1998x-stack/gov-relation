@@ -20011,7 +20011,7 @@
               "label": "二把手"
             }
           ],
-          "done": false,
+          "done": true,
           "sub_tasks": [
             {
               "id": "heilongjiang_鸡冠区",
@@ -20051,7 +20051,9 @@
                 }
               ],
               "done": false,
-              "blocked": false
+              "blocked": true,
+              "blocked_at": "2026-08-03T04:04:14+00:00",
+              "blocked_reason": "missing canonical artifacts: scripts/build/build_恒山区_data.py, data/database/恒山区_network.db, data/graph/恒山区_network.gexf"
             },
             {
               "id": "heilongjiang_滴道区",
@@ -20089,8 +20091,7 @@
                 }
               ],
               "done": false,
-              "blocked": true,
-              "blocked_reason": "missing canonical artifacts: scripts/build/build_梨树区_data.py, data/database/梨树区_network.db, data/graph/梨树区_network.gexf"
+              "blocked": false
             },
             {
               "id": "heilongjiang_城子河区",
@@ -20109,8 +20110,7 @@
                 }
               ],
               "done": false,
-              "blocked": true,
-              "blocked_reason": "missing canonical artifacts: scripts/build/build_城子河区_data.py, data/database/城子河区_network.db, data/graph/城子河区_network.gexf"
+              "blocked": false
             },
             {
               "id": "heilongjiang_麻山区",
