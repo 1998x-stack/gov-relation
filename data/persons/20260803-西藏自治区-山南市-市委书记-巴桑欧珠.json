@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-03",
+  "investigation_scope": {
+    "province": "西藏自治区",
+    "city": "山南市",
+    "region": "错那市",
+    "job": "市委书记",
+    "task_id": "xizang_错那市",
+    "time_focus": "current (2026)"
+  },
+  "identity": {
+    "person_id": "xizang_cuona_basang_ouzhu",
+    "name": "巴桑欧珠",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "藏族",
+    "birth": "",
+    "birthplace": "西藏自治区",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "巴桑欧珠_",
+      "name_birthplace": "巴桑欧珠_西藏自治区",
+      "official_profile_url": "http://www.shannan.gov.cn/zwgk/ldzc/"
+    }
+  },
+  "current_status": {
+    "current_post": "山南市人大常委会副主任、错那市委书记",
+    "current_org": "中共错那市委员会",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-08-03",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "巴桑欧珠的早期履历和晋升路径未从公开资料中找到。已知其为山南市人大常委会副主任（副厅级）、兼任错那市委书记，在2025年1月人代会闭幕会上讲话。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"id": "org_cuona_party", "name": "中共错那市委员会", "type": "党委", "level": "县级", "role": "市委书记"},
+    {"id": "org_shannan_npc", "name": "山南市人大常委会", "type": "人大", "level": "地级", "role": "副主任"}
+  ],
+  "relationships": [
+    {
+      "person": "邹云",
+      "person_id": "xizang_cuona_zou_yun",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "巴桑欧珠任错那市委书记，邹云任市委副书记、市长",
+      "overlap_org": "中共错那市委员会/错那市人民政府",
+      "overlap_period": "2025-至今",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "曹勇",
+      "person_id": "xizang_cuona_cao_yong",
+      "relationship_type": "superior_subordinate",
+      "strength": "weak",
+      "evidence": "共同出席人代会",
+      "overlap_org": "错那市",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party", "人大"],
+    "geographic_pattern": ["西藏自治区"],
+    "promotion_velocity": {"summary": "未知", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": ["稳边固边", "兴边富民", "项目建设"],
+    "management_signals": [],
+    "caveat": "工作时间短、公开露面少，风格尚不明确"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现违纪、调查、负面报道等风险信号",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "错那市第一届人民代表大会第二次会议胜利闭幕",
+      "url": "http://www.cuona.gov.cn/xwzx/lzyw/202501/t20250122_146492.html",
+      "publisher": "错那市人民政府",
+      "published_at": "2025-01-07",
+      "accessed_at": "2026-08-03",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认巴桑欧职务为山南市人大常委会副主任、错那市委书记"
+    },
+    {
+      "id": "S002",
+      "title": "政协第一届错那市委员会第三次会议胜利闭幕",
+      "url": "http://www.cuona.gov.cn/xwzx/lzyw/202501/t20250122_146488.html",
+      "publisher": "错那市人民政府",
+      "published_at": "2025-01-06",
+      "accessed_at": "2026-08-03",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "巴桑欧珠以山南市人大常委会副主任、错那市委书记身份出席"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "巴桑欧珠的出生年月、学历、早期履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "巴桑欧珠的出生年月、籍贯、学历是什么？",
+      "why_it_matters": "缺少基本身份信息，无法完成人物画像",
+      "suggested_queries": ["巴桑欧珠 简历", "巴桑欧珠 出生", "Baidu Baike 巴桑欧珠"],
+      "last_attempted": "2026-08-03"
+    },
+    {
+      "priority": "critical",
+      "question": "巴桑欧珠何时开始担任错那市委书记？此前担任什么职务？",
+      "why_it_matters": "不了解晋升路径，无法分析网络关系",
+      "suggested_queries": ["巴桑欧珠 曾任", "巴桑欧珠 任前公示"],
+      "last_attempted": "2026-08-03"
+    },
+    {
+      "priority": "high",
+      "question": "巴桑欧珠是哪里人？民族？",
+      "why_it_matters": "缺少籍贯和民族信息",
+      "suggested_queries": ["巴桑欧珠 藏族", "巴桑欧珠 籍贯"],
+      "last_attempted": "2026-08-03"
+    }
+  ]
+}
