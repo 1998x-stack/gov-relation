@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>通道侗族自治县 · 领导班子工作关系网络 · 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0e0e0e;
+  color: #e6dcd0;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1, h2, h3 { font-family: 'Noto Serif SC', serif; font-weight: 600; }
+a { color: #c9a94e; text-decoration: none; border-bottom: 1px solid transparent; }
+a:hover { border-bottom-color: #c9a94e; }
+
+/* Header */
+.header { border-bottom: 1px solid #c9a94e; padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+.header h1 { font-size: 2rem; color: #e6dcd0; letter-spacing: 0.05em; }
+.header h1 em { color: #e03c31; font-style: normal; }
+.header .sub { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.header .sub span { font-size: 0.85rem; color: #8a7e6e; }
+.header .meta { display: flex; gap: 2rem; margin-top: 1rem; }
+.header .meta-item { text-align: center; }
+.header .meta-item .num { font-family: 'Noto Serif SC', serif; font-size: 1.8rem; color: #c9a94e; }
+.header .meta-item .label { font-size: 0.75rem; color: #8a7e6e; letter-spacing: 0.08em; }
+
+/* Section */
+.section { margin-bottom: 3rem; }
+.section h2 { font-size: 1.3rem; color: #e6dcd0; padding-left: 0.75rem; border-left: 2px solid #e03c31; margin-bottom: 1.25rem; }
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.card {
+  border: 1px solid #2a2a2a;
+  padding: 1rem 1.25rem;
+  background: #111111;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: #c9a94e; }
+.card .name { font-family: 'Noto Serif SC', serif; font-size: 1.05rem; font-weight: 600; color: #e6dcd0; }
+.card .role { font-size: 0.82rem; color: #c9a94e; margin-top: 0.15rem; }
+.card .badge { display: inline-block; font-size: 0.7rem; padding: 0.1rem 0.4rem; border: 1px solid #3a3a3a; margin: 0.25rem 0.15rem; color: #8a7e6e; }
+.card .badge.red { border-color: #e03c31; color: #e03c31; }
+.card .badge.gold { border-color: #c9a94e; color: #c9a94e; }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before { content: ''; position: absolute; left: 0.6rem; top: 0.4rem; bottom: 0.4rem; width: 1px; background: #2a2a2a; }
+.tl-item { position: relative; margin-bottom: 1.5rem; }
+.tl-item::before { content: ''; position: absolute; left: -1.45rem; top: 0.6rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #e03c31; }
+.tl-item .year { font-family: 'Noto Serif SC', serif; font-size: 0.85rem; color: #c9a94e; }
+.tl-item .desc { font-size: 0.9rem; color: #b0a494; }
+.tl-item .gap { color: #8a7e6e; font-style: italic; }
+
+/* Table */
+.matrix { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.matrix th, .matrix td { border: 1px solid #2a2a2a; padding: 0.5rem 0.6rem; text-align: left; }
+.matrix th { background: #1a1a1a; color: #c9a94e; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.05em; }
+.matrix td { color: #b0a494; }
+.matrix .rel-type { color: # 8a7e6e; font-size: 0.75rem; }
+
+/* Insights */
+.insight-list { list-style: none; padding: 0; }
+.insight-list li { border-left: 1px solid #2a2a2a; padding: 0.75rem 1rem; margin-bottom: 0.5rem; background: #121212; position: relative; }
+.insight-list li::before { content: attr(data-severity); position: absolute; right: 0.75rem; top: 0.5rem; font-size: 0.65rem; color: #8a7e6e; letter-spacing: 0.1em; }
+.insight-list li strong { color: #e6dcd0; }
+.insight-list li .desc { color: #8a7e6e; font-size: 0.82rem; }
+
+/* Gap badges */
+.gap-critical { color: #e03c31; }
+.gap-high { color: #c9a94e; }
+
+/* footer */
+.footer { border-top: 1px solid #2a2a2a; padding-top: 1.5rem; margin-top: 3rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: #5a4e3e; flex-wrap: wrap; gap: 1rem; }
+
+@media (max-width: 640px) {
+  .header .meta { flex-wrap: wrap; gap: 1rem; }
+  .card-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1><em>通</em>道侗族自治县 · 领导班子工作关系网络</h1>
+  <div class="sub">
+    <span>情报简报 · INTELLIGENCE BRIEFING</span>
+    <span>2026-08-03</span>
+  </div>
+  <div class="meta">
+    <div class="meta-item"><div class="num">13</div><div class="label">人物</div></div>
+    <div class="meta-item"><div class="num">2</div><div class="label">机构</div></div>
+    <div class="meta-item"><div class="num">13</div><div class="label">任职</div></div>
+    <div class="meta-item"><div class="num">7</div><div class="label">关系</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>人物概览 · KEY PERSONNEL</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="name">覃歇民</div>
+      <div class="role">县委书记 · ~2021–至今</div>
+      <div><span class="badge red">核心</span><span class="badge">履历缺失</span></div>
+    </div>
+    <div class="card">
+      <div class="name">张克任</div>
+      <div class="role">代理县长 · 2026.07–</div>
+      <div><span class="badge gold">新任</span><span class="badge">侗族</span><span class="badge">1980.02</span></div>
+    </div>
+    <div class="card">
+      <div class="name">田刚</div>
+      <div class="role">前任县长 · ~2021–2026.07</div>
+      <div><span class="badge">去向不明</span></div>
+    </div>
+    <div class="card">
+      <div class="name">毛运鸿</div>
+      <div class="role">前任县委书记 · ~2016–2021</div>
+      <div><span class="badge">履历缺失</span></div>
+    </div>
+    <div class="card">
+      <div class="name">胡三毛</div>
+      <div class="role">常务副县长</div>
+      <div><span class="badge">苗族</span><span class="badge">1979.08</span></div>
+    </div>
+    <div class="card">
+      <div class="name">许扬男</div>
+      <div class="role">常委 · 副县长提名人选</div>
+      <div><span class="badge gold">新任</span><span class="badge">侗族</span><span class="badge">1984.08</span></div>
+    </div>
+    <div class="card">
+      <div class="name">李厚宏</div>
+      <div class="role">副县长（挂职）</div>
+      <div><span class="badge">挂职</span></div>
+    </div>
+    <div class="card">
+      <div class="name">杨庆恒</div>
+      <div class="role">副县长</div>
+    </div>
+    <div class="card">
+      <div class="name">李双凤</div>
+      <div class="role">副县长提名人选</div>
+      <div><span class="badge gold">新任</span></div>
+    </div>
+    <div class="card">
+      <div class="name">李利彬</div>
+      <div class="role">副县长提名人选</div>
+      <div><span class="badge gold">新任</span></div>
+    </div>
+    <div class="card">
+      <div class="name">杨新坚</div>
+      <div class="role">副县长提名人选</div>
+      <div><span class="badge gold">新任</span></div>
+    </div>
+    <div class="card">
+      <div class="name">李杰</div>
+      <div class="role">副县长提名人选 · 公安局长提名人选</div>
+      <div><span class="badge gold">新任</span></div>
+    </div>
+    <div class="card">
+      <div class="name">马劲</div>
+      <div class="role">副县长提名人选</div>
+      <div><span class="badge gold">新任</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>任职时间线 · TOP 3 人物</h2>
+
+  <h3 style="color:#c9a94e;font-size:0.95rem;margin-bottom:0.5rem;">覃歇民 · 县委书记</h3>
+  <div class="timeline">
+    <div class="tl-item"><div class="year"><span class="gap-critical">？</span> — 2020</div><div class="desc note">履历完全空白 —— 任前经历待查</div></div>
+    <div class="tl-item"><div class="year">~2021 — 至今</div><div class="desc">通道侗族自治县委书记<br><span class="note">主持第十四次党代会（2026.07）；主导防汛、企服、安全等工作</span></div></div>
+  </div>
+
+  <h3 style="color:#c9a94e;font-size:0.95rem;margin-top:1.5rem;margin-bottom:0.3rem;">张克任 · 代理县长</h3>
+  <div class="timeline">
+    <div class="tl-item"><div class="year"><span class="gap-critical">？</span> — 2026.06</div><div class="desc note">任前履历完全空白 —— 调任源头待查</div></div>
+    <div class="tl-item"><div class="year">2026.07 — 至今</div><div class="desc">通道县委副书记、代理县长</div></div>
+  </div>
+
+  <h3 style="color:#c9a94e;font-size:0.95rem;margin-top:1.5rem;margin-bottom:0.3rem;">田刚 · 前任县长</h3>
+  <div class="timeline">
+    <div class="tl-item"><div class="year"><span class="gap-critical">？</span> — 2020</div><div class="desc note">任前履历待查</div></div>
+    <div class="tl-item"><div class="year">~2021 — 2026.07</div><div class="desc">通道侗族自治县长</div></div>
+    <div class="tl-item"><div class="year">2026.07 — <span class="gap-critical">？</span></div><div class="desc note">卸任后去向完全不明</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>关系矩阵 · RELATIONSHIPS</h2>
+  <table class="matrix">
+    <thead><tr><th>人物 A</th><th>人物 B</th><th>关系类型</th><th>背景</th><th>时期</th></tr></thead>
+    <tbody>
+      <tr><td>覃歇民</td><td>张克任</td><td class="rel-type">上下级</td><td>县委书记 ⇄ 代理县长</td><td>2026.07–至今</td></tr>
+      <tr><td>覃歇民</td><td>田刚</td><td class="rel-type">上下级</td><td>书记 ⇄ 县长</td><td>~2021–2026.07</td></tr>
+      <tr><td>覃歇民</td><td>胡三毛</td><td class="rel-type">上下级</td><td>书记 ⇄ 常务副</td><td>—</td></tr>
+      <tr><td>覃歇民</td><td>许扬男</td><td class="rel-type">上下级</td><td>书记 ⇄ 常委副</td><td>—</td></tr>
+      <tr><td>毛运鸿</td><td>覃歇民</td><td class="rel-type">前后任</td><td>前后任县委书记</td><td>~2021 交接</td></tr>
+      <tr><td>张克任</td><td>胡三毛</td><td class="rel-type">协作</td><td>代理县长 ⇄ 常务副</td><td>2026.07–至今</td></tr>
+      <tr><td>田刚</td><td>胡三毛</td><td class="rel-type">上下级</td><td>县长 ⇄ 常务副</td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>关键洞察 · KEY INSIGHTS</h2>
+  <ul class="insights">
+    <li data-severity="CRITICAL"><strong>覃歇民任前履历缺失</strong><br><span class="desc">作为现任县委书记，其2021年之前的职业生涯完全未知 —— 这是本调查最大盲区。</span></li>
+    <li data-severity="CRITICAL"><strong>张克任调任源头不明</strong><br><span class="desc">代理县长从何处调来？按怀化市惯例，县长多从市直机关或相邻县（靖州、会同）副职升任。</span></li>
+    <li data-severity="CRITICAL"><strong>田刚去向待查</strong><br><span class="desc">2026年7月卸任后，是回到怀化市直机关、平调其他县、还是升迁？这对判断通道党政班子的晋升通道很关键。</span></li>
+    <li data-severity="HIGH"><strong>毛运鸿的后续职务</strong><br><span class="desc">前任书记的去向是判断通道县委书记晋升渠道的"信号灯"。</span></li>
+    <li data-severity="HIGH"><strong>2026年7月副县长团队"大换血"</strong><br><span class="desc">大量副县长提名人选在张克任上任时同步提名，暗示一批新的市级或县级干部集体到来。是否有来自同一来源（如同乡、同系统）的人员集群？</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>数据文件</h2>
+  <table class="matrix">
+    <thead><tr><th>文件</th><th>路径</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>SQLite DB</td><td>data/database/通道侗族自治县_network.db</td><td>13人 · 2机构 · 13任职 · 7关系</td></tr>
+      <tr><td>GEXF 图</td><td>data/graph/通道侗族自治县_network.gexf</td><td>可导入 Gephi / Cytoscape</td></tr>
+      <tr><td>构建脚本</td><td>scripts/build/build_通道侗族自治县_data.py</td><td>数据驱动构建</td></tr>
+      <tr><td>调查报告</td><td>report/20260803-通道-调查报告.md</td><td>详细调查笔记</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  <span>数据来源：通道县政府网站 · 怀化市政府网站 · 怀化新闻网</span>
+  <span>情报日期 2026-08-03</span>
+</div>
+
+</body>
+</html>
