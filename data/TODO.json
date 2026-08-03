@@ -26087,7 +26087,7 @@
                   "label": "二把手"
                 }
               ],
-              "done": false,
+              "done": true,
               "blocked": false
             },
             {
@@ -26199,6 +26199,7 @@
               ],
               "done": false,
               "blocked": true,
+              "blocked_at": "2026-08-03T06:03:36+00:00",
               "blocked_reason": "missing canonical artifacts: scripts/build/build_襄城区_data.py, data/database/襄城区_network.db, data/graph/襄城区_network.gexf"
             },
             {
@@ -26218,8 +26219,7 @@
                 }
               ],
               "done": false,
-              "blocked": true,
-              "blocked_reason": "missing canonical artifacts: scripts/build/build_樊城区_data.py, data/database/樊城区_network.db, data/graph/樊城区_network.gexf"
+              "blocked": false
             },
             {
               "id": "hubei_襄州区",
@@ -26358,7 +26358,9 @@
               "done": true
             }
           ],
-          "blocked": false
+          "blocked": true,
+          "blocked_at": "2026-08-03T06:02:50+00:00",
+          "blocked_reason": "missing canonical artifacts: scripts/build/build_襄阳市_data.py, data/database/襄阳市_network.db, data/graph/襄阳市_network.gexf"
         },
         {
           "id": "hubei_鄂州市",
