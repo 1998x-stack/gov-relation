@@ -16,6 +16,10 @@ from gov_relation.log import get_logger, init_logging
 from gov_relation.queue import canonical_artifacts_ready, claim_next, set_claim_status
 from gov_relation.slugs import artifact_paths
 
+# Concurrency gate: limits how many workers run opencode simultaneously
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from concurrency_gate import acquire as concurrency_acquire
+
 logger = get_logger(__name__)
 
 
@@ -94,6 +98,7 @@ def main() -> int:
     parser.add_argument("--auto-done", action="store_true", help="mark done if opencode exits 0; use only if the prompt performs validation")
     parser.add_argument("--git-commit", action="store_true", help="commit repository changes after a task is marked done")
     parser.add_argument("--sleep-seconds", type=int, default=30, help="sleep between tasks when looping")
+    parser.add_argument("--concurrency", type=int, default=2, help="max concurrent opencode agents (default 2)")
     args = parser.parse_args()
 
     completed = 0
@@ -126,7 +131,9 @@ def main() -> int:
         if args.opencode_auto:
             command.append("--auto")
         command.append(prompt_text)
-        result = subprocess.run(command, check=False)
+        with concurrency_acquire(args.worker_id, max_active=args.concurrency):
+            logger.info("GATE acquired worker=%s task=%s", args.worker_id, task_id)
+            result = subprocess.run(command, check=False)
         logger.info("END opencode task=%s exit=%s", task_id, result.returncode)
         if result.returncode == 0 and args.auto_done:
             ready, missing = canonical_artifacts_ready(claim["task"])

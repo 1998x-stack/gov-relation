@@ -60,23 +60,23 @@ Canonical destination after validation:
 
 Required workflow:
 1. Run Phase 0 repository preflight.
-2. Read relevant references from .agents/skills/china-gov-network/references:
-   - investigation_stages.md
-   - subagent_dispatch.md
-   - source_fallbacks.md
-   - person_graph_json.md
+2. Phase 1 (RESEARCH): Research current officeholders, leadership roster, biographies, predecessor/successor moves, relationship evidence, governance/professional profile, and open gaps.
+   - Write checkpoint: echo "CHECKPOINT:research_done" > data/tmp/{task["task_id"]}/checkpoint_01_research.md
+3. Phase 2 (BUILD): Read relevant references from .agents/skills/china-gov-network/references:
+   - investigation_stages.md, subagent_dispatch.md, source_fallbacks.md, person_graph_json.md
    - gexf_pattern.md when writing graph output
-3. Research current officeholders, leadership roster, biographies, predecessor/successor moves, relationship evidence, governance/professional profile, and open gaps.
-4. Write all newly generated artifacts into the staging directory first. Do not write new build scripts into repo root directly.
+4. Write all newly generated artifacts into the staging directory first (data/tmp/{task["task_id"]}/).
+   - Write checkpoint: echo "CHECKPOINT:artifacts_staged" > data/tmp/{task["task_id"]}/checkpoint_02_artifacts.md
 5. Validate with py_compile, script execution, json.tool for person JSON, and scripts/process_tmp.py data/tmp/{task["task_id"]}.
 6. Promote with scripts/process_tmp.py data/tmp/{task["task_id"]} --apply only after the dry run is clean.
+   - Write checkpoint: echo "CHECKPOINT:promoted" > data/tmp/{task["task_id"]}/checkpoint_03_promoted.md
 7. Run scripts/inventory.py after promotion.
 8. Before exiting, verify these canonical paths exist:
    - {paths["build_script"]}
    - {paths["db_output"]}
    - {paths["gexf_output"]}
    - at least two data/persons/YYYYMMDD-...json files for the core leaders when names are known
-"""
+9. After verification, write a final checkpoint: echo "CHECKPOINT:complete" > data/tmp/{task["task_id"]}/checkpoint_04_complete.md"""
 
 
 def build_dispatch_plan(item: TodoItem, model_intent: str = "standard") -> DispatchPlan:

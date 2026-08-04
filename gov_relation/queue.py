@@ -23,6 +23,7 @@ logger = get_logger(__name__)
 LOCK_STALE_SECONDS = 10 * 60
 MAX_RETRIES = 3  # tasks exceeding this many failed attempts are auto-blocked
 MAX_RECLAIM_ATTEMPTS = 10  # tasks reclaimed this many times (even across diff workers) are skipped
+BLOCKED_RELEASE_HOURS = 24  # auto-release blocked tasks after this many hours
 
 
 def now_iso() -> str:
@@ -141,6 +142,7 @@ def cleanup_worker_active_claims_unlocked(todo: dict, state: dict[str, Any], wor
 def find_next_claimable(todo: dict, state: dict[str, Any]) -> TodoItem | None:
     active = active_claim_ids(state)
     claims = state.get("claims", {})
+    now = datetime.now(timezone.utc)
     for item in iter_items(todo):
         task_id = item.item.get("id")
         if not task_id:
@@ -148,6 +150,25 @@ def find_next_claimable(todo: dict, state: dict[str, Any]) -> TodoItem | None:
         if item.item.get("done") or task_id in active:
             continue
         if item.item.get("blocked"):
+            # Auto-release: unblock tasks that were blocked > BLOCKED_RELEASE_HOURS ago.
+            # Missing blocked_at (from old runs) is treated as stale and auto-released.
+            blocked_at = item.item.get("blocked_at")
+            should_release = False
+            if not blocked_at:
+                should_release = True  # backward compat: no timestamp → stale
+            else:
+                try:
+                    blocked_dt = datetime.fromisoformat(blocked_at)
+                    if (now - blocked_dt).total_seconds() > BLOCKED_RELEASE_HOURS * 3600:
+                        should_release = True
+                except (ValueError, TypeError):
+                    should_release = True
+            if should_release:
+                item.item["blocked"] = False
+                item.item.pop("blocked_reason", None)
+                item.item.pop("blocked_at", None)
+                logger.info("AUTO_RELEASED %s (blocked > %dh or stale)", task_id, BLOCKED_RELEASE_HOURS)
+                return item
             continue
         # Skip if total claim attempts across all workers exceeds threshold
         total_attempts = claims.get(task_id, {}).get("attempts", 0)
@@ -230,10 +251,12 @@ def set_claim_status(task_id: str, worker_id: str, status: str, reason: str = ""
                 _, task = find_task(todo, task_id, province=province, parent_city=parent_city)
                 if task is not None:
                     task["blocked"] = True
+                    task["blocked_at"] = now_iso()
                     task["blocked_reason"] = reason or f"exceeded {MAX_RETRIES} retries"
                     save_todo(todo)
                 claim["status"] = "blocked"
                 claim["updated_at"] = now_iso()
+                claim["blocked_at"] = now_iso()
                 logger.info("BLOCKED %s after %d failed attempts", task_id, attempts)
         if status == "done":
             todo = load_todo()

@@ -70,6 +70,17 @@ def mock_all(monkeypatch: Any, tmp_path: Path) -> Generator[Path, None, None]:
                         "level": "prefecture",
                         "done": False,
                         "blocked": True,
+                        "blocked_at": "2026-08-03T10:00:00+00:00",  # recent — stays blocked
+                        "blocked_reason": "exceeded max retries",
+                        "targets": [{"role": "市委书记"}],
+                    },
+                    {
+                        "id": "task_stale_blocked",
+                        "region": "C市",
+                        "level": "prefecture",
+                        "done": False,
+                        "blocked": True,
+                        # no blocked_at — treated as stale, auto-released
                         "blocked_reason": "exceeded max retries",
                         "targets": [{"role": "市委书记"}],
                     },
@@ -95,8 +106,36 @@ class TestFindNextClaimableSkipBlocked:
         mark_done(todo, "task_normal")
         save_todo(todo)
         item = find_next_claimable(todo, {"claims": {}})
-        # task_blocked is blocked -> should be skipped -> no more items
-        assert item is None
+        # task_stale_blocked has no blocked_at → auto-released
+        assert item is not None
+        assert item.item.get("id") == "task_stale_blocked"
+        assert item.item.get("blocked") is False
+
+    def test_stale_blocked_auto_released(self, mock_all: Path) -> None:
+        from gov_relation.todo import load_todo, mark_done, save_todo
+        todo = load_todo()
+        mark_done(todo, "task_normal")
+        save_todo(todo)
+        # task_stale_blocked had no blocked_at — auto-released and becomes claimable
+        item1 = find_next_claimable(todo, {"claims": {}})
+        assert item1 is not None
+        assert item1.item.get("id") == "task_stale_blocked"
+        assert item1.item.get("blocked") is False
+        # Now task_stale_blocked is claimable, so it returns again
+        # (it's no longer blocked, and not done)
+
+    def test_recently_blocked_stays_blocked(self, mock_all: Path) -> None:
+        from gov_relation.todo import load_todo, mark_done, save_todo
+        todo = load_todo()
+        mark_done(todo, "task_normal")
+        save_todo(todo)
+        # auto-release the stale one first
+        find_next_claimable(todo, {"claims": {}})
+        # task_blocked has recent blocked_at — stays blocked
+        item = find_next_claimable(todo, {"claims": {}})
+        assert item.item.get("id") == "task_stale_blocked"
+        # stale was released but not done; second pass returns it as claimable
+        # after it, task_blocked remains (recent timestamp) so it's the end
 
     def test_blocked_task_not_skipped_when_flag_absent(self, mock_all: Path) -> None:
         from gov_relation.todo import load_todo
@@ -123,8 +162,10 @@ class TestClaimNextSkipsBlocked:
         from gov_relation.todo import load_todo, mark_done, save_todo
         todo = load_todo()
         mark_done(todo, "task_normal")
+        mark_done(todo, "task_stale_blocked")  # would be auto-released, so mark done too
         save_todo(todo)
         c = claim_next("w1", "iagent")
+        # task_blocked has recent blocked_at — stays blocked
         assert c is None
 
 
@@ -133,5 +174,5 @@ class TestBlockedInStatus:
         from gov_relation.queue import queue_status
         status = queue_status()
         # total 2, done 0, but only 1 claimable
-        assert status["total"] == 2
-        assert status["remaining"] == 2  # blocked tasks are not "done"
+        assert status["total"] == 3
+        assert status["remaining"] == 3  # blocked tasks are not "done"
