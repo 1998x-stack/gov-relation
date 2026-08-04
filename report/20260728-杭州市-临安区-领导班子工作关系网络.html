@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>临安区领导班子工作关系网络 — 情报简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #0d0d0d;
+  --surface-raised: #141414;
+  --surface-card: #1a1a1a;
+  --text-primary: #e6ddd0;
+  --text-secondary: #948b7e;
+  --text-muted: #5e564b;
+  --accent: #e03c31;
+  --accent-dim: rgba(224, 60, 49, 0.12);
+  --gold: #bf9b4a;
+  --gold-dim: rgba(191, 155, 74, 0.10);
+  --border: rgba(230, 221, 208, 0.07);
+  --border-light: rgba(230, 221, 208, 0.03);
+  --font-display: 'Noto Serif SC', 'Source Han Serif SC', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --radius: 2px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);font-weight:300;color:var(--text-primary);background:var(--surface);line-height:1.65;min-height:100vh}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--surface)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:.02em}
+h1{font-size:1.85rem;font-weight:700;line-height:1.25}
+h2{font-size:1.2rem;margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+h3{font-size:.95rem;font-weight:600;color:var(--text-secondary)}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1240px;margin:0 auto;padding:0 1.5rem}
+
+.masthead{padding:4rem 1.5rem 2.5rem;border-bottom:1px solid var(--border);margin-bottom:2.5rem;position:relative}
+.masthead::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:50px;height:2.5px;background:var(--accent)}
+.masthead-eyebrow{font-size:.65rem;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);margin-bottom:.75rem}
+.masthead h1{margin-bottom:.35rem}
+.masthead-sub{font-size:.8rem;color:var(--text-secondary);margin-bottom:1.25rem}
+.masthead-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat-num{font-family:var(--font-display);font-size:1.35rem;font-weight:700;line-height:1.2}
+.stat-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted)}
+
+.section{margin-bottom:3rem}
+
+.divider{border:none;height:1px;background:var(--border);margin:2.5rem 0}
+
+.person-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border)}
+.person-card{background:var(--surface-card);padding:1.25rem;display:flex;flex-direction:column;gap:.35rem;transition:background .2s;position:relative}
+.person-card:hover{background:#222}
+.person-card.unknown::after{content:'履历待查';position:absolute;top:1rem;right:1rem;font-size:.55rem;letter-spacing:.08em;color:var(--text-muted);border:1px solid var(--border);padding:2px 6px}
+.person-card-role{font-size:.6rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:500;margin-bottom:.25rem}
+.person-card-name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin-bottom:.25rem}
+.person-card-meta{font-size:.75rem;color:var(--text-secondary);line-height:1.5}
+.person-card-badges{display:flex;gap:4px;flex-wrap:wrap;margin-top:auto;padding-top:.6rem}
+.badge{display:inline-block;font-size:.55rem;padding:2px 7px;border:1px solid var(--border);letter-spacing:.06em;font-weight:500}
+.badge-gold{border-color:var(--gold);color:var(--gold)}
+.badge-accent{border-color:var(--accent);color:var(--accent)}
+.badge-muted{border-color:var(--text-muted);color:var(--text-muted)}
+
+.gap-banner{background:var(--accent-dim);border-left:2px solid var(--accent);padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.8rem;color:var(--text-secondary);line-height:1.5}
+
+.timeline{position:relative;padding-left:2rem;margin-bottom:2rem}
+.timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--border)}
+.timeline-item{position:relative;padding-bottom:.85rem}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:calc(-2rem + 2px);top:5px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:1.5px solid var(--text-muted)}
+.timeline-item.key::before{border-color:var(--accent);background:var(--accent-dim)}
+.timeline-item.unknown::before{border-color:var(--text-muted);opacity:.35}
+.timeline-date{font-family:var(--font-body);font-size:.65rem;color:var(--text-muted);margin-bottom:2px}
+.timeline-title{font-size:.8rem;font-weight:500;margin-bottom:1px}
+.timeline-org{font-size:.7rem;color:var(--text-secondary)}
+.timeline-conf{font-size:.6rem;color:var(--text-muted)}
+
+.matrix-wrapper{overflow-x:auto}
+.matrix-table{width:100%;border-collapse:collapse;font-size:.7rem}
+.matrix-table th,.matrix-table td{padding:6px 10px;border:1px solid var(--border);text-align:left;white-space:nowrap}
+.matrix-table th{font-family:var(--font-display);font-weight:600;background:var(--surface-raised);color:var(--text-secondary);font-size:.65rem;letter-spacing:.04em}
+.matrix-table td{color:var(--text-secondary)}
+.matrix-table .strong{color:var(--gold)}
+.matrix-table .weak{color:var(--text-muted)}
+
+.gap-grid{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+.gap-card{background:var(--surface-card);padding:1rem 1.25rem;display:flex;gap:.6rem;align-items:flex-start}
+.gap-priority{font-size:.55rem;font-weight:600;letter-spacing:.1em;padding:2px 5px;border:1px solid;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.gap-priority.critical{border-color:var(--accent);color:var(--accent)}
+.gap-priority.high{border-color:var(--gold);color:var(--gold)}
+.gap-priority.medium{border-color:var(--text-muted);color:var(--text-muted)}
+.gap-desc{font-size:.8rem;color:var(--text-secondary);line-height:1.5}
+.gap-desc strong{color:var(--text-primary);font-weight:500}
+
+.sources{font-size:.7rem;color:var(--text-muted);line-height:1.8;columns:2 280px;column-gap:2rem}
+.sources div{padding-left:.5rem;border-left:1px solid var(--border-light);margin-bottom:.35rem}
+
+.footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-size:.65rem;color:var(--text-muted)}
+.footer code{font-size:.6rem;color:var(--text-muted)}
+
+@media (max-width:768px){
+html{font-size:14px}
+.masthead{padding:2rem 0 1.5rem}
+.masthead-stats{gap:1.5rem}
+.person-grid{grid-template-columns:1fr}
+.gap-grid{grid-template-columns:1fr}
+.sources{columns:1}
+.container{padding:0 1rem}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container">
+    <div class="masthead-eyebrow">浙江省 · 杭州市 · 临安区</div>
+    <h1>领导班子工作关系网络</h1>
+    <p class="masthead-sub">情报简报 · 2026年7月28日 · 调查目标：区委书记 &amp; 区长</p>
+    <div class="masthead-stats">
+      <div class="stat"><span class="stat-num">18</span><span class="stat-label">人物节点</span></div>
+      <div class="stat"><span class="stat-num">14</span><span class="stat-label">机构节点</span></div>
+      <div class="stat"><span class="stat-num">21</span><span class="stat-label">任职边</span></div>
+      <div class="stat"><span class="stat-num">10</span><span class="stat-label">关系边</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- Person Cards -->
+<section class="section">
+  <div class="container">
+    <h2>关键人物</h2>
+    <p style="color:var(--text-secondary);font-size:.8rem;margin-bottom:1rem;">临安区党政领导班子成员及重要关联人物</p>
+
+    <div class="person-grid">
+
+      <!-- 惠海涛 -->
+      <div class="person-card role-b">
+        <div class="person-card-role">区委书记 · 副厅级</div>
+        <div class="person-card-name">惠海涛</div>
+        <div class="person-card-meta">
+          男 · 汉族<br>
+          出生年月 待查 · 籍贯 待查
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-accent">一把手</span>
+          <span class="badge" style="border-color:var(--text-muted);color:var(--text-muted);">履历待查</span>
+        </div>
+      </div>
+
+      <!-- 沈建 -->
+      <div class="person-card role-b">
+        <div class="person-card-role">区委副书记 · 区长 · 副厅级</div>
+        <div class="person-card-name">沈建</div>
+        <div class="person-card-meta">
+          男 · 汉族<br>
+          出生信息 待查明 · 籍贯 待查
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-accent">政府一把手</span>
+          <span class="badge" style="border-color:var(--text-muted);color:var(--text-muted);">履历待查</span>
+        </div>
+      </div>
+
+      <!-- 汤丽玉 -->
+      <div class="person-card role-b">
+        <div class="person-card-role">区委副书记 · 副厅级</div>
+        <div class="person-card-name">汤丽玉</div>
+        <div class="person-card-meta">
+          女 · 汉族<br>
+          出生信息 待查明
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-gold">女干部</span>
+        </div>
+      </div>
+
+      <!-- 唐锋 -->
+      <div class="person-card">
+        <div class="person-card-role">区委常委 · 常务副区长 · 副厅级</div>
+        <div class="person-card-name">唐锋</div>
+        <div class="person-card-meta">
+          发改 · 统计 · 金融 · 应急 · 财政协助<br>
+          联系人大、政协、监委、法院、检察院
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-accent">常务</span>
+        </div>
+      </div>
+
+      <!-- 陈立群 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">陈立群</div>
+        <div class="person-card-meta">
+          经信 · 科技 · 环保 · 商务 · 数据资源<br>
+          五水共治 · 外事 · 招商
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 洪亮 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">洪亮</div>
+        <div class="person-card-meta">
+          交通 · 市场监管 · 人社 · 司法 · 退役军人<br>
+          食品安全 · 知识产权 · 城际铁路
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 田江波 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">田江波</div>
+        <div class="person-card-meta">
+          城乡建设 · 住房保障 · 城市管理<br>
+          征地拆迁 · 综合执法
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 罗爱芬 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">罗爱芬</div>
+        <div class="person-card-meta">
+          农业农村 · 水利 · 民政 · 供销<br>
+          自然保护区 · 气象 · 残疾人
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-gold">女干部</span>
+        </div>
+      </div>
+
+      <!-- 张凯 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 副处级</div>
+        <div class="person-card-name">张凯</div>
+        <div class="person-card-meta">
+          教育 · 卫健 · 医保 · 文旅 · 体育<br>
+          地方志 · 区校合作
+        </div>
+        <div class="person-card-badges"></div>
+      </div>
+
+      <!-- 黄品 -->
+      <div class="person-card">
+        <div class="person-card-role">副区长 · 公安分局局长 · 副处级</div>
+        <div class="person-card-name">黄品</div>
+        <div class="person-card-meta">
+          主持公安分局全面工作<br>
+          协助负责消防工作
+        </div>
+        <div class="person-card-badges">
+          <span class="badge badge-accent">公安</span>
+        </div>
+      </div>
+
+      <!-- 钱美仙 -->
+      <div class="person-card">
+        <div class="person-card-role">区人大常委会主任 · 副厅级</div>
+        <div class="person-card-name">钱美仙</div>
+        <div class="person-card-meta">
+          女<br>
+          2026.05 新闻确认在任
+        </div>
+        <div class="person-card-badges"><span class="badge" style="border-color:var(--text-muted);color:var(--text-muted);">履历待查</span></div>
+      </div>
+
+      <!-- 李赛文 -->
+      <div class="person-card">
+        <div class="person-card-role">区政协主席 · 副厅级</div>
+        <div class="person-card-name">李赛文</div>
+        <div class="person-card-meta">
+          女<br>
+          2026年新闻确认在任
+        </div>
+        <div class="person-card-badges"><span class="badge" style="border-color:var(--text-muted);color:var(--text-muted);">履历待查</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-banner">
+      另有区人大副主任 4 人：高吉亚、陈国权、鲁一成、张勤、陈栋、黄寅（共6人，2026-05-21新闻确认）
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Career Timelines -->
+<section class="section">
+  <div class="container">
+    <h2>核心人物履历</h2>
+
+    <div class="timeline-banner" style="background:var(--accent-dim);border-left:2px solid var(--accent);padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.8rem;color:var(--text-secondary);line-height:1.5;">
+      ⚠ 所有核心人物的履历均未查到。以下时间线仅标注<strong>现任职务确认时间点</strong>——这是当前所能确定的信息上限。出生年月、学历、晋升路径均为重大缺口。
+    </div>
+
+    <!-- 惠海涛 -->
+    <h3 style="margin-bottom:.6rem;">惠海涛 · 区委书记</h3>
+    <div class="timeline" style="margin-bottom:1.5rem;">
+      <div class="timeline-item key">
+        <div class="timeline-date">截至 2026.07</div>
+        <div class="timeline-title">临安区委书记</div>
+        <div class="timeline-org">中共杭州市临安区委员会</div>
+        <div class="timeline-conf">✅ 多篇新闻确认</div>
+      </div>
+      <div class="timeline-item unknown">
+        <div class="timeline-date">2025年及之前</div>
+        <div class="timeline-title">全部履历</div>
+        <div class="timeline-org">—</div>
+        <div class="timeline-conf">❌ 完全未知</div>
+      </div>
+    </div>
+
+    <!-- 沈建 -->
+    <h3 style="margin-bottom:.6rem;">沈建 · 区长</h3>
+    <div class="timeline" style="margin-bottom:1.5rem;">
+      <div class="timeline-item key">
+        <div class="timeline-date">2025.11 — 至今</div>
+        <div class="timeline-title">临安区区长</div>
+        <div class="timeline-org">杭州市临安区人民政府</div>
+        <div class="timeline-conf">✅ 分工通知确认</div>
+      </div>
+      <div class="timeline-item unknown">
+        <div class="timeline-date">2025年及之前</div>
+        <div class="timeline-title">全部履历</div>
+        <div class="timeline-org">—</div>
+        <div class="timeline-conf">❌ 完全未知</div>
+      </div>
+    </div>
+
+    <!-- 汤丽玉 -->
+    <h3 style="margin-bottom:.6rem;">汤丽玉 · 区委副书记</h3>
+    <div class="timeline" style="margin-bottom:1.5rem;">
+      <div class="timeline-item key">
+        <div class="timeline-date">截至 2026.07</div>
+        <div class="timeline-title">临安区委副书记</div>
+        <div class="timeline-org">中共杭州市临安区委员会</div>
+        <div class="timeline-conf">✅ 新闻确认</div>
+      </div>
+      <div class="timeline-item unknown">
+        <div class="timeline-date">未知</div>
+        <div class="timeline-title">此前履历</div>
+        <div class="timeline-org">—</div>
+        <div class="timeline-conf">❌ 完全未知</div>
+      </div>
+    </div>
+
+    <!-- 唐锋 -->
+    <h3 style="margin-bottom:.6rem;">唐锋 · 常务副区长</h3>
+    <div class="timeline" style="margin-bottom:.5rem;">
+      <div class="timeline-item key">
+        <div class="timeline-date">2025.11 — 至今</div>
+        <div class="timeline-title">临安区委常委、常务副区长</div>
+        <div class="timeline-org">杭州市临安区人民政府</div>
+        <div class="timeline-conf">✅ 分工通知确认</div>
+      </div>
+      <div class="timeline-item unknown">
+        <div class="timeline-date">未知</div>
+        <div class="timeline-title">此前履历</div>
+        <div class="timeline-org">—</div>
+        <div class="timeline-conf">❌ 完全未知</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Relationship Matrix -->
+<section class="section">
+  <div class="container">
+    <h2>工作关系矩阵</h2>
+    <p style="color:var(--text-secondary);font-size:.8rem;margin-bottom:1rem;">已确认的关联关系 — 金色：强关系 / 白色：中关系 / 灰色：弱关系</p>
+    <div class="matrix-wrapper">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>人物A</th>
+            <th>人物B</th>
+            <th>关系类型</th>
+            <th>强度</th>
+            <th>重叠机构</th>
+            <th>重叠期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="strong">惠海涛</td>
+            <td class="strong">沈建</td>
+            <td>党政主要领导搭档</td>
+            <td class="strong">强</td>
+            <td>区委/区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>惠海涛</td>
+            <td>汤丽玉</td>
+            <td>书记/副书记</td>
+            <td class="strong">强</td>
+            <td>区委常委会</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td>惠海涛</td>
+            <td>唐锋</td>
+            <td>书记/常委</td>
+            <td class="strong">强</td>
+            <td>区委常委会</td>
+            <td>待查</td>
+          </tr>
+          <tr>
+            <td class="strong">沈建</td>
+            <td class="strong">唐锋</td>
+            <td>区长/常务副区长</td>
+            <td class="strong">强</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>沈建</td>
+            <td>陈立群</td>
+            <td>正副区长</td>
+            <td class="medium">中</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>沈建</td>
+            <td>洪亮</td>
+            <td>正副区长</td>
+            <td class="medium">中</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>沈建</td>
+            <td>田江波</td>
+            <td>正副区长</td>
+            <td class="medium">中</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>沈建</td>
+            <td>罗爱芬</td>
+            <td>正副区长</td>
+            <td class="medium">中</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>沈建</td>
+            <td>张凯</td>
+            <td>正副区长</td>
+            <td class="medium">中</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+          <tr>
+            <td>沈建</td>
+            <td>黄品</td>
+            <td>正副区长</td>
+            <td class="medium">中</td>
+            <td>区政府</td>
+            <td>2025.11至今</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Key Insights -->
+<section class="section">
+  <div class="container">
+    <h2>关键洞察</h2>
+
+    <div class="gap-grid">
+
+      <div class="gap-card" style="flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.2rem;border-bottom:1px solid var(--gold-dim);padding-bottom:.3rem;">
+          <span class="gap-priority high" style="border-color:var(--gold);color:var(--gold)">核心发现</span>
+          <span style="font-family:var(--font-display);font-size:.85rem;font-weight:600;">区政府班子完整确认</span>
+        </div>
+        <div class="gap-desc">
+          通过临政发〔2025〕73号文件，区政府1正7副（含1位公安局长）共8人的职务分工全部确认。这是宝贵的精准数据——但所有8人的出生年月、籍贯、教育背景、工作经历完全未知，无法做交叉分析。
+        </div>
+      </div>
+
+      <div class="gap-card" style="border-left:2px solid var(--accent);padding-left:1rem;">
+        <span class="gap-priority critical" style="border-color:var(--accent);color:var(--accent)">缺失 · 高优先级</span>
+        <div class="gap-desc">
+          <strong>区委常委会核心层尚缺6人</strong><br>
+          临安区委常委会通常由11人组成（书记+2副书记+10常委），目前仅确认惠海涛、沈建、汤丽玉、唐锋4人。纪委书记、组织部长、宣传部长、统战部长、政法委书记、人武部长共6个关键岗位身份完全未知。
+        </div>
+      </div>
+
+      <div class="gap-card">
+        <span class="gap-priority high" style="border-color:var(--gold);color:var(--gold)">缺失 · 高优先级</span>
+        <div class="gap-desc">
+          <strong>惠海涛（区委书记）履历完全真空</strong><br>
+          作为临安区党政一把手，其教育背景、出生年月、籍贯、工作经历、到任时间全部未知。无法判断系本地提拔还是空降干部，这是当前最大的信息缺口。
+        </div>
+      </div>
+
+      <div class="gap-card">
+        <span class="gap-priority high" style="border-color:var(--gold);color:var(--gold)">缺失 · 高优先级</span>
+        <div class="gap-desc">
+          <strong>沈建（区长）履历完全真空</strong><br>
+          与惠海涛相同，区长的出生信息、工作经历、晋升路径全部未知，使"区/区搭档"的实质性协同描述成为可能性。
+        </div>
+      </div>
+
+      <div class="gap-card">
+        <span class="gap-priority medium" style="border-color:var(--text-muted);color:var(--text-muted)">缺失 · 中优先级</span>
+        <div class="gap-desc">
+          <strong>钱美仙（人大主任）、李赛文（政协主席）履历未知</strong><br>
+          区级四套班子主要领导仅确认姓名/性别/职务，其余全部为空白。如果同为杭州市跨区调任，将是重要的网络链路节点。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Sources -->
+<section class="section">
+  <div class="container">
+    <h2>数据来源</h2>
+    <p style="color:var(--text-secondary);font-size:.8rem;margin-bottom:1rem;">所有声称均标注来源 URL。政府网站为一级来源，媒体为二级来源。</p>
+    <div class="sources">
+      <div>① <a href="https://www.linan.gov.cn">临安区政府门户</a> — 首页</div>
+      <div>② <a href="https://www.linan.gov.cn/col/col1229288891/art/2025/art_0ba5edbb975e47a1b1dfed964757eede.html">区长副区长分工通知</a> — 临政发〔2025〕73号</div>
+      <div>③ <a href="https://www.linan.gov.cn/col/col1366281/art/2026/art_082ea41ee8ae46778bbdb19aa40e7970.html">庆党105周年大会</a> — 确认区委书记惠海涛</div>
+      <div>④ <a href="https://www.linan.gov.cn/col/col1366281/art/2026/art_7c48b91fc48a44929fa0216c0b5570f1.html">台风巴威防御会议</a> — 唐锋/陈立群/罗爱芬在岗</div>
+      <div>⑤ <a href="https://www.linan.gov.cn/col/col1366281/art/2026/art_2a21eb71127548028c8d9efc4b2d0d75.html">调入海信泰临大讲坛</a> — 书记/区长/人大/政协确认</div>
+      <div>⑥ <a href="https://www.linan.gov.cn/col/col1366281/art/2026/art_04b189d708d448c48304f3d3448b4775.html">人大常委会会议</a> — 钱美仙及6位副主任</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>生成于 2026-07-28 · 数据构建脚本：<code>scripts/build/build_linan_data.py</code></p>
+    <p>数据库：<code>data/database/linan_network.db</code> · 图谱：<code>data/graph/linan_network.gexf</code></p>
+    <p style="margin-top:.6rem;"><a href="https://github.com/lazycodex-ai/gov-relation">政府人员履历与工作关系网络研究仓库</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
