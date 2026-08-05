@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-08-05">
+    <creator>Gov Relation Research Agent</creator>
+    <description>鸡冠区（黑龙江省鸡西市）领导班子工作关系网络</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="level" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+      <attribute id="2" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="heilongjiang_jiguan_yu_jun" label="于君">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="鸡西市委常委、副市长，鸡冠区委书记"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="220" g="30" b="30"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="org_jiguan_party_committee" label="中共鸡西市鸡冠区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="党委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="60" b="60"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_jiguan_gov" label="鸡西市鸡冠区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="政府"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="60" g="100" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="org_jiguan_discipline" label="中共鸡西市鸡冠区纪律检查委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value="纪委"/>
+          <attvalue for="2" value="县处级"/>
+        </attvalues>
+        <viz:color r="160" g="120" b="40"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e0" source="heilongjiang_jiguan_yu_jun" target="org_jiguan_party_committee" label="鸡冠区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="鸡冠区委书记"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+      <edge id="e1" source="heilongjiang_jiguan_yu_jun" target="org_jiguan_party_committee" label="鸡西市委常委（兼任）" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="鸡西市委常委（兼任）"/>
+          <attvalue for="2" value="待查~present"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
