@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "邢台市",
+    "region": "襄都区",
+    "job": "前任区委书记",
+    "task_id": "hebei_襄都区",
+    "time_focus": "~2021-2025-08 前任"
+  },
+  "identity": {
+    "person_id": "hebei_xiangdou_li_xiujuan",
+    "name": "李秀娟",
+    "aliases": [],
+    "gender": "女",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李秀娟_",
+      "name_birthplace": "李秀娟_待查",
+      "official_profile_url": "https://www.xiangdu.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "前襄都区委书记 (2025-08 离任, 去向待查)",
+    "current_org": "中共邢台市襄都区委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-05",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021",
+      "end": "2025-08",
+      "org": "中共邢台市襄都区委员会",
+      "title": "襄都区委书记",
+      "level": "市辖区",
+      "location": "河北省邢台市",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "任内 2024-01 至 2025-08 多次以区委书记名义出席; 最后一次任内活动 2025-08-18/19",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "出生/籍贯/任襄都区委书记前的履历及离任去向未知",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": ["中共邢台市襄都区委员会"],
+  "relationships": [
+    {
+      "person": "王忠献",
+      "person_id": "hebei_xiangdou_wang_zhongxian",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "李秀娟 2025-08 卸任, 王忠献 2025-09 接任襄都区委书记",
+      "overlap_org": "中共襄都区委",
+      "overlap_period": "2025",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "尚小云",
+      "person_id": "hebei_xiangdou_shang_xiaoyun",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "2021-2025 年间区书记与区长长期搭档共事",
+      "overlap_org": "襄都区",
+      "overlap_period": "2021-2025",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2021-2025",
+      "domain": "economic_development",
+      "achievement_or_event": "任内推进改革创新、精致城管、招商引资、区划调整后建设等",
+      "role_in_event": "主持区委常委会/全面深化改革委员会、出席政协会议",
+      "measurable_outcome": "",
+      "location": "河北省邢台市襄都区",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {"summary": "待查", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "公开证据有限。"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "2026-08-05 检索未发现纪检/负面信息", "date": "2026-08-05", "confidence": "unverified", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "襄都区政府要闻/领导活动归档 (2024-2025-08)", "url": "https://www.xiangdu.gov.cn/channel/list/22.html", "publisher": "襄都区人民政府", "published_at": "2024-2025", "accessed_at": "2026-08-05", "source_type": "official", "reliability": "high", "notes": "2024-01 至 2025-08-19 以区委书记名义出席; 2025-09 起王忠献接任"}
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "high",
+    "biggest_gap": "前任书记离任去向与早年履历未知"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "李秀娟离任襄都区委书记后的去向",
+      "why_it_matters": "判断邢台市县区主官流动去向",
+      "suggested_queries": ["李秀娟 襄都区委书记 调任", "李秀娟 邢台 市委书记"],
+      "last_attempted": "2026-08-05"
+    }
+  ]
+}
