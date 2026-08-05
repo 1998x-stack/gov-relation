@@ -2,8 +2,43 @@
 > Last updated: 2026-08-05
 
 > Registry consolidated across on-going investigations. Sections below focus on the most recent
-> 滴道区 (Jixi, Heilongjiang) investigation and retained prior entries.
+> 友谊县 (双鸭山市, Heilongjiang) investigation and retained prior entries.
 
+# Open Gaps — 友谊县（双鸭山市，黑龙江省）
+> Added: 2026-08-05（task heilongjiang_友谊县），Partial-Evidence Mode（网络全面降级：Exa 速率限制，
+> 友谊县政府官网 HTTP:000、Jina Reader 超时）——无法现场核实现任领导。
+
+## ✅ 已确认（截至 2026-08-05）
+- 组织结构：中共友谊县委员会（县处级）/ 友谊县人民政府 / 县人大 / 县政协 / 县纪委监委 下辖东建乡等乡镇
+- 跨县干部交流：徐文韬（现任双鸭山市四方台区委常委、副区长）曾任**友谊县东建乡党委书记**（2020.05–2021.07，官方履历确认）
+
+## ⭐⭐⭐⭐⭐ Critical（核心主官履历缺口）
+| Person | Current Role | What's Missing | Last Attempted | Notes |
+|--------|-------------|----------------|----------------|-------|
+| 待查 | 友谊县现任县委书记 | 姓名/出生/学历/履历/到任日期 全部未知 | 2026-08-05 | 县政府官网（hljyouyi.gov.cn）不可达（HTTP:000） |
+| 待查 | 友谊县委副书记、县长 | 姓名/出生/学历/履历 全部未知 | 2026-08-05 | 同县委书记，需双鸭山市委组织部任前公示 |
+
+## ⭐⭐⭐⭐ High
+| Person/Gap | What's Missing | Last Attempted | Notes |
+|-----------|----------------|----------------|-------|
+| 友谊县人大主任、政协主席 | 姓名与简历 | 2026-08-05 | 四套班子其余成员全部待查 |
+| 友谊县纪委书记、组织部长、常务副县长 | 姓名与分工 | 2026-08-05 | 政府领导分工待补 |
+| 前任县委书记/县长 | 姓名、卸任时间、去向 | 2026-08-05 | 待网络恢复 |
+
+## ⭐⭐⭐ Medium
+| Gap | Last Attempted | Notes |
+|-----|----------------|-------|
+| 友谊县与集贤/宝清/尖山/四方台等县区干部交流网络 | 2026-08-05 | 已知徐文韬（友谊→市→四方台）链 |
+| 徐文韬 2008-2016 集贤县早期任职明细 | 2026-08-05 | 完善跨县证据链 |
+
+## ⭐ Low
+| Gap | Notes |
+|-----|-------|
+| 友谊县乡镇（东建乡等）基层组织干部来源 | 待补 |
+
+---
+
+# Open Gaps — 滴道区（鸡西市，黑龙江省）及既往调查（留存）
 ## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
