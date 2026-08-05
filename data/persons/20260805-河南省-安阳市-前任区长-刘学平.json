@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05",
+  "investigation_scope": {
+    "province": "河南省",
+    "city": "安阳市",
+    "region": "文峰区",
+    "job": "前任区长",
+    "task_id": "henan_文峰区",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "anyang_wenfeng_liu_xueping",
+    "name": "刘学平",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1976-06",
+    "birthplace": "河南省安阳市",
+    "native_place": "河南省安阳市",
+    "education": [
+      {"period": "", "institution": "", "major": "", "degree": "研究生学历，法学硕士", "study_type": "unknown", "source_ids": []}
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "刘学平_1976",
+      "name_birthplace": "刘学平_河南省安阳市",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "（原）文峰区委副书记、区长（2026-05 接受审查调查）",
+    "current_org": "（已停职调查）",
+    "administrative_rank": "县处级正职（原）",
+    "as_of": "2026-05-21",
+    "is_current_confirmed": false,
+    "source_ids": ["S301"]
+  },
+  "career_timeline": [
+    {"start": "2021", "end": "2026-05", "org": "文峰区人民政府、中共文峰区委", "title": "文峰区委副书记、区长",
+     "level": "县处级正职", "location": "河南省安阳市文峰区", "system": "government", "rank": "",
+     "is_key_promotion": true, "notes": "2021-07 拟提名文峰区区长候选人；2024/2025 多篇活动报道确认在任；2026-05-21 被通报接受审查调查",
+     "confidence": "confirmed", "source_ids": ["S301", "S304", "S305"]}
+  ],
+  "organizations": [
+    {"org_id": "anyang_wenfeng_government", "name": "文峰区人民政府", "org_type": "government", "role": "区长", "period": "2021-2026-05"}
+  ],
+  "relationships": [
+    {"person": "崔元锋", "person_id": "anyang_wenfeng_cui_yuanfeng", "relationship_type": "overlap",
+     "strength": "strong", "evidence": "区委书记崔元锋与区长刘学平长期搭班（2018-2026）", 
+     "overlap_org": "中共文峰区委", "overlap_period": "2018-2026-05", "direction": "undirected",
+     "confidence": "confirmed", "source_ids": ["S301"]},
+    {"person": "关永贞", "person_id": "anyang_wenfeng_guan_yongzhen", "relationship_type": "predecessor_successor",
+     "strength": "strong", "evidence": "刘学平2026-05被查后，关永贞2026-06任代区长",
+     "overlap_org": "文峰区人民政府", "overlap_period": "2026-06", "direction": "person_to_other",
+     "confidence": "plausible", "source_ids": ["S301", "S302"]}
+  ],
+  "governance_record": [
+    {"period": "2024-2025", "domain": "other", "achievement_or_event": "多次主持区政府常务会议、法治政府建设、元旦安全生产部署",
+     "role_in_event": "区长主持", "measurable_outcome": "官方报道", "location": "文峰区",
+     "confidence": "confirmed", "source_ids": ["S304", "S305"]}
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": ["法学"],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["河南安阳市"],
+    "promotion_velocity": {"summary": "任区长后约2026-05被查；此前完整履历未知", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": ["安全生产", "法治政府"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public reports, not private assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {"type": "disciplinary_action", "description": "2026-05-21 中国新闻网通报：文峰区委副书记、区长刘学平接受安阳市纪委监委纪律审查和监察调查（涉嫌严重违纪违法）",
+     "date": "2026-05-21", "confidence": "confirmed", "source_ids": ["S301"]}
+  ],
+  "source_register": [
+    {"id": "S301", "title": "河南省安阳市文峰区委副书记、区长刘学平接受审查调查", "url": "",
+     "publisher": "中国新闻网", "published_at": "2026-05-21", "accessed_at": "2026-08-05", "source_type": "media",
+     "reliability": "high", "notes": "确认刘学平被查（涉嫌严重违纪违法）"},
+    {"id": "S304", "title": "河南法制报/大河网: 文峰区区长刘学平活动报道", "url": "",
+     "publisher": "河南法制报", "published_at": "2024-12-11", "accessed_at": "2026-08-05", "source_type": "media",
+     "reliability": "medium", "notes": "确认 2024-12 刘学平区长身份"},
+    {"id": "S305", "title": "搜狐: 文峰区区长刘学平元旦安全生产活动", "url": "",
+     "publisher": "搜狐", "published_at": "2025-12-30", "accessed_at": "2026-08-05", "source_type": "media",
+     "reliability": "medium", "notes": "确认 2025-12 刘学平区长身份"},
+    {"id": "S308", "title": "安阳市委组织部任前公示（刘学平拟提名文峰区区长候选人）", "url": "",
+     "publisher": "安阳市委组织部", "published_at": "2021-07-07", "accessed_at": "2026-08-05",
+     "source_type": "appointment_notice", "reliability": "high", "notes": "2021-07 提名区长"}
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "刘学平任文峰区长前的完整履历（任职单位、出生日等）及被查后的审查结果"
+  },
+  "open_questions": [
+    {"priority": "high", "question": "刘学平任文峰区长之前的职业轨迹？", "why_it_matters": "补全区长链", "suggested_queries": ["刘学平 文峰 区长 简历", "刘学平 安阳 之前 履历"], "last_attempted": "2026-08-05"},
+    {"priority": "medium", "question": "刘学平被查后的纪律审查结果？", "why_it_matters": "追踪反腐结果", "suggested_queries": ["刘学平 双开"], "last_attempted": "2026-08-05"}
+  ]
+}
