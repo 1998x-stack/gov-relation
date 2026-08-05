@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-03T20:45:21+00:00",
+  "updated_at": "2026-08-05T01:48:07+00:00",
   "claims": {
     "guangxi_平果市": {
       "status": "done",
@@ -36,14 +36,14 @@
     },
     "guangxi_八步区": {
       "status": "blocked",
-      "worker_id": "worker-2",
+      "worker_id": "worker-1",
       "model_intent": "iagent",
       "opencode_agent": "",
       "opencode_model": "iagent/standard",
-      "claimed_at": "2026-08-03T02:09:03+00:00",
-      "updated_at": "2026-08-03T02:09:53+00:00",
-      "attempts": 5,
-      "prompt_path": "logs/dispatch/guangxi_八步区.worker-2.prompt.txt",
+      "claimed_at": "2026-08-05T01:46:24+00:00",
+      "updated_at": "2026-08-05T01:48:07+00:00",
+      "attempts": 6,
+      "prompt_path": "logs/dispatch/guangxi_八步区.worker-1.prompt.txt",
       "task": {
         "task_id": "guangxi_八步区",
         "province": "广西壮族自治区",
@@ -66,18 +66,18 @@
         ]
       },
       "reason": "missing canonical artifacts: scripts/build/build_八步区_data.py, data/database/八步区_network.db, data/graph/八步区_network.gexf",
-      "blocked_at": "2026-08-03T02:09:53+00:00"
+      "blocked_at": "2026-08-05T01:48:07+00:00"
     },
     "guangxi_昭平县": {
-      "status": "blocked",
-      "worker_id": "worker-3",
+      "status": "active",
+      "worker_id": "worker-2",
       "model_intent": "iagent",
       "opencode_agent": "",
       "opencode_model": "iagent/standard",
-      "claimed_at": "2026-08-03T02:09:03+00:00",
-      "updated_at": "2026-08-03T02:10:34+00:00",
-      "attempts": 5,
-      "prompt_path": "logs/dispatch/guangxi_昭平县.worker-3.prompt.txt",
+      "claimed_at": "2026-08-05T01:46:24+00:00",
+      "updated_at": "2026-08-05T01:46:24+00:00",
+      "attempts": 6,
+      "prompt_path": "logs/dispatch/guangxi_昭平县.worker-2.prompt.txt",
       "task": {
         "task_id": "guangxi_昭平县",
         "province": "广西壮族自治区",
@@ -98,20 +98,18 @@
           "县委书记",
           "县长"
         ]
-      },
-      "reason": "missing canonical artifacts: scripts/build/build_昭平县_data.py, data/database/昭平县_network.db, data/graph/昭平县_network.gexf",
-      "blocked_at": "2026-08-03T02:10:34+00:00"
+      }
     },
     "guangxi_钟山县": {
-      "status": "blocked",
-      "worker_id": "worker-4",
+      "status": "active",
+      "worker_id": "worker-3",
       "model_intent": "iagent",
       "opencode_agent": "",
       "opencode_model": "iagent/standard",
-      "claimed_at": "2026-08-03T02:09:03+00:00",
-      "updated_at": "2026-08-03T02:11:42+00:00",
-      "attempts": 5,
-      "prompt_path": "logs/dispatch/guangxi_钟山县.worker-4.prompt.txt",
+      "claimed_at": "2026-08-05T01:46:24+00:00",
+      "updated_at": "2026-08-05T01:46:24+00:00",
+      "attempts": 6,
+      "prompt_path": "logs/dispatch/guangxi_钟山县.worker-3.prompt.txt",
       "task": {
         "task_id": "guangxi_钟山县",
         "province": "广西壮族自治区",
@@ -132,20 +130,18 @@
           "县委书记",
           "县长"
         ]
-      },
-      "reason": "missing canonical artifacts: scripts/build/build_钟山县_data.py, data/database/钟山县_network.db, data/graph/钟山县_network.gexf",
-      "blocked_at": "2026-08-03T02:11:42+00:00"
+      }
     },
     "guangxi_富川瑶族自治县": {
-      "status": "blocked",
-      "worker_id": "worker-2",
+      "status": "active",
+      "worker_id": "worker-4",
       "model_intent": "iagent",
       "opencode_agent": "",
       "opencode_model": "iagent/standard",
-      "claimed_at": "2026-08-03T02:10:23+00:00",
-      "updated_at": "2026-08-03T02:11:12+00:00",
-      "attempts": 5,
-      "prompt_path": "logs/dispatch/guangxi_富川瑶族自治县.worker-2.prompt.txt",
+      "claimed_at": "2026-08-05T01:46:24+00:00",
+      "updated_at": "2026-08-05T01:46:24+00:00",
+      "attempts": 6,
+      "prompt_path": "logs/dispatch/guangxi_富川瑶族自治县.worker-4.prompt.txt",
       "task": {
         "task_id": "guangxi_富川瑶族自治县",
         "province": "广西壮族自治区",
@@ -166,9 +162,7 @@
           "县委书记",
           "县长"
         ]
-      },
-      "reason": "missing canonical artifacts: scripts/build/build_富川瑶族自治县_data.py, data/database/富川瑶族自治县_network.db, data/graph/富川瑶族自治县_network.gexf",
-      "blocked_at": "2026-08-03T02:11:12+00:00"
+      }
     },
     "guangxi_河池市": {
       "status": "blocked",
@@ -14535,13 +14529,13 @@
       }
     },
     "hubei_大冶市": {
-      "status": "active",
+      "status": "released",
       "worker_id": "worker-3",
       "model_intent": "iagent",
       "opencode_agent": "",
       "opencode_model": "iagent/standard",
       "claimed_at": "2026-08-03T05:36:34+00:00",
-      "updated_at": "2026-08-03T05:36:34+00:00",
+      "updated_at": "2026-08-05T01:46:24+00:00",
       "attempts": 4,
       "prompt_path": "logs/dispatch/hubei_大冶市.worker-3.prompt.txt",
       "task": {
@@ -14564,7 +14558,8 @@
           "市委书记",
           "市长"
         ]
-      }
+      },
+      "reason": "released before worker reclaimed; missing: scripts/build/build_大冶市_data.py, data/database/大冶市_network.db, data/graph/大冶市_network.gexf"
     },
     "hubei_十堰市": {
       "status": "done",
@@ -30831,13 +30826,13 @@
       }
     },
     "shaanxi_阎良区": {
-      "status": "active",
+      "status": "released",
       "worker_id": "worker-2",
       "model_intent": "iagent",
       "opencode_agent": "",
       "opencode_model": "iagent/standard",
       "claimed_at": "2026-08-03T09:44:18+00:00",
-      "updated_at": "2026-08-03T09:44:18+00:00",
+      "updated_at": "2026-08-05T01:46:24+00:00",
       "attempts": 4,
       "prompt_path": "logs/dispatch/shaanxi_阎良区.worker-2.prompt.txt",
       "task": {
@@ -30860,7 +30855,8 @@
           "区委书记",
           "区长"
         ]
-      }
+      },
+      "reason": "released before worker reclaimed; missing: scripts/build/build_阎良区_data.py, data/database/阎良区_network.db, data/graph/阎良区_network.gexf"
     },
     "shaanxi_临潼区": {
       "status": "done",

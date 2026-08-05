@@ -21,7 +21,7 @@ from typing import Any, Iterator
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GATE_DIR = REPO_ROOT / "data" / ".concurrency_gate"
-LEASE_TIMEOUT_SECONDS = 30 * 60  # 30 min — lease expires if worker crashes
+LEASE_TIMEOUT_SECONDS = 4 * 60 * 60  # 4h — lease expires if worker crashes or stalls too long
 POLL_INTERVAL = 5.0
 
 
@@ -70,11 +70,12 @@ def release_lease(worker_id: str) -> None:
 
 
 @contextmanager
-def acquire(worker_id: str, max_active: int = 2, timeout: float = 600.0) -> Iterator[bool]:
+def acquire(worker_id: str, max_active: int = 2, timeout: float = 0.0) -> Iterator[bool]:
     """Context manager: wait until <= max_active leases, then acquire.
 
-    Yields True once lease is acquired.
-    Raises TimeoutError if the wait exceeds `timeout` seconds.
+    Yields True once lease is acquired. Blocks indefinitely (timeout=0) so
+    workers keep waiting for a slot rather than dying mid-pipeline; pass an
+    explicit positive timeout only when bounded waits are intended.
     """
     start = time.time()
     GATE_DIR.mkdir(parents=True, exist_ok=True)
@@ -86,7 +87,7 @@ def acquire(worker_id: str, max_active: int = 2, timeout: float = 600.0) -> Iter
         if other_count < max_active:
             break
         elapsed = time.time() - start
-        if elapsed > timeout:
+        if timeout > 0 and elapsed > timeout:
             raise TimeoutError(
                 f"worker={worker_id} waited {elapsed:.0f}s for concurrency slot "
                 f"(max_active={max_active}, active_others={other_count})"
