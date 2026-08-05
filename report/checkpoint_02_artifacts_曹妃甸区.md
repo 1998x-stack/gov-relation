@@ -1,0 +1,1 @@
+CHECKPOINT:artifacts_staged
