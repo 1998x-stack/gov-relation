@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "衡水市",
+    "region": "景县",
+    "job": "县委书记",
+    "task_id": "hebei_景县",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "jingxian_li_jinghui",
+    "name": "李景辉",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1976年3月",
+    "birthplace": "河北省衡水市武强县",
+    "native_place": "河北省衡水市武强县",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "本科学历（院校待查）",
+        "major": "",
+        "degree": "本科",
+        "study_type": "unknown",
+        "source_ids": ["S002"]
+      }
+    ],
+    "party_join": "1998年1月",
+    "work_start": "1995年9月",
+    "dedupe_keys": {
+      "name_birth": "李景辉_1976",
+      "name_birthplace": "李景辉_武强县",
+      "official_profile_url": "http://www.jingxian.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "县委书记",
+    "current_org": "中共景县委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-05",
+    "is_current_confirmed": true,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2023-10",
+      "end": "present",
+      "org": "中共景县委员会",
+      "title": "县委书记",
+      "level": "正处级",
+      "location": "河北省衡水市景县",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2023-10-23、2025-03-17、2025-10-14 多次景县县委常委会（扩大）会议由其主持。2024-03-28 全省春季农业生产工作会议以县委书记身份作典型发言。2026-07 中共景县第十三次代表大会换届。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "2023",
+      "org": "中共武强县委员会/武强县人民政府",
+      "title": "县委常委、常务副县长",
+      "level": "副处级",
+      "location": "河北省衡水市武强县",
+      "system": "government",
+      "rank": "副处级",
+      "is_key_promotion": true,
+      "notes": "来自本地库武强县调研及百度百科摘要：曾任武强县委常委、常务副县长，后跨县调任景县县委书记。",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未覆盖1995年参加工作至任武强县委常委之前的完整履历（含具体乡镇/部门任职序列）。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org": "中共景县委员会", "org_type": "党委", "level": "县级", "location": "河北省衡水市景县"},
+    {"org": "中共武强县委员会/武强县人民政府", "org_type": "党委/政府", "level": "县级", "location": "河北省衡水市武强县"},
+    {"org": "中共衡水市委", "org_type": "党委", "level": "地厅级", "location": "河北省衡水市"}
+  ],
+  "relationships": [
+    {
+      "person": "赵君杰",
+      "person_id": "jingxian_zhao_junjie",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "景县县委书记与县长，党政搭档。2024-03-28 全省春季农业生产工作会议两人同作为县领导出席；2024-07 增发国债会议李景辉主持、句曙光/李博参加。",
+      "overlap_org": "中共景县委员会/景县人民政府",
+      "overlap_period": "2024-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "李博",
+      "person_id": "jingxian_li_bo",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "县委书记领导常务副县长李博；2024-07 增发国债会议县委李景辉主持、李博参加。",
+      "overlap_org": "中共景县委员会/景县人民政府",
+      "overlap_period": "2024-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003", "S001"]
+    },
+    {
+      "person": "李啸鹏",
+      "person_id": "jingxian_li_xiaopeng",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "曾以县委常委、常务副县长身份在景县班子共事（2024-09 主持项目谋划会），后跨县调任武邑县县长。",
+      "overlap_org": "中共景县委员会/景县人民政府",
+      "overlap_period": "2024",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S004"]
+    },
+    {
+      "person": "高文亮",
+      "person_id": "jingxian_gao_wenliang",
+      "relationship_type": "overlap",
+      "strength": "medium",
+      "evidence": "县委书记与县人大常委会主任同属景县四套班子（2023-09 人大会议主任高文亮出席）。",
+      "overlap_org": "景县四套班子",
+      "overlap_period": "2023-",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S005"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2024-03",
+      "domain": "economic_development",
+      "achievement_or_event": "全省春季农业生产工作会议典型发言《强化措施协同 大面积提升单产》；景县为全国产粮大县、全国粮食生产先进县，粮食产量连续13年稳定在13亿斤以上、2019年以来连续5年稳定在15亿斤以上。",
+      "role_in_event": "作典型发言（县委书记）",
+      "measurable_outcome": "粮食产量稳产高产",
+      "location": "河北省衡水市景县",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "period": "2024-07",
+      "domain": "urban_construction",
+      "achievement_or_event": "主持增发国债项目实施暨保交房工作会议，统筹防灾减灾救灾项目建设和保交房（房地产稳定）。",
+      "role_in_event": "主持推进",
+      "measurable_outcome": "",
+      "location": "河北省衡水市景县",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["党务(县委书记)", "县域经济与农业农村", "政府经济运行管理"],
+    "secondary_specializations": ["农业产业化", "乡村振兴"],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["衡水市武强县", "衡水市景县"],
+    "promotion_velocity": {
+      "summary": "由武强县常务副县长正科/副处级岗位晋升景县县委书记（正处级），属跨县晋升；具体各段时长因早期履历缺失难以精确评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "重视农业、粮食安全、乡村振兴（省委农村工作会议典型发言与否）。",
+        "confidence": "plausible",
+        "source_ids": ["S001"]
+      },
+      {
+        "trait": "stability_oriented",
+        "evidence": "强调保交房、防灾减灾、疫情防控等民生稳定议题。",
+        "confidence": "plausible",
+        "source_ids": ["S003"]
+      }
+    ],
+    "speech_themes": ["粮食安全", "农业现代化", "增发国债项目", "保交房"],
+    "management_signals": ["注重项目建设", "强调述职和审计监督"],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "搜索范围内未发现涉及李景辉的纪律处分、审查调查或负面媒体报道（2026-08-05）。",
+      "date": "2026-08-05",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {"id": "S001", "title": "景县县委常委会召开（扩大）会议/全省春季农业生产工作会议在景县召开", "url": "http://www.jingxian.gov.cn/art/2025/10/14/art_934_602112.html", "publisher": "景县人民政府网", "published_at": "2025-10-14", "accessed_at": "2026-08-05", "source_type": "official", "reliability": "high", "notes": "确认李景辉为县委书记"},
+    {"id": "S002", "title": "本地库武强县政调报告（20260724-河北省-衡水市-武强县-调查报告.md）", "url": "local", "publisher": "gov-relation 本地库 / 百度百科摘要", "published_at": "2026-07-24", "accessed_at": "2026-08-05", "source_type": "database", "reliability": "medium", "notes": "李景辉 1976.3武强县人，曾任武强常务副县长"},
+    {"id": "S003", "title": "景县召开增发国债项目实施暨保交房工作会议", "url": "http://www.jingxian.gov.cn/art/2024/7/8/art_928_550786.html", "publisher": "景县人民政府网", "published_at": "2024-07-08", "accessed_at": "2026-08-05", "source_type": "official", "reliability": "high", "notes": "李景辉主持，句曙光、李博参加"},
+    {"id": "S004", "title": "全县项目谋划调度推进会议", "url": "http://www.jingxian.gov.cn/art/2024/9/18/art_928_558695.html", "publisher": "景县人民政府网", "published_at": "2024-09-18", "accessed_at": "2026-08-05", "source_type": "official", "reliability": "high", "notes": "李啸鹏以常务副县长身份在景县（跨县线索）"},
+    {"id": "S005", "title": "景县第十七届人大常委会第十三次会议", "url": "http://www.jingxian.gov.cn/art/2023/9/27/art_928_507341.html", "publisher": "景县人民政府网", "published_at": "2023-09-27", "accessed_at": "2026-08-05", "source_type": "official", "reliability": "high", "notes": "人大高文亮主任"}
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "1995-参工至任武强常务副县长之间的早期完整履历缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李景辉任景县县委书记的具体时间和前后上级干部",
+      "why_it_matters": "厘清前任（如孙文欣）-继任时间线，判断是否跨县稳定任职",
+      "suggested_queries": ["李景辉 景县县委书记 任命 时间", "孙文欣 景县 县委书记 前任"],
+      "last_attempted": "2026-08-05"
+    },
+    {
+      "priority": "high",
+      "question": "李景辉 1995-2021 年的完整履历（乡镇/机关序列）",
+      "why_it_matters": "了解其晋升路径与武强县政府体系的关联",
+      "suggested_queries": ["李景辉 履历", "李景辉 武强县常务副县长 之前 任职"],
+      "last_attempted": "2026-08-05"
+    },
+    {
+      "priority": "high",
+      "question": "李景辉教育背景具体院校",
+      "why_it_matters": "只能确定本科，未查得院校",
+      "suggested_queries": ["李景辉 学历 毕业院校"],
+      "last_attempted": "2026-08-05"
+    },
+    {
+      "priority": "medium",
+      "question": "2026-07 十三届县委换届后李景辉是否连任县委书记",
+      "why_it_matters": "确认最新人事状态",
+      "suggested_queries": ["景县 十三届县委 全会 书记 选举 李景辉"],
+      "last_attempted": "2026-08-05"
+    }
+  ]
+}
