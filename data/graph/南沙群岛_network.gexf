@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-08-05">
+    <creator>gov-relation research agent</creator>
+    <description>三南市南沙区（南沙群岛）班子工作关系网络 (as of 2026-08-05)</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="a0" title="type" type="string"/>
+      <attribute id="a1" title="current_post" type="string"/>
+      <attribute id="a2" title="current_org" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="e0" title="type" type="string"/>
+      <attribute id="e1" title="context" type="string"/>
+      <attribute id="e2" title="overlap_org" type="string"/>
+      <attribute id="e3" title="overlap_period" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1" label="【待查】南沙区委书记">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="南沙区委书记（姓名未公开）"/>
+          <attvalue for="a2" value="中共三沙市南沙区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2" label="【待查】南沙区区长">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="南沙区区长（姓名未公开）"/>
+          <attvalue for="a2" value="三沙市南沙区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p3" label="葛国科">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="中共三沙市委书记"/>
+          <attvalue for="a2" value="中共三沙市委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p4" label="陈儒茂">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="三沙市市长"/>
+          <attvalue for="a2" value="三沙市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p5" label="王长仁">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="三沙市人大常委会主任"/>
+          <attvalue for="a2" value="三沙市人民代表大会常务委员会"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="15.0"/>
+      </node>
+      <node id="p6" label="林道杰">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="三沙市副市长"/>
+          <attvalue for="a2" value="三沙市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p7" label="李华">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="三沙市副市长"/>
+          <attvalue for="a2" value="三沙市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p8" label="刘云球">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="三沙市副市长"/>
+          <attvalue for="a2" value="三沙市人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p9" label="黄晓华">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="西沙区委书记"/>
+          <attvalue for="a2" value="中共三沙市西沙区委员会"/>
+        </attvalues>
+        <viz:color r="255" g="50" b="50"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p10" label="温一凡">
+        <attvalues>
+          <attvalue for="a0" value="person"/>
+          <attvalue for="a1" value="西沙区区长"/>
+          <attvalue for="a2" value="三沙市西沙区人民政府"/>
+        </attvalues>
+        <viz:color r="50" g="100" b="255"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共三沙市南沙区委员会">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="党委"/>
+          <attvalue for="a2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="三沙市南沙区人民政府">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="政府"/>
+          <attvalue for="a2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="中国共产党三沙市南沙工作委员会（南沙管理委员会）">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="党委"/>
+          <attvalue for="a2" value="派出机构/合署办公"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="三沙市南沙区美济社区">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="事业单位"/>
+          <attvalue for="a2" value="社区"/>
+        </attvalues>
+        <viz:color r="220" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共三沙市委员会">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="党委"/>
+          <attvalue for="a2" value="地级市"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o6" label="三沙市人民政府">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="政府"/>
+          <attvalue for="a2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o7" label="三沙市人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="人大"/>
+          <attvalue for="a2" value="地级市"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o8" label="中共三沙市西沙区委员会">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="党委"/>
+          <attvalue for="a2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o9" label="三沙市西沙区人民政府">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="政府"/>
+          <attvalue for="a2" value="县处级"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o10" label="三沙市南沙人民武装部">
+        <attvalues>
+          <attvalue for="a0" value="organization"/>
+          <attvalue for="a1" value="军事机构"/>
+          <attvalue for="a2" value="县处级"/>
+        </attvalues>
+        <viz:color r="255" g="220" b="220"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1" target="o1" label="南沙区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value="姓名未公开（研究确认无公开名单）；结构岗位待查"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2" target="o1" label="南沙区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value="占位"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2" target="o2" label="南沙区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value="姓名未公开"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p1" target="o3" label="南沙工作委员会/管委会（合署）" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value="南沙区两委以派出机构合署运作（占位）"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p3" target="o5" label="中共三沙市委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value="跨省调任（广西→海南）"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p4" target="o5" label="三沙市委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p4" target="o6" label="三沙市市长" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p5" target="o7" label="三沙市人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p6" target="o6" label="三沙市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p7" target="o6" label="三沙市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p8" target="o6" label="三沙市副市长" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value="官网 202605 列表"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p9" target="o8" label="西沙区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p10" target="o9" label="西沙区区长" weight="1.0">
+        <attvalues>
+          <attvalue for="e0" value="worked_at"/>
+          <attvalue for="e1" value=""/>
+        </attvalues>
+      </edge>
+      <edge id="e14" source="p1" target="p2" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="南沙区委书记与区长党政搭档（两岗位均姓名未公开）"/>
+          <attvalue for="e2" value="中共三沙市南沙区委员会/三沙市南沙区人民政府"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e15" source="p1" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="superior_subordinate"/>
+          <attvalue for="e1" value="南沙区委接受三沙市委领导"/>
+          <attvalue for="e2" value="三沙市党委系统"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e16" source="p2" target="p4" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="superior_subordinate"/>
+          <attvalue for="e1" value="南沙区政府接受三沙市政府领导（市区合一体制）"/>
+          <attvalue for="e2" value="三沙市政府系统"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e17" source="p3" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="葛国科任市委书记，陈儒茂任市长，共同搭档"/>
+          <attvalue for="e2" value="三沙市"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e18" source="p5" target="p3" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="王长仁任人大主任，葛国科任市委书记"/>
+          <attvalue for="e2" value="三沙市"/>
+          <attvalue for="e3" value="2022年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e19" source="p5" target="p4" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="王长仁任人大主任，陈儒茂任市长"/>
+          <attvalue for="e2" value="三沙市"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e20" source="p6" target="p7" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="林道杰、李华同为三沙市副市长"/>
+          <attvalue for="e2" value="三沙市人民政府"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e21" source="p6" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="林道杰、刘云球同为三沙市副市长"/>
+          <attvalue for="e2" value="三沙市人民政府"/>
+          <attvalue for="e3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e22" source="p7" target="p8" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="李华、刘云球同为三沙市副市长"/>
+          <attvalue for="e2" value="三沙市人民政府"/>
+          <attvalue for="e3" value="2026年至今"/>
+        </attvalues>
+      </edge>
+      <edge id="e23" source="p9" target="p10" label="overlap" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="overlap"/>
+          <attvalue for="e1" value="西沙区委书记与区长党政搭档（对照区）"/>
+          <attvalue for="e2" value="中共三沙市西沙区委员会/三沙市西沙区人民政府"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e24" source="p9" target="p3" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="superior_subordinate"/>
+          <attvalue for="e1" value="西沙区委接受三沙市委领导（对照区）"/>
+          <attvalue for="e2" value="三沙市党委系统"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+      <edge id="e25" source="p10" target="p4" label="superior_subordinate" weight="2.0">
+        <attvalues>
+          <attvalue for="e0" value="superior_subordinate"/>
+          <attvalue for="e1" value="西沙区政府接受三沙市政府领导（对照区）"/>
+          <attvalue for="e2" value="三沙市政府系统"/>
+          <attvalue for="e3" value="当前"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
