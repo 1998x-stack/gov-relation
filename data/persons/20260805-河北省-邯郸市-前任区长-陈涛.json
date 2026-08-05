@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "邯郸市",
+    "region": "永年区",
+    "job": "前任区长",
+    "task_id": "hebei_永年区",
+    "time_focus": "2021-2025 前任"
+  },
+  "identity": {
+    "person_id": "handan_陈涛",
+    "name": "陈涛",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "前任（永年区区长）",
+    "current_org": "永年区人民政府",
+    "administrative_rank": "县级正职（正处级）",
+    "as_of": "2026-08-05",
+    "is_current_confirmed": false,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021年",
+      "end": "约2021年",
+      "org": "永年区人民政府",
+      "title": "永年区政府副区长、代理区长",
+      "level": "县级",
+      "location": "邯郸市永年区",
+      "system": "government",
+      "rank": "县级正职",
+      "is_key_promotion": true,
+      "notes": "2021年5月任副区长、代理区长（区一届人大常委会第四十二次会议）",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "约2021年",
+      "end": "约2025年",
+      "org": "永年区人民政府",
+      "title": "永年区区长",
+      "level": "县级",
+      "location": "邯郸市永年区",
+      "system": "government",
+      "rank": "县级正职",
+      "is_key_promotion": true,
+      "notes": "2023年区政府工作报告、2024-2025项目推进会均以区长身份出席",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "约2025年",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "卸任去向待查",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "约2025年由张宁接任区长，陈涛去向未查实",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_id": "s1", "role": "区长（前任）", "name": "永年区人民政府", "period": "约2021—约2025"},
+    {"org_id": "s2", "role": "副区长、代理区长（历史）", "name": "永年区人民政府", "period": "2021"}
+  ],
+  "relationships": [
+    {
+      "person": "张宁",
+      "person_id": "handan_张宁",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "陈涛为前任区长，张宁接任",
+      "overlap_org": "永年区人民政府",
+      "overlap_period": "2021-2025",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "李书峰",
+      "person_id": "handan_李书峰",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "李书峰辞去区长，陈涛接任（2021）",
+      "overlap_org": "永年区人民政府",
+      "overlap_period": "2020-2021",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2023",
+      "domain": "other",
+      "achievement_or_event": "在区第二届人大第三次会议上作政府工作报告",
+      "role_in_event": "作报告人",
+      "measurable_outcome": "",
+      "location": "永年区",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["永年区"],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "资料不足，未推断工作风格。"
+  },
+  "network_metrics": {
+    "centrality_note": "前任区长",
+    "position_rank": "卸任"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-08-05公开来源未见陈涛纪律审查等信息",
+      "date": "2026-08-05",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "永年区人大常委会决定（陈涛任副区长、代理区长）",
+      "url": "",
+      "publisher": "永年区人大常委会",
+      "published_at": "2021-05-20",
+      "accessed_at": "2026-08-05",
+      "source_type": "appointment_notice",
+      "reliability": "high",
+      "notes": "确认接任李书峰"
+    },
+    {
+      "id": "S002",
+      "title": "永年区人代会（区长陈涛作报告）及尖永公路项目推进会报道",
+      "url": "",
+      "publisher": "永年区新闻／邯郸媒体",
+      "published_at": "2023-2025",
+      "accessed_at": "2026-08-05",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "确证任区长直至约2025"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "卸任区长后的去向未查实；出生年月、籍贯待查"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "陈涛卸任永年区长后的去向",
+      "why_it_matters": "前任去向是关系网络关键线索",
+      "suggested_queries": ["陈涛 永年 区长 卸任 去向", "永年区 区长 更替"],
+      "last_attempted": "2026-08-05"
+    },
+    {
+      "priority": "medium",
+      "question": "陈涛出生年月与籍贯",
+      "why_it_matters": "身份去重",
+      "suggested_queries": ["陈涛 永年 区长 简历"],
+      "last_attempted": "2026-08-05"
+    }
+  ]
+}

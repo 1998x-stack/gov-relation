@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "邯郸市",
+    "region": "永年区",
+    "job": "前任区委书记",
+    "task_id": "hebei_永年区",
+    "time_focus": "前任（卸任约2021）"
+  },
+  "identity": {
+    "person_id": "handan_侯有民",
+    "name": "侯有民",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "",
+      "name_birthplace": "",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "离任（原永年区委书记）",
+    "current_org": "",
+    "administrative_rank": "县级正职（正处级）",
+    "as_of": "2026-08-05",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "约2021年",
+      "org": "中共邯郸市永年区委",
+      "title": "永年区委书记",
+      "level": "县级",
+      "location": "邯郸市永年区",
+      "system": "party",
+      "rank": "县级正职",
+      "is_key_promotion": true,
+      "notes": "全区领导干部大会宣布不再担任永年区委书记",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "约2021年",
+      "end": "未知",
+      "org": "他人去向待查",
+      "title": "卸任/调任去向待查",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "卸任后去向未查实",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_id": "s1", "role": "区委书记（前任）", "name": "中共邯郸市永年区委", "period": "—约2021"}
+  ],
+  "relationships": [
+    {
+      "person": "马洪广",
+      "person_id": "handan_马洪广",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "侯有民不再担任永年区委书记，马洪广接任",
+      "overlap_org": "中共永年区委",
+      "overlap_period": "约2019—2021",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": ["永年区"],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "资料不足，未推断工作风格。"
+  },
+  "network_metrics": {
+    "centrality_note": "前任区委书记",
+    "position_rank": "离任"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-08-05公开来源未见侯有民纪律审查等信息",
+      "date": "2026-08-05",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "永年区全区领导干部大会任免决定（马洪广任区委书记，侯有民卸任）",
+      "url": "",
+      "publisher": "永年区新闻／邯郸媒体",
+      "published_at": "约2021",
+      "accessed_at": "2026-08-05",
+      "source_type": "appointment_notice",
+      "reliability": "high",
+      "notes": "确认前任身份与继任关系"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "卸任后去向未查实；出生年月、籍贯未查"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "侯有民卸任永年区委书记后的去向",
+      "why_it_matters": "前任去向是关系网络关键线索",
+      "suggested_queries": ["侯有民 卸任 去向", "永年区 区委书记 更替 2021"],
+      "last_attempted": "2026-08-05"
+    }
+  ]
+}
