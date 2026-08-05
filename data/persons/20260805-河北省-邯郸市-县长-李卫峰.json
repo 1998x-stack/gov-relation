@@ -1,0 +1,237 @@
+{
+    "schema_version": "1.0",
+    "generated_at": "2026-08-05",
+    "investigation_scope": {
+        "province": "河北省",
+        "city": "邯郸市",
+        "region": "魏县",
+        "job": "县长",
+        "task_id": "hebei_魏县",
+        "time_focus": "2025-2026"
+    },
+    "identity": {
+        "person_id": "hebei_handan_weixian_liweifeng",
+        "name": "李卫峰",
+        "aliases": [],
+        "gender": "男",
+        "ethnicity": "汉族（推测）",
+        "birth": "",
+        "birthplace": "待查",
+        "native_place": "待查",
+        "education": [],
+        "party_join": "中共党员",
+        "work_start": "待查",
+        "dedupe_keys": {
+            "name_birth": "李卫峰_未知",
+            "name_birthplace": "李卫峰_待查",
+            "official_profile_url": "https://www.wei.gov.cn/a/ldzc_9.html"
+        }
+    },
+    "current_status": {
+        "current_post": "县委副书记、政府县长",
+        "current_org": "魏县人民政府",
+        "administrative_rank": "正处级",
+        "as_of": "2026-08-05",
+        "is_current_confirmed": true,
+        "source_ids": ["S001", "S002"]
+    },
+    "career_timeline": [
+        {
+            "start": "约2025-09前",
+            "end": "2025-09",
+            "org": "（调任前单位，具体待查）",
+            "title": "调任魏县前任职（职务待核）",
+            "level": "待查",
+            "location": "待查",
+            "system": "other",
+            "rank": "",
+            "is_key_promotion": false,
+            "notes": "公开资料未检索到李卫峰调任魏县前的完整履历；2025-09 以魏县县委副书记、代县长身份出现",
+            "confidence": "unverified",
+            "source_ids": []
+        },
+        {
+            "start": "2025-09",
+            "end": "2025-10",
+            "org": "魏县人民政府",
+            "title": "魏县县委副书记、政府代县长",
+            "level": "正处级",
+            "location": "河北省邯郸市魏县",
+            "system": "government",
+            "rank": "正处级",
+            "is_key_promotion": true,
+            "notes": "2025-09-08 以县委副书记、政府代县长身份与农业发展银行等企业洽谈政银合作",
+            "confidence": "confirmed",
+            "source_ids": ["S002", "S003"]
+        },
+        {
+            "start": "2025-10",
+            "end": "present",
+            "org": "魏县人民政府",
+            "title": "魏县政府县长",
+            "level": "正处级",
+            "location": "河北省邯郸市魏县",
+            "system": "government",
+            "rank": "正处级",
+            "is_key_promotion": true,
+            "notes": "2025-10-10 至 11 魏县十七届人大七次会议全票当选县长; 2026 新年贺词以县长名义",
+            "confidence": "confirmed",
+            "source_ids": ["S001", "S002"]
+        }
+    ],
+    "organizations": [
+        {
+            "org_id": "org_weixian_party",
+            "name": "中共魏县委员会",
+            "org_type": "党委",
+            "level": "县级",
+            "location": "河北省邯郸市魏县",
+            "role": "县委副书记",
+            "period": "2025-09-present",
+            "source_ids": ["S001"]
+        },
+        {
+            "org_id": "org_weixian_gov",
+            "name": "魏县人民政府",
+            "org_type": "政府",
+            "level": "县级",
+            "location": "河北省邯郸市魏县",
+            "role": "政府县长",
+            "period": "2025-10-present",
+            "source_ids": ["S001", "S002"]
+        }
+    ],
+    "relationships": [
+        {
+            "person": "张平",
+            "person_id": "hebei_handan_weixian_zhangping",
+            "relationship_type": "superior_subordinate",
+            "strength": "strong",
+            "evidence": "县委书记与县长党政搭档",
+            "overlap_org": "中共魏县委员会/魏县人民政府",
+            "overlap_period": "2025-present",
+            "direction": "other_to_person",
+            "confidence": "confirmed",
+            "source_ids": ["S001", "S003"]
+        },
+        {
+            "person": "张平",
+            "person_id": "hebei_handan_weixian_zhangping",
+            "relationship_type": "predecessor_successor",
+            "strength": "strong",
+            "evidence": "张平原任魏县县长, 2025 年转任县委书记, 李卫峰接任县长",
+            "overlap_org": "魏县人民政府",
+            "overlap_period": "2025-09",
+            "direction": "other_to_person",
+            "confidence": "confirmed",
+            "source_ids": ["S002", "S003"]
+        }
+    ],
+    "governance_record": [
+        {
+            "period": "2025-10-2026",
+            "domain": "economic_development",
+            "achievement_or_event": "主持县政府常务会议、赴经济开发区调研经济运行和企业生产环保、落实民营经济帮扶",
+            "role_in_event": "县长（主持县政府全面工作）",
+            "measurable_outcome": "推动特种车辆零部件、农副产品加工等园区 '共享智造' 平台建设",
+            "location": "河北省邯郸市魏县",
+            "confidence": "confirmed",
+            "source_ids": ["S002"]
+        }
+    ],
+    "professional_profile": {
+        "primary_specializations": ["政府治理", "经济工作"],
+        "secondary_specializations": [],
+        "career_pattern": "cross_county_rotation",
+        "systems_experience": ["government", "party"],
+        "geographic_pattern": ["邯郸市"],
+        "promotion_velocity": {
+            "summary": "2025-09 任代县长, 2025-10 转正——县级主官任免周期紧凑",
+            "notable_fast_promotions": []
+        }
+    },
+    "work_style_and_personality": {
+        "public_style_indicators": [
+            {
+                "trait": "pragmatic",
+                "evidence": "强调企业是经济发展主体和基石, 注生态环保与企业运营兼顾",
+                "confidence": "plausible",
+                "source_ids": ["S002"]
+            }
+        ],
+        "speech_themes": ["企业发展", "环保落实", "政务效能"],
+        "management_signals": ["赴园区一线调研", "主持政府常务会"],
+        "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+    },
+    "network_metrics": {
+        "county_hops": ["魏县"],
+        "pattern": "跨县调入任县长"
+    },
+    "risk_and_integrity_signals": [
+        {
+            "type": "none_found",
+            "description": "截至 2026-08，公开渠道未发现李卫峰纪律审查、审计问题或负面报道",
+            "date": "",
+            "confidence": "confirmed",
+            "source_ids": []
+        }
+    ],
+    "source_register": [
+        {
+            "id": "S001",
+            "title": "魏县党政网-领导之窗-县委",
+            "url": "https://www.wei.gov.cn/a/ldzc_9.html",
+            "publisher": "魏县人民政府",
+            "published_at": "",
+            "accessed_at": "2026-08-05",
+            "source_type": "official",
+            "reliability": "high",
+            "notes": "县委副书记、政府县长 李卫峰"
+        },
+        {
+            "id": "S002",
+            "title": "魏县十七届人大七次会议召开（李卫峰当选县长）",
+            "url": "https://www.wei.gov.cn",
+            "publisher": "魏县人民政府/微信官号",
+            "published_at": "2025-10-14",
+            "accessed_at": "2026-08-05",
+            "source_type": "official",
+            "reliability": "high",
+            "notes": "李卫峰全票当选魏县人民政府县长；翟亮当选县监委主任"
+        },
+        {
+            "id": "S003",
+            "title": "网易《邯郸人口大县,县委书记调整!》",
+            "url": "https://www.163.com",
+            "publisher": "网易新闻",
+            "published_at": "2025-09-15",
+            "accessed_at": "2026-08-05",
+            "source_type": "media",
+            "reliability": "high",
+            "notes": "2025-09-08 李卫峰以县委副书记、政府代县长身份与农业发展银行及张平曾与银行座谈"
+        }
+    ],
+    "confidence_summary": {
+        "identity": "partial",
+        "current_role": "confirmed",
+        "career_completeness": "partial",
+        "relationship_confidence": "high",
+        "biggest_gap": "李卫峰的出生年月、籍贯、教育背景、入党/参加工作时间，以及调任魏县前的完整任职序列均未获取到手一手资料"
+    },
+    "open_questions": [
+        {
+            "priority": "critical",
+            "question": "李卫峰的完整履历：出生年月、籍贯、教育背景、入党/参加工作、任魏县县长前的历任职务",
+            "why_it_matters": "县长为核心人物，完整履历支撑网络分析与关系发现",
+            "suggested_queries": ["李卫峰 简历 魏县县长", "李卫峰 邯郸 任前公示", "魏县县长李卫峰 曾任"],
+            "last_attempted": "2026-08-05"
+        },
+        {
+            "priority": "medium",
+            "question": "李卫峰与张平任前是否有同单位/同系统交集（两人 2025 年联手搭档）",
+            "why_it_matters": "判断书记-县长更替背后的干部交流模式",
+            "suggested_queries": ["李卫峰 张平 魏县 县委"],
+            "last_attempted": "2026-08-05"
+        }
+    ]
+}
