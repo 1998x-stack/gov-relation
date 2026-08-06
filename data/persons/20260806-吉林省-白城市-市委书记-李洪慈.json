@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "20260806",
+  "investigation_scope": {
+    "province": "吉林省",
+    "city": "白城市",
+    "region": "白城市",
+    "job": "市委书记",
+    "task_id": "jilin_白城市",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "baicheng_李洪慈",
+    "name": "李洪慈",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1974年7月",
+    "birthplace": "1974年7月",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": ""
+  },
+  "current_status": {
+    "current_post": "市委书记",
+    "current_org": "中共白城市委员会",
+    "administrative_rank": "地级市正职",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": true,
+    "source_ids": [
+      "S001",
+      "S002"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "2022-07",
+      "end": "present",
+      "org": "中共白城市委员会",
+      "title": "市委书记",
+      "level": "地级市",
+      "system": "party",
+      "rank": "地级市正职",
+      "is_key_promotion": true,
+      "notes": "由市长升任",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "start": "2021-03",
+      "end": "2022-07",
+      "org": "白城市人民政府",
+      "title": "市长",
+      "level": "地级市",
+      "system": "government",
+      "rank": "地级市正职",
+      "is_key_promotion": true,
+      "notes": "接替李明伟",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "system": "",
+      "rank": "",
+      "notes": "2021年前完整履历未获一级来源",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "id": "baicheng_白城市委",
+      "name": "中共白城市委员会",
+      "type": "党委",
+      "level": "地级",
+      "location": "白城市"
+    },
+    {
+      "id": "baicheng_白城市政府",
+      "name": "白城市人民政府",
+      "type": "政府",
+      "level": "地级",
+      "location": "白城市"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "崔景英",
+      "person_id": "baicheng_崔景英",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "党政班子搭档",
+      "overlap_org": "中共白城市委/白城市人民政府",
+      "overlap_period": "2025-09至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "person": "李明伟",
+      "person_id": "baicheng_李明伟",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "李洪慈继任李明伟为市长并后任书记",
+      "overlap_org": "中共白城市委员会",
+      "overlap_period": "2021-2022",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S003"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {},
+  "work_style_and_personality": {},
+  "network_metrics": {},
+  "risk_and_integrity_signals": [],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "白城市人民政府·市政府领导",
+      "url": "http://www.jlbc.gov.cn/zfjg_3101/szfld/",
+      "publisher": "白城市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "在任市领导班子名单"
+    },
+    {
+      "id": "S002",
+      "title": "白城市政府 市长简历页",
+      "url": "http://www.jlbc.gov.cn/zfjg_3101/szfld/sz/lmw/",
+      "publisher": "白城市人民政府",
+      "published_at": "",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "崔景英简历"
+    },
+    {
+      "id": "S003",
+      "title": "Wikipedia zh《白城市》",
+      "url": "https://zh.wikipedia.org/wiki/白城市",
+      "publisher": "Wikipedia",
+      "published_at": "",
+      "accessed_at": "2026-08-06",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "出生年、籍贯、历任领导时间线"
+    },
+    {
+      "id": "S004",
+      "title": "Wikipedia《李明伟》",
+      "url": "https://zh.wikipedia.org/wiki/李明伟",
+      "publisher": "Wikipedia",
+      "published_at": "",
+      "accessed_at": "2026-08-06",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "前任书记去向"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李洪慈2021年前教育/入党/入职及完整履历"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "李洪慈2021年前教育/入党/入职及完整履历",
+      "why_it_matters": "任职网络分析",
+      "suggested_queries": [
+        "李洪慈 简历"
+      ],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
