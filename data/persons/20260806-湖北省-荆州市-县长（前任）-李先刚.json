@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "湖北省",
+    "city": "荆州市",
+    "region": "江陵县",
+    "job": "县长(前任)",
+    "task_id": "hubei_江陵县",
+    "time_focus": "2026"
+  },
+  "identity": {
+    "person_id": "jiangling_李先刚",
+    "name": "李先刚",
+    "aliases": [],
+    "gender": "",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "李先刚_",
+      "name_birthplace": "李先刚_",
+      "official_profile_url": "https://www.jiangling.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "前任县长（现荆州区区委书记，跨县调任）",
+    "current_org": "中共荆州市荆州区委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": false,
+    "source_ids": [
+      "S001"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "?",
+      "end": "2026-06",
+      "org": "江陵县人民政府",
+      "title": "县长（前任）",
+      "level": "县",
+      "location": "湖北省荆州市江陵县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2026-06-20仍以县长身份活动；其后由张宗阳代理",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "start": "2026-07",
+      "end": "present",
+      "org": "中共荆州市荆州区委员会",
+      "title": "荆州区区委书记（调任）",
+      "level": "县",
+      "location": "湖北省荆州市江陵县",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": false,
+      "notes": "2026-07 起任荆州市荆州区区委书记（data/persons 荆州区数据集确认，跨县升迁交流）",
+      "confidence": "plausible",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "org": "江陵县人民政府",
+      "type": "",
+      "level": "县",
+      "location": "湖北省荆州市江陵县"
+    },
+    {
+      "org": "中共荆州市荆州区委员会",
+      "type": "",
+      "level": "县",
+      "location": "湖北省荆州市江陵县"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "张宗阳",
+      "person_id": "jiangling_张宗阳",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "前任县长→现任代理县长（职务交接）",
+      "overlap_org": "江陵县人民政府",
+      "overlap_period": "2026年6-7月交接",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "本次调研（官网新闻范围）未发现负面信号",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "江陵县人民政府门户网站 / 政府信息公开·领导信息",
+      "url": "https://www.jiangling.gov.cn/",
+      "publisher": "江陵县人民政府",
+      "published_at": "2026-08-06",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "官网首页新闻 + 政府信息公开·领导信息简历确认"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "plausible",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "完整履历（出生/籍贯/学历/入党/此前任职）未访问到；外网搜索受限"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "李先刚 的完整履历（出生年月/籍贯/学历/入党时间/工作起始/此前职务序列）",
+      "why_it_matters": "除当前职务外缺关键身份与履历，无法深入分析",
+      "suggested_queries": [
+        "江陵县 李先刚 简历",
+        "江陵县 领导之窗 李先刚",
+        "荆州市 江陵县 任前公示"
+      ],
+      "last_attempted": "2026-08-06"
+    },
+    {
+      "priority": "high",
+      "question": "李先刚 卸任江陵后的具体去向与新任职",
+      "why_it_matters": "前任去向构成跨县交流网络线索（换届人事调整）",
+      "suggested_queries": [
+        "李先刚 江陵 调任",
+        "荆州市 干部任免 李先刚"
+      ],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
