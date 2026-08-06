@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沙洋县领导班子工作关系网络 · 情报简报</title>
+<style>
+  :root{
+    --bg:#0d0e10; --surface:#15171a; --surface2:#1c1f23; --ink:#e8e4da;
+    --muted:#8a8a7f; --accent:#E03C31; --gold:#C9A94E; --hairline:#2a2d33;
+    --blue:#4a90d9; --green:#5aa469; --orange:#c8842e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+       line-height:1.6;padding:0 0 80px;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px;}
+  .masthead{padding:56px 24px 40px;border-bottom:1px solid var(--hair);background:linear-gradient(180deg,#101216 0%,var(--bg) 100%);}
+  .kicker{font-size:12px;letter-spacing:.35em;color:var(--accent);font-weight:600;text-transform:uppercase;margin-bottom:18px;}
+  h1{font-family:"Noto Serif SC","Songti SC",serif;font-size:42px;line-height:1.15;font-weight:700;letter-spacing:.02em;}
+  .sub{color:var(--muted);margin-top:14px;font-size:15px;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px 32px;margin-top:26px;color:var(--muted);font-size:13px;}
+  .meta-row b{color:var(--gold);font-weight:600;}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);
+         border:1px solid var(--hair);margin-top:44px;}
+  .stat{background:var(--surface);padding:22px 16px;text-align:center;}
+  .stat .num{font-size:34px;font-weight:700;font-family:"Noto Serif SC",serif;color:var(--ink);}
+  .stat .lbl{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.1em;}
+  section{margin-top:56px;}
+  h2{font-family:"Noto Serif SC",serif;font-size:22px;font-weight:700;display:flex;align-items:center;gap:14px;
+     padding-bottom:14px;border-bottom:1px solid var(--hair);margin-bottom:26px;}
+  h2::before{content:"";width:4px;height:22px;background:var(--accent);display:inline-block;flex:none;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+  .card{background:var(--surface);border:1px solid var(--hair);padding:20px;position:relative;}
+  .card.core{border-left:3px solid var(--accent);}
+  .card .name{font-family:"Noto Serif SC",serif;font-size:20px;font-weight:700;margin-bottom:4px;}
+  .card .role{color:var(--accent);font-size:13px;margin-bottom:14px;font-weight:600;}
+  .card .kv{font-size:12.5px;color:var(--muted);display:grid;grid-template-columns:70px 1fr;gap:4px 8px;}
+  .card .kv b{color:var(--ink);font-weight:500;}
+  .badge{display:inline-block;font-size:11px;padding:2px 8px;border:1px solid var(--hair);border-radius:2px;
+         color:var(--gold);margin:3px 3px 0 0;}
+  .timeline{position:relative;padding-left:24px;}
+  .timeline::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:1px;background:var(--hair);}
+  .tl{position:relative;padding:0 0 22px 18px;}
+  .tl::before{content:"";position:absolute;left:-24px;top:6px;width:10px;height:10px;border-radius:50%;
+              background:var(--surface);border:2px solid var(--gold);}
+  .tl.key::before{background:var(--accent);border-color:var(--accent);}
+  .tl .when{font-size:12px;color:var(--muted);letter-spacing:.05em;}
+  .tl .what{font-size:15px;margin-top:4px;font-weight:600;}
+  .tl .org{font-size:13px;color:var(--gold);margin-top:3px;}
+  .tl .note{font-size:12.5px;color:var(--muted);margin-top:5px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th,td{border:1px solid var(--hair);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--surface2);color:var(--gold);font-weight:600;white-space:nowrap;}
+  tr:nth-child(even) td{background:rgba(255,255,255,.015);}
+  .tag{display:inline-block;padding:1px 8px;font-size:11px;border-radius:2px;border:1px solid;}
+  .tag.s{color:var(--gold);border-color:var(--gold);}
+  .tag.m{color:var(--blue);border-color:var(--blue);}
+  .tag.d{color:var(--muted);border-color:var(--hair);}
+  .insight{background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--gold);
+           padding:16px 20px;margin-bottom:12px;}
+  .insight .idx{color:var(--gold);font-weight:700;margin-right:10px;}
+  footer{margin-top:70px;border-top:1px solid var(--hair);padding-top:22px;color:var(--muted);font-size:12px;}
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px;}
+  .flow .node{background:var(--surface);border:1px solid var(--hair);padding:8px 14px;font-size:13px;border-radius:2px;}
+  .flow .arrow{color:var(--accent);font-size:16px;}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr);}h1{font-size:30px;}}
+</style>
+</head>
+<body>
+<div class="masthead">
+  <div class="wrap">
+    <div class="kicker">Confidential · Personnel Intelligence</div>
+    <h1>沙洋县领导班子工作关系网络</h1>
+    <div class="sub">湖北省荆门市沙洋县 · 县委书记 &amp; 县长 · 县域人事关系情报简报</div>
+    <div class="meta-row">
+      <span>调查日 <b>2026-08-06</b></span>
+      <span>任务 <b>hubei_沙洋县</b></span>
+      <span>核实来源 <b>沙洋县人民政府官网 / 百度百科 / 县域新闻</b></span>
+      <span>涉密等级 <b>研究用</b></span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">19</div><div class="lbl">人物</div></div>
+      <div class="stat"><div class="num">15</div><div class="lbl">机构</div></div>
+      <div class="stat"><div class="num">37</div><div class="lbl">任职</div></div>
+      <div class="stat"><div class="num">26</div><div class="lbl">关系</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <h2>核心人物档案</h2>
+    <div class="grid">
+      <div class="card core">
+        <div class="name">李莉丽</div>
+        <div class="role">县委书记 · 县人武部党委第一书记</div>
+        <div class="kv">
+          <b>性别</b><span>女 · 汉族</span>
+          <b>出生</b><span>1980年4月 · 湖北荆门</span>
+          <b>学历</b><span>在职硕士（武大生物医学工程）</span>
+          <b>晋升</b><span>医院→团委→东宝→沙洋县长→书记</span>
+        </div>
+        <span class="badge">核心 · 书记</span>
+      </div>
+      <div class="card core">
+        <div class="name">王士春</div>
+        <div class="role">县委副书记 · 代理县长</div>
+        <div class="kv">
+          <b>性别</b><span>男 · 汉族</span>
+          <b>出生</b><span>1986年12月</span>
+          <b>学历</b><span>硕士研究生</span>
+          <b>轨迹</b><span>省粮食局处干 → 下派沙洋</span>
+        </div>
+        <span class="badge">核心 · 代理县长</span>
+      </div>
+      <div class="card">
+        <div class="name">陈威</div>
+        <div class="role">前县委书记 → 黄冈市副市长</div>
+        <div class="kv">
+          <b>出生</b><span>1979年9月</span>
+          <b>学历</b><span>华中农业大学</span>
+          <b>去向</b><span>跨市晋升副厅级</span>
+        </div>
+        <span class="badge">前任 · 跨区</span>
+      </div>
+      <div class="card">
+        <div class="name">陈鹏</div>
+        <div class="role">县委常委 · 常务副县长</div>
+        <div class="kv"><b>出生</b><span>1976年12月</span><b>系统</b><span>政府线</span></div>
+      </div>
+      <div class="card">
+        <div class="name">李俊怡</div>
+        <div class="role">县委常委 · 副县长</div>
+        <div class="kv"><b>出生</b><span>1980年8月</span><b>分工</b><span>农业农村</span></div>
+      </div>
+      <div class="card">
+        <div class="name">姚必泉</div>
+        <div class="role">县委常委 · 统战部部长</div>
+        <div class="kv"><b>出生</b><span>1971年8月</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+  <h2>核心人物履历时间线</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;">
+    <div>
+      <div class="name" style="margin-bottom:14px;font-family:'Noto Serif SC',serif;font-size:18px;">李莉丽</div>
+      <div class="timeline">
+        <div class="tl"><div class="when">2026 —</div><div class="what">沙洋县委书记</div><div class="org">中共沙洋县委员会</div></div>
+        <div class="tl key"><div class="when">2021-11 — 2026</div><div class="what">沙洋县委副书记 · 县长</div><div class="org">沙洋县人民政府</div></div>
+        <div class="tl"><div class="when">2021-03</div><div class="what">沙洋县委副书记 · 政法委书记</div><div class="org">县</div></div>
+        <div class="tl"><div class="when">2016 — 2021</div><div class="what">东宝区任职</div><div class="org">荆门市东宝区</div></div>
+        <div class="tl"><div class="when">早年</div><div class="what">共青团荆门市委书记 · 荆门二院</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="name" style="margin-bottom:14px;font-family:'Noto Serif SC',serif;font-size:18px;">王士春</div>
+      <div class="timeline">
+        <div class="tl key"><div class="when">2026-07-13 —</div><div class="what">沙洋县人民政府代理县长</div><div class="org">沙洋县人民政府</div></div>
+        <div class="tl"><div class="when">2025-08 —</div><div class="what">沙洋县委副书记</div><div class="org">中共沙洋县委员会</div></div>
+        <div class="tl"><div class="when">2023-05 — 2025</div><div class="what">执法督查处处长</div><div class="org">湖北省粮食局</div></div>
+        <div class="tl"><div class="when">2021-07 — 2023-05</div><div class="what">办公室副主任</div><div class="org">湖北省粮食局</div></div>
+        <div class="tl"><div class="when">— 2021-07</div><div class="what">调控处副处长</div><div class="org">湖北省粮食局</div></div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section>
+  <h2>党政领导班子成员</h2>
+  <table>
+    <tr><th>姓名</th><th>职务</th><th>出生</th><th>性别</th><th>系统</th></tr>
+    <tr><td>李莉丽</td><td>县委书记、人武部党委第一书记</td><td>1980.04</td><td>女</td><td>党委</td></tr>
+    <tr><td>王士春</td><td>县委副书记、代理县长</td><td>1986.12</td><td>男</td><td>政府</td></tr>
+    <tr><td>陈鹏</td><td>县委常委、常务副县长</td><td>1976.12</td><td>男</td><td>政府</td></tr>
+    <tr><td>李俊怡</td><td>县委常委、副县长</td><td>1980.08</td><td>女</td><td>政府</td></tr>
+    <tr><td>姚必泉</td><td>县委常委、县委统战部部长</td><td>1971.08</td><td>男</td><td>党委</td></tr>
+    <tr><td>王建峰</td><td>县委常委、县人武部上校政委</td><td>—</td><td>男</td><td>军事</td></tr>
+    <tr><td>黄元</td><td>副县长</td><td>1983.06</td><td>男</td><td>政府</td></tr>
+    <tr><td>何金梅</td><td>副县长（民建）</td><td>1980.08</td><td>女</td><td>政府</td></tr>
+    <tr><td>赵海鹏</td><td>副县长、公安局长</td><td>1976.09</td><td>男</td><td>政法</td></tr>
+    <tr><td>张方俊</td><td>副县长</td><td>1976.12</td><td>男</td><td>政府</td></tr>
+    <tr><td>程华</td><td>副县长（博士）</td><td>1988.11</td><td>男</td><td>政府</td></tr>
+    <tr><td>谢振波</td><td>副县长（挂）</td><td>1978.01</td><td>男</td><td>政府</td></tr>
+    <tr><td>任涛</td><td>副县长（挂，博士）</td><td>1984.07</td><td>男</td><td>政府</td></tr>
+    <tr><td>付林</td><td>副县长（挂）</td><td>1984.12</td><td>男</td><td>政府</td></tr>
+    <tr><td>代峰</td><td>政府党组成员（挂）</td><td>1991.06</td><td>男</td><td>政府</td></tr>
+    <tr><td>黄振</td><td>副县长（2026-07 新任）</td><td>—</td><td>男</td><td>政府</td></tr>
+    <tr><td>李旭祥</td><td>县人大常委会主任</td><td>—</td><td>男</td><td>人大</td></tr>
+    <tr><td>周翠兰</td><td>县政协主席</td><td>—</td><td>女</td><td>政协</td></tr>
+  </table>
+  </section>
+
+  <section>
+  <h2>关键人事变动 · 时间线</h2>
+  <div class="timeline">
+    <div class="tl"><div class="when">2025-08</div><div class="what">王士春任沙洋县委副书记</div></div>
+    <div class="tl"><div class="when">2025-12-30</div><div class="what">县人代会 · 书记陈威主持 / 县长李莉丽作政府工作报告</div></div>
+    <div class="tl key"><div class="when">2026-05</div><div class="what">陈威拟提任黄冈市副市长（跨市晋升）</div></div>
+    <div class="tl"><div class="when">2026-06-28</div><div class="what">荆门市委组织部任前公示 · 王士春</div></div>
+    <div class="tl key"><div class="when">2026-07-13</div><div class="what">人大任命王士春为代理县长 / 黄振为副县长 / 法检换新</div></div>
+    <div class="tl"><div class="when">2026-07底 — 08</div><div class="what">李莉丽以县委书记身份主持县委常委会并调研</div></div>
+  </div>
+  </section>
+
+  <section>
+  <h2>工作关系网络与交集</h2>
+  <div class="grid">
+    <div class="card"><div class="name" style="font-size:15px;">党政正职搭档</div><div class="role" style="margin:6px 0 10px;">李莉丽 × 王士春</div><span class="tag s">强 · 搭档</span><p style="font-size:12.5px;color:var(--muted);margin-top:10px;">县委书记与代理县长；李此前任县长，王接任。</p></div>
+    <div class="card"><div class="name" style="font-size:15px;">前后任书记</div><div class="role" style="margin:6px 0 10px;">李莉丽 → 陈威</div><span class="tag m">前后任</span><p style="font-size:12.5px;color:var(--muted);margin-top:10px;">陈威任书记 2021-2026，李接任；期间李任县长形成男女搭档。</p></div>
+    <div class="card"><div class="name" style="font-size:15px;">上下级</div><div class="role" style="margin:6px 0 10px;">王士春 → 陈威</div><span class="tag">上下级</span><p style="font-size:12.5px;color:var(--muted);margin-top:10px;">王任县委副书记时陈为书记。</p></div>
+  </div>
+  <p style="margin-top:20px;font-size:13px;color:var(--muted);">副县长多以挂职/博士选调方式进入班子，暂未见与李莉丽的直接历史工作交集（待补履历验证）。</p>
+  </section>
+
+  <section>
+  <h2>跨县 / 跨级人事交流网络</h2>
+  <div class="flow">
+    <span class="node">沙洋县委书记 · 陈威</span><span class="arrow">→</span><span class="node">黄冈市副市长</span>
+  </div>
+  <div class="flow">
+    <span class="node">湖北省粮食局（处级）</span><span class="arrow">→ 下派 →</span><span class="node">沙洋县委副书记 → 代理县长 · 王士春</span>
+  </div>
+  <div class="flow">
+    <span class="node">沙洋县长 · 李莉丽</span><span class="arrow">→</span><span class="node">沙洋县委书记</span>
+  </div>
+  </section>
+
+  <section>
+  <h2>关键洞察与突破线索</h2>
+  <div class="insight"><span class="idx">01</span><b>党政正职年轻化 + 省级下派</b> — 代理县长王士春（1986 年生）为省厅处级干部下派县域，折射荆门对沙洋的干部输送与培养设计。</div>
+  <div class="insight"><span class="idx">02</span><b>书记—县长交接链完整</b> — 李莉丽自本县县长晋升书记，班子相对稳定；王士春代理期待补正（人大选举）。</div>
+  <div class="insight"><span class="idx">03</span><b>跨区流向</b> — 陈威（沙洋→黄冈）履行可衔接黄冈后续，值得跟进再晋升轨迹。</div>
+  <div class="insight"><span class="idx">04</span><b>副职挂职化/高学历化</b> — 多名挂职副县长 + 博士（程华、任涛），显示县域引入高层次人才倾向。</div>
+  </section>
+
+  <footer>
+    本简报基于沙洋县人民政府官网、县域新闻与百度百科公开资料整理，未包含机密信息。履历缺口见 open-gaps 文档。<br>
+    数据文件：沙洋县_network.db · 沙洋县_network.gexf · person JSON · gexf 图
+  </footer>
+</div>
+</body>
+</html>
