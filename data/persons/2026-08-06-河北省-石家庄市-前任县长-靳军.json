@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "石家庄市",
+    "region": "平山县",
+    "job": "前任县长",
+    "task_id": "hebei_平山县",
+    "time_focus": "2025"
+  },
+  "identity": {
+    "person_id": "hebei_pingshan_jin_jun",
+    "name": "靳军",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "靳军_待查",
+      "name_birthplace": "靳军_待查",
+      "official_profile_url": "https://www.sjzps.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "平山县前任县长（~2025-11卸任）",
+    "current_org": "平山县人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2025-01-23",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "平山县人民政府",
+      "title": "平山县委副书记、县长",
+      "level": "县处级正职",
+      "location": "河北省石家庄市平山县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "2025-01-23（十七届人大五次会议）作《平山县政府工作报告》署名「平山县人民政府县长 靳军」。年底由杨亮接任。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "任平山县长前履历",
+      "notes": "公开资料受限，任平山县长前、卸任后的履历均未查得。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"name": "平山县人民政府", "fqn": "平山县人民政府", "type": "政府", "level": "县处级", "location": "平山县", "role": "前任县长（2025）"}
+  ],
+  "relationships": [
+    {
+      "person": "杨亮",
+      "person_id": "hebei_pingshan_yang_liang",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "杨亮接任靳军任平山县长（2025年交接）。",
+      "overlap_org": "平山县人民政府",
+      "overlap_period": "2025",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张前锋",
+      "person_id": "hebei_pingshan_zhang_qianfeng",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "张前锋任书记期间靳军任县长（党政班子共事）。",
+      "overlap_org": "平山县",
+      "overlap_period": "~2021-2025",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["石家庄市"],
+    "promotion_velocity": {"summary": "公开资料有限，无法评估。", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "公开资料稀缺，无法推断工作风格。"
+  },
+  "network_metrics": {
+    "confirmed_overlaps": 1,
+    "inferred_overlaps": 0,
+    "strong_edges": 1,
+    "weak_edges": 0,
+    "note": "受web访问限制，证据稀少。"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "截至2026-08，公开检索内未发现纪律处分或负面舆情记录。", "date": "2026-08-06", "confidence": "unverified", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "平山县2025年政府工作报告（县长 靳军）", "url": "https://www.sjzps.gov.cn/columns/e62c0e4c-84b6-4045-8ca0-3a02b1129e6e/202502/21/f89411b3-c76c-4547-b4c5-3e6d9ad7b3f4.html", "publisher": "平山县人民政府门户网站", "published_at": "2025-02-21", "accessed_at": "2026-08-06", "source_type": "official", "reliability": "high", "notes": "确认靳军2025年1月任平山县长"}
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "靳军任平山前及卸任后履历完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "靳军出生年月、籍贯、学历及任平山县长前/后的完整履历？",
+      "why_it_matters": "此人同名「灵寿县委书记靳军」，需区分去重；全履历评估需要基础字段。",
+      "suggested_queries": ["靳军 平山县长 简历", "靳军 卸任 去向"],
+      "last_attempted": "2026-08-06"
+    },
+    {
+      "priority": "high",
+      "question": "靳军卸任平山县长后的去向（2025-11）？",
+      "why_it_matters": "确认前任县长晋升/调出路径。",
+      "suggested_queries": ["靳军 平山县 免职", "靳军 新任"],
+      "last_attempted": "2026-08-06"
+    }
+  ],
+  "name_collision_notice": "石家庄市同一时段存在两位『靳军』：平山县前任县长（本档案）与灵寿县委书记（见 data/persons/20260805-河北省-石家庄市-县委书记-靳军.json）。两者为不同个体，勿合并。"
+}
