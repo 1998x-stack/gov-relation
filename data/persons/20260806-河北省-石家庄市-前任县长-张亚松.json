@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "石家庄市",
+    "region": "井陉县",
+    "job": "前任县长",
+    "task_id": "hebei_井陉县",
+    "time_focus": "截至2026-08"
+  },
+  "identity": {
+    "person_id": "hebei_jingxing_zhang_yasong",
+    "name": "张亚松",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "未公开",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "张亚松_",
+      "name_birthplace": "张亚松_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "井陉县前任县长（2025年1月在职）",
+    "current_org": "",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2025-01-14",
+      "end": "before 2025-12",
+      "org": "井陉县人民政府",
+      "title": "井陉县县长（2025年1月14日作政府工作报告）",
+      "level": "县处级",
+      "location": "河北省石家庄市井陉县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "《井陉县2025年政府工作报告》政策解读明确：'2025年1月14日，井陉县县长张亚松在县第十八届人民代表大会第五次会议上作政府工作报告'。至2025-12 赵振国当选县长，张亚松卸任。",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "张亚松任井陉县长前后的完整履历、卸任去向（是否转任他职）均未检索到。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"id": "org_jx_gov", "name": "井陉县人民政府", "org_type": "政府", "level": "县处级", "location": "河北省石家庄市井陉县", "role": "前任任职"}
+  ],
+  "relationships": [
+    {
+      "person": "赵振国",
+      "person_id": "hebei_jingxing_zhao_zhenguo",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "井政〔2026〕11号确认赵振国于2026年1月31日在井陉县第十八届人大七次会议作工作报告并任县长；2025年1月该职务由张亚松担任，存在直接交接。",
+      "overlap_org": "井陉县人民政府",
+      "overlap_period": "2025",
+      "direction": "other_to_person",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["石家庄市"],
+    "promotion_velocity": {"summary": "未知", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {"trait": "pragmatic", "evidence": "2025年政府工作报告部署投资融资、项目建设、县城建设、文旅强县、乡村振兴等务实项目导向任务。", "confidence": "plausible", "source_ids": ["S001"]}
+    ],
+    "speech_themes": ["投资融资", "项目建设", "文旅强县"],
+    "management_signals": [],
+    "caveat": "工作风格由公开工作报告推断，私人心里画像不做臆测。"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "未检索到公开负面记录（在可访问来源范围内）。", "date": "", "confidence": "unverified", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "《井陉县2025年政府工作报告》政策解读", "url": "https://www.sjzjx.gov.cn/columns/d74a5025-6ad0-4043-91fc-1719f7bdeb95/202508/18/37280ae2-3b56-4a83-b655-af5163b1aa74.html", "publisher": "井陉县人民政府", "published_at": "2025-08-18", "accessed_at": "2026-08-06", "source_type": "official", "reliability": "high", "notes": "明确2025-01-14县长张亚松作2025年政府工作报告。"}
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "张亚松平完整履历与卸任去向"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "张亚松卸任井陉县长后的去向（调往何地任职）",
+      "why_it_matters": "了解县处级干部的转任路径与石家庄干部交流网络",
+      "suggested_queries": ["张亚松 卸任 去向", "张亚松 调任", "张亚松 石家庄"],
+      "last_attempted": "2026-08-06"
+    },
+    {
+      "priority": "medium",
+      "question": "张亚松完整履历与基本信息",
+      "why_it_matters": "身份识别与去重",
+      "suggested_queries": ["张亚松 井陉 简历", "张亚松 会见 履历"],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
