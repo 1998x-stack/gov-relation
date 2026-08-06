@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "海南省",
+    "city": "海口市",
+    "region": "海口市",
+    "job": "市委书记",
+    "task_id": "hainan_海口市",
+    "time_focus": "2026年8月"
+  },
+  "identity": {
+    "person_id": "haikou_范少军",
+    "name": "范少军",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1970-11",
+    "birthplace": "江苏邗江",
+    "native_place": "江苏邗江",
+    "education": [
+      {
+        "period": "unknown",
+        "institution": "大学学历",
+        "major": "",
+        "degree": "本科",
+        "study_type": "full_time",
+        "source_ids": ["S002"]
+      },
+      {
+        "period": "unknown",
+        "institution": "工商管理硕士",
+        "major": "工商管理",
+        "degree": "硕士",
+        "study_type": "part_time",
+        "source_ids": ["S002"]
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "1992-08",
+    "dedupe_keys": {
+      "name_birth": "范少军_1970-11",
+      "name_birthplace": "范少军_江苏邗江",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "海南省委常委、海口市委书记",
+    "current_org": "中共海口市委员会",
+    "administrative_rank": "副部级",
+    "as_of": "2026-08",
+    "is_current_confirmed": true,
+    "source_ids": ["S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "2016",
+      "end": "2019",
+      "org": "上海市宝山区人民政府",
+      "title": "上海市宝山区区长",
+      "level": "上海市（直辖市）辖区",
+      "location": "上海市宝山区",
+      "system": "government",
+      "rank": "正厅级",
+      "is_key_promotion": true,
+      "notes": "上海市宝山区调研记录；转任海南前的重要台阶",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "2019",
+      "end": "（转任海南）",
+      "org": "中共上海市宝山区委员会",
+      "title": "中共上海市宝山区委书记",
+      "level": "上海市（直辖市）辖区",
+      "location": "上海市宝山区",
+      "system": "party",
+      "rank": "副省级（直辖市区委书记）",
+      "is_key_promotion": true,
+      "notes": "由宝山区长晋升区委书记；之后跨省调任海南",
+      "confidence": "plausible",
+      "source_ids": ["S002"]
+    },
+    {
+      "start": "",
+      "end": "present",
+      "org": "中共海口市委员会",
+      "title": "海口市委书记（海南省委常委兼任）",
+      "level": "地级市（海南省省会）",
+      "location": "海南省海口市",
+      "system": "party",
+      "rank": "副部级",
+      "is_key_promotion": true,
+      "notes": "现任；接替前任 罗增斌",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "other",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "1992 年参加工作至 2016 年任宝山区长期间的具体任职未查得（web 受限）",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共海口市委员会",
+      "role": "现任市委书记",
+      "type": "党委",
+      "level": "地级"
+    },
+    {
+      "name": "中共海南省委员会",
+      "role": "省委常委",
+      "type": "党委",
+      "level": "省级"
+    },
+    {
+      "name": "上海市宝山区人民政府",
+      "role": "曾任区长",
+      "type": "政府",
+      "level": "直辖市区级"
+    },
+    {
+      "name": "中共上海市宝山区委员会",
+      "role": "曾任区委书记",
+      "type": "党委",
+      "level": "直辖市区级"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "张勇",
+      "person_id": "fankou_张勇",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "范少军任海口市委书记，张勇任市长，党政一把手搭档",
+      "overlap_org": "中共海口市委员会",
+      "overlap_period": "现任",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "罗增斌",
+      "person_id": "fankou_罗增斌",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "范少军接替罗增斌任海口市委书记（前任关系）",
+      "overlap_org": "中共海口市委员会",
+      "overlap_period": "",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    },
+    {
+      "person": "党帅",
+      "person_id": "fankou_党帅",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "市委书记领导市委常委、常务副市长",
+      "overlap_org": "海口市人民政府",
+      "overlap_period": "现任",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": ["党政领导", "区域治理"],
+    "secondary_specializations": ["工商管理"],
+    "career_pattern": "cross_province_rotation",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["上海市", "海南省"],
+    "promotion_velocity": {
+      "summary": "上海 → 海南 跨省正厅级→副部级，属跨省干部交流（对口支援/交流）路径",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "由于网络调研受限，本轮未取得公开讲话/会议报道，暂不推断工作风格。"
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "公开检索（网页受限）未发现纪律处分、审计或负面报道信号；历史仅有跨省正常调任记录",
+      "date": "2026-08-06",
+      "confidence": "plausible",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "海口市政府领导专栏（市长张勇）",
+      "url": "http://www.haikou.gov.cn/xxgk/szfbjxxgk/dzld/zfld/202112/t269387.shtml",
+      "publisher": "海口市人民政府",
+      "published_at": "2026-08",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "市长张勇官方简历"
+    },
+    {
+      "id": "S002",
+      "title": "上海市宝山区领导关系数据库",
+      "url": "data/database/宝山区_network.db",
+      "publisher": "本仓库（此前调研）",
+      "published_at": "2026-08",
+      "accessed_at": "2026-08-06",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "范少军：1970-11生、江苏邗江、大学/工商管理硕士、1992-08参加工作、宝山区区长2016-2019"
+    },
+    {
+      "id": "S003",
+      "title": "海南省领导数据库 / 海口市领导班子调研",
+      "url": "data/database/海南省_network.db + data/database/美兰区_network.db",
+      "publisher": "本仓库",
+      "published_at": "2026-08",
+      "accessed_at": "2026-08-06",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "确认范少军为海南省委常委、海口市委书记（current_post）"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "1992-2016 年（任宝山区区长前）完整履历公开资料未取得"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "范少军 1992-2016 年在上海的具体历任职务？",
+      "why_it_matters": "用于还原其从基层到区长/书记的晋升路径与组织系统归属",
+      "suggested_queries": ["范少军 简历 上海市 历任", "范少军 宝山区 前任 职务", "范少军 上海 任职经历"],
+      "last_attempted": "2026-08-06"
+    },
+    {
+      "priority": "high",
+      "question": "范少军任宝山区委书记的确切起止时间",
+      "why_it_matters": "确认跨省调任的确切时间点",
+      "suggested_queries": ["范少军 宝山区委书记 卸任", "范少军 海南 任命 时间"],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
