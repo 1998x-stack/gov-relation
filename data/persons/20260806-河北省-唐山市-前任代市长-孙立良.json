@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "唐山市",
+    "region": "遵化市",
+    "job": "前任代市长",
+    "task_id": "hebei_遵化市",
+    "time_focus": "2024-2026 县长交接链"
+  },
+  "identity": {
+    "person_id": "hebei_zunhua_sunliliang",
+    "name": "孙立良",
+    "aliases": [],
+    "gender": "待查",
+    "ethnicity": "待查",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "孙立良_待查",
+      "name_birthplace": "孙立良_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "前任遵化代市长（2025 交接后去向待核）",
+    "current_org": "遵化市人民政府",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2025-01",
+      "end": "2025 中",
+      "org": "遵化市人民政府",
+      "title": "遵化市代市长",
+      "level": "县处级",
+      "location": "唐山市遵化市",
+      "system": "government",
+      "rank": "正职",
+      "is_key_promotion": false,
+      "notes": "2025-01-12 在遵化市第八届人民代表大会第五次会议上作政府工作报告（confirmed 官方原文署名'代市长'）；其后由高语明接任代市长",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "任代市长前后职务、个人简历未达（GAP）",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"name": "遵化市人民政府", "org_type": "政府", "level": "县处级", "location": "唐山市遵化市", "role": "前任代市长", "source_ids": ["S001"]}
+  ],
+  "relationships": [
+    {
+      "person": "高语明",
+      "person_id": "hebei_zunhua_gaoyuming",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "孙立良 2025 代市长，后由高语明接任",
+      "overlap_org": "遵化市人民政府",
+      "overlap_period": "2025",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张学峰",
+      "person_id": "hebei_zunhua_zhangxuefeng",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "孙立良接任前任 张学峰 任遵化代市长",
+      "overlap_org": "遵化市人民政府",
+      "overlap_period": "2024-2025",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2025-01",
+      "domain": "economic_development",
+      "achievement_or_event": "在八届人大五次会议上作遵化市人民政府工作报告（回顾 2024、部署 2025）",
+      "role_in_event": "市政府主官作报告",
+      "measurable_outcome": "大会审议",
+      "location": "遵化市",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方政府全面工作"],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": [],
+    "promotion_velocity": {"summary": "公开履历不足", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [{"trait": "unknown", "evidence": "公开材料不足", "confidence": "unverified", "source_ids": []}],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "未作风格推断。"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "可达来源未发现孙立良负面信号（搜索受限）", "date": "2026-08-06", "confidence": "unverified", "source_ids": []}
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "遵化市人民政府2025年工作报告（代市长 孙立良）",
+      "url": "https://www.zunhua.gov.cn/zunhua/tszunhuashizhengfubaogao/20260327/1211623631.html",
+      "publisher": "遵化市人民政府",
+      "published_at": "2026-03-27",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "报告署名'遵化市人民政府代市长 孙立良'，2025-01-12 八届人大五次会议"
+    },
+    {
+      "id": "S002",
+      "title": "遵化市人民政府2024年工作报告（代市长 张学峰）",
+      "url": "https://www.zunhua.gov.cn/zunhua/tszunhuashizhengfubaogao/20240516/1211583557.html",
+      "publisher": "遵化市人民政府",
+      "published_at": "2024-05-16",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "前任更前任代市长佐证交接链"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed(任代市长) / 在职与否待核",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "孙立良卸任后去向与个人简历"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "孙立良卸任遵化代市长后的去向（调任/升任）？个人简历？",
+      "why_it_matters": "追踪官员流动去向",
+      "suggested_queries": ["孙立良 遵化 去向", "孙立良 简历"],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
