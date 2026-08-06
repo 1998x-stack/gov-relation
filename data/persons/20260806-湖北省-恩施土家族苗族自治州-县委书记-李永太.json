@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "湖北省",
+    "city": "恩施土家族苗族自治州",
+    "region": "建始县",
+    "job": "县委书记",
+    "task_id": "hubei_建始县",
+    "time_focus": "2024-2026"
+  },
+  "identity": {
+    "person_id": "jianshi_li_yongtai",
+    "name": "李永太",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {"period": "", "institution": "", "major": "", "degree": "", "study_type": "unknown", "source_ids": []}
+    ],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {"name_birth": "李永太_", "name_birthplace": "李永太_", "official_profile_url": "http://www.hbjs.gov.cn/"}
+  },
+  "career_timeline": [
+    {"start": "unknown", "end": "2026-07", "org": "建始县人民政府", "title": "建始县县长（县委副书记）", "level": "县", "location": "湖北建始", "system": "government", "rank": "正县级", "is_key_promotion": true, "notes": "2026-01-05与县委书记张渊平联合发表新年献词（以县长身份）；至2026年6月仍主持县政府常务工作", "confidence": "confirmed", "source_ids": ["S001", "S002"]},
+    {"start": "2026-07", "end": "present", "org": "中共建始县委员会", "title": "建始县委书记", "level": "县", "location": "湖北建始", "system": "party", "rank": "正县级", "is_key_promotion": true, "notes": "接替离任的张渊平；最迟2026-07-09主持防汛调度（建始网新闻），7-8月以县委书记身份公开活动", "confidence": "confirmed", "source_ids": ["S001", "S003"]}
+  ],
+  "organizations": [
+    {"org": "中共建始县委员会", "role": "县委书记", "period": "2026-07至今"},
+    {"org": "建始县人民政府", "role": "县长（县委副书记）", "period": "至2026-07"}
+  ],
+  "relationships": [
+    {"person": "周霆", "person_id": "jianshi_zhou_ting_1984", "relationship_type": "party_government_pair", "strength": "strong", "evidence": "同在建始县党政班子，李永太（县委书记）与代理县长周霆为现任党政主官搭档", "overlap_org": "建始县", "overlap_period": "2026", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"person": "张渊平", "person_id": "jianshi_zhang_yuanping", "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "张渊平卸任建始县委书记后由李永太接任（约2026年7月）", "overlap_org": "中共建始县委员会", "overlap_period": "2026", "direction": "directed", "confidence": "confirmed", "source_ids": ["S002"]},
+    {"person": "周霆", "person_id": "jianshi_zhou_ting_1984", "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "李永太由县长升任县委书记，其县长职位由周霆代理", "overlap_org": "建始县人民政府", "overlap_period": "2026-07", "direction": "directed", "confidence": "confirmed", "source_ids": ["S002"]}
+  ],
+  "governance_record": [
+    {"period": "2026", "domain": "public_safety", "achievement_or_event": "率队开展‘八一’建军节走访慰问活动，筑牢防汛安全防线", "role_in_event": "县委书记", "measurable_outcome": "", "location": "建始县", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"period": "2026", "domain": "disaster_response", "achievement_or_event": "部署防汛安全工作，强调从严从实筑牢防汛防线", "role_in_event": "县委书记", "measurable_outcome": "", "location": "建始县", "confidence": "confirmed", "source_ids": ["S001"]}
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": [],
+    "geographic_pattern": [],
+    "promotion_velocity": {"summary": "履历资料缺失，晋升路径待查", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [{"trait": "亲力亲为/一线检查", "evidence": "公开报道显示其深入一线检查防汛、开展走访慰问", "confidence": "plausible", "source_ids": ["S001"]}],
+    "speech_themes": ["防汛安全", "群众生产生活"],
+    "management_signals": [],
+    "caveat": "风格线索基于公开报道推断，非心理评估。"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "截至2026-08-06未检索到李永太相关纪律处分或负面公开报道", "date": "", "confidence": "unverified", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "建始县人民政府门户网站-首页头条（李永太活动/防汛/八一慰问报道）", "url": "http://www.hbjs.gov.cn/", "publisher": "建始县人民政府", "published_at": "2026-07", "accessed_at": "2026-08-06", "source_type": "official", "reliability": "high", "notes": "首页新闻多次以‘县委书记李永太’身份出现，确认现任职务"},
+    {"id": "S002", "title": "建始县第十九届人大常委会第三十八次会议新闻", "url": "http://www.hbjs.gov.cn/sybt/202607/t20260724_1821824.shtml", "publisher": "建始网/建始县人民政府", "published_at": "2026-07-24", "accessed_at": "2026-08-06", "source_type": "official", "reliability": "high", "notes": "确认周霆任代理县长（接李永太县长职）"},
+    {"id": "S003", "title": "建始网防汛调度报道（县委书记李永太）", "url": "http://www.hbjs.gov.cn/sybt/202607/t20260710_1818728.shtml", "publisher": "建始网", "published_at": "2026-07-10", "accessed_at": "2026-08-06", "source_type": "official", "reliability": "high", "notes": "最迟2026-07-09以县委书记身份主持防汛调度，钉住接任时间点"}
+  ],
+  "confidence_summary": {
+    "identity": "partial",
+    "current_role": "confirmed",
+    "career_completeness": "low",
+    "relationship_confidence": "medium",
+    "biggest_gap": "李永太出生年份、籍贯、民族、教育、入党/参加工作时间和任县长前的完整履历缺失；张渊平离任去向未知"
+  },
+  "open_questions": [
+    {"priority": "high", "question": "李永太的出生/籍贯/民族/教育/入党与工作时间等身份信息", "why_it_matters": "核心领导的稳定身份字段，用于跨库去重", "suggested_queries": ["李永太 建始 县委书记 简历", "李永太 任前公示 恩施"], "last_attempted": "2026-08-06"},
+    {"priority": "high", "question": "李永太任建始县长前（此前职务）及何时到任县长", "why_it_matters": "还原其完整成长路径与恩施州干部培养链条", "suggested_queries": ["李永太 建始 县长 任前"], "last_attempted": "2026-08-06"},
+    {"priority": "medium", "question": "前任县委书记张渊平卸任后去向", "why_it_matters": "追踪卸任干部流向，评估干部交流路径", "suggested_queries": ["张渊平 恩施 去向"], "last_attempted": "2026-08-06"}
+  ]
+}
