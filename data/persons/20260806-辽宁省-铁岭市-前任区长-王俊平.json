@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "辽宁省",
+    "city": "铁岭市",
+    "region": "清河区",
+    "job": "前任区长",
+    "task_id": "liaoning_清河区",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "tieling_qinghe_wang_junping_unknown",
+    "name": "王俊平",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "王俊平_unknown",
+      "name_birthplace": "王俊平_unknown",
+      "official_profile_url": "https://www.tlqh.gov.cn/qinghe/zwgk/zfxxgk/fdzdgknr/qtfdxx/zfgzbg/2023122512470179671/index.html"
+    }
+  },
+  "current_status": {
+    "current_post": "前任区长（2021-2023年任职，去向待查）",
+    "current_org": "",
+    "administrative_rank": "县处级正职",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "2021",
+      "end": "2023",
+      "org": "铁岭市清河区人民政府",
+      "title": "区长",
+      "level": "县处级",
+      "location": "辽宁省铁岭市清河区",
+      "system": "government",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "2021-2023年任清河区人民政府区长，连续在2021/2022/2023年度政府工作报告作报告",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "公开资料未找到王俊平任区长前的历任职务及离任后去向",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"org_name": "铁岭市清河区人民政府", "role": "曾任区长", "period": "2021-2023"}
+  ],
+  "relationships": [
+    {
+      "person": "王亮",
+      "person_id": "tieling_qinghe_wang_liang_unknown",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "王俊平2021-2023任清河区区长，王亮2024年接任区长",
+      "overlap_org": "铁岭市清河区人民政府",
+      "overlap_period": "2023-2024",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2022-2023",
+      "domain": "economic_development",
+      "achievement_or_event": "2023年清河区地区生产总值35.7亿元增长6%，规模工业增加值增27%，一般公共预算收入2亿元增长11.3%",
+      "role_in_event": "区长",
+      "measurable_outcome": "GDP增长6%、规上工业增长27%",
+      "location": "铁岭市清河区",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方政府治理"],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["铁岭市", "清河区"],
+    "promotion_velocity": {
+      "summary": "清河区区长（2021-2023），离任去向未查到",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "公开资料有限"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "检索清河区政府官网报告，未发现王俊平负面记录",
+      "date": "2026-08-06",
+      "confidence": "confirmed",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "2023年度政府工作报告",
+      "url": "https://www.tlqh.gov.cn/qinghe/zwgk/zfxxgk/fdzdgknr/qtfdxx/zfgzbg/2023122512470179671/index.html",
+      "publisher": "清河区政府办公室",
+      "published_at": "2023-12-25",
+      "accessed_at": "2026-08-06",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "王俊平任区长时作报告"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "thin",
+    "current_role": "confirmed_historic",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "任区长前履历与离任去向"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "王俊平离任区长后的去向？是否升任其他职务？",
+      "why_it_matters": "跨区/上下级调动网络与更替链",
+      "suggested_queries": ["王俊平 铁岭 区长 离任", "王俊平 清河区"],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
