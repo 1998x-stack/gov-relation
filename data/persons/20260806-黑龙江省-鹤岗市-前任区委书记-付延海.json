@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "黑龙江省",
+    "city": "鹤岗市",
+    "region": "东山区",
+    "job": "前任区委书记",
+    "task_id": "heilongjiang_东山区",
+    "time_focus": "2026年8月（前任/继任）"
+  },
+  "identity": {
+    "person_id": "heilongjiang_dongshan_fu_yanhai",
+    "name": "付延海",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "未知",
+    "birthplace": "未知",
+    "native_place": "未知",
+    "education": [
+      {
+        "period": "未知",
+        "institution": "未知",
+        "major": "未知",
+        "degree": "未知",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "未知",
+    "work_start": "未知",
+    "dedupe_keys": {
+      "name_birth": "付延海_未知",
+      "name_birthplace": "付延海_未知",
+      "official_profile_url": "https://zh.wikipedia.org/wiki/东山区_(鹤岗市)"
+    }
+  },
+  "current_status": {
+    "current_post": "前任东山区委书记（已卸任）",
+    "current_org": "",
+    "administrative_rank": "县处级（曾任）",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": false,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "202x（待核）",
+      "org": "中共鹤岗市东山区委",
+      "title": "区委书记",
+      "level": "县处级",
+      "location": "黑龙江省鹤岗市东山区",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "维基百科·东山区(鹤岗市)条目将其列为现任区委书记（应为某一任），且本课题既往 report/20260724-鹤岗市兴安区-跨区干部交流网络调查报告.md 确认其曾任东山区委书记。现任书记（马荣华）接任后付延海卸任，具体任职区间与去向未获得。",
+      "confidence": "plausible",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "未知",
+      "end": "未知",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "付延海出生、学历、入党、历任职务及卸任后去向均未公开。",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中共鹤岗市东山区委员会",
+      "type": "党委",
+      "level": "县处级",
+      "location": "黑龙江省鹤岗市东山区",
+      "role": "曾任区委书记"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "马荣华",
+      "person_id": "heilongjiang_dongshan_ma_ronghua",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "付延海为前任东山区委书记，马荣华继任（继任、时序待核）。",
+      "overlap_org": "中共鹤岗市东山区委",
+      "overlap_period": "",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001", "S002"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["party"],
+    "geographic_pattern": [],
+    "promotion_velocity": {
+      "summary": "未知",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "无公开资料无法推断工作风格。"
+  },
+  "network_metrics": {
+    "degree_centrality_hint": "前任一把手，与现任书记构成继任链。"
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至 2026-08-06，未检索到前任书记付延海相关负面/纪律信息。",
+      "date": "2026-08-06",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {"id": "S001", "title": "维基百科·东山区(鹤岗市)", "url": "https://zh.wikipedia.org/wiki/东山区_(鹤岗市)", "publisher": "维基百科", "accessed_at": "2026-08-06", "source_type": "encyclopedia", "reliability": "medium", "notes": "将付延海列为区委书记（旧条目）"},
+    {"id": "S002", "title": "鹤岗市兴安区·跨区干部交流网络调查报告", "url": "report/20260724-鹤岗市兴安区-跨区干部交流网络调查报告.md", "publisher": "本项目", "published_at": "2026-07-24", "accessed_at": "2026-08-06", "source_type": "database", "reliability": "medium", "notes": "确认付延海曾任东山区委书记"}
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "付延海任职新区区间与卸任后的去向完全未知"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "付延海出生与籍贯、学历、入党、任东山区委书记的起始/结束时间",
+      "why_it_matters": "还原前任——现任书记继任链与跨区/市直调动",
+      "suggested_queries": ["付延海 简历", "付延海 鹤岗", "东山区 前任区委书记"],
+      "last_attempted": "2026-08-06"
+    },
+    {
+      "priority": "high",
+      "question": "付延海卸任后的去向（升任市直/他区/退休）",
+      "why_it_matters": "干部流动网络的关键一环",
+      "suggested_queries": ["付延海 卸任 去向", "付延海 另有任用"],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}
