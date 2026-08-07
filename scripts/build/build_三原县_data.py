@@ -1,521 +1,453 @@
 #!/usr/bin/env python3
-"""
-三原县领导班子关系网络数据构建脚本
-生成 SQLite 数据库和 GEXF 图文件
+"""Build SQLite database and GEXF graph for Sanyuan County leadership network.
 
-三原县是陕西省咸阳市下辖的县，位于关中平原中部。
-数据来源：三原县政府网站 (www.snsanyuan.gov.cn) 领导之窗页面
-采集日期：2026-07-25
+三原县·咸阳市·陕西省 — 县委书记 杨红刚；县委副书记、代县长 段朋泊。
+Research as of 2026-08-07 (sources: official 领导之窗 pages on snsanyuan.gov.cn).
 """
-import sys
-import os
+
 import sqlite3
-from pathlib import Path
+import os
 from datetime import datetime
-from xml.sax.saxutils import escape
 
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(REPO_ROOT))
+BASE = "/workspace/data/xieming/other-codes/gov-relation"
+DB_PATH = os.path.join(BASE, "data/database/三原县_network.db")
+GEXF_PATH = os.path.join(BASE, "data/graph/三原县_network.gexf")
 
-# Use the gov_relation runner when available
-USING_RUNNER = False
-try:
-    from gov_relation.runner import run_build  # noqa
-    from gov_relation.paths import DATABASE_DIR, GRAPH_DIR  # noqa
-    USING_RUNNER = True
-except ImportError:
-    pass
+# ── DATA ─────────────────────────────────────────────────────────────
 
-SLUG = "三原县"
-DATE = "2026-07-25"
-
-# ===== 人物数据 =====
-# (id, name, gender, ethnicity, birth, birthplace, education, party_join, work_start, current_post, current_org, source)
 persons = [
-    # --- 县委领导 (10人) ---
-    (1, "赵俊强", "男", "汉族", "", "", "", "中共党员", "",
-     "县委书记", "中共三原县委",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (2, "杨红刚", "男", "汉族", "", "", "", "中共党员", "",
-     "县委副书记、县长", "三原县人民政府",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (3, "段朋泊", "男", "汉族", "1979-10", "", "在职研究生", "中共党员", "",
-     "县委副书记（专职）", "中共三原县委",
-     "baike.baidu.com/item/段朋泊/58772370"),
-    (4, "曹博", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、常务副县长", "三原县人民政府",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (5, "刘晖", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、宣传部部长", "中共三原县委宣传部",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (6, "田广军", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、县纪委书记、县监委主任", "中共三原县纪委/县监委",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (7, "李科显", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、副县长", "三原县人民政府",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (8, "许超莹", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、政法委书记", "中共三原县委政法委",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (9, "李超", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、组织部部长", "中共三原县委组织部",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (10, "田成博", "男", "汉族", "", "", "", "中共党员", "",
-     "县委常委、县人武部部长", "三原县人武部",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
+    # ── 现任县委班子 (10名, 含县委书记) ──
+    {"id": 1, "name": "杨红刚", "gender": "男", "ethnicity": "汉族",
+     "birth": "1976-11", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委书记", "current_org": "中共三原县委",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/yhg/"},
+    {"id": 2, "name": "段朋泊", "gender": "男", "ethnicity": "汉族",
+     "birth": "1979-10", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委副书记、县政府党组书记、代县长", "current_org": "三原县人民政府",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/dpb/"},
+    {"id": 3, "name": "刘晖", "gender": "男", "ethnicity": "汉族",
+     "birth": "1981-06", "birthplace": "", "education": "大学本科",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、宣传部部长", "current_org": "中共三原县委宣传部",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/lh_0001/"},
+    {"id": 4, "name": "曹博", "gender": "男", "ethnicity": "汉族",
+     "birth": "1979-10", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、常务副县长", "current_org": "三原县人民政府",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/cb/"},
+    {"id": 5, "name": "田广军", "gender": "男", "ethnicity": "汉族",
+     "birth": "1982-07", "birthplace": "", "education": "大学学历、工学学士",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、县纪委书记、县监委主任", "current_org": "中共三原县纪委/县监委",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/tgj/"},
+    {"id": 6, "name": "李科显", "gender": "男", "ethnicity": "汉族",
+     "birth": "1975-08", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、副县长", "current_org": "三原县人民政府",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/lkx/"},
+    {"id": 7, "name": "许超莹", "gender": "女", "ethnicity": "汉族",
+     "birth": "1977-06", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、政法委书记", "current_org": "中共三原县委政法委",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/xcy/"},
+    {"id": 8, "name": "李超", "gender": "男", "ethnicity": "汉族",
+     "birth": "1984-10", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、组织部部长", "current_org": "中共三原县委组织部",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/lc/"},
+    {"id": 9, "name": "田成博", "gender": "男", "ethnicity": "汉族",
+     "birth": "1975-04", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、县人武部部长", "current_org": "三原县人武部",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/tcb/"},
+    {"id": 10, "name": "雷彬献", "gender": "男", "ethnicity": "汉族",
+     "birth": "1976-06", "birthplace": "", "education": "大学学历",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县委常委、统战部部长", "current_org": "中共三原县委统战部",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xwld/lbx/"},
 
-    # --- 县人大领导 (5人) ---
-    (11, "蒙小卫", "男", "汉族", "", "", "", "中共党员", "",
-     "县人大常委会党组书记、主任", "三原县人大常委会",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (12, "倪新刚", "男", "汉族", "", "", "", "中共党员", "",
-     "县人大常委会副主任", "三原县人大常委会",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (13, "程宁", "男", "汉族", "", "", "", "中共党员", "",
-     "县人大常委会副主任", "三原县人大常委会",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (14, "李鹏科", "男", "汉族", "", "", "", "中共党员", "",
-     "县人大常委会副主任", "三原县人大常委会",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (15, "蔺永芳", "女", "汉族", "", "", "", "中共党员", "",
-     "县人大常委会副主任", "三原县人大常委会",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
+    # ── 县政府班子成员 (除已列者) ──
+    {"id": 11, "name": "尚科", "gender": "男", "ethnicity": "汉族",
+     "birth": "1977-11", "birthplace": "", "education": "大学学历",
+     "party_join": "", "work_start": "",
+     "current_post": "副县长", "current_org": "三原县人民政府",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzfld/sk/"},
+    {"id": 12, "name": "常俊鸿", "gender": "男", "ethnicity": "汉族",
+     "birth": "1972-09", "birthplace": "", "education": "大学学历",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "副县长、县公安局局长", "current_org": "三原县公安局",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzfld/cjh/"},
+    {"id": 13, "name": "陈飞", "gender": "男", "ethnicity": "汉族",
+     "birth": "1987-11", "birthplace": "", "education": "研究生",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "副县长", "current_org": "三原县人民政府",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzfld/cf/"},
+    {"id": 14, "name": "魏书威", "gender": "男", "ethnicity": "汉族",
+     "birth": "1981-03", "birthplace": "", "education": "研究生（工学博士，博士生导师，正高级工程师）",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "副县长", "current_org": "三原县人民政府",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzfld/wsw/"},
 
-    # --- 县政府领导 (含县长和常委副县长已在上方列出，此处只列出非县委常委的副县长) ---
-    # 杨红刚(2)和曹博(4)已在县委领导部分列出
-    (16, "尚科", "男", "汉族", "", "", "", "中共党员", "",
-     "副县长", "三原县人民政府",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (17, "常俊鸿", "男", "汉族", "", "", "", "中共党员", "",
-     "副县长、县公安局局长", "三原县公安局",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (18, "陈飞", "男", "汉族", "", "", "", "中共党员", "",
-     "副县长", "三原县人民政府",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (19, "魏书威", "男", "汉族", "", "", "", "中共党员", "",
-     "副县长", "三原县人民政府",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
+    # ── 县人大常委会 ──
+    {"id": 15, "name": "蒙小卫", "gender": "男", "ethnicity": "汉族",
+     "birth": "1975-03", "birthplace": "", "education": "大专学历",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县人大常委会党组书记、主任", "current_org": "三原县人大常委会",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xrdld/mxw/"},
+    {"id": 16, "name": "倪新刚", "gender": "男", "ethnicity": "汉族",
+     "birth": "1971-04", "birthplace": "", "education": "大学学历",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县人大常委会副主任", "current_org": "三原县人大常委会",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xrdld/nxg/"},
+    {"id": 17, "name": "李鹏科", "gender": "男", "ethnicity": "汉族",
+     "birth": "1972-10", "birthplace": "", "education": "大专学历",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县人大常委会副主任 (兼任县委组织部常务副部长)", "current_org": "三原县人大常委会",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xrdld/lpk/"},
+    {"id": 18, "name": "蔺永芳", "gender": "女", "ethnicity": "汉族",
+     "birth": "1972-07", "birthplace": "", "education": "大专学历",
+     "party_join": "民建会员", "work_start": "",
+     "current_post": "县人大常委会副主任", "current_org": "三原县人大常委会",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xrdld/lyf/"},
 
-    # --- 县政协领导 (4人) ---
-    (20, "李学军", "男", "汉族", "", "", "", "中共党员", "",
-     "县政协主席", "三原县政协",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (21, "张永刚", "男", "汉族", "", "", "", "中共党员", "",
-     "县政协副主席", "三原县政协",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (22, "钱滨", "男", "汉族", "", "", "", "中共党员", "",
-     "县政协副主席", "三原县政协",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
-    (23, "姚青勋", "男", "汉族", "", "", "", "中共党员", "",
-     "县政协副主席", "三原县政协",
-     "snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/"),
+    # ── 县政协 ──
+    {"id": 19, "name": "李学军", "gender": "男", "ethnicity": "汉族",
+     "birth": "1968-10", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县政协党组书记、主席", "current_org": "三原县政协",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzxld/lxj/"},
+    {"id": 20, "name": "张永刚", "gender": "男", "ethnicity": "汉族",
+     "birth": "1970-01", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "县政协党组副书记、副主席", "current_org": "三原县政协",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzxld/zyg/"},
+    {"id": 21, "name": "钱滨", "gender": "男", "ethnicity": "汉族",
+     "birth": "1975-07", "birthplace": "", "education": "",
+     "party_join": "民盟盟员", "work_start": "",
+     "current_post": "县政协副主席", "current_org": "三原县政协",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzxld/qb/"},
+    {"id": 22, "name": "姚青勋", "gender": "男", "ethnicity": "汉族",
+     "birth": "1972-11", "birthplace": "", "education": "",
+     "party_join": "农工党党员", "work_start": "",
+     "current_post": "县政协副主席", "current_org": "三原县政协",
+     "source": "https://www.snsanyuan.gov.cn/zfxxgk/fdzdgknr/ldzc/xzxld/yqx/"},
+
+    # ── 前任县委书记 赵俊强 (已卸任，去向待查) ──
+    {"id": 23, "name": "赵俊强", "gender": "男", "ethnicity": "汉族",
+     "birth": "", "birthplace": "", "education": "",
+     "party_join": "中共党员", "work_start": "",
+     "current_post": "（卸任）", "current_org": "（卸任县委书记）",
+     "source": "https://www.snsanyuan.gov.cn/xw/ (2026年6月前仍以县委书记身份出席活动)"},
 ]
 
-# ===== 组织数据 =====
-# (id, name, type, level, parent, location)
 organizations = [
-    (1, "中共三原县委", "党委", "县级", "中共咸阳市委", "陕西省咸阳市三原县"),
-    (2, "三原县人民政府", "政府", "县级", "咸阳市人民政府", "陕西省咸阳市三原县"),
-    (3, "中共三原县纪律检查委员会", "纪委", "县级", "中共三原县委", "陕西省咸阳市三原县"),
-    (4, "三原县监察委员会", "监察", "县级", "三原县人民政府", "陕西省咸阳市三原县"),
-    (5, "三原县人大常委会", "人大", "县级", "", "陕西省咸阳市三原县"),
-    (6, "三原县政协", "政协", "县级", "", "陕西省咸阳市三原县"),
-    (7, "中共三原县委宣传部", "党委部门", "县级", "中共三原县委", "陕西省咸阳市三原县"),
-    (8, "中共三原县委政法委", "党委部门", "县级", "中共三原县委", "陕西省咸阳市三原县"),
-    (9, "中共三原县委组织部", "党委部门", "县级", "中共三原县委", "陕西省咸阳市三原县"),
-    (10, "三原县人武部", "军事", "县级", "咸阳军分区", "陕西省咸阳市三原县"),
-    (11, "三原县公安局", "政府", "县级", "咸阳市公安局", "陕西省咸阳市三原县"),
+    {"id": 1, "name": "中共三原县委", "type": "党委", "level": "县级", "parent": "中共咸阳市委", "location": "陕西省咸阳市三原县"},
+    {"id": 2, "name": "三原县人民政府", "type": "政府", "level": "县级", "parent": "咸阳市人民政府", "location": "陕西省咸阳市三原县"},
+    {"id": 3, "name": "中共三原县纪律检查委员会", "type": "纪委", "level": "县级", "parent": "中共三原县委", "location": "陕西省咸阳市三原县"},
+    {"id": 4, "name": "三原县监察委员会", "type": "监察", "level": "县级", "parent": "三原县人民政府", "location": "陕西省咸阳市三原县"},
+    {"id": 5, "name": "三原县人大常委会", "type": "人大", "level": "县级", "parent": "", "location": "陕西省咸阳市三原县"},
+    {"id": 6, "name": "三原县政协", "type": "政协", "level": "县级", "parent": "", "location": "陕西省咸阳市三原县"},
+    {"id": 7, "name": "中共三原县委宣传部", "type": "党委部门", "level": "县级", "parent": "中共三原县委", "location": "陕西省咸阳市三原县"},
+    {"id": 8, "name": "中共三原县委政法委", "type": "党委部门", "level": "县级", "parent": "中共三原县委", "location": "陕西省咸阳市三原县"},
+    {"id": 9, "name": "中共三原县委组织部", "type": "党委部门", "level": "县级", "parent": "中共三原县委", "location": "陕西省咸阳市三原县"},
+    {"id": 10, "name": "中共三原县委统战部", "type": "党委部门", "level": "县级", "parent": "中共三原县委", "location": "陕西省咸阳市三原县"},
+    {"id": 11, "name": "三原县人武部", "type": "军事", "level": "县级", "parent": "咸阳军分区", "location": "陕西省咸阳市三原县"},
+    {"id": 12, "name": "三原县公安局", "type": "政府", "level": "县级", "parent": "咸阳市公安局", "location": "陕西省咸阳市三原县"},
 ]
 
-# ===== 任职数据 =====
-# (person_id, org_id, title, start, end, rank, note)
 positions = [
-    # 县委领导
-    (1, 1, "县委书记", "", "", "正县级", ""),
-    (2, 1, "县委副书记", "", "", "正县级", "兼任县长"),
-    (2, 2, "县长", "", "", "正县级", ""),
-    (3, 1, "县委副书记", "", "", "副县级", "专职副书记"),
-    (4, 1, "县委常委", "", "", "副县级", ""),
-    (4, 2, "常务副县长", "", "", "副县级", ""),
-    (5, 1, "县委常委", "", "", "副县级", ""),
-    (5, 7, "宣传部部长", "", "", "副县级", ""),
-    (6, 1, "县委常委", "", "", "副县级", ""),
-    (6, 3, "县纪委书记", "", "", "副县级", ""),
-    (6, 4, "县监委主任", "", "", "副县级", ""),
-    (7, 1, "县委常委", "", "", "副县级", ""),
-    (7, 2, "副县长", "", "", "副县级", ""),
-    (8, 1, "县委常委", "", "", "副县级", ""),
-    (8, 8, "政法委书记", "", "", "副县级", ""),
-    (9, 1, "县委常委", "", "", "副县级", ""),
-    (9, 9, "组织部部长", "", "", "副县级", ""),
-    (10, 1, "县委常委", "", "", "副县级", ""),
-    (10, 10, "人武部部长", "", "", "副县级", ""),
+    # ── 杨红刚 (县委书记, 原县长) ──
+    {"id": 1, "person_id": 1, "org_id": 1, "title": "县委书记", "start": "2026-06", "end": "", "rank": "正县级", "note": "现任"},
+    {"id": 2, "person_id": 1, "org_id": 2, "title": "县长", "start": "", "end": "2026-06", "rank": "正县级", "note": "前任职务，2026年4月仍以县长身份出席五四晚会"},
 
-    # 人大领导
-    (11, 5, "党组书记、主任", "", "", "正县级", ""),
-    (12, 5, "副主任", "", "", "副县级", ""),
-    (13, 5, "副主任", "", "", "副县级", ""),
-    (14, 5, "副主任", "", "", "副县级", ""),
-    (15, 5, "副主任", "", "", "副县级", ""),
+    # ── 段朋泊 (代县长) ──
+    {"id": 3, "person_id": 2, "org_id": 2, "title": "县委副书记、县政府党组书记、代县长", "start": "2026-07", "end": "", "rank": "正县级", "note": "现任"},
+    {"id": 4, "person_id": 2, "org_id": 1, "title": "县委副书记（专职)", "start": "", "end": "2026-07", "rank": "副县级", "note": "前任职务"},
 
-    # 县政府领导（非县委常委）
-    (16, 2, "副县长", "", "", "副县级", ""),
-    (17, 2, "副县长", "", "", "副县级", "兼任公安局长"),
-    (17, 11, "局长", "", "", "副县级", ""),
-    (18, 2, "副县长", "", "", "副县级", ""),
-    (19, 2, "副县长", "", "", "副县级", ""),
+    # ── 县委常委成员 ──
+    {"id": 5, "person_id": 3, "org_id": 7, "title": "县委常委、宣传部部长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 6, "person_id": 4, "org_id": 1, "title": "县委常委", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 7, "person_id": 4, "org_id": 2, "title": "常务副县长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 8, "person_id": 5, "org_id": 3, "title": "县委常委、纪委书记、县监委主任", "start": "2026", "end": "", "rank": "副县级", "note": "现任，曾任宣传部长"},
+    {"id": 9, "person_id": 6, "org_id": 1, "title": "县委常委", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 10, "person_id": 6, "org_id": 2, "title": "副县长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 11, "person_id": 7, "org_id": 1, "title": "县委常委、政法委书记", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 12, "person_id": 8, "org_id": 1, "title": "县委常委、组织部部长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 13, "person_id": 9, "org_id": 1, "title": "县委常委、县人武部部长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 14, "person_id": 10, "org_id": 10, "title": "县委常委、统战部部长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
 
-    # 政协领导
-    (20, 6, "主席", "", "", "正县级", ""),
-    (21, 6, "副主席", "", "", "副县级", ""),
-    (22, 6, "副主席", "", "", "副县级", ""),
-    (23, 6, "副主席", "", "", "副县级", ""),
+    # ── 县政府其他副县长 ──
+    {"id": 15, "person_id": 11, "org_id": 2, "title": "副县长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 16, "person_id": 12, "org_id": 12, "title": "副县长、县公安局局长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 17, "person_id": 13, "org_id": 2, "title": "副县长", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 18, "person_id": 14, "org_id": 2, "title": "副县长", "start": "", "end": "", "rank": "副县级", "note": "现任——专家型人才;技术/挂职"},
 
-    # 段朋泊此前在秦都区的任职
-    (3, 2, "秦都区副区长", "2022-03-19", "2025-11", "副县级", "此前任职"),
+    # ── 县人大常委会 ──
+    {"id": 19, "person_id": 15, "org_id": 5, "title": "县人大常委会党组书记、主任", "start": "", "end": "", "rank": "正县级", "note": "现任"},
+    {"id": 20, "person_id": 16, "org_id": 5, "title": "县人大常委会副主任", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 21, "person_id": 17, "org_id": 5, "title": "县人大常委会副主任", "start": "", "end": "", "rank": "副县级", "note": "现任，兼县委组织部常务副部长"},
+    {"id": 22, "person_id": 18, "org_id": 5, "title": "县人大常委会副主任", "start": "", "end": "", "rank": "副县级", "note": "现任，民建" },
+
+    # ── 县政协 ──
+    {"id": 23, "person_id": 19, "org_id": 6, "title": "县政协党组书记、主席", "start": "", "end": "", "rank": "正县级", "note": "现任"},
+    {"id": 24, "person_id": 20, "org_id": 6, "title": "县政协党组副书记、副主席", "start": "", "end": "", "rank": "副县级", "note": "现任"},
+    {"id": 25, "person_id": 21, "org_id": 6, "title": "县政协副主席", "start": "", "end": "", "rank": "副县级", "note": "现任 (民盟)"},
+    {"id": 26, "person_id": 22, "org_id": 6, "title": "县政协副主席", "start": "", "end": "", "rank": "副县级", "note": "现任 (农工党)"},
+
+    # ── 前任县委书记 赵俊强 ──
+    {"id": 27, "person_id": 23, "org_id": 1, "title": "县委书记", "start": "", "end": "2026-06", "rank": "正县级", "note": "前任县委书记；2026年4-6月尚以书记身份参加活动，6月底前卸任；去向待查"},
 ]
 
-# ===== 关系数据 =====
-# (person_a, person_b, type, context, overlap_org, overlap_period)
 relationships = [
-    # 县委常委班子成员关系
-    (1, 2, "同事", "县委书记与县长搭档", "中共三原县委常委会", "2026年"),
-    (1, 3, "同事", "县委书记与专职副书记共事", "中共三原县委常委会", "2026年"),
-    (1, 4, "同事", "县委书记与常务副县长共事", "中共三原县委常委会", "2026年"),
-    (1, 5, "同事", "县委书记与宣传部长共事", "中共三原县委常委会", "2026年"),
-    (1, 6, "同事", "县委书记与纪委书记共事", "中共三原县委常委会", "2026年"),
-    (1, 7, "同事", "县委书记与副县长共事", "中共三原县委常委会", "2026年"),
-    (1, 8, "同事", "县委书记与政法委书记共事", "中共三原县委常委会", "2026年"),
-    (1, 9, "同事", "县委书记与组织部长共事", "中共三原县委常委会", "2026年"),
-    (1, 10, "同事", "县委书记与人武部长共事", "中共三原县委常委会", "2026年"),
+    # ── 书记-县长搭档 ──
+    {"id": 1, "person_a_id": 1, "person_b_id": 2, "type": "党政搭档", "context": "杨红刚任县委书记，段朋泊任代县长，新一届党政班子", "overlap_org": "中共三原县委", "overlap_period": "2026-07"},
+    {"id": 2, "person_a_id": 23, "person_b_id": 1, "type": "交接", "context": "赵俊强→杨红刚 县委书记交接（约2026年6-7月）", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 3, "person_a_id": 1, "person_b_id": 2, "type": "交接", "context": "杨红刚由县长升任书记，段朋泊由副书记接任代县长（2026年夏）", "overlap_org": "三原县人民政府", "overlap_period": "2026"},
 
-    (2, 3, "同事", "县长与专职副书记共事", "中共三原县委常委会", "2026年"),
-    (2, 4, "同事", "县长与常务副县长共事", "三原县人民政府", "2026年"),
-    (2, 7, "同事", "县长与副县长共事", "三原县人民政府", "2026年"),
-    (2, 16, "同事", "县长与副县长共事", "三原县人民政府", "2026年"),
-    (2, 17, "同事", "县长与副县长共事", "三原县人民政府", "2026年"),
-    (2, 18, "同事", "县长与副县长共事", "三原县人民政府", "2026年"),
-    (2, 19, "同事", "县长与副县长共事", "三原县人民政府", "2026年"),
+    # ── 县委常委会成员同僚 ──
+    {"id": 4, "person_a_id": 1, "person_b_id": 3, "type": "同僚", "context": "县委常委成员在县委常委会共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 5, "person_a_id": 1, "person_b_id": 4, "type": "同僚", "context": "县委书记与常务副县长共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 6, "person_a_id": 1, "person_b_id": 5, "type": "同僚", "context": "县委书记与县纪委书记共事", "overlap_org": "中共三原县纪委", "overlap_period": "2026"},
+    {"id": 7, "person_a_id": 1, "person_b_id": 6, "type": "同僚", "context": "县委书记与副县长共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 8, "person_a_id": 1, "person_b_id": 7, "type": "同僚", "context": "县委书记与政法委书记共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 9, "person_a_id": 1, "person_b_id": 8, "type": "同僚", "context": "县委书记与组织部长共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 10, "person_a_id": 1, "person_b_id": 9, "type": "同僚", "context": "县委书记与人武部长共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
+    {"id": 11, "person_a_id": 1, "person_b_id": 10, "type": "同僚", "context": "县委书记与统战部长共事", "overlap_org": "中共三原县委", "overlap_period": "2026"},
 
-    (4, 7, "同事", "常务副县长与副县长共事", "三原县人民政府", "2026年"),
-    (4, 16, "同事", "常务副县长与副县长共事", "三原县人民政府", "2026年"),
-    (4, 17, "同事", "常务副县长与副县长共事", "三原县人民政府", "2026年"),
-    (4, 18, "同事", "常务副县长与副县长共事", "三原县人民政府", "2026年"),
-    (4, 19, "同事", "常务副县长与副县长共事", "三原县人民政府", "2026年"),
+    # ── 县长-政府班子 ──
+    {"id": 12, "person_a_id": 2, "person_b_id": 11, "type": "同僚", "context": "代县长与副县长共事", "overlap_org": "三原县人民政府", "overlap_period": "2026"},
+    {"id": 13, "person_a_id": 2, "person_b_id": 12, "type": "同僚", "context": "代县长与副县长、公安局长共事", "overlap_org": "三原县人民政府", "overlap_period": "2026"},
+    {"id": 14, "person_a_id": 2, "person_b_id": 13, "type": "同僚", "context": "代县长与副县长共事", "overlap_org": "三原县人民政府", "overlap_period": "2026"},
+    {"id": 15, "person_a_id": 2, "person_b_id": 14, "type": "同僚", "context": "代县长与专家型副县长共事", "overlap_org": "三原县人民政府", "overlap_period": "2026"},
 
-    # 人大主任列席常委会
-    (11, 1, "同事", "人大主任列席县委常委会", "中共三原县委常委会", "2026年"),
-    (11, 2, "同事", "人大主任与县长共事", "三原县", "2026年"),
+    # ── 人大/政协 ──
+    {"id": 16, "person_a_id": 1, "person_b_id": 15, "type": "工作关系", "context": "县委书记与县人大主任", "overlap_org": "三原县", "overlap_period": "2026"},
+    {"id": 17, "person_a_id": 1, "person_b_id": 19, "type": "工作关系", "context": "县委书记与县政协主席", "overlap_org": "三原县", "overlap_period": "2026"},
 
-    # 政协主席列席常委会
-    (20, 1, "同事", "政协主席列席县委常委会", "中共三原县委常委会", "2026年"),
-    (20, 2, "同事", "政协主席与县长共事", "三原县", "2026年"),
+    # ── 前任链条 ──
+    {"id": 18, "person_a_id": 23, "person_b_id": 2, "type": "前后任", "context": "赵俊强任县委书记时，段朋泊任县委副书记", "overlap_org": "中共三原县委", "overlap_period": "2025-2026"},
+    {"id": 19, "person_a_id": 23, "person_b_id": 3, "type": "保存任免", "context": "赵俊强任县委书记时刘晖任宣传部长", "overlap_org": "中共三原县委", "overlap_period": "2025-2026"},
+    {"id": 20, "person_a_id": 23, "person_b_id": 5, "type": "工作关系", "context": "赵俊强任县委书记时，田广军先后任宣传部长、纪委书记", "overlap_org": "中共三原县委", "overlap_period": "2025-2026"},
 
-    # 段朋泊与秦都区政府的过往联系
-    (3, 4, "可能交集", "段朋泊曾任秦都区副区长（至2025年11月），曹博现为三原常务副县长，是否曾在咸阳市政府系统有交集待查", "", "待查"),
+    # ── 提升链条 (田广军 宣传→纪委) ──
+    {"id": 21, "person_a_id": 3, "person_b_id": 5, "type": "前后任", "context": "田广军接任宣传部长（由宣传部长升任纪委书记，宣传部长一职由刘朝接任）", "overlap_org": "中共三原县委宣传部", "overlap_period": ""},
 ]
 
 
-def build_standalone():
-    """Standalone build without the gov_relation runner."""
-    STAGING = Path(__file__).parent
-    DB_PATH = STAGING / "三原县_network.db"
-    GEXF_PATH = STAGING / "三原县_network.gexf"
+# ── BUILD SQLITE DATABASE ────────────────────────────────────────────
 
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+if os.path.exists(DB_PATH):
+    os.remove(DB_PATH)
 
-    conn = sqlite3.connect(str(DB_PATH))
-    conn.execute("PRAGMA foreign_keys = ON")
+conn = sqlite3.connect(DB_PATH)
+cur = conn.cursor()
 
-    # Create tables
-    conn.executescript("""
-        CREATE TABLE IF NOT EXISTS persons (
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            gender TEXT,
-            ethnicity TEXT,
-            birth TEXT,
-            birthplace TEXT,
-            education TEXT,
-            party_join TEXT,
-            work_start TEXT,
-            current_post TEXT,
-            current_org TEXT,
-            source TEXT
-        );
-        CREATE TABLE IF NOT EXISTS organizations (
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            type TEXT,
-            level TEXT,
-            parent TEXT,
-            location TEXT
-        );
-        CREATE TABLE IF NOT EXISTS positions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            person_id INTEGER,
-            org_id INTEGER,
-            title TEXT,
-            start TEXT,
-            end TEXT,
-            rank TEXT,
-            note TEXT,
-            FOREIGN KEY (person_id) REFERENCES persons(id),
-            FOREIGN KEY (org_id) REFERENCES organizations(id)
-        );
-        CREATE TABLE IF NOT EXISTS relationships (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            person_a INTEGER,
-            person_b INTEGER,
-            type TEXT,
-            context TEXT,
-            overlap_org TEXT,
-            overlap_period TEXT,
-            FOREIGN KEY (person_a) REFERENCES persons(id),
-            FOREIGN KEY (person_b) REFERENCES persons(id)
-        );
-    """)
+cur.executescript("""
+CREATE TABLE persons (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    gender TEXT,
+    ethnicity TEXT,
+    birth TEXT,
+    birthplace TEXT,
+    education TEXT,
+    party_join TEXT,
+    work_start TEXT,
+    current_post TEXT,
+    current_org TEXT,
+    source TEXT
+);
 
-    # Insert data
-    conn.executemany(
-        "INSERT OR REPLACE INTO persons VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
-        persons,
-    )
-    conn.executemany(
-        "INSERT OR REPLACE INTO organizations VALUES (?,?,?,?,?,?)",
-        organizations,
-    )
-    conn.executemany(
-        "INSERT OR REPLACE INTO positions (person_id, org_id, title, start, end, rank, note) VALUES (?,?,?,?,?,?,?)",
-        positions,
-    )
-    conn.executemany(
-        "INSERT OR REPLACE INTO relationships (person_a, person_b, type, context, overlap_org, overlap_period) VALUES (?,?,?,?,?,?)",
-        relationships,
-    )
-    conn.commit()
+CREATE TABLE organizations (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    type TEXT,
+    level TEXT,
+    parent TEXT,
+    location TEXT
+);
 
-    print(f"DB: {len(persons)} persons, {len(organizations)} orgs, {len(positions)} positions, {len(relationships)} relationships")
-    conn.close()
+CREATE TABLE positions (
+    id INTEGER PRIMARY KEY,
+    person_id INTEGER NOT NULL,
+    org_id INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    start TEXT,
+    end TEXT,
+    rank TEXT,
+    note TEXT,
+    FOREIGN KEY (person_id) REFERENCES persons(id),
+    FOREIGN KEY (org_id) REFERENCES organizations(id)
+);
 
-    # Generate GEXF
-    name_map = {p[0]: p[1] for p in persons}
-    title_map = {}
-    role_map = {}
-    gender_map = {}
-    for p in persons:
-        title_map[p[0]] = p[9]
-        role_map[p[0]] = p[9]
-        gender_map[p[0]] = p[2]
+CREATE TABLE relationships (
+    id INTEGER PRIMARY KEY,
+    person_a_id INTEGER NOT NULL,
+    person_b_id INTEGER NOT NULL,
+    type TEXT NOT NULL,
+    context TEXT,
+    overlap_org TEXT,
+    overlap_period TEXT,
+    FOREIGN KEY (person_a_id) REFERENCES persons(id),
+    FOREIGN KEY (person_b_id) REFERENCES persons(id)
+);
+""")
 
-    org_name_map = {o[0]: o[1] for o in organizations}
-    org_type_map = {o[0]: o[2] for o in organizations}
+for p in persons:
+    cur.execute("""INSERT INTO persons VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (p["id"], p["name"], p["gender"], p["ethnicity"], p["birth"],
+                 p["birthplace"], p["education"], p["party_join"], p["work_start"],
+                 p["current_post"], p["current_org"], p["source"]))
 
-    org_nodes = {}
-    for pid, org_id, title, *_ in positions:
-        if pid not in org_nodes:
-            org_nodes[pid] = []
-        org_nodes[pid].append(org_id)
+for o in organizations:
+    cur.execute("""INSERT INTO organizations VALUES (?,?,?,?,?,?)""",
+                (o["id"], o["name"], o["type"], o["level"], o["parent"], o["location"]))
 
-    gexf_parts = []
-    gexf_parts.append('<?xml version="1.0" encoding="UTF-8"?>')
-    gexf_parts.append('<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">')
-    gexf_parts.append('<graph defaultedgetype="undirected">')
+for pos in positions:
+    cur.execute("""INSERT INTO positions VALUES (?,?,?,?,?,?,?,?)""",
+                (pos["id"], pos["person_id"], pos["org_id"], pos["title"],
+                 pos["start"], pos["end"], pos["rank"], pos["note"]))
 
-    # Nodes
-    gexf_parts.append('<nodes>')
-    pid_offset = 0
-    oid_offset = 100000
+for r in relationships:
+    cur.execute("""INSERT INTO relationships VALUES (?,?,?,?,?,?,?)""",
+                (r["id"], r["person_a_id"], r["person_b_id"], r["type"],
+                 r["context"], r["overlap_org"], r["overlap_period"]))
 
-    for p in persons:
-        pid = p[0]
-        name = p[1]
-        title = p[9]
+conn.commit()
 
-        # Color by role
-        if '书记' in title and '副' not in title:
-            color = '#E03C31'  # Red - party secretary
-            size = 20.0
-        elif '县长' in title and '副' not in title and '副书记' not in title:
-            color = '#2979FF'  # Blue - county chief
-            size = 20.0
-        elif '副' in title and ('书记' in title or '县长' in title):
-            color = '#2979FF'  # Blue - deputy secretary/magistrate
-            size = 16.0
-        elif '纪委书记' in title or '监委' in title:
-            color = '#FF8C00'  # Orange - discipline
-            size = 16.0
-        elif '人大' in title:
-            color = '#9C27B0'  # Purple - people's congress
-            size = 14.0
-        elif '政协' in title:
-            color = '#00BCD4'  # Cyan - political consultative
-            size = 14.0
-        elif '县委常委' in title:
-            color = '#FF7043'  # Deep orange - standing committee
-            size = 16.0
-        elif '副县长' in title:
-            color = '#42A5F5'  # Light blue - deputy county chief
-            size = 14.0
-        else:
-            color = '#9E9E9E'  # Grey - other
-            size = 12.0
+# Summary stats
+cur.execute("SELECT COUNT(*) FROM persons")
+person_count = cur.fetchone()[0]
+cur.execute("SELECT COUNT(*) FROM organizations")
+org_count = cur.fetchone()[0]
+cur.execute("SELECT COUNT(*) FROM positions")
+pos_count = cur.fetchone()[0]
+cur.execute("SELECT COUNT(*) FROM relationships")
+rel_count = cur.fetchone()[0]
 
-        gexf_parts.append(f'<node id="{pid + pid_offset}" label="{escape(name)}">')
-        gexf_parts.append(f'<attvalues>')
-        gexf_parts.append(f'<attvalue for="role" value="{escape(title)}"/>')
-        gexf_parts.append(f'<attvalue for="type" value="person"/>')
-        birth = p[4] or ''
-        gexf_parts.append(f'<attvalue for="birth" value="{escape(birth)}"/>')
-        gexf_parts.append(f'</attvalues>')
-        gexf_parts.append(f'<viz:color r="{int(color[1:3],16)}" g="{int(color[3:5],16)}" b="{int(color[5:7],16)}"/>')
-        gexf_parts.append(f'<viz:size value="{size}"/>')
-        if title:
-            gexf_parts.append(f'<viz:position x="0" y="0" z="0"/>')
-        gexf_parts.append('</node>')
-
-    for o in organizations:
-        oid = o[0]
-        oname = o[1]
-        otype = o[2]
-        if otype in ('党委', '党委部门', '纪委'):
-            color = '#E03C31'
-        elif otype == '政府':
-            color = '#2979FF'
-        elif otype in ('人大',):
-            color = '#9C27B0'
-        elif otype == '政协':
-            color = '#00BCD4'
-        elif otype == '军事':
-            color = '#4CAF50'
-        else:
-            color = '#9E9E9E'
-
-        gexf_parts.append(f'<node id="{oid + oid_offset}" label="{escape(oname)}">')
-        gexf_parts.append('<attvalues>')
-        gexf_parts.append(f'<attvalue for="role" value="{escape(oname)}"/>')
-        gexf_parts.append(f'<attvalue for="type" value="organization"/>')
-        gexf_parts.append('</attvalues>')
-        gexf_parts.append(f'<viz:color r="{int(color[1:3],16)}" g="{int(color[3:5],16)}" b="{int(color[5:7],16)}"/>')
-        gexf_parts.append('<viz:size value="8.0"/>')
-        gexf_parts.append('</node>')
-
-    gexf_parts.append('</nodes>')
-
-    # Edges
-    gexf_parts.append('<edges>')
-    edge_id = 0
-
-    for pos in positions:
-        pid, oid = pos[0], pos[1]
-        gexf_parts.append(
-            f'<edge id="{edge_id}" source="{pid + pid_offset}" target="{oid + oid_offset}" '
-            f'label="{escape(pos[2])}" type="directed">'
-        )
-        gexf_parts.append('<attvalues>')
-        gexf_parts.append(f'<attvalue for="type" value="worked_at"/>')
-        if pos[3]:
-            gexf_parts.append(f'<attvalue for="start" value="{escape(pos[3])}"/>')
-        if pos[4]:
-            gexf_parts.append(f'<attvalue for="end" value="{escape(pos[4])}"/>')
-        gexf_parts.append('</attvalues>')
-        gexf_parts.append(f'<viz:color r="180" g="180" b="180"/>')
-        gexf_parts.append(f'<viz:thickness value="1.0"/>')
-        gexf_parts.append('</edge>')
-        edge_id += 1
-
-    for rel in relationships:
-        pa, pb = rel[0], rel[1]
-        rtype = rel[2]
-        context = rel[3]
-
-        if '同事' in rtype:
-            color = '#C9A94E'
-            thickness = 2.0
-        elif '可能交集' in rtype:
-            color = '#64B5F6'
-            thickness = 1.0
-        else:
-            color = '#9E9E9E'
-            thickness = 1.5
-
-        gexf_parts.append(
-            f'<edge id="{edge_id}" source="{pa + pid_offset}" target="{pb + pid_offset}" '
-            f'label="{escape(rtype)}">'
-        )
-        gexf_parts.append('<attvalues>')
-        gexf_parts.append(f'<attvalue for="type" value="relationship"/>')
-        gexf_parts.append(f'<attvalue for="context" value="{escape(context)}"/>')
-        if rel[5]:
-            gexf_parts.append(f'<attvalue for="period" value="{escape(rel[5])}"/>')
-        gexf_parts.append('</attvalues>')
-        gexf_parts.append(f'<viz:color r="{int(color[1:3],16)}" g="{int(color[3:5],16)}" b="{int(color[5:7],16)}"/>')
-        gexf_parts.append(f'<viz:thickness value="{thickness}"/>')
-        gexf_parts.append('</edge>')
-        edge_id += 1
-
-    gexf_parts.append('</edges>')
-
-    # Attributes
-    gexf_parts.append('<attributes class="node">')
-    gexf_parts.append('<attribute id="role" title="Role" type="string"/>')
-    gexf_parts.append('<attribute id="type" title="Type" type="string"/>')
-    gexf_parts.append('<attribute id="birth" title="Birth" type="string"/>')
-    gexf_parts.append('</attributes>')
-    gexf_parts.append('<attributes class="edge">')
-    gexf_parts.append('<attribute id="type" title="Type" type="string"/>')
-    gexf_parts.append('<attribute id="context" title="Context" type="string"/>')
-    gexf_parts.append('<attribute id="start" title="Start" type="string"/>')
-    gexf_parts.append('<attribute id="end" title="End" type="string"/>')
-    gexf_parts.append('<attribute id="period" title="Period" type="string"/>')
-    gexf_parts.append('</attributes>')
-
-    gexf_parts.append('</graph>')
-    gexf_parts.append('</gexf>')
-
-    with open(GEXF_PATH, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(gexf_parts))
-
-    print(f"GEXF: {GEXF_PATH}")
-    print(f"Built successfully: {SLUG}")
+conn.close()
+print(f"SQLite database written: {DB_PATH}")
+print(f"  Persons: {person_count}")
+print(f"  Organizations: {org_count}")
+print(f"  Positions: {pos_count}")
+print(f"  Relationships: {rel_count}")
 
 
-def main():
-    if USING_RUNNER:
-        persons_dict = [
-            {"id": str(p[0]), "name": p[1], "gender": p[2], "ethnicity": p[3],
-             "birth": p[4], "birthplace": p[5], "education": p[6],
-             "party_join": p[7], "work_start": p[8], "current_post": p[9],
-             "current_org": p[10], "source": p[11]}
-            for p in persons
-        ]
-        orgs_dict = [
-            {"id": str(o[0]), "name": o[1], "type": o[2], "level": o[3],
-             "parent": o[4], "location": o[5]}
-            for o in organizations
-        ]
-        positions_dict = [
-            {"person_id": str(pos[0]), "org_id": str(pos[1]), "title": pos[2],
-             "start": pos[3] or "", "end": pos[4] or "", "rank": pos[5] or "", "note": pos[6] or ""}
-            for pos in positions
-        ]
-        rels_dict = [
-            {"person_a": str(rel[0]), "person_b": str(rel[1]), "type": rel[2],
-             "context": rel[3], "overlap_org": rel[4], "overlap_period": rel[5]}
-            for rel in relationships
-        ]
-        run_build(
-            slug=SLUG,
-            persons=persons_dict,
-            organizations=orgs_dict,
-            positions=positions_dict,
-            relationships=rels_dict,
-            db_path=DATABASE_DIR / "三原县_network.db",
-            gexf_path=GRAPH_DIR / "三原县_network.gexf",
-        )
+# ── BUILD GEXF GRAPH ────────────────────────────────────────────────
+
+today = datetime.now().strftime("%Y-%m-%d")
+
+lines = []
+lines.append('<?xml version="1.0" encoding="UTF-8"?>')
+lines.append('<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">')
+lines.append(f'  <meta lastmodifieddate="{today}">')
+lines.append('    <creator>china-gov-network skill</creator>')
+lines.append(f'    <description>三原县领导班子工作关系网络 - {today}</description>')
+lines.append('  </meta>')
+lines.append('  <graph mode="static" defaultedgetype="undirected">')
+
+# ── Attributes ──
+lines.append('    <attributes class="node">')
+lines.append('      <attribute id="type" title="Type" type="string"/>')
+lines.append('      <attribute id="category" title="Category" type="string"/>')
+lines.append('      <attribute id="birth" title="Birth" type="string"/>')
+lines.append('      <attribute id="birthplace" title="Birthplace" type="string"/>')
+lines.append('      <attribute id="education" title="Education" type="string"/>')
+lines.append('      <attribute id="current_post" title="Current Post" type="string"/>')
+lines.append('      <attribute id="source" title="Source" type="string"/>')
+lines.append('    </attributes>')
+lines.append('    <attributes class="edge">')
+lines.append('      <attribute id="type" title="Type" type="string"/>')
+lines.append('      <attribute id="context" title="Context" type="string"/>')
+lines.append('      <attribute id="period" title="Period" type="string"/>')
+lines.append('    </attributes>')
+
+# ── Nodes: Persons ──
+lines.append('    <nodes>')
+for p in persons:
+    if p["id"] in [1, 23]:
+        color = (255, 50, 50)   # red: 县委书记
+        size = 20.0
+    elif p["id"] in [2]:
+        color = (50, 100, 255)  # blue: 政府领导(县长/代县长)
+        size = 20.0
+    elif p["id"] in [5]:
+        color = (255, 165, 0)   # orange: 纪委书记
+        size = 16.0
+    elif p["id"] in [4, 11, 12, 13, 6, 14]:
+        color = (50, 100, 255)  # blue: 政府领导
+        size = 12.0
     else:
-        build_standalone()
+        color = (100, 100, 100) # grey: 其他
+        size = 12.0
 
+    lines.append(f'      <node id="{p["id"]}" label="{p["name"]}">')
+    lines.append(f'        <attvalues>')
+    lines.append(f'          <attvalue for="type" value="person"/>')
+    lines.append(f'          <attvalue for="category" value="person"/>')
+    lines.append(f'          <attvalue for="birth" value="{p["birth"]}"/>')
+    lines.append(f'          <attvalue for="birthplace" value="{p["birthplace"]}"/>')
+    lines.append(f'          <attvalue for="education" value="{p["education"]}"/>')
+    lines.append(f'          <attvalue for="current_post" value="{p["current_post"]}"/>')
+    lines.append(f'          <attvalue for="source" value="{p["source"]}"/>')
+    lines.append(f'        </attvalues>')
+    lines.append(f'        <viz:color r="{color[0]}" g="{color[1]}" b="{color[2]}"/>')
+    lines.append(f'        <viz:size value="{size}"/>')
+    lines.append(f'      </node>')
 
-if __name__ == "__main__":
-    main()
+# ── Nodes: Organizations ──
+for o in organizations:
+    oid = 1000 + o["id"]
+    lines.append(f'      <node id="{oid}" label="{o["name"]}">')
+    lines.append(f'        <attvalues>')
+    lines.append(f'          <attvalue for="type" value="org"/>')
+    lines.append(f'          <attvalue for="category" value="{o["type"]}"/>')
+    lines.append(f'        </attvalues>')
+    lines.append(f'        <viz:color r="44" g="62" b="80"/>')
+    lines.append(f'        <viz:size value="8.0"/>')
+    lines.append(f'      </node>')
+lines.append('    </nodes>')
+
+# ── Edges ──
+lines.append('    <edges>')
+edge_id = 1
+
+# person→organization (worked_at)
+for pos in positions:
+    oid = 1000 + pos["org_id"]
+    lines.append(f'      <edge id="{edge_id}" source="{pos["person_id"]}" target="{oid}" label="worked_at">')
+    lines.append(f'        <attvalues>')
+    lines.append(f'          <attvalue for="type" value="worked_at"/>')
+    lines.append(f'          <attvalue for="context" value="{pos["title"]}"/>')
+    lines.append(f'          <attvalue for="period" value="{pos["start"] or "?"} → {pos["end"] or "今"}"/>')
+    lines.append(f'        </attvalues>')
+    lines.append(f'      </edge>')
+    edge_id += 1
+
+# person↔person (relationships)
+for r in relationships:
+    lines.append(f'      <edge id="{edge_id}" source="{r["person_a_id"]}" target="{r["person_b_id"]}" label="{r["type"]}">')
+    lines.append(f'        <attvalues>')
+    lines.append(f'          <attvalue for="type" value="{r["type"]}"/>')
+    lines.append(f'          <attvalue for="context" value="{r["context"]}"/>')
+    lines.append(f'          <attvalue for="period" value="{r["overlap_period"]}"/>')
+    lines.append(f'        </attvalues>')
+    lines.append(f'      </edge>')
+    edge_id += 1
+
+lines.append('    </edges>')
+lines.append('  </graph>')
+lines.append('</gexf>')
+
+with open(GEXF_PATH, "w", encoding="utf-8") as f:
+    f.write("\n".join(lines))
+
+total_nodes = len(persons) + len(organizations)
+total_edges = len(positions) + len(relationships)
+print(f"\nGEXF graph written: {GEXF_PATH}")
+print(f"  Nodes: {len(persons)} persons + {len(organizations)} organizations = {total_nodes} total")
+print(f"  Edges: {len(positions)} worked_at + {len(relationships)} relationships = {total_edges} total")
+print("\nDone!")
