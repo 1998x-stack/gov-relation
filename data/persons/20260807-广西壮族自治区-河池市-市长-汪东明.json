@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-07",
+  "investigation_scope": {
+    "province": "广西壮族自治区",
+    "city": "河池市",
+    "region": "河池市",
+    "job": "市长",
+    "task_id": "guangxi_河池市",
+    "time_focus": "2021-2026"
+  },
+  "identity": {
+    "person_id": "hechi_wang_dongming",
+    "name": "汪东明",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "1980-05",
+    "birthplace": "浙江省杭州市",
+    "native_place": "浙江省杭州市",
+    "education": [],
+    "party_join": "",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "汪东明_1980-05",
+      "name_birthplace": "汪东明_浙江杭州",
+      "official_profile_url": "https://zh.wikipedia.org/wiki/河池市"
+    }
+  },
+  "current_status": {
+    "current_post": "河池市委副书记、市政府市长",
+    "current_org": "河池市人民政府",
+    "administrative_rank": "正厅级",
+    "as_of": "2026-08-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S003"]
+  },
+  "career_timeline": [
+    {"start": "unknown", "end": "2026-01", "org": "（此前任职单位，公开资料未检索到）", "title": "履历缺口", "level": "", "location": "", "system": "unknown", "rank": "", "is_key_promotion": false, "notes": "公开渠道（维基百科、河池市政府网、中国经济网）未检索到其 2026-02 任职河池市长之前的职务史。1980年生、46岁任地级市市长，属快速晋升样本，疑为区直部门/专业技术干部或东部交流干部，待查。", "confidence": "unverified", "source_ids": []},
+    {"start": "2026-02", "end": "present", "org": "河池市人民政府", "title": "市委副书记、市政府市长", "level": "正厅级", "location": "广西河池市", "system": "government", "rank": "正厅级", "is_key_promotion": true, "notes": "2026-02 就任，接替王军；2026-07/08 主持市政府常务会与工业、农业农村调研", "confidence": "confirmed", "source_ids": ["S001", "S003"]}
+  ],
+  "organizations": [
+    {"org": "河池市人民政府", "role": "市长", "period": "2026-", "system": "government"}
+  ],
+  "relationships": [
+    {"person": "朱会东", "person_id": "hechi_zhu_huidong", "relationship_type": "superior_subordinate", "strength": "strong", "evidence": "党政正职搭档：市长与市委书记", "overlap_org": "河池市", "overlap_period": "2026-", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S001"]},
+    {"person": "王军", "person_id": "hechi_wang_jun", "relationship_type": "predecessor_successor", "strength": "strong", "evidence": "汪东明接任王军任河池市长", "overlap_org": "河池市人民政府", "overlap_period": "2026-02", "direction": "person_to_other", "confidence": "confirmed", "source_ids": ["S001"]}
+  ],
+  "governance_record": [
+    {"period": "2026-07/08", "domain": "economic_development", "achievement_or_event": "主持召开市政府常务会议；赴金城江区推进关键金属产业重点项目、赴宜州调研农业产业与水库安全", "role_in_event": "市长", "measurable_outcome": "", "location": "广西河池市", "confidence": "confirmed", "source_ids": ["S003"]}
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "unknown",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["浙江杭州→广西"],
+    "promotion_velocity": {
+      "summary": "1980年生46岁任地级市市长，若为全程省内晋升则属快速，但履历未知无法评估",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {"trait": "practical", "evidence": "频繁深入县区调研产业与农业（河池市政府门户）", "confidence": "plausible", "source_ids": ["S003"]}
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "仅依据有限公开活动推断，证据不足。"
+  },
+  "network_metrics": {
+    "cross_city_moves": ["未知"],
+    "systems_touched": 1,
+    "centrality_estimate": "高（地市主官）"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "公开渠道未发现违纪违法信息（截至2026-08）", "date": "2026-08-07", "confidence": "plausible", "source_ids": ["S001"]}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "维基百科·河池市（现任领导）", "url": "https://zh.wikipedia.org/wiki/河池市", "publisher": "维基百科", "published_at": "2026", "accessed_at": "2026-08-07", "source_type": "encyclopedia", "reliability": "medium", "notes": "确认市长=汪东明（1980-05，浙江杭州，2026-02就任）"},
+    {"id": "S003", "title": "河池市人民政府门户网站·要闻", "url": "http://www.hechi.gov.cn/", "publisher": "河池市人民政府", "published_at": "2026-08", "accessed_at": "2026-08-07", "source_type": "official", "reliability": "high", "notes": "确认汪东明2026-07/08仍主持市政府工作"}
+  ],
+  "confidence_summary": {
+    "identity": "confirmed",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "2026-02任期前全部职业生涯（曾任职务/单位/教育/入党/参加工作时间均未知）"
+  },
+  "open_questions": [
+    {"priority": "critical", "question": "汪东明 2026-02 之前历任职务、学历、入党及参加工作时间", "why_it_matters": "核心主官完整履历缺 90%，无法判断其来源系统与晋升路径", "suggested_queries": ["汪东明 河池 任前公示", "汪东明 简历 广西", "汪东明 市长 贵州/浙江 选调"], "last_attempted": "2026-08-07"}
+  ]
+}
