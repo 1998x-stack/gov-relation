@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-07",
+  "investigation_scope": {
+    "province": "宁夏回族自治区",
+    "city": "中卫市",
+    "region": "中卫市",
+    "job": "副市长",
+    "task_id": "ningxia_中卫市",
+    "time_focus": "current (2021-2026)"
+  },
+  "identity": {
+    "person_id": "ningxia_zhongning_chenhong",
+    "name": "陈宏",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [
+      {
+        "period": "",
+        "institution": "",
+        "major": "",
+        "degree": "",
+        "study_type": "unknown",
+        "source_ids": []
+      }
+    ],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "陈宏_",
+      "name_birthplace": "陈宏_",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "中卫市副市长（原中宁县委书记）",
+    "current_org": "中卫市人民政府",
+    "administrative_rank": "副厅级",
+    "as_of": "2026-08-07",
+    "is_current_confirmed": true,
+    "source_ids": [
+      "S001",
+      "S002"
+    ]
+  },
+  "career_timeline": [
+    {
+      "start": "2018",
+      "end": "2021",
+      "org": "中共中宁县委员会",
+      "title": "中宁县委书记",
+      "level": "县",
+      "location": "宁夏回族自治区中卫市中宁县",
+      "system": "party",
+      "rank": "县处级正职",
+      "is_key_promotion": true,
+      "notes": "原任中宁县委书记",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "start": "2021",
+      "end": "present",
+      "org": "中卫市人民政府",
+      "title": "中卫市副市长",
+      "level": "地级市",
+      "location": "宁夏回族自治区中卫市",
+      "system": "government",
+      "rank": "副厅级",
+      "is_key_promotion": true,
+      "notes": "中宁县委书记升任中卫市副市长",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001",
+        "S002"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "name": "中宁县人民政府",
+      "role": "原工作单位",
+      "location": "宁夏回族自治区中卫市中宁县"
+    },
+    {
+      "name": "中卫市人民政府",
+      "role": "现任单位",
+      "location": "宁夏回族自治区中卫市"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "何建勃",
+      "person_id": "ningxia_zhongning_hejianbo",
+      "relationship_type": "predecessor_successor",
+      "strength": "strong",
+      "evidence": "陈宏原任中宁县委书记，何建勃在其任书记时担任县长并继任县委书记",
+      "overlap_org": "中宁县委员会",
+      "overlap_period": "2018-2021",
+      "direction": "person_to_other",
+      "confidence": "confirmed",
+      "source_ids": [
+        "S001"
+      ]
+    },
+    {
+      "person": "中卫市市长（待核实）",
+      "person_id": "ningxia_zhongwei_mayor_tbd",
+      "relationship_type": "superior_subordinate",
+      "strength": "strong",
+      "evidence": "副市长协助市长工作（组织关系）",
+      "overlap_org": "中卫市人民政府",
+      "overlap_period": "current",
+      "direction": "undirected",
+      "confidence": "unverified"
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": [
+      "party",
+      "government"
+    ],
+    "geographic_pattern": [
+      "中卫市"
+    ],
+    "promotion_velocity": {
+      "summary": "从县委书记升任地级市副市长，属正常职务晋升",
+      "notable_fast_promotions": []
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {},
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "未发现可核实的违纪或负面信号",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "中宁县领导班子调研报告（陈宏履历）",
+      "url": "",
+      "publisher": "gov-relation 仓库",
+      "published_at": "2026-07-25",
+      "accessed_at": "2026-08-07",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "本项目 data/persons/20260725-中卫市-前任县委书记-陈宏.json"
+    },
+    {
+      "id": "S002",
+      "title": "build_中宁县_data.py（陈宏升任中卫市副市长）",
+      "url": "",
+      "publisher": "gov-relation 仓库",
+      "published_at": "",
+      "accessed_at": "2026-08-07",
+      "source_type": "database",
+      "reliability": "medium",
+      "notes": "scripts/build/build_中宁县_data.py"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "早期履历与出生、教育信息缺失"
+  },
+  "open_questions": [
+    {
+      "priority": "high",
+      "question": "陈宏的出生、籍贯、教育背景",
+      "why_it_matters": "补全副市长核心画像字段",
+      "suggested_queries": ["陈宏 中卫市副市长 简历", "陈宏 中宁县委书记 籍贯"],
+      "last_attempted": "2026-08-07"
+    },
+    {
+      "priority": "medium",
+      "question": "陈宏任中卫市副市长的具体分工",
+      "why_it_matters": "分工反映其权力边界与工作网络",
+      "suggested_queries": ["中卫市副市长 陈宏 分工"],
+      "last_attempted": "2026-08-07"
+    }
+  ]
+}
