@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-07",
+  "investigation_scope": {
+    "province": "辽宁省",
+    "city": "葫芦岛市",
+    "region": "建昌县",
+    "job": "县长",
+    "task_id": "liaoning_建昌县",
+    "time_focus": "现任（截至2026-08）"
+  },
+  "identity": {
+    "person_id": "liaoning_jianchang_zhaoyiyang",
+    "name": "赵宜洋",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "",
+    "birth": "",
+    "birthplace": "",
+    "native_place": "",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "",
+    "dedupe_keys": {
+      "name_birth": "赵宜洋_未知",
+      "name_birthplace": "",
+      "official_profile_url": "https://www.jianchang.gov.cn/"
+    }
+  },
+  "current_status": {
+    "current_post": "建昌县委副书记、县长",
+    "current_org": "建昌县人民政府",
+    "administrative_rank": "正处级",
+    "as_of": "2026-08-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002"]
+  },
+  "career_timeline": [
+    {
+      "start": "2022",
+      "end": "present",
+      "org": "建昌县人民政府",
+      "title": "建昌县委副书记、县长",
+      "level": "县级",
+      "location": "辽宁省葫芦岛市建昌县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2022年12月18日在建昌县第十八届人民代表大会第三次会议上作政府工作报告（以县长身份）；延续至今（2025年6月第92次常务会议仍以县长身份主持）",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "start": "2021",
+      "end": "2022",
+      "org": "建昌县人民政府",
+      "title": "建昌县常务副县长（拟任县长前）",
+      "level": "县级",
+      "location": "辽宁省葫芦岛市建昌县",
+      "system": "government",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "公开报道称其此前曾任建昌县常务副县长（曾任县常委）",
+      "confidence": "plausible",
+      "source_ids": ["S003"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "level": "",
+      "location": "",
+      "system": "unknown",
+      "rank": "",
+      "is_key_promotion": false,
+      "notes": "出生年月、籍贯、学历及担任建昌县常务副县长之前更早的职务均未公开",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {"name": "建昌县人民政府", "role": "县长", "period": "2022-至今", "location": "建昌县"}
+  ],
+  "relationships": [
+    {
+      "person": "周佳楷",
+      "person_id": "liaoning_jianchang_zhoujiakai",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "现任建昌县委副书记、县长与县委书记周佳楷形成党政一把手搭档，多次同场出席县委会议",
+      "overlap_org": "建昌县党政班子",
+      "overlap_period": "2025-至今",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    },
+    {
+      "person": "张祥波",
+      "person_id": "liaoning_jianchang_zhang_xiangbo",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "张祥波曾任建昌县县长（2021年）、后任县委书记；赵宜洋约在张祥波升任书记后接任县长",
+      "overlap_org": "建昌县人民政府",
+      "overlap_period": "2022前后（交接）",
+      "direction": "person_to_other",
+      "confidence": "plausible",
+      "source_ids": ["S002", "S004"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2022-至今",
+      "domain": "other",
+      "achievement_or_event": "作《政府工作报告》主持推进全县经济运行、项目建设、乡村振兴、营商环境等治理工作",
+      "role_in_event": "县长，全面主持县政府工作",
+      "measurable_outcome": "",
+      "location": "建昌县",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["government"],
+    "geographic_pattern": ["建昌县"],
+    "promotion_velocity": {
+      "summary": "本地政府系统成长，由常务副县长升任县长（正处级）",
+      "notable_fast_promotions": ["由常务副县长升任县长"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "grassroots_oriented",
+        "evidence": "多次带队开展森林防火、消防安全检查（公开报道），做实民生与安全工作",
+        "confidence": "plausible",
+        "source_ids": ["S003"]
+      }
+    ],
+    "speech_themes": ["民生保障", "安全生产", "乡村振兴"],
+    "management_signals": [],
+    "caveat": "工作风格根据公开报道与活动推断，非心理评估。"
+  },
+  "network_metrics": {
+    "degree_centrality": "mid",
+    "key_connections": ["周佳楷（县委书记）", "张祥波（前任县长/书记）"],
+    "cross_jurisdiction_links": 1
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至2026-08-07检索，未发现赵宜洋被立案查处或负面纪律的公开报道",
+      "date": "2026-08-07",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "建昌县委理论学习中心组2025年度第12次（扩大）学习会议",
+      "url": "https://www.jianchang.gov.cn/xxgk_3511/zfxxgk/fdzdgknr/zdhyxx/qthy/202512/t20251222_1224738.html",
+      "publisher": "建昌县人民政府",
+      "published_at": "2025-12-22",
+      "accessed_at": "2026-08-07",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认赵宜洋现任建昌县委副书记、县长"
+    },
+    {
+      "id": "S002",
+      "title": "第十八届建昌县人民政府第92次常务会议新闻",
+      "url": "https://www.jianchang.gov.cn/xxgk_3511/zfxxgk/fdzdgknr/zdhyxx/cwhy/202506/t20250623_1210340.html",
+      "publisher": "建昌县人民政府",
+      "published_at": "2025-06-23",
+      "accessed_at": "2026-08-07",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认县长赵宜洋主持常务会议，列名常务副县长杨宇及副县长冀大勇等"
+    },
+    {
+      "id": "S003",
+      "title": "建昌县2023年政府工作报告（赵宜洋以县长身份作报告）+ 新闻资讯",
+      "url": "http://www.zgcounty.com/news/28177.html",
+      "publisher": "中国县域 / 建昌县融媒体",
+      "published_at": "2022-12-18",
+      "accessed_at": "2026-08-07",
+      "source_type": "official",
+      "reliability": "medium",
+      "notes": "确认2022年12月赵宜洋已任县长；此前曾任常务副县长的报道"
+    },
+    {
+      "id": "S004",
+      "title": "张祥波任葫芦岛市副市长（中国经济网）",
+      "url": "http://district.ce.cn/newarea/sddy/202504/28/t20250428_39351706.shtml",
+      "publisher": "中国经济网",
+      "published_at": "2025-04-28",
+      "accessed_at": "2026-08-07",
+      "source_type": "media",
+      "reliability": "high",
+      "notes": "确认张祥波曾任建昌县委书记；此前亦任建昌县委、县长"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "plausible",
+    "current_role": "confirmed",
+    "career_completeness": "thin",
+    "relationship_confidence": "medium",
+    "biggest_gap": "赵宜洋出生年月、籍贯、学历及任建昌常务副县长前的更早期履历均未公开"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "赵宜洋的出生年月、民族、学历、入党时间、工作起点",
+      "why_it_matters": "当前核心一把手之一的身份信息严重缺失，影响去重与网络分析",
+      "suggested_queries": ["赵宜洋 简历 建昌县长", "赵宜洋 出生 建昌 任职"],
+      "last_attempted": "2026-08-07"
+    },
+    {
+      "priority": "high",
+      "question": "赵宜洋任建昌县长前的完整职务链（何时由常务副县长升任？此前在哪个系统）",
+      "why_it_matters": "判断县长来源（本地成长还是跨县调入）及其网络根基",
+      "suggested_queries": ["赵宜洋 常务副县长 任职", "赵宜洋 简历 建昌"],
+      "last_attempted": "2026-08-07"
+    }
+  ]
+}
