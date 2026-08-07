@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Generator
 
@@ -70,7 +71,7 @@ def mock_all(monkeypatch: Any, tmp_path: Path) -> Generator[Path, None, None]:
                         "level": "prefecture",
                         "done": False,
                         "blocked": True,
-                        "blocked_at": "2026-08-03T10:00:00+00:00",  # recent — stays blocked
+                        "blocked_at": (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat(),  # recent (1h ago) — stays blocked
                         "blocked_reason": "exceeded max retries",
                         "targets": [{"role": "市委书记"}],
                     },

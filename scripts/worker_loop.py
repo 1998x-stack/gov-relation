@@ -105,70 +105,71 @@ def main() -> int:
     while True:
         if args.max_tasks and completed >= args.max_tasks:
             return 0
-        claim = claim_next(
-            args.worker_id,
-            args.model_intent,
-            opencode_agent=args.opencode_agent,
-            opencode_model=args.opencode_model,
-        )
-        if claim is None:
-            logger.info("NO_TASKS_AVAILABLE")
-            return 0
-        task_id = claim["task"]["task_id"]
-        prompt_path = claim["prompt_path"]
-        logger.info("CLAIMED %s prompt=%s", task_id, prompt_path)
-
-        if not args.execute:
-            agent_arg = f" --agent {args.opencode_agent}" if args.opencode_agent else ""
-            logger.info("Run: %s run%s --model %s '<prompt from %s>'", args.opencode_bin, agent_arg, args.opencode_model, prompt_path)
-            return 0
-
-        logger.info("START opencode task=%s", task_id)
-        prompt_text = Path(prompt_path).read_text(encoding="utf-8")
-        command = [args.opencode_bin, "run", "--model", args.opencode_model]
-        if args.opencode_agent:
-            command.extend(["--agent", args.opencode_agent])
-        if args.opencode_auto:
-            command.append("--auto")
-        command.append(prompt_text)
+        # Acquire a concurrency slot BEFORE claiming so active claim count
+        # matches the actual number of running agents (no phantom claims).
+        logger.info("WAIT_GATE worker=%s", args.worker_id)
         with concurrency_acquire(args.worker_id, max_active=args.concurrency):
-            logger.info("GATE acquired worker=%s task=%s", args.worker_id, task_id)
+            claim = claim_next(
+                args.worker_id,
+                args.model_intent,
+                opencode_agent=args.opencode_agent,
+                opencode_model=args.opencode_model,
+            )
+            if claim is None:
+                logger.info("NO_TASKS_AVAILABLE")
+                return 0
+            task_id = claim["task"]["task_id"]
+            prompt_path = claim["prompt_path"]
+            logger.info("CLAIMED %s prompt=%s", task_id, prompt_path)
+
+            if not args.execute:
+                logger.info("Run: %s run '%s'", args.opencode_bin, prompt_path)
+                return 0
+
+            logger.info("START opencode task=%s", task_id)
+            prompt_text = Path(prompt_path).read_text(encoding="utf-8")
+            command = [args.opencode_bin, "run", "--model", args.opencode_model]
+            if args.opencode_agent:
+                command.extend(["--agent", args.opencode_agent])
+            if args.opencode_auto:
+                command.append("--auto")
+            command.append(prompt_text)
             result = subprocess.run(command, check=False)
-        logger.info("END opencode task=%s exit=%s", task_id, result.returncode)
-        if result.returncode == 0 and args.auto_done:
-            ready, missing = canonical_artifacts_ready(claim["task"])
-            if not ready:
-                set_claim_status(task_id, args.worker_id, "failed",
-                                 f"missing canonical artifacts: {', '.join(missing)}",
+            logger.info("END opencode task=%s exit=%s", task_id, result.returncode)
+            if result.returncode == 0 and args.auto_done:
+                ready, missing = canonical_artifacts_ready(claim["task"])
+                if not ready:
+                    set_claim_status(task_id, args.worker_id, "failed",
+                                     f"missing canonical artifacts: {', '.join(missing)}",
+                                     province=claim["task"].get("province", ""),
+                                     parent_city=claim["task"].get("parent_city", ""))
+                    logger.info("FAILED %s missing canonical artifacts: %s", task_id, ', '.join(missing))
+                    completed += 1
+                    if args.sleep_seconds > 0:
+                        time.sleep(args.sleep_seconds)
+                    continue
+                set_claim_status(task_id, args.worker_id, "done",
                                  province=claim["task"].get("province", ""),
                                  parent_city=claim["task"].get("parent_city", ""))
-                logger.info("FAILED %s missing canonical artifacts: %s", task_id, ', '.join(missing))
+                logger.info("DONE %s", task_id)
+                if args.git_commit and not git_commit_task(claim["task"], claimed_at=claim.get("claimed_at", "")):
+                    return 1
                 completed += 1
                 if args.sleep_seconds > 0:
                     time.sleep(args.sleep_seconds)
                 continue
-            set_claim_status(task_id, args.worker_id, "done",
-                             province=claim["task"].get("province", ""),
-                             parent_city=claim["task"].get("parent_city", ""))
-            logger.info("DONE %s", task_id)
-            if args.git_commit and not git_commit_task(claim["task"], claimed_at=claim.get("claimed_at", "")):
-                return 1
-            completed += 1
-            if args.sleep_seconds > 0:
-                time.sleep(args.sleep_seconds)
-            continue
-        if result.returncode == 0 and not args.auto_done:
-            logger.info("COMPLETED %s; waiting for manual done/release because --auto-done is disabled", task_id)
-            return 0
-        if result.returncode != 0:
-            set_claim_status(task_id, args.worker_id, "failed", f"opencode exit {result.returncode}",
-                             province=claim["task"].get("province", ""),
-                             parent_city=claim["task"].get("parent_city", ""))
-            logger.info("FAILED %s opencode exit %s", task_id, result.returncode)
-            completed += 1
-            if args.sleep_seconds > 0:
-                time.sleep(args.sleep_seconds)
-            continue
+            if result.returncode == 0 and not args.auto_done:
+                logger.info("COMPLETED %s; waiting for manual done/release because --auto-done is disabled", task_id)
+                return 0
+            if result.returncode != 0:
+                set_claim_status(task_id, args.worker_id, "failed", f"opencode exit {result.returncode}",
+                                 province=claim["task"].get("province", ""),
+                                 parent_city=claim["task"].get("parent_city", ""))
+                logger.info("FAILED %s opencode exit %s", task_id, result.returncode)
+                completed += 1
+                if args.sleep_seconds > 0:
+                    time.sleep(args.sleep_seconds)
+                continue
         completed += 1
         if args.sleep_seconds > 0:
             time.sleep(args.sleep_seconds)
