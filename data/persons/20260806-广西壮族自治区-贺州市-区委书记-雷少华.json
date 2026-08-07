@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-06",
+  "investigation_scope": {
+    "province": "广西壮族自治区",
+    "city": "贺州市",
+    "region": "八步区",
+    "job": "区委书记（前任）",
+    "task_id": "guangxi_八步区",
+    "time_focus": "2025-2026"
+  },
+  "identity": {
+    "person_id": "hezhou_babu_leishaohua",
+    "name": "雷少华",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员（入党时间待查）",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "雷少华__",
+      "name_birthplace": "雷少华_待查",
+      "official_profile_url": ""
+    }
+  },
+  "current_status": {
+    "current_post": "（曾任八步区委书记；2026 年换届后去向待核）",
+    "current_org": "待查",
+    "administrative_rank": "正处级（曾任）",
+    "as_of": "2026-08-06",
+    "is_current_confirmed": false,
+    "source_ids": ["S001"]
+  },
+  "career_timeline": [
+    {
+      "start": "未知",
+      "end": "2026",
+      "org": "中共贺州市八步区委员会",
+      "title": "八步区委书记",
+      "level": "县处级",
+      "location": "广西壮族自治区贺州市八步区",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": false,
+      "notes": "2025 年全年官方时政要闻大量以雷少华为区委领导开展活动（区委组织部/宣传部调研、安全生产调研、莲塘镇/桂岭镇/贺街镇督查等）。2026 年区委书记由马鹏翔接任。",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "organizations": [
+    {"name": "中共贺州市八步区委员会", "type": "党委", "level": "县处级", "location": "广西壮族自治区贺州市八步区"}
+  ],
+  "relationships": [
+    {
+      "person": "马鹏翔",
+      "person_id": "hezhou_babu_ma_pengxiang",
+      "relationship_type": "predecessor_successor",
+      "strength": "medium",
+      "evidence": "2025 年雷少华任书记期间，马鹏翔任区长；2026 年马鹏翔接任书记，属书记交接。具体卸任时间与去向待核。",
+      "overlap_org": "中共贺州市八步区委员会",
+      "overlap_period": "2025-2026",
+      "direction": "other_to_person",
+      "confidence": "plausible",
+      "source_ids": ["S001"]
+    }
+  ],
+  "governance_record": [],
+  "professional_profile": {
+    "primary_specializations": [],
+    "secondary_specializations": [],
+    "career_pattern": "local_ladder",
+    "systems_experience": ["party"],
+    "geographic_pattern": ["贺州市八步区"],
+    "promotion_velocity": {"summary": "待查", "notable_fast_promotions": []}
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {"trait": "grassroots_oriented", "evidence": "2025 年多次赴各乡镇、区委组织部/宣传部调研督导。", "confidence": "plausible", "source_ids": ["S001"]}
+    ],
+    "speech_themes": [],
+    "management_signals": [],
+    "caveat": "基于公开报道推断。"
+  },
+  "risk_and_integrity_signals": [
+    {"type": "none_found", "description": "截至 2026-08，公开渠道未发现雷少华被处分或负面报道。", "date": "2026-08", "confidence": "confirmed", "source_ids": []}
+  ],
+  "source_register": [
+    {"id": "S001", "title": "八步区时政要闻（2025 年雷少华活动报道）", "url": "http://www.gxbabu.gov.cn/zwgknrgl_44979/szyw/", "publisher": "八步区委宣传部", "published_at": "2025", "accessed_at": "2026-08-06", "source_type": "official", "reliability": "medium", "notes": "含雷少华 2025 年多项区领导活动"}
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "unverified",
+    "career_completeness": "thin",
+    "relationship_confidence": "low",
+    "biggest_gap": "雷少华是否确为前任区委书记、交接时间及现任去向"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "雷少华是否为八步区前任区委书记？其 2026 年去向（升调贺州市/平桂/富川？）？",
+      "why_it_matters": "书记交接链与去向网络关键节点",
+      "suggested_queries": ["雷少华 八步区 区委书记", "雷少华 去向", "雷少华 简历"],
+      "last_attempted": "2026-08-06"
+    },
+    {
+      "priority": "high",
+      "question": "雷少华的出生、籍贯、学历与任书记前完整履历？",
+      "why_it_matters": "身份去重与履历拼接",
+      "suggested_queries": ["雷少华 简历 贺州"],
+      "last_attempted": "2026-08-06"
+    }
+  ]
+}

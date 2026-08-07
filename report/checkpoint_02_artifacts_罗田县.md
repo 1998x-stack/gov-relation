@@ -1,1 +1,0 @@
-checkpoint:artifacts_staged

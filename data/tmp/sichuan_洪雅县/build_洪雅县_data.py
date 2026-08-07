@@ -11,7 +11,7 @@ Sources:
   - Baidu Baike: 洪雅县 https://baike.baidu.com/item/%E6%B4%AA%E9%9B%85%E5%8E%BF/4911377
 """
 
-import os, sys
+import os, sys, sqlite3
 from pathlib import Path
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))

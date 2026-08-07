@@ -1,0 +1,1 @@
+scripts/build/build_甘南县_data.py

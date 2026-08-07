@@ -1,0 +1,1 @@
+scripts/build/build_天柱县_data.py

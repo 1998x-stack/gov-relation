@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05",
+  "investigation_scope": {
+    "province": "河北省",
+    "city": "廊坊市",
+    "region": "广阳区",
+    "job": "区委书记",
+    "task_id": "hebei_广阳区",
+    "time_focus": "当前（2026-07/08，官网confirmed）"
+  },
+  "identity": {
+    "person_id": "langfang_guangyang_fengbin",
+    "name": "冯斌",
+    "aliases": [],
+    "gender": "男",
+    "ethnicity": "汉族（推测）",
+    "birth": "待查",
+    "birthplace": "待查",
+    "native_place": "待查",
+    "education": [],
+    "party_join": "中共党员",
+    "work_start": "待查",
+    "dedupe_keys": {
+      "name_birth": "冯斌_unknown",
+      "name_birthplace": "冯斌_unknown",
+      "official_profile_url": "http://www.guangyang.gov.cn/2073922412168192001.html"
+    }
+  },
+  "current_status": {
+    "current_post": "廊坊市广阳区委书记",
+    "current_org": "中共廊坊市广阳区委员会",
+    "administrative_rank": "正处级",
+    "as_of": "2026-07",
+    "is_current_confirmed": true,
+    "source_ids": ["S001", "S002", "S003"]
+  },
+  "career_timeline": [
+    {
+      "start": "2025?",
+      "end": "present",
+      "org": "中共廊坊市广阳区委员会",
+      "title": "广阳区委书记",
+      "level": "市辖区",
+      "location": "河北省廊坊市广阳区",
+      "system": "party",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "由固安县县长跨县调任（廊坊市域内县->区干部交流）。2026-06-12主持六届区委常委会（扩大）会议、2026-07-03讲授政绩观专题党课、2026-07-05及07-20主持常委会——均以\"区委书记\"身份。精确任命日期待核（疑2025末-2026初）",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002", "S003"]
+    },
+    {
+      "start": "2021-07",
+      "end": "2025",
+      "org": "固安县人民政府",
+      "title": "固安县委副书记、县长",
+      "level": "县",
+      "location": "河北省廊坊市固安县",
+      "system": "government",
+      "rank": "正处级",
+      "is_key_promotion": true,
+      "notes": "2021-07 任固安县代县长，后当选县长；跨区现状见 open_questions 精确离任日期",
+      "confidence": "plausible",
+      "source_ids": ["S004"]
+    },
+    {
+      "start": "2020",
+      "end": "2021-07",
+      "org": "中共固安县委员会",
+      "title": "固安县委专职副书记",
+      "level": "县",
+      "location": "河北省廊坊市固安县",
+      "system": "party",
+      "rank": "副处级",
+      "is_key_promotion": false,
+      "notes": "专职副书记，协助县委主要领导",
+      "confidence": "plausible",
+      "source_ids": ["S004"]
+    },
+    {
+      "start": "unknown",
+      "end": "unknown",
+      "org": "履历缺口",
+      "title": "",
+      "notes": "2020年之前（调任固安县之前）任职经历、出生年月、籍贯、毕业院校等基本身份信息公开资料未发现（固安县调查也未能查得）",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "organizations": [
+    {
+      "org_id": "org_guangyang_party",
+      "org_name": "中共廊坊市广阳区委员会",
+      "role": "区委书记",
+      "period": "2025?-present"
+    },
+    {
+      "org_id": "org_guoan_gov",
+      "org_name": "固安县人民政府",
+      "role": "县长（政府主要负责人）",
+      "period": "2021-07~2025?"
+    },
+    {
+      "org_id": "org_guoan_party",
+      "org_name": "中共固安县委员会",
+      "role": "县委专职副书记",
+      "period": "2020-2021-07"
+    }
+  ],
+  "relationships": [
+    {
+      "person": "王振宇",
+      "person_id": "langfang_guangyang_wangzhenyu",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "冯斌任广阳区委书记，王振宇任区长，党政一把手搭档；2026-06-18 一同参加区人大代表换届选举投票",
+      "overlap_org": "中共廊坊市广阳区委员会/区政府",
+      "overlap_period": "2025?-present",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S001", "S002"]
+    },
+    {
+      "person": "曹新田",
+      "person_id": "langfang_guangyang_caoxintian",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区委书记与区人大主任（四套班子）",
+      "overlap_org": "广阳区",
+      "overlap_period": "2026",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "陈文通",
+      "person_id": "langfang_guangyang_chenwentong",
+      "relationship_type": "superior_subordinate",
+      "strength": "medium",
+      "evidence": "区委书记与区政协主席（四套班子）",
+      "overlap_org": "广阳区",
+      "overlap_period": "2026",
+      "direction": "undirected",
+      "confidence": "confirmed",
+      "source_ids": ["S002"]
+    },
+    {
+      "person": "付顺义",
+      "person_id": "langfang_guoan_fushunyi",
+      "relationship_type": "overlap",
+      "strength": "strong",
+      "evidence": "冯斌任固安县长期间，付顺义任固安县委书记，党政一把手搭档（跨期借鉴固安县 task 数据）",
+      "overlap_org": "中共固安县委员会/固安县人民政府",
+      "overlap_period": "2021-07~2025?",
+      "direction": "undirected",
+      "confidence": "plausible",
+      "source_ids": ["S004"]
+    }
+  ],
+  "governance_record": [
+    {
+      "period": "2026",
+      "domain": "economic_development",
+      "achievement_or_event": "主持区委常委会，部署推进先进制造业/未来招商、央企产业集群、服务业提能升级（2026-06-12 07-05 常委会）",
+      "role_in_event": "区委书记（主持）",
+      "measurable_outcome": "暂无量化数据",
+      "location": "广阳区",
+      "confidence": "confirmed",
+      "source_ids": ["S003"]
+    },
+    {
+      "period": "2026-07",
+      "domain": "其他",
+      "achievement_or_event": "讲授《树立和践行正确政绩观》专题党课，推动学习教育；强调招商引资/项目建设/民生（棚改教育医疗）/生态环保/底线工作",
+      "role_in_event": "区委书记（授课）",
+      "measurable_outcome": "推动全区形成发展攻坚共识（无量化）",
+      "location": "广阳区",
+      "confidence": "confirmed",
+      "source_ids": ["S001"]
+    }
+  ],
+  "professional_profile": {
+    "primary_specializations": ["地方治理", "经济发展/招商引资"],
+    "secondary_specializations": [],
+    "career_pattern": "cross_county_rotation",
+    "systems_experience": ["party", "government"],
+    "geographic_pattern": ["廊坊市固安县", "廊坊市广阳区"],
+    "promotion_velocity": {
+      "summary": "至少从2020年起在固安县任职，由县委副书记晋升县长，后跨区调任广阳区委书记（廊坊市域核心区），属市域干部交流梯次",
+      "notable_fast_promotions": ["专职副书记->县长（约1年）"]
+    }
+  },
+  "work_style_and_personality": {
+    "public_style_indicators": [
+      {
+        "trait": "development_oriented",
+        "evidence": "多次常委会强调招商、项目、数字经济、承接京津科创（官方会议报道）",
+        "confidence": "plausible",
+        "source_ids": ["S003"]
+      },
+      {
+        "trait": "stability_oriented",
+        "evidence": "强调\"防风险、保安全、护稳定、促廉洁\"，底不守底线",
+        "confidence": "plausible",
+        "source_ids": ["S001"]
+      }
+    ],
+    "speech_themes": ["正确政绩观", "京津冀协同发展", "招商引资/项目建设", "未来产业", "民生"],
+    "management_signals": [],
+    "caveat": "Work style is inferred from public records, speeches, and reported governance actions, not private psychological assessment."
+  },
+  "network_metrics": {
+    "total_relationships": 4,
+    "strong_connections": 2,
+    "cross_region_connections": 1,
+    "mentor_chain_length": 0
+  },
+  "risk_and_integrity_signals": [
+    {
+      "type": "none_found",
+      "description": "截至调研日期，未发现冯斌的公开纪律处分、审计问题或负面媒体报道",
+      "date": "",
+      "confidence": "unverified",
+      "source_ids": []
+    }
+  ],
+  "source_register": [
+    {
+      "id": "S001",
+      "title": "广阳区人民政府·冯斌讲授树立和践行正确政绩观学习教育专题党课",
+      "url": "http://www.guangyang.gov.cn/2073922412168192001.html",
+      "publisher": "广阳区人民政府",
+      "published_at": "2026-07-06",
+      "accessed_at": "2026-08-05",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认 冯斌 为现任广阳区委书记"
+    },
+    {
+      "id": "S002",
+      "title": "广阳区四套班子领导参加人大代表换届选举投票",
+      "url": "http://www.guangyang.gov.cn/2068862238386659329.html",
+      "publisher": "广阳区人民政府",
+      "published_at": "2026-06-22",
+      "accessed_at": "2026-08-05",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认 冯斌(书记)、王振宇(区长)、曹新田(人大主任)、陈文通(政协主席) 四套班子"
+    },
+    {
+      "id": "S003",
+      "title": "广阳区委常委会（扩大）会议（2026-06-12 / 07-20）",
+      "url": "http://www.guangyang.gov.cn/2066327273207865346.html",
+      "publisher": "广阳区人民政府",
+      "published_at": "2026-06-15 / 2026-07-20",
+      "accessed_at": "2026-08-05",
+      "source_type": "official",
+      "reliability": "high",
+      "notes": "确认冯斌主持六届区委常委会直至2026-07-20"
+    },
+    {
+      "id": "S004",
+      "title": "固安县调查任务交叉档案数据/persons/20260724-河北省-廊坊市-县长-冯斌.json",
+      "url": "",
+      "publisher": "本仓库 hebei_固安县 任务",
+      "published_at": "2026-07-24",
+      "accessed_at": "2026-08-05",
+      "source_type": "inferred",
+      "reliability": "medium",
+      "notes": "提供冯斌 2020-2021 固安职业轨迹与付顺义搭档关系"
+    }
+  ],
+  "confidence_summary": {
+    "identity": "unverified",
+    "current_role": "confirmed",
+    "career_completeness": "partial",
+    "relationship_confidence": "medium",
+    "biggest_gap": "出生年月/籍贯/学历/入党参工年月及2020年前履历完全缺失；任广阳区委书记精确任命时间未定"
+  },
+  "open_questions": [
+    {
+      "priority": "critical",
+      "question": "冯斌的出生年月、籍贯、毕业院校/学历、入党与参工年月",
+      "why_it_matters": "核心人物的基本身份信息完全缺失，妨碍人格去重与归属判断",
+      "suggested_queries": ["冯斌 广阳 区委书记 出生于", "冯斌 固安 县长 简历", "冯斌 任前公示 廊坊"],
+      "last_attempted": "2026-08-05"
+    },
+    {
+      "priority": "high",
+      "question": "冯斌 任广阳区委书记的精确任命时间（2025末-2026初？）与前任区委书记姓名/去向",
+      "why_it_matters": "确定区领导人更迭时间线及前任去向，关系网络断链点的确认",
+      "suggested_queries": ["广阳区 书记 任命 2025", "广阳区 前任区委书记"],
+      "last_attempted": "2026-08-05"
+    },
+    {
+      "priority": "high",
+      "question": "冯斌 2020年之前的工作履历（市域外/市直/基层）",
+      "why_it_matters": "判断其职业路径、系统经历和与廊坊园区/市直系统的关联",
+      "suggested_queries": ["冯斌 廊坊 组织部 履历", "冯斌 廊坊 县委副书记 前职"],
+      "last_attempted": "2026-08-05"
+    }
+  ]
+}

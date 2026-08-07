@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-08-06">
+    <creator>Sisyphus Research Agent</creator>
+    <description>张湾区 leadership relationship network — 湖北省 十堰市</description>
+  </meta>
+  <graph mode="static" defaultedgetype="undirected">
+    <attributes class="node">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="role" type="string"/>
+      <attribute id="2" title="org_type" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="0" title="type" type="string"/>
+      <attribute id="1" title="context" type="string"/>
+    </attributes>
+    <nodes>
+      <node id="p1001" label="待确认">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张湾区委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2001" label="待核">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张湾区人民政府区长"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="20.0"/>
+      </node>
+      <node id="p2002" label="李琴">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张湾区区长（历任）；现任茅箭区委书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p1002" label="待核">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张湾区委副书记"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3001" label="待核">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张湾区人大常委会主任"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="p3002" label="待核">
+        <attvalues>
+          <attvalue for="0" value="person"/>
+          <attvalue for="1" value="张湾区政协主席"/>
+          <attvalue for="2" value=""/>
+        </attvalues>
+        <viz:color r="100" g="100" b="100"/>
+        <viz:size value="12.0"/>
+      </node>
+      <node id="o1" label="中共十堰市张湾区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o2" label="十堰市张湾区人民政府">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政府"/>
+        </attvalues>
+        <viz:color r="200" g="200" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o3" label="十堰市张湾区人民代表大会常务委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="人大"/>
+        </attvalues>
+        <viz:color r="200" g="255" b="255"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o4" label="中国人民政治协商会议十堰市张湾区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="政协"/>
+        </attvalues>
+        <viz:color r="255" g="240" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+      <node id="o5" label="中共十堰市茅箭区委员会">
+        <attvalues>
+          <attvalue for="0" value="organization"/>
+          <attvalue for="1" value=""/>
+          <attvalue for="2" value="党委"/>
+        </attvalues>
+        <viz:color r="255" g="200" b="200"/>
+        <viz:size value="8.0"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="e1" source="p1001" target="o1" label="张湾区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e2" source="p2001" target="o1" label="张湾区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e3" source="p2001" target="o2" label="张湾区人民政府区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区人民政府区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e4" source="p2002" target="o2" label="张湾区人民政府区长" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区人民政府区长"/>
+        </attvalues>
+      </edge>
+      <edge id="e5" source="p2002" target="o5" label="茅箭区委书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="茅箭区委书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e6" source="p1002" target="o1" label="张湾区委副书记" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e7" source="p3001" target="o3" label="张湾区人大常委会主任" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e8" source="p3002" target="o4" label="张湾区政协主席" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="worked_at"/>
+          <attvalue for="1" value="张湾区政协主席"/>
+        </attvalues>
+      </edge>
+      <edge id="e9" source="p1001" target="p2001" label="党政搭档" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党政搭档"/>
+          <attvalue for="1" value="区委书记与区长为张湾区党政正职搭档"/>
+        </attvalues>
+      </edge>
+      <edge id="e10" source="p2002" target="p2001" label="前后任" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="前后任"/>
+          <attvalue for="1" value="李琴曾历任张湾区长，为该区现任区长的前任（历届顺序）"/>
+        </attvalues>
+      </edge>
+      <edge id="e11" source="p1001" target="p1002" label="上下级" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="上下级"/>
+          <attvalue for="1" value="区委书记与区委副书记"/>
+        </attvalues>
+      </edge>
+      <edge id="e12" source="p1001" target="p3001" label="党委与人大" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党委与人大"/>
+          <attvalue for="1" value="区委书记与人大常委会主任"/>
+        </attvalues>
+      </edge>
+      <edge id="e13" source="p1001" target="p3002" label="党委与政协" weight="2.0">
+        <attvalues>
+          <attvalue for="0" value="党委与政协"/>
+          <attvalue for="1" value="区委书记与政协主席"/>
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

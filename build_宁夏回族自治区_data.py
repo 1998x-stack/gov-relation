@@ -1,0 +1,1 @@
+scripts/build/build_宁夏回族自治区_data.py

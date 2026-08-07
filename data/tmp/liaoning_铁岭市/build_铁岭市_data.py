@@ -30,11 +30,11 @@ persons = [
         "name": "李文飙",
         "gender": "男",
         "ethnicity": "汉族",
-        "birth": "",
-        "birthplace": "",
-        "education": "",
+        "birth": "1970年5月",
+        "birthplace": "江苏泰州",
+        "education": "大学本科（清华大学材料系无机非金属材料专业）",
         "party_join": "中共党员",
-        "work_start": "",
+        "work_start": "1992年8月",
         "current_post": "市委书记",
         "current_org": "中国共产党铁岭市委员会",
         "source": "https://www.tieling.gov.cn/ywdt/jrtl/2026072209574920302/index.html",
@@ -84,7 +84,7 @@ persons = [
     },
     {
         "id": 5,
-        "name": "许策",
+        "name": "徐彻",
         "gender": "男",
         "ethnicity": "汉族",
         "birth": "1981年7月",
@@ -227,21 +227,21 @@ organizations = [
 
 # ── Positions ────────────────────────────────────────────────────────
 positions = [
-    # 李文飙 - 市委书记
-    {"person_id": 1, "org_id": 0, "title": "市委书记", "start_date": "2024", "end_date": "present", "rank": "地厅级正职", "note": "2024年由铁岭市长转任铁岭市委书记"},
-    {"person_id": 1, "org_id": 1, "title": "市长", "start_date": "2021", "end_date": "2024", "rank": "地厅级正职", "note": "2021-2024年任铁岭市市长，后接任市委书记"},
+    # 李文飙 - 市委书记（2022年由江苏跨省调任辽宁）
+    {"person_id": 1, "org_id": 0, "title": "市委书记", "start_date": "2024-09", "end_date": "present", "rank": "地厅级正职", "note": "2024年9月由铁岭市长转任铁岭市委书记，兼铁岭军分区党委第一书记"},
+    {"person_id": 1, "org_id": 1, "title": "市长", "start_date": "2022-09", "end_date": "2024-09", "rank": "地厅级正职", "note": "2022年9月任铁岭市委副书记、市长；此前为江苏省徐州市委常委、市纪委书记"},
     # 张宝东 - 市长
-    {"person_id": 2, "org_id": 0, "title": "市委副书记", "start_date": "2024", "end_date": "present", "rank": "地厅级副职", "note": "2024年起任铁岭市委副书记"},
-    {"person_id": 2, "org_id": 1, "title": "市长、市政府党组书记", "start_date": "2024", "end_date": "present", "rank": "地厅级正职", "note": "主持市政府全面工作，分管市审计局，联系开原市"},
+    {"person_id": 2, "org_id": 0, "title": "市委副书记", "start_date": "2024-09", "end_date": "present", "rank": "地厅级副职", "note": "2024年9月起任铁岭市委副书记"},
+    {"person_id": 2, "org_id": 1, "title": "市长、市政府党组书记", "start_date": "2024-09", "end_date": "present", "rank": "地厅级正职", "note": "2024年9月任代市长，9月20日经市九届人大五次会议选举任市长；主持市政府全面工作，分管市审计局，联系开原市；此前任辽宁省机关事务管理局党组书记、局长"},
     # 尹红炜 - 常务副市长
     {"person_id": 3, "org_id": 0, "title": "市委常委", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "铁岭市委常委"},
-    {"person_id": 3, "org_id": 1, "title": "常务副市长、市政府党组副书记", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "负责市政府常务工作，分管发改、财政、应急等；与许策互为AB角"},
+    {"person_id": 3, "org_id": 1, "title": "常务副市长、市政府党组副书记", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "负责市政府常务工作，分管发改、财政、应急等；与徐彻互为AB角"},
     # 闫冬蕾 - 副市长
     {"person_id": 4, "org_id": 0, "title": "市委常委", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "铁岭市委常委"},
     {"person_id": 4, "org_id": 1, "title": "副市长、市政府党组成员", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "负责人社、文旅、数据、营商环境等工作；与杜妍互为AB角"},
-    # 许策 - 副市长
+    # 徐彻 - 副市长
     {"person_id": 5, "org_id": 0, "title": "市委常委", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "铁岭市委常委"},
-    {"person_id": 5, "org_id": 1, "title": "副市长、市政府党组成员", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "负责民政、退役军人、供销等工作；与尹红炜互为AB角；联系昌图县"},
+    {"person_id": 5, "org_id": 1, "title": "副市长、市政府党组成员", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "负责民政、供销等工作；协助张宝东开展招商引资，协助尹红炜分管发改、粮食和物资储备、金融；与尹红炜互为AB角；联系昌图县"},
     # 杜妍 - 副市长（无党派）
     {"person_id": 6, "org_id": 1, "title": "副市长", "start_date": "", "end_date": "present", "rank": "地厅级副职", "note": "负责教育、卫健、医保等工作；与闫冬蕾互为AB角；联系西丰县"},
     {"person_id": 6, "org_id": 8, "title": "市工商联（总商会）主席（会长）", "start_date": "", "end_date": "present", "rank": "县处级", "note": "兼任市工商联主席"},
@@ -287,10 +287,10 @@ relationships = [
     {"person_a": 2, "person_b": 11, "type": "overlap", "context": "市长与市政府秘书长", "overlap_org": "铁岭市人民政府", "overlap_period": "2026年"},
     # 尹红炜与副市长们（常务副市长核心节点）
     {"person_a": 3, "person_b": 4, "type": "overlap", "context": "同为市委常委、副市长", "overlap_org": "铁岭市委常委班子", "overlap_period": "2026年"},
-    {"person_a": 3, "person_b": 5, "type": "overlap", "context": "同为市委常委、副市长，许策协助尹红炜分管粮食储备", "overlap_org": "铁岭市委常委班子", "overlap_period": "2026年"},
+    {"person_a": 3, "person_b": 5, "type": "overlap", "context": "同为市委常委、副市长，徐彻协助尹红炜分管发展改革、粮食和物资储备、金融", "overlap_org": "铁岭市委常委班子", "overlap_period": "2026年"},
     {"person_a": 3, "person_b": 11, "type": "overlap", "context": "常务副市长与市政府秘书长，方志协助分管市政府办公室", "overlap_org": "铁岭市人民政府办公室", "overlap_period": "2026年"},
     # AB角互补关系
-    {"person_a": 3, "person_b": 5, "type": "overlap", "context": "AB角互补：尹红炜与许策互为AB角", "overlap_org": "铁岭市人民政府", "overlap_period": "2026年"},
+    {"person_a": 3, "person_b": 5, "type": "overlap", "context": "AB角互补：尹红炜与徐彻互为AB角", "overlap_org": "铁岭市人民政府", "overlap_period": "2026年"},
     {"person_a": 4, "person_b": 6, "type": "overlap", "context": "AB角互补：闫冬蕾与杜妍互为AB角", "overlap_org": "铁岭市人民政府", "overlap_period": "2026年"},
     {"person_a": 7, "person_b": 9, "type": "overlap", "context": "AB角互补：刘庆恩与谭会波互为AB角", "overlap_org": "铁岭市人民政府", "overlap_period": "2026年"},
     {"person_a": 8, "person_b": 10, "type": "overlap", "context": "AB角互补：李铁刚与常东旭互为AB角", "overlap_org": "铁岭市人民政府", "overlap_period": "2026年"},
@@ -317,4 +317,16 @@ if __name__ == "__main__":
         gexf_path=gexf_path,
         overwrite=True,
     )
+
+    DB_PATH = db_path
+    GEXF_PATH = gexf_path
+    import sqlite3 as _sqlite
+
+    conn = _sqlite.connect(f"file:{DB_PATH}?mode=ro", uri=True)
+    for table in ("persons", "organizations", "positions", "relationships"):
+        count = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
+        print(f"{table}: {count}")
+    conn.close()
+    ok = GEXF_PATH.exists() and "<nodes>" in GEXF_PATH.read_text(encoding="utf-8")
+    print(f"GEXF written: {ok} -> {GEXF_PATH}")
     print(f"Done. Files created in {staging}/")

@@ -1,0 +1,1 @@
+scripts/build/build_金城江区_data.py

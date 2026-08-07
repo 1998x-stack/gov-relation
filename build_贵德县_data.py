@@ -1,0 +1,1 @@
+scripts/build/build_贵德县_data.py

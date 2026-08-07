@@ -1,0 +1,1 @@
+scripts/build/build_友谊县_data.py

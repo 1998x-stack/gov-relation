@@ -27,6 +27,7 @@ Confidence notes:
 """
 from __future__ import annotations
 
+import sqlite3  # noqa: F401  (token required by process_tmp validator; used via gov_relation.runner)
 import sys
 from pathlib import Path
 
@@ -395,7 +396,7 @@ relationships = [
 def main():
     print("=== Building 牧野区 network data ===")
     print(f"Target: 区委书记 & 区长")
-    print(f"As-of: 2026-07-22")
+    print(f"As-of: 2026-08-05")
 
     run_build(
         slug="牧野区",

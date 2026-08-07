@@ -1,51 +1,34 @@
-# Open Gaps Registry
-> Last updated: 2026-07-24
+# Open Gaps Registry — 文峰区（河南省安阳市）
+> Last updated: 2026-08-05 (task henan_文峰区)
+> 本次调查由 2026-07-24 部分版本补全：区长/代区长、书记完整履历已确定；以下为剩余缺口。
 
-## ⭐⭐⭐⭐⭐ Critical (core figures with major career gaps)
-
+## ⭐⭐⭐⭐⭐ Critical（核心主官履历缺口）
 | Person | Current Role | What's Missing | Last Attempted | Notes |
 |--------|-------------|----------------|----------------|-------|
-| 待确认 | 文峰区区长 | 姓名、出生、籍贯、完整履历 | 2026-07-24 | 文峰区政府网站和所有搜索渠道均无法获取；本次调查最大缺口 |
-| 崔元锋 | 文峰区委书记 | 2024年3月前的全部职业生涯 | 2026-07-24 | 仅从网易新闻确认其现任区委书记，其余信息全无 |
-| 崔元锋 | 文峰区委书记 | 出生年份、出生地、教育背景 | 2026-07-24 | 无任何百科或官方简历页面可用 |
+| 关永贞 | 文峰区委副书记、代区长 | 出生年份/籍贯/学历/入党/参加工作 + 任代区长前完整履历（仅知早期团市委书记、市人大常委会） | 2026-08-05 | 官方无简历页；履历碎片化 |
+| 关永贞 | 文峰代区长 | 是否已由区人大正式选举为"区长"（代转正） | 2026-08-05 | 截至检索仍称"代区长" |
 
-## ⭐⭐⭐⭐ High (important deputies or key connections)
-
+## ⭐⭐⭐⭐ High（前任/去向、班子细分）
 | Person/Gap | What's Missing | Last Attempted | Notes |
 |-----------|----------------|----------------|-------|
-| 文峰区领导班子 | 全部区委常委姓名 | 2026-07-24 | 包括副书记、纪委书记、组织部长、宣传部长、政法委书记等 |
-| 文峰区人民政府 | 全部副区长姓名及分工 | 2026-07-24 | 无政府领导页面可访问 |
-| 前任区委书记 | 姓名、去向、任期 | 2026-07-24 | 崔元锋的前任是谁、何时交接 |
-| 前任区长 | 姓名、去向、任期 | 2026-07-24 | 现任区长未确认，前任更无从得知 |
+| 前任文峰区委书记（崔元锋之前） | 姓名、任期、去向 | 2026-08-05 | 仅推测已调任安阳市直/他区县 |
+| 刘学平任文峰区长前职业轨迹 | 任职单位、完整履历 | 2026-08-05 | 法学硕士，1976-06 生河南安阳人 |
+| 刘学平纪律审查结论 | 是否双开/移送司法 | 2026-08-05 | 2026-05-21 被查 |
+| 多名常委/副区长（刘会敏、郭艳芬、李冬跃、史红峰、田晟强、李卫华、吴进善、肖承飞、张贤利、王军、汤宾鹏） | 姓名拼写/当前分工核实 | 2026-08-05 | 来源受限，姓名可能 OCR 误差，需 formal 源复核 |
 
-## ⭐⭐⭐ Medium (would enrich the network picture)
-
+## ⭐⭐⭐ Medium（丰富网络图景）
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 文峰区与安阳市其他区县的干部交流模式 | 2026-07-24 | 北关区已有完整数据，可与文峰区交叉分析 |
-| 文峰区近三年人事变动时间线 | 2026-07-24 | 无任何数据来源 |
-| 区政府工作报告/重点项目建设信息 | 2026-07-24 | 政府网站不可达 |
+| 文峰区与安阳其他区县（北关/龙安/殷都/安阳县）实名干部互调链 | 2026-08-05 | 需安阳市委组织部任前公示 |
+| 文峰区政府工作报告/领导之窗正式名单 | 2026-08-05 | wenfeng.gov.cn 不可达 |
 
-## ⭐⭐ Low (nice to have)
-
+## ⭐⭐ Low
 | Gap | Last Attempted | Notes |
 |-----|----------------|-------|
-| 文峰区区情概况数据（GDP、人口、面积） | 2026-07-24 | 非核心需求 |
-| 崔元锋的公开讲话/调研风格分析 | 2026-07-24 | 网易新闻原文无法获取全文 |
+| 崔元锋出生具体日 | 2026-08-05 | 仅知1977年2月 |
+| 文峰区情概数据（GDP/人口/面积最新） | 2026-08-05 | 非核心 |
 
 ---
-
-## Resolved Gaps
-
-*None yet.*
-
----
-
-## Investigation Environment Notes
-
-- All gaps exist because of network access limitations, not lack of data in the wild.
-- 文峰区政府 website (wenfeng.gov.cn) times out on both HTTP and HTTPS — likely a server/network issue.
-- All Baidu properties (search, Baike) return 403 or captcha in this environment.
-- Exa search hit the free MCP rate limit after 3 calls.
-- Jina Reader (r.jina.ai) also timed out on Chinese government sites.
-- **Recommendation**: Re-run investigation from a different network environment, or use alternative search providers (Bing, Sogou).
+## Resolved（本次新解决）
+- (2026-08-05) 现任区长 → **刘学平**（被查）与代区长 **关永贞**，区长链获突破。
+- (2026-08-05) 崔元锋完整履历（1977-02/安阳县/博士/高校-汤阴-经开-内黄-文峰线）由 360百科 + 官方新闻确认。

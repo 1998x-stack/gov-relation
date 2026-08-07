@@ -1,22 +1,62 @@
-# CHECKPOINT: Research Done
+# CHECKPOINT 01 — Research Done
 
-## Confirmed from Official Sources (www.zjwy.gov.cn)
+task_id: hainan_崖州区
+province: 海南省
+parent_city: 三亚市
+region: 崖州区
+level: 市辖区
+targets: 区委书记 & 区长
+date: 2026-08-07
+status: CHECKPOINT:research_done
 
-### Current Leaders (as of August 2026)
-1. **陈洪** — 县委书记 (Party Secretary of Wuyi County)
-   - Confirmed: Appears in multiple news items: "陈洪到白洋街道讲授树立和践行正确政绩观学习教育专题党课" (2026-07-15), "陈洪调度部署防御台风巴威工作" (2026-07-10), "陈洪与人大代表共商文明提质" (2026-06-02)
-   
-2. **李强** — 县长 (County Mayor / Deputy Party Secretary)
-   - Confirmed: "李强以四不两直方式督导检查安全生产工作" (2026-07-21), "李强调研生态环境保护工作" (2026-06-15), "李强在调研民生领域项目" (2026-05-18)
+## 核心结论 (current officeholders, as of 2026-08-07)
 
-### Research Status
-- Official website leader page: Not found at standard path patterns (no obvious ld page)
-- Baidu Baike: Blocked (403)
-- Wikipedia (Chinese): Available - county geography
-- Web search (Exa): Rate limited
+- 区委书记：**季端荣**（confirmed，崖州区政府官网多篇领导动态 2025-11/2025-12/2026 公文确认；含 2025-12-23 区委常委议军会、2026-08-03 区委常委会第175次会议）
+- 区委副书记、区长：**童立艳**（confirmed，官网领导动态自 2023-11 至 2026-07 持续确认；区政府领导页「区长：童立艳」）
+- 区政协主席：冯永杰（confirmed，2026-06 全国文明城市创建推进会出席）
 
-### Gaps
-- Full career histories not available
-- Predecessors unknown
-- Full leadership roster (deputy mayors, party standing committee) not scraped
-- Birth dates, education, ethnicity not found
+## 前任 (predecessors)
+- 前任区委书记：**樊木**（confirmed，2022-07「区委书记樊木带队检查台风防御」→ 2025年 2 月「樊木看望慰问一线」；后由季端荣接任）
+  - 崖州区委书记传承链：陈正光（2015 建区）→ 樊木（约 2022）→ 季端荣（约 2025-11 起可考）
+- 区长：童立艳自 2023-11 起在任（最早记录「童立艳带队调研崖州湾科技城」，持续至 2026-07）
+
+## 关键简历
+- 季端荣：年龄/出生/籍贯/学历 公开渠道未取到（填 open question）；以「区委书记」主持多场区委常委会、议军会、理论学习中心组会
+- 童立艳：女/男待查；出生/籍贯/学历待查；自 2023 底任区长，主持区政府全面、政府工作与「六水共治」总河湖长等
+- 樊木（前任书记）：曾任崖州区委书记至约 2025 年，去向待核
+
+## 区政府班子（官网区政府领导页 qzf.shtml）
+- 区长：童立艳
+- 副区长（7 人）：李凯、郭玄伟、王道云、陈隆、徐辉、李静、阳超 —— 官方来源 confirmed
+
+## 2025-01 三届人大五次会议列席/就座领导（官方）
+- 区委书记：樊木；区长：童立艳；政协主席：冯永杰
+- 监委主任：黄志刚（2025 当选）；人大常委会副主任：蔡燕（2025 当选）；人大常委：吴海江、刘国琪
+- 人大主席团常务主席：樊木、陈曦、刘金红、朱志阳、王积（陈曦主持闭幕会）
+- 就座区领导还包括：周显同、李锦龙、余学军、黄志刚、刘中圣、蔡燕、周德尊、陆卫平、陈秀娟、陈汉华、陈泰莲
+
+## 工作关系网络（已确认编辑关系）
+- 季端荣（区委书记）— 童立艳（区长）党政搭档（2025-11 至 present）
+- 季端荣 — 冯永杰（区政协主席）：四家班子
+- 樊木（前书记）— 童立艳（区长）：党政搭档（2022-2025）
+- 樊木 — 季端荣：前任 / 接任
+- 上级：三亚市委书记 王祺扬 与 三亚市长 陈希
+
+## Open Gaps（详见 data/tmp/hainan_崖州区/report/open_gaps.md）
+1. 季端荣出生/籍贯/学历 + 任崖州区委书记前履历（Critical）
+2. 童立艳出生/籍贯/学历 + 任区长前履历、上任确切时间（High）
+3. 樊木接任/去向（High）
+4. 现任 区人大常委会主任（陈曦 是否）、纪委/监委现任班子（High）
+5. 区委常委会其他成员（组织、宣传、政法部长）、区纪委书记完整名单（Medium）
+6. 副区长个人身份/分工细节（Medium）
+
+## 证据来源（官方，高/中可信）
+- 崖州区人民政府官网 zhome：https://yz.sanya.gov.cn/ （及 qzf.shtml 区政府领导页）
+- 领导动态 2026-08/07/06/05/04 多篇（季端荣/童立艳）
+- 2025-12-23 区委常委议军会（季端荣主持）
+- 2025-01 崖州区三届人大五次会议闭幕消息（樊木/童立艳/冯永杰/黄志刚/蔡燕 名单）
+- 三亚市政府站 站内搜索 search.sanya.gov.cn（siteCode 4602000049）
+
+## 数据限制说明
+- Exa 搜索服务限流、百度/360/搜狗 需验证码，本轮主要依赖崖州区官网与站内检索，人物传记层面的补充有限。
+- 身份/早期履历缺失处用 confidence + open_gaps 标注，不虚构。
