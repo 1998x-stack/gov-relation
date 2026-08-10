@@ -15,6 +15,26 @@
 - `report/*.md` / `report/*.html`：面向阅读的调查报告和图谱页面。
 - `data/TODO.json`：全国行政区划调研任务队列。
 
+统一数据平台位于 `gov_relation/platform/`。它把历史地区库和人物 JSON 无损导入
+`data/platform/gov_relation.db`，并提供来源追溯、质量隔离、保守实体解析和商业授权门：
+
+```bash
+python3 scripts/govdb.py build --database data/platform/gov_relation.db --replace
+python3 scripts/govdb.py audit --database data/platform/gov_relation.db
+```
+
+当前架构与发布边界见 [docs/ARCHITECTURE_V2.md](docs/ARCHITECTURE_V2.md)；生产化产品设计从
+[docs/design/README.md](docs/design/README.md) 开始阅读。
+
+本地验证 PostgreSQL 生产 schema：
+
+```bash
+bash scripts/postgres_dev.sh up
+bash scripts/postgres_dev.sh migrate
+bash scripts/postgres_dev.sh verify
+bash scripts/postgres_dev.sh down
+```
+
 更完整的文件系统与代码系统说明见 [docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md)。
 
 ## 常用命令

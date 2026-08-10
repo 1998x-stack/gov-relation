@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gov-relation.example/schemas/rights-manifest-1.0.json",
+  "title": "Source Rights Decision Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "manifest_id", "created_at", "reviewed_by",
+    "review_authority", "legal_memo_ref", "effective_from", "effective_to",
+    "decisions"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "manifest_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "reviewed_by": {"type": "string", "minLength": 1},
+    "review_authority": {"type": "string", "minLength": 1},
+    "legal_memo_ref": {"type": "string"},
+    "effective_from": {"type": "string", "format": "date-time"},
+    "effective_to": {"type": ["string", "null"], "format": "date-time"},
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/decision"}
+    },
+    "signature": {"$ref": "#/$defs/signature"}
+  },
+  "$defs": {
+    "selector": {
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "canonical_domain": {
+          "type": "string",
+          "pattern": "^(?=.{1,253}$)(?!.*[*/:])[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$"
+        }
+      }
+    },
+    "use": {
+      "enum": [
+        "internal_research", "customer_display", "api_delivery", "bulk_export",
+        "commercial_distribution"
+      ]
+    },
+    "field": {
+      "enum": ["identity", "career", "relationship", "governance", "source_metadata"]
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_id", "source_selector", "decision", "permitted_uses",
+        "permitted_fields", "restrictions", "rationale"
+      ],
+      "properties": {
+        "decision_id": {"type": "string", "minLength": 1},
+        "source_selector": {"$ref": "#/$defs/selector"},
+        "decision": {"enum": ["unknown", "cleared", "restricted"]},
+        "permitted_uses": {
+          "type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/use"}
+        },
+        "permitted_fields": {
+          "type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/field"}
+        },
+        "restrictions": {"type": "object"},
+        "rationale": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"decision": {"const": "cleared"}}},
+          "then": {
+            "properties": {
+              "permitted_uses": {"contains": {"const": "commercial_distribution"}},
+              "permitted_fields": {"minItems": 1}
+            }
+          },
+          "else": {
+            "properties": {
+              "permitted_uses": {"not": {"contains": {"const": "commercial_distribution"}}}
+            }
+          }
+        }
+      ]
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "key_id", "value_base64"],
+      "properties": {
+        "algorithm": {"const": "ecdsa-p256-sha256"},
+        "key_id": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "value_base64": {"type": "string", "contentEncoding": "base64"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decisions": {"contains": {"properties": {"decision": {"const": "cleared"}}}}
+        }
+      },
+      "then": {"properties": {"legal_memo_ref": {"minLength": 1}}}
+    }
+  ]
+}

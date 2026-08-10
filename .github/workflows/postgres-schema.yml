@@ -1,0 +1,62 @@
+name: PostgreSQL schema
+
+on:
+  push:
+    paths:
+      - "migrations/postgres/**"
+      - "infra/postgres/**"
+      - "scripts/postgres_dev.sh"
+      - ".github/workflows/postgres-schema.yml"
+  pull_request:
+    paths:
+      - "migrations/postgres/**"
+      - "infra/postgres/**"
+      - "scripts/postgres_dev.sh"
+      - ".github/workflows/postgres-schema.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: gov_relation
+          POSTGRES_USER: gov_relation
+          POSTGRES_PASSWORD: ci-only-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U gov_relation -d gov_relation"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 30
+
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: "5432"
+      PGDATABASE: gov_relation
+      PGUSER: gov_relation
+      PGPASSWORD: ci-only-password
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Apply migration 0001
+        run: |
+          checksum=$(sha256sum migrations/postgres/0001_registry_and_assertions.sql | cut -d' ' -f1)
+          psql -X -v ON_ERROR_STOP=1 -v migration_checksum="$checksum" \
+            -f migrations/postgres/0001_registry_and_assertions.sql
+
+      - name: Verify schema and invariants
+        run: psql -X -v ON_ERROR_STOP=1 -f migrations/postgres/verify/0001_registry_and_assertions.sql
+
+      - name: Verify registered checksum
+        run: |
+          expected=$(sha256sum migrations/postgres/0001_registry_and_assertions.sql | cut -d' ' -f1)
+          actual=$(psql -X -Atc "SELECT checksum FROM meta.schema_migrations WHERE version='0001'")
+          test "$actual" = "$expected"
