@@ -113,7 +113,7 @@
 
 ---
 
-## 4. 完整 Schema（20 表 + 6 Gold Views）
+## 4. 完整 Schema（21 表 + 6 Gold Views）
 
 ### 4.1 实体域
 
@@ -859,9 +859,10 @@ def province_reports_dir(province: str) -> Path:
 
 ### Phase 2: Schema 升级
 - `gov_relation/schema.py` 升级到 v3 DDL（保留 v2 legacy 常量）
-- `scripts/migrate/upgrade_schema_v2_to_v3.py` — 在现有 platform DB 上执行 ALTER/新表
-- `govdb.py build` 切换为写 v3 schema + 调用 `InsertFactory`
-- 验证：重建 platform DB → audit 零错误
+- `scripts/migrate/upgrade_schema_v2_to_v3.py` — 在现有 platform DB 上执行 **列级 ALTER**（v2 与 v3 表名相同，"CREATE IF NOT EXISTS" 对已有表是静默 no-op，必须 ALTER ADD COLUMN v3 增量列）+ 补齐缺失表/视图
+- 同步升 `platform/schema.py` 的 `SCHEMA_VERSION` 至 3.0.0、`ADDITIVE_SCHEMA_UPGRADES` 纳入 2.1.0
+- `govdb.py build` 仅做 `create_schema()` 版本门禁（不建 v3 factory 表）
+- 验证：迁移脚本 dry-run → 真实执行 → 重建 platform DB → audit 零错误
 
 ### Phase 3: Migration
 - `scripts/migrate/migrate_legacy_to_provinces.py` — 按 TODO.json province 映射分组，移入对应省份目录

@@ -83,12 +83,10 @@ def migrate(mapping: dict[str, str], dry_run: bool = False) -> dict:
         if not pslug:
             stats["unmatched"].append(str(db_path.relative_to(REPO_ROOT)))
             continue
-        dest_dir = province_database_dir(pslug) if pslug in PROVINCE_SLUGS.values() else province_database_dir(pslug)
-        # Resolve province name from slug
-        for pname, ps in PROVINCE_SLUGS.items():
-            if ps == pslug:
-                dest_dir = province_database_dir(pname)
-                break
+        # 修复（评审 F3-#5）：province_database_dir() 实际接收**省份中文名**（内部再查 slug）。
+        # 直接用 PROVINCE_SLUGS.get(pname, pname) 反查，删除死代码三元组（两侧相同）。
+        pname = next((n for n, s in PROVINCE_SLUGS.items() if s == pslug), pslug)
+        dest_dir = province_database_dir(pname)
         dest_dir.mkdir(parents=True, exist_ok=True)
         dest = dest_dir / db_path.name
         if not dry_run and not dest.exists():
@@ -102,13 +100,9 @@ def migrate(mapping: dict[str, str], dry_run: bool = False) -> dict:
         if not pslug:
             stats["unmatched"].append(str(gexf_path.relative_to(REPO_ROOT)))
             continue
-        dest_dir = province_graph_dir(pslug)
-        if not any(ps == pslug for ps in PROVINCE_SLUGS.values()):
-            continue
-        for pname, ps in PROVINCE_SLUGS.items():
-            if ps == pslug:
-                dest_dir = province_graph_dir(pname)
-                break
+        # 修复（评审 F3-#5）：与 db 分支一致，用省份中文名 + 反查 slug。
+        pname = next((n for n, s in PROVINCE_SLUGS.items() if s == pslug), pslug)
+        dest_dir = province_graph_dir(pname)
         dest_dir.mkdir(parents=True, exist_ok=True)
         dest = dest_dir / gexf_path.name
         if not dry_run and not dest.exists():
@@ -117,14 +111,24 @@ def migrate(mapping: dict[str, str], dry_run: bool = False) -> dict:
 
     # Migrate person JSONs
     for person_path in sorted(PERSONS_DIR.glob("*.json")):
-        # Extract province from filename: YYYYMMDD-<province>-<city>-<job>-<name>.json
-        parts = person_path.stem.split("-")
-        if len(parts) < 3:
-            stats["unmatched"].append(str(person_path.relative_to(REPO_ROOT)))
-            continue
-        province_name = parts[1]
-        pslug = PROVINCE_SLUGS.get(province_name)
-        if not pslug:
+        # 修复（评审 F3-#4）：文件有两种日期前缀：
+        #   YYYYMMDD-<province>-<city>-<job>-<name>.json   (20260724-...)
+        #   YYYY-MM-DD-<province>-<city>-<job>-<name>.json (2026-07-24-...)  ← parts[1]=="07" 非省份
+        # 因此不能用固定 parts[1]；改为把年份前缀剥掉后，在剩余段里找第一个能匹配
+        # PROVINCE_SLUGS 的段（省份中文名；市中可能含 "-"，故逐段尝试）。
+        stem = person_path.stem
+        parts = stem.split("-")
+        if (len(parts) >= 2 and len(parts[0]) == 8 and parts[0].isdigit()):
+            remainder = parts[1:]
+        elif (len(parts) >= 4 and len(parts[0]) == 4 and parts[0].isdigit()):
+            remainder = parts[3:]
+        else:
+            remainder = parts
+        province_name = next(
+            (seg for seg in remainder if seg in PROVINCE_SLUGS),
+            None,
+        )
+        if not province_name:
             stats["unmatched"].append(str(person_path.relative_to(REPO_ROOT)))
             continue
         dest_dir = province_persons_dir(province_name)
@@ -192,11 +196,15 @@ def list_databases() -> list[dict]:
         rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size})
         seen_stems.add(path.stem)
     # Province paths (skip if already seen from legacy)
+    # 修复（评审 F3-#9）：seen_stems 只能用来去重「legacy 已收录」的文件；
+    # 跨省份去重会误丢同省同名 region（如东湖区/西湖区存在于多省）。
     for prov_dir in sorted(PROVINCES_DIR.iterdir()):
         if prov_dir.is_dir():
             for path in sorted((prov_dir / "database").glob("*.db")):
-                if path.stem not in seen_stems:
-                    rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size})
+                if path.stem in seen_stems:
+                    continue                  # legacy 已收录，跳过
+                rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size})
+                seen_stems.add(f"{prov_dir.name}:{path.stem}")   # 跨省同名也保留，仅在省内部去重
     return rows
 ```
 
@@ -342,10 +350,15 @@ warnings.warn(
 )
 ```
 
-- [ ] **Step 2: 确认无引用**
+- [ ] **Step 2: 确认引用并处理**
 
-Run: `rg "from gov_relation.central import" --include="*.py"`  
-Expected: 无输出（除 central.py 自身）
+Run: `rg "from gov_relation.central import" --include="*.py"`
+**评审修正（F3-#6）：并非"无输出"——存在 4 处真实引用：**
+`tests/test_central.py`, `tests/test_runner.py`, `tests/test_migrate.py`, `scripts/migrate_to_central.py`。
+处置：
+1. 保留 `gov_relation/central.py`（`migrate_to_central.py` 是仍可能使用的 legacy 迁移工具）；
+2. 仅保留 `DeprecationWarning` 标记，**不删除文件、不改这 4 处 import**；
+3. 对产物：deprecation 对测试无碍（warning 仅告警），接受测试仍 import central。
 
 - [ ] **Step 3: 提交**
 

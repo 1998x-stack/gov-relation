@@ -24,12 +24,15 @@
 
 **Files:**
 - Create: `gov_relation/identity.py`
-- Modify: `gov_relation/platform/importer.py:16-17`
+- Modify: `gov_relation/platform/identity.py` (改为薄 re-export，保留原函数签名)
+- Modify: `gov_relation/platform/importer.py:16-17`, `gov_relation/platform/resolution.py:10`, `scripts/govdb.py:17`, `tests/test_platform.py:9`
 
 **Interfaces:**
 - Produces: `normalize_text(value: object) -> str`, `stable_id(kind: str, key: str) -> str`, `sha256_bytes(value: bytes) -> str`, `date_precision(value: object) -> str`, `person_key(*, name, birth, dataset_key, source_pk) -> tuple[str, str]`, `organization_key(*, name, jurisdiction_key, dataset_key) -> str`
 
-- [ ] **Step 1: 从 platform/identity.py 复制核心函数到 gov_relation/identity.py**
+**Design（修复 C1F "move vs copy"）:** `gov_relation.identity` 是**唯一实现**；`gov_relation/platform/identity.py` 保留但改为**薄 re-export**（单行 `from gov_relation.identity import *`），避免两个实现漂移，也不破坏现有 4 处 import（`platform/importer.py`、`platform/resolution.py`、`scripts/govdb.py`、`tests/test_platform.py` 全部继续可解析）。后续新增代码统一走 `gov_relation.identity`。
+
+- [ ] **Step 1: 复制核心函数到 gov_relation/identity.py（唯一实现源）**
 
 ```python
 """Conservative normalization and deterministic identifiers for gov-relation.
@@ -92,13 +95,17 @@ def organization_key(*, name: object, jurisdiction_key: str, dataset_key: str) -
     return f"{scope}|{normalize_text(name)}"
 ```
 
-- [ ] **Step 2: 更新 platform/importer.py 的 import**
+- [ ] **Step 2: platform/identity.py 改为 thin re-export，并同步其余 import 位置**
+
+`gov_relation/platform/identity.py` 全文替换为：
 
 ```python
-# 替换:
-# from .identity import ...
-# 为:
-from gov_relation.identity import (
+"""Conservative normalization and deterministic identifiers for canonical data.
+
+Re-export of gov_relation.identity (v3 canonical source).
+"""
+
+from gov_relation.identity import (  # noqa: F401
     date_precision,
     normalize_text,
     organization_key,
@@ -107,6 +114,31 @@ from gov_relation.identity import (
     stable_id,
 )
 ```
+
+现有 4 处 import 保持不变即可（继续解析到 platform.identity 层），但为了让新代码明确只走规范实现，建议同时把显式 import 改到 `gov_relation.identity`：
+
+```python
+# gov_relation/platform/resolution.py:10
+from gov_relation.identity import normalize_text, stable_id
+
+# gov_relation/platform/importer.py:11
+from gov_relation.identity import (
+    date_precision,
+    normalize_text,
+    organization_key,
+    person_key,
+    sha256_bytes,
+    stable_id,
+)
+
+# scripts/govdb.py:17
+from gov_relation.identity import stable_id
+
+# tests/test_platform.py:9
+from gov_relation.identity import person_key, stable_id
+```
+
+> 若同时保留 re-export，以上显式改 import 非必须（re-export 已保证行为一致），但建议改以建立可 grep 的唯一来源。
 
 - [ ] **Step 3: 验证现有测试不受影响**
 
@@ -121,12 +153,13 @@ Expected: 输出 `test_<hex>` 格式
 - [ ] **Step 5: Commit**
 
 ```bash
-git add gov_relation/identity.py gov_relation/platform/importer.py
+git add gov_relation/identity.py gov_relation/platform/identity.py gov_relation/platform/importer.py gov_relation/platform/resolution.py scripts/govdb.py tests/test_platform.py
 git commit -m "refactor(identity): extract core identity functions to gov_relation.identity
 
-Moved normalize_text, stable_id, sha256_bytes, date_precision,
-person_key, organization_key from platform/identity.py.
-platform/importer.py now imports from gov_relation.identity."
+Copied normalize_text, stable_id, sha256_bytes, date_precision,
+person_key, organization_key into gov_relation.identity as the
+canonical implementation; platform/identity.py now re-exports from it.
+All import sites still resolve."
 ```
 
 ---
@@ -187,12 +220,13 @@ def province_reports_dir(province: str) -> Path:
 
 - [ ] **Step 2: 验证**
 
-Run: `python3 -c "from gov_relation.paths import PROVINCES_DIR, province_dir; from pathlib import Path; assert PROVINCES_DIR == Path('data/provinces'); print(province_dir('四川省')); print(province_build_dir('河南省'))"`
+Run: `python3 -c "from pathlib import Path; import gov_relation.paths as p; assert p.PROVINCES_DIR == p.DATA_DIR / 'provinces'; assert p.province_dir('四川省') == p.PROVINCES_DIR / 'sichuan'; print(p.province_dir('四川省')); print(p.province_build_dir('河南省'))"`
 Expected:
 ```
-data/provinces/sichuan
-data/provinces/henan/build
+<repo>/data/provinces/sichuan
+<repo>/data/provinces/henan/build
 ```
+> 注意：`PROVINCES_DIR` 是绝对路径（`REPO_ROOT/data/provinces`），不能用 `Path('data/provinces')` 直接相等比较。
 
 - [ ] **Step 3: Commit**
 
@@ -247,8 +281,8 @@ def test_create_entity_tables_creates_all_seven(tmp_path):
     conn.close()
 
 
-def test_create_evidence_tables_creates_all_eight(tmp_path):
-    """create_evidence_tables should create 8 evidence/provenance tables."""
+def test_create_evidence_tables_creates_all_nine(tmp_path):
+    """create_evidence_tables should create 9 evidence/provenance tables."""
     db_path = tmp_path / "test.db"
     conn = sqlite3.connect(str(db_path))
     factory = SchemaFactory()
@@ -738,7 +772,7 @@ _ALL_VIEWS = [
 
 
 class SchemaFactory:
-    """Generate the complete v3 database schema (20 tables + 6 views + indexes)."""
+    """Generate the complete v3 database schema (21 tables + 6 views + indexes)."""
 
     def create_all(self, conn: sqlite3.Connection) -> None:
         conn.execute("PRAGMA journal_mode=WAL")
@@ -790,7 +824,7 @@ Expected: 4 PASS
 
 ```bash
 git add gov_relation/factory/__init__.py gov_relation/factory/schema_factory.py tests/test_factory/__init__.py tests/test_factory/test_schema_factory.py
-git commit -m "feat(factory): add SchemaFactory with full v3 DDL (20 tables + 6 views + 21 indexes)"
+git commit -m "feat(factory): add SchemaFactory with full v3 DDL (21 tables + 6 views + 21 indexes)"
 ```
 
 ---
@@ -903,6 +937,21 @@ def test_insert_position_links_person_and_org(conn):
         (pos_id,),
     ).fetchone()
     assert row[0] == "区委书记"
+
+
+def test_insert_position_same_title_different_persons_distinct_ids(conn):
+    """F5 regression: two people with the same title must get distinct position ids."""
+    factory = InsertFactory()
+    pid_a = factory.upsert_person(conn, {"canonical_name": "A", "birth_text": "1960"})
+    pid_b = factory.upsert_person(conn, {"canonical_name": "B", "birth_text": "1965"})
+    pos_a = factory.insert_position(conn, {
+        "person_id": pid_a, "title": "县委书记", "start_text": "2016-01",
+    })
+    pos_b = factory.insert_position(conn, {
+        "person_id": pid_b, "title": "县委书记", "start_text": "2018-01",
+    })
+    assert pos_a != pos_b
+    assert conn.execute("SELECT COUNT(*) FROM positions").fetchone()[0] == 2
 
 
 def test_insert_relationship_creates_edge(conn):
@@ -1098,11 +1147,20 @@ class InsertFactory:
 
     def insert_position(self, conn: sqlite3.Connection, data: dict[str, Any]) -> str:
         dataset_key = str(data.get("_dataset_key", "factory"))
-        source_pk = str(data.get("_source_pk", data.get("title", "")))
+        source_pk = str(data.get("_source_pk", "None"))
         from gov_relation.identity import date_precision
+        # 修复（评审 F5）：key 必须包含 person_id + title + start_text，
+        # 否则同一 dataset 内两人同名职务（如两个"县委书记"）会算出相同
+        # position_id，INSERT OR IGNORE 静默丢第二行。
+        start = str(data.get("start_text", ""))
+        dedup_key = (
+            f'{dataset_key}|{data.get("person_id", "")}|'
+            f'{normalize_text(data.get("title", ""))}|{normalize_text(start)}'
+        )
+        if source_pk in (None, "", "None"):
+            source_pk = dedup_key
         key = f"{dataset_key}|{source_pk}"
         position_id = stable_id("pos", key)
-        start = str(data.get("start_text", ""))
         end = str(data.get("end_text", ""))
         conn.execute(
             """INSERT OR IGNORE INTO positions
@@ -1136,7 +1194,15 @@ class InsertFactory:
 
     def insert_relationship(self, conn: sqlite3.Connection, data: dict[str, Any]) -> str:
         dataset_key = str(data.get("_dataset_key", "factory"))
-        source_pk = str(data.get("_source_pk", f"{data.get('person_from_id','')}-{data.get('person_to_id','')}"))
+        source_pk = str(data.get("_source_pk", "None"))
+        # 修复（评审 F5）：key 必须包含 relationship_type，否则同一对人员的
+        # 多条关系（如 同事 + 亲属）会算出相同 relationship_id 而静默去重。
+        dedup_key = (
+            f'{data.get("person_from_id", "")}|{data.get("person_to_id", "")}|'
+            f'{data.get("relationship_type", "other")}'
+        )
+        if source_pk in (None, "", "None"):
+            source_pk = dedup_key
         key = f"{dataset_key}|{source_pk}"
         relationship_id = stable_id("rel", key)
         conn.execute(
@@ -1208,7 +1274,8 @@ class InsertFactory:
 - [ ] **Step 4: 运行测试确认通过**
 
 Run: `python3 -m pytest tests/test_factory/test_insert_factory.py -v`
-Expected: 8 PASS
+Expected: 10 PASS（10 个测试函数：upsert_person×4 / jurisdiction / organization / position / position-same-title-collision / relationship / source+evidence）
+> 评审确认：原计划 "8 PASS" 有误；修复后 F5 碰撞回归测试使总数 = 10。
 
 - [ ] **Step 5: Commit**
 
@@ -1222,6 +1289,7 @@ git commit -m "feat(factory): add InsertFactory with upsert semantics for all v3
 ### Task 5: GEXFFactory — 从 DB 生成 GEXF
 
 **Files:**
+- Modify: `gov_relation/gexf.py`（重构：`_build_tree()` 共享 `write()`/`to_string()`）
 - Create: `gov_relation/factory/gexf_factory.py`
 - Create: `tests/test_factory/test_gexf_factory.py`
 
@@ -1229,7 +1297,34 @@ git commit -m "feat(factory): add InsertFactory with upsert semantics for all v3
 - Consumes: `gov_relation.gexf.GEXFBuilder`, `gov_relation.factory.schema_factory.SchemaFactory`, `gov_relation.factory.insert_factory.InsertFactory`
 - Produces: `GEXFFactory.build(conn, title) -> str`
 
-- [ ] **Step 1: 写测试**
+**设计与修复点（承接评审 F1/F2）:**
+1. `GEXFBuilder.to_string()` 目前只输出裸 `node id/label` 与 `edge id/source/target`（缺 `<meta><title>`、缺 `attvalues` 的 `type/context/overlap_period`），与 `write()` 文件形式不一致 → 断言 `"空图"`/`"coworker"`/`"同期任职"` 全失败。重构为先构建 ElementTree 再序列化，`write()` 与 `to_string()` 共用。
+2. `GEXFFactory` 不用内建 `hash()` 做节点 id（进程内 salt 随机 → 跨运行漂移、person/org 区间重叠），改用 `gov_relation.identity.sha256_bytes()` 派生出确定性 `int` id。
+
+- [ ] **Step 0（前置依赖）: 修 gexf.py — 让 to_string() 与 write() 输出一致**
+
+`GEXFBuilder.write()` 已含完整 XML（meta/title + attvalues）。把第 103-198 行的树构建提取为私有方法，`write()` 与 `to_string()` 共用：
+
+```python
+# gov_relation/gexf.py 内
+def _build_tree(self) -> ET.ElementTree:
+    """Build the full GEXF ElementTree (title, node/edge attvalues...)."""
+    # 将现有 write() 中 root→tree 的构建逻辑整体移入（含 meta title、
+    # node viz:size/shape/color、node/edge attvalues），返回 ET.ElementTree。
+    ...
+
+def write(self, path: Path | str) -> None:
+    tree = self._build_tree()
+    ...  # 原 path.parent.mkdir + tree.write 保留
+
+def to_string(self) -> str:
+    import io
+    buf = io.BytesIO()
+    self._build_tree().write(buf, encoding="utf-8", xml_declaration=True)
+    return buf.getvalue().decode("utf-8")
+```
+
+> 现有 `test_gexf.py`（若存在）应不受影响：此重构不改变 `write()` 产出的 XML 结构。若仓库现有测试对 to_string 的裸输出有断言，需相应调整。
 
 ```python
 # tests/test_factory/test_gexf_factory.py
@@ -1299,17 +1394,31 @@ def test_relationship_becomes_edge(tmp_path):
     conn.close()
 ```
 
-- [ ] **Step 2: 实现 GEXFFactory**
+- [ ] **Step 1: 写测试**
 
 ```python
 # gov_relation/factory/gexf_factory.py
-"""Factory that builds GEXF graphs from a v3 SQLite database."""
+"""Factory that builds GEXF graphs from a v3 SQLite database.
+
+Node ids are deterministic (sha256-derived), NOT builtin hash(): hash() is
+salted per-process, so ids would drift every run and clobber git history.
+"""
 
 from __future__ import annotations
 
 import sqlite3
 
 from gov_relation.gexf import GEXFBuilder
+from gov_relation.identity import sha256_bytes
+
+_PERSON_BASE = 0          # persons map to [0, 10**9)
+_ORG_BASE = 10**9         # organizations map to [10**9, 2*10**9): no overlap
+
+
+def _node_id(kind: str, entity_id: str, base: int) -> int:
+    """Deterministic entity id -> int in [base, base + 10**9)."""
+    digest = sha256_bytes(f"{kind}|{entity_id}".encode("utf-8"))
+    return base + int(digest[:16], 16) % (10**9)
 
 
 class GEXFFactory:
@@ -1334,7 +1443,7 @@ class GEXFFactory:
             if status:
                 post = status[0]
             builder.add_person(
-                id=hash(row[0]) % (10**9),
+                id=_node_id("per", row[0], _PERSON_BASE),
                 name=row[1],
                 current_post=post,
                 gender=row[2] or "",
@@ -1345,7 +1454,7 @@ class GEXFFactory:
             "SELECT organization_id, canonical_name FROM organizations"
         ):
             builder.add_organization(
-                id=(hash(row[0]) % (10**9)) + 100000,
+                id=_node_id("org", row[0], _ORG_BASE),
                 name=row[1],
             )
 
@@ -1354,8 +1463,8 @@ class GEXFFactory:
                       relationship_type, context, overlap_period_text
                FROM relationships"""
         ):
-            a = hash(row[1]) % (10**9)
-            b = hash(row[2]) % (10**9)
+            a = _node_id("per", row[1], _PERSON_BASE)
+            b = _node_id("per", row[2], _PERSON_BASE)
             builder.add_relationship(
                 a, b, row[3],
                 context=row[4] or "",
@@ -1371,16 +1480,20 @@ class GEXFFactory:
         Path(path).write_text(xml, encoding="utf-8")
 ```
 
-- [ ] **Step 3: 运行测试确认通过**
+- [ ] **Step 2: 运行测试确认通过**
 
 Run: `python3 -m pytest tests/test_factory/test_gexf_factory.py -v`
 Expected: 3 PASS
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 3: Commit**
 
 ```bash
-git add gov_relation/factory/gexf_factory.py tests/test_factory/test_gexf_factory.py
-git commit -m "feat(factory): add GEXFFactory that builds GEXF graphs from v3 database"
+git add gov_relation/gexf.py gov_relation/factory/gexf_factory.py tests/test_factory/test_gexf_factory.py
+git commit -m "feat(factory): add GEXFFactory that builds GEXF graphs from v3 database
+
+Also refactor GEXFBuilder to share _build_tree() between write() and
+to_string() so string output carries meta title and node/edge attvalues.
+GEXFFactory uses deterministic sha256-derived ids, not builtin hash()."
 ```
 
 ---
@@ -1591,7 +1704,13 @@ import sqlite3
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+# 修复（评审 F4）：不能用固定 parents[3]（脚本在 data/provinces/<slug>/build/
+# 时 parents[3] 是 data/ 而非仓库根）。改为向上查找 gov_relation 包所在目录，
+# 对脚本存放层级不敏感。运行时不依赖 cwd 或 PYTHONPATH。
+REPO_ROOT = next(
+    p for p in Path(__file__).resolve().parents
+    if (p / "gov_relation").is_dir()
+)
 sys.path.insert(0, str(REPO_ROOT))
 
 from gov_relation.factory.schema_factory import SchemaFactory
@@ -1628,16 +1747,32 @@ def main():
     # Build
     SchemaFactory().create_all(conn)
 
+    # 修复（F6）：POSITIONS/RELATIONSHIPS 数据在源列表里带的是人/机构名字
+    # （或空 person_id）。先生成人员/机构 id → 名字映射，插入任职/关系时回填
+    # 真实 FK，避免 FOREIGN KEY constraint failed。
+    person_id_by_name = {{}}
     for p in PERSONS:
-        factory.upsert_person(conn, p)
-
+        pid = factory.upsert_person(conn, p)
+        person_id_by_name[p.get("canonical_name", "")] = pid
+    org_id_by_name = {{}}
     for o in ORGANIZATIONS:
-        factory.upsert_organization(conn, o)
+        oid = factory.upsert_organization(conn, o)
+        org_id_by_name[o.get("canonical_name", "")] = oid
 
     for pos in POSITIONS:
+        pos = dict(pos)
+        if not pos.get("person_id"):
+            pos["person_id"] = person_id_by_name.get(pos.pop("person_name", ""), "")
+        if not pos.get("organization_id"):
+            pos["organization_id"] = org_id_by_name.get(pos.pop("organization_name", ""))
         factory.insert_position(conn, pos)
 
     for rel in RELATIONSHIPS:
+        rel = dict(rel)
+        if not rel.get("person_from_id"):
+            rel["person_from_id"] = person_id_by_name.get(rel.pop("person_from_name", ""), "")
+        if not rel.get("person_to_id"):
+            rel["person_to_id"] = person_id_by_name.get(rel.pop("person_to_name", ""), "")
         factory.insert_relationship(conn, rel)
 
     for src in SOURCES:
@@ -1651,12 +1786,17 @@ def main():
     persons_dir = PROVINCE_DIR / "persons"
     persons_dir.mkdir(parents=True, exist_ok=True)
     for p in PERSONS:
-        pid = factory.upsert_person(conn, p)
+        pid = person_id_by_name.get(p.get("canonical_name", ""))
+        if not pid:
+            continue
         name = p.get("canonical_name", "unknown")
         pf.write(conn, pid, str(persons_dir / f"{{name}}.json"))
 
-    # Report
-    ReportFactory().build_from_conn(conn, "{slug}")
+    # Report —— 修复（F10）：原模板丢弃了返回值；实际写入 reports/
+    report_dir = PROVINCE_DIR / "reports"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    report = ReportFactory().build_from_conn(conn, "{slug}")
+    (report_dir / f"{{slug}}_report.md").write_text(report, encoding="utf-8")
 
     conn.close()
     print(f"Built: {{DB_PATH}}")
@@ -1789,6 +1929,7 @@ from pathlib import Path
 from gov_relation.paths import (
     province_build_dir,
     province_database_dir,
+    province_dir,
     province_graph_dir,
     province_persons_dir,
     province_reports_dir,
@@ -1840,10 +1981,12 @@ class RegionResearchFactory:
 
     def generate_build_script(self) -> Path:
         script_factory = BuildScriptFactory()
-        province_dir = Path("data/provinces") / self._province_slug()
+        # 修复（F9）：用 paths.province_dir()（绝对路径）替代"data/provinces"相对字面量，
+        # 与 province_build_dir() 保持一致；province_dir.name 仍是 slug，供生成脚本定位。
+        pd = province_dir(self.province)
         script = script_factory.generate(
             slug=self.region,
-            province_dir=province_dir,
+            province_dir=pd,
             persons=self._persons,
             organizations=self._organizations,
             positions=self._positions,
@@ -1895,10 +2038,19 @@ class RegionResearchFactory:
             pf = PersonJSONFactory()
             persons_dir = province_persons_dir(self.province)
             persons_dir.mkdir(parents=True, exist_ok=True)
+            from datetime import date
+            stamp = date.today().strftime("%Y%m%d")
             paths = []
             for row in conn.execute("SELECT person_id, canonical_name FROM persons"):
                 pid, name = row[0], row[1]
-                path = persons_dir / f"{name}.json"
+                # 修复（F11）：文件名按 spec §10 格式 YYYYMMDD-省-市-职务-姓名.json
+                job = conn.execute(
+                    "SELECT title FROM positions WHERE person_id=? AND is_current=1 "
+                    "ORDER BY sort_order LIMIT 1",
+                    (pid,),
+                ).fetchone()
+                job_name = job[0] if job else "其他"
+                path = persons_dir / f"{stamp}-{self.province}-{self.region}-{job_name}-{name}.json"
                 pf.write(conn, pid, str(path))
                 paths.append(path)
             return paths
@@ -1918,10 +2070,6 @@ class RegionResearchFactory:
             return path
         finally:
             conn.close()
-
-    def _province_slug(self) -> str:
-        from gov_relation.paths import PROVINCE_SLUGS
-        return PROVINCE_SLUGS.get(self.province, self.province)
 ```
 
 - [ ] **Step 2: 写集成测试**
@@ -2034,7 +2182,8 @@ __all__ = [
 - [ ] **Step 5: 运行全部 factory 测试**
 
 Run: `python3 -m pytest tests/test_factory/ -v`
-Expected: 约 20 PASS
+Expected: 22 PASS（schema 4 + insert 10 + gexf 3 + build 3 + region 2）
+> 评审确认：原计划 "约 20" 不准；插入 F5 碰撞回归测试后总数为 22。
 
 - [ ] **Step 6: Commit**
 
@@ -2138,7 +2287,7 @@ echo "Phase 1 complete"
 
 - [ ] `gov_relation/identity.py` — 核心函数从 platform/ 提升
 - [ ] `gov_relation/paths.py` — PROVINCES_DIR + PROVINCE_SLUGS + 6 个 province_*() 函数
-- [ ] `gov_relation/factory/schema_factory.py` — 20 表 + 6 view + 21 index 全部 DDL
+- [ ] `gov_relation/factory/schema_factory.py` — 21 表 + 6 view + 21 index 全部 DDL
 - [ ] `gov_relation/factory/insert_factory.py` — 7 个 upsert/insert/link 方法
 - [ ] `gov_relation/factory/gexf_factory.py` — DB → GEXF XML
 - [ ] `gov_relation/factory/person_factory.py` — DB → Person JSON
