@@ -332,12 +332,14 @@ from gov_relation.todo import find_item_by_id, load_todo
 新增 `tests/test_process_tmp.py`：覆盖已知省份路由、未知 task fallback、dry-run 不写入、
 PersonJSONFactory 输出可被 classify、同名目标拒绝覆盖五种行为。禁止只改常量字典而不测试。
 
-- [ ] **Step 2: 提交**
+- [x] **Step 2: 提交**
 
 ```bash
 git add .agents/skills/china-gov-network/scripts/process_tmp.py
 git commit -m "feat(process_tmp): auto-route to province paths when province is known"
 ```
+
+**2026-08-11 完成记录:** commit `2e2385525`（含 `tests/test_process_tmp_province.py` 6 例）。
 
 ### Task 2: dispatch_todo.py 生成 province-aware prompt
 
@@ -363,12 +365,14 @@ return prompt
 legacy 与 province 两套 canonical destination。build script 仍指向 `scripts/build/`；数据库、
 GEXF、Person JSON、report 指向对应省目录。新增 dispatch 单元测试断言旧路径不再出现。
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add gov_relation/dispatch.py
 git commit -m "feat(dispatch): include province output paths in prompt"
 ```
+
+**2026-08-11 完成记录:** commit `38a93c8df`（含 `queue.py` 就绪检查、`tests/test_dispatch.py`/`test_queue.py`）。
 
 ### Task 3: 端到端验证 — 用 RegionResearchFactory 跑一个新地区
 
@@ -420,6 +424,8 @@ ls -la data/provinces/sichuan/persons/
 git add data/provinces/
 git commit -m "test: end-to-end factory pipeline validation"
 ```
+
+**2026-08-11 完成记录（策略变更）:** `data/provinces/` 已按 SubAgentReview 决策加入 `.gitignore`（运行时产物不入库，仅骨架 `.gitkeep` 入库），故本步改为**产物验证 + 生成器入库**：验证样本 `guangxi_南丹县` 的 DB/GEXF/2 Person JSON/报告均存在且 `PRAGMA foreign_key_check=[]`；生成器 `scripts/build/build_guangxi_南丹县_data.py` 与 `build_guangxi_大化瑶族自治县_data.py` 已随 Phase 1 提交 `276320464` 入库。Phase 4 全部完成，相关联收尾提交 `8086baaa4`（rights commercial_use / central deprecation / tool sys.path）。
 
 ---
 
