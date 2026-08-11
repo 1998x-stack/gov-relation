@@ -98,10 +98,10 @@ Required workflow:
 
 Province-aware promotion destinations:
 - build_script_dir: scripts/build/
-- database_dir: {province_database_dir(province)}
-- graph_dir: {province_graph_dir(province)}
-- person_json_dir: {province_persons_dir(province)}
-- report_dir: {province_reports_dir(province)}
+- database_dir: {province_database_dir(province).relative_to(REPO_ROOT)}
+- graph_dir: {province_graph_dir(province).relative_to(REPO_ROOT)}
+- person_json_dir: {province_persons_dir(province).relative_to(REPO_ROOT)}
+- report_dir: {province_reports_dir(province).relative_to(REPO_ROOT)}
 """
     return prompt
 

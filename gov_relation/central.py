@@ -19,17 +19,16 @@ from .hash import org_hash, person_hash
 from .paths import PROVINCE_DIR
 from .schema import create_central_schema, create_registry_schema
 
-warnings.warn(
-    "gov_relation.central is deprecated; use gov_relation.factory.InsertFactory",
-    DeprecationWarning,
-    stacklevel=2,
-)
-
 
 class Central:
     """Province-partitioned central registry writer."""
 
     def __init__(self, province: str) -> None:
+        warnings.warn(
+            "gov_relation.central is deprecated; use gov_relation.factory.InsertFactory",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self.province = province
         PROVINCE_DIR.mkdir(parents=True, exist_ok=True)
         self.db_path = PROVINCE_DIR / f"{province}.db"

@@ -86,3 +86,22 @@ def test_sqlite_validation_does_not_create_wal_sidecars(tmp_path):
     assert module.validate_sqlite(database) == (True, "ok")
     assert not Path(f"{database}-wal").exists()
     assert not Path(f"{database}-shm").exists()
+
+
+def test_promote_refuses_overwrite(tmp_path, monkeypatch):
+    module = _module()
+    import gov_relation.todo as todo
+
+    monkeypatch.setattr(todo, "load_todo", lambda: {})
+    monkeypatch.setattr(todo, "find_item_by_id", lambda data, task_id: None)
+    reporter = tmp_path / "reports"
+    reporter.mkdir()
+    monkeypatch.setattr(module, "DESTINATIONS", {"report": reporter})
+    staging = tmp_path / "task"
+    staging.mkdir()
+    (staging / "public_report.md").write_text("# Report", encoding="utf-8")
+    (reporter / "public_report.md").write_text("existing", encoding="utf-8")
+
+    actions = module.collect_actions(staging)
+    with pytest.raises(FileExistsError, match="destination exists"):
+        module.promote(actions)
