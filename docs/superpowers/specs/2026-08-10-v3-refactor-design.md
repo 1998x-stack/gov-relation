@@ -662,7 +662,7 @@ class BuildScriptFactory:
         claims: list[dict] | None = None,
     ) -> str   # 返回完整 .py 脚本内容
 
-> **2026-08-11 审查同步:** 已实现为 keyword-only `generate(*, slug: str, province_name: str, persons, organizations, positions, relationships, sources, claims)`(另接受 `province_dir` 覆盖);生成脚本经 `gov_relation.runner.run_build(..., backend="v3")` 执行,并硬编码 `Path(__file__).resolve().parents[2]` 定位仓库根。
+> **2026-08-11 审查同步:** 已实现为 keyword-only `generate(*, slug: str, province_name: str, persons, organizations, positions, relationships, sources, claims)`;生成脚本经 `gov_relation.runner.run_build(..., backend="v3")` 执行;仓库根由生成模板内的 `_repo_root()` 沿父目录链向上搜索 `gov_relation/` 定位(2026-08-11 F4 修复,不再硬编码 `parents[2]`)。
 
 
 class GEXFFactory:

@@ -14,6 +14,12 @@ PROCESS_TMP_SCRIPT = (
     Path(__file__).resolve().parents[1]
     / ".agents" / "skills" / "china-gov-network" / "scripts" / "process_tmp.py"
 )
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+pytestmark = pytest.mark.skipif(
+    not (REPO_ROOT / "data" / "TODO.json").exists(),
+    reason="CLI 依赖运行时 data/TODO.json(不入库),新鲜 checkout 中跳过",
+)
 
 
 def _run_process_tmp(staging_dir: Path, *args: str) -> subprocess.CompletedProcess:

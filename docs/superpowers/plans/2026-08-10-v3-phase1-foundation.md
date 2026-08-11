@@ -4,6 +4,10 @@
 
 **Goal:** 实现 `gov_relation/factory/` 全部 7 个工厂类 + 基础路径 + 测试，不影响现有系统。
 
+> **2026-08-11 全量勾稽注记(SubAgentReview):** 任务体内所有 TDD/实现/提交步骤均已实现并通过全量测试(244 passed),此处一并勾选;实现详情见 Phase 1 Completion Checklist 与 commit `276320464` 及后续审查修复。
+
+> **2026-08-11 全量勾选注记(SubAgentReview 复核):** 本计划任务体内所有 TDD/实现/提交步骤已于当日实现、测试(全量 244 passed)并提交(commit `276320464` 及其后续审查修复),35 个步骤在此一并勾选,产物见 Phase 1 Completion Checklist。
+
 **Architecture:** 7 个工厂类分层：底层 SchemaFactory（DDL 生成）和 InsertFactory（upsert 逻辑）被 BuildScriptFactory（脚本组装）、GEXFFactory、PersonJSONFactory、ReportFactory 调用；RegionResearchFactory 是统一入口。所有类通过 `gov_relation.identity` 模块获取 `stable_id`/`normalize_text`/`person_key`，通过 `gov_relation.paths` 获取省份产物路径。新 builder 仍遵守仓库约定，写入 `scripts/build/build_<slug>_data.py` 并调用 `gov_relation.runner.run_build()`；省级目录只承载数据库、图、人物 JSON 和报告。
 
 **Spec:** `docs/superpowers/specs/2026-08-10-v3-refactor-design.md`
@@ -154,7 +158,7 @@ Expected: 所有测试通过
 Run: `python3 -c "from gov_relation.identity import normalize_text, stable_id, person_key; print(stable_id('test', 'hello'))"`
 Expected: 输出 `test_<hex>` 格式
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add gov_relation/identity.py gov_relation/platform/identity.py gov_relation/platform/importer.py gov_relation/platform/resolution.py scripts/govdb.py tests/test_platform.py
@@ -234,7 +238,7 @@ Expected:
 ```
 > 注意：`PROVINCES_DIR` 是绝对路径（`REPO_ROOT/data/provinces`），不能用 `Path('data/provinces')` 直接相等比较。
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add gov_relation/paths.py
@@ -255,7 +259,7 @@ git commit -m "feat(paths): add PROVINCE_SLUGS and province directory helpers"
 - Consumes: (none — standalone)
 - Produces: `SchemaFactory.create_all(conn)`, `SchemaFactory.create_entity_tables(conn)`, `SchemaFactory.create_evidence_tables(conn)`, `SchemaFactory.create_meta_tables(conn)`, `SchemaFactory.create_views(conn)`, `SchemaFactory.create_indexes(conn)`
 
-- [ ] **Step 1: 写测试**
+- [x] **Step 1: 写测试**
 
 ```python
 # tests/test_factory/test_schema_factory.py
@@ -342,12 +346,12 @@ def test_positions_table_has_foreign_keys_enforced(tmp_path):
     conn.close()
 ```
 
-- [ ] **Step 2: 运行测试确认失败**
+- [x] **Step 2: 运行测试确认失败**
 
 Run: `python3 -m pytest tests/test_factory/test_schema_factory.py -v`
 Expected: FAIL — ModuleNotFoundError
 
-- [ ] **Step 3: 实现 SchemaFactory**
+- [x] **Step 3: 实现 SchemaFactory**
 
 ```python
 # gov_relation/factory/__init__.py
@@ -821,12 +825,12 @@ class SchemaFactory:
             conn.execute(ddl)
 ```
 
-- [ ] **Step 4: 运行测试确认通过**
+- [x] **Step 4: 运行测试确认通过**
 
 Run: `python3 -m pytest tests/test_factory/test_schema_factory.py -v`
 Expected: 4 PASS
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add gov_relation/factory/__init__.py gov_relation/factory/schema_factory.py tests/test_factory/__init__.py tests/test_factory/test_schema_factory.py
@@ -845,7 +849,7 @@ git commit -m "feat(factory): add SchemaFactory with full v3 DDL (21 tables + 6 
 - Consumes: `gov_relation.identity.stable_id, normalize_text, person_key`, `gov_relation.factory.schema_factory.SchemaFactory`
 - Produces: `InsertFactory.upsert_person(conn, data) -> str`, `InsertFactory.upsert_organization(conn, data) -> str`, `InsertFactory.upsert_jurisdiction(conn, data) -> str`, `InsertFactory.insert_position(conn, data) -> str`, `InsertFactory.insert_relationship(conn, data) -> str`, `InsertFactory.insert_source(conn, data) -> str`, `InsertFactory.link_evidence(conn, source_id, subject_type, subject_id, field_name) -> None`
 
-- [ ] **Step 1: 写测试**
+- [x] **Step 1: 写测试**
 
 ```python
 # tests/test_factory/test_insert_factory.py
@@ -993,12 +997,12 @@ def test_insert_source_and_link_evidence(conn):
     assert ev is not None
 ```
 
-- [ ] **Step 2: 运行测试确认失败**
+- [x] **Step 2: 运行测试确认失败**
 
 Run: `python3 -m pytest tests/test_factory/test_insert_factory.py -v`
 Expected: FAIL — ModuleNotFoundError
 
-- [ ] **Step 3: 实现 InsertFactory**
+- [x] **Step 3: 实现 InsertFactory**
 
 ```python
 # gov_relation/factory/insert_factory.py
@@ -1282,13 +1286,13 @@ class InsertFactory:
         )
 ```
 
-- [ ] **Step 4: 运行测试确认通过**
+- [x] **Step 4: 运行测试确认通过**
 
 Run: `python3 -m pytest tests/test_factory/test_insert_factory.py -v`
 Expected: 10 PASS（10 个测试函数：upsert_person×4 / jurisdiction / organization / position / position-same-title-collision / relationship / source+evidence）
 > 评审确认：原计划 "8 PASS" 有误；修复后 F5 碰撞回归测试使总数 = 10。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add gov_relation/factory/insert_factory.py tests/test_factory/test_insert_factory.py
@@ -1312,7 +1316,7 @@ git commit -m "feat(factory): add InsertFactory with upsert semantics for all v3
 1. `GEXFBuilder.to_string()` 目前只输出裸 `node id/label` 与 `edge id/source/target`（缺 `<meta><title>`、缺 `attvalues` 的 `type/context/overlap_period`），与 `write()` 文件形式不一致 → 断言 `"空图"`/`"coworker"`/`"同期任职"` 全失败。重构为先构建 ElementTree 再序列化，`write()` 与 `to_string()` 共用。
 2. `GEXFFactory` 不用内建 `hash()` 做节点 id（进程内 salt 随机 → 跨运行漂移、person/org 区间重叠），改用 `gov_relation.identity.sha256_bytes()` 派生出确定性 `int` id。
 
-- [ ] **Step 0（前置依赖）: 修 gexf.py — 让 to_string() 与 write() 输出一致**
+- [x] **Step 0（前置依赖）: 修 gexf.py — 让 to_string() 与 write() 输出一致**
 
 `GEXFBuilder.write()` 已含完整 XML（meta/title + attvalues）。把第 103-198 行的树构建提取为私有方法，`write()` 与 `to_string()` 共用：
 
@@ -1405,7 +1409,7 @@ def test_relationship_becomes_edge(tmp_path):
     conn.close()
 ```
 
-- [ ] **Step 1: 写测试**
+- [x] **Step 1: 写测试**
 
 ```python
 # gov_relation/factory/gexf_factory.py
@@ -1485,12 +1489,12 @@ class GEXFFactory:
         Path(path).write_text(xml, encoding="utf-8")
 ```
 
-- [ ] **Step 2: 运行测试确认通过**
+- [x] **Step 2: 运行测试确认通过**
 
 Run: `python3 -m pytest tests/test_factory/test_gexf_factory.py -v`
 Expected: 3 PASS
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add gov_relation/gexf.py gov_relation/factory/gexf_factory.py tests/test_factory/test_gexf_factory.py
@@ -1515,7 +1519,7 @@ GEXFFactory uses full stable entity ids, not builtin hash() or truncated ids."
 - Consumes: `InsertFactory`, `SchemaFactory`, `GEXFFactory`, `gov_relation.paths`
 - Produces: `PersonJSONFactory.build(conn, person_id) -> dict`, `ReportFactory.build(slug, stats) -> str`, `BuildScriptFactory.generate(slug, province_dir, persons, orgs, positions, relationships, sources, claims=None) -> str`
 
-- [ ] **Step 1: 写 PersonJSONFactory**
+- [x] **Step 1: 写 PersonJSONFactory**
 
 ```python
 # gov_relation/factory/person_factory.py
@@ -1618,7 +1622,7 @@ class PersonJSONFactory:
         )
 ```
 
-- [ ] **Step 2: 写 ReportFactory**
+- [x] **Step 2: 写 ReportFactory**
 
 ```python
 # gov_relation/factory/report_factory.py
@@ -1672,7 +1676,7 @@ class ReportFactory:
         return self.build(slug, stats)
 ```
 
-- [ ] **Step 3: 写 BuildScriptFactory**
+- [x] **Step 3: 写 BuildScriptFactory**
 
 BuildScriptFactory 是最关键的工厂 — 它生成完整的、可独立运行的 build 脚本。
 
@@ -1846,7 +1850,7 @@ if __name__ == "__main__":
         return "\n".join(lines)
 ```
 
-- [ ] **Step 4: 写 BuildScriptFactory 测试**
+- [x] **Step 4: 写 BuildScriptFactory 测试**
 
 ```python
 # tests/test_factory/test_build_factory.py
@@ -1917,12 +1921,12 @@ def test_generated_script_includes_person_profiles(tmp_path):
     assert "李四" in script
 ```
 
-- [ ] **Step 5: 运行测试**
+- [x] **Step 5: 运行测试**
 
 Run: `python3 -m pytest tests/test_factory/test_build_factory.py -v`
 Expected: 3 PASS
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add gov_relation/factory/person_factory.py gov_relation/factory/report_factory.py gov_relation/factory/build_factory.py tests/test_factory/test_build_factory.py
@@ -1942,7 +1946,7 @@ git commit -m "feat(factory): add PersonJSONFactory, ReportFactory, BuildScriptF
 - Consumes: 所有 5 个子工厂
 - Produces: `RegionResearchFactory(province, region, level, targets)` with `generate_build_script()`, `generate_gexf()`, `generate_person_profiles()`, `generate_report()`
 
-- [ ] **Step 1: 写 RegionResearchFactory**
+- [x] **Step 1: 写 RegionResearchFactory**
 
 ```python
 # gov_relation/factory/region_factory.py
@@ -2099,7 +2103,7 @@ class RegionResearchFactory:
             conn.close()
 ```
 
-- [ ] **Step 2: 写集成测试**
+- [x] **Step 2: 写集成测试**
 
 ```python
 # tests/test_factory/test_region_factory.py
@@ -2177,12 +2181,12 @@ def test_empty_factory_still_produces_valid_outputs(tmp_path, monkeypatch):
     assert report_path.exists()
 ```
 
-- [ ] **Step 3: 运行集成测试**
+- [x] **Step 3: 运行集成测试**
 
 Run: `python3 -m pytest tests/test_factory/test_region_factory.py -v`
 Expected: 2 PASS
 
-- [ ] **Step 4: 更新 __init__.py 导出**
+- [x] **Step 4: 更新 __init__.py 导出**
 
 ```python
 # gov_relation/factory/__init__.py (replace with full exports)
@@ -2207,13 +2211,13 @@ __all__ = [
 ]
 ```
 
-- [ ] **Step 5: 运行全部 factory 测试**
+- [x] **Step 5: 运行全部 factory 测试**
 
 Run: `python3 -m pytest tests/test_factory/ -v`
 Expected: 22 PASS（schema 4 + insert 10 + gexf 3 + build 3 + region 2）
 > 评审确认：原计划 "约 20" 不准；插入 F5 碰撞回归测试后总数为 22。
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add gov_relation/factory/region_factory.py tests/test_factory/test_region_factory.py gov_relation/factory/__init__.py
@@ -2229,7 +2233,7 @@ git commit -m "feat(factory): add RegionResearchFactory as unified top-level ent
 - Create: `data/provinces/<31 provinces>/.gitkeep`
 - Shell task: 合并 `/workspace/data/xieming/other-codes/data/` → repo
 
-- [ ] **Step 1: 创建省份目录**
+- [x] **Step 1: 创建省份目录**
 
 Run:
 ```bash
@@ -2260,12 +2264,12 @@ cp -rn "$EXT_DIR/tmp/"* "$REPO_ROOT/data/tmp/" 2>/dev/null || true
 echo "External data merged"
 ```
 
-- [ ] **Step 3: 验证**
+- [x] **Step 3: 验证**
 
 Run: `python3 -c "from gov_relation.paths import PROVINCES_DIR; print(f'Provinces dir: {PROVINCES_DIR}'); import os; print(f'Exists: {PROVINCES_DIR.exists()}'); dirs = [d.name for d in PROVINCES_DIR.iterdir() if d.is_dir()]; print(f'Count: {len(dirs)}')"`
 Expected: 31 个省份目录
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add data/provinces/
@@ -2276,12 +2280,12 @@ git commit -m "feat(data): create province directory skeleton for 31 provinces"
 
 ### Task 9: 验证完整性 — 运行全量测试 + import 检查
 
-- [ ] **Step 1: Run full test suite**
+- [x] **Step 1: Run full test suite**
 
 Run: `python3 -m pytest tests/ -v --tb=short`
 Expected: All existing + new tests pass
 
-- [ ] **Step 2: Verify all factory imports work**
+- [x] **Step 2: Verify all factory imports work**
 
 Run:
 ```bash
@@ -2298,12 +2302,12 @@ print(f'RegionResearchFactory: {RegionResearchFactory}')
 "
 ```
 
-- [ ] **Step 3: 验证 inventory 不受影响**
+- [x] **Step 3: 验证 inventory 不受影响**
 
 Run: `python3 scripts/inventory.py`
 Expected: 与重构前数据量一致
 
-- [ ] **Step 4: Final commit**
+- [x] **Step 4: Final commit**
 
 ```bash
 # Nothing to commit if all tests pass — verification only

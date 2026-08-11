@@ -253,6 +253,12 @@ def fake_todo(tmp_path: Path) -> Path:
 class TestIntegration:
     """Slightly higher-level: use the province map to find the right output file."""
 
+    REPO = Path(__file__).resolve().parents[1]
+    pytestmark = pytest.mark.skipif(
+        not (REPO / "data" / "TODO.json").exists(),
+        reason="migrate_to_central 依赖运行时 data/TODO.json,新鲜 checkout 中跳过",
+    )
+
     def test_slug_without_province_is_skipped(self, tmp_path: Path) -> None:
         """A DB whose slug has no province mapping is skipped during main()."""
         from scripts.migrate_to_central import main

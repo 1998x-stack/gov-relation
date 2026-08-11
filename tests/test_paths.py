@@ -11,8 +11,10 @@ class TestPathConstants:
     def test_repo_root_is_absolute(self) -> None:
         assert REPO_ROOT.is_absolute()
 
-    def test_repo_root_ends_with_gov_relation(self) -> None:
-        assert REPO_ROOT.name == "gov-relation"
+    def test_repo_root_contains_package(self) -> None:
+        # 特征目录检查(不依赖 checkout 目录名,支持任意克隆路径)
+        assert (REPO_ROOT / "gov_relation").is_dir()
+        assert REPO_ROOT.is_absolute()
 
     def test_data_dir_is_under_repo_root(self) -> None:
         assert str(DATA_DIR).startswith(str(REPO_ROOT))
