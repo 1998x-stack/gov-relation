@@ -445,6 +445,8 @@ warnings.warn(
 )
 ```
 
+**2026-08-11 审查修正:** 警告由模块 import 期改为 `Central.__init__` 实例化期触发（避免 `-W error` 下 import 即炸），见 commit `3de837e73`。
+
 - [x] **Step 2: 确认引用并处理**
 
 Run: `rg "from gov_relation.central import" --include="*.py"`
@@ -455,25 +457,29 @@ Run: `rg "from gov_relation.central import" --include="*.py"`
 2. 仅保留 `DeprecationWarning` 标记，**不删除文件、不改这 4 处 import**；
 3. 对产物：deprecation 对测试无碍（warning 仅告警），接受测试仍 import central。
 
-- [ ] **Step 3: 提交**
+- [x] **Step 3: 提交**
 
 ```bash
 git add gov_relation/central.py
 git commit -m "deprecate(central): mark Central class as deprecated for v3 factory"
 ```
 
+**2026-08-11 完成记录:** 标记随 `8086baaa4`（chore）与 `3de837e73`（lazy warn 修正）入库。
+
 ### Task 2: 清理 root legacy build_*.py
 
 **注意：** 此步骤为可选清理。仅在确认所有 legacy DB 已迁移到 provinces/ 后执行。
 
-- [ ] **Step 1: 备份统计**
+- [x] **Step 1: 备份统计**
 
 ```bash
 echo "Legacy build scripts at root:" && ls build_*_data.py | wc -l
 echo "Legacy DBs in data/database:" && ls data/database/*.db | wc -l
 ```
 
-- [ ] **Step 2: 移动而非删除 — 归档到 scripts/build/legacy/**
+**2026-08-11 完成记录:** 根目录共 **435** 个 build 脚本（5 tracked + 430 游离 untracked，合计 6.5MB）；legacy DB 2,290 个已全部完成 provinces/ 硬链接迁移（Phase 3，unmatched=0），符合“确认迁移后清理”前提。
+
+- [x] **Step 2: 移动而非删除 — 归档到 scripts/build/legacy/**
 
 ```bash
 mkdir -p scripts/build/legacy
@@ -483,12 +489,16 @@ for f in build_*_data.py; do
 done
 ```
 
-- [ ] **Step 3: 提交**
+**2026-08-11 完成记录（策略修正）:** 计划假设全部为 tracked 文件；实际 435 个中仅 5 个被 git 跟踪。执行：5 个 `git mv` + 430 个游离文件直接 `mv` 一并归档（合计 6.5MB，无仓库膨胀顾虑）；`docs/SYSTEM_OVERVIEW.md` 引用同步。根目录 `build_*.py` 清零。
+
+- [x] **Step 3: 提交**
 
 ```bash
 git add scripts/build/legacy/
 git commit -m "chore: archive root legacy build scripts to scripts/build/legacy/"
 ```
+
+**2026-08-11 完成记录:** commit `fb1793c93`（435 文件归档）。
 
 ---
 
