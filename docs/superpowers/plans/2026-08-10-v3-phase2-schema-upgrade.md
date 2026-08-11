@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** 升级 platform schema 到 v3，govdb.py build 切换到使用 InsertFactory 写新 schema。
+**Goal:** 安全升级 platform schema 到 v3；`govdb.py build` 保持 platform importer 逻辑，并拒绝在未迁移的旧 schema 上运行。
 
-**Architecture:** `gov_relation/schema.py` 新增 v3 DDL 常量（保留 v1/v2 legacy），`scripts/migrate/upgrade_schema_v2_to_v3.py` 在现有 platform DB 上执行 ALTER/新表，`scripts/govdb.py` 的 build 命令引入 InsertFactory 写新 schema。
+**Architecture（采用方案）:** v3 统一 DDL 由 `gov_relation/factory/schema_factory.py` 提供（基于 `gov_relation/platform/schema.py` 的 `DDL` 抽取建表/视图/索引），legacy `gov_relation/schema.py` 保持兼容不动；`scripts/migrate/upgrade_schema_v2_to_v3.py` 在现有 platform DB 上执行 ALTER/新表；`scripts/govdb.py` 继续使用 platform importer。版本号只是结果记录；是否完成迁移必须同时检查必需列（`gov_relation/platform/schema.py::REQUIRED_V3_COLUMNS` / `has_v3_shape()`，与迁移脚本的 `REQUIRED_V3_COLUMNS` 一致），不能仅凭 `schema_version` 判定。
 
 **Spec:** `docs/superpowers/specs/2026-08-10-v3-refactor-design.md`
 **Prerequisite:** Phase 1 (Foundation) 完成
@@ -20,168 +20,21 @@
 
 ---
 
-### Task 1: 升级 gov_relation/schema.py 添加 v3 DDL 常量
+### Task 1: ~~升级 gov_relation/schema.py 添加 v3 DDL 常量~~（已废弃，勿参照执行）
 
-**Files:**
-- Modify: `gov_relation/schema.py`
-
-**Interfaces:**
-- Produces: `V3_SCHEMA_DDLS: list[str]` — all CREATE TABLE IF NOT EXISTS statements for v3
-
-- [ ] **Step 1: 在 schema.py 末尾追加 v3 DDL 常量**
-
-在现有的 `create_registry_schema` 函数后面追加：
-
-```python
-# ═══════════════════════════════════════════════════════════════
-# V3 unified schema (2026-08-10) — 21 tables + 6 gold views
-# ═══════════════════════════════════════════════════════════════
-
-V3_JURISDICTIONS = """
-CREATE TABLE IF NOT EXISTS jurisdictions (
-    jurisdiction_id   TEXT PRIMARY KEY,
-    parent_id         TEXT REFERENCES jurisdictions(jurisdiction_id),
-    name              TEXT NOT NULL,
-    normalized_name   TEXT NOT NULL,
-    administrative_code TEXT NOT NULL DEFAULT '',
-    level             TEXT NOT NULL DEFAULT 'unknown'
-                       CHECK (level IN ('province','prefecture','county','town','unknown')),
-    province_name     TEXT NOT NULL DEFAULT '',
-    prefecture_name   TEXT NOT NULL DEFAULT '',
-    county_name       TEXT NOT NULL DEFAULT '',
-    valid_from        TEXT,
-    valid_to          TEXT,
-    UNIQUE (parent_id, normalized_name, level)
-)"""
-
-V3_PERSONS = """
-CREATE TABLE IF NOT EXISTS persons (
-    person_id       TEXT PRIMARY KEY,
-    canonical_name  TEXT NOT NULL,
-    normalized_name TEXT NOT NULL,
-    gender          TEXT NOT NULL DEFAULT '',
-    ethnicity       TEXT NOT NULL DEFAULT '',
-    birth_text      TEXT NOT NULL DEFAULT '',
-    birth_precision TEXT NOT NULL DEFAULT 'unknown'
-                     CHECK (birth_precision IN ('day','month','year','unknown')),
-    birthplace      TEXT NOT NULL DEFAULT '',
-    native_place    TEXT NOT NULL DEFAULT '',
-    education       TEXT NOT NULL DEFAULT '',
-    party_join_text TEXT NOT NULL DEFAULT '',
-    work_start_text TEXT NOT NULL DEFAULT '',
-    identity_status TEXT NOT NULL DEFAULT 'unresolved'
-                     CHECK (identity_status IN ('verified','probable','unresolved','merged')),
-    merged_into_id  TEXT REFERENCES persons(person_id),
-    created_at      TEXT NOT NULL DEFAULT (datetime('now')),
-    updated_at      TEXT NOT NULL DEFAULT (datetime('now'))
-)"""
-
-V3_PERSON_ALIASES = """
-CREATE TABLE IF NOT EXISTS person_aliases (
-    person_id        TEXT NOT NULL REFERENCES persons(person_id),
-    alias            TEXT NOT NULL,
-    normalized_alias TEXT NOT NULL,
-    alias_type       TEXT NOT NULL DEFAULT 'other',
-    PRIMARY KEY (person_id, normalized_alias)
-)"""
-
-V3_ORGANIZATIONS = """
-CREATE TABLE IF NOT EXISTS organizations (
-    organization_id        TEXT PRIMARY KEY,
-    jurisdiction_id        TEXT REFERENCES jurisdictions(jurisdiction_id),
-    parent_organization_id TEXT REFERENCES organizations(organization_id),
-    canonical_name         TEXT NOT NULL,
-    normalized_name        TEXT NOT NULL,
-    organization_type      TEXT NOT NULL DEFAULT '',
-    administrative_level   TEXT NOT NULL DEFAULT '',
-    location_text          TEXT NOT NULL DEFAULT '',
-    valid_from             TEXT,
-    valid_to               TEXT,
-    created_at             TEXT NOT NULL DEFAULT (datetime('now'))
-)"""
-
-V3_POSITIONS = """
-CREATE TABLE IF NOT EXISTS positions (
-    position_id       TEXT PRIMARY KEY,
-    person_id         TEXT NOT NULL REFERENCES persons(person_id),
-    organization_id   TEXT REFERENCES organizations(organization_id),
-    organization_text TEXT NOT NULL DEFAULT '',
-    title             TEXT NOT NULL DEFAULT '',
-    title_category    TEXT NOT NULL DEFAULT '',
-    rank              TEXT NOT NULL DEFAULT '',
-    start_text        TEXT NOT NULL DEFAULT '',
-    end_text          TEXT NOT NULL DEFAULT '',
-    start_date        TEXT,
-    end_date          TEXT,
-    date_precision    TEXT NOT NULL DEFAULT 'unknown'
-                       CHECK (date_precision IN ('day','month','year','range','unknown')),
-    is_current        INTEGER NOT NULL DEFAULT 0 CHECK (is_current IN (0,1)),
-    sort_order        INTEGER NOT NULL DEFAULT 0,
-    confidence        TEXT NOT NULL DEFAULT 'unverified'
-                       CHECK (confidence IN ('confirmed','plausible','unverified')),
-    notes             TEXT NOT NULL DEFAULT ''
-)"""
-
-V3_RELATIONSHIPS = """
-CREATE TABLE IF NOT EXISTS relationships (
-    relationship_id          TEXT PRIMARY KEY,
-    person_from_id           TEXT NOT NULL REFERENCES persons(person_id),
-    person_to_id             TEXT NOT NULL REFERENCES persons(person_id),
-    relationship_type        TEXT NOT NULL DEFAULT 'other',
-    direction                TEXT NOT NULL DEFAULT 'undirected'
-                              CHECK (direction IN ('undirected','from_to','to_from')),
-    strength                 TEXT NOT NULL DEFAULT 'unknown'
-                              CHECK (strength IN ('strong','medium','weak','unknown')),
-    confidence               TEXT NOT NULL DEFAULT 'unverified'
-                              CHECK (confidence IN ('confirmed','plausible','unverified')),
-    context                  TEXT NOT NULL DEFAULT '',
-    evidence_summary         TEXT NOT NULL DEFAULT '',
-    overlap_organization_id  TEXT REFERENCES organizations(organization_id),
-    overlap_organization_text TEXT NOT NULL DEFAULT '',
-    overlap_period_text      TEXT NOT NULL DEFAULT '',
-    valid_from               TEXT,
-    valid_to                 TEXT,
-    CHECK (person_from_id <> person_to_id)
-)"""
-
-V3_PERSON_STATUSES = """
-CREATE TABLE IF NOT EXISTS person_statuses (
-    status_id            TEXT PRIMARY KEY,
-    person_id            TEXT NOT NULL REFERENCES persons(person_id),
-    post_text            TEXT NOT NULL DEFAULT '',
-    organization_text    TEXT NOT NULL DEFAULT '',
-    administrative_rank  TEXT NOT NULL DEFAULT '',
-    observed_at          TEXT,
-    is_current_confirmed INTEGER NOT NULL DEFAULT 0 CHECK (is_current_confirmed IN (0,1)),
-    confidence           TEXT NOT NULL DEFAULT 'unverified'
-                          CHECK (confidence IN ('confirmed','plausible','unverified'))
-)"""
-
-V3_ENTITY_DDLS = [
-    V3_JURISDICTIONS, V3_PERSONS, V3_PERSON_ALIASES, V3_ORGANIZATIONS,
-    V3_POSITIONS, V3_RELATIONSHIPS, V3_PERSON_STATUSES,
-]
-```
-
-> **关于同名表（评审 C1）：** v2 平台 DDL（`gov_relation/platform/schema.py`）与 v3 的实体域**表名完全相同**，仅列级增量（`persons` 增 `education`/`merged_into_id`；`positions` 用 `category` → v3 用 `title_category` + `sort_order`；`datasets`/`sources` 用 `commercial_use_allowed` → v3 用 `commercial_use`）。因此：
-> - 这些 `V3_*` 常量用于**全新 DB**（factory 创建省库 / 重灌 platform）时直接建出 v3 形状；
-> - 对**已存在的 v2 platform DB**，不能靠 `CREATE TABLE IF NOT EXISTS` 升级（同名表 no-op），必须走 Task 3 的 ALTER 迁移。
-> - Evidence/Rights 域 DDL 在 `gov_relation/factory/schema_factory.py`，`V3_*` 常量只覆盖实体域 7 表（与本文件生成脚本保持一致）。
-
-- [ ] **Step 2: 验证 import**
-
-Run: `python3 -c "from gov_relation.schema import V3_ENTITY_DDLS; print(f'V3 entity tables: {len(V3_ENTITY_DDLS)}')"`
-Expected: `V3 entity tables: 7`
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add gov_relation/schema.py
-git commit -m "refactor(schema): add V3 entity DDL constants alongside legacy v1/v2"
-```
+> **该任务已被采用方案取代，不再执行：**
+> 当时计划在 legacy `gov_relation/schema.py` 末尾追加 `V3_JURISDICTIONS`/`V3_PERSONS`/…/`V3_ENTITY_DDLS` 常量。
+> 评审后采用的设计是 **v3 DDL 统一托管在 `gov_relation/factory/schema_factory.py`**（`SchemaFactory` 基于
+> `gov_relation/platform/schema.py::DDL` 抽取 21 表 + 6 gold 视图 + 索引），legacy `gov_relation/schema.py`
+> **保持 v1/v2 兼容、不新增 v3 DDL 常量**。
+>
+> 因此以下内容均已失效，**不要照做**：
+> - `V3_ENTITY_DDLS` / `V3_SCHEMA_DDLS` 常量**不存在**于 `gov_relation/schema.py`；
+> - 验证命令 `python3 -c "from gov_relation.schema import V3_ENTITY_DDLS; ..."` **会直接 ImportError**（已死）；
+> - 如需在全新 DB 上建 v3 形状，调用 `gov_relation.factory.schema_factory.SchemaFactory().create_all(conn)`
+>   （省库路径见 Phase 1 Task 7）；platform 库的门禁/幂等建表走 `gov_relation/platform/schema.py::create_schema()`。
 
 ---
-
 ### Task 2: govdb.py build 接入 v3（不改逻辑）
 
 **Files:**
@@ -195,11 +48,14 @@ git commit -m "refactor(schema): add V3 entity DDL constants alongside legacy v1
 
 **正确的做法：** platform 库的 v2→v3 升级**唯一入口是 Task 3 的迁移脚本**（先跑，ALTER 加列）。
 `govdb.py build` 自身的职责保持不变（platform importer 写 bronze/silver），仅在 build 前调用
-`gov_relation.platform.schema.create_schema(conn)` 做版本校验与幂等 DDL——由于 Step 0 已把
-`SCHEMA_VERSION` 升到 `3.0.0` 且 `ADDITIVE_SCHEMA_UPGRADES` 含 `2.1.0`，未迁移旧库会被平滑处理、
-已迁移库直接通过。**不要**在 build 里创建 v3 factory 表。
+`gov_relation.platform.schema.create_schema(conn)` 做版本校验与幂等 DDL。Step 0 把
+`SCHEMA_VERSION` 升到 `3.0.0`，但不会把 `2.1.0` 声明为自动 additive；因此未迁移旧库
+会明确失败并提示先运行迁移，已迁移库直接通过。**不要**在 build 里创建 v3 factory 表。
 
-- [ ] **Step 1: 在 build_database 开头加 schema 版本门禁（非 create_all）**
+**执行顺序门禁：** 必须先在数据库副本上验证 Task 3，再升级真实 canonical DB，最后才启用
+本 Task 的 `govdb.py` 版本门禁。禁止在未迁移的 v2 库上运行新版 `create_schema()`。
+
+- [x] **Step 1: 在 build_database 开头加 schema 版本门禁（非 create_all）**
 
 ```python
 # scripts/govdb.py build_database 内，conn 建立后、写数据前：
@@ -210,12 +66,14 @@ create_schema(conn)          # 版本校验 + 幂等 DDL；比 create_all 更安
 > 若确需 factory 表（省库路径），走 `RegionResearchFactory.generate_gexf()`（见 Phase 1 Task 7），
 > 它在新 **province DB** 上调用 `SchemaFactory().create_all()`，不存在与 v2 同名表冲突。
 
-- [ ] **Step 2: 验证**
+- [x] **Step 2: 验证**
 
 Run: `python3 -m pytest tests/test_platform.py -v --tb=short`
 Expected: 现有测试通过（`create_schema` 幂等，无 `sort_order` 崩溃）
 
-- [ ] **Step 3: Commit**
+**2026-08-11 完成记录（SubAgentReview 后补提交）:** 门禁实现含形状校验（无版本戳库先验 v3 列、`--replace` 也拒绝非 v3 目标），`tests/test_worker_gate.py`（5 例）+ `tests/test_schema_migration.py`（7 例）通过；全量 `pytest tests/ -q` = 243 passed。
+
+- [x] **Step 3: Commit**
 
 ```bash
 git add scripts/govdb.py
@@ -229,26 +87,40 @@ schema version via platform.create_schema."
 
 ---
 
+> **门禁加固（Phase 2 评审后续）:** 版本戳 `schema_version` 本身不可信——旧版 `create_schema()` 可能
+> 在未 ALTER 同名 v2 表的情况下直接盖章 3.0.0。加固后：
+> - `create_schema()` 对**无版本戳**的库（无 `schema_meta` 或无 version 行）先校验 v3 形状
+>   （`persons.education`/`persons.merged_into_id`、`positions.title_category`/`positions.sort_order`、
+>   `datasets.commercial_use`、`sources.commercial_use`），形状缺失 → `RuntimeError` 提示先跑迁移脚本；
+>   全新空库（无任何表）仍可直接初始化。stamped 3.0.0 / stamped 不兼容版本 / `ADDITIVE_SCHEMA_UPGRADES`
+>   行为保持不变。
+> - `build_database` 对已存在目标文件做**只读形状校验**：非 v3 形状（版本缺失/非 3.0.0 或缺 v3 列）
+>   即使带 `--replace` 也拒绝，并提示先运行迁移脚本；v3 形状目标 + `--replace` 照常可用。
+> - 回归测试：`tests/test_schema_migration.py`（create_schema 门禁 7 例）、`tests/test_worker_gate.py`
+>   （govdb build 门禁 5 例）。
+
 ### Task 3: 写迁移脚本 upgrade_schema_v2_to_v3.py
 
 **Files:**
 - Create: `scripts/migrate/upgrade_schema_v2_to_v3.py`
 
-- [ ] **Step 0（前置）: 更新 platform/schema.py 版本容限**
+- [x] **Step 0（前置）: 更新 platform/schema.py 版本容限**
 
 在迁移脚本运行前先改 `gov_relation/platform/schema.py`（评审 F4）：
-`SCHEMA_VERSION = "2.1.0"` → `SCHEMA_VERSION = "3.0.0"`，且
-`ADDITIVE_SCHEMA_UPGRADES = {"2.0.0", "2.1.0"}`。
+`SCHEMA_VERSION = "2.1.0"` → `SCHEMA_VERSION = "3.0.0"`，并把
+`ADDITIVE_SCHEMA_UPGRADES` 设为空集合。v2→v3 必须由显式迁移脚本完成，
+普通 `create_schema()` 不得把旧库自动盖章为 3.0.0。
 
 原因：迁移完成后 DB 里 `schema_version='3.0.0'`。若不更新这两个常量，后续任何
 `create_schema()`（govdb resolve / rights-apply 等都会调）都会因
 `Database schema 3.0.0 is incompatible with code schema 2.1.0` 抛 `RuntimeError`。
-把 2.1.0 加入 ADDITIVE 集合允许未迁移的旧库也能被 create_schema 平滑处理。
+若把 2.1.0 加入 ADDITIVE 集合，当前 `create_schema()` 会执行同名
+`CREATE TABLE IF NOT EXISTS`（无法补列）后仍无条件写入 3.0.0，造成假升级。
 
 ```python
 # gov_relation/platform/schema.py 顶部
 SCHEMA_VERSION = "3.0.0"
-ADDITIVE_SCHEMA_UPGRADES = {"2.0.0", "2.1.0"}
+ADDITIVE_SCHEMA_UPGRADES: set[str] = set()
 ```
 
 同时把 `gov_relation/platform/schema.py` 的 `DDL` 里那 4 处列级增量对齐为 v3：
@@ -256,7 +128,7 @@ ADDITIVE_SCHEMA_UPGRADES = {"2.0.0", "2.1.0"}
 `datasets`/`sources` 加 `commercial_use INTEGER NOT NULL DEFAULT 0`（保留 `commercial_use_allowed`）。
 （新装 DB 用 `create_schema` 直接建出 v3 形状；已有 DB 走本脚本 ALTER。）
 
-- [ ] **Step 1: 实现**
+- [x] **Step 1: 实现**
 
 ```python
 #!/usr/bin/env python3
@@ -304,11 +176,26 @@ ALTER_COLUMNS: dict[str, list[str]] = {
 }
 
 # v3 列 → 可回填其值对应的 v2 旧列（保留旧列）
-BACKFILL: dict[str, tuple[str, str]] = {
-    # (table, v2_column) -> v3_column
-    "positions": ("category", "title_category"),
-    "datasets": ("commercial_use_allowed", "commercial_use"),
-    "sources": ("commercial_use_allowed", "commercial_use"),
+BACKFILL_SQL: dict[str, str] = {
+    "positions": (
+        "UPDATE positions SET title_category = category "
+        "WHERE title_category = '' AND category != ''"
+    ),
+    "datasets": (
+        "UPDATE datasets SET commercial_use = commercial_use_allowed "
+        "WHERE commercial_use = 0 AND commercial_use_allowed != 0"
+    ),
+    "sources": (
+        "UPDATE sources SET commercial_use = commercial_use_allowed "
+        "WHERE commercial_use = 0 AND commercial_use_allowed != 0"
+    ),
+}
+
+REQUIRED_V3_COLUMNS = {
+    "persons": {"education", "merged_into_id"},
+    "positions": {"title_category", "sort_order"},
+    "datasets": {"commercial_use"},
+    "sources": {"commercial_use"},
 }
 
 # v2 平台已存在全部 21 表；此集合保证极端情况（缺表）也补建
@@ -322,6 +209,14 @@ def _columns(conn, table: str) -> set[str]:
     return {row[1] for row in conn.execute(f"PRAGMA table_info('{table}')")}
 
 
+def _has_v3_shape(conn) -> bool:
+    tables = _tables(conn)
+    return all(
+        table in tables and required <= _columns(conn, table)
+        for table, required in REQUIRED_V3_COLUMNS.items()
+    )
+
+
 def upgrade(database: Path, *, dry_run: bool = False) -> dict:
     conn = connect(database)
     results: dict[str, list[str]] = {"altered": [], "created": [], "backfilled": []}
@@ -330,7 +225,9 @@ def upgrade(database: Path, *, dry_run: bool = False) -> dict:
             "SELECT value FROM schema_meta WHERE key='schema_version'"
         ).fetchone()
         current_ver = current[0] if current else None
-        if current_ver == "3.0.0":
+        # A version stamp alone is insufficient: an older create_schema()
+        # implementation may have stamped 3.0.0 without ALTERing same-name tables.
+        if current_ver == "3.0.0" and _has_v3_shape(conn):
             return {"status": "skipped", "reason": "already v3.0.0"}
 
         # 1) 对已存在的表做列级 ALTER
@@ -339,7 +236,7 @@ def upgrade(database: Path, *, dry_run: bool = False) -> dict:
                 continue
             existing = _columns(conn, table)
             for col_def in alts:
-                col_name = col_def.split(" ", 2)[1]
+                col_name = col_def.split(None, 1)[0]
                 if col_name in existing:
                     continue
                 if not dry_run:
@@ -349,15 +246,16 @@ def upgrade(database: Path, *, dry_run: bool = False) -> dict:
                     results["altered"].append(f"(dry) {table}.{col_name}")
 
         # 2) 回填：v3 列从 v2 旧列拷贝
-        for table, (old_col, new_col) in BACKFILL.items():
-            if table in _tables(conn) and old_col in _columns(conn, table) and new_col in _columns(conn, table):
-                if not dry_run:
-                    conn.execute(
-                        f"UPDATE {table} SET {new_col} = {old_col} WHERE {new_col} = 0 AND {old_col} != 0"
-                    )
-                    results["backfilled"].append(f"{table}.{new_col} <- {table}.{old_col}")
-                else:
-                    results["backfilled"].append(f"(dry) {table}.{new_col} <- {table}.{old_col}")
+        for table, sql in BACKFILL_SQL.items():
+            if table not in _tables(conn):
+                continue
+            if not dry_run:
+                conn.execute(sql)
+                results["backfilled"].append(table)
+            else:
+                # Report planned backfills even though dry-run did not add the
+                # destination columns to this connection.
+                results["backfilled"].append(f"(dry) {table}")
 
         # 3) 用 factory 补齐缺失表/索引/视图（仅对确实缺失的表生效）
         if not dry_run:
@@ -381,8 +279,6 @@ def upgrade(database: Path, *, dry_run: bool = False) -> dict:
                 "INSERT OR REPLACE INTO schema_meta(key, value) VALUES('schema_version', '3.0.0')"
             )
             conn.commit()
-            conn.close()
-
         return {
             "status": "dry-run" if dry_run else "upgraded",
             "from_version": current_ver or "none",
@@ -390,11 +286,10 @@ def upgrade(database: Path, *, dry_run: bool = False) -> dict:
             **results,
         }
     except Exception as exc:
-        try:
-            conn.close()
-        except Exception:
-            pass
+        conn.rollback()
         return {"status": "failed", "error": str(exc)}
+    finally:
+        conn.close()
 
 
 def _tables(conn) -> set[str]:
@@ -423,18 +318,17 @@ if __name__ == "__main__":
 
 > **必须先跑 `--dry-run`** 确认预期 ALTER 列表非空；真实执行后再次运行返回 `skipped`。
 
-- [ ] **Step 2: 测试 dry-run（对真实 v2 库预览）**
+- [x] **Step 2: 测试 dry-run（对真实 v2 库预览）**
 
 Run: `python3 scripts/migrate/upgrade_schema_v2_to_v3.py --database data/platform/gov_relation.db --dry-run`
 Expected: `{"status": "dry-run", "from_version": "2.1.0", "altered": ["persons.education", "persons.merged_into_id", "positions.title_category", "positions.sort_order", "datasets.commercial_use", "sources.commercial_use"], "backfilled": [...]}` —— 列出实际会 ALTER/回填的列，**不落库**。
 
 > 验证点：`altered` 应包含 `persons.education`、`positions.sort_order`（评审 F2/F3 的崩点）—— 这正是 v2 缺、v3 必须补的列。
 
-- [ ] **Step 2b: dry-run 后用测试库验证目标形状**
+- [x] **Step 2b: dry-run 后用测试库验证目标形状**
 
 ```bash
-cp data/database/gov_relation.db /tmp/v3_upgrade_test.db 2>/dev/null \
-  || cp /tmp/fixture_v2.db /tmp/v3_upgrade_test.db
+cp data/platform/gov_relation.db /tmp/v3_upgrade_test.db
 python3 scripts/migrate/upgrade_schema_v2_to_v3.py --database /tmp/v3_upgrade_test.db
 python3 - <<'EOF'
 import sqlite3
@@ -448,14 +342,18 @@ print("migration verified on copy")
 EOF
 ```
 
-- [ ] **Step 3: 真实执行**
+- [x] **Step 3: 真实执行**
 
-Run: `python3 scripts/migrate/upgrade_schema_v2_to_v3.py --database data/database/gov_relation.db`
+Run: `python3 scripts/migrate/upgrade_schema_v2_to_v3.py --database data/platform/gov_relation.db`
 Expected: `{"status": "upgraded", ...}`；再跑一次 → `{"status": "skipped", "reason": "already v3.0.0"}`
 
-> **执行前务必先运行 Step 0（platform/schema.py 版本容限）**，否则升级后 `govdb.py resolve` / `rights-apply` 会因版本不兼容抛 `RuntimeError`。
+> **执行前务必备份 canonical DB 并先在副本验证。** 迁移脚本只使用 `connect()`，不会调用
+> `create_schema()`；迁移成功并具备 v3 必需列后，其他命令才可使用新版版本门禁。
 
-- [ ] **Step 4: Commit**
+**2026-08-11 完成记录（SubAgentReview 后补提交）:** 已在副本验证后真实迁移 `data/platform/gov_relation.db`；`schema_version=3.0.0`、audit 外键错误 0。⚠️ **备份注记（审查发现）:** 迁移前计划生成的 `.pre-v3.bak` 实际未落盘，库已迁移、历史 v2 快照无法补回——已在流程上要求后续 DB 迁移必须先行备份。
+- [x] **Step 4: Commit**
+
+**2026-08-11 完成记录:** commit `20ca249e9`（含 `upgrade_schema_v2_to_v3.py`、`platform/schema.py`、`scripts/govdb.py`、门禁测试 12 例）。
 
 ```bash
 mkdir -p scripts/migrate
@@ -464,14 +362,16 @@ git commit -m "feat(migrate): add upgrade_schema_v2_to_v3.py (column-aware ALTER
 
 v2 与 v3 表名相同，CREATE TABLE IF NOT EXISTS 对已有 v2 表是静默 no-op。
 迁移改为 PRAGMA table_info 驱动：ALTER ADD COLUMN v3 增量列 + 旧列回填 +
-补齐缺失表/索引/视图；platform SCHEMA_VERSION 升 3.0.0 且 ADDITIVE 纳入 2.1.0。"
+补齐缺失表/索引/视图；platform SCHEMA_VERSION 升 3.0.0，旧版不自动盖章升级。"
 ```
 
 ---
 
 ## Phase 2 Completion Checklist
 
-- [ ] `gov_relation/schema.py` 新增 V3_ENTITY_DDLS 常量
-- [ ] `scripts/govdb.py` 集成 SchemaFactory
-- [ ] `scripts/migrate/upgrade_schema_v2_to_v3.py` 可运行
-- [ ] 全量测试通过
+- [x] v3 DDL 由 `gov_relation/factory/schema_factory.py` 统一提供；legacy `gov_relation/schema.py` 保持兼容（Task 1 的 `V3_ENTITY_DDLS` 方案已废弃，见上方说明）
+- [x] `scripts/govdb.py` 使用 platform `create_schema()` 做严格版本门禁（不集成 SchemaFactory）
+- [x] 门禁只信形状不信戳：`create_schema()` 对无版本戳库校验必需 v3 列；`build_database` 对已存在目标做只读 v3 形状校验，非 v3 形状即使 `--replace` 也拒绝
+- [x] `scripts/migrate/upgrade_schema_v2_to_v3.py` 可运行，并通隔离 v2 fixture 测试
+- [x] 全量测试通过（241 passed，含新增门禁测试 12 例）
+- [x] 真实 `data/platform/gov_relation.db` 已在副本验证后迁移；audit 外键错误为 0
