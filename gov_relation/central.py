@@ -11,12 +11,19 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import warnings
 from pathlib import Path
 from typing import Any
 
 from .hash import org_hash, person_hash
 from .paths import PROVINCE_DIR
 from .schema import create_central_schema, create_registry_schema
+
+warnings.warn(
+    "gov_relation.central is deprecated; use gov_relation.factory.InsertFactory",
+    DeprecationWarning,
+    stacklevel=2,
+)
 
 
 class Central:

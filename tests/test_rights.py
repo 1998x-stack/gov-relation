@@ -129,9 +129,10 @@ def test_apply_is_atomic_audited_and_idempotent(tmp_path: Path) -> None:
     assert result["status"] == "applied"
     assert result["sources_updated"] == 1
     source = conn.execute(
-        "SELECT rights_status, commercial_use_allowed FROM sources WHERE source_id='src:1'"
+        """SELECT rights_status, commercial_use_allowed, commercial_use
+           FROM sources WHERE source_id='src:1'"""
     ).fetchone()
-    assert tuple(source) == ("cleared", 1)
+    assert tuple(source) == ("cleared", 1, 1)
     assert conn.execute("SELECT COUNT(*) FROM rights_manifests").fetchone()[0] == 1
     assert conn.execute("SELECT COUNT(*) FROM source_rights_decisions").fetchone()[0] == 1
 
@@ -161,8 +162,8 @@ def test_unmatched_or_overlapping_decisions_write_nothing(tmp_path: Path) -> Non
         apply_manifest(conn, sign_manifest(overlapping, private_key), public_key)
     assert conn.execute("SELECT COUNT(*) FROM rights_manifests").fetchone()[0] == 0
     assert tuple(conn.execute(
-        "SELECT rights_status, commercial_use_allowed FROM sources"
-    ).fetchone()) == ("unknown", 0)
+        "SELECT rights_status, commercial_use_allowed, commercial_use FROM sources"
+    ).fetchone()) == ("unknown", 0, 0)
     conn.close()
 
 
@@ -178,12 +179,12 @@ def test_expired_clearance_never_enters_commercial_view(tmp_path: Path) -> None:
     assert result["status"] == "applied"
     assert conn.execute("SELECT COUNT(*) FROM gold_commercial_sources").fetchone()[0] == 0
     assert tuple(conn.execute(
-        "SELECT rights_status, commercial_use_allowed FROM sources"
-    ).fetchone()) == ("unknown", 0)
+        "SELECT rights_status, commercial_use_allowed, commercial_use FROM sources"
+    ).fetchone()) == ("unknown", 0, 0)
     conn.close()
 
 
-def test_schema_upgrades_additively_from_2_0(tmp_path: Path) -> None:
+def test_schema_refuses_implicit_upgrade_from_2_0(tmp_path: Path) -> None:
     path = tmp_path / "old.db"
     conn = sqlite3.connect(path)
     conn.execute("CREATE TABLE schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)")
@@ -192,11 +193,9 @@ def test_schema_upgrades_additively_from_2_0(tmp_path: Path) -> None:
     conn.close()
 
     upgraded = connect(path)
-    create_schema(upgraded)
+    with pytest.raises(RuntimeError, match="incompatible"):
+        create_schema(upgraded)
     assert upgraded.execute(
         "SELECT value FROM schema_meta WHERE key='schema_version'"
-    ).fetchone()[0] == SCHEMA_VERSION
-    assert upgraded.execute(
-        "SELECT 1 FROM sqlite_master WHERE type='table' AND name='rights_manifests'"
-    ).fetchone()
+    ).fetchone()[0] == "2.0.0"
     upgraded.close()

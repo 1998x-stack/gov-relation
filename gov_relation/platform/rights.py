@@ -417,8 +417,10 @@ def apply_manifest(
                 and "commercial_distribution" in json.loads(current[1])
             ) if current else 0
             conn.execute(
-                "UPDATE sources SET rights_status=?, commercial_use_allowed=? WHERE source_id=?",
-                (status, allowed, source_id),
+                """UPDATE sources
+                   SET rights_status=?, commercial_use_allowed=?, commercial_use=?
+                   WHERE source_id=?""",
+                (status, allowed, allowed, source_id),
             )
         conn.execute(f"RELEASE SAVEPOINT {savepoint}")
     except BaseException:
