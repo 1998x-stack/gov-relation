@@ -232,6 +232,8 @@ git commit -m "feat(migrate): add legacy-to-provinces migration with --dry-run"
 
 **2026-08-11 完成记录:** commit `622f46493`（含审计产物 `data/migrations/province_artifact_map.json` + `unresolved_holdout.json`）。
 
+**2026-08-11 追加（holdout 人工判定）:** 4 个 holdout（openping_network.db / test_region_network.db / test_region_network.gexf / 20260723-test.json）经用户确认定性为「测试/占位文件，不进迁移」，判定结果已写入 `data/migrations/unresolved_holdout.json`（status=triaged, decision=test/placeholder）。
+
 ---
 
 ### Task 2: 更新 serve_app.py 和 inventory.py 读新路径
