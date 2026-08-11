@@ -103,6 +103,8 @@ def _canonical_artifacts_ready_unlocked(task: dict[str, Any]) -> tuple[bool, lis
 
     build_candidates = [
         REPO_ROOT / "scripts" / "build" / paths["build_script"],
+        # Phase 5 归档兼容:根目录 legacy 脚本已移入 scripts/build/legacy/
+        REPO_ROOT / "scripts" / "build" / "legacy" / paths["build_script"],
     ]
     if task_id:
         build_candidates.append(
