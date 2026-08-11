@@ -1,1 +1,0 @@
-scripts/build/build_钟山区_data.py

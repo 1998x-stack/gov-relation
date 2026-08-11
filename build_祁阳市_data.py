@@ -1,1 +1,0 @@
-scripts/build/build_祁阳市_data.py

@@ -1,1 +1,0 @@
-scripts/build/build_城固县_data.py

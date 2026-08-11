@@ -1,1 +1,0 @@
-scripts/build/build_乌兰县_data.py

@@ -1,1 +1,0 @@
-scripts/build/build_解放区_data.py

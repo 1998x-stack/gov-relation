@@ -1,1 +1,0 @@
-scripts/build/build_明水县_data.py

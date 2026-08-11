@@ -1,1 +1,0 @@
-scripts/build/build_新乡市_data.py

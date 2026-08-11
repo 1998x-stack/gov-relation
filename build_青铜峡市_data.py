@@ -1,1 +1,0 @@
-scripts/build/build_青铜峡市_data.py

@@ -1,1 +1,0 @@
-scripts/build/build_彰武县_data.py

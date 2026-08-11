@@ -1,1 +1,0 @@
-scripts/build/build_桂阳县_data.py

@@ -1,1 +1,0 @@
-scripts/build/build_磐石市_data.py

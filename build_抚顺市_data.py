@@ -1,1 +1,0 @@
-scripts/build/build_抚顺市_data.py

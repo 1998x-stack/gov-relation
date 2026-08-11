@@ -1,1 +1,0 @@
-scripts/build/build_牙克石市_data.py

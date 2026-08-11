@@ -1,1 +1,0 @@
-scripts/build/build_西吉县_data.py

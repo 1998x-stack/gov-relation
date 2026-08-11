@@ -1,1 +1,0 @@
-scripts/build/build_遵义市_data.py

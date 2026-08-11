@@ -1,1 +1,0 @@
-scripts/build/build_湟源县_data.py

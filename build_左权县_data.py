@@ -1,1 +1,0 @@
-scripts/build/build_左权县_data.py

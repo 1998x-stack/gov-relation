@@ -1,1 +1,0 @@
-scripts/build/build_祁连县_data.py

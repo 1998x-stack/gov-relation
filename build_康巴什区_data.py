@@ -1,1 +1,0 @@
-scripts/build/build_康巴什区_data.py

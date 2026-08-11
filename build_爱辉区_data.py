@@ -1,1 +1,0 @@
-scripts/build/build_爱辉区_data.py

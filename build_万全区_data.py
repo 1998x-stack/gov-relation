@@ -1,1 +1,0 @@
-scripts/build/build_万全区_data.py

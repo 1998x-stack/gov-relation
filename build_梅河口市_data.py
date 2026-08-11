@@ -1,1 +1,0 @@
-scripts/build/build_梅河口市_data.py

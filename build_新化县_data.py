@@ -1,1 +1,0 @@
-scripts/build/build_新化县_data.py

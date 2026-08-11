@@ -1,1 +1,0 @@
-scripts/build/build_眉县_data.py

@@ -1,1 +1,0 @@
-scripts/build/build_通山县_data.py

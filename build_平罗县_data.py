@@ -1,1 +1,0 @@
-scripts/build/build_平罗县_data.py

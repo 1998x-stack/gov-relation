@@ -1,1 +1,0 @@
-scripts/build/build_内蒙古自治区_data.py

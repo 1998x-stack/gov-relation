@@ -1,1 +1,0 @@
-scripts/build/build_冷水江市_data.py

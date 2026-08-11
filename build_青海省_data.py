@@ -1,1 +1,0 @@
-scripts/build/build_青海省_data.py

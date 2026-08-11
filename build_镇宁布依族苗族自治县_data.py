@@ -1,1 +1,0 @@
-scripts/build/build_镇宁布依族苗族自治县_data.py

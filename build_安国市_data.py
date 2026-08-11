@@ -1,1 +1,0 @@
-scripts/build/build_安国市_data.py

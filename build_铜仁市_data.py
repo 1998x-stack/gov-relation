@@ -1,1 +1,0 @@
-scripts/build/build_铜仁市_data.py

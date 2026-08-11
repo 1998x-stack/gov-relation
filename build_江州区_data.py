@@ -1,1 +1,0 @@
-scripts/build/build_江州区_data.py
