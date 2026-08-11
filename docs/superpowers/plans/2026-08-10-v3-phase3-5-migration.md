@@ -418,7 +418,7 @@ ls -la data/provinces/sichuan/persons/
 `scripts/build/build_guangxi_南丹县_data.py`。数据库包含 2 人、7 组织、7 任职、
 1 关系、7 来源、33 evidence links，`PRAGMA foreign_key_check=[]`。
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/provinces/
