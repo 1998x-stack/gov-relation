@@ -3,8 +3,16 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 
 from .log import get_logger
+from .paths import (
+    REPO_ROOT,
+    province_database_dir,
+    province_graph_dir,
+    province_persons_dir,
+    province_reports_dir,
+)
 from .slugs import artifact_paths
 from .todo import TodoItem, item_summary
 
@@ -22,9 +30,21 @@ class DispatchPlan:
 def build_dispatch_prompt(item: TodoItem, model_intent: str = "standard") -> str:
     task = item_summary(item)
     paths = artifact_paths(task["region"])
+    province = task["province"]
+    build_name = Path(paths["build_script"]).name
+    database_name = Path(paths["db_output"]).name
+    graph_name = Path(paths["gexf_output"]).name
+    canonical_build = Path("scripts/build") / build_name
+    canonical_database = (
+        province_database_dir(province) / database_name
+    ).relative_to(REPO_ROOT)
+    canonical_graph = (
+        province_graph_dir(province) / graph_name
+    ).relative_to(REPO_ROOT)
+    canonical_persons = province_persons_dir(province).relative_to(REPO_ROOT)
     targets = " & ".join(task["target_roles"])
     parent_city = task["parent_city"] or ""
-    return f"""Use the china-gov-network skill at .agents/skills/china-gov-network.
+    prompt = f"""Use the china-gov-network skill at .agents/skills/china-gov-network.
 
 Non-negotiable execution rules:
 - You are the end-to-end executor, not a planner. Do not stop after creating a plan or launching subagents.
@@ -52,11 +72,8 @@ Expected artifact paths:
 - gexf: data/tmp/{task["task_id"]}/{paths["gexf_output"].split("/")[-1]}
 - person_json_pattern: data/tmp/{task["task_id"]}/YYYYMMDD-{task["province"]}-{parent_city or task["region"]}-{{job}}-{{name}}.json
 
-Canonical destination after validation:
-- build_script: {paths["build_script"]}
-- database: {paths["db_output"]}
-- gexf: {paths["gexf_output"]}
-- person_json_dir: data/persons/
+Canonical destination after validation is selected by scripts/process_tmp.py
+from task_id; do not copy directly to canonical paths.
 
 Required workflow:
 1. Run Phase 0 repository preflight.
@@ -72,11 +89,21 @@ Required workflow:
    - Write checkpoint: echo "CHECKPOINT:promoted" > data/tmp/{task["task_id"]}/checkpoint_03_promoted.md
 7. Run scripts/inventory.py after promotion.
 8. Before exiting, verify these canonical paths exist:
-   - {paths["build_script"]}
-   - {paths["db_output"]}
-   - {paths["gexf_output"]}
-   - at least two data/persons/YYYYMMDD-...json files for the core leaders when names are known
+   - {canonical_build}
+   - {canonical_database}
+   - {canonical_graph}
+   - at least two {canonical_persons}/YYYYMMDD-...json files for the core leaders when names are known
 9. After verification, write a final checkpoint: echo "CHECKPOINT:complete" > data/tmp/{task["task_id"]}/checkpoint_04_complete.md"""
+    prompt += f"""
+
+Province-aware promotion destinations:
+- build_script_dir: scripts/build/
+- database_dir: {province_database_dir(province)}
+- graph_dir: {province_graph_dir(province)}
+- person_json_dir: {province_persons_dir(province)}
+- report_dir: {province_reports_dir(province)}
+"""
+    return prompt
 
 
 def build_dispatch_plan(item: TodoItem, model_intent: str = "standard") -> DispatchPlan:

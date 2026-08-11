@@ -13,7 +13,7 @@ from typing import Any
 
 from .dispatch import build_dispatch_plan
 from .log import get_logger
-from .paths import DISPATCH_LOCK_DIR, DISPATCH_STATE_PATH, REPO_ROOT
+from .paths import DISPATCH_LOCK_DIR, DISPATCH_STATE_PATH, PROVINCE_SLUGS, REPO_ROOT
 from .slugs import artifact_paths
 from .todo import TodoItem, find_item_by_id, find_task, iter_items, item_summary, load_todo, mark_done, save_todo
 
@@ -97,14 +97,46 @@ def claim_sort_key(claim: dict[str, Any]) -> datetime:
 
 def _canonical_artifacts_ready_unlocked(task: dict[str, Any]) -> tuple[bool, list[str]]:
     paths = artifact_paths(task["region"])
-    # Build scripts live under scripts/build/, other artifacts at their default paths
-    build_script = REPO_ROOT / "scripts" / "build" / paths["build_script"]
-    required = [
-        build_script,
-        REPO_ROOT / paths["db_output"],
-        REPO_ROOT / paths["gexf_output"],
+    task_id = str(task.get("task_id") or task.get("id") or "")
+    province = str(task.get("province") or "")
+    province_slug = PROVINCE_SLUGS.get(province, province)
+
+    build_candidates = [
+        REPO_ROOT / "scripts" / "build" / paths["build_script"],
     ]
-    missing = [str(path.relative_to(REPO_ROOT)) for path in required if not path.exists()]
+    if task_id:
+        build_candidates.append(
+            REPO_ROOT / "scripts" / "build" / f"build_{safe_name(task_id)}_data.py"
+        )
+
+    db_candidates = [REPO_ROOT / paths["db_output"]]
+    graph_candidates = [REPO_ROOT / paths["gexf_output"]]
+    if province_slug:
+        db_candidates.insert(
+            0,
+            REPO_ROOT
+            / "data"
+            / "provinces"
+            / province_slug
+            / "database"
+            / Path(paths["db_output"]).name,
+        )
+        graph_candidates.insert(
+            0,
+            REPO_ROOT
+            / "data"
+            / "provinces"
+            / province_slug
+            / "graph"
+            / Path(paths["gexf_output"]).name,
+        )
+
+    candidate_groups = (build_candidates, db_candidates, graph_candidates)
+    missing = [
+        str(candidates[0].relative_to(REPO_ROOT))
+        for candidates in candidate_groups
+        if not any(path.exists() for path in candidates)
+    ]
     return not missing, missing
 
 

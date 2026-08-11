@@ -233,6 +233,25 @@ class TestCanonicalArtifactsReady:
         ready, missing = canonical_artifacts_ready(task := {"region": "A市"})
         assert ready is True, f"missing: {missing}"
 
+    def test_province_artifacts_and_qualified_builder_are_ready(
+        self, mock_all: Path
+    ) -> None:
+        task = {
+            "task_id": "test_A市",
+            "region": "A市",
+            "province": "测试省",
+        }
+        script = mock_all / "scripts" / "build" / "build_test_A市_data.py"
+        db = mock_all / "data" / "provinces" / "测试省" / "database" / "A市_network.db"
+        gexf = mock_all / "data" / "provinces" / "测试省" / "graph" / "A市_network.gexf"
+        for path in (script, db, gexf):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("")
+
+        ready, missing = canonical_artifacts_ready(task)
+
+        assert ready is True, f"missing: {missing}"
+
 
 class TestReconcileClaims:
     def test_releases_all_active(self, mock_all: Path) -> None:

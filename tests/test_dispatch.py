@@ -32,8 +32,16 @@ class TestBuildDispatchPrompt:
         item = TodoItem(province_name="测试省", task={"id": "test_city", "region": "测试市", "level": "prefecture", "targets": [{"role": "市长"}]})
         prompt = build_dispatch_prompt(item)
         assert "build_测试市_data.py" in prompt
-        assert "data/database/测试市_network.db" in prompt
-        assert "data/graph/测试市_network.gexf" in prompt
+        assert "data/provinces/测试省/database/测试市_network.db" in prompt
+        assert "data/provinces/测试省/graph/测试市_network.gexf" in prompt
+        assert "at least two data/provinces/测试省/persons/" in prompt
+
+    def test_includes_province_aware_promotion_destinations(self) -> None:
+        item = TodoItem(province_name="江西省", task={"id": "jx", "region": "南昌市", "level": "prefecture", "targets": [{"role": "市长"}]})
+        prompt = build_dispatch_prompt(item)
+        assert "Province-aware promotion destinations:" in prompt
+        assert "data/provinces/jiangxi/database" in prompt
+        assert "Canonical destination after validation:\n- build_script:" not in prompt
 
     def test_includes_parent_city_from_subtask(self) -> None:
         item = TodoItem(
