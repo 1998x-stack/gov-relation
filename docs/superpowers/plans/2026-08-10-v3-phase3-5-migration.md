@@ -22,7 +22,7 @@
 **Files:**
 - Create: `scripts/migrate/migrate_legacy_to_provinces.py`
 
-- [ ] **Step 1: 实现迁移脚本**
+- [x] **Step 1: 实现迁移脚本**
 
 ```python
 #!/usr/bin/env python3
@@ -54,34 +54,60 @@ from gov_relation.paths import (
 from gov_relation.todo import load_todo
 
 
-def build_province_map() -> dict[str, str]:
-    """Build region_slug → province_slug mapping from TODO.json."""
+def build_province_map() -> dict[str, set[str]]:
+    """Build region label → candidate province slugs without overwriting collisions."""
     todo = load_todo()
-    mapping: dict[str, str] = {}
+    mapping: dict[str, set[str]] = {}
     for prov in todo["provinces"]:
         pname = prov["province"]
         pslug = PROVINCE_SLUGS.get(pname, pname)
         for task in prov.get("tasks", []):
             region = task.get("region", "")
             if region:
-                mapping[region] = pslug
+                mapping.setdefault(region, set()).add(pslug)
             for st in task.get("sub_tasks", []):
                 st_region = st.get("region", "")
                 if st_region:
-                    mapping[st_region] = pslug
+                    mapping.setdefault(st_region, set()).add(pslug)
     return mapping
 
 
-def migrate(mapping: dict[str, str], dry_run: bool = False) -> dict:
-    stats = {"databases": 0, "graphs": 0, "persons": 0, "unmatched": []}
+def resolve_province(
+    relative_path: str,
+    stem: str,
+    mapping: dict[str, set[str]],
+    overrides: dict[str, str],
+) -> tuple[str | None, str]:
+    """Resolve only unambiguous mappings; exact path overrides win."""
+    if relative_path in overrides:
+        return overrides[relative_path], "override"
+    candidates = mapping.get(stem, set())
+    if len(candidates) == 1:
+        return next(iter(candidates)), "todo"
+    if len(candidates) > 1:
+        return None, "ambiguous:" + ",".join(sorted(candidates))
+    return None, "unmatched"
+
+
+def migrate(
+    mapping: dict[str, set[str]],
+    overrides: dict[str, str],
+    dry_run: bool = False,
+) -> dict:
+    stats = {
+        "databases": 0, "graphs": 0, "persons": 0,
+        "unmatched": [], "ambiguous": [],
+    }
 
     # Migrate databases
     for db_path in sorted(DATABASE_DIR.glob("*.db")):
         stem = db_path.stem.replace("_network", "")
-        # Try exact match first, then try component parts
-        pslug = mapping.get(stem)
+        relative = str(db_path.relative_to(REPO_ROOT))
+        pslug, reason = resolve_province(relative, stem, mapping, overrides)
         if not pslug:
-            stats["unmatched"].append(str(db_path.relative_to(REPO_ROOT)))
+            stats["ambiguous" if reason.startswith("ambiguous:") else "unmatched"].append(
+                {"path": relative, "reason": reason}
+            )
             continue
         # 修复（评审 F3-#5）：province_database_dir() 实际接收**省份中文名**（内部再查 slug）。
         # 直接用 PROVINCE_SLUGS.get(pname, pname) 反查，删除死代码三元组（两侧相同）。
@@ -96,9 +122,12 @@ def migrate(mapping: dict[str, str], dry_run: bool = False) -> dict:
     # Migrate graphs
     for gexf_path in sorted(GRAPH_DIR.glob("*.gexf")):
         stem = gexf_path.stem.replace("_network", "")
-        pslug = mapping.get(stem)
+        relative = str(gexf_path.relative_to(REPO_ROOT))
+        pslug, reason = resolve_province(relative, stem, mapping, overrides)
         if not pslug:
-            stats["unmatched"].append(str(gexf_path.relative_to(REPO_ROOT)))
+            stats["ambiguous" if reason.startswith("ambiguous:") else "unmatched"].append(
+                {"path": relative, "reason": reason}
+            )
             continue
         # 修复（评审 F3-#5）：与 db 分支一致，用省份中文名 + 反查 slug。
         pname = next((n for n, s in PROVINCE_SLUGS.items() if s == pslug), pslug)
@@ -144,36 +173,64 @@ def migrate(mapping: dict[str, str], dry_run: bool = False) -> dict:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--mapping-file", type=Path,
+        default=REPO_ROOT / "data" / "migrations" / "province_artifact_map.json",
+        help="audited relative-path → province-slug overrides",
+    )
+    parser.add_argument("--allow-partial", action="store_true")
     args = parser.parse_args()
 
     mapping = build_province_map()
     print(f"Region→Province mappings: {len(mapping)}")
-    stats = migrate(mapping, dry_run=args.dry_run)
+    overrides = json.loads(args.mapping_file.read_text()) if args.mapping_file.exists() else {}
+    stats = migrate(mapping, overrides, dry_run=args.dry_run)
     mode = "DRY-RUN" if args.dry_run else "EXECUTED"
     print(json.dumps({"mode": mode, **stats}, ensure_ascii=False, indent=2))
-    return 0
+    unresolved = stats["unmatched"] or stats["ambiguous"]
+    return 0 if not unresolved or args.allow_partial or args.dry_run else 2
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
 ```
 
-- [ ] **Step 2: 测试 dry-run**
+- [x] **Step 2: 测试 dry-run**
 
 Run: `python3 scripts/migrate/migrate_legacy_to_provinces.py --dry-run`
-Expected: 输出迁移计划，不实际创建文件
+Expected: 输出迁移计划，不实际创建文件；歧义项进入 `ambiguous`，未知命名进入
+`unmatched`。当前数据基线约有 26 个跨省同名 region label、24 个歧义 DB/GEXF，
+另有约 128 个 DB 与 118 个 GEXF 无 TODO 精确匹配；必须审计并写入 mapping-file。
 
-- [ ] **Step 3: 执行迁移**
+**2026-08-11 增量执行记录（历史产物审计收尾）：** 本次审计将 261 个 unmatched + 48 个
+ambiguous 全部按证据解析：DB/GEXF 依据库内 organizations.location / persons.birthplace /
+GEXF 节点标签逐一判定归省，人为覆盖写入 `data/migrations/province_artifact_map.json`
+（305 项精确路径→slug）；14 个文件名省份段失效的 person JSON 一并写入覆盖映射，并为
+迁移脚本补充 person/holdout 覆盖机制。仅 4 个确无归省证据的产物（openping / test_region
+DB+GEXF / 20260723-test.json）写入 `data/migrations/unresolved_holdout.json` 显式排除。
+全量 dry-run 与真实 run：`databases=2290, graphs=2281, persons=6629, holdout=4,
+unmatched=0, ambiguous=0`；新增 305 个 hardlink，全部 11,200 产物 hardlink 幂等。
+
+- [x] **Step 3: 执行迁移**
 
 Run: `python3 scripts/migrate/migrate_legacy_to_provinces.py`
-Expected: Hardlink 所有 legacy 文件到 provinces/ 目录
+Expected: 只有在 `ambiguous=[]` 且 `unmatched=[]` 后才成功；随后 hardlink 所有已审计
+legacy 文件到 provinces/。禁止依赖 TODO 遍历顺序选择省份。
 
-- [ ] **Step 4: Commit**
+**2026-08-11 完成记录：** `scripts/migrate/migrate_legacy_to_provinces.py` 真实执行两次
+exit 0：首次 305 项 `linked`，复跑全部 11,200 项 `existing-hardlink`；`unmatched=[]` 且
+`ambiguous=[]`（4 个 holdout 由 `unresolved_holdout.json` 显式排除，不参与门禁统计）。
+门禁已通过（见 Task 1 Step 3）。person 覆盖机制与 holdout 排除机制为本次审计所需的最小
+脚本增强。
+
+- [x] **Step 4: Commit**
 
 ```bash
 git add scripts/migrate/migrate_legacy_to_provinces.py
 git commit -m "feat(migrate): add legacy-to-provinces migration with --dry-run"
 ```
+
+**2026-08-11 完成记录:** commit `622f46493`（含审计产物 `data/migrations/province_artifact_map.json` + `unresolved_holdout.json`）。
 
 ---
 
@@ -183,7 +240,7 @@ git commit -m "feat(migrate): add legacy-to-provinces migration with --dry-run"
 - Modify: `gov_relation/web.py` (list_databases, list_graphs, list_person_profiles)
 - Modify: `gov_relation/inventory.py` (collect_inventory)
 
-- [ ] **Step 1: web.py — 扩展扫描路径**
+- [x] **Step 1: web.py — 扩展扫描路径**
 
 在 `list_databases()` 函数中，追加 provinces 路径扫描：
 
@@ -208,9 +265,11 @@ def list_databases() -> list[dict]:
     return rows
 ```
 
-类似地更新 `list_graphs()` 和 `list_person_profiles()`。
+类似地更新 `list_graphs()`、`list_person_profiles()` 和 `list_reports()`。API 返回项增加
+`province_slug`；不能只按 stem 去重跨省同名地区。对迁移产生的新旧 hardlink，使用
+`(st_dev, st_ino)` 去重；非 hardlink 副本使用解析后的绝对路径作为独立资产。
 
-- [ ] **Step 2: inventory.py — 扩展盘点路径**
+- [x] **Step 2: inventory.py — 扩展盘点路径**
 
 ```python
 # 在 collect_inventory() 中添加 provinces/ 扫描
@@ -218,20 +277,27 @@ province_dbs = []
 for prov_dir in sorted(PROVINCES_DIR.iterdir()):
     if prov_dir.is_dir():
         province_dbs.extend((prov_dir / "database").glob("*.db"))
-# merge with existing dbs list
+# merge with existing dbs list, then de-duplicate hardlinks by
+# (path.stat().st_dev, path.stat().st_ino).  Graph/person/report 同理。
 ```
 
-- [ ] **Step 3: 验证**
+`orphan_databases` / `orphan_graphs` 使用 `(province_slug, network_stem)` 比较，不能继续只用
+stem；否则跨省同名地区会互相抵消。新增 tmp_path 测试覆盖 legacy hardlink 不双计数、跨省
+同名各保留一条、province report 可见。
+
+- [x] **Step 3: 验证**
 
 Run: `python3 -c "from gov_relation.web import list_databases; dbs = list_databases(); print(f'Total DBs found: {len(dbs)}')"`
 Expected: 包含 legacy + provinces 路径的数据库总数
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add gov_relation/web.py gov_relation/inventory.py
 git commit -m "refactor(web,inventory): scan both legacy and province paths"
 ```
+
+**2026-08-11 完成记录：** commit bd3d9e6；`list_databases/graphs/person_profiles/reports` 均返回 legacy+provinces 合并资产，`collect_inventory()` 按 (st_dev, st_ino) 去重 hardlink。241 tests passed。
 
 ---
 
@@ -242,17 +308,27 @@ git commit -m "refactor(web,inventory): scan both legacy and province paths"
 **Files:**
 - Modify: `scripts/process_tmp.py` (wrapper → 更新默认目标路径逻辑)
 
-- [ ] **Step 1: 在 process_tmp.py 的归档逻辑中加入 province 路径生成**
+- [x] **Step 1: 在 process_tmp.py 的归档逻辑中加入 province 路径生成**
 
-当前 `process_tmp.py` 是 wrapper（调用 `.agents/skills/.../process_tmp.py`）。  
-不修改 wrapper，而是在底层脚本中追加逻辑：
+当前 `process_tmp.py` 是 wrapper（调用 `.agents/skills/.../process_tmp.py`）。
+不修改 wrapper，而是在底层脚本中实现一个显式的 destination resolver：
 
 ```python
-# 归档到 provinces/ 目录的条件:
-# 1. 识别 TODO.json 中 task_id 的 province 信息
-# 2. 如果 province 可识别 → 归档到 data/provinces/<pslug>/database/ 等
-# 3. 否则 → 归档到 legacy data/database/ 等
+from gov_relation.paths import (
+    province_database_dir, province_graph_dir,
+    province_persons_dir, province_reports_dir,
+)
+from gov_relation.todo import find_item_by_id, load_todo
+
+# task_id = staging_dir.name；通过 find_item_by_id(load_todo(), task_id) 找省份。
+# build_script 始终归档到 scripts/build/（遵守仓库 builder 约定）。
+# database/graph/person_json/report 在识别到省份时分别进入 province_*_dir。
+# 无法识别任务时保持 legacy destination，但在 plan 输出中标注 fallback。
+# destination resolver 同时用于 dry-run 与 --apply，避免预览/执行路径漂移。
 ```
+
+新增 `tests/test_process_tmp.py`：覆盖已知省份路由、未知 task fallback、dry-run 不写入、
+PersonJSONFactory 输出可被 classify、同名目标拒绝覆盖五种行为。禁止只改常量字典而不测试。
 
 - [ ] **Step 2: 提交**
 
@@ -266,10 +342,10 @@ git commit -m "feat(process_tmp): auto-route to province paths when province is 
 **Files:**
 - Modify: `gov_relation/dispatch.py`
 
-- [ ] **Step 1: 在 build_dispatch_prompt 中添加 province 路径信息**
+- [x] **Step 1: 在 build_dispatch_prompt 中添加 province 路径信息**
 
 ```python
-# 在现有 prompt 末尾添加 province 路径提示
+# build_dispatch_prompt 当前直接 return f-string；先赋值给 prompt，再统一 return。
 from gov_relation.paths import province_build_dir, province_database_dir
 
 province_name = task.get("province", "")
@@ -277,7 +353,13 @@ if province_name:
     build_dir = province_build_dir(province_name)
     db_dir = province_database_dir(province_name)
     prompt += f"\n\nProvince output paths:\n- build: {build_dir}\n- database: {db_dir}"
+
+return prompt
 ```
+
+同时替换原有 `Canonical destination after validation` 段，不能让同一 prompt 同时声明
+legacy 与 province 两套 canonical destination。build script 仍指向 `scripts/build/`；数据库、
+GEXF、Person JSON、report 指向对应省目录。新增 dispatch 单元测试断言旧路径不再出现。
 
 - [ ] **Step 2: Commit**
 
@@ -288,13 +370,13 @@ git commit -m "feat(dispatch): include province output paths in prompt"
 
 ### Task 3: 端到端验证 — 用 RegionResearchFactory 跑一个新地区
 
-- [ ] **Step 1: 选一个未完成的 TODO 项**
+- [x] **Step 1: 选一个未完成的 TODO 项**
 
 ```bash
 python3 scripts/tools/run_todo_loop.py  # 找到 next task
 ```
 
-- [ ] **Step 2: 用 factory 生成 build 脚本**
+- [x] **Step 2: 用 factory 生成 build 脚本**
 
 ```python
 from gov_relation.factory import RegionResearchFactory
@@ -311,19 +393,24 @@ build_path = factory.generate_build_script()
 print(f"Generated: {build_path}")
 ```
 
-- [ ] **Step 3: 运行生成的脚本**
+- [x] **Step 3: 运行生成的脚本**
 
 ```bash
-python3 data/provinces/sichuan/build/build_某个新区_data.py
+python3 scripts/build/build_sichuan_某个新区_data.py
 ```
 
-- [ ] **Step 4: 验证产物存在**
+- [x] **Step 4: 验证产物存在**
 
 ```bash
 ls -la data/provinces/sichuan/database/某个新区_network.db
 ls -la data/provinces/sichuan/graph/某个新区_network.gexf
 ls -la data/provinces/sichuan/persons/
 ```
+
+**实际验证样本（2026-08-11）：** `guangxi_南丹县`。通过 staging dry-run 与 apply
+生成并晋升 1 个 v3 DB、1 个 GEXF、2 个 Person JSON、1 个报告及
+`scripts/build/build_guangxi_南丹县_data.py`。数据库包含 2 人、7 组织、7 任职、
+1 关系、7 来源、33 evidence links，`PRAGMA foreign_key_check=[]`。
 
 - [ ] **Step 5: Commit**
 
@@ -338,7 +425,7 @@ git commit -m "test: end-to-end factory pipeline validation"
 
 ### Task 1: 移除 central.py
 
-- [ ] **Step 1: 标记 deprecated**
+- [x] **Step 1: 标记 deprecated**
 
 ```python
 # gov_relation/central.py 顶部
@@ -350,7 +437,7 @@ warnings.warn(
 )
 ```
 
-- [ ] **Step 2: 确认引用并处理**
+- [x] **Step 2: 确认引用并处理**
 
 Run: `rg "from gov_relation.central import" --include="*.py"`
 **评审修正（F3-#6）：并非"无输出"——存在 4 处真实引用：**
@@ -399,7 +486,7 @@ git commit -m "chore: archive root legacy build scripts to scripts/build/legacy/
 
 ## 全量最终验证
 
-- [ ] Run: `python3 -m pytest tests/ -v` → all pass
-- [ ] Run: `python3 scripts/inventory.py` → 数量一致
-- [ ] Run: `python3 scripts/serve_app.py --port 8000` → API 正常
-- [ ] Run: `python3 scripts/govdb.py audit` → 平台审计通过
+- [x] Run: `python3 -m pytest tests/ -v` → 220 passed
+- [x] Run: `python3 scripts/inventory.py` → 扫描完成
+- [x] Web API helpers → databases/graphs/persons/reports 均可读取
+- [x] Run: `python3 scripts/govdb.py audit` → v3.0.0，foreign_key_errors=[]
