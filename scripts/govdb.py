@@ -14,7 +14,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
-from gov_relation.platform.identity import stable_id
+from gov_relation.identity import stable_id
 from gov_relation.platform.importer import ImportStats, import_legacy_database, import_person_profile
 from gov_relation.platform.quality import database_report
 from gov_relation.platform.resolution import build_person_candidates
@@ -27,7 +27,12 @@ from gov_relation.platform.rights import (
     validate_manifest,
     verify_manifest_signature,
 )
-from gov_relation.platform.schema import connect, create_schema
+from gov_relation.platform.schema import (
+    SCHEMA_VERSION,
+    connect,
+    create_schema,
+    has_v3_shape,
+)
 from gov_relation.paths import CANONICAL_DB
 
 DEFAULT_DATABASE = CANONICAL_DB
@@ -43,6 +48,24 @@ def _print(value: object) -> None:
     print(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True))
 
 
+def _is_v3_database(path: Path) -> bool:
+    """Read-only check that an existing file is a stamped v3 canonical DB."""
+    try:
+        conn = connect(path, read_only=True)
+    except sqlite3.Error:
+        # Not a readable SQLite file (empty, corrupt, or not a database).
+        return False
+    try:
+        row = conn.execute(
+            "SELECT value FROM schema_meta WHERE key='schema_version'"
+        ).fetchone()
+        return bool(row) and row[0] == SCHEMA_VERSION and has_v3_shape(conn)
+    except sqlite3.Error:
+        return False
+    finally:
+        conn.close()
+
+
 def _record_file_errors(conn: sqlite3.Connection, errors: list[str]) -> None:
     for error in errors:
         conn.execute(
@@ -55,8 +78,22 @@ def _record_file_errors(conn: sqlite3.Connection, errors: list[str]) -> None:
 
 def build_database(args: argparse.Namespace) -> int:
     destination = args.database.resolve()
-    if destination.exists() and not args.replace:
-        raise SystemExit(f"Refusing to overwrite existing database: {destination}; use --replace")
+    if destination.exists():
+        # The version stamp alone is not trusted: an older create_schema()
+        # may have stamped 3.0.0 without ALTERing same-name v2 tables, and
+        # CREATE TABLE IF NOT EXISTS cannot install the v3 columns on an
+        # existing v2 table. Only a stamped v3-shaped destination may be
+        # replaced (and only with --replace).
+        if not _is_v3_database(destination):
+            raise SystemExit(
+                f"Refusing to build over {destination}: it is not a v3-shaped "
+                "canonical database (schema_version is absent or not 3.0.0, or "
+                "required v3 columns are missing). Migrate it first with "
+                "`python3 scripts/migrate/upgrade_schema_v2_to_v3.py "
+                f"--database {destination}`, or remove the file to build fresh."
+            )
+        if not args.replace:
+            raise SystemExit(f"Refusing to overwrite existing database: {destination}; use --replace")
     destination.parent.mkdir(parents=True, exist_ok=True)
     building = destination.with_name(destination.name + ".building")
     if building.exists():

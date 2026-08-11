@@ -5,8 +5,56 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
-SCHEMA_VERSION = "2.1.0"
-ADDITIVE_SCHEMA_UPGRADES = {"2.0.0"}
+SCHEMA_VERSION = "3.0.0"
+# v2 -> v3 requires ALTER TABLE. Never stamp an older same-name schema via
+# CREATE TABLE IF NOT EXISTS; use scripts/migrate/upgrade_schema_v2_to_v3.py.
+ADDITIVE_SCHEMA_UPGRADES: set[str] = set()
+
+# Required v3 delta columns. v2 and v3 share the same table names, so
+# CREATE TABLE IF NOT EXISTS is a silent no-op on an existing v2 table and the
+# schema_version stamp alone proves nothing. This mirrors
+# REQUIRED_V3_COLUMNS in scripts/migrate/upgrade_schema_v2_to_v3.py:has_v3_shape().
+REQUIRED_V3_COLUMNS: dict[str, frozenset[str]] = {
+    "persons": frozenset({"education", "merged_into_id"}),
+    "positions": frozenset({"title_category", "sort_order"}),
+    "datasets": frozenset({"commercial_use"}),
+    "sources": frozenset({"commercial_use"}),
+}
+
+MIGRATION_HINT = (
+    "Run `python3 scripts/migrate/upgrade_schema_v2_to_v3.py "
+    "--database <path>` to migrate the existing database to schema 3.0.0."
+)
+
+
+def _table_names(conn: sqlite3.Connection) -> set[str]:
+    return {
+        row[0]
+        for row in conn.execute(
+            "SELECT name FROM sqlite_master WHERE type='table'"
+        )
+    }
+
+
+def _columns(conn: sqlite3.Connection, table: str) -> set[str]:
+    return {row[1] for row in conn.execute(f"PRAGMA table_info('{table}')")}
+
+
+def has_v3_shape(conn: sqlite3.Connection) -> bool:
+    """Whether the database already carries every required v3 column."""
+    tables = _table_names(conn)
+    return all(
+        table in tables and required <= _columns(conn, table)
+        for table, required in REQUIRED_V3_COLUMNS.items()
+    )
+
+
+def _is_empty_database(conn: sqlite3.Connection) -> bool:
+    """True when no tables exist at all, i.e. a brand-new database."""
+    return (
+        conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' LIMIT 1").fetchone()
+        is None
+    )
 
 DDL = """
 CREATE TABLE IF NOT EXISTS schema_meta (
@@ -40,6 +88,7 @@ CREATE TABLE IF NOT EXISTS datasets (
     rights_status TEXT NOT NULL DEFAULT 'unknown'
         CHECK(rights_status IN ('unknown', 'cleared', 'restricted')),
     commercial_use_allowed INTEGER NOT NULL DEFAULT 0 CHECK(commercial_use_allowed IN (0, 1)),
+    commercial_use INTEGER NOT NULL DEFAULT 0 CHECK(commercial_use IN (0, 1)),
     imported_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -77,10 +126,12 @@ CREATE TABLE IF NOT EXISTS persons (
         CHECK(birth_precision IN ('day', 'month', 'year', 'unknown')),
     birthplace TEXT NOT NULL DEFAULT '',
     native_place TEXT NOT NULL DEFAULT '',
+    education TEXT NOT NULL DEFAULT '',
     party_join_text TEXT NOT NULL DEFAULT '',
     work_start_text TEXT NOT NULL DEFAULT '',
     identity_status TEXT NOT NULL DEFAULT 'unresolved'
         CHECK(identity_status IN ('verified', 'probable', 'unresolved', 'merged')),
+    merged_into_id TEXT REFERENCES persons(person_id),
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -127,6 +178,7 @@ CREATE TABLE IF NOT EXISTS positions (
     title TEXT NOT NULL DEFAULT '',
     rank TEXT NOT NULL DEFAULT '',
     category TEXT NOT NULL DEFAULT '',
+    title_category TEXT NOT NULL DEFAULT '',
     start_text TEXT NOT NULL DEFAULT '',
     end_text TEXT NOT NULL DEFAULT '',
     start_date TEXT,
@@ -134,6 +186,7 @@ CREATE TABLE IF NOT EXISTS positions (
     date_precision TEXT NOT NULL DEFAULT 'unknown'
         CHECK(date_precision IN ('day', 'month', 'year', 'range', 'unknown')),
     is_current INTEGER NOT NULL DEFAULT 0 CHECK(is_current IN (0, 1)),
+    sort_order INTEGER NOT NULL DEFAULT 0,
     confidence TEXT NOT NULL DEFAULT 'unverified'
         CHECK(confidence IN ('confirmed', 'plausible', 'unverified')),
     notes TEXT NOT NULL DEFAULT ''
@@ -173,6 +226,7 @@ CREATE TABLE IF NOT EXISTS sources (
     rights_status TEXT NOT NULL DEFAULT 'unknown'
         CHECK(rights_status IN ('unknown', 'cleared', 'restricted')),
     commercial_use_allowed INTEGER NOT NULL DEFAULT 0 CHECK(commercial_use_allowed IN (0, 1)),
+    commercial_use INTEGER NOT NULL DEFAULT 0 CHECK(commercial_use IN (0, 1)),
     content_sha256 TEXT NOT NULL DEFAULT ''
 );
 
@@ -398,6 +452,22 @@ def create_schema(conn: sqlite3.Connection) -> None:
         raise RuntimeError(
             f"Database schema {current} is incompatible with code schema {SCHEMA_VERSION}"
         )
+    if current is None and not _is_empty_database(conn):
+        # An unversioned database must already carry the v3 shape before we
+        # stamp it 3.0.0. The stamp alone proves nothing: an older
+        # create_schema() may have stamped 3.0.0 without ALTERing same-name v2
+        # tables, and CREATE TABLE IF NOT EXISTS cannot repair them.
+        if not has_v3_shape(conn):
+            required = ", ".join(
+                f"{table}.{column}"
+                for table, columns in sorted(REQUIRED_V3_COLUMNS.items())
+                for column in sorted(columns)
+            )
+            raise RuntimeError(
+                "Database is not stamped and lacks the required v3 columns "
+                f"({required}); refusing to stamp it {SCHEMA_VERSION}. "
+                + MIGRATION_HINT
+            )
     conn.executescript(DDL)
     conn.execute(
         "INSERT OR REPLACE INTO schema_meta(key, value) VALUES('schema_version', ?)",
