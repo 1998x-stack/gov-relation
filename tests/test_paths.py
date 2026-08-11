@@ -55,3 +55,35 @@ class TestCentralPaths:
     def test_central_paths_under_data_central(self) -> None:
         from gov_relation.paths import CENTRAL_DIR
         assert str(CENTRAL_DIR).endswith("data/central")
+
+
+class TestProvincePaths:
+    def test_chinese_province_maps_to_stable_slug(self) -> None:
+        from gov_relation.paths import PROVINCES_DIR, province_dir
+
+        assert province_dir("四川省") == PROVINCES_DIR / "sichuan"
+
+    def test_slug_is_accepted_without_translation(self) -> None:
+        from gov_relation.paths import PROVINCES_DIR, province_dir
+
+        assert province_dir("sichuan") == PROVINCES_DIR / "sichuan"
+
+    def test_builders_remain_under_scripts_build(self) -> None:
+        from gov_relation.paths import REPO_ROOT, province_build_dir
+
+        assert province_build_dir("四川省") == REPO_ROOT / "scripts" / "build"
+
+    def test_province_artifact_subdirectories(self) -> None:
+        from gov_relation.paths import (
+            PROVINCES_DIR,
+            province_database_dir,
+            province_graph_dir,
+            province_persons_dir,
+            province_reports_dir,
+        )
+
+        base = PROVINCES_DIR / "sichuan"
+        assert province_database_dir("四川省") == base / "database"
+        assert province_graph_dir("四川省") == base / "graph"
+        assert province_persons_dir("四川省") == base / "persons"
+        assert province_reports_dir("四川省") == base / "reports"

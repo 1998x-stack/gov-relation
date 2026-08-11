@@ -19,6 +19,7 @@ jrld.html
 srd.html
 gz_ld.html
 baike_search_hwq.yml
+*.bak
 Added:
 Last
 Registry
@@ -40,3 +41,8 @@ scripts/data/database/*.db
 
 # Claude Code worktrees
 .claude/worktrees/
+
+# v3 province runtime packages — regenerated via legacy hardlinks; keep skeletons only
+data/provinces/**
+!data/provinces/**/
+!data/provinces/**/.gitkeep

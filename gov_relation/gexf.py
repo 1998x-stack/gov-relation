@@ -23,13 +23,13 @@ class GEXFBuilder:
 
     def __init__(self, title: str = "") -> None:
         self._title = title
-        self._nodes: dict[int, dict[str, Any]] = {}
+        self._nodes: dict[int | str, dict[str, Any]] = {}
         self._edges: list[dict[str, Any]] = []
         self._edge_counter = 0
 
     def add_person(
         self,
-        id: int,
+        id: int | str,
         name: str,
         current_post: str = "",
         current_org: str = "",
@@ -60,7 +60,7 @@ class GEXFBuilder:
 
     def add_organization(
         self,
-        id: int,
+        id: int | str,
         name: str,
         org_type: str = "",
         level: str = "",
@@ -82,8 +82,8 @@ class GEXFBuilder:
 
     def add_relationship(
         self,
-        source: int,
-        target: int,
+        source: int | str,
+        target: int | str,
         rel_type: str,
         context: str = "",
         overlap_org: str = "",
@@ -100,7 +100,8 @@ class GEXFBuilder:
             "overlap_period": overlap_period,
         })
 
-    def write(self, path: Path | str) -> None:
+    def _build_tree(self) -> ET.ElementTree:
+        """Build the complete GEXF tree used by all serialization paths."""
         root = ET.Element(
             "gexf",
             attrib={
@@ -192,7 +193,10 @@ class GEXFBuilder:
         if not self._edges:
             edges_el.text = " "  # non-breaking prevents self-closing
 
-        tree = ET.ElementTree(root)
+        return ET.ElementTree(root)
+
+    def write(self, path: Path | str) -> None:
+        tree = self._build_tree()
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
         tree.write(str(path), encoding="utf-8", xml_declaration=True)
@@ -200,16 +204,5 @@ class GEXFBuilder:
     def to_string(self) -> str:
         import io
         buf = io.BytesIO()
-        root = ET.Element("gexf", attrib={"xmlns": "http://www.gexf.net/1.3", "version": "1.3"})
-        graph = ET.SubElement(root, "graph")
-        nodes_el = ET.SubElement(graph, "nodes")
-        for nid, data in sorted(self._nodes.items()):
-            ET.SubElement(nodes_el, "node", attrib={"id": str(nid), "label": data["label"]})
-        edges_el = ET.SubElement(graph, "edges")
-        for edge in self._edges:
-            ET.SubElement(edges_el, "edge", attrib={
-                "id": str(edge["id"]), "source": str(edge["source"]), "target": str(edge["target"]),
-            })
-        tree = ET.ElementTree(root)
-        tree.write(buf, encoding="utf-8", xml_declaration=True)
+        self._build_tree().write(buf, encoding="utf-8", xml_declaration=True)
         return buf.getvalue().decode("utf-8")

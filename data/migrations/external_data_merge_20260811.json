@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "merged_at": "2026-08-11",
+  "source": "/workspace/data/xieming/other-codes/data",
+  "source_file_count": 38,
+  "method": "process_tmp validation plus semantic SQLite/GEXF conflict review",
+  "promoted": [
+    "data/provinces/heilongjiang/reports/20260724-黑龙江省-齐齐哈尔市-富拉尔基区-领导班子调查报告.md",
+    "data/provinces/heilongjiang/reports/open_gaps.md"
+  ],
+  "replaced": [
+    {
+      "path": "data/provinces/fujian/database/周宁县_network.db",
+      "reason": "external database contained the same 9 position and 5 relationship facts without the duplicate rows present in the repository copy"
+    }
+  ],
+  "retained_repository_versions": [
+    {
+      "artifact": "昌宁县_network.db",
+      "external_sha256": "96521093617395c367121a88968f160fcbcb1ab175b98365ebbd05cd7e160165",
+      "reason": "all table rows were logically identical; binary difference was non-semantic"
+    },
+    {
+      "artifact": "相山区_network.db",
+      "external_sha256": "7e923f47dbb6ebc0dac7c765a8507c226667ad31e3461fddeb7d280462f03bb7",
+      "reason": "all table rows were logically identical; binary difference was non-semantic"
+    },
+    {
+      "artifact": "会宁县_network.db",
+      "external_sha256": "a3f6cebf409d5d5dd652b0b9b11cf9e42df3dc4c356662477b537f3e4a4659a2",
+      "reason": "external copy duplicated all 24 position facts and all 9 relationship facts"
+    },
+    {
+      "artifact": "会宁县_network.gexf",
+      "external_sha256": "879650f92c19162328071d8c34451352760ac4580034072e55dcd280c439310f",
+      "reason": "both graphs contained 25 nodes and 33 edges; repository version matched the retained clean database"
+    },
+    {
+      "artifact": "富拉尔基区_network.db",
+      "external_sha256": "aa917d363bbbb51e6476a8afbed26b8ba606499458516b12f41f902f978bbb5a",
+      "reason": "all table rows were logically identical; binary difference was non-semantic"
+    },
+    {
+      "artifact": "富拉尔基区_network.gexf",
+      "external_sha256": "88ea640aa5ccbe3a76eff3d0d5fd804968b9a5fbeec4ff488e2b75c4732a1ddb",
+      "reason": "the extra 30 worked-at edges duplicated position facts already retained in SQLite; repository graph follows the current relationship-edge generator"
+    },
+    {
+      "artifact": "襄阳市_network.db",
+      "external_sha256": "8a4217e5462cbc13ed4ec982612fecfee0dd6fe493b8aa02edf9ce6f67a1bbef",
+      "reason": "all table rows were logically identical; binary difference was non-semantic"
+    }
+  ]
+}

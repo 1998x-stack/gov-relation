@@ -6,7 +6,7 @@ import json
 import sqlite3
 from pathlib import Path
 
-from gov_relation.platform.identity import person_key, stable_id
+from gov_relation.identity import person_key, stable_id
 from gov_relation.platform.importer import import_legacy_database, import_person_profile
 from gov_relation.platform.quality import database_report
 from gov_relation.platform.resolution import build_person_candidates

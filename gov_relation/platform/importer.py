@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterable
 
-from .identity import (
+from gov_relation.identity import (
     date_precision,
     normalize_text,
     organization_key,
