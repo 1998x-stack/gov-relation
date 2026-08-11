@@ -65,7 +65,22 @@ def git_commit_task(task: dict, claimed_at: str = "") -> bool:
         logger.info("GIT no task paths exist to commit for %s", task_id)
         return True
 
-    add = subprocess.run(["git", "add", *paths], text=True, capture_output=True, check=False)
+    # 过滤 .gitignore 忽略的路径(如 data/TODO.json 是运行时数据,git add 会整批失败)
+    addable: list[str] = []
+    for path in paths:
+        ignored = subprocess.run(
+            ["git", "check-ignore", "-q", path],
+            text=True, capture_output=True, check=False,
+        )
+        if ignored.returncode == 0:
+            logger.info("GIT skip ignored path %s", path)
+        else:
+            addable.append(path)
+    if not addable:
+        logger.info("GIT no addable task paths for %s", task_id)
+        return True
+
+    add = subprocess.run(["git", "add", *addable], text=True, capture_output=True, check=False)
     if add.returncode != 0:
         logger.info("GIT add failed: %s", add.stderr.strip())
         return False
