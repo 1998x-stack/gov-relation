@@ -1,0 +1,22 @@
+{
+  "generated": "2026-08-11",
+  "note": "Artifacts that cannot be resolved to a province by any available evidence. They are EXCLUDED from province_artifact_map.json. The migration uses default resolution (no --allow-partial) and will report these as unmatched; they must be triaged by a human before the final gate closes.",
+  "artifacts": [
+    {
+      "path": "data/database/openping_network.db",
+      "reason": "0-byte stub with no content (empty sqlite file, no tables/rows), no GEXF counterpart, no build script, no TODO region, no person files. Name 'openping' is a literal-translation artifact (open=开, ping=平) that could refer to 开平市(guangdong) or 开平区(hebei 唐山) — two plausible provinces, no evidence to choose. Hold out pending human triage."
+    },
+    {
+      "path": "data/database/test_region_network.db",
+      "reason": "Test artifact: created by tests/test_process_tmp.py (test_region fixture). Not a real administrative region. Excluded from migration."
+    },
+    {
+      "path": "data/graph/test_region_network.gexf",
+      "reason": "Test artifact: created by tests/test_process_tmp.py (test_region fixture). Not a real administrative region. Excluded from migration."
+    },
+    {
+      "path": "data/persons/20260723-test.json",
+      "reason": "Test artifact: person stub named 张三 with empty birthplace/organization fields. Not a real person profile. Excluded from migration."
+    }
+  ]
+}
