@@ -144,7 +144,12 @@ def migrate(
                 continue
         if province is None:
             parts = source.stem.split("-")
-            remainder = parts[1:] if parts and len(parts[0]) == 8 else parts[3:]
+            if len(parts) >= 2 and len(parts[0]) == 8 and parts[0].isdigit():
+                remainder = parts[1:]
+            elif len(parts) >= 4 and len(parts[0]) == 4 and parts[0].isdigit():
+                remainder = parts[3:]
+            else:
+                remainder = parts
             province = next((item for item in remainder if item in PROVINCE_SLUGS), None)
         if province is None:
             unresolved = stats["unmatched"]  # type: ignore[assignment]
