@@ -1,1 +1,1 @@
-scripts/build/build_滦州市_data.py
+../build_滦州市_data.py

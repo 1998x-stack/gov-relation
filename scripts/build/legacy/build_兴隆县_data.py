@@ -1,1 +1,1 @@
-scripts/build/build_兴隆县_data.py
+../build_兴隆县_data.py

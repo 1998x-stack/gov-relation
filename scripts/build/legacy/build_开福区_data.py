@@ -1,1 +1,1 @@
-scripts/build/build_开福区_data.py
+../build_开福区_data.py

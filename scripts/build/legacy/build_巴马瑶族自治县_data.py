@@ -1,1 +1,1 @@
-scripts/build/build_巴马瑶族自治县_data.py
+../build_巴马瑶族自治县_data.py

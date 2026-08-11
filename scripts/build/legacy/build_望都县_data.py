@@ -1,1 +1,1 @@
-scripts/build/build_望都县_data.py
+../build_望都县_data.py

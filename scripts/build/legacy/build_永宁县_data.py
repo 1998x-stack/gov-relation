@@ -1,1 +1,1 @@
-scripts/build/build_永宁县_data.py
+../build_永宁县_data.py

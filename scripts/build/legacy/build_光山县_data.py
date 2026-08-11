@@ -1,1 +1,1 @@
-scripts/build/build_光山县_data.py
+../build_光山县_data.py

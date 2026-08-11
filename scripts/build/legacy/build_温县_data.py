@@ -1,1 +1,1 @@
-scripts/build/build_温县_data.py
+../build_温县_data.py

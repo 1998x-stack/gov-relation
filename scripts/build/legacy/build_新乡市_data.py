@@ -1,1 +1,1 @@
-scripts/build/build_新乡市_data.py
+../build_新乡市_data.py

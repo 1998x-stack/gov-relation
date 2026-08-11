@@ -1,1 +1,1 @@
-scripts/build/build_固始县_data.py
+../build_固始县_data.py

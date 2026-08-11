@@ -1,1 +1,1 @@
-scripts/build/build_遵化市_data.py
+../build_遵化市_data.py

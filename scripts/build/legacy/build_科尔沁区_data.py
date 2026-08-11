@@ -1,1 +1,1 @@
-scripts/build/build_科尔沁区_data.py
+../build_科尔沁区_data.py

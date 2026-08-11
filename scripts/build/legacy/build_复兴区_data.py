@@ -1,1 +1,1 @@
-scripts/build/build_复兴区_data.py
+../build_复兴区_data.py

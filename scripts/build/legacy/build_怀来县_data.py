@@ -1,1 +1,1 @@
-scripts/build/build_怀来县_data.py
+../build_怀来县_data.py

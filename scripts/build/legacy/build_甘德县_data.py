@@ -1,1 +1,1 @@
-scripts/build/build_甘德县_data.py
+../build_甘德县_data.py

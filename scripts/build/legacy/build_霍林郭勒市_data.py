@@ -1,1 +1,1 @@
-scripts/build/build_霍林郭勒市_data.py
+../build_霍林郭勒市_data.py

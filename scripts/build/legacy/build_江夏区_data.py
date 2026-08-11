@@ -1,1 +1,1 @@
-scripts/build/build_江夏区_data.py
+../build_江夏区_data.py

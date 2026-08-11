@@ -1,1 +1,1 @@
-scripts/build/build_泾源县_data.py
+../build_泾源县_data.py

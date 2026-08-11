@@ -1,1 +1,1 @@
-scripts/build/build_固原市_data.py
+../build_固原市_data.py

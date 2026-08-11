@@ -1,1 +1,1 @@
-scripts/build/build_珲春市_data.py
+../build_珲春市_data.py

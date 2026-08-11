@@ -1,1 +1,1 @@
-scripts/build/build_城固县_data.py
+../build_城固县_data.py

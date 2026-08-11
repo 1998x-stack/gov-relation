@@ -1,1 +1,1 @@
-scripts/build/build_宏伟区_data.py
+../build_宏伟区_data.py

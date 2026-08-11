@@ -1,1 +1,1 @@
-scripts/build/build_武穴市_data.py
+../build_武穴市_data.py

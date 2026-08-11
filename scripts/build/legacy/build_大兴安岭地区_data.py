@@ -1,1 +1,1 @@
-scripts/build/build_大兴安岭地区_data.py
+../build_大兴安岭地区_data.py

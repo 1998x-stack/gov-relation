@@ -1,1 +1,1 @@
-scripts/build/build_西峡县_data.py
+../build_西峡县_data.py

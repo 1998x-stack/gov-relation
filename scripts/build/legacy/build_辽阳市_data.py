@@ -1,1 +1,1 @@
-scripts/build/build_辽阳市_data.py
+../build_辽阳市_data.py

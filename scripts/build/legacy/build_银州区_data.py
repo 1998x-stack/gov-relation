@@ -1,1 +1,1 @@
-scripts/build/build_银州区_data.py
+../build_银州区_data.py

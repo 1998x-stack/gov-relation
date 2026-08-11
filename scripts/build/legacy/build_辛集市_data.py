@@ -1,1 +1,1 @@
-scripts/build/build_辛集市_data.py
+../build_辛集市_data.py

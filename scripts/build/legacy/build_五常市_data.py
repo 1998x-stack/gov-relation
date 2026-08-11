@@ -1,1 +1,1 @@
-scripts/build/build_五常市_data.py
+../build_五常市_data.py

@@ -1,1 +1,1 @@
-scripts/build/build_赫章县_data.py
+../build_赫章县_data.py

@@ -1,1 +1,1 @@
-scripts/build/build_正阳县_data.py
+../build_正阳县_data.py

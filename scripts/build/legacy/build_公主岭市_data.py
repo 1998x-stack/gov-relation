@@ -1,1 +1,1 @@
-scripts/build/build_公主岭市_data.py
+../build_公主岭市_data.py

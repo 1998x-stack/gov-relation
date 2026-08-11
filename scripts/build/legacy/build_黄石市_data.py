@@ -1,1 +1,1 @@
-scripts/build/build_黄石市_data.py
+../build_黄石市_data.py

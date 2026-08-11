@@ -1,1 +1,1 @@
-scripts/build/build_湟源县_data.py
+../build_湟源县_data.py

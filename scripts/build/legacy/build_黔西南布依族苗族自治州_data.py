@@ -1,1 +1,1 @@
-scripts/build/build_黔西南布依族苗族自治州_data.py
+../build_黔西南布依族苗族自治州_data.py

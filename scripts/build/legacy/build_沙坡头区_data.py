@@ -1,1 +1,1 @@
-scripts/build/build_沙坡头区_data.py
+../build_沙坡头区_data.py

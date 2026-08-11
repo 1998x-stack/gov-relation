@@ -1,1 +1,1 @@
-scripts/build/build_和林格尔县_data.py
+../build_和林格尔县_data.py

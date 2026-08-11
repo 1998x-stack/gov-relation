@@ -1,1 +1,1 @@
-scripts/build/build_北安市_data.py
+../build_北安市_data.py

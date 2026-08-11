@@ -1,1 +1,1 @@
-scripts/build/build_左权县_data.py
+../build_左权县_data.py

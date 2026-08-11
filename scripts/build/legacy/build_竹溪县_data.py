@@ -1,1 +1,1 @@
-scripts/build/build_竹溪县_data.py
+../build_竹溪县_data.py

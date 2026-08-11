@@ -1,1 +1,1 @@
-scripts/build/build_山海关区_data.py
+../build_山海关区_data.py

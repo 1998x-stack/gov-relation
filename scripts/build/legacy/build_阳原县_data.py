@@ -1,1 +1,1 @@
-scripts/build/build_阳原县_data.py
+../build_阳原县_data.py

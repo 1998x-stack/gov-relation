@@ -1,1 +1,1 @@
-scripts/build/build_明山区_data.py
+../build_明山区_data.py

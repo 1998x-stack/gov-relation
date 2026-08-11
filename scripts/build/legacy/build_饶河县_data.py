@@ -1,1 +1,1 @@
-scripts/build/build_饶河县_data.py
+../build_饶河县_data.py

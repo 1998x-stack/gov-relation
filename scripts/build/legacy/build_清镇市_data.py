@@ -1,1 +1,1 @@
-scripts/build/build_清镇市_data.py
+../build_清镇市_data.py

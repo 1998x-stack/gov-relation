@@ -1,1 +1,1 @@
-scripts/build/build_兴平市_data.py
+../build_兴平市_data.py

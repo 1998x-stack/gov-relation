@@ -1,1 +1,1 @@
-scripts/build/build_广水市_data.py
+../build_广水市_data.py

@@ -1,1 +1,1 @@
-scripts/build/build_习水县_data.py
+../build_习水县_data.py

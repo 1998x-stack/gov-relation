@@ -1,1 +1,1 @@
-scripts/build/build_爱辉区_data.py
+../build_爱辉区_data.py

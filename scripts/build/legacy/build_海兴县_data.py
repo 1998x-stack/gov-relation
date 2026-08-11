@@ -1,1 +1,1 @@
-scripts/build/build_海兴县_data.py
+../build_海兴县_data.py

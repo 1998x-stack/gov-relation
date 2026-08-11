@@ -1,1 +1,1 @@
-scripts/build/build_涿鹿县_data.py
+../build_涿鹿县_data.py

@@ -1,1 +1,1 @@
-../scripts/build/build_黑河市_data.py
+../build_黑河市_data.py

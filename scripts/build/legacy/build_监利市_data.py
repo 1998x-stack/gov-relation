@@ -1,1 +1,1 @@
-scripts/build/build_监利市_data.py
+../build_监利市_data.py

@@ -1,1 +1,1 @@
-scripts/build/build_下花园区_data.py
+../build_下花园区_data.py

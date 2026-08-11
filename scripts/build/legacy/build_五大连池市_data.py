@@ -1,1 +1,1 @@
-../scripts/build/build_五大连池市_data.py
+../build_五大连池市_data.py

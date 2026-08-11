@@ -1,1 +1,1 @@
-scripts/build/build_丰润区_data.py
+../build_丰润区_data.py

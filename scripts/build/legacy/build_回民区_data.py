@@ -1,1 +1,1 @@
-scripts/build/build_回民区_data.py
+../build_回民区_data.py

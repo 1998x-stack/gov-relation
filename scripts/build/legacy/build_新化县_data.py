@@ -1,1 +1,1 @@
-scripts/build/build_新化县_data.py
+../build_新化县_data.py

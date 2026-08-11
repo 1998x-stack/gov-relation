@@ -1,1 +1,1 @@
-scripts/build/build_新邱区_data.py
+../build_新邱区_data.py

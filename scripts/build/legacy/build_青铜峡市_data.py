@@ -1,1 +1,1 @@
-scripts/build/build_青铜峡市_data.py
+../build_青铜峡市_data.py

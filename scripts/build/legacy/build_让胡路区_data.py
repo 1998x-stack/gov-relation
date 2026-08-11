@@ -1,1 +1,1 @@
-scripts/build/build_让胡路区_data.py
+../build_让胡路区_data.py

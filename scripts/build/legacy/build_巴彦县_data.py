@@ -1,1 +1,1 @@
-scripts/build/build_巴彦县_data.py
+../build_巴彦县_data.py

@@ -1,1 +1,1 @@
-scripts/build/build_卓资县_data.py
+../build_卓资县_data.py

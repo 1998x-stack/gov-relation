@@ -1,1 +1,1 @@
-scripts/build/build_贵南县_data.py
+../build_贵南县_data.py

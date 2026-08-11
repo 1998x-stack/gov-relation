@@ -1,1 +1,1 @@
-scripts/build/build_兴山县_data.py
+../build_兴山县_data.py

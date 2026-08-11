@@ -1,1 +1,1 @@
-scripts/build/build_嘉荫县_data.py
+../build_嘉荫县_data.py

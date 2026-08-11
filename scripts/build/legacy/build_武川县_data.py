@@ -1,1 +1,1 @@
-scripts/build/build_武川县_data.py
+../build_武川县_data.py

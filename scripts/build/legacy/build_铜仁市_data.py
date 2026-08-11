@@ -1,1 +1,1 @@
-scripts/build/build_铜仁市_data.py
+../build_铜仁市_data.py

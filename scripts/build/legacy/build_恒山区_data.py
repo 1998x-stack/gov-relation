@@ -1,1 +1,1 @@
-scripts/build/build_恒山区_data.py
+../build_恒山区_data.py

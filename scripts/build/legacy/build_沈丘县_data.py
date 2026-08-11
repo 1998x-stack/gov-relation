@@ -1,1 +1,1 @@
-scripts/build/build_沈丘县_data.py
+../build_沈丘县_data.py

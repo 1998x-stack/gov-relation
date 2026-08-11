@@ -1,1 +1,1 @@
-scripts/build/build_德令哈市_data.py
+../build_德令哈市_data.py

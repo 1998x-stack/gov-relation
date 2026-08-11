@@ -1,1 +1,1 @@
-scripts/build/build_桦南县_data.py
+../build_桦南县_data.py

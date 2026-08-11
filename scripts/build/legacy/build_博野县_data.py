@@ -1,1 +1,1 @@
-scripts/build/build_博野县_data.py
+../build_博野县_data.py

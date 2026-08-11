@@ -1,1 +1,1 @@
-scripts/build/build_团风县_data.py
+../build_团风县_data.py

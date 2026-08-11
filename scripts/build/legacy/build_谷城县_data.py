@@ -1,1 +1,1 @@
-scripts/build/build_谷城县_data.py
+../build_谷城县_data.py

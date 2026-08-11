@@ -1,1 +1,1 @@
-scripts/build/build_长岭县_data.py
+../build_长岭县_data.py

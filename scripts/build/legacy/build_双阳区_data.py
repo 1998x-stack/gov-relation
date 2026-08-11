@@ -1,1 +1,1 @@
-scripts/build/build_双阳区_data.py
+../build_双阳区_data.py

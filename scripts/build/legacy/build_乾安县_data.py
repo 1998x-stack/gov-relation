@@ -1,1 +1,1 @@
-scripts/build/build_乾安县_data.py
+../build_乾安县_data.py

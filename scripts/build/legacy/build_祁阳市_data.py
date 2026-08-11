@@ -1,1 +1,1 @@
-scripts/build/build_祁阳市_data.py
+../build_祁阳市_data.py

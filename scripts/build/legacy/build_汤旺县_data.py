@@ -1,1 +1,1 @@
-scripts/build/build_汤旺县_data.py
+../build_汤旺县_data.py

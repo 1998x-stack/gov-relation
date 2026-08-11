@@ -1,1 +1,1 @@
-scripts/build/build_扎赉诺尔区_data.py
+../build_扎赉诺尔区_data.py

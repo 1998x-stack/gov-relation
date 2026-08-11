@@ -1,1 +1,1 @@
-scripts/build/build_囊谦县_data.py
+../build_囊谦县_data.py

@@ -1,1 +1,1 @@
-scripts/build/build_潢川县_data.py
+../build_潢川县_data.py

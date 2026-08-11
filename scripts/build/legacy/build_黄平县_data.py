@@ -1,1 +1,1 @@
-scripts/build/build_黄平县_data.py
+../build_黄平县_data.py
