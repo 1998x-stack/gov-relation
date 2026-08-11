@@ -14,6 +14,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
 TMP_ROOT = REPO_ROOT / "data" / "tmp"
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 DESTINATIONS = {
     "build_script": REPO_ROOT / "scripts" / "build",
@@ -23,6 +25,32 @@ DESTINATIONS = {
     "report": REPO_ROOT / "report",
     "log": REPO_ROOT / "logs" / "dispatch",
 }
+
+
+def destinations_for(staging_dir: Path) -> tuple[dict[str, Path], str]:
+    """Resolve province destinations from a staging task id."""
+    from gov_relation.paths import (
+        province_database_dir,
+        province_graph_dir,
+        province_persons_dir,
+        province_reports_dir,
+    )
+    from gov_relation.todo import find_item_by_id, load_todo
+
+    item = find_item_by_id(load_todo(), staging_dir.name)
+    if item is None:
+        return dict(DESTINATIONS), "legacy-fallback"
+    province = item.province_name
+    resolved = dict(DESTINATIONS)
+    resolved.update(
+        {
+            "database": province_database_dir(province),
+            "graph": province_graph_dir(province),
+            "person_json": province_persons_dir(province),
+            "report": province_reports_dir(province),
+        }
+    )
+    return resolved, province
 
 
 @dataclass
@@ -44,7 +72,7 @@ def is_person_json(path: Path) -> bool:
 
 def validate_sqlite(path: Path) -> tuple[bool, str]:
     try:
-        conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+        conn = sqlite3.connect(f"file:{path}?mode=ro&immutable=1", uri=True)
         try:
             tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
         finally:
@@ -99,16 +127,24 @@ def validate_action(path: Path, kind: str) -> tuple[bool, str]:
 
 def collect_actions(staging_dir: Path) -> list[Action]:
     actions: list[Action] = []
+    destinations, route = destinations_for(staging_dir)
     for path in sorted(staging_dir.rglob("*")):
-        if not path.is_file() or path.name == "manifest.json" or path.name.startswith("."):
+        if (
+            not path.is_file()
+            or path.name == "manifest.json"
+            or path.name.startswith(".")
+            or path.name.startswith("checkpoint_")
+        ):
             continue
         kind, note = classify(path)
         if kind is None:
             actions.append(Action(path, path, "unknown", False, note))
             continue
         valid, validation_note = validate_action(path, kind)
-        destination = DESTINATIONS[kind] / path.name
-        actions.append(Action(path, destination, kind, valid, validation_note))
+        destination = destinations[kind] / path.name
+        actions.append(
+            Action(path, destination, kind, valid, f"{validation_note}; route={route}")
+        )
     return actions
 
 
