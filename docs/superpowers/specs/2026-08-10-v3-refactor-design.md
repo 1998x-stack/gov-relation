@@ -2,21 +2,23 @@
 
 2026-08-10 · spec · 谢明
 
+> **修订注记(2026-08-11,SubAgentReview 后同步):** §4.5 / §9.2 / §11 已就地标注与落地实现的差异,行为以实现与对应 Phase 计划为准(此 spec 保留原设计描述作为演进记录)。审查报告见 `docs/superpowers/reviews/2026-08-11-review-*.md`。
+
 ## 1. 目标与范围
 
-将当前两阶段（区域简表 → 平台导入）的松散流水线收敛为**统一 schema + factory 生成 + 按省份分区**的生产级数据平台。
+将当前两阶段(区域简表 → 平台导入)的松散流水线收敛为**统一 schema + factory 生成 + 按省份分区**的生产级数据平台。
 
 ### 范围
 
-- **Schema**：统一为 v3 规范（20 张实体表 + 6 个 Gold View），覆盖实体、溯源、质量、版权四域
-- **代码**：引入 `gov_relation/factory/` 工厂层，统一生成 build 脚本、schema DDL、upsert 代码、GEXF、person JSON、report 模板
-- **目录**：按省份分区 `data/provinces/<province>/`，每省自含 build/database/graph/persons/reports
-- **存储**：单文件 SQLite 部署，本地嵌入式，无 PostgreSQL 依赖
-- **迁移**：分 5 阶段渐进迁移，不破坏存量 2000+ DB 和 6000+ 人物档案
+- **Schema**:统一为 v3 规范(20 张实体表 + 6 个 Gold View),覆盖实体、溯源、质量、版权四域
+- **代码**:引入 `gov_relation/factory/` 工厂层,统一生成 build 脚本、schema DDL、upsert 代码、GEXF、person JSON、report 模板
+- **目录**:按省份分区 `data/provinces/<province>/`,每省自含 build/database/graph/persons/reports
+- **存储**:单文件 SQLite 部署,本地嵌入式,无 PostgreSQL 依赖
+- **迁移**:分 5 阶段渐进迁移,不破坏存量 2000+ DB 和 6000+ 人物档案
 
 ### 不在范围
 
-- PostgreSQL 生产部署（schema 保留 PG 兼容性，但不实施）
+- PostgreSQL 生产部署(schema 保留 PG 兼容性,但不实施)
 - 前端 UI 重构
 - OpenCode worker 调度逻辑改动
 - GEXF 可视化风格变更
@@ -51,7 +53,7 @@
 └──────────────────────────────────────────────────────────┘
 ```
 
-六个域的关系：任务管理驱动调研生产 → 生产产出写入实体存储（附溯源）→ 版权授权决定哪些可发布 → 发布展示消费授权后的数据。
+六个域的关系:任务管理驱动调研生产 → 生产产出写入实体存储(附溯源)→ 版权授权决定哪些可发布 → 发布展示消费授权后的数据。
 
 ---
 
@@ -109,11 +111,11 @@
 | Source → EvidenceLink | 1:N | 一个来源可佐证多个实体 |
 | EvidenceLink → (Person/Position/Relationship) | N:M | 多来源佐证同一事实 |
 | ResolutionCandidate | N:2 | 每行指向两个待合并 Person |
-| Source → SourceRightsDecision | 1:N | 时间维度（有效区间） |
+| Source → SourceRightsDecision | 1:N | 时间维度(有效区间) |
 
 ---
 
-## 4. 完整 Schema（21 表 + 6 Gold Views）
+## 4. 完整 Schema(21 表 + 6 Gold Views)
 
 ### 4.1 实体域
 
@@ -428,6 +430,8 @@ FROM person_statuses ps
 JOIN persons p ON p.person_id = ps.person_id
 WHERE ps.is_current_confirmed = 1;
 
+> **2026-08-11 审查同步:** 已实现视图改为 `FROM positions ps … LEFT JOIN organizations … WHERE ps.is_current=1`(含 `start_text/end_text`,不含 administrative_rank)。`person_statuses` 在 v3 中保留为实体表,但不再是本视图的数据源(GEXFFactory 内仍作兜底引用)。下游如需与之对齐,以 `gov_relation/factory/schema_factory.py` 的 DDL 为准。
+
 CREATE VIEW gold_relationship_edges AS
 SELECT r.relationship_id, a.canonical_name AS person_from, b.canonical_name AS person_to,
        r.relationship_type, r.direction, r.strength, r.confidence,
@@ -474,26 +478,26 @@ JOIN gold_commercial_sources s ON s.source_id = e.source_id;
 | 表 | PK | FK | UNIQUE | CHECK |
 |----|----|----|--------|-------|
 | jurisdictions | jurisdiction_id | parent_id → jurisdictions | (parent_id, normalized_name, level) | level |
-| persons | person_id | merged_into_id → persons | — | birth_precision, identity_status |
-| person_aliases | (person_id, normalized_alias) | person_id → persons | — | — |
-| organizations | organization_id | jurisdiction_id, parent_organization_id | — | — |
-| positions | position_id | person_id → persons, organization_id → orgs | — | date_precision, is_current, confidence |
-| relationships | relationship_id | person_from_id/to_id → persons, overlap_organization_id → orgs | — | person_from_id <> person_to_id, direction, strength, confidence |
-| person_statuses | status_id | person_id → persons | — | is_current_confirmed, confidence |
+| persons | person_id | merged_into_id → persons | - | birth_precision, identity_status |
+| person_aliases | (person_id, normalized_alias) | person_id → persons | - | - |
+| organizations | organization_id | jurisdiction_id, parent_organization_id | - | - |
+| positions | position_id | person_id → persons, organization_id → orgs | - | date_precision, is_current, confidence |
+| relationships | relationship_id | person_from_id/to_id → persons, overlap_organization_id → orgs | - | person_from_id <> person_to_id, direction, strength, confidence |
+| person_statuses | status_id | person_id → persons | - | is_current_confirmed, confidence |
 | datasets | dataset_id | jurisdiction_id | dataset_key | kind, rights_status, commercial_use |
-| raw_records | raw_record_id | dataset_id → datasets | (dataset_id, source_table, source_pk) | — |
-| profile_documents | profile_id | person_id → persons, raw_record_id → raw_records | — | — |
-| sources | source_id | — | — | source_type, reliability, rights_status, commercial_use |
+| raw_records | raw_record_id | dataset_id → datasets | (dataset_id, source_table, source_pk) | - |
+| profile_documents | profile_id | person_id → persons, raw_record_id → raw_records | - | - |
+| sources | source_id | - | - | source_type, reliability, rights_status, commercial_use |
 | evidence_links | evidence_id | source_id → sources | (source_id, subject_type, subject_id, field_name, locator) | confidence |
-| claims | claim_id | — | — | confidence, review_status |
-| entity_provenance | provenance_id | dataset_id, raw_record_id | (dataset_id, raw_record_id, entity_type, entity_id, source_field) | — |
-| quality_issues | issue_id | dataset_id, raw_record_id | — | severity, status |
-| resolution_candidates | candidate_id | — | (left_entity_id, right_entity_id, entity_type) | score [0,1], status |
-| rights_review_keys | key_id | — | — | algorithm, status |
-| rights_manifests | manifest_id | — | — | — |
+| claims | claim_id | - | - | confidence, review_status |
+| entity_provenance | provenance_id | dataset_id, raw_record_id | (dataset_id, raw_record_id, entity_type, entity_id, source_field) | - |
+| quality_issues | issue_id | dataset_id, raw_record_id | - | severity, status |
+| resolution_candidates | candidate_id | - | (left_entity_id, right_entity_id, entity_type) | score [0,1], status |
+| rights_review_keys | key_id | - | - | algorithm, status |
+| rights_manifests | manifest_id | - | - | - |
 | source_rights_decisions | decision_row_id | manifest_id, source_id | (manifest_id, decision_id, source_id) | decision |
-| schema_meta | key | — | — | — |
-| ingest_runs | run_id | — | — | status |
+| schema_meta | key | - | - | - |
+| ingest_runs | run_id | - | - | status |
 
 ---
 
@@ -562,7 +566,7 @@ WHERE (r.person_from_id = ? AND r.person_to_id = ?)
    OR (r.person_from_id = ? AND r.person_to_id = ?);
 ```
 
-### Q3: 某组织当前任职人员（Gold View）
+### Q3: 某组织当前任职人员(Gold View)
 ```sql
 SELECT canonical_name, title, rank, confidence
 FROM gold_current_positions
@@ -597,12 +601,12 @@ ORDER BY rc.score DESC;
 
 ## 8. 反范式化
 
-SQLite 单机环境下的 2 处反范式化：
+SQLite 单机环境下的 2 处反范式化:
 
 | 位置 | 问题 | 方案 |
 |------|------|------|
-| `positions.organization_text` | 每次查履历都 join orgs，组织名变化少但查询量大 | 冗余组织名到 position 行，避免 N+1 join。`organization_id` 仍保留用于精确关联和分组统计 |
-| `gold_current_positions` | 查现任领导需 3 表 join | 已是 View，无需额外反范式化。View 字段足以直接用于 API 响应 |
+| `positions.organization_text` | 每次查履历都 join orgs,组织名变化少但查询量大 | 冗余组织名到 position 行,避免 N+1 join。`organization_id` 仍保留用于精确关联和分组统计 |
+| `gold_current_positions` | 查现任领导需 3 表 join | 已是 View,无需额外反范式化。View 字段足以直接用于 API 响应 |
 
 ---
 
@@ -658,6 +662,9 @@ class BuildScriptFactory:
         claims: list[dict] | None = None,
     ) -> str   # 返回完整 .py 脚本内容
 
+> **2026-08-11 审查同步:** 已实现为 keyword-only `generate(*, slug: str, province_name: str, persons, organizations, positions, relationships, sources, claims)`(另接受 `province_dir` 覆盖);生成脚本经 `gov_relation.runner.run_build(..., backend="v3")` 执行,并硬编码 `Path(__file__).resolve().parents[2]` 定位仓库根。
+
+
 class GEXFFactory:
     """从 DB 查询生成 GEXF"""
     def build(self, conn: Connection, title: str) -> str   # GEXF XML string
@@ -671,7 +678,7 @@ class ReportFactory:
     def build(self, slug: str, stats: dict) -> str
 
 class RegionResearchFactory:
-    """顶层入口 — 协调所有子工厂"""
+    """顶层入口 - 协调所有子工厂"""
     def __init__(self, province: str, region: str, level: str, targets: list[dict])
     def generate_build_script(self) -> Path
     def generate_gexf(self) -> Path
@@ -694,7 +701,7 @@ factory = RegionResearchFactory(
 # 生成 build 脚本 → data/provinces/sichuan/build/build_锦江区_data.py
 factory.generate_build_script()
 
-# build 脚本内部使用 InsertFactory：
+# build 脚本内部使用 InsertFactory:
 #   factory.insert.upsert_person(conn, {"canonical_name": "张三", ...})
 #   → 写入 data/provinces/sichuan/database/锦江区_network.db
 
@@ -730,8 +737,8 @@ gov-relation/
 │   ├── identity.py                        # 保留
 │   ├── gexf.py                            # 保留
 │   ├── colors.py                          # 保留
-│   ├── paths.py                           # 保留，新增 province 路径函数
-│   ├── runner.py                          # 保留，底层调用 factory
+│   ├── paths.py                           # 保留,新增 province 路径函数
+│   ├── runner.py                          # 保留,底层调用 factory
 │   ├── todo.py                            # 保留
 │   ├── queue.py                           # 保留
 │   ├── dispatch.py                        # 保留
@@ -759,7 +766,7 @@ gov-relation/
 │   │   ├── shandong/
 │   │   └── ... (31 个省份目录)
 │   │
-│   ├── database/                          # 【legacy】逐步迁移，保留只读
+│   ├── database/                          # 【legacy】逐步迁移,保留只读
 │   ├── graph/                             # 【legacy】
 │   ├── persons/                           # 【legacy】
 │   └── tmp/                               # 暂存区
@@ -806,7 +813,7 @@ gov-relation/
 ```python
 PROVINCES_DIR = DATA_DIR / "provinces"
 
-# 省份名 → 目录 slug 映射（需新增，不在当前 REGION_SLUGS 中）
+# 省份名 → 目录 slug 映射(需新增,不在当前 REGION_SLUGS 中)
 PROVINCE_SLUGS: dict[str, str] = {
     "四川省": "sichuan", "河南省": "henan", "山东省": "shandong",
     "云南省": "yunnan", "陕西省": "shaanxi", "辽宁省": "liaoning",
@@ -836,60 +843,63 @@ def province_reports_dir(province: str) -> Path:
 
 ### 外部数据合并
 
-当前存在 `/workspace/data/xieming/other-codes/data/` 外部目录（736K），含 4 个数据库、5 个 GEXF 图、8 个 tmp 暂存目录。需要在迁移阶段并入仓库对应位置：
+当前存在 `/workspace/data/xieming/other-codes/data/` 外部目录(736K),含 4 个数据库、5 个 GEXF 图、8 个 tmp 暂存目录。需要在迁移阶段并入仓库对应位置:
 
 | 外部路径 | 目标位置 |
 |----------|----------|
-| `data/database/休宁县_network.db` | `data/database/休宁县_network.db`（legacy） |
+| `data/database/休宁县_network.db` | `data/database/休宁县_network.db`(legacy) |
 | `data/database/昌宁县_network.db` | `data/database/昌宁县_network.db` |
 | `data/database/松北区_network.db` | `data/database/松北区_network.db` |
 | `data/database/黄山市_network.db` | `data/database/黄山市_network.db` |
-| `data/graph/*.gexf` (5 files) | `data/graph/*.gexf`（legacy） |
+| `data/graph/*.gexf` (5 files) | `data/graph/*.gexf`(legacy) |
 | `data/tmp/*/` (8 dirs) | `data/tmp/*/` |
-| `data/graph/赤城县_network.gexf` | `data/graph/赤城县_network.gexf`（注：只有 gexf 无对应 db） |
+| `data/graph/赤城县_network.gexf` | `data/graph/赤城县_network.gexf`(注:只有 gexf 无对应 db) |
 
 ---
 
-## 11. 迁移策略（5 阶段）
+## 11. 迁移策略(5 阶段)
 
-### Phase 1: Foundation（不影响现有系统）
+### Phase 1: Foundation(不影响现有系统)
 - `gov_relation/factory/` 全部工厂类实现 + 测试通过
 - `paths.py` 新增 province 路径函数
 - `data/provinces/` 创建 31 省目录骨架 + `.gitkeep`
 
 ### Phase 2: Schema 升级
-- `gov_relation/schema.py` 升级到 v3 DDL（保留 v2 legacy 常量）
-- `scripts/migrate/upgrade_schema_v2_to_v3.py` — 在现有 platform DB 上执行 **列级 ALTER**（v2 与 v3 表名相同，"CREATE IF NOT EXISTS" 对已有表是静默 no-op，必须 ALTER ADD COLUMN v3 增量列）+ 补齐缺失表/视图
-- 同步升 `platform/schema.py` 的 `SCHEMA_VERSION` 至 3.0.0、`ADDITIVE_SCHEMA_UPGRADES` 纳入 2.1.0
-- `govdb.py build` 仅做 `create_schema()` 版本门禁（不建 v3 factory 表）
-- 验证：迁移脚本 dry-run → 真实执行 → 重建 platform DB → audit 零错误
+
+> **2026-08-11 审查同步: 本节方案已废弃**,以 `docs/superpowers/plans/2026-08-10-v3-phase2-schema-upgrade.md` Task 1 废弃声明与落地实现为准:v3 DDL 由 `gov_relation/factory/schema_factory.py` 统一提供(从 `platform/schema.py` DDL 派生 + v3 增量列);`gov_relation/schema.py` 保持 v1/v2 兼容不升级;`ADDITIVE_SCHEMA_UPGRADES` 维持空集,不塞入 2.1.0;upgrade 脚本仍做列级 ALTER + 补齐表/视图。
+
+- ~~`gov_relation/schema.py` 升级到 v3 DDL(保留 v2 legacy 常量)~~(废弃,见上)
+- `scripts/migrate/upgrade_schema_v2_to_v3.py` — 在现有 platform DB 上执行 **列级 ALTER**(v2 与 v3 表名相同,"CREATE IF NOT EXISTS" 对已有表是静默 no-op,必须 ALTER ADD COLUMN v3 增量列)+ 补齐缺失表/视图
+- ~~同步升 `platform/schema.py` 的 `SCHEMA_VERSION` 至 3.0.0、`ADDITIVE_SCHEMA_UPGRADES` 纳入 2.1.0~~(废弃,保持空集;版本由 factory 的 `schema_version=3.0.0` 门禁体现)
+- `govdb.py build` 仅做 `create_schema()` 版本门禁(不建 v3 factory 表)
+- 验证:迁移脚本 dry-run → 真实执行 → 重建 platform DB → audit 零错误
 
 ### Phase 3: Migration
-- `scripts/migrate/migrate_legacy_to_provinces.py` — 按 TODO.json province 映射分组，移入对应省份目录
+- `scripts/migrate/migrate_legacy_to_provinces.py` - 按 TODO.json province 映射分组,移入对应省份目录
 - 合并外部 `/workspace/data/xieming/other-codes/data/` 到仓库
 - `serve_app.py` / `inventory.py` 更新 scanners 同时读新旧路径
-- 验证：inventory 数量一致，serve_app 正常
+- 验证:inventory 数量一致,serve_app 正常
 
 ### Phase 4: 新流程上线
 - `dispatch_todo.py` → 指定 province 路径给 worker
 - `RegionResearchFactory` 对接 dispatch → 全自动生成
 - `process_tmp.py` → 直接归档到 `data/provinces/` 目录
-- `root legacy build_*.py` 标记 deprecated，新脚本一律输出到 `data/provinces/<province>/build/`
-- 验证：端到端跑通一个新地区
+- `root legacy build_*.py` 标记 deprecated,新脚本一律输出到 `data/provinces/<province>/build/`
+- 验证:端到端跑通一个新地区
 
-### Phase 5: Cleanup（可选，低优先级）
-- 删除 `gov_relation/central.py`（已被 factory + platform 覆盖）
-- 清理 root legacy `build_*.py`（确认迁移后）
-- 删除 `data/database/` `data/graph/` `data/persons/` legacy 目录（确认迁移后）
+### Phase 5: Cleanup(可选,低优先级)
+- 删除 `gov_relation/central.py`(已被 factory + platform 覆盖)
+- 清理 root legacy `build_*.py`(确认迁移后)
+- 删除 `data/database/` `data/graph/` `data/persons/` legacy 目录(确认迁移后)
 
 ---
 
 ## 12. 核心设计原则
 
-1. **保守实体解析**：只有 name + birth 都精确匹配时才合并；同名不同生日的绝不合并。存疑实体进入 `resolution_candidates`，不自动合并。宁可假分离也不假合并。
-2. **不可变原始记录**：`raw_records.payload_json + payload_sha256` 提供完整溯源；`datasets.content_sha256` 检测源数据变更。
-3. **Precision-preserving**：日期保留原始文本，`date_precision` 独立标记精度；不发明缺失的月日。
-4. **Fail-closed 版权**：所有 source 默认 `rights_status='unknown'`、`commercial_use=0`；Gold views 只暴露版权已清理的数据。
-5. **原子发布**：`govdb.py build` 先写 `.building` 临时文件，完成后 `os.replace()` 原子替换。
-6. **文件锁并发**：`data/dispatch_state.lock/` 目录作为互斥锁，10 分钟超时自动失效。
-7. **混合模式（C）**：新地区直接写统一 platform DB（通过 factory + insert factory），旧 DB 保留在 provinces/ 下作为独立可查询的数据库，同时可通过 `govdb.py build` 批量导入 platform。
+1. **保守实体解析**:只有 name + birth 都精确匹配时才合并;同名不同生日的绝不合并。存疑实体进入 `resolution_candidates`,不自动合并。宁可假分离也不假合并。
+2. **不可变原始记录**:`raw_records.payload_json + payload_sha256` 提供完整溯源;`datasets.content_sha256` 检测源数据变更。
+3. **Precision-preserving**:日期保留原始文本,`date_precision` 独立标记精度;不发明缺失的月日。
+4. **Fail-closed 版权**:所有 source 默认 `rights_status='unknown'`、`commercial_use=0`;Gold views 只暴露版权已清理的数据。
+5. **原子发布**:`govdb.py build` 先写 `.building` 临时文件,完成后 `os.replace()` 原子替换。
+6. **文件锁并发**:`data/dispatch_state.lock/` 目录作为互斥锁,10 分钟超时自动失效。
+7. **混合模式(C)**:新地区直接写统一 platform DB(通过 factory + insert factory),旧 DB 保留在 provinces/ 下作为独立可查询的数据库,同时可通过 `govdb.py build` 批量导入 platform。

@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 实现 `gov_relation/factory/` 全部 6 个工厂类 + 基础路径 + 测试，不影响现有系统。
+**Goal:** 实现 `gov_relation/factory/` 全部 7 个工厂类 + 基础路径 + 测试，不影响现有系统。
 
-**Architecture:** 6 个工厂类分层：底层 SchemaFactory（DDL 生成）和 InsertFactory（upsert 逻辑）被 BuildScriptFactory（脚本组装）、GEXFFactory、PersonJSONFactory、ReportFactory 调用；RegionResearchFactory 是统一入口。所有类通过 `gov_relation.identity` 模块获取 `stable_id`/`normalize_text`/`person_key`，通过 `gov_relation.paths` 获取省份路径。
+**Architecture:** 7 个工厂类分层：底层 SchemaFactory（DDL 生成）和 InsertFactory（upsert 逻辑）被 BuildScriptFactory（脚本组装）、GEXFFactory、PersonJSONFactory、ReportFactory 调用；RegionResearchFactory 是统一入口。所有类通过 `gov_relation.identity` 模块获取 `stable_id`/`normalize_text`/`person_key`，通过 `gov_relation.paths` 获取省份产物路径。新 builder 仍遵守仓库约定，写入 `scripts/build/build_<slug>_data.py` 并调用 `gov_relation.runner.run_build()`；省级目录只承载数据库、图、人物 JSON 和报告。
 
 **Spec:** `docs/superpowers/specs/2026-08-10-v3-refactor-design.md`
 **Next Phase:** Phase 2 (Schema 升级 + govdb.py 切换)
@@ -16,6 +16,10 @@
 - 日期保留原始文本；`date_precision` 独立标记精度
 - SQLite WAL + foreign_keys=ON + busy_timeout=5000
 - 测试用 `tmp_path` fixture 隔离
+- 禁止把姓名当作无生日人员的默认 `source_pk`；调用方必须提供稳定源主键，否则拒绝写入
+- GEXF 节点直接使用稳定实体字符串 ID，不截断/取模到有限整数空间
+- Person JSON 必须满足 `scripts/process_tmp.py` 的 promotion contract（至少包含 `identity`、`career_timeline`、`source_register`）
+- 新 builder 位于 `scripts/build/` 且调用 `gov_relation.runner.run_build()`
 - 提交：`feat(factory): ...` / `test(factory): ...`
 
 ---
@@ -32,7 +36,7 @@
 
 **Design（修复 C1F "move vs copy"）:** `gov_relation.identity` 是**唯一实现**；`gov_relation/platform/identity.py` 保留但改为**薄 re-export**（单行 `from gov_relation.identity import *`），避免两个实现漂移，也不破坏现有 4 处 import（`platform/importer.py`、`platform/resolution.py`、`scripts/govdb.py`、`tests/test_platform.py` 全部继续可解析）。后续新增代码统一走 `gov_relation.identity`。
 
-- [ ] **Step 1: 复制核心函数到 gov_relation/identity.py（唯一实现源）**
+- [x] **Step 1: 复制核心函数到 gov_relation/identity.py（唯一实现源）**
 
 ```python
 """Conservative normalization and deterministic identifiers for gov-relation.
@@ -95,7 +99,7 @@ def organization_key(*, name: object, jurisdiction_key: str, dataset_key: str) -
     return f"{scope}|{normalize_text(name)}"
 ```
 
-- [ ] **Step 2: platform/identity.py 改为 thin re-export，并同步其余 import 位置**
+- [x] **Step 2: platform/identity.py 改为 thin re-export，并同步其余 import 位置**
 
 `gov_relation/platform/identity.py` 全文替换为：
 
@@ -140,12 +144,12 @@ from gov_relation.identity import person_key, stable_id
 
 > 若同时保留 re-export，以上显式改 import 非必须（re-export 已保证行为一致），但建议改以建立可 grep 的唯一来源。
 
-- [ ] **Step 3: 验证现有测试不受影响**
+- [x] **Step 3: 验证现有测试不受影响**
 
 Run: `python3 -m pytest tests/test_platform.py -v --tb=short`
 Expected: 所有测试通过
 
-- [ ] **Step 4: 验证 import 正确**
+- [x] **Step 4: 验证 import 正确**
 
 Run: `python3 -c "from gov_relation.identity import normalize_text, stable_id, person_key; print(stable_id('test', 'hello'))"`
 Expected: 输出 `test_<hex>` 格式
@@ -172,7 +176,7 @@ All import sites still resolve."
 **Interfaces:**
 - Produces: `PROVINCES_DIR: Path`, `PROVINCE_SLUGS: dict[str, str]`, `province_dir(province: str) -> Path`, `province_build_dir(province: str) -> Path`, `province_database_dir(province: str) -> Path`, `province_graph_dir(province: str) -> Path`, `province_persons_dir(province: str) -> Path`, `province_reports_dir(province: str) -> Path`
 
-- [ ] **Step 1: 在 paths.py 末尾追加新常量和函数**
+- [x] **Step 1: 在 paths.py 末尾追加新常量和函数**
 
 ```python
 PROVINCES_DIR = DATA_DIR / "provinces"
@@ -199,7 +203,9 @@ def province_dir(province: str) -> Path:
 
 
 def province_build_dir(province: str) -> Path:
-    return province_dir(province) / "build"
+    # Builders remain code, not data.  A province-qualified filename is used
+    # by RegionResearchFactory to avoid collisions for repeated region names.
+    return REPO_ROOT / "scripts" / "build"
 
 
 def province_database_dir(province: str) -> Path:
@@ -218,13 +224,13 @@ def province_reports_dir(province: str) -> Path:
     return province_dir(province) / "reports"
 ```
 
-- [ ] **Step 2: 验证**
+- [x] **Step 2: 验证**
 
 Run: `python3 -c "from pathlib import Path; import gov_relation.paths as p; assert p.PROVINCES_DIR == p.DATA_DIR / 'provinces'; assert p.province_dir('四川省') == p.PROVINCES_DIR / 'sichuan'; print(p.province_dir('四川省')); print(p.province_build_dir('河南省'))"`
 Expected:
 ```
 <repo>/data/provinces/sichuan
-<repo>/data/provinces/henan/build
+<repo>/scripts/build
 ```
 > 注意：`PROVINCES_DIR` 是绝对路径（`REPO_ROOT/data/provinces`），不能用 `Path('data/provinces')` 直接相等比较。
 
@@ -1042,7 +1048,12 @@ class InsertFactory:
     ) -> str:
         name = str(data.get("canonical_name", "")).strip()
         birth = data.get("birth_text", "")
-        pk = source_pk or name
+        pk = source_pk or data.get("_source_pk")
+        if not pk and date_precision(birth) == "unknown":
+            raise ValueError(
+                "source_pk is required for a person without a precise birth value"
+            )
+        pk = str(pk or "")
         key, identity_status = person_key(
             name=name, birth=birth, dataset_key=dataset_key, source_pk=pk,
         )
@@ -1400,8 +1411,8 @@ def test_relationship_becomes_edge(tmp_path):
 # gov_relation/factory/gexf_factory.py
 """Factory that builds GEXF graphs from a v3 SQLite database.
 
-Node ids are deterministic (sha256-derived), NOT builtin hash(): hash() is
-salted per-process, so ids would drift every run and clobber git history.
+Node ids use the full stable entity identifiers.  Do not use builtin hash()
+or truncate a digest into a bounded integer space: both can overwrite nodes.
 """
 
 from __future__ import annotations
@@ -1409,16 +1420,10 @@ from __future__ import annotations
 import sqlite3
 
 from gov_relation.gexf import GEXFBuilder
-from gov_relation.identity import sha256_bytes
 
-_PERSON_BASE = 0          # persons map to [0, 10**9)
-_ORG_BASE = 10**9         # organizations map to [10**9, 2*10**9): no overlap
-
-
-def _node_id(kind: str, entity_id: str, base: int) -> int:
-    """Deterministic entity id -> int in [base, base + 10**9)."""
-    digest = sha256_bytes(f"{kind}|{entity_id}".encode("utf-8"))
-    return base + int(digest[:16], 16) % (10**9)
+def _node_id(kind: str, entity_id: str) -> str:
+    """Return a collision-free, type-scoped GEXF node identifier."""
+    return f"{kind}:{entity_id}"
 
 
 class GEXFFactory:
@@ -1443,7 +1448,7 @@ class GEXFFactory:
             if status:
                 post = status[0]
             builder.add_person(
-                id=_node_id("per", row[0], _PERSON_BASE),
+                id=_node_id("per", row[0]),
                 name=row[1],
                 current_post=post,
                 gender=row[2] or "",
@@ -1454,7 +1459,7 @@ class GEXFFactory:
             "SELECT organization_id, canonical_name FROM organizations"
         ):
             builder.add_organization(
-                id=_node_id("org", row[0], _ORG_BASE),
+                id=_node_id("org", row[0]),
                 name=row[1],
             )
 
@@ -1463,8 +1468,8 @@ class GEXFFactory:
                       relationship_type, context, overlap_period_text
                FROM relationships"""
         ):
-            a = _node_id("per", row[1], _PERSON_BASE)
-            b = _node_id("per", row[2], _PERSON_BASE)
+            a = _node_id("per", row[1])
+            b = _node_id("per", row[2])
             builder.add_relationship(
                 a, b, row[3],
                 context=row[4] or "",
@@ -1493,7 +1498,7 @@ git commit -m "feat(factory): add GEXFFactory that builds GEXF graphs from v3 da
 
 Also refactor GEXFBuilder to share _build_tree() between write() and
 to_string() so string output carries meta title and node/edge attvalues.
-GEXFFactory uses deterministic sha256-derived ids, not builtin hash()."
+GEXFFactory uses full stable entity ids, not builtin hash() or truncated ids."
 ```
 
 ---
@@ -1561,6 +1566,12 @@ class PersonJSONFactory:
             "schema_version": "3.0",
             "generated_at": date.today().isoformat(),
             "person_id": person_id,
+            "investigation_scope": {
+                "province": "",
+                "city": "",
+                "region": "",
+                "job": "",
+            },
             "identity": {
                 "name": person_dict.get("canonical_name", ""),
                 "gender": person_dict.get("gender", ""),
@@ -1590,6 +1601,11 @@ class PersonJSONFactory:
                 }
                 for r in relationships
             ],
+            # Promotion contract: process_tmp.py classifies a person profile
+            # only when this key exists.  A later provenance task may populate
+            # it from evidence_links + sources; an empty list is explicit and
+            # structurally valid for a profile with no linked source yet.
+            "source_register": [],
             "open_questions": [],
         }
 
@@ -1704,8 +1720,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-# 修复（评审 F4）：不能用固定 parents[3]（脚本在 data/provinces/<slug>/build/
-# 时 parents[3] 是 data/ 而非仓库根）。改为向上查找 gov_relation 包所在目录，
+# 修复（评审 F4）：不能依赖固定 parents 层级。向上查找 gov_relation 包所在目录，
 # 对脚本存放层级不敏感。运行时不依赖 cwd 或 PYTHONPATH。
 REPO_ROOT = next(
     p for p in Path(__file__).resolve().parents
@@ -1718,8 +1733,12 @@ from gov_relation.factory.insert_factory import InsertFactory
 from gov_relation.factory.gexf_factory import GEXFFactory
 from gov_relation.factory.person_factory import PersonJSONFactory
 from gov_relation.factory.report_factory import ReportFactory
-from gov_relation.paths import PROVINCES_DIR
+from gov_relation.paths import PROVINCES_DIR, PROVINCE_SLUGS
 
+PROVINCE_NAME = next(
+    (name for name, value in PROVINCE_SLUGS.items() if value == "{province_dir.name}"),
+    "{province_dir.name}",
+)
 PROVINCE_DIR = PROVINCES_DIR / "{province_dir.name}"
 DB_PATH = PROVINCE_DIR / "database" / "{slug}_network.db"
 GEXF_PATH = PROVINCE_DIR / "graph" / "{slug}_network.gexf"
@@ -1790,7 +1809,15 @@ def main():
         if not pid:
             continue
         name = p.get("canonical_name", "unknown")
-        pf.write(conn, pid, str(persons_dir / f"{{name}}.json"))
+        from datetime import date
+        stamp = date.today().strftime("%Y%m%d")
+        current = conn.execute(
+            "SELECT title FROM positions WHERE person_id=? AND is_current=1 "
+            "ORDER BY sort_order LIMIT 1", (pid,),
+        ).fetchone()
+        job = current[0] if current else "其他"
+        filename = f"{{stamp}}-{{PROVINCE_NAME}}-{slug}-{{job}}-{{name}}.json"
+        pf.write(conn, pid, str(persons_dir / filename))
 
     # Report —— 修复（F10）：原模板丢弃了返回值；实际写入 reports/
     report_dir = PROVINCE_DIR / "reports"
@@ -1995,7 +2022,7 @@ class RegionResearchFactory:
         )
         build_dir = province_build_dir(self.province)
         build_dir.mkdir(parents=True, exist_ok=True)
-        path = build_dir / f"build_{self.region}_data.py"
+        path = build_dir / f"build_{pd.name}_{self.region}_data.py"
         path.write_text(script, encoding="utf-8")
         return path
 
@@ -2110,6 +2137,7 @@ def test_full_pipeline_produces_db_gexf_profiles_report(tmp_path, monkeypatch):
     build_path = factory.generate_build_script()
     assert build_path.exists()
     assert build_path.suffix == ".py"
+    assert build_path.name == "build_sichuan_锦江区_data.py"
     content = build_path.read_text()
     assert "张三" in content
     assert "锦江区" in content
@@ -2207,13 +2235,14 @@ Run:
 ```bash
 for prov in anhui beijing chongqing fujian gansu guangdong guangxi guizhou hainan hebei henan heilongjiang hubei hunan jilin jiangsu jiangxi liaoning inner_mongolia ningxia qinghai shandong shanxi shaanxi shanghai sichuan tianjin xizang xinjiang yunnan zhejiang; do
     for sub in build database graph persons reports; do
+        [ "$sub" = build ] && continue
         mkdir -p "data/provinces/$prov/$sub"
         touch "data/provinces/$prov/$sub/.gitkeep"
     done
 done
 ```
 
-- [ ] **Step 2: 合并外部数据**
+- [x] **Step 2: 合并外部数据**
 
 ```bash
 EXT_DIR="/workspace/data/xieming/other-codes/data"
@@ -2285,16 +2314,16 @@ echo "Phase 1 complete"
 
 ## Phase 1 Completion Checklist
 
-- [ ] `gov_relation/identity.py` — 核心函数从 platform/ 提升
-- [ ] `gov_relation/paths.py` — PROVINCES_DIR + PROVINCE_SLUGS + 6 个 province_*() 函数
-- [ ] `gov_relation/factory/schema_factory.py` — 21 表 + 6 view + 21 index 全部 DDL
-- [ ] `gov_relation/factory/insert_factory.py` — 7 个 upsert/insert/link 方法
-- [ ] `gov_relation/factory/gexf_factory.py` — DB → GEXF XML
-- [ ] `gov_relation/factory/person_factory.py` — DB → Person JSON
-- [ ] `gov_relation/factory/report_factory.py` — stats → Markdown
-- [ ] `gov_relation/factory/build_factory.py` — 数据列表 → 完整可运行 .py 脚本
-- [ ] `gov_relation/factory/region_factory.py` — 统一入口，协调所有子工厂
-- [ ] `tests/test_factory/` — 全部 factory 单元测试 + 集成测试
-- [ ] `data/provinces/` — 31 省目录骨架
-- [ ] 外部数据合并
-- [ ] 全量测试通过
+- [x] `gov_relation/identity.py` — 核心函数从 platform/ 提升
+- [x] `gov_relation/paths.py` — PROVINCES_DIR + PROVINCE_SLUGS + 6 个 province_*() 函数
+- [x] `gov_relation/factory/schema_factory.py` — 21 表 + 6 view + 21 index 全部 DDL
+- [x] `gov_relation/factory/insert_factory.py` — 8 个 upsert/insert/link 方法（含 claim）
+- [x] `gov_relation/factory/gexf_factory.py` — DB → GEXF XML
+- [x] `gov_relation/factory/person_factory.py` — DB → Person JSON
+- [x] `gov_relation/factory/report_factory.py` — stats → Markdown
+- [x] `gov_relation/factory/build_factory.py` — 数据列表 → 完整可运行 .py 脚本
+- [x] `gov_relation/factory/region_factory.py` — 统一入口，协调所有子工厂
+- [x] `tests/test_factory/` — 32 个 factory 单元测试 + 集成测试（2026-08-11 审查后按实校:原计划预计 25 个，落地 32 个）
+- [x] `data/provinces/` — 31 省目录骨架
+- [x] 外部数据合并（2026-08-11 完成冲突审查、暂存提升与冗余清理）
+- [x] 全量测试通过（241 passed；2026-08-11 审查复跑确认；原清单 222 为当时基线）
