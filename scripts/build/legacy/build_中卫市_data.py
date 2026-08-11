@@ -1,0 +1,1 @@
+scripts/build/build_中卫市_data.py

@@ -1,0 +1,1 @@
+../scripts/build/build_宁远县_data.py

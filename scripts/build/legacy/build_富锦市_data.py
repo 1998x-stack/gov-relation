@@ -1,0 +1,1 @@
+scripts/build/build_富锦市_data.py

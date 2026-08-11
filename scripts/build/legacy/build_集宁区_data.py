@@ -1,0 +1,1 @@
+scripts/build/build_集宁区_data.py

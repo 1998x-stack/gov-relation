@@ -21,7 +21,7 @@
 | `gov_relation/` | 公共包 | 路径、任务队列、slug、资产盘点等共享逻辑。 |
 | `scripts/` | 工具入口 | 新增辅助 CLI，当前包含只读资产盘点命令。 |
 | `build_*_data.py` | 代码 | 单地区或省级网络构建脚本，当前约 98 个。 |
-| `build_data.py` | 代码 | 早期/通用构建脚本样例，包含完整数据结构和写库逻辑。 |
+| `scripts/build/legacy/build_data.py` | 代码 | 早期/通用构建脚本样例（2026-08-11 由根目录归档），包含完整数据结构和写库逻辑。 |
 | `generate_build_template.py` | 工具 | 根据 `data/TODO.json` 的 `task_id` 打印脚本名、数据库名和图文件名。 |
 | `run_todo_loop.py` | 工具 | 查看任务进度、获取下一个任务、标记任务完成。 |
 | `scripts/dispatch_todo.py` | 工具 | 根据 TODO 项生成 Opencode/iagent/standard 调查 prompt。 |

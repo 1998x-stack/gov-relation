@@ -1,0 +1,1 @@
+scripts/build/build_乌兰察布市_data.py
