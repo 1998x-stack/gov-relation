@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from .log import get_logger
-from .paths import DATABASE_DIR, DOCS_DIR, GRAPH_DIR, JSON_DIR, PERSONS_DIR, REPORT_DIR, REPO_ROOT, TMP_DIR
+from .paths import DATABASE_DIR, DOCS_DIR, GRAPH_DIR, JSON_DIR, PERSONS_DIR, PROVINCES_DIR, REPORT_DIR, REPO_ROOT, TMP_DIR
 
 logger = get_logger(__name__)
 
@@ -43,6 +43,35 @@ def _network_stem(path: Path) -> str:
     return stem.removesuffix("_network")
 
 
+def _partitioned_paths(
+    legacy: Path,
+    subdir: str,
+    pattern: str,
+    provinces_dir: Path | None = None,
+) -> list[tuple[Path, str]]:
+    province_root = PROVINCES_DIR if provinces_dir is None else provinces_dir
+    candidates: list[tuple[Path, str]] = []
+    if province_root.exists():
+        candidates.extend(
+            (path, province.name)
+            for province in sorted(province_root.iterdir())
+            if province.is_dir()
+            for path in sorted((province / subdir).glob(pattern))
+        )
+    candidates.extend((path, "") for path in sorted(legacy.glob(pattern)))
+    output: list[tuple[Path, str]] = []
+    seen: set[tuple[int, int]] = set()
+    for path, province in candidates:
+        if not path.is_file() or path.name.startswith("."):
+            continue
+        stat = path.stat()
+        inode = (stat.st_dev, stat.st_ino)
+        if inode not in seen:
+            seen.add(inode)
+            output.append((path, province))
+    return output
+
+
 def collect_inventory(root: Path = REPO_ROOT) -> Inventory:
     scripts = sorted(root.glob("build_*_data.py"))
     build_dir = root / "scripts" / "build"
@@ -58,23 +87,29 @@ def collect_inventory(root: Path = REPO_ROOT) -> Inventory:
     report_dir = root / "report"
     docs_dir = root / "docs"
 
-    dbs = sorted(db_dir.glob("*.db"))
-    graphs = sorted(graph_dir.glob("*.gexf"))
-    db_stems = {_network_stem(path) for path in dbs}
-    graph_stems = {_network_stem(path) for path in graphs}
+    provinces_dir = data_dir / "provinces"
+    db_rows = _partitioned_paths(db_dir, "database", "*.db", provinces_dir)
+    graph_rows = _partitioned_paths(graph_dir, "graph", "*.gexf", provinces_dir)
+    person_rows = _partitioned_paths(persons_dir, "persons", "*.json", provinces_dir)
+    report_rows = _partitioned_paths(report_dir, "reports", "*", provinces_dir)
+    db_stems = {(province, _network_stem(path)) for path, province in db_rows}
+    graph_stems = {(province, _network_stem(path)) for path, province in graph_rows}
+
+    def display(keys: set[tuple[str, str]]) -> list[str]:
+        return sorted(f"{province}:{stem}" if province else stem for province, stem in keys)
 
     return Inventory(
         build_scripts=len(scripts),
-        databases=len(dbs),
-        graphs=len(graphs),
+        databases=len(db_rows),
+        graphs=len(graph_rows),
         json_files=_count_files(json_dir, "*.json"),
-        person_profiles=_count_files(persons_dir, "*.json"),
-        reports=_count_files(report_dir),
+        person_profiles=len(person_rows),
+        reports=len(report_rows),
         docs=_count_files(docs_dir),
         logs=_count_files(root / "logs"),
         tmp_files=_count_visible_files(tmp_dir),
-        orphan_databases=sorted(db_stems - graph_stems),
-        orphan_graphs=sorted(graph_stems - db_stems),
+        orphan_databases=display(db_stems - graph_stems),
+        orphan_graphs=display(graph_stems - db_stems),
     )
 
 

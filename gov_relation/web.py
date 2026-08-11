@@ -12,7 +12,10 @@ from urllib.parse import unquote, urlparse
 
 from .inventory import collect_inventory
 from .log import get_logger
-from .paths import CENTRAL_DIR, DATABASE_DIR, DOCS_DIR, GRAPH_DIR, PERSONS_DIR, PROVINCE_DIR, REGISTRY_DB, REPORT_DIR, REPO_ROOT
+from .paths import (
+    CENTRAL_DIR, DATABASE_DIR, DOCS_DIR, GRAPH_DIR, PERSONS_DIR,
+    PROVINCE_DIR, PROVINCES_DIR, REGISTRY_DB, REPORT_DIR, REPO_ROOT,
+)
 
 logger = get_logger(__name__)
 
@@ -297,25 +300,48 @@ def md_to_html(md_text: str, title: str = "") -> str:
     return html
 
 
+def _partitioned_files(
+    legacy_dir: Path, province_subdir: str, pattern: str
+) -> list[tuple[Path, str]]:
+    """List legacy and province assets, suppressing only actual hardlink duplicates."""
+    rows: list[tuple[Path, str]] = []
+    seen_inodes: set[tuple[int, int]] = set()
+    for path, province in [
+        *((item, directory.name)
+          for directory in sorted(PROVINCES_DIR.glob("*")) if directory.is_dir()
+          for item in sorted((directory / province_subdir).glob(pattern))),
+        *((item, "") for item in sorted(legacy_dir.glob(pattern))),
+    ]:
+        if not path.is_file() or path.name.startswith("."):
+            continue
+        stat = path.stat()
+        inode = (stat.st_dev, stat.st_ino)
+        if inode in seen_inodes:
+            continue
+        seen_inodes.add(inode)
+        rows.append((path, province))
+    return rows
+
+
 def list_databases() -> list[dict]:
     rows = []
-    for path in sorted(DATABASE_DIR.glob("*.db")):
-        rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size})
+    for path, province in _partitioned_files(DATABASE_DIR, "database", "*.db"):
+        rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size, "province_slug": province})
     return rows
 
 
 def list_graphs() -> list[dict]:
     rows = []
-    for path in sorted(GRAPH_DIR.glob("*.gexf")):
-        rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size})
+    for path, province in _partitioned_files(GRAPH_DIR, "graph", "*.gexf"):
+        rows.append({"name": path.name, "stem": path.stem, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size, "province_slug": province})
     return rows
 
 
 def list_reports() -> list[dict]:
     rows = []
-    for path in sorted(REPORT_DIR.glob("*")):
+    for path, province in _partitioned_files(REPORT_DIR, "reports", "*"):
         if path.is_file() and path.suffix.lower() in {".md", ".html"}:
-            row: dict = {"name": path.name, "path": str(path.relative_to(REPO_ROOT)), "type": path.suffix.lstrip("."), "size": path.stat().st_size}
+            row: dict = {"name": path.name, "path": str(path.relative_to(REPO_ROOT)), "type": path.suffix.lstrip("."), "size": path.stat().st_size, "province_slug": province}
             html_path = DOCS_DIR / "reports" / f"{path.stem}.html"
             if html_path.exists():
                 row["html_path"] = str(html_path.relative_to(REPO_ROOT))
@@ -325,10 +351,8 @@ def list_reports() -> list[dict]:
 
 def list_person_profiles() -> list[dict]:
     rows = []
-    if not PERSONS_DIR.exists():
-        return rows
-    for path in sorted(PERSONS_DIR.glob("*.json")):
-        record = {"name": path.name, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size}
+    for path, province_slug in _partitioned_files(PERSONS_DIR, "persons", "*.json"):
+        record = {"name": path.name, "path": str(path.relative_to(REPO_ROOT)), "size": path.stat().st_size, "province_slug": province_slug}
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
             identity = data.get("identity", {})
@@ -751,4 +775,3 @@ class GovRelationHandler(SimpleHTTPRequestHandler):
 def serve(host: str = "127.0.0.1", port: int = 8000) -> ThreadingHTTPServer:
     server = ThreadingHTTPServer((host, port), GovRelationHandler)
     return server
-
