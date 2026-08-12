@@ -1,0 +1,838 @@
+#!/usr/bin/env python3
+"""Build SQLite database and GEXF graph for 阜新市 (辽宁省, 地级市).
+
+Investigation date: 2026-08-12 | Task: liaoning_阜新市 | Targets: 市委书记 & 市长
+
+Primary sources (official/first-hand): 阜新市政府门户 www.fuxin.gov.cn (政府领导页
+channel/10931、马原简历 channel/15848、林艾民简历 channel/15038、阜政办发〔2026〕2号分工、
+2026政府工作报告、市委常委会 2026-02-11/2026-08-10)；市人大 fxrd.gov.cn(2025-04-25代市长、
+2026-01-22人大六次会议选举)；辽宁省委组织部省管干部任前公示(2025-03马原、2025-10李德新等、
+2026-01-08臧宝岭)；澎湃/新京报/中国经济网(马珊珊跨省任书记、周鹏举调省政府副秘书长、张成中任海关等)。
+
+Key findings (confirmed):
+- 市委书记 马珊珊(女，1979-05，天津人，经济学博士)：2025-10 由天津南开区委书记跨省空降阜新；
+  前任书记 胡涛(2021-11-30~2025-10，现任省政协文化文史资料委员会主任)；再前任 吕志成
+  (2019-12~2021-10，现任沈阳市市长)。
+- 市长 马原(男，1973-03，硕士)：2025-04-25 任代市长、2025-05-30 当选；此前任沈阳市委常委、
+  新民市委书记。前任市长 周鹏举(2021-01-26 当选~2025-04，现任辽宁省政府副秘书长)；
+  再前任 张成中(2018-01 当选~2021-01，现任应急管理部部长/党委书记)。
+- 市人大常委会主任 胡国勇(2026-01-22 当选，接替付志宏)；市监委主任 刘子正(同日当选)；
+  市政协主席 李刚(2025-01-09 当选，接替张盈)。
+- 市委班子：副书记、政法委书记 臧宝岭(2026-01 由组织部长转任)；常委 张建(组织部长)、
+  赵文进(宣传部长，2026-04 辽宁广电副台长调任)、陈磊(市委秘书长，2026-02 免副市长)、
+  林艾民(常务副市长)、杨枫(副市长/高新区党工委书记)、刘子正、王玉军(分工待核)。
+- 副市长(政府领导页/分工文件)：林艾民、杨枫、屈宪军、杨占旭、蒋美华、班昊(兼公安局长)、
+  李树坦、刘昕(原新邱区委书记)；市政府秘书长 王旭。分工文件另列辛永(疑2026年内调整)。
+- 网络：市长岗"新民系"品牌——周鹏举、马原均曾任新民市委书记后任阜新市长；书记岗跨省——
+  吕志成(冀→辽)、马珊珊(津→辽)；张成中由阜新市长升至中央部委(应急管理部部长)。
+
+Confidence: 现任角色 confirmed(官方)；身份对书记/市长/臧宝岭/林艾民/胡国勇/陈磊/赵文进/刘昕/
+张成中/周鹏举/吕志成/胡涛 confirmed；部分副市长(屈宪军/杨占旭/蒋美华/李树坦/班昊/王旭)、张建、
+李刚、付志宏 etc. plausible/待核(出生/学历未公开)。马原任国土资源厅/自然资源厅副厅长年份、
+马珊珊武清/津南具体职务边界、屈宪军等出生信息为主要开放缺口(见 open_gaps)。
+"""
+
+from __future__ import annotations
+
+import json
+import sqlite3  # noqa: F401  (DB I/O handled by gov_relation.runner)
+import sys
+from datetime import datetime
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+for parent_count in [2, 3, 4, 5]:
+    candidate = Path(__file__).resolve().parents[parent_count]
+    if (candidate / "gov_relation").is_dir():
+        REPO_ROOT = candidate
+        break
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from gov_relation.runner import run_build
+
+# ── Metadata ─────────────────────────────────────────────────────────────
+SLUG = "阜新市"
+AS_OF = "2026-08-12"
+
+_CURRENT_DIR = Path(__file__).parent.resolve()
+DB_PATH = _CURRENT_DIR / f"{SLUG}_network.db"
+GEXF_PATH = _CURRENT_DIR / f"{SLUG}_network.gexf"
+PERSONS_STAGING_DIR = _CURRENT_DIR
+
+# ── Persons ──────────────────────────────────────────────────────────────
+persons = [
+    # ── 市委（核心） ──
+    {"id": 1, "name": "马珊珊", "gender": "女", "ethnicity": "汉族", "birth": "1979-05", "birthplace": "天津市",
+     "education": "全日制大学、在职研究生学历、经济学博士", "party_join": "2000-05", "work_start": "2001-07",
+     "current_post": "市委书记", "current_org": "中国共产党阜新市委员会",
+     "source": "i1.ce.cn/district/newarea/sddy/202510/t20251010_2510212.shtml(中国经济网2025-10-10)+新京报m.bjnews.com.cn/detail/1760077854129399.html+fuxin.gov.cn/content/2026/1041384.html+1099073.html"},
+    {"id": 2, "name": "马原", "gender": "男", "ethnicity": "汉族", "birth": "1973-03", "birthplace": "",
+     "education": "大学学历、硕士学位（在职研究生）", "party_join": "1994-10", "work_start": "1995-09",
+     "current_post": "市委副书记、市政府党组书记、市长", "current_org": "阜新市人民政府",
+     "source": "fuxin.gov.cn/channel/15848/index.html(市长简历)+thepaper.cn/newsDetail_forward_30638291(2025-04-13任前公示)+thepaper.cn/newsDetail_forward_30906213(2025-05-30当选)"},
+    {"id": 3, "name": "臧宝岭", "gender": "男", "ethnicity": "汉族", "birth": "1972-08", "birthplace": "",
+     "education": "在职研究生学历、博士学位", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委副书记、政法委书记", "current_org": "中国共产党阜新市委员会",
+     "source": "ln.chinadaily.com.cn/a/202601/08/WS695f4f24a310942cc499a8e3.html(2026-01-08省管干部任前公示)+sft.ln.gov.cn 2026年度述法工作会议+百度百科《中国共产党阜新市委员会》"},
+    {"id": 4, "name": "林艾民", "gender": "男", "ethnicity": "汉族", "birth": "1966-09", "birthplace": "辽宁盖县(今盖州市)",
+     "education": "在职大学学历、硕士学位", "party_join": "中共党员", "work_start": "1990-08",
+     "current_post": "市委常委、市政府党组副书记、常务副市长", "current_org": "阜新市人民政府",
+     "source": "fuxin.gov.cn/channel/15038/index.html(副市长简历)+阜政办发〔2026〕2号分工+百科(原市委常委、政法委书记→援疆八师石河子副师长)"},
+    {"id": 5, "name": "杨枫", "gender": "男", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委常委、副市长，高新区党工委书记", "current_org": "阜新市人民政府",
+     "source": "阜政办发〔2026〕2号分工+fuxin.gov.cn/channel/10931(政府领导页)+市政协十三届五次会议领导名单"},
+    {"id": 6, "name": "屈宪军", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "副市长", "current_org": "阜新市人民政府",
+     "source": "fuxin.gov.cn/channel/15038(领导列表)+channel/10931(政府领导页)"},
+    {"id": 7, "name": "杨占旭", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "副市长", "current_org": "阜新市人民政府",
+     "source": "阜政办发〔2026〕2号分工(工业、科技、教育、体育)+channel/10931"},
+    {"id": 8, "name": "蒋美华", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "副市长", "current_org": "阜新市人民政府",
+     "source": "阜政办发〔2026〕2号分工(民政、金融、卫生、医保、文旅)+channel/10931"},
+    {"id": 9, "name": "班昊", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "副市长、市公安局局长", "current_org": "阜新市公安局",
+     "source": "阜政办发〔2026〕2号分工(兼公安局长)+channel/10931"},
+    {"id": 10, "name": "李树坦", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "副市长", "current_org": "阜新市人民政府",
+     "source": "阜政办发〔2026〕2号分工(生态环境、县域经济、农业农村、水利)+2025-03-10市委农村工作会议"},
+    {"id": 11, "name": "刘昕", "gender": "男", "ethnicity": "待核", "birth": "1971-01", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "副市长、市政府党组成员", "current_org": "阜新市人民政府",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-前任区委书记-刘昕.json+阜政办发〔2026〕2号分工(人社、退役军人、市场监管)"},
+    {"id": 12, "name": "王旭", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "市政府秘书长、市政府办公室主任", "current_org": "阜新市人民政府",
+     "source": "阜政办发〔2026〕2号分工"},
+    {"id": 13, "name": "张建", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委常委、组织部部长", "current_org": "中国共产党阜新市委员会",
+     "source": "百度百科《中国共产党阜新市委员会》+2026-01-22市十七届人大六次会议主席团名单"},
+    {"id": 14, "name": "赵文进", "gender": "男", "ethnicity": "满族", "birth": "1973-10", "birthplace": "",
+     "education": "大学学历、学士学位", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委常委、宣传部部长", "current_org": "中国共产党阜新市委员会",
+     "source": "guan.media/news/detail_19159.html(2026-04辽宁广播电视集团党委常委、副台长赵文进任阜新市委常委、宣传部长)+省委组织部任前公示"},
+    {"id": 15, "name": "陈磊", "gender": "男", "ethnicity": "汉族", "birth": "1979-09", "birthplace": "",
+     "education": "在职研究生学历", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委常委、市委秘书长、市直机关工委书记", "current_org": "中国共产党阜新市委员会",
+     "source": "baike.baidu.com/item/陈磊/59497732(2021-04太平区委书记→2022-01副市长→常委→2026-02-06免副市长、任市委秘书长)"},
+    {"id": 16, "name": "刘子正", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委常委、市纪委书记、市监委主任", "current_org": "中国共产党阜新市纪律检查委员会/阜新市监察委员会",
+     "source": "fuxin.gov.cn/content/2026/1042425.html(2026-01-22选举市监委主任)+市政协十三届五次会议领导名单"},
+    {"id": 17, "name": "胡国勇", "gender": "男", "ethnicity": "汉族", "birth": "1967-09", "birthplace": "",
+     "education": "大学学历、学士学位", "party_join": "中共党员", "work_start": "",
+     "current_post": "市人大常委会主任", "current_org": "阜新市人民代表大会常务委员会",
+     "source": "baike.baidu.com/item/胡国勇/19770013(市政府秘书长2019-01~2022-01、副市长2022-01~2025-04、市委常委/市委秘书长)+ln.gov.cn 2026-01-22当选人大主任"},
+    {"id": 18, "name": "李刚", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "市政协党组书记、主席", "current_org": "中国人民政治协商会议阜新市委员会",
+     "source": "epaper.lnd.com.cn 2025-01-09政协十三届四次会议选举主席+fuxin.gov.cn/content/2026/1032833.html"},
+    {"id": 19, "name": "王玉军", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "市委常委（市政府党组成员，分工待核）", "current_org": "中国共产党阜新市委员会",
+     "source": "市政协十三届五次会议闭幕领导名单(市领导王玉军)+政府领导页(市委常委、市政府党组成员)"},
+    # ── 前任书记/市长 ──
+    {"id": 20, "name": "胡涛", "gender": "男", "ethnicity": "汉族", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "（前任）市委书记，现任省政协文化文史资料委员会主任",
+     "current_org": "政协辽宁省第十三届委员会文化和文史资料委员会",
+     "source": "baike.baidu.com/item/胡涛/15951526+district.ce.cn 2021-12-01胡涛任阜新市委书记(2021-11-30干部大会)+(2026-01-13省政协常委会任命文化文史资料委员会主任)+2026-01-20辞辽宁省人大代表"},
+    {"id": 21, "name": "吕志成", "gender": "男", "ethnicity": "汉族", "birth": "1966-12", "birthplace": "河北省广宗县",
+     "education": "待查（人民银行/党校系统履历）", "party_join": "中共党员", "work_start": "1990-07",
+     "current_post": "（前任）市委书记，现任沈阳市市长", "current_org": "沈阳市人民政府",
+     "source": "data/provinces/liaoning/persons/20260725-辽宁省-沈阳市-市长-吕志成.json(1990-07人行邢台→威县县委书记→衡水市长→河北省国资委主任→阜新市委书记2019-12~2021-10→沈阳市代市长/市长)"},
+    {"id": 22, "name": "周鹏举", "gender": "男", "ethnicity": "汉族", "birth": "1973-10", "birthplace": "辽宁沈阳",
+     "education": "在职研究生学历、硕士学位", "party_join": "1995-11", "work_start": "1996-08",
+     "current_post": "（前任）市长，现任辽宁省人民政府副秘书长",
+     "current_org": "辽宁省人民政府办公厅",
+     "source": "district.ce.cn 2021-01-26周鹏举当选阜新市长(新城子区/沈北/辉山经开区→新民市长/书记→鞍山市委常委、副市长→阜新市长)+thepaper.cn 辽宁阜新原市长周鹏举已调任省政府副秘书长"},
+    {"id": 23, "name": "张成中", "gender": "男", "ethnicity": "汉族", "birth": "1970-10", "birthplace": "辽宁盖州",
+     "education": "大学学历、高级管理人员工商管理硕士（天津大学毕业）", "party_join": "中共党员", "work_start": "",
+     "current_post": "（前任）市长，现任应急管理部党委书记、部长",
+     "current_org": "中华人民共和国应急管理部",
+     "source": "zh.wikipedia.org/wiki/张成中+baike.baidu.com/item/张成中/7317032+news.bjd.com.cn 2026-03-27(任应急管理部党委书记)(锦州石化→东北炼化→抚顺副市长→阜新常务副市长→阜新市长2018-01当选→盘锦市委书记→辽宁省委常委/秘书长→河北省委常委/常务副省长→唐山市委书记→应急管理部部长2026-04-30)"},
+    {"id": 24, "name": "付志宏", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "（前任）市人大常委会主任", "current_org": "阜新市人民代表大会常务委员会",
+     "source": "ln.gov.cn 2022-01 阜新市十七届人大一次会议选举付志宏为人大主任+2026-01-22 换届选举胡国勇继任"},
+    {"id": 25, "name": "张盈", "gender": "男", "ethnicity": "汉族", "birth": "1962-12", "birthplace": "",
+     "education": "大学学历、学士学位、高级工程师", "party_join": "1986-11", "work_start": "1984-08",
+     "current_post": "（前任）市政协主席", "current_org": "中国人民政治协商会议阜新市委员会",
+     "source": "district.ce.cn 2018-01-10 张盈当选阜新市政协主席(2018-01~2025-01；曾任市政府党组成员、市委常委、秘书长)"},
+    # ── 县区主官（现职，形成上下级关系） ──
+    {"id": 26, "name": "金大伟", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "海州区委书记", "current_org": "中共阜新市海州区委员会",
+     "source": "data/provinces/liaoning/persons/20260725-辽宁省-阜新市-海州区委书记-金大伟.json"},
+    {"id": 27, "name": "褚佳琪", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "海州区委副书记、区长", "current_org": "海州区人民政府",
+     "source": "data/provinces/liaoning/persons/20260725-辽宁省-阜新市-海州区长-褚佳琪.json"},
+    {"id": 28, "name": "邹亮", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "太平区委书记", "current_org": "中共阜新市太平区委员会",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-太平区委书记-邹亮.json"},
+    {"id": 29, "name": "李亮", "gender": "男", "ethnicity": "待核", "birth": "1981-07", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "太平区委副书记、区长", "current_org": "太平区人民政府",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-太平区区长-李亮.json"},
+    {"id": 30, "name": "李国凯", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "清河门区委书记", "current_org": "中共阜新市清河门区委员会",
+     "source": "data/provinces/liaoning/persons/20260803-辽宁省-阜新市-区委书记-李国凯.json"},
+    {"id": 31, "name": "满佳", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "清河门区委副书记、区长", "current_org": "清河门区人民政府",
+     "source": "data/provinces/liaoning/persons/20260803-辽宁省-阜新市-区长-满佳.json"},
+    {"id": 32, "name": "张雪峰", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "新邱区委书记（原太平区长）", "current_org": "中共阜新市新邱区委员会",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-新邱区委书记（原太平区长）-张雪峰.json"},
+    {"id": 33, "name": "史傲峰", "gender": "男", "ethnicity": "待核", "birth": "1982-04", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "新邱区委副书记、区长", "current_org": "新邱区人民政府",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-区长-史傲峰.json"},
+    {"id": 34, "name": "李霖", "gender": "待核", "ethnicity": "待核", "birth": "", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "细河区委副书记、区长", "current_org": "细河区人民政府",
+     "source": "data/provinces/liaoning/persons/20260725-辽宁省-阜新市-区长-李霖.json"},
+    {"id": 35, "name": "张殿成", "gender": "男", "ethnicity": "待核", "birth": "1976-08", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "1998-08",
+     "current_post": "阜新蒙古族自治县委书记、县人武部党委第一书记", "current_org": "中共阜新蒙古族自治县委员会",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-县委书记-张殿成.json(2024-09任县委书记)"},
+    {"id": 36, "name": "伊晓光", "gender": "男", "ethnicity": "待核", "birth": "1975-05", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "",
+     "current_post": "阜新蒙古族自治县委副书记、县长", "current_org": "阜新蒙古族自治县人民政府",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-县长-伊晓光.json(2026-03任县长；原辽宁阜新新型材料产业开发区党工委书记、管委会主任)"},
+    {"id": 37, "name": "赵永硕", "gender": "男", "ethnicity": "待核", "birth": "1976-07", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "1998-08",
+     "current_post": "彰武县委书记", "current_org": "中共彰武县委员会",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-县委书记-赵永硕.json(法库县组织/乡镇/副县长→彰武)"},
+    {"id": 38, "name": "梅琼", "gender": "待核", "ethnicity": "待核", "birth": "1980-03", "birthplace": "",
+     "education": "待查", "party_join": "中共党员", "work_start": "2004-07",
+     "current_post": "彰武县委副书记、县长", "current_org": "彰武县人民政府",
+     "source": "data/provinces/liaoning/persons/20260806-辽宁省-阜新市-县长-梅琼.json(阜蒙县乡镇→市医改办/发改委→彰武)"},
+]
+
+organizations = [
+    {"id": 1, "name": "中国共产党阜新市委员会", "type": "党委", "level": "地厅级", "parent": "中共辽宁省委", "location": "辽宁省阜新市"},
+    {"id": 2, "name": "阜新市人民政府", "type": "政府", "level": "地厅级", "parent": "辽宁省人民政府", "location": "辽宁省阜新市"},
+    {"id": 3, "name": "阜新市人民代表大会常务委员会", "type": "人大", "level": "地厅级", "parent": "阜新市", "location": "辽宁省阜新市"},
+    {"id": 4, "name": "中国人民政治协商会议阜新市委员会", "type": "政协", "level": "地厅级", "parent": "政协辽宁省委员会", "location": "辽宁省阜新市"},
+    {"id": 5, "name": "中国共产党阜新市纪律检查委员会/阜新市监察委员会", "type": "纪委", "level": "地厅级", "parent": "中共辽宁省纪委", "location": "辽宁省阜新市"},
+    {"id": 6, "name": "阜新市公安局", "type": "政府", "level": "地厅级部门", "parent": "阜新市人民政府", "location": "辽宁省阜新市"},
+    {"id": 7, "name": "阜新高新技术产业开发区管委会", "type": "开发区", "level": "国家级", "parent": "阜新市人民政府", "location": "辽宁省阜新市"},
+    {"id": 8, "name": "中共辽宁省委", "type": "党委", "level": "省级", "parent": "中共中央", "location": "辽宁省沈阳市"},
+    {"id": 9, "name": "辽宁省人民政府", "type": "政府", "level": "省级", "parent": "国务院", "location": "辽宁省沈阳市"},
+    {"id": 10, "name": "政协辽宁省委员会", "type": "政协", "level": "省级", "parent": "全国政协", "location": "辽宁省沈阳市"},
+    {"id": 11, "name": "政协辽宁省第十三届委员会文化和文史资料委员会", "type": "政协", "level": "省级内设", "parent": "政协辽宁省委员会", "location": "辽宁省沈阳市"},
+    {"id": 12, "name": "辽宁省生态环境厅", "type": "政府", "level": "省级部门", "parent": "辽宁省人民政府", "location": "辽宁省沈阳市"},
+    {"id": 13, "name": "中共沈阳市委员会", "type": "党委", "level": "副省级市", "parent": "中共辽宁省委", "location": "辽宁省沈阳市"},
+    {"id": 14, "name": "沈阳市人民政府", "type": "政府", "level": "副省级市", "parent": "辽宁省人民政府", "location": "辽宁省沈阳市"},
+    {"id": 15, "name": "中共新民市委员会", "type": "党委", "level": "县处级(县级市)", "parent": "中共沈阳市委", "location": "辽宁省沈阳市新民市"},
+    {"id": 16, "name": "新民市人民政府", "type": "政府", "level": "县处级(县级市)", "parent": "沈阳市人民政府", "location": "辽宁省沈阳市新民市"},
+    {"id": 17, "name": "中共天津市南开区委员会", "type": "党委", "level": "地厅级(直辖市区)", "parent": "中共天津市委", "location": "天津市南开区"},
+    {"id": 18, "name": "天津市审计局", "type": "政府", "level": "省级部门", "parent": "天津市人民政府", "location": "天津市"},
+    {"id": 19, "name": "中共盘锦市委员会", "type": "党委", "level": "地厅级", "parent": "中共辽宁省委", "location": "辽宁省盘锦市"},
+    {"id": 20, "name": "鞍山市人民政府", "type": "政府", "level": "地厅级", "parent": "辽宁省人民政府", "location": "辽宁省鞍山市"},
+    {"id": 21, "name": "中共天津市委", "type": "党委", "level": "省级", "parent": "中共中央", "location": "天津市"},
+    {"id": 22, "name": "河北省人民政府", "type": "政府", "level": "省级", "parent": "国务院", "location": "河北省石家庄市"},
+    {"id": 23, "name": "中共唐山市委员会", "type": "党委", "level": "地厅级", "parent": "中共河北省委", "location": "河北省唐山市"},
+    {"id": 24, "name": "中华人民共和国应急管理部", "type": "政府", "level": "中央部委", "parent": "国务院", "location": "北京市"},
+    {"id": 25, "name": "沈阳市和平区人民政府", "type": "政府", "level": "县处级(市辖区)", "parent": "沈阳市人民政府", "location": "辽宁省沈阳市和平区"},
+    {"id": 26, "name": "辽宁广播电视集团（辽宁广播电视台）", "type": "事业单位", "level": "省级", "parent": "辽宁省", "location": "辽宁省沈阳市"},
+    {"id": 27, "name": "辽宁省人民政府办公厅", "type": "政府", "level": "省级部门", "parent": "辽宁省人民政府", "location": "辽宁省沈阳市"},
+    {"id": 28, "name": "中共阜新市太平区委员会", "type": "党委", "level": "县处级(市辖区)", "parent": "中共阜新市委", "location": "辽宁省阜新市太平区"},
+    {"id": 29, "name": "太平区人民政府", "type": "政府", "level": "县处级(市辖区)", "parent": "阜新市人民政府", "location": "辽宁省阜新市太平区"},
+    {"id": 30, "name": "中共阜新市新邱区委员会", "type": "党委", "level": "县处级(市辖区)", "parent": "中共阜新市委", "location": "辽宁省阜新市新邱区"},
+    {"id": 31, "name": "新邱区人民政府", "type": "政府", "level": "县处级(市辖区)", "parent": "阜新市人民政府", "location": "辽宁省阜新市新邱区"},
+    {"id": 32, "name": "中共阜新市海州区委员会", "type": "党委", "level": "县处级(市辖区)", "parent": "中共阜新市委", "location": "辽宁省阜新市海州区"},
+    {"id": 33, "name": "海州区人民政府", "type": "政府", "level": "县处级(市辖区)", "parent": "阜新市人民政府", "location": "辽宁省阜新市海州区"},
+    {"id": 34, "name": "中共阜新市细河区委员会", "type": "党委", "level": "县处级(市辖区)", "parent": "中共阜新市委", "location": "辽宁省阜新市细河区"},
+    {"id": 35, "name": "细河区人民政府", "type": "政府", "level": "县处级(市辖区)", "parent": "阜新市人民政府", "location": "辽宁省阜新市细河区"},
+    {"id": 36, "name": "中共阜新市清河门区委员会", "type": "党委", "level": "县处级(市辖区)", "parent": "中共阜新市委", "location": "辽宁省阜新市清河门区"},
+    {"id": 37, "name": "清河门区人民政府", "type": "政府", "level": "县处级(市辖区)", "parent": "阜新市人民政府", "location": "辽宁省阜新市清河门区"},
+    {"id": 38, "name": "中共彰武县委员会", "type": "党委", "level": "县处级", "parent": "中共阜新市委", "location": "辽宁省阜新市彰武县"},
+    {"id": 39, "name": "彰武县人民政府", "type": "政府", "level": "县处级", "parent": "阜新市人民政府", "location": "辽宁省阜新市彰武县"},
+    {"id": 40, "name": "中共阜新蒙古族自治县委员会", "type": "党委", "level": "县处级", "parent": "中共阜新市委", "location": "辽宁省阜新市阜新蒙古族自治县"},
+    {"id": 41, "name": "阜新蒙古族自治县人民政府", "type": "政府", "level": "县处级", "parent": "阜新市人民政府", "location": "辽宁省阜新市阜新蒙古族自治县"},
+    {"id": 42, "name": "辽宁省自然资源厅", "type": "政府", "level": "省级部门", "parent": "辽宁省人民政府", "location": "辽宁省沈阳市"},
+    {"id": 43, "name": "辽宁省国土资源厅", "type": "政府", "level": "省级部门", "parent": "辽宁省人民政府", "location": "辽宁省沈阳市"},
+    {"id": 44, "name": "中共天津市武清区委员会", "type": "党委", "level": "地厅级(直辖市区)", "parent": "中共天津市委", "location": "天津市武清区"},
+    {"id": 45, "name": "中共天津市津南区委员会", "type": "党委", "level": "地厅级(直辖市区)", "parent": "中共天津市委", "location": "天津市津南区"},
+    {"id": 46, "name": "中共辽宁省委组织部", "type": "党委", "level": "省级部门", "parent": "中共辽宁省委", "location": "辽宁省沈阳市"},
+]
+
+positions = [
+    # ── 马珊珊(1) 市委书记 ──
+    {"person_id": 1, "org_id": 1, "title": "市委书记", "start_date": "2025-10", "end_date": "present", "rank": "地厅级正职",
+     "note": "2025-10-10 辽宁省委决定马珊珊任中共阜新市委委员、常委、书记（干部大会/媒体报道）；2026-02-11、2026-08-10 主持市委常委会——现任"},
+    {"person_id": 1, "org_id": 17, "title": "南开区委书记", "start_date": "2022-07", "end_date": "2025-09", "rank": "地厅级正职",
+     "note": "2022-07 任天津市南开区委书记（时为最年轻直辖市区委书记）；2025 年赴辽宁任职"},
+    {"person_id": 1, "org_id": 18, "title": "天津市审计局局长", "start_date": "2020-06", "end_date": "2022-07", "rank": "部门正职",
+     "note": "2020 年起任天津市审计局局长；审计系统出身"},
+    {"person_id": 1, "org_id": 44, "title": "武清区委常委、区纪委书记", "start_date": "unknown", "end_date": "~2020", "rank": "地厅级副职",
+     "note": "公开报道：曾任武清区委常委、区纪委书记（纪检系统经历）"},
+    {"person_id": 1, "org_id": 45, "title": "津南区委常委、统战部部长", "start_date": "unknown", "end_date": "unknown", "rank": "地厅级副职",
+     "note": "公开报道：曾任津南区委常委、统战部部长"},
+    # ── 马原(2) 市长 ──
+    {"person_id": 2, "org_id": 2, "title": "市政府党组书记、市长", "start_date": "2025-04(代)/2025-05-30(当选)", "end_date": "present", "rank": "地厅级正职",
+     "note": "2025-04-13 省管干部任前公示拟提名为地级市市长候选人；2025-04-25 十七届人大常委会第三十次会议任副市长、代理市长；2025-05-30 十七届人大五次会议当选市长；2026-01-20 市十七届人大六次会议作 2026 政府工作报告"},
+    {"person_id": 2, "org_id": 1, "title": "市委副书记", "start_date": "2025-04", "end_date": "present", "rank": "地厅级", "note": "市长党内职务（市政府党组书记）"},
+    {"person_id": 2, "org_id": 13, "title": "沈阳市委常委", "start_date": "2021-11", "end_date": "2025-04", "rank": "地厅级副职",
+     "note": "2021-11 当选沈阳市委常委，继续兼任新民市委书记"},
+    {"person_id": 2, "org_id": 15, "title": "新民市委书记（兼辽宁新民经开区/沈阳胡台新城党工委书记）", "start_date": "2021-04", "end_date": "2025-04", "rank": "县处级正职",
+     "note": "2021-04 沈阳市和平区委副书记、区长调任新民市委书记（沈阳市委组织部2021年第12号公示）"},
+    {"person_id": 2, "org_id": 25, "title": "沈阳市和平区委副书记、区长", "start_date": "unknown", "end_date": "2021-04", "rank": "县处级正职",
+     "note": "任前公示所载原职；和平区长任内抓发展改革等"},
+    {"person_id": 2, "org_id": 43, "title": "辽宁省国土资源厅副厅长", "start_date": "unknown", "end_date": "unknown", "rank": "部门副职",
+     "note": "公开资料：曾任辽宁省国土资源厅副厅长（自然资源领域履历；具体年份待核）"},
+    {"person_id": 2, "org_id": 42, "title": "辽宁省自然资源厅副厅长", "start_date": "unknown", "end_date": "unknown", "rank": "部门副职",
+     "note": "机构改革后转任省自然资源厅副厅长（具体年份待核）"},
+    # ── 臧宝岭(3) 副书记 ──
+    {"person_id": 3, "org_id": 1, "title": "市委副书记、政法委书记", "start_date": "2026-01", "end_date": "present", "rank": "地厅级副职",
+     "note": "2026-01-08 省管干部任前公示：阜新市委常委、组织部部长拟任地级市党委副书记；2026-04 已以市委副书记、政法委书记主持市委法治建设委员会会议"},
+    {"person_id": 3, "org_id": 1, "title": "市委常委、组织部部长", "start_date": "unknown", "end_date": "~2026-01", "rank": "地厅级副职",
+     "note": "2023-02 以阜新市委常委、组织部长赴辽宁工程技术大学调研（市校合作）"},
+    # ── 林艾民(4) 常务副市长 ──
+    {"person_id": 4, "org_id": 2, "title": "市委常委、市政府党组副书记、常务副市长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "牵头市政府日常工作：发展改革、财税、应急、消防、信访、煤炭转型、重大项目等（阜政办发〔2026〕2号）；2024-05 以常务副市长赴杭州招商"},
+    {"person_id": 4, "org_id": 1, "title": "市委常委、政法委书记", "start_date": "2016-08", "end_date": "2016-12", "rank": "地厅级副职",
+     "note": "2016-08 拟任市委常委；2016-12 前后转援疆（第八师石河子市委常委、副师长，辽宁援疆前方指挥部副总指挥）——百科记载"},
+    # ── 市委常委/市政府 ──
+    {"person_id": 5, "org_id": 2, "title": "市委常委、副市长，高新区党工委书记", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "负责自然资源、生态环境、住建、交通铁路、招商、统计等（阜政办发〔2026〕2号）；兼阜新国家级高新区党工委书记"},
+    {"person_id": 6, "org_id": 2, "title": "副市长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "市政府领导页在列；具体分工/履历待核"},
+    {"person_id": 7, "org_id": 2, "title": "副市长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "负责工业、科技、教育、体育及与辽宁工程技术大学共建科技创新产业园（阜政办发〔2026〕2号）"},
+    {"person_id": 8, "org_id": 2, "title": "副市长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "负责民政、金融、卫生、医保、文化、旅游（阜政办发〔2026〕2号）"},
+    {"person_id": 9, "org_id": 6, "title": "副市长、市公安局局长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "兼任市公安局局长；负责公安、司法、社会稳定（阜政办发〔2026〕2号）"},
+    {"person_id": 10, "org_id": 2, "title": "副市长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "负责生态环境、县域经济、农业农村、乡村振兴、水利（阜政办发〔2026〕2号）；2025-03-10 市委农村工作会议作工作部署"},
+    {"person_id": 11, "org_id": 2, "title": "副市长、市政府党组成员", "start_date": "2026-02", "end_date": "present", "rank": "地厅级副职",
+     "note": "负责人社、退役军人、市场监管、食品药品、质量监督（阜政办发〔2026〕2号）；原新邱区委书记转任"},
+    {"person_id": 11, "org_id": 30, "title": "新邱区委书记（兼副市长）", "start_date": "2021", "end_date": "2026-02", "rank": "县处级正职",
+     "note": "参照 20260806 刘昕 person JSON：2021 任新邱区委书记，2026-02 转任市政府副市长"},
+    {"person_id": 12, "org_id": 2, "title": "市政府秘书长、市政府办公室主任", "start_date": "unknown", "end_date": "present", "rank": "县处级",
+     "note": "协助处理市政府日常工作，推进督查考核、政务公开（阜政办发〔2026〕2号）"},
+    # ── 市委相关 ──
+    {"person_id": 13, "org_id": 1, "title": "市委常委、组织部部长", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "百度百科《中国共产党阜新市委员会》列为市委常委、组织部长；2026-01-22 市十七届人大六次会议主席团名单在列"},
+    {"person_id": 14, "org_id": 1, "title": "市委常委、宣传部部长", "start_date": "2026-04(前后)", "end_date": "present", "rank": "地厅级副职",
+     "note": "原辽宁广播电视集团（辽宁广播电视台）党委常委、副台长；省委组织部公示拟任地级市党委常委，2026-04 全市宣传部长会议以市委常委、宣传部长出席"},
+    {"person_id": 15, "org_id": 1, "title": "市委常委、市委秘书长、市直机关工委书记", "start_date": "2026-02", "end_date": "present", "rank": "地厅级副职",
+     "note": "2026-02-06 市十七届人大常委会第四十次会议免去副市长；现任市委秘书长"},
+    {"person_id": 15, "org_id": 2, "title": "副市长（市政府党组成员）", "start_date": "2022-01", "end_date": "2026-02-06", "rank": "地厅级副职",
+     "note": "2022-01 任阜新市副市长；后任市委常委、市政府党组成员、副市长"},
+    {"person_id": 15, "org_id": 28, "title": "太平区委书记", "start_date": "2021-04", "end_date": "2022-01", "rank": "县处级正职",
+     "note": "2021-04 任太平区委书记——区县主官→市级领导班子流动样本"},
+    {"person_id": 16, "org_id": 5, "title": "市监委主任", "start_date": "2026-01-22", "end_date": "present", "rank": "地厅级副职",
+     "note": "市十七届人大六次会议选举为市监察委员会主任（通常由市委常委、纪委书记兼任）"},
+    {"person_id": 19, "org_id": 1, "title": "市委常委（市政府党组成员，分工待核）", "start_date": "unknown", "end_date": "present", "rank": "地厅级副职",
+     "note": "市政协十三届五次会议闭幕领导名单及政府领导页在列；具体职务边界待核"},
+    # ── 人大/政协 ──
+    {"person_id": 17, "org_id": 3, "title": "市人大常委会党组书记、主任", "start_date": "2026-01-22", "end_date": "present", "rank": "地厅级正职",
+     "note": "2025-11 省管干部任前公示拟提名为地级市人大常委会主任候选人；2026-01-22 市十七届人大六次会议当选"},
+    {"person_id": 17, "org_id": 2, "title": "市政府副市长", "start_date": "2022-01", "end_date": "2025-04-30", "rank": "地厅级副职",
+     "note": "2022-01 起任阜新市副市长；2023-11 起为市委常委、市政府党组成员、副市长；2025-04-30 免去副市长职务"},
+    {"person_id": 17, "org_id": 2, "title": "市政府秘书长、市政府办公室主任", "start_date": "2019-01", "end_date": "2022-01", "rank": "县处级",
+     "note": "2019-01~2022-01 任阜新市人民政府秘书长、市政府办公室主任"},
+    {"person_id": 18, "org_id": 4, "title": "市政协党组书记、主席", "start_date": "2025-01-09", "end_date": "present", "rank": "地厅级正职",
+     "note": "2025-01-09 政协阜新市第十三届委员会第四次会议选举为主席；2026-01-07 主持政府工作报告征求意见座谈会"},
+    {"person_id": 24, "org_id": 3, "title": "市人大常委会主任（前任）", "start_date": "2022-01", "end_date": "2026-01", "rank": "地厅级正职",
+     "note": "2022-01 市十七届人大一次会议选举为主席；2026-01-22 换届由胡国勇继任"},
+    {"person_id": 25, "org_id": 4, "title": "市政协主席（前任）", "start_date": "2018-01", "end_date": "2025-01", "rank": "地厅级正职",
+     "note": "2018-01-07 政协十二届一次会议当选；2025-01-09 由李刚继任；曾任市政府党组成员（副市级）、市委常委、秘书长"},
+    # ── 前任书记/市长（离任去向） ──
+    {"person_id": 20, "org_id": 1, "title": "市委书记", "start_date": "2021-11-30", "end_date": "2025-10", "rank": "地厅级正职",
+     "note": "2021-11-30 阜新市领导干部大会宣布省委决定；2025-08-29 仍以市委书记调研市发改委；2025-10 由马珊珊接任"},
+    {"person_id": 20, "org_id": 11, "title": "省政协文化文史资料委员会主任（现任）", "start_date": "2026-01-13", "end_date": "present", "rank": "省级内设正职",
+     "note": "2026-01-13 政协辽宁省第十三届委员会常务委员会第十三次会议任命；2026-01-20 辞去辽宁省十四届人大代表"},
+    {"person_id": 20, "org_id": 12, "title": "辽宁省生态环境厅厅长（原职）", "start_date": "unknown", "end_date": "2022-01-11", "rank": "部门正职",
+     "note": "2022-01-11 辽宁省人大常委会第三十一次会议免去其省生态环境厅厅长职务（任阜新书记后免）"},
+    {"person_id": 21, "org_id": 1, "title": "市委书记", "start_date": "2019-12", "end_date": "2021-10", "rank": "地厅级正职",
+     "note": "河北省国资委主任跨省调任阜新市委书记；2021-10 卸任"},
+    {"person_id": 21, "org_id": 14, "title": "沈阳市代市长/市长（现任）", "start_date": "2021-10", "end_date": "present", "rank": "副省级市正职",
+     "note": "2021-10 任沈阳市委副书记、副市长、代市长；2022-01 沈阳市人大选举为市长——阜新书记→沈阳二把手升级链路"},
+    {"person_id": 22, "org_id": 2, "title": "市长", "start_date": "2021-01-26(当选)", "end_date": "2025-04", "rank": "地厅级正职",
+     "note": "2021-01-15 市十六届人大四次会议选举；2025-04-25 辞去市长职务"},
+    {"person_id": 22, "org_id": 27, "title": "辽宁省人民政府副秘书长（现任）", "start_date": "2025-04", "end_date": "present", "rank": "省级部门",
+     "note": "澎湃新闻：辽宁阜新原市长周鹏举已出任辽宁省人民政府副秘书长"},
+    {"person_id": 22, "org_id": 20, "title": "鞍山市委常委、副市长（原职）", "start_date": "unknown", "end_date": "2021-01", "rank": "地厅级副职",
+     "note": "一级巡视员；2020-12 省管干部公示由鞍山市委常委、副市长拟任阜新市委副书记、提名为市长候选人"},
+    {"person_id": 22, "org_id": 16, "title": "新民市市长/市委书记（原职）", "start_date": "unknown", "end_date": "unknown", "rank": "县处级",
+     "note": "沈阳新城子区→沈北新区→新民（副市长、市长、市委副书记、市委书记）"},
+    {"person_id": 23, "org_id": 2, "title": "市长", "start_date": "2018-01-08(当选)", "end_date": "2021-01", "rank": "地厅级正职",
+     "note": "2017-12 任市委副书记、代市长；2018-01-08 市十六届人大一次会议当选为市长；2021-01 调任盘锦市委书记"},
+    {"person_id": 23, "org_id": 2, "title": "阜新市委常委、常务副市长（原职）", "start_date": "unknown", "end_date": "2017-12", "rank": "地厅级副职",
+     "note": "由中石油辽宁销售分公司党委委员、副总经理、安全总监等调任阜新市政府后任常务副市长"},
+    {"person_id": 23, "org_id": 19, "title": "盘锦市委书记", "start_date": "2021-01", "end_date": "2022-04", "rank": "地厅级正职",
+     "note": "2021-01 任盘锦市委书记；2021-12 当选辽宁省委常委、后兼任省委秘书长；2022-04 卸任盘锦书记"},
+    {"person_id": 23, "org_id": 22, "title": "河北省委常委、省政府党组副书记、常务副省长", "start_date": "2023-07", "end_date": "2024-11", "rank": "省级副职",
+     "note": "2023-07 跨省调任河北省委常委、常务副省长"},
+    {"person_id": 23, "org_id": 23, "title": "唐山市委书记", "start_date": "2024-11-12", "end_date": "2026-03-27", "rank": "地厅级正职",
+     "note": "2024-11-12 接替武卫东任唐山市委书记；2026-03-27 卸任"},
+    {"person_id": 23, "org_id": 24, "title": "应急管理部党委书记、部长（现任）", "start_date": "2026-03-27(书记)/2026-04-30(部长)", "end_date": "present", "rank": "中央部委正职",
+     "note": "2026-03-27 中央组织部宣布任应急管理部党委书记；2026-04-30 任部长、国家消防救援局第一政治委员"},
+    # ── 县区主官 ──
+    {"person_id": 26, "org_id": 32, "title": "海州区委书记", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照海州区 investigation JSON"},
+    {"person_id": 27, "org_id": 33, "title": "海州区委副书记、区长", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照海州区长 JSON"},
+    {"person_id": 28, "org_id": 28, "title": "太平区委书记", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照太平区 JSON"},
+    {"person_id": 29, "org_id": 29, "title": "太平区委副书记、区长", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照太平区长 JSON"},
+    {"person_id": 30, "org_id": 36, "title": "清河门区委书记", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照清河门 JSON"},
+    {"person_id": 31, "org_id": 37, "title": "清河门区委副书记、区长", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照清河门区长 JSON"},
+    {"person_id": 32, "org_id": 30, "title": "新邱区委书记", "start_date": "2026-02", "end_date": "present", "rank": "县处级正职",
+     "note": "由太平区区长转任新邱区委书记——区内交流"},
+    {"person_id": 32, "org_id": 29, "title": "太平区区长（原职）", "start_date": "2025", "end_date": "2026-02", "rank": "县处级正职", "note": "参照张雪峰 JSON"},
+    {"person_id": 33, "org_id": 31, "title": "新邱区委副书记、区长", "start_date": "2025", "end_date": "present", "rank": "县处级正职", "note": "参照史傲峰 JSON"},
+    {"person_id": 34, "org_id": 35, "title": "细河区委副书记、区长", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照细河区长 JSON"},
+    {"person_id": 35, "org_id": 40, "title": "阜新蒙古族自治县委书记", "start_date": "2024-09", "end_date": "present", "rank": "县处级正职", "note": "参照张殿成 JSON"},
+    {"person_id": 36, "org_id": 41, "title": "阜新蒙古族自治县委副书记、县长", "start_date": "2026-03", "end_date": "present", "rank": "县处级正职",
+     "note": "原辽宁阜新新型材料产业开发区党工委书记、管委会主任"},
+    {"person_id": 37, "org_id": 38, "title": "彰武县委书记", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照赵永硕 JSON"},
+    {"person_id": 38, "org_id": 39, "title": "彰武县委副书记、县长", "start_date": "unknown", "end_date": "present", "rank": "县处级正职", "note": "参照梅琼 JSON"},
+]
+
+relationships = [
+    # ── 核心党政搭档 ──
+    {"person_a": 1, "person_b": 2, "type": "co_leadership", "context": "市委书记（马珊珊）与市长（马原，兼市委副书记）——党政一把手搭班",
+     "overlap_org": "阜新市", "overlap_period": "2025-10/2025-04-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 3, "type": "superior_subordinate", "context": "书记与专职副书记/政法委书记（臧宝岭，2026-01 由组织部长转任）",
+     "overlap_org": "阜新市委", "overlap_period": "2026-01-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 3, "type": "co_leadership", "context": "市长与专职副书记（市委班子同届共事）",
+     "overlap_org": "阜新市委", "overlap_period": "2026-", "confidence": "confirmed"},
+    # ── 书记与常委/部门 ──
+    {"person_a": 1, "person_b": 4, "type": "superior_subordinate", "context": "书记与常务副市长（政府党组副书记）",
+     "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 13, "type": "superior_subordinate", "context": "书记与组织部长（选人用人、换届考察）",
+     "overlap_org": "阜新市委组织部", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 14, "type": "superior_subordinate", "context": "书记与宣传部长（意识形态；赵文进 2026-04 到任）",
+     "overlap_org": "阜新市委", "overlap_period": "2026-04-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 15, "type": "superior_subordinate", "context": "书记与市委秘书长（陈磊，2026-02 转任秘书长）",
+     "overlap_org": "阜新市委", "overlap_period": "2026-02-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 16, "type": "superior_subordinate", "context": "书记与市监委主任（全面从严治党、纪检监察）",
+     "overlap_org": "阜新市纪委监委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    # ── 市长与政府班子 ──
+    {"person_a": 2, "person_b": 4, "type": "co_leadership", "context": "市长与常务副市长（政府班子核心搭档）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-04-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 5, "type": "co_leadership", "context": "市长与常委/副市长（高新区党工委书记）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 6, "type": "co_leadership", "context": "市长与副市长（政府班子）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 7, "type": "co_leadership", "context": "市长与副市长（工业、科技、教育、体育）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 8, "type": "co_leadership", "context": "市长与副市长（民政、金融、卫健文旅）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 9, "type": "superior_subordinate", "context": "市长与公安局长/副市长兼（社会稳定）",
+     "overlap_org": "阜新市人民政府/公安局", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 10, "type": "co_leadership", "context": "市长与副市长（农业农村、生态、县域经济——阜新农业大市）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 11, "type": "co_leadership", "context": "市长与副市长刘昕（原新邱区委书记，2026-02 入班子）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2026-02-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 12, "type": "co_leadership", "context": "市长与市政府秘书长（王旭，日常运转）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    # ── 四大班子 ──
+    {"person_a": 1, "person_b": 17, "type": "co_leadership", "context": "书记与市人大常委会主任（胡国勇 2026-01 当选）",
+     "overlap_org": "阜新市", "overlap_period": "2026-01-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 18, "type": "co_leadership", "context": "书记与市政协主席（李刚 2025-01 起）",
+     "overlap_org": "阜新市", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 17, "type": "co_leadership", "context": "市长与市人大主任（2025-04 马原代市长时胡国勇为市委常委/副市长，同在政府—市委体系）",
+     "overlap_org": "阜新市", "overlap_period": "2025-2026", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 18, "type": "co_leadership", "context": "市长与市政协主席（政府工作报告征求政协意见）",
+     "overlap_org": "阜新市", "overlap_period": "2025-01-", "confidence": "confirmed"},
+    # ── 前任/继任链条（书记） ──
+    {"person_a": 20, "person_b": 1, "type": "predecessor_successor", "context": "胡涛卸任阜新市委书记（2025-10）→ 马珊珊接任（2025-10-10 省委决定）",
+     "overlap_org": "阜新市委", "overlap_period": "2021-11~2025-10", "confidence": "confirmed"},
+    {"person_a": 21, "person_b": 20, "type": "predecessor_successor", "context": "吕志成卸任阜新市委书记（2021-10 赴沈阳）→ 胡涛接任（2021-11-30）",
+     "overlap_org": "阜新市委", "overlap_period": "2019-12~2021-11", "confidence": "confirmed"},
+    # ── 前任/继任链条（市长） ──
+    {"person_a": 22, "person_b": 2, "type": "predecessor_successor", "context": "周鹏举卸任市长（2025-04）→ 马原接任（2025-04-25 代市长、2025-05-30 当选）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2021-01~2025-04", "confidence": "confirmed"},
+    {"person_a": 23, "person_b": 22, "type": "predecessor_successor", "context": "张成中卸任市长（2021-01 调盘锦）→ 周鹏举接任（2021-01-26 当选）",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2018-01~2021-01", "confidence": "confirmed"},
+    # ── 人大/政协换届 ──
+    {"person_a": 24, "person_b": 17, "type": "predecessor_successor", "context": "付志宏卸任市人大常委会主任 → 胡国勇接任（2026-01-22）",
+     "overlap_org": "阜新市人大常委会", "overlap_period": "2022-01~2026-01", "confidence": "confirmed"},
+    {"person_a": 25, "person_b": 18, "type": "predecessor_successor", "context": "张盈卸任市政协主席 → 李刚接任（2025-01-09）",
+     "overlap_org": "阜新市政协", "overlap_period": "2018-01~2025-01", "confidence": "confirmed"},
+    # ── 跨地区/跨系统网络 ──
+    {"person_a": 2, "person_b": 22, "type": "同系统", "context": "周鹏举与马原均曾任新民市委书记后任阜新市长——'新民系'连续两任市长岗人事主线",
+     "overlap_org": "新民市委/阜新市政府", "overlap_period": "2015-2025", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 21, "type": "同系统", "context": "马原（沈阳市委常委、新民书记、和平区长出身）与吕志成（现任沈阳市长，曾任阜新书记）——沈阳体系干部交集",
+     "overlap_org": "沈阳市", "overlap_period": "2021-2025", "confidence": "confirmed"},
+    {"person_a": 22, "person_b": 21, "type": "同系统", "context": "周鹏举（沈阳新城子/沈北/新民体系）与吕志成（沈阳体系）——沈阳干部向阜新/阜新干部向沈阳的双向流动",
+     "overlap_org": "沈阳市/Fuxin", "overlap_period": "2016-2025", "confidence": "confirmed"},
+    {"person_a": 23, "person_b": 22, "type": "predecessor_successor", "context": "张成中（阜新市长→盘锦书记→省委常委/秘书长→河北常务副省长→唐山书记→应急管理部部长）——阜新体系干部外溢至中央部委",
+     "overlap_org": "阜新市人民政府", "overlap_period": "2018-2026", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 20, "type": "predecessor_successor", "context": "马珊珊（天津南开区委书记→阜新书记）与胡涛（阜新书记→省政协文化文史委主任）——跨省'津→辽'空降 + 本地回迁省政协",
+     "overlap_org": "阜新市委", "overlap_period": "2025-10", "confidence": "confirmed"},
+    {"person_a": 21, "person_b": 13, "type": "同系统", "context": "吕志成（阜新书记→沈阳市长）与沈阳市组织体系（省级干部进出）——阜新书记上沈阳",
+     "overlap_org": "沈阳市", "overlap_period": "2021-2022", "confidence": "confirmed"},
+    # ── 县区主官与市级（上下级） ──
+    {"person_a": 1, "person_b": 26, "type": "superior_subordinate", "context": "市委书记与海州区委书记", "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 28, "type": "superior_subordinate", "context": "市委书记与太平区委书记", "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 30, "type": "superior_subordinate", "context": "市委书记与清河门区委书记", "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 32, "type": "superior_subordinate", "context": "市委书记与新邱区委书记", "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 35, "type": "superior_subordinate", "context": "市委书记与阜新蒙古族自治县委书记", "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 1, "person_b": 37, "type": "superior_subordinate", "context": "市委书记与彰武县委书记", "overlap_org": "阜新市委", "overlap_period": "2025-10-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 27, "type": "superior_subordinate", "context": "市长与海州区区长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 29, "type": "superior_subordinate", "context": "市长与太平区区长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 31, "type": "superior_subordinate", "context": "市长与清河门区区长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 33, "type": "superior_subordinate", "context": "市长与新邱区区长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 34, "type": "superior_subordinate", "context": "市长与细河区区长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 36, "type": "superior_subordinate", "context": "市长与阜新蒙古族自治县县长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    {"person_a": 2, "person_b": 38, "type": "superior_subordinate", "context": "市长与彰武县县长", "overlap_org": "阜新市人民政府", "overlap_period": "2025-", "confidence": "confirmed"},
+    # ── 区县→市级流动 ──
+    {"person_a": 11, "person_b": 32, "type": "predecessor_successor", "context": "刘昕卸任新邱区委书记（2026-02 转任副市长）→ 张雪峰接任新邱区委书记",
+     "overlap_org": "新邱区委", "overlap_period": "2021~2026-02", "confidence": "confirmed"},
+    {"person_a": 15, "person_b": 28, "type": "同系统", "context": "陈磊曾任太平区委书记（2021-04~2022-01）→副市长→市委秘书长；邹亮现为太平区委书记——区县→市级流动",
+     "overlap_org": "太平区/阜新市", "overlap_period": "2021-2026", "confidence": "confirmed"},
+]
+
+
+# ── Person JSONs ────────────────────────────────────────────────────────
+def write_person_jsons():
+    """Write per-person graph JSON for core leaders (市委书记 & 市长)."""
+
+    ma_shanshan = {
+        "schema_version": "1.0",
+        "generated_at": AS_OF,
+        "investigation_scope": {"province": "辽宁省", "city": "阜新市", "region": "阜新市",
+                                "job": "市委书记", "task_id": "liaoning_阜新市", "time_focus": "2025-2026"},
+        "identity": {
+            "person_id": "liaoning_fuxin_ma_shanshan",
+            "name": "马珊珊",
+            "aliases": [],
+            "gender": "女", "ethnicity": "汉族", "birth": "1979-05", "birthplace": "天津市", "native_place": "天津市",
+            "education": [
+                {"period": "", "institution": "西北农林科技大学（货币银行学）；天津市委党校研究生", "major": "货币银行学", "degree": "经济学博士（在职研究生）", "study_type": "在职", "source_ids": ["S001", "S002", "S031"]}
+            ],
+            "party_join": "2000-05", "work_start": "2001-07",
+            "dedupe_keys": {"name_birth": "马珊珊_1979-05", "name_birthplace": "马珊珊_天津市",
+                            "official_profile_url": "https://www.fuxin.gov.cn/content/2026/1041384.html"},
+        },
+        "current_status": {"current_post": "市委书记", "current_org": "中国共产党阜新市委员会",
+                           "administrative_rank": "地厅级正职", "as_of": AS_OF, "is_current_confirmed": True,
+                           "source_ids": ["S001", "S002", "S003", "S032"]},
+        "career_timeline": [
+            {"start": "2025-10", "end": "present", "org": "中共阜新市委", "title": "市委书记",
+             "level": "地厅级", "location": "阜新市", "system": "party", "rank": "地厅级正职", "is_key_promotion": True,
+             "notes": "2025-10-10 辽宁省委决定任阜新市委委员、常委、书记（跨省任免）；2026-01-22 主持市十七届人大六次会议；2026-02-11、2026-08-10 主持市委常委会——现任",
+             "confidence": "confirmed", "source_ids": ["S001", "S003", "S004", "S032"]},
+            {"start": "2022-07", "end": "2025-09", "org": "中共天津市南开区委", "title": "南开区委书记",
+             "level": "地厅级", "location": "天津市南开区", "system": "party", "rank": "地厅级正职", "is_key_promotion": True,
+             "notes": "2022-07 任南开区委书记（时任最年轻直辖市区委书记）；2025 年卸任赴辽宁",
+             "confidence": "confirmed", "source_ids": ["S001", "S002", "S031"]},
+            {"start": "2020-06", "end": "2022-07", "org": "天津市审计局", "title": "局长",
+             "level": "省级部门", "location": "天津市", "system": "government", "rank": "部门正职", "is_key_promotion": True,
+             "notes": "2020 年起任天津市审计局局长（审计系统出身）",
+             "confidence": "confirmed", "source_ids": ["S002", "S031"]},
+            {"start": "unknown", "end": "~2020", "org": "中共天津市武清区委员会", "title": "武清区委常委、区纪委书记",
+             "level": "地厅级", "location": "天津市武清区", "system": "discipline", "rank": "地厅级副职", "is_key_promotion": False,
+             "notes": "公开报道：曾任武清区委常委、区纪委书记（纪检系统历练）",
+             "confidence": "plausible", "source_ids": ["S002", "S031"]},
+            {"start": "unknown", "end": "unknown", "org": "中共天津市津南区委员会", "title": "津南区委常委、统战部部长",
+             "level": "地厅级", "location": "天津市津南区", "system": "party", "rank": "地厅级副职", "is_key_promotion": False,
+             "notes": "公开报道：曾任津南区委常委、统战部部长",
+             "confidence": "plausible", "source_ids": ["S002", "S031"]},
+            {"start": "unknown", "end": "unknown", "org": "履历缺口", "title": "",
+             "level": "", "location": "", "system": "other", "rank": "", "is_key_promotion": False,
+             "notes": "2001-07 参加工作后的早期履历（部门/时序）、武清/津南任期的精确起止、经济学博士的院校与在职学习时点等在公开资料中仅获片段，待核",
+             "confidence": "unverified", "source_ids": []},
+        ],
+        "organizations": [{"name": "中国共产党阜新市委员会", "role": "市委书记"}],
+        "relationships": [
+            {"person": "马原", "person_id": "liaoning_fuxin_ma_yuan", "relationship_type": "co_leadership",
+             "strength": "strong", "evidence": "现任搭班：市委书记+市长（兼市委副书记）", "overlap_org": "阜新市",
+             "overlap_period": "2025-10/2025-04-", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S003", "S004"]},
+            {"person": "臧宝岭", "person_id": "liaoning_fuxin_zang_baoling", "relationship_type": "superior_subordinate",
+             "strength": "medium", "evidence": "市委副书记、政法委书记（2026-01 由组织部长转任）", "overlap_org": "阜新市委",
+             "overlap_period": "2026-01-", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S023", "S024", "S027"]},
+            {"person": "胡涛", "person_id": "liaoning_fuxin_hu_tao", "relationship_type": "predecessor_successor",
+             "strength": "strong", "evidence": "前任阜新市委书记（2021-11-30~2025-10），马珊珊 2025-10 接任；胡涛现任省政协文化文史委主任",
+             "overlap_org": "阜新市委", "overlap_period": "2025-10", "direction": "other_to_person", "confidence": "confirmed", "source_ids": ["S017", "S018"]},
+            {"person": "吕志成", "person_id": "shenyang_shizhang_lv_zhicheng", "relationship_type": "same_system",
+             "strength": "medium", "evidence": "吕志成曾任阜新市委书记（2019-12~2021-10），现任沈阳市市长——阜新书记→沈阳副省级市二把手的升级链路",
+             "overlap_org": "阜新市委/沈阳市", "overlap_period": "2019-2025", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S030"]},
+        ],
+        "governance_record": [
+            {"period": "2026-01", "domain": "economic_development", "achievement_or_event": "提出落实省委经济工作会议：研究'十五五'转型思路、总体目标、城市定位与'8151'产业体系（8产业集群/15条产业链/100户重点企业）",
+             "role_in_event": "市委书记", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S003"]},
+            {"period": "2026", "domain": "environment", "achievement_or_event": "部署科尔沁沙地歼灭战、'三北'工程林草湿荒一体化保护修复、海州露天矿综合治理工程",
+             "role_in_event": "市委书记", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S003"]},
+            {"period": "2026-02/08", "domain": "public_security", "achievement_or_event": "市委常委会听取公安工作汇报、部署基层减负、健康阜新建设",
+             "role_in_event": "市委书记（主持）", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S004", "S032"]},
+            {"period": "2026-01-22", "domain": "leadership", "achievement_or_event": "主持市十七届人大六次会议（选举人大常委会主任、监委主任，票决民生实事）",
+             "role_in_event": "市委书记", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S021"]},
+        ],
+        "professional_profile": {
+            "primary_specializations": ["audit", "discipline", "party_leadership"], "secondary_specializations": [],
+            "career_pattern": "cross_province_rotation", "systems_experience": ["audit", "discipline", "government", "party"],
+            "geographic_pattern": ["天津市", "辽宁省阜新市"],
+            "promotion_velocity": {"summary": "2022-07 任南开区委书记（时为最年轻直辖市区委书记，时年43岁）；2025-10 跨省任地级市市委书记", "notable_fast_promotions": ["南开区委书记任职时全市最年轻"]},
+        },
+        "work_style_and_personality": {
+            "public_style_indicators": [
+                {"trait": "reform_oriented", "evidence": "强调'智改数转网联'推进传统产业升级、布局低空经济和算力经济等新产业", "confidence": "plausible", "source_ids": ["S003"]},
+                {"trait": "business_friendly", "evidence": "提出'营商环境是生命线''办事不求人'常态化", "confidence": "plausible", "source_ids": ["S003"]},
+            ],
+            "speech_themes": ["转型振兴", "营商环境", "新质生产力", "海州露天矿治理", "十五五"],
+            "management_signals": ["'8151'产业体系", "'办事不求人'"],
+            "caveat": "Work style inferred from public records (辽宁日报专访), not assessment.",
+        },
+        "risk_and_integrity_signals": [
+            {"type": "none_found", "description": "截至 2026-08-12 未发现违纪或负面舆情记录", "date": "", "confidence": "unverified", "source_ids": []}
+        ],
+        "source_register": [
+            {"id": "S001", "title": "中国经济网：马珊珊任辽宁阜新市委书记", "url": "http://i1.ce.cn/district/newarea/sddy/202510/t20251010_2510212.shtml",
+             "publisher": "中国经济网", "published_at": "2025-10-10", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "辽宁省委决定马珊珊任阜新市委书记；简历：女，汉族，1979-05，全日制大学、在职研究生、经济学博士"},
+            {"id": "S002", "title": "新京报：马珊珊任阜新市委书记", "url": "https://m.bjnews.com.cn/detail/1760077854129399.html",
+             "publisher": "新京报", "published_at": "2025-10-10", "accessed_at": AS_OF, "source_type": "media", "reliability": "high",
+             "notes": "2000-05入党、2001-07参加工作；津南常委/统战、武清常委/纪委书记、2020 天津市审计局局长、2022-07 南开区委书记"},
+            {"id": "S003", "title": "辽宁日报专访阜新市委书记马珊珊", "url": "https://www.ln.gov.cn/web/ywdt/qsgd/ass_2_1/2026012214250939108/index.shtml",
+             "publisher": "辽宁日报/辽宁省人民政府", "published_at": "2026-01-22", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "省委经济工作会议贯彻：'8151'体系、营商环境、沙地歼灭战、海州露天矿治理"},
+            {"id": "S004", "title": "市委常委会召开会议（2026-02-11）", "url": "https://www.fuxin.gov.cn/content/2026/1041384.html",
+             "publisher": "阜新市人民政府", "published_at": "2026-02-11", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "马珊珊主持市委常委会——现任佐证"},
+            {"id": "S021", "title": "市十七届人大六次会议闭幕", "url": "https://www.fuxin.gov.cn/content/2026/1042425.html",
+             "publisher": "阜新日报", "published_at": "2026-01-22", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "马珊珊主持大会；选举胡国勇为人大主任、刘子正为监委主任"},
+            {"id": "S031", "title": "维基百科：马珊珊", "url": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E7%8F%8A%E7%8F%8A",
+             "publisher": "Wikipedia", "published_at": "2026-06", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium",
+             "notes": "西北农林科技大学货币银行学专业、天津市委党校研究生"},
+            {"id": "S032", "title": "市委常委会召开会议（2026-08-10）", "url": "https://www.fuxin.gov.cn/content/2026/1099073.html",
+             "publisher": "阜新日报", "published_at": "2026-08-11", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "马珊珊主持市委常委会——截至 2026-08 依然在任"},
+        ],
+        "confidence_summary": {"identity": "confirmed", "current_role": "confirmed", "career_completeness": "partial",
+                               "relationship_confidence": "medium", "biggest_gap": "2001-2007 早期履历与武清/津南任期精确时点；经济学博士院校"},
+        "open_questions": [
+            {"priority": "critical", "question": "参加工作（2001-07）后的早期履历：任津南/武清区委常委前的部门、岗位与时序，以及经济学博士的院校/攻读时点",
+             "why_it_matters": "完整晋升路径与天津体系人脉", "suggested_queries": ["马珊珊 简历 天津 早期 任职", "马珊珊 经济学博士"], "last_attempted": AS_OF},
+            {"priority": "high", "question": "马珊珊到任阜新的精确时间（2025-10-10 宣布；是否 10 月中旬到岗）与第一次以书记身份公开履职的场合",
+             "why_it_matters": "精确到任时间线", "suggested_queries": ["马珊珊 阜新 干部大会 2025-10"], "last_attempted": AS_OF},
+            {"priority": "high", "question": "胡涛卸任后的具体交接安排（2025-09/10 卸任书记；2026-01 任省政协文化文史委主任前有无过渡职务）",
+             "why_it_matters": "前任去向链条完整性", "suggested_queries": ["胡涛 阜新市委书记 卸任 2025 省政协"], "last_attempted": AS_OF},
+        ],
+    }
+
+    ma_yuan = {
+        "schema_version": "1.0",
+        "generated_at": AS_OF,
+        "investigation_scope": {"province": "辽宁省", "city": "阜新市", "region": "阜新市",
+                                "job": "市长", "task_id": "liaoning_阜新市", "time_focus": "2025-2026"},
+        "identity": {
+            "person_id": "liaoning_fuxin_ma_yuan",
+            "name": "马原",
+            "aliases": [],
+            "gender": "男", "ethnicity": "汉族", "birth": "1973-03", "birthplace": "", "native_place": "",
+            "education": [
+                {"period": "", "institution": "待查", "major": "", "degree": "硕士学位（在职研究生）", "study_type": "在职", "source_ids": ["S005", "S008"]}
+            ],
+            "party_join": "1994-10", "work_start": "1995-09",
+            "dedupe_keys": {"name_birth": "马原_1973-03", "name_birthplace": "马原_unknown",
+                            "official_profile_url": "https://www.fuxin.gov.cn/channel/15848/index.html"},
+        },
+        "current_status": {"current_post": "市委副书记、市政府党组书记、市长", "current_org": "阜新市人民政府",
+                           "administrative_rank": "地厅级正职", "as_of": AS_OF, "is_current_confirmed": True,
+                           "source_ids": ["S005", "S010"]},
+        "career_timeline": [
+            {"start": "2025-04", "end": "present", "org": "阜新市人民政府", "title": "市政府党组书记、市长（代市长→市长）",
+             "level": "地厅级", "location": "阜新市", "system": "government", "rank": "地厅级正职", "is_key_promotion": True,
+             "notes": "2025-04-13 省管干部任前公示；2025-04-25 市十七届人大常委会第三十次会议任副市长、代理市长；2025-05-30 市十七届人大五次会议当选市长；2026-01-20 作 2026 年政府工作报告",
+             "confidence": "confirmed", "source_ids": ["S005", "S010", "S011", "S006"]},
+            {"start": "2025-04", "end": "present", "org": "中共阜新市委", "title": "市委副书记",
+             "level": "地厅级", "location": "阜新市", "system": "party", "rank": "地厅级", "is_key_promotion": False,
+             "notes": "市长党内职务", "confidence": "confirmed", "source_ids": ["S005", "S010"]},
+            {"start": "2021-11", "end": "2025-04", "org": "中共沈阳市委", "title": "沈阳市委常委（兼任新民市委书记）",
+             "level": "副省级市", "location": "沈阳市", "system": "party", "rank": "地厅级副职", "is_key_promotion": True,
+             "notes": "2021-11 当选沈阳市委常委并继续兼任新民市委书记",
+             "confidence": "confirmed", "source_ids": ["S008", "S010"]},
+            {"start": "2021-04", "end": "2025-04", "org": "中共新民市委", "title": "新民市委书记（兼辽宁新民经开区/沈阳胡台新城党工委书记）",
+             "level": "县处级", "location": "沈阳市新民市", "system": "party", "rank": "县处级正职", "is_key_promotion": True,
+             "notes": "2021-04 调任新民市委书记（沈阳市辖县级市）；卫生健康委/和平区→县（市）区委书记",
+             "confidence": "confirmed", "source_ids": ["S008", "S009"]},
+            {"start": "unknown", "end": "2021-04", "org": "沈阳市和平区人民政府", "title": "和平区委副书记、区长",
+             "level": "县处级", "location": "沈阳市和平区", "system": "government", "rank": "县处级正职", "is_key_promotion": True,
+             "notes": "沈阳市委组织部 2021 年第12号公示所载原职（现任和平区委副书记、区长，拟任县（市、区）委书记）",
+             "confidence": "confirmed", "source_ids": ["S009"]},
+            {"start": "unknown", "end": "unknown", "org": "辽宁省自然资源厅/国土资源厅", "title": "副厅长（曾省国土资源厅副厅长）",
+             "level": "省级部门", "location": "沈阳市", "system": "government", "rank": "部门副职", "is_key_promotion": False,
+             "notes": "公开资料：曾任辽宁省国土资源厅副厅长、省自然资源厅副厅长（具体起止年份待核）",
+             "confidence": "plausible", "source_ids": ["S008", "S010"]},
+            {"start": "unknown", "end": "unknown", "org": "履历缺口", "title": "",
+             "level": "", "location": "", "system": "other", "rank": "", "is_key_promotion": False,
+             "notes": "1995-09 参加工作至任省国土资源厅副厅长之间的履历（院校专业、早期岗位）未获公开资料",
+             "confidence": "unverified", "source_ids": []},
+        ],
+        "organizations": [{"name": "阜新市人民政府", "role": "市长"}],
+        "relationships": [
+            {"person": "马珊珊", "person_id": "liaoning_fuxin_ma_shanshan", "relationship_type": "co_leadership",
+             "strength": "strong", "evidence": "现任搭班：市长与市委书记", "overlap_org": "阜新市",
+             "overlap_period": "2025-10/2025-04-", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S005", "S006"]},
+            {"person": "周鹏举", "person_id": "liaoning_fuxin_zhou_pengju", "relationship_type": "predecessor_successor",
+             "strength": "strong", "evidence": "周鹏举卸任阜新市长（2025-04）→ 马原接任；周鹏举现任省政府副秘书长", "overlap_org": "阜新市人民政府",
+             "overlap_period": "2021-01~2025-04", "direction": "other_to_person", "confidence": "confirmed", "source_ids": ["S012", "S014"]},
+            {"person": "周鹏举", "person_id": "liaoning_fuxin_zhou_pengju", "relationship_type": "same_system",
+             "strength": "strong", "evidence": "两人均曾任新民市委书记后任阜新市长——'新民系→阜新市长'连续两任", "overlap_org": "新民市委/阜新市政府",
+             "overlap_period": "2015-2025", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S013", "S008"]},
+            {"person": "张成中", "person_id": "liaoning_fuxin_zhang_chengzhong", "relationship_type": "predecessor_successor",
+             "strength": "medium", "evidence": "张成中 2018-01~2021-01 任阜新市长（现任应急管理部部长）——历任市长链", "overlap_org": "阜新市人民政府",
+             "overlap_period": "2018-2021", "direction": "other_to_person", "confidence": "confirmed", "source_ids": ["S015", "S016"]},
+            {"person": "吕志成", "person_id": "shenyang_shizhang_lv_zhicheng", "relationship_type": "same_system",
+             "strength": "medium", "evidence": "马原曾任沈阳市委常委、新民书记；吕志成现任沈阳市长（曾任阜新书记）——沈阳体系交集", "overlap_org": "沈阳市",
+             "overlap_period": "2021-2025", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S030"]},
+            {"person": "胡国勇", "person_id": "liaoning_fuxin_hu_guoyong", "relationship_type": "co_leadership",
+             "strength": "medium", "evidence": "2025-04 马原任代市长时胡国勇为市委常委/副市长，2026-01 人大主任——政府与人大联动", "overlap_org": "阜新市",
+             "overlap_period": "2025-2026", "direction": "undirected", "confidence": "confirmed", "source_ids": ["S011", "S019"]},
+        ],
+        "governance_record": [
+            {"period": "2026-01", "domain": "economic_development", "achievement_or_event": "2026 年政府工作报告：抓好'十五五'开局、实施开发园区整合优化、高质量招商引资实施方案（2026-01 常务会议审议）",
+             "role_in_event": "市长（作报告/主持常务会）", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S006", "S033"]},
+            {"period": "2025-12", "domain": "planning", "achievement_or_event": "主持市政府常务会议审议 2026 年政府工作报告、《'十五五'规划纲要草案》、2026 民生实事（2025-12-31）",
+             "role_in_event": "市长", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S033"]},
+            {"period": "2026", "domain": "governance", "achievement_or_event": "主持市政府全面工作、分管市审计局（政府领导分工）",
+             "role_in_event": "市长", "measurable_outcome": "", "location": "阜新市",
+             "confidence": "confirmed", "source_ids": ["S005", "S007"]},
+        ],
+        "professional_profile": {
+            "primary_specializations": ["urban_governance", "natural_resources", "party_leadership"], "secondary_specializations": [],
+            "career_pattern": "cross_city_rotation", "systems_experience": ["government", "party", "natural_resources"],
+            "geographic_pattern": ["沈阳市（和平区/新民市）", "阜新市"],
+            "promotion_velocity": {"summary": "和平区长→新民市委书记（2021-04，48岁）→沈阳市委常委（2021-11）→地级市市长（2025-05，52岁）", "notable_fast_promotions": []},
+        },
+        "work_style_and_personality": {
+            "public_style_indicators": [
+                {"trait": "project_oriented", "evidence": "主持常务会部署十五五规划开局、民生实事、开发园区整合优化", "confidence": "plausible", "source_ids": ["S033"]},
+                {"trait": "consensus_builder", "evidence": "2026-01-07 率队到市政协征求政府工作报告意见", "confidence": "plausible", "source_ids": ["S034"]},
+            ],
+            "speech_themes": ["十五五", "民生实事", "招商引资", "开发园区整合", "营商环境"],
+            "management_signals": ["'三调度'项目机制（延续）", "开发园区整合优化"],
+            "caveat": "Work style inferred from public records, not assessment.",
+        },
+        "risk_and_integrity_signals": [
+            {"type": "none_found", "description": "截至 2026-08-12 未发现违纪或负面舆情记录", "date": "", "confidence": "unverified", "source_ids": []}
+        ],
+        "source_register": [
+            {"id": "S005", "title": "马原-阜新市人民政府（市长简历）", "url": "https://www.fuxin.gov.cn/channel/15848/index.html",
+             "publisher": "阜新市人民政府", "published_at": "", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "男，汉族，1973-03，在职研究生、硕士，现任市委副书记、市政府党组书记、市长"},
+            {"id": "S006", "title": "2026年阜新市人民政府工作报告", "url": "https://www.fuxin.gov.cn/content/2026/1039596.html",
+             "publisher": "阜新市人民政府", "published_at": "2026-01-20", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "马原在阜新市第十七届人大第六次会议上作报告"},
+            {"id": "S007", "title": "市政府领导工作分工通知（阜政办发〔2026〕2号）", "url": "https://www.fuxin.gov.cn/content/2026/1044595.html",
+             "publisher": "阜新市人民政府办公室", "published_at": "2026", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "市长主持全面工作；副市长林艾民/杨枫/屈宪军/杨占旭/蒋美华/班昊/李树坦/刘昕+秘书长王旭分工"},
+            {"id": "S008", "title": "澎湃：沈阳市委常委、新民市委书记马原拟提名为地级市市长候选人", "url": "https://thepaper.cn/newsDetail_forward_30638291",
+             "publisher": "澎湃新闻", "published_at": "2025-04-13", "accessed_at": AS_OF, "source_type": "media", "reliability": "high",
+             "notes": "省管干部任前公示；曾任省国土资源厅副厅长、省自然资源厅副厅长、沈阳市和平区区长；2021-04 新民市委书记；2021-11 沈阳市委常委"},
+            {"id": "S009", "title": "沈阳市委组织部公告（2021年第12号）", "url": "https://www.shenyang.gov.cn/zwgk/fdzdgknr/rsxx/rqgs/202112/t20211201_1757977.html",
+             "publisher": "沈阳市人民政府", "published_at": "2021-04", "accessed_at": AS_OF, "source_type": "appointment_notice", "reliability": "high",
+             "notes": "马原：现任沈阳市和平区委副书记、区长，拟任县（市、区）委书记——2021-04 赴新民"},
+            {"id": "S010", "title": "澎湃：马原当选辽宁阜新市市长", "url": "https://www.thepaper.cn/newsDetail_forward_30906213",
+             "publisher": "澎湃新闻", "published_at": "2025-05-30", "accessed_at": AS_OF, "source_type": "media", "reliability": "high",
+             "notes": "2025-05-30 市十七届人大五次会议选举马原为市长"},
+            {"id": "S011", "title": "市十七届人大常委会第三十次会议（代市长）", "url": "http://www.fxrd.gov.cn/cwhhy/202504/t20250429_44718.html",
+             "publisher": "阜新市人大常委会", "published_at": "2025-04-29", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "表决决定马原为代理市长；市委常委、副市长林艾民列席"},
+            {"id": "S012", "title": "澎湃：辽宁阜新原市长周鹏举已调任省政府副秘书长", "url": "https://m.thepaper.cn/newsDetail_forward_30918938",
+             "publisher": "澎湃新闻", "published_at": "2025", "accessed_at": AS_OF, "source_type": "media", "reliability": "high",
+             "notes": "周鹏举任辽宁省政府副秘书长；原任沈阳市委常委、新民市委书记的马原已任阜新市长"},
+            {"id": "S013", "title": "中国经济网：周鹏举当选阜新市市长", "url": "http://district.ce.cn/newarea/sddy/202101/26/t20210126_36261743.shtml",
+             "publisher": "中国经济网", "published_at": "2021-01-26", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "周鹏举简历：沈阳人，1973-10；新城子区→沈北→新民市长/书记→鞍山市委常委、副市长"},
+            {"id": "S014", "title": "关于接受周鹏举辞去市长职务请求的决定", "url": "https://www.fuxin.gov.cn/content/2025/983307.html",
+             "publisher": "阜新日报", "published_at": "2025-04-27", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "2025-04-25 市十七届人大常委会第三十次会议接受周鹏举辞职"},
+            {"id": "S015", "title": "百度百科：张成中", "url": "https://baike.baidu.com/item/张成中/7317032",
+             "publisher": "百度百科", "published_at": "", "accessed_at": AS_OF, "source_type": "encyclopedia", "reliability": "medium",
+             "notes": "阜新市长（2018-01 当选~2021-01）→盘锦市委书记→辽宁省委常委/秘书长→河北常务副省长→唐山市委书记→应急管理部部长"},
+            {"id": "S016", "title": "京报网：中央决定张成中任应急管理部党委书记", "url": "https://news.bjd.com.cn/2026/03/27/11656166.shtml",
+             "publisher": "京报网", "published_at": "2026-03-27", "accessed_at": AS_OF, "source_type": "media", "reliability": "high",
+             "notes": "张成中 1970-10；曾任阜新常务副市长、市长，盘锦书记"},
+            {"id": "S019", "title": "阜新市人民政府领导页", "url": "https://www.fuxin.gov.cn/channel/10931/index.html",
+             "publisher": "阜新市人民政府", "published_at": "", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "现任市政府领导名单（马原、林艾民、杨枫、屈宪军、杨占旭、蒋美华、班昊、李树坦、刘昕）"},
+            {"id": "S033", "title": "市政府常务会议（2025-12-31）", "url": "https://www.fuxin.gov.cn/content/2026/1029236.html",
+             "publisher": "阜新市人民政府", "published_at": "2026", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "审议2026政府工作报告、十五五规划纲要草案、民生实事、开发区整合优化、招商引资方案"},
+            {"id": "S034", "title": "市政府就政府工作报告征求市政协意见", "url": "https://www.fuxin.gov.cn/content/2026/1032833.html",
+             "publisher": "阜新市人民政府", "published_at": "2026-01", "accessed_at": AS_OF, "source_type": "official", "reliability": "high",
+             "notes": "马原带队到市政协征求意见；市政协主席李刚主持"},
+            {"id": "S030", "title": "沈阳市市长吕志成 person JSON", "url": "data/provinces/liaoning/persons/20260725-辽宁省-沈阳市-市长-吕志成.json",
+             "publisher": "gov-relation 数据库", "published_at": "2026-07-25", "accessed_at": AS_OF, "source_type": "database", "reliability": "high",
+             "notes": "吕志成：阜新市委书记（2019-12~2021-10）→沈阳市代市长/市长"},
+        ],
+        "confidence_summary": {"identity": "confirmed", "current_role": "confirmed", "career_completeness": "partial",
+                               "relationship_confidence": "medium", "biggest_gap": "1995-2007 早期履历与国土资源厅副厅长时间"},
+        "open_questions": [
+            {"priority": "critical", "question": "马原 1995-09 参加工作后的早期履历（院校专业、最早岗位）及其任省国土资源厅/自然资源厅副厅长的具体年份",
+             "why_it_matters": "完整履历与人际网络", "suggested_queries": ["马原 国土资源厅 副厅长 简历", "马原 辽宁 简历 1995"], "last_attempted": AS_OF},
+            {"priority": "high", "question": "沈阳市和平区区长任期的起止（在此之前的任职）",
+             "why_it_matters": "跨省地市体系网络", "suggested_queries": ["马原 沈阳市和平区 区长 简历"], "last_attempted": AS_OF},
+            {"priority": "medium", "question": "马原出生地/籍贯与院校明细",
+             "why_it_matters": "身份细节确认", "suggested_queries": ["马原 阜新市长 籍贯"], "last_attempted": AS_OF},
+        ],
+    }
+
+    person_dir = PERSONS_STAGING_DIR
+    today = AS_OF.replace("-", "")
+    for fname, data in [
+        (f"{today}-辽宁省-阜新市-市委书记-马珊珊.json", ma_shanshan),
+        (f"{today}-辽宁省-阜新市-市长-马原.json", ma_yuan),
+    ]:
+        path = person_dir / fname
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"  Person JSON: {path}")
+
+
+def main():
+    print(f"Building {SLUG} network data...")
+    print(f"  Persons: {len(persons)}")
+    print(f"  Orgs: {len(organizations)}")
+    print(f"  Positions: {len(positions)}")
+    print(f"  Relationships: {len(relationships)}")
+
+    run_build(
+        slug=SLUG,
+        persons=persons,
+        organizations=organizations,
+        positions=positions,
+        relationships=relationships,
+        db_path=DB_PATH,
+        gexf_path=GEXF_PATH,
+        overwrite=True,
+    )
+
+    write_person_jsons()
+
+    print(f"\nDone! Staged output files:")
+    print(f"  DB:   {DB_PATH}")
+    print(f"  GEXF: {GEXF_PATH}")
+    for f in sorted(PERSONS_STAGING_DIR.glob("*.json")):
+        if "阜新" in f.name:
+            print(f"  JSON: {f}")
+
+
+if __name__ == "__main__":
+    main()
