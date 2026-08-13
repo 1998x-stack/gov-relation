@@ -33,8 +33,8 @@
 | `scripts/process_tmp.py` | 工具 | 校验并归档 `data/tmp/<task_id>/` 暂存产物。 |
 | `scripts/build_static_site_data.py` | 工具 | 生成 `docs/assets/data/*.json` 静态前端数据。 |
 | `scripts/serve_app.py` | 工具 | 启动本地只读 SQLite/GEXF API 和 `docs/` 静态服务。 |
-| `todo_batch.sh` | 工具 | 批处理任务辅助脚本。 |
-| `watchdog.sh` | 工具 | 运行监控辅助脚本。 |
+| `scripts/tools/todo_batch.sh` | 工具 | 批处理任务辅助脚本。 |
+| `scripts/tools/watchdog.sh` | 工具 | 运行监控辅助脚本。 |
 | `data/` | 数据 | 任务队列、行政区划 JSON、SQLite 数据库、GEXF 图谱。 |
 | `docs/` | 文档/页面 | 已整理的文档、页面和索引。 |
 | `report/` | 报告 | 调查报告、开放问题、图谱 HTML。 |
