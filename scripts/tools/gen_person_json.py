@@ -35,8 +35,9 @@ def load_build_data(path: str) -> dict:
         if isinstance(node, ast.Assign):
             for target in node.targets:
                 name = getattr(target, "id", "")
-                if name in out and isinstance(node.value, ast.List):
-                    out[name] = ast.literal_eval(node.value)
+                key = name.lower()
+                if key in out and isinstance(node.value, ast.List):
+                    out[key] = ast.literal_eval(node.value)
     return out
 
 
