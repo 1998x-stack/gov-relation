@@ -118,7 +118,7 @@ positions = [
     dict(person_id="xinyu_fang_xiangjun", org_id="org_jiangxi_commerce", title="江西省商务厅副厅长",
          start="~2020?", end="~2021?", rank="副厅级", note=""),
     dict(person_id="xinyu_fang_xiangjun", org_id="org_jiangxi_cpc", title="江西省委副秘书长",
-         start="~2021?", end="~2023?", rank="副厅级", note="搜狗快照显示"2021..."暗示2021年上任"),
+         start="~2021?", end="~2023?", rank="副厅级", note="搜狗快照显示‘2021...’暗示2021年上任"),
     dict(person_id="xinyu_fang_xiangjun", org_id="org_jiangxi_stats", title="江西省统计局党组书记、局长", start="~2023", end="2024-08", rank="正厅级", note=""),
     dict(person_id="xinyu_fang_xiangjun", org_id="org_xinyu_gov", title="新余市委副书记、市长", start="2024-08", end="2026-04", rank="正厅级", note="2024年9月29日正式当选"),
     dict(person_id="xinyu_fang_xiangjun", org_id="org_xinyu_cpc", title="新余市委书记、新余军分区党委第一书记", start="2026-04", end="", rank="正厅级", note="现任"),

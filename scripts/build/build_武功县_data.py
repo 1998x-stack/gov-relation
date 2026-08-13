@@ -24,8 +24,6 @@ Confidence notes:
   - Predecessor info: not available from current search results
 """
 
-from __future__ import annotations
-
 import json
 import os
 import sys

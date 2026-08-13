@@ -22,8 +22,6 @@ Confidence notes:
   - Cross-county figure: 上官吉庆 (1999-2002 乾县县委书记, later Xi'an mayor), 徐新荣 (born 乾县, Shaanxi CPPCC chair)
 """
 
-from __future__ import annotations
-
 import json
 import os
 import sys

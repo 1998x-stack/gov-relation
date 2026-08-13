@@ -24,8 +24,6 @@ Confidence notes:
   - Baidu Baike: captcha-blocked, not accessible
 """
 
-from __future__ import annotations
-
 import json
 import os
 import sys

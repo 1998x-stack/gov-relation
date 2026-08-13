@@ -4,7 +4,6 @@
 兴安区（黑龙江省鹤岗市）领导班子工作关系网络 — 数据构建脚本
 生成 SQLite 数据库和 GEXF 图文件
 (schema via gov_relation.schema → sqlite3)
-"""
 
 Level: 市辖区
 Province: 黑龙江省
