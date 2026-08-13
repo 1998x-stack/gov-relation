@@ -1,12 +1,29 @@
+import os
 import sqlite3
+import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+# ── REPO_ROOT 探测（必须先于 gov_relation 导入）──────────────────
+REPO_ROOT = Path(__file__).resolve()
+for _parent in range(0, 6):
+    _cand = Path(__file__).resolve().parents[_parent]
+    if (_cand / "gov_relation").is_dir():
+        REPO_ROOT = _cand
+        break
+else:
+    REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from gov_relation.runner import run_build
-from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 SLUG = "临安区"
 TODAY = "2026-07-28"
+
+# 支持 STAGING_DIR 覆盖（china-gov-network 暂存约定）
+_OUT = Path(os.environ.get("STAGING_DIR") or (REPO_ROOT / "scripts" / "build"))
+DB_PATH = _OUT / "临安区_network.db"
+GEXF_PATH = _OUT / "临安区_network.gexf"
 
 persons = [
     {
@@ -165,7 +182,6 @@ run_build(
     organizations=organizations,
     positions=positions,
     relationships=relationships,
-    db_path=DATABASE_DIR / "临安区_network.db",
-    gexf_path=GRAPH_DIR / "临安区_network.gexf",
-    data_dir=DATABASE_DIR,
+    db_path=DB_PATH,
+    gexf_path=GEXF_PATH,
 )
