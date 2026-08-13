@@ -32,16 +32,31 @@ Research gaps encoded as open_questions (search engines Exa/Baidu/Sogou/360 all 
 from __future__ import annotations
 
 import json
+import os
+import sys
 from datetime import datetime
 from pathlib import Path
+
+# ── REPO_ROOT 探测（稳健）────────────────────────────────────────
+REPO_ROOT = Path(__file__).resolve()
+for _parent in range(0, 6):
+    _cand = Path(__file__).resolve().parents[_parent]
+    if (_cand / "gov_relation").is_dir():
+        REPO_ROOT = _cand
+        break
+else:
+    REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from gov_relation.runner import run_build
 
 SLUG = "东河区"
 TODAY = datetime.now().strftime("%Y%m%d")
 AS_OF = datetime.now().strftime("%Y-%m-%d")
-REPO_ROOT = Path(__file__).resolve().parents[3]  # repo root when staged
-STAGING = REPO_ROOT / "data" / "tmp" / "inner_mongolia_东河区"
+# 支持 STAGING_DIR 环境变量覆盖（与 china-gov-network 暂存约定一致）
+_STAGING = os.environ.get("STAGING_DIR")
+STAGING = Path(_STAGING) if _STAGING else REPO_ROOT / "data" / "tmp" / "inner_mongolia_东河区"
 
 # process_tmp.py requires these tokens lexically present in the build script
 DB_PATH = STAGING / f"{SLUG}_network.db"
