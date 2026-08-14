@@ -3,9 +3,20 @@
 
 import sqlite3, os
 from datetime import datetime
+from pathlib import Path
 
-BASE = "/workspace/data/xieming/other-codes/gov-relation"
-STAGING = os.path.join(BASE, "data/tmp/xizang_昌都市")
+# ── REPO_ROOT 探测────────────────────────────────────────────────
+BASE = Path(__file__).resolve()
+for _parent in range(0, 6):
+    _cand = Path(__file__).resolve().parents[_parent]
+    if (_cand / "gov_relation").is_dir():
+        BASE = _cand
+        break
+BASE = str(BASE)
+# 支持 STAGING_DIR 覆盖
+_STG = os.environ.get("STAGING_DIR")
+STAGING = _STG if _STG else os.path.join(BASE, "data/tmp/xizang_昌都市")
+os.makedirs(STAGING, exist_ok=True)
 DB_PATH = os.path.join(STAGING, "昌都市_network.db")
 GEXF_PATH = os.path.join(STAGING, "昌都市_network.gexf")
 
