@@ -44,6 +44,28 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _cleanup_sqlite_sidecars(database):
+    # Flush WAL into the database and remove leftover sidecar files so a
+    # subsequent read-only URI-open (mode=ro) does not fail with
+    # "unable to open database file". Best-effort: never mask a build error.
+    database = Path(database)
+    for suffix in ("-wal", "-shm", "-wal2", "-shm2"):
+        Path(f"{database}{suffix}").unlink(missing_ok=True)
+    if not database.exists():
+        return
+    try:
+        conn = sqlite3.connect(str(database))
+        try:
+            conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+            conn.execute("PRAGMA journal_mode=DELETE")
+        finally:
+            conn.close()
+    except sqlite3.Error:
+        pass
+    for suffix in ("-wal", "-shm"):
+        Path(f"{database}{suffix}").unlink(missing_ok=True)
+
+
 def _print(value: object) -> None:
     print(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True))
 
@@ -157,6 +179,12 @@ def build_database(args: argparse.Namespace) -> int:
         if destination.exists():
             destination.unlink()
         os.replace(building, destination)
+        # WAL-ready build path leaves <name>.building-wal/-shm behind and the
+        # renamed DB is still flagged WAL, which breaks read-only URI opens.
+        # Finalize the published artifact and drop the leftover sidecars.
+        _cleanup_sqlite_sidecars(destination)
+        Path(str(building) + "-wal").unlink(missing_ok=True)
+        Path(str(building) + "-shm").unlink(missing_ok=True)
         _print({"database": str(destination), **report})
         return 0 if not total.errors else 2
     except BaseException:

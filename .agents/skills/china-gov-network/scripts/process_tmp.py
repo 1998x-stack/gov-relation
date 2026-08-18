@@ -106,10 +106,21 @@ def classify(path: Path) -> tuple[str | None, str]:
 
 def validate_action(path: Path, kind: str) -> tuple[bool, str]:
     if kind == "build_script":
+        try:
+            compile(path.read_text(encoding="utf-8"), str(path), "exec")
+        except Exception as exc:
+            return False, f"compile error: {exc}"
         text = path.read_text(encoding="utf-8")
-        required = ["sqlite3", "DB_PATH", "GEXF_PATH"]
-        missing = [token for token in required if token not in text]
-        return (not missing, "ok" if not missing else f"missing tokens: {', '.join(missing)}")
+        # Accept BOTH legacy token style and canonical run_build style.
+        legacy_ok = all(tok in text for tok in ("sqlite3", "DB_PATH", "GEXF_PATH"))
+        canonical_ok = (
+            "run_build" in text
+            and any(tok in text for tok in ("DATABASE_DIR", "DB_PATH", "PERSONS_DIR"))
+            and any(tok in text for tok in ("GRAPH_DIR", "GEXF_PATH"))
+        )
+        if legacy_ok or canonical_ok:
+            return True, "ok"
+        return False, "missing build tokens (legacy: sqlite3/DB_PATH/GEXF_PATH; canonical: run_build)"
     if kind == "database":
         return validate_sqlite(path)
     if kind == "graph":
