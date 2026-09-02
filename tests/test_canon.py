@@ -152,3 +152,25 @@ def test_snapshot_aggregation_idempotent(tmp_path):
     from gov_relation.canon.streams import iter_jsonl
 
     assert sum(1 for _ in iter_jsonl(root / "persons.jsonl")) == 1
+
+
+def test_region_records_emit_schema_valid_enums():
+    """Region rows must satisfy the platform CHECK enums when loaded into SQLite."""
+    from gov_relation.canon.pillar_region import region_records
+
+    rec = region_records(
+        "测试区",
+        persons=[{"id": 1, "name": "A"}],
+        organizations=[{"id": 1, "name": "X"}],
+        positions=[{"person_id": 1, "org_id": 1, "title": "书记"}],
+        relationships=[{"person_a": 1, "person_b": 2, "type": "同事"}],
+    )
+    p = rec["persons"][0]
+    assert p["identity_status"] in {"verified", "probable", "unresolved", "merged"}
+    assert p["birth_precision"] in {"day", "month", "year", "unknown"}
+    pos = rec["positions"][0]
+    assert pos["date_precision"] in {"day", "month", "year", "range", "unknown"}
+    assert pos["confidence"] in {"confirmed", "plausible", "unverified"}
+    rel = rec["relationships"][0]
+    assert rel["direction"] in {"undirected", "from_to", "to_from"}
+    assert rel["strength"] in {"strong", "medium", "weak", "unknown"}

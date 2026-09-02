@@ -49,22 +49,26 @@ def region_records(
         out["persons"].append({
             "person_id": rid,
             "canonical_name": p.get("name", ""),
+            "normalized_name": p.get("name", ""),
             "gender": p.get("gender", ""),
             "ethnicity": p.get("ethnicity", ""),
             "birth_text": p.get("birth", ""),
+            "birth_precision": "unknown",
             "birthplace": p.get("birthplace", ""),
             "native_place": p.get("native_place", ""),
             "education": str(p.get("education", "")),
             "party_join_text": p.get("party_join", ""),
             "work_start_text": p.get("work_start", ""),
-            "identity_status": "complete",
+            "identity_status": "probable",
             "merged_into_id": None,
+            "created_at": None,
+            "updated_at": None,
         })
     for i, o in enumerate(organizations):
         rid = _entity_id(slug, "org", o.get("id", i))
         out["organizations"].append({
             "organization_id": rid,
-            "jurisdiction_id": slug,
+            "jurisdiction_id": None,
             "parent_organization_id": None,
             "canonical_name": o.get("name", ""),
             "normalized_name": o.get("name", ""),
@@ -73,6 +77,7 @@ def region_records(
             "location_text": o.get("location", ""),
             "valid_from": None,
             "valid_to": None,
+            "created_at": None,
         })
     for i, pos in enumerate(positions):
         pid = pos.get("person_id")
@@ -90,10 +95,10 @@ def region_records(
             "end_text": pos.get("end_date", ""),
             "start_date": pos.get("start_date", ""),
             "end_date": pos.get("end_date", ""),
-            "date_precision": "",
+            "date_precision": "unknown",
             "is_current": 0,
             "sort_order": i,
-            "confidence": pos.get("confidence", "research"),
+            "confidence": pos.get("confidence", "plausible"),
             "notes": pos.get("note", ""),
         })
     for i, r in enumerate(relationships):
@@ -104,13 +109,16 @@ def region_records(
             "person_from_id": a,
             "person_to_id": b,
             "relationship_type": r.get("type", ""),
-            "direction": r.get("direction", ""),
-            "strength": r.get("overlap_period", ""),
-            "confidence": "",
+            "direction": r.get("direction", "undirected"),
+            "strength": r.get("strength", "unknown"),
+            "confidence": r.get("confidence", "plausible"),
             "context": r.get("context", ""),
             "evidence_summary": r.get("evidence", ""),
+            "overlap_organization_id": None,
             "overlap_organization_text": r.get("overlap_org", ""),
             "overlap_period_text": r.get("overlap_period", ""),
+            "valid_from": None,
+            "valid_to": None,
         })
     return out
 

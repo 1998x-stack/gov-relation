@@ -51,8 +51,9 @@ RELATIONSHIPS = [
 ]
 
 if __name__ == "__main__":
+    # Step-3 conversion: write canonical partitioned JSONL (no per-region SQLite).
     run_build(slug=SLUG, persons=PERSONS, organizations=ORGANIZATIONS,
               positions=POSITIONS, relationships=RELATIONSHIPS,
-              db_path=DB_PATH, gexf_path=GEXF_PATH, overwrite=True)
-    print("built:", DB_PATH, GEXF_PATH)
-    print("row counts:"); _verify_db()
+              db_path=DB_PATH, gexf_path=GEXF_PATH, overwrite=True,
+              backend="canon", province="山西省")
+    print("canon build -> records/regions/%s" % SLUG)

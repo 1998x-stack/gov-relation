@@ -117,12 +117,10 @@ def rebuild_db_from_records(
     db_path.parent.mkdir(parents=True, exist_ok=True)
 
     tables = content_tables = content_tables_from_dir(records_dir)
-    if db_path.exists():
-        if not overwrite:
-            raise FileExistsError(
-                f"backup exists ({db_path}); pass overwrite=True"
-            )
-        db_path.unlink()
+    if db_path.exists() and not overwrite:
+        raise FileExistsError(
+            f"backup exists ({db_path}); pass overwrite=True"
+        )
 
     sql = records_dir / SCHEMA_FILE
     if not sql.exists():
@@ -133,6 +131,9 @@ def rebuild_db_from_records(
     # drop NOT NULL constraints (keep PK/types/indexes); a JSONL row without a
     # value must store NULL, never fail the load.
     raw_ddl = sql.read_text(encoding="utf-8")
+    # Mirror semantics: drop NOT NULL so a JSONL row with a missing value
+    # stores NULL rather than failing the load. CHECK constraints are kept —
+    # generators must emit schema-valid enum values.
     ddl = re.sub(r"\s+NOT\s+NULL", "", raw_ddl)
 
     # Build into a temporary file, then atomically swap in only on success so a
