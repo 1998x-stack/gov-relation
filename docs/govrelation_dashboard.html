@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gov Relation · 政府人员关系网络可视化面板</title>
+<script src="https://unpkg.com/vis-network@9.1.2/dist/vis-network.min.js"></script>
+<style>
+:root{
+--surface:#0D0E10;--card:#16171B;--card2:#1C1D22;--border:#262830;--border2:#33353C;
+--ink:#E9E5DC;--ink-dim:#8A8680;--ink-faint:#5A5B60;
+--cinnabar:#D4342E;--gold:#B8953E;--blue:#6B8FA3;--green:#5C9E7A;--purple:#8A6FA3;--teal:#5FA7A3;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--surface);color:var(--ink);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;line-height:1.6;min-height:100vh;}
+a{color:var(--blue);text-decoration:none;}a:hover{text-decoration:underline;}
+.container{max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,40px);}
+header{padding:3rem 0 2rem;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(var(--cinnabar),var(--gold));}
+header h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;letter-spacing:.03em;}
+header p{color:var(--ink-dim);font-size:.95rem;margin-top:.4rem;max-width:780px;}
+.tagline{margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:.5rem;}
+.chip{font-size:.72rem;padding:.28rem .7rem;border:1px solid var(--border2);border-radius:100px;color:var(--ink-dim);background:var(--card);}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:2rem 0;}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:1rem 1.1rem;position:relative;overflow:hidden;}
+.kpi::before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:var(--kpi-accent,var(--blue));}
+.kpi .val{font-size:clamp(1.4rem,2.6vw,2.1rem);font-weight:800;font-variant-numeric:tabular-nums;}
+.kpi .lbl{font-size:.7rem;letter-spacing:.1em;color:var(--ink-dim);margin-top:.1rem;}
+.kpi .note{font-size:.68rem;color:var(--ink-faint);margin-top:.15rem;}
+.c1{--kpi-accent:var(--cinnabar);} .c2{--kpi-accent:var(--gold);} .c3{--kpi-accent:var(--blue);}
+.c4{--kpi-accent:var(--green);} .c5{--kpi-accent:var(--purple);} .c6{--kpi-accent:var(--teal);}
+.section{padding:2.5rem 0;border-bottom:1px solid var(--border);}
+.section:last-child{border-bottom:none;}
+h2{font-size:1.15rem;font-weight:700;color:var(--gold);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
+h2 .en{font-size:.6rem;letter-spacing:.18em;color:var(--ink-faint);font-weight:500;}
+h2 small{font-size:.68rem;color:var(--ink-faint);font-weight:400;margin-left:.4rem;}
+.sub{color:var(--ink-dim);font-size:.85rem;margin-bottom:1.2rem;max-width:900px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+@media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.3rem;min-width:0;}
+.card h3{font-size:.9rem;font-weight:700;margin-bottom:.9rem;}
+.card h4{font-size:.85rem;color:var(--ink-dim);}
+.card .hint{font-size:.7rem;color:var(--ink-faint);margin-bottom:.8rem;}
+.legend{display:flex;flex-direction:column;gap:.3rem;margin-top:.7rem;}
+.lg{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:var(--ink-dim);}
+.lg .sw{width:11px;height:11px;border-radius:2px;flex-shrink:0;}
+.lg .lgv{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--ink);}
+.lg .lgp{width:46px;text-align:right;color:var(--ink-faint);font-variant-numeric:tabular-nums;}
+.bar-row{display:grid;grid-template-columns:130px 1fr 52px;gap:.6rem;align-items:center;margin-bottom:.5rem;font-size:.76rem;}
+.bar-row .bl{color:var(--ink-dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bar-track{background:var(--card2);border-radius:3px;height:14px;overflow:hidden;position:relative;}
+.bar-fill{height:100%;border-radius:3px;}
+.bar-val{color:var(--ink);font-variant-numeric:tabular-nums;text-align:right;}
+#net{height:520px;border:1px solid var(--border);border-radius:6px;background:radial-gradient(1200px 700px at 30% 20%,#15171B,#090A0C 70%);}
+.net-legend{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:.8rem;}
+.nl{display:flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--ink-dim);}
+.tl{position:relative;padding-left:1.4rem;margin-top:.4rem;}
+.tl::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--cinnabar),var(--gold),var(--blue));}
+.tl-item{position:relative;margin-bottom:.95rem;}
+.tl-item::before{content:'';position:absolute;left:-1.32rem;top:.45rem;width:9px;height:9px;border-radius:50%;background:var(--gold);border:2px solid var(--surface);}
+.tl-item .t{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;}
+.tl-item .role{font-weight:700;font-size:.86rem;}
+.tl-item .org{color:var(--blue);font-size:.76rem;}
+.tl-item .span{color:var(--ink-faint);font-size:.7rem;margin-left:auto;white-space:nowrap;}
+.tl-item .rank{font-size:.62rem;color:var(--cinnabar);border:1px solid var(--cinnabar-dim);padding:.05rem .4rem;border-radius:100px;flex-shrink:0;}
+.tbl{width:100%;border-collapse:collapse;font-size:.78rem;}
+.tbl th{text-align:left;color:var(--ink-dim);font-weight:600;border-bottom:1px solid var(--border);padding:.45rem .5rem;font-size:.7rem;letter-spacing:.05em;}
+.tbl td{padding:.42rem .5rem;border-bottom:1px solid var(--border);vertical-align:top;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl .num{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:700;}
+footer{padding:2.5rem 0 3rem;color:var(--ink-faint);font-size:.72rem;text-align:center;}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Gov Relation · 政府人员关系网络可视化</h1>
+    <p>基于统一平台数据库 <code>data/platform/gov_relation.db</code> 的综合数据看板 —— 人物、组织、职务、关系、地区覆盖与数据质量的整合可视化。数据为调研研究用途（Bronze/Silver 原始层 + Gold 现职视图）。</p>
+    <div class="tagline">
+      <span class="chip">统一数据库 · SQLite</span>
+      <span class="chip">19609 人物</span>
+      <span class="chip">12322 组织</span>
+      <span class="chip">13385 关系</span>
+      <span class="chip">2285 GEXF 图谱</span>
+      <span class="chip">1383 报告</span>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <section class="kpis" id="kpis"></section>
+
+  <section class="section" id="network">
+    <h2>1 · 关系网络图 <span class="en">RELATIONSHIP NETWORK</span><small>示例中心节点：曹立强（上海）</small></h2>
+    <p class="sub">以一位中心干部为枢纽的关系站点。边色映射关系类型（上下级/前后任/共事），节点按连接度缩放，边透明随置信度。可拖动、滚轮缩放、点选节点查看信息。</p>
+    <div class="card"><div id="net"></div><div class="net-legend" id="netLegend"></div>
+      <div style="margin-top:.4rem;font-size:.68rem;color:var(--ink-faint);" id="netInfo"></div>
+    </div>
+    <div class="grid2" style="margin-top:1.25rem;">
+      <div class="card">
+        <h3>现职分布 · 组织 Top 12</h3>
+        <table class="tbl" id="postsTable"></table>
+      </div>
+      <div class="card">
+        <h3>任职级别分布</h3>
+        <div id="rankBars"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reltypes">
+    <h2>2 · 关系类型构成 <span class="en">RELATIONSHIP TYPES</span></h2>
+    <p class="sub">将原始关系标签（含中英文同义变体）按语义归并为类别：隶属/领导、继任/前后任、共事/同事、党政搭档、同乡、跨区、组织重叠等，共 <span id="relTotal"></span> 条。</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>关系语义类别</h3>
+        <div style="position:relative"><div class="chart" id="relDonut"></div></div>
+        <div class="legend" id="relLegend"></div>
+      </div>
+      <div class="card">
+        <h3>强度构成 &amp; 置信度</h3>
+        <div class="chart" id="strengthStack"></div>
+        <div class="legend" id="strengthLegend"></div>
+        <div style="height:1.1rem;"></div>
+        <div class="bar-row" id="relConfBars"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="geo">
+    <h2>3 · 地区覆盖 <span class="en">GEOGRAPHIC COVERAGE</span></h2>
+    <p class="sub">按省级行政区统计已建档的下辖行政单元（以区县为主）数量，反映各省级覆盖广度。</p>
+    <div class="grid2">
+      <div class="card"><h3>省级覆盖度（辖区数量）</h3><div id="provBars"></div></div>
+      <div class="card">
+        <h3>行政层级构成</h3>
+        <div style="position:relative"><div class="chart" id="levelDonut"></div></div>
+        <div class="legend" id="levelLegend"></div>
+        <div style="height:1.1rem;"></div>
+        <div class="bar-row" id="sourceBars"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quality">
+    <h2>4 · 数据质量与主体 <span class="en">ENTITY QUALITY</span></h2>
+    <div class="grid3">
+      <div class="card"><h3>实体身份解析状态</h3><div style="position:relative"><div class="chart" id="identityDonut"></div></div><div class="legend" id="identityLegend"></div></div>
+      <div class="card"><h3>人员性别构成</h3><div id="genderBars"></div></div>
+      <div class="card"><h3>示例职业轨迹</h3><div class="hint">何鹏峰 · 甘肃省·泾川县（1972年生）</div><div class="tl" id="timeline"></div></div>
+    </div>
+  </section>
+</main>
+<footer>
+  数据：gov-relation 平台数据库 · 静态综合可视化（一次性聚合快照）<br>
+  persons 19,609 · organizations 12,322 · positions 14,780 · relationships 13,385 · sources 10,001 · jurisdictions 2,197 · claims 26,341 · GEXF 2,285 · reports 1,383
+</footer>
+
+<script>
+/* ================= 嵌入数据（从统一库聚合） ================= */
+const DATA={
+counts:{persons:19609,organizations:12322,positions:14780,relationships:13385,sources:10001,jurisdictions:2197,claims:26341},
+gold_current:5808, graph_files:2285, reports:1383, gexf:2285,
+relType:[
+ ["隶属/领导",4270+243+19+9+6+6+6+5+5+4+2+2+2+1+1+1+1+1],
+ ["继任/前后任",2188+48+25+8+8+4+4+4+3+3+2+2+2+1+1+1],
+ ["组织重叠",5655],
+ ["共事/同事",64+92+50+56+37+14+6+4+4+3+2+1+1],
+ ["党政搭档",125+14+14+10+6+6+4+4+4+3+3],
+ ["同乡/同源",41+2+2+2+1],
+ ["跨区/交流",6+4+4+3+2+2+2+2+1]
+],
+strength:[["强",8839],["中",3999],["弱",422],["未知",125]],
+confidence:[["confirmed 已确认",11321],["plausible 较可信",1633],["unverified 未核实",431]],
+identity:[["verified 已验证",2813],["unresolved 待解析",16796]],
+gender:[["男",4806],["女",513],["未知/待查",14290]],
+level:[["county 区县",1810],["prefecture 地市",353],["province 省",32]],
+source:[["official 官方",7326],["media 媒体",1068],["encyclopedia 百科",945],["任命公告",225],["database 库",204],["inferred 推断",103],["other 其他",130]],
+province:[["河南省",169],["河北省",157],["广东省",142],["黑龙江省",127],["广西壮族自治区",126],["安徽省",118],["湖北省",108],["辽宁省",102],["甘肃省",101],["贵州省",97],["山东省",97],["福建省",90],["陕西省",88],["江西省",71],["山西省",65],["四川省",65],["湖南省",63],["吉林省",56],["内蒙古自治区",53],["青海省",45],["重庆市",38],["新疆维吾尔自治区",37],["云南省",37],["西藏自治区",35]],
+rank:[["省市正职/部级",1136],["市厅级",1194],["正处/正县",5858],["副处/副县",2823],["科级",916],["其他",2853]],
+topPost:[["中共瑞丽市委",13],["中共郧阳区委",12],["陇县人民政府",11],["惠济区人民政府",11],["和龙市人民政府",11],["中共洛龙区委",11],["中共新乡凤泉区委",11],["宝鸡渭滨区委",11],["包头白云矿区区委",10],["大庆市人民政府",10]],
+network:{
+ hub:["曹立强","男","1966-05","上海"],
+ nodes:{曹立强:["男","1966-05","上海"],王华:["","",""],鲍炳章:["","",""],王宏伟:["","",""],沈权:["","",""],何雅:["","",""],刘琪:["","",""],赵懿:["","",""],习挺松:["","",""],诸旖:["","",""],胡芳:["","",""],郑长林:["","",""],罗华品:["","",""]},
+ edges:[["曹立强","王华","共事","strong","confirmed"],["曹立强","鲍炳章","前后任","strong","confirmed"],["曹立强","王宏伟","上下级","medium","confirmed"],["曹立强","沈权","上下级","medium","confirmed"],["曹立强","何雅","上下级","medium","confirmed"],["曹立强","刘琪","上下级","medium","confirmed"],["曹立强","赵懿","上下级","medium","confirmed"],["曹立强","习挺松","上下级","medium","confirmed"],["曹立强","诸旖","上下级","medium","confirmed"],["曹立强","胡芳","上下级","medium","confirmed"],["曹立强","郑长林","上下级","medium","confirmed"],["曹立强","罗华品","上下级","medium","confirmed"]]
+},
+timeline:[
+ ["干部","泾川县城建局","1995","1998","科员级"],
+ ["县委组织员","中共泾川县委","2000","2002","副科级"],
+ ["共青团泾川县委书记","共青团泾川县委员会","2002","2003","正科级"],
+ ["市政府办公室","平凉市人民政府","2005","2010","正科-副处"],
+ ["平凉市（副处）","平凉市人民政府","2010","2015","副处级"],
+ ["平凉市（正处）","平凉市政府部门","2015","2020","正处级"],
+ ["现任领导职务","平凉/泾川","2020","当代","正处级"]
+]
+};
+
+const fmt=new Intl.NumberFormat("zh-CN");
+const $=id=>document.getElementById(id);
+const P={overlap:"#5C9E7D",superior:"#D4342E",succ:"#6B8FA3",colleague:"#8A6FA3",pair:"#B8953E",local:"#5FA7A3",cross:"#C07A6A"};
+
+/* ---------- KPI ---------- */
+const kpis=[
+ {v:19609,l:"全量人物",c:"c1",note:"已验证 "+fmt.format(2813)},
+ {v:12322,l:"组织",c:"c2",note:"省市县各级"},
+ {v:13385,l:"人物关系",c:"c3",note:"关系边"},
+ {v:14780,l:"任职记录",c:"c4"},
+ {v:5808,l:"现职视图",c:"c5",note:"Gold 黄金层 · 当前在任"},
+ {v:13385,l:"现职关系",c:"c6",note:"gold_relationship_edges"},
+ {v:10001,l:"来源",c:"c6",note:"官方为主"},
+ {v:1383,l:"调研报告",c:"c3",note:"Markdown/HTML"},
+ {v:2285,l:"GEXF 图谱",c:"c4",note:"图文件"}
+];
+$("kpis").innerHTML=kpis.map(k=>'<div class="kpi '+k.c+'"><div class="val" data-t="'+k.v+'">0</div><div class="lbl">'+k.l+'</div>'+(k.note?'<div class="note">'+k.note+'</div>':'')+'</div>').join("");
+function anim(el,t){
+ const d=1100,t0=performance.now();
+ (function f(now){const p=Math.min((now-t0)/d,1);el.textContent=fmt.format(Math.round(t*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(f);})(t0);
+}
+document.querySelectorAll(".kpi .val").forEach(el=>{const t=+el.dataset.t;anim(el,t);});
+$("relTotal").textContent=fmt.format(13385);
+
+/* ---------- bar helper ---------- */
+function bars(elId,data,palette,unit,max){
+ const mx=max||Math.max(...data.map(d=>+d[1])||[1]);
+ $(elId).innerHTML=data.map((d,i)=>{
+   const w=(+d[1]/mx*100).toFixed(1);
+   const col=(Array.isArray(palette)?palette[i%palette.length]:palette);
+   return '<div class="bar-row"><div class="bl" title="'+d[0]+'">'+d[0]+'</div>'+
+     '<div class="bar-track"><div class="bar-fill" style="width:'+w+'%;background:'+col+';background:linear-gradient(90deg,'+col+','+col+'99)"></div></div>'+
+     '<div class="bar-val">'+fmt.format(d[1])+(unit||'')+'</div></div>';
+ }).join("");
+}
+
+/* ---------- donut ---------- */
+function donut(elId,legendId,data,colors,center){
+ const total=data.reduce((s,d)=>s+d[1],0)||1;
+ const R=Math.PI*2,ox=110,oy=110,r=84,ir=56;
+ let acc=0,svg='<svg viewBox="0 0 220 220" width="100%" height="220">';
+ data.forEach((d,i)=>{
+   const frac=d[1]/total,s=acc,e=acc+frac;acc=e;
+   const a0=s*R-Math.PI/2,a1=e*R-Math.PI/2;
+   const x0=ox+r*Math.cos(a0),y0=oy+r*Math.sin(a0);
+   const x1=ox+r*Math.cos(a1),y1=oy+r*Math.sin(a1);
+   const x2=ox+ir*Math.cos(a1),y2=oy+ir*Math.sin(a1);
+   const x3=ox+ir*Math.cos(a0),y3=oy+ir*Math.sin(a0);
+   const large=(e-s)>0.5?1:0;
+   svg+='<path d="M'+x0+' '+y0+' A'+r+' '+r+' 0 '+large+' 1 '+x1+' '+y1+' L'+x2+' '+y2+' A'+ir+' '+ir+' 0 '+large+' 0 '+x3+' '+y3+' Z" fill="'+(colors[i%colors.length])+'" opacity="0.92"/>';
+ });
+ svg+='<text x="110" y="106" text-anchor="middle" fill="#E9E5DC" font-size="30" font-weight="800">'+center+'</text>';
+ svg+='<text x="110" y="128" text-anchor="middle" fill="#8A8680" font-size="11">条</text>';
+ svg+='</svg>';
+ $(elId).innerHTML=svg;
+ const tot=fmt.format(total);
+ $(legendId).innerHTML=data.map((d,i)=>{
+   const pct=(d[1]/total*100);
+   return '<div class="lg"><div class="sw" style="background:'+(colors[i%colors.length])+'"></div><span>'+d[0]+'</span><span class="lgv">'+fmt.format(d[1])+'</span><span class="lgp">'+pct.toFixed(1)+'%</span></div>';
+ }).join('');
+}
+
+/* ---------- 关系类型 donut + 强度/置信度 ---------- */
+donut("relDonut","relLegend",DATA.relType,Object.values(P),"关系");
+(function(){
+ const cols={strong:"#5C9E7D",medium:"#B8953E",weak:"#6B8FA3",unknown:"#5A5B60"};
+ const total=DATA.strength.reduce((s,d)=>s+d[1],0);
+ let row='<div class="bar-track" style="height:34px;display:flex;border-radius:4px;overflow:hidden;">';
+ DATA.strength.forEach((d)=>row+='<div style="width:'+(d[1]/total*100)+'%;background:'+cols[d[0]]+'"></div>');
+ row+='</div>';
+ $("strengthStack").innerHTML=row;
+ $("strengthLegend").innerHTML=DATA.strength.map(d=>'<div class="lg"><div class="sw" style="background:'+cols[d[0]]+'"></div><span>强度 · '+d[0]+'</span><span class="lgv">'+fmt.format(d[1])+'</span><span class="lgp">'+(d[1]/total*100)+'%</span></div>').join("");
+ const mx=DATA.confidence[0][1];
+ $("relConfBars").innerHTML=DATA.confidence.map(d=>{
+   const col=d[0].indexOf("confirmed")===0?"#5C9E7D":d[0].indexOf("plausible")===0?"#B8953E":"#8A8680";
+   return '<div class="bar-row"><div class="bl">'+d[0]+'</div><div class="bar-track"><div class="bar-fill" style="width:'+(d[1]/mx*100)+'%;background:'+col+'"></div></div><div class="bar-val">'+fmt.format(d[1])+'</div></div>';
+ }).join("");
+})();
+
+/* ---------- 地理覆盖 ---------- */
+bars("provBars",DATA.province,"#6B8FA3","","",DATA.province[0][1]);
+donut("levelDonut","levelLegend",DATA.level,["#6B8FA3","#B8953E","#D4342E"],fmt.format(DATA.level.reduce((s,d)=>s+d[1],0)));
+const srcMax=DATA.source[0][1];
+$("sourceBars").innerHTML=DATA.source.map(d=>{
+  const col=d[0].indexOf("official")===0?"#5C9E7D":d[0].indexOf("media")===0?"#B8953E":d[0].indexOf("encyclopedia")===0?"#8A6FA3":d[0].indexOf("任命")===0?"#6B8FA3":d[0].indexOf("inferred")===0?"#C07A6A":"#5A5B60";
+  return '<div class="bar-row"><div class="bl">'+d[0]+'</div><div class="bar-track"><div class="bar-fill" style="width:'+(d[1]/srcMax*100)+'%;background:'+col+'"></div></div><div class="bar-val">'+fmt.format(d[1])+'</div></div>';
+}).join("");
+
+/* ---------- 质量/主体 ---------- */
+donut("identityDonut","identityLegend",DATA.identity,["#5C9E7D","#B8953E"],fmt.format(DATA.identity.reduce((s,d)=>s+d[1],0)));
+bars("genderBars",DATA.gender,"#6B8FA3");
+bars("rankBars",DATA.rank,["#D4342E","#B8953E","#5C9E7D","#6B8FA3","#8A6FA0","#8A8680"]);
+
+/* 现职表 */
+$("postsTable").innerHTML='<tr><th>组织</th><th style="text-align:right">职位数</th></tr>'+DATA.topPost.map(d=>'<tr><td>'+d[0]+'</td><td class="num" style="text-align:right">'+fmt.format(d[1])+'</td></tr>').join("");
+
+/* 职业轨迹 */
+$("timeline").innerHTML=DATA.timeline.map(d=>'<div class="tl-item"><div class="t"><span class="role">'+d[0]+'</span><span class="org">'+d[1]+'</span><span class="rank">'+d[4]+'</span><span class="span">'+d[2]+' — '+d[3]+'</span></div></div>').join("");
+
+/* ---------- 交互网络 (vis-network) ---------- */
+(function(){
+  const N=DATA.network;
+  const edgeCol={上下级:"#D4342E",前后任:"#6B8FA3",共事:"#8A6FA0",同级:"#5C9E7D",其他:"#8A8680"};
+  const nodes=[],edges=[],idMap={};
+  const names=Object.keys(N.nodes);
+  const isHub=n=>n===N.hub[0];
+  names.forEach((n,i)=>{idMap[n]=i;nodes.push({id:i,label:n,value:isHub(n)?20:6,size:0,color:{background:isHub(n)?"#B8953E":"#2E3140",border:isHub(n)?"#E5C66B":"#4A4D5C",highlight:{background:isHub(n)?"#D6B84A":"#3A4058",border:"#FFFFFF"}},font:{color:isHub(n)?"#F3E4B0":"#E9E5DC",size:isHub(n)?17:13},shape:"dot",borderWidth:isHub(n)?3:1.5});});
+  N.edges.forEach(e=>{
+    const a=idMap[e[0]],b=idMap[e[1]];
+    if(a===undefined||b===undefined)return;
+    edges.push({from:a,to:b,label:e[2],color:{color:(edgeCol[e[2]]||"#8A8680"),highlight:"#FFFFFF",opacity:.85},width:e[3]==="strong"?3:e[3]==="medium"?2:1.2,font:{size:9,color:"#9A968C",strokeWidth:0},title:"关系："+e[2]+" · 强度："+e[3]+" · 置信度："+e[4]});
+  });
+  var obj={
+     nodes:new vis.DataSet(nodes),
+     edges:new vis.DataSet(edges)
+  };
+  var opt={nodes:{shape:"dot",scaling:{min:14,max:44}},edges:{},physics:{solver:"forceAtlas2Based",forceAtlas2Based:{gravitationalConstant:-70,centralGravity:.03,springLength:130,damping:.4},stabilization:{iterations:180}},interaction:{hover:true,navigationButtons:true,keyboard:true,tooltipDelay:80}};
+  var net=new vis.Network($("net"),obj,opt);
+  net.on("click",function(p){if(p.nodes.length>0){var id=p.nodes[0],nm=names[id],info=N.nodes[nm]||["","",""];$("netInfo").textContent="已选："+nm+(isHub(nm)?"（中心节点）":"")+" · 性别："+(info[0]||"—")+" · 出生："+(info[1]||"—")+" · 籍贯："+(info[2]||"—");}});
+  $("netLegend").innerHTML=[["#D4342E","上下级"],["#6B8FA3","前后任/继任"],["#8A6FA0","共事"],["#000000","中心节点"]].map((c,i)=>'<div class="nl"><span class="nsw" style="display:inline-block;width:11px;height:11px;border-radius:50%;background:'+(c[0]==="#000000"?"#B8953E":c[0])+'"></span>'+c[1]+'</div>').join("");
+})();
+</script>
+</body>
+</html>
