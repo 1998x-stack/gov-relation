@@ -2,7 +2,24 @@
 
 ## Project Structure & Module Organization
 
-`gov_relation/` is the shared Python package; `gov_relation/platform/` owns the canonical v2 schema, import, resolution, and quality gates. Put new regional generators in `scripts/build/build_<slug>_data.py`; root-level `build_*_data.py` files are legacy and should not be copied. Operational tools live in `scripts/`, tests in `tests/`, and the GitHub Pages site in `docs/`. Research artifacts belong under `data/database/`, `data/graph/`, `data/persons/`, and `report/`; the reproducible unified database is `data/platform/gov_relation.db`. See `docs/ARCHITECTURE_V2.md` for the target architecture.
+`gov_relation/` is the shared Python package; `gov_relation/platform/` owns the canonical v2 schema, import, resolution, and quality gates. Put new regional generators in `scripts/build/build_<slug>_data.py`; root-level `build_*_data.py` files are legacy and should not be copied. Operational tools live in `scripts/`, tests in `tests/`, and the GitHub Pages site in `docs/`. See `docs/ARCHITECTURE_V2.md` for the target architecture, and `docs/CANONICAL_JSONL_ARCHITECTURE.md` for the new data-layer model.
+
+## Canonical data layer (JSONL + SQLite backup)
+
+The data layer follows a **canonical JSONL + SQLite-backup** model (destructive refactor, step 2 done):
+
+- **`data/records/*.jsonl` is the single system of record** — one JSON object per line, per entity stream (`persons`, `organizations`, `positions`, `relationships`, `sources`, `claims`, `profile_documents`, ...), content-addressed via `manifest.json` (counts + sha256).
+- **`data/database/platform.db` is a derived SQLite backup** rebuilt from the JSONL by `python3 scripts/gov2.py backup`; it is disposable and never edited directly.
+- **`gov2 verify` guarantees the two are byte-for-byte identical** (run after any change).
+- Pillars: `gov2 build` (data generation), `gov2 viz` (visualization), `gov2 classify` (classification/induction), `gov2 profiles` (ingest person profiles), `gov2 export` (SQLite→JSONL).
+- Legacy SQLite/person/graph/report artifacts were archived to `.trash_batch/legacy_20260902/` (recoverable) rather than deleted; the legacy `platform`, `database`, `graph`, `persons`, `provinces`, `report`, `research_output` paths are no longer the active data layer.
+
+```bash
+python3 scripts/gov2.py verify data/records data/database/platform.db   # consistency gate
+python3 scripts/gov2.py backup data/records data/database/platform.db --overwrite
+python3 scripts/gov2.py classify --records data/records                # Pillar C
+python3 scripts/gov2.py viz --records data/records                    # Pillar B
+```
 
 ## Build, Test, and Development Commands
 
