@@ -292,6 +292,11 @@ def _run_v3_build(
         if conn.execute("PRAGMA foreign_key_check").fetchone() is not None:
             raise sqlite3.IntegrityError("v3 build contains foreign-key violations")
         GEXFFactory().write(conn, slug, temp_graph)
+        # Finalize the WAL before publish: checkpoint content into the main
+        # file and switch to DELETE journal mode so the renamed artifact is
+        # self-contained and openable read-only (mode=ro) without -wal/-shm.
+        conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+        conn.execute("PRAGMA journal_mode=DELETE")
         build_complete = True
     except Exception:
         conn.rollback()

@@ -18,7 +18,6 @@
 
 ### 不在范围
 
-- PostgreSQL 生产部署(schema 保留 PG 兼容性,但不实施)
 - 前端 UI 重构
 - OpenCode worker 调度逻辑改动
 - GEXF 可视化风格变更

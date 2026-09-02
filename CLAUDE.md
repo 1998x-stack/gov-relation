@@ -43,9 +43,6 @@ python3 scripts/serve_app.py --port 8000
 # Refresh GitHub Pages static data
 python3 scripts/build_static_site_data.py
 
-# PostgreSQL schema verification (local dev)
-bash scripts/postgres_dev.sh up && bash scripts/postgres_dev.sh migrate && bash scripts/postgres_dev.sh verify
-
 # Nohup workers (4 workers, auto-done + git-commit)
 bash scripts/start_workers_nohup.sh
 bash scripts/worker_status.sh

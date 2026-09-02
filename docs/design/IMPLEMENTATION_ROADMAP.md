@@ -10,7 +10,7 @@ Exit: no unresolved product or legal decision changes the core data model.
 
 ## Gate 1 — Production data foundation
 
-- Create versioned PostgreSQL migrations and development containers.
+- Keep SQLite as the versioned schema and single system of record (`data/platform/gov_relation.db`).
 - Implement immutable source assets, assertions, evidence, review decisions and releases.
 - Migrate the SQLite v2 corpus with lineage reconciliation.
 - Add backup/restore and migration rollback drills.
@@ -44,8 +44,9 @@ Exit: legal/product sign-off, operational runbook, support ownership and success
 
 ## Immediate backlog
 
-1. **Completed:** PostgreSQL migration `0001_registry_and_assertions` ([acceptance record](STEP_01_POSTGRES_FOUNDATION.md)).
+1. **Completed:** SQLite platform schema `2.1.0` with signed source-rights manifests.
 2. **Next:** define the source-rights decision manifest and reviewer workflow.
-3. Convert `API_CONTRACT.md` into executable OpenAPI YAML.
-4. Create an automated producer-defect report grouped by build script.
-5. Select a pilot province/city and freeze its acceptance dataset.
+3. Hardened the SQLite migration and backup/restore workflow.
+4. Convert `API_CONTRACT.md` into executable OpenAPI YAML.
+5. Create an automated producer-defect report grouped by build script.
+6. Select a pilot province/city and freeze its acceptance dataset.

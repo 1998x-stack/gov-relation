@@ -32,7 +32,7 @@ The repository becomes an evidence-backed data platform, while preserving existi
 
 ## Deployment path
 
-SQLite is the reproducible local/reference implementation. Production should move the same logical schema to PostgreSQL, expose versioned read APIs, and build graph/search projections asynchronously. Raw/evidence records remain append-only; corrections create reviewed claims or superseding versions. Tenant billing and access control belong in the application database, not the research corpus.
+SQLite is the single system of record across research and production. The unified platform database `data/platform/gov_relation.db` stores every layer, and versioned read APIs, graph, and search projections are built from the same SQLite source. Raw/evidence records remain append-only; corrections create reviewed claims or superseding versions. Tenant billing and access control belong in the application database, not the research corpus.
 
 ## Commands
 

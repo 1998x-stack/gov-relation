@@ -24,16 +24,8 @@ python3 scripts/govdb.py audit --database data/platform/gov_relation.db
 ```
 
 当前架构与发布边界见 [docs/ARCHITECTURE_V2.md](docs/ARCHITECTURE_V2.md)；生产化产品设计从
-[docs/design/README.md](docs/design/README.md) 开始阅读。
-
-本地验证 PostgreSQL 生产 schema：
-
-```bash
-bash scripts/postgres_dev.sh up
-bash scripts/postgres_dev.sh migrate
-bash scripts/postgres_dev.sh verify
-bash scripts/postgres_dev.sh down
-```
+[docs/design/README.md](docs/design/README.md) 开始阅读。所有数据均采用单文件 SQLite 存储
+（统一平台库 `data/platform/gov_relation.db`），不依赖 PostgreSQL。
 
 更完整的文件系统与代码系统说明见 [docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md)。
 
