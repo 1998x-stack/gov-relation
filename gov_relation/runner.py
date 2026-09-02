@@ -55,6 +55,11 @@ def run_build(
     sources: list[dict[str, Any]] | None = None,
     claims: list[dict[str, Any]] | None = None,
 ) -> None:
+    # Batch-migration hook: any legacy regional generator can emit canonical
+    # partitioned JSONL without editing its source, e.g.
+    #   GOV_BACKEND=canon GOV_PROVINCE=四川省 python3 scripts/build/build_x_data.py
+    backend = os.environ.get("GOV_BACKEND", backend)
+    province = os.environ.get("GOV_PROVINCE", province)
     if backend == "canon":
         _run_canon_build(
             slug=slug,
