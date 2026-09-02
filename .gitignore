@@ -30,7 +30,6 @@ data/TODO.json
 data/.concurrency_gate/
 workers/
 data/central/provincial/*.db
-data/graph/*.db
 scripts/data/database/*.db
 *.db
 *.db-shm
@@ -60,3 +59,6 @@ __pycache__/
 
 # scratch / one-off temp helpers (do not commit)
 scripts/data/_mk_*.py
+data/graph/*.db
+data/graph/test_*.gexf
+data/graph/test_*.db
