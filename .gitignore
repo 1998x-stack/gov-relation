@@ -62,3 +62,9 @@ scripts/data/_mk_*.py
 data/graph/*.db
 data/graph/test_*.gexf
 data/graph/test_*.db
+
+# unified flat records & backup are regenerated (data/records/regions/** is committed)
+data/records/*.jsonl
+data/records/*.building
+data/records/regions/*/.building
+data/database/platform.db

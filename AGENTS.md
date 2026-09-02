@@ -12,6 +12,15 @@ The data layer follows a **canonical JSONL + SQLite-backup** model (destructive 
 - **`data/database/platform.db` is a derived SQLite backup** rebuilt from the JSONL by `python3 scripts/gov2.py backup`; it is disposable and never edited directly.
 - **`gov2 verify` guarantees the two are byte-for-byte identical** (run after any change).
 - Pillars: `gov2 build` (data generation), `gov2 viz` (visualization), `gov2 classify` (classification/induction), `gov2 profiles` (ingest person profiles), `gov2 export` (SQLite→JSONL).
+- **Region generation (step 3):** new/imigrated regional `build_*_data.py` use `backend="canon"` in `run_build`, which writes `data/records/regions/<province>__<slug>/*.jsonl` (partitioned, region-scoped ids). Aggregate and publish with:
+
+```bash
+python3 scripts/gov2.py region --spec <spec.json> --slug <区> --province <省>   # (optional) spec entry
+python3 scripts/gov2.py snapshot --records data/records   # merge partitions -> unified streams
+python3 scripts/gov2.py backup data/records data/database/platform.db --overwrite
+python3 scripts/gov2.py verify data/records data/database/platform.db
+```
+- Git strategy: `data/records/regions/**` (partitioned region JSONL) is committed; the unified flat streams `data/records/*.jsonl` and the SQLite backup are ignored/regenerated (`gitignore` covers both).
 - Legacy SQLite/person/graph/report artifacts were archived to `.trash_batch/legacy_20260902/` (recoverable) rather than deleted; the legacy `platform`, `database`, `graph`, `persons`, `provinces`, `report`, `research_output` paths are no longer the active data layer.
 
 ```bash

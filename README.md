@@ -157,7 +157,29 @@ python3 scripts/build/build_anyi_data.py
 
 ## 新脚本快速入门
 
-使用公共库编写新构建脚本（从 400 行降到 ~50 行）：
+使用公共库编写新构建脚本（从 400 行降到 ~50 行）。**推荐用 canonical 后端**（步骤 3）：写出分区分 JSONL，而不是 legacy 单地区 SQLite：
+
+```python
+from gov_relation.runner import run_build
+
+run_build(
+    slug="万柏林区",
+    persons=[...], organizations=[...], positions=[...], relationships=[...],
+    backend="canon", province="山西省",   # 写 data/records/regions/... JSONL
+)
+```
+
+聚合与发布（canonical 数据层）：
+
+```bash
+python3 scripts/gov2.py snapshot --records data/records        # 分区 → 统一流
+python3 scripts/gov2.py backup data/records data/database/platform.db --overwrite
+python3 scripts/gov2.py verify data/records data/database/platform.db
+python3 scripts/gov2.py viz --records data/records            # Pillar B 可视化
+python3 scripts/gov2.py classify --records data/records       # Pillar C 分类归纳
+```
+
+旧式 legacy 后端（写 `db_path`/`gexf_path` 单个地区库）仍受支持：
 
 ```python
 from gov_relation.runner import run_build
@@ -165,16 +187,13 @@ from gov_relation.paths import DATABASE_DIR, GRAPH_DIR
 
 run_build(
     slug="七里河区",
-    persons=[...],           # 人员列表
-    organizations=[...],     # 组织列表
-    positions=[...],         # 任职列表
-    relationships=[...],     # 关系列表
+    persons=[...], organizations=[...], positions=[...], relationships=[...],
     db_path=DATABASE_DIR / "七里河区_network.db",
     gexf_path=GRAPH_DIR / "七里河区_network.gexf",
 )
 ```
 
-详情见 [docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md) 和 `gov_relation/runner.py`。
+详情见 [docs/SYSTEM_OVERVIEW.md](docs/SYSTEM_OVERVIEW.md)、`gov_relation/runner.py` 与 [docs/CANONICAL_JSONL_ARCHITECTURE.md](docs/CANONICAL_JSONL_ARCHITECTURE.md)。
 
 ## 当前系统边界
 
