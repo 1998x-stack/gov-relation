@@ -69,6 +69,7 @@ def main() -> int:
     p.add_argument("--slug", required=True)
     p.add_argument("--province", required=True)
     p.add_argument("--records", default=str(RECORDS_DEFAULT))
+    sub.add_parser("snapshot").add_argument("--records", default=str(RECORDS_DEFAULT))
 
     args = ap.parse_args()
 
@@ -104,6 +105,13 @@ def main() -> int:
     if args.cmd == "region":
         from gov_relation.canon.pillar_region import pillar_build_region
         return pillar_build_region(args)
+    if args.cmd == "snapshot":
+        from gov_relation.canon.pillar_region import snapshot_regions
+        import json as _json
+        from gov_relation.canon import write_manifest
+        print("aggregated:", _json.dumps(snapshot_regions(args.records), ensure_ascii=False))
+        write_manifest(Path(args.records), source="<regions-agg>", tables=[])
+        return 0
     return 0
 
 

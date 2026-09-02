@@ -127,3 +127,28 @@ def test_region_partition_namespacing(tmp_path):
     assert (pdir / "persons.jsonl").exists()
     assert (pdir / "organizations.jsonl").exists()
     assert (pdir / ".meta.json").exists()
+
+
+def test_snapshot_aggregation_idempotent(tmp_path):
+    """gov2 snapshot merges partitioned regions into unified streams once."""
+    from gov_relation.canon.pillar_region import (
+        region_records,
+        snapshot_regions,
+        write_region,
+    )
+
+    root = tmp_path / "records"
+    rec = region_records(
+        "临江",
+        persons=[{"id": 1, "name": "李雷"}],
+        organizations=[],
+        positions=[],
+        relationships=[],
+    )
+    write_region(root, "临江", "江苏省", rec)
+    assert snapshot_regions(root)["persons"] == 1
+    # idempotent: second run adds 0
+    assert snapshot_regions(root)["persons"] == 0
+    from gov_relation.canon.streams import iter_jsonl
+
+    assert sum(1 for _ in iter_jsonl(root / "persons.jsonl")) == 1

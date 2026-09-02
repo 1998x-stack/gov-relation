@@ -138,6 +138,44 @@ def _slug_clean(province: str, slug: str) -> str:
     return f"{p}__{s}"
 
 
+def snapshot_regions(records_root) -> dict[str, int]:
+    """Aggregate all region partitions into the flat unified streams (idempotent)."""
+    from .streams import iter_jsonl, write_jsonl
+
+    records_root = Path(records_root)
+    regions_root = records_root / "regions"
+    kinds = ("persons", "organizations", "positions", "relationships")
+    total: dict[str, int] = {}
+    if not regions_root.exists():
+        return total
+    for kind in kinds:
+        paths = sorted(regions_root.rglob(f"{kind}.jsonl"))
+        target = records_root / f"{kind}.jsonl"
+        existing = {str(r.get(_ID_BY_KIND.get(kind, "id"))) for r in iter_jsonl(target)} if target.exists() else set()
+        added = 0
+        rows = []
+        for p in paths:
+            for r in iter_jsonl(p):
+                if str(r.get(_ID_BY_KIND.get(kind, "id"))) in existing:
+                    continue
+                existing.add(str(r.get(_ID_BY_KIND.get(kind, "id"))))
+                rows.append(r)
+        if rows:
+            merged = list(iter_jsonl(target)) if target.exists() else []
+            merged.extend(rows)
+            write_jsonl(target, iter(merged))
+        total[kind] = len(rows)
+    return total
+
+
+_ID_BY_KIND = {
+    "persons": "person_id",
+    "organizations": "organization_id",
+    "positions": "position_id",
+    "relationships": "relationship_id",
+}
+
+
 def pillar_build_region(args) -> int:
     """gov2 region --province .. --slug .. --persons .. writes canonical region JSONL."""
     import json as _json

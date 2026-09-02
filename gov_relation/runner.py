@@ -51,9 +51,20 @@ def run_build(
     overwrite: bool = False,
     central: Any = None,  # Optional Central writer
     backend: str = "legacy",
+    province: str = "",
     sources: list[dict[str, Any]] | None = None,
     claims: list[dict[str, Any]] | None = None,
 ) -> None:
+    if backend == "canon":
+        _run_canon_build(
+            slug=slug,
+            province=province,
+            persons=persons,
+            organizations=organizations,
+            positions=positions,
+            relationships=relationships,
+        )
+        return
     if backend == "v3":
         _run_v3_build(
             slug=slug,
@@ -166,6 +177,40 @@ def run_build(
                     "province": central.province,
                     "source": "",
                 })
+
+
+def _run_canon_build(
+    *,
+    slug: str,
+    province: str,
+    persons: list[dict[str, Any]],
+    organizations: list[dict[str, Any]],
+    positions: list[dict[str, Any]],
+    relationships: list[dict[str, Any]],
+) -> None:
+    """Canonical backend: write this region as partitioned JSONL (no SQLite).
+
+    Generations land in ``data/records/regions/<province>__<slug>/``; the
+    unified SQLite backup is rebuilt separately via ``gov2 snapshot``+``backup``.
+    """
+    from .canon.pillar_region import region_records, write_region
+    from .paths import DATA_DIR
+
+    records_root = DATA_DIR / "records"
+    rec = region_records(
+        slug,
+        persons=persons,
+        organizations=organizations,
+        positions=positions,
+        relationships=relationships,
+    )
+    pdir = write_region(records_root, slug, province or slug, rec)
+    logger.info(
+        "canon build %s -> %s counts=%s",
+        slug,
+        pdir,
+        {k: len(v) for k, v in rec.items()},
+    )
 
 
 def _run_v3_build(
