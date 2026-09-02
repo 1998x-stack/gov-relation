@@ -64,6 +64,11 @@ def main() -> int:
     for name in ("viz", "classify", "profiles"):
         p = sub.add_parser(name)
         p.add_argument("--records", default=str(RECORDS_DEFAULT))
+    p = sub.add_parser("region")
+    p.add_argument("--spec", required=True, help="region spec JSON (persons/orgs/positions/relationships)")
+    p.add_argument("--slug", required=True)
+    p.add_argument("--province", required=True)
+    p.add_argument("--records", default=str(RECORDS_DEFAULT))
 
     args = ap.parse_args()
 
@@ -96,6 +101,9 @@ def main() -> int:
     if args.cmd == "profiles":
         from gov_relation.canon.pillar_profiles import pillar_import_profiles
         return pillar_import_profiles(args)
+    if args.cmd == "region":
+        from gov_relation.canon.pillar_region import pillar_build_region
+        return pillar_build_region(args)
     return 0
 
 

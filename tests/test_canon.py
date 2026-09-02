@@ -106,3 +106,24 @@ def test_profile_flattening_is_idempotent_shape(tmp_path):
     assert r["persons"][0]["canonical_name"] == "王五"
     assert len(r["positions"]) == 1
     assert len(r["relationships"]) == 1
+
+def test_region_partition_namespacing(tmp_path):
+    """Region build produces canonical per-type JSONL with scoped ids."""
+    from gov_relation.canon.pillar_region import region_records, write_region
+
+    rec = region_records(
+        "某县",
+        persons=[{"id": 1, "name": "张三", "gender": "男"}],
+        organizations=[{"id": 10, "name": "某县委", "type": "party"}],
+        positions=[{"person_id": 1, "org_id": 10, "title": "书记"}],
+        relationships=[{"person_a": 1, "person_b": 99, "type": "前后任"}],
+    )
+    assert rec["persons"][0]["person_id"] == "某县:person:1"
+    assert rec["persons"][0]["canonical_name"] == "张三"
+    assert rec["positions"][0]["person_id"] == "某县:person:1"
+    assert rec["relationships"][0]["person_from_id"] == "某县:person:1"
+
+    pdir = write_region(tmp_path, "某县", "测试省", rec)
+    assert (pdir / "persons.jsonl").exists()
+    assert (pdir / "organizations.jsonl").exists()
+    assert (pdir / ".meta.json").exists()
