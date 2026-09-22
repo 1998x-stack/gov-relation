@@ -94,7 +94,7 @@ def test_rebuild_refuses_existing_without_overwrite(tmp_path):
 
 
 def test_profile_flattening_is_idempotent_shape(tmp_path):
-    """Generation flattens a person profile into canonical records."""
+    """Name-only relationship candidates require review before becoming edges."""
     from gov_relation.canon.pillar_build import profile_to_records
 
     profile = {
@@ -105,7 +105,9 @@ def test_profile_flattening_is_idempotent_shape(tmp_path):
     r = profile_to_records(profile)
     assert r["persons"][0]["canonical_name"] == "王五"
     assert len(r["positions"]) == 1
-    assert len(r["relationships"]) == 1
+    assert len(r["relationships"]) == 0
+    assert len(r["claims"]) == 1
+    assert r["claims"][0]["review_status"] == "pending"
 
 def test_region_partition_namespacing(tmp_path):
     """Region build produces canonical per-type JSONL with scoped ids."""
