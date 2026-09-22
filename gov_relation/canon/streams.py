@@ -11,15 +11,28 @@ from pathlib import Path
 from typing import Any, Iterator
 
 
+def quote_identifier(name: str) -> str:
+    """Quote a SQLite table/column name, including embedded double quotes."""
+    if not isinstance(name, str) or not name or "\x00" in name:
+        raise ValueError("SQLite identifier must be a nonempty string without NUL")
+    return '"' + name.replace('"', '""') + '"'
+
+
 def table_columns(conn: sqlite3.Connection, table: str) -> list[str]:
-    return [row[1] for row in conn.execute(f'PRAGMA table_info("{table}")')]
+    return [
+        row[1]
+        for row in conn.execute(f"PRAGMA table_info({quote_identifier(table)})")
+    ]
 
 
 def table_ddl(conn: sqlite3.Connection, table: str) -> str:
-    return conn.execute(
+    row = conn.execute(
         "SELECT sql FROM sqlite_master WHERE type='table' AND name=?",
         (table,),
-    ).fetchone()[0]
+    ).fetchone()
+    if row is None:
+        raise ValueError(f"SQLite table not found: {table!r}")
+    return row[0]
 
 
 def all_content_tables(conn: sqlite3.Connection) -> list[str]:
@@ -45,7 +58,9 @@ def iter_table_rows(
     conn: sqlite3.Connection, table: str
 ) -> Iterator[dict[str, Any]]:
     cols = table_columns(conn, table)
-    for row in conn.execute(f'SELECT * FROM "{table}" ORDER BY rowid'):
+    for row in conn.execute(
+        f"SELECT * FROM {quote_identifier(table)} ORDER BY rowid"
+    ):
         yield dict(zip(cols, row))
 
 
@@ -67,7 +82,7 @@ def write_jsonl(path: str | Path, rows: Iterator[dict[str, Any]]) -> int:
         prefix=f".{path.name}.", suffix=".tmp", dir=path.parent
     )
     try:
-        with open(fd, "w", encoding="utf-8") as fh:
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
             for row in rows:
                 fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True))
                 fh.write("\n")
@@ -78,7 +93,7 @@ def write_jsonl(path: str | Path, rows: Iterator[dict[str, Any]]) -> int:
             os.unlink(tmp)
         except OSError:
             pass
-        # ensure the temp fd is not leaked
+        # fdopen owns the descriptor after opening; close only if still open.
         try:
             os.close(fd)
         except OSError:
