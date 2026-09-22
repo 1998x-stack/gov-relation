@@ -64,17 +64,33 @@ def iter_table_rows(
         yield dict(zip(cols, row))
 
 
+def _reject_non_finite(token: str) -> None:
+    # Python's JSON decoder accepts NaN/Infinity by default, but JSONL is JSON.
+    raise ValueError(f"non-finite JSON number: {token}")
+
+
 def iter_jsonl(path: str | Path) -> Iterator[dict[str, Any]]:
-    with open(path, encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
+    """Yield canonical JSON objects; identify malformed records by file and line."""
+    path = Path(path)
+    with path.open(encoding="utf-8") as fh:
+        for line_number, raw in enumerate(fh, start=1):
+            line = raw.strip()
             if not line:
                 continue
-            yield json.loads(line)
+            try:
+                row = json.loads(line, parse_constant=_reject_non_finite)
+            except ValueError as exc:
+                raise ValueError(f"{path}:{line_number}: invalid JSONL: {exc}") from exc
+            if not isinstance(row, dict):
+                raise ValueError(
+                    f"{path}:{line_number}: JSONL record must be a JSON object, "
+                    f"not {type(row).__name__}"
+                )
+            yield row
 
 
 def write_jsonl(path: str | Path, rows: Iterator[dict[str, Any]]) -> int:
-    """Write rows atomically as one JSON object per line. Returns row count."""
+    """Atomically replace one JSONL stream with strictly valid JSON objects."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     count = 0
@@ -84,9 +100,16 @@ def write_jsonl(path: str | Path, rows: Iterator[dict[str, Any]]) -> int:
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as fh:
             for row in rows:
-                fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True))
+                if not isinstance(row, dict):
+                    raise TypeError(
+                        f"{path}: row {count + 1} must be a JSON object, "
+                        f"not {type(row).__name__}"
+                    )
+                fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True, allow_nan=False))
                 fh.write("\n")
                 count += 1
+            fh.flush()
+            os.fsync(fh.fileno())
         os.replace(tmp, path)
     except BaseException:
         try:
