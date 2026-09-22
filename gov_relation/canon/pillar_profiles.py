@@ -1,8 +1,9 @@
-"""Pillar A — 数据导入 (profile ingestion into canonical profile_documents).
+"""Import profile documents into canonical JSONL without losing source identity.
 
-Ingests person profile JSON files into the canonical ``profile_documents``
-stream idempotently. Each file maps to one record; the id is a stable hash of
-the relative path, so re-runs add zero rows.
+The profile identifier is derived from the repository-relative source path, not
+from the filename relative to each province's persons/ directory. Historical
+filename-only IDs are retained when their provenance is unambiguous and their
+content matches exactly. Ambiguous legacy IDs require a reviewed migration.
 """
 
 from __future__ import annotations
@@ -10,9 +11,8 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
-from .engine import rebuild_db_from_records
 from .streams import iter_jsonl, write_jsonl
 
 
@@ -22,17 +22,28 @@ def _profile_files(roots: list[Path]) -> list[dict[str, Any]]:
         root = Path(root)
         if not root.exists():
             continue
-        for p in sorted(root.rglob("*.json")):
-            if "TODO" in p.name or p.name.startswith("."):
+        for path in sorted(root.rglob("*.json")):
+            if "TODO" in path.name or path.name.startswith("."):
                 continue
-            out.append({"path": p, "rel": str(p.relative_to(root))})
+            out.append({"path": path, "rel": path.relative_to(root).as_posix()})
     return out
 
 
-def _profile_to_document(data: dict[str, Any], rel: str) -> dict[str, Any]:
-    identity = data.get("identity", {})
+def _source_key(path: Path, repo_root: Path) -> str:
+    """A clone-independent key for tracked files; absolute fallback for external roots."""
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(repo_root.resolve()).as_posix()
+    except ValueError:
+        return resolved.as_posix()
+
+
+def _profile_to_document(data: dict[str, Any], source_key: str) -> dict[str, Any]:
+    identity = data.get("identity") or {}
+    if not isinstance(identity, dict):
+        raise ValueError("profile identity must be a JSON object")
     person_id = identity.get("person_id") or data.get("person_id") or ""
-    profile_id = "profile_" + hashlib.sha256(rel.encode("utf-8")).hexdigest()[:16]
+    profile_id = "profile_" + hashlib.sha256(source_key.encode("utf-8")).hexdigest()[:16]
     return {
         "profile_id": profile_id,
         "person_id": person_id,
@@ -43,61 +54,88 @@ def _profile_to_document(data: dict[str, Any], rel: str) -> dict[str, Any]:
     }
 
 
-def _append_idempotent(path: Path, row: dict[str, Any], id_key: Callable) -> int:
-    if path.exists() and str(id_key(row)) in _existing_ids.get(path, ()):
-        return 0
-    _existing_ids.setdefault(path, set()).add(str(id_key(row)))
-    return 1
-
-
-def _load_ids(path: Path, id_key: Callable) -> set[str]:
-    if not path.exists():
-        return set()
-    return {str(id_key(r)) for r in iter_jsonl(path)}
+def _existing_documents(path: Path) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]]]:
+    rows = list(iter_jsonl(path)) if path.exists() else []
+    by_id: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        if not isinstance(row, dict) or not isinstance(row.get("profile_id"), str) or not row["profile_id"]:
+            raise ValueError(f"invalid profile document in {path}")
+        profile_id = row["profile_id"]
+        if profile_id in by_id:
+            raise ValueError(f"duplicate existing profile_id: {profile_id}")
+        by_id[profile_id] = row
+    return rows, by_id
 
 
 def pillar_import_profiles(args) -> int:
-    from gov_relation.paths import PERSONS_DIR, PROVINCES_DIR
+    """Stage and validate all imports before atomically replacing one JSONL file."""
+    from gov_relation.paths import PERSONS_DIR, PROVINCES_DIR, REPO_ROOT
 
     records_dir = Path(args.records)
     records_dir.mkdir(parents=True, exist_ok=True)
-
     roots = [PERSONS_DIR]
-    for province in [p for p in PROVINCES_DIR.iterdir() if p.is_dir()]:
-        roots.append(province / "persons")
+    if PROVINCES_DIR.exists():
+        roots.extend(p / "persons" for p in sorted(PROVINCES_DIR.iterdir()) if p.is_dir())
 
     target = records_dir / "profile_documents.jsonl"
+    previous_rows, by_id = _existing_documents(target)
+    files = _profile_files(roots)
 
-    def id_key(row):
-        return str(row.get("profile_id"))
+    # Resolve overlapping roots to one source, and detect old relative-path IDs
+    # that could correspond to several distinct profiles in different provinces.
+    sources: dict[str, dict[str, Any]] = {}
+    relative_sources: dict[str, set[str]] = {}
+    for item in files:
+        key = _source_key(item["path"], REPO_ROOT)
+        sources.setdefault(key, item)
+        relative_sources.setdefault(item["rel"], set()).add(key)
 
-    # O(N): load the existing id set exactly once, then scan files once.
-    global _existing_ids
-    _existing_ids = {target: _load_ids(target, id_key)}
-    existing = _existing_ids[target]
-
-    count_added = 0
-    total = 0
-    new_rows: list[dict[str, Any]] = []
-    for item in _profile_files(roots):
-        total += 1
+    staged: list[dict[str, Any]] = []
+    skipped = 0
+    for source_key, item in sorted(sources.items()):
         try:
             data = json.loads(item["path"].read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError):
+            skipped += 1
             continue
-        row = _profile_to_document(data, item["rel"])
-        if row["profile_id"] not in existing:
-            existing.add(row["profile_id"])
-            new_rows.append(row)
-            count_added += 1
+        if not isinstance(data, dict):
+            raise ValueError(f"profile must be a JSON object: {item['path']}")
 
-    if new_rows:
-        merged = list(iter_jsonl(target)) if target.exists() else []
-        merged.extend(new_rows)
-        write_jsonl(target, iter(merged))
+        row = _profile_to_document(data, source_key)
+        new_id = row["profile_id"]
+        legacy_id = _profile_to_document(data, item["rel"])["profile_id"]
+        old = by_id.get(new_id)
+        legacy = by_id.get(legacy_id) if legacy_id != new_id else None
 
-    print(f"profiles: scanned={total} added={count_added} total_records={len(existing)}")
+        if legacy is not None and len(relative_sources[item["rel"]]) > 1:
+            raise ValueError(
+                f"ambiguous legacy profile_id {legacy_id}: {item['rel']} exists in "
+                "multiple source roots; migrate with provenance review"
+            )
+        if old is not None and legacy is not None:
+            raise ValueError(
+                f"both legacy and namespaced profile IDs exist for {item['path']}; "
+                "reconcile duplicates before importing"
+            )
+        if old is None and legacy is not None:
+            # Keep a historical ID only when one source can own it. Never
+            # create a second record for the same existing profile on upgrade.
+            row["profile_id"] = legacy_id
+            old = legacy
+        if old is not None:
+            if old != row:
+                raise ValueError(
+                    f"profile changed or ID collided: {item['path']} "
+                    "(review and version the existing canonical record explicitly)"
+                )
+            continue
+        by_id[new_id] = row
+        staged.append(row)
+
+    if staged:
+        write_jsonl(target, iter(previous_rows + staged))
+    print(
+        f"profiles: scanned={len(sources)} added={len(staged)} "
+        f"skipped={skipped} total_records={len(previous_rows) + len(staged)}"
+    )
     return 0
-
-
-_existing_ids: dict[Path, set[str]] = {}
