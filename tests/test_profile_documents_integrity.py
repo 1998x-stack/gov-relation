@@ -25,7 +25,7 @@ def _fixture(monkeypatch, tmp_path: Path):
 
 def _write_profile(tmp_path: Path, province: str, name: str, person_id: str):
     path = tmp_path / "data" / "provinces" / province / "persons" / "same.json"
-    path.parent.mkdir(parents=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
     data = {"identity": {"person_id": person_id, "name": name}}
     path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     return path, data
